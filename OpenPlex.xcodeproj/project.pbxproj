@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		097F5426196855FB00BC9A10 /* AppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 097F5425196855FB00BC9A10 /* AppDelegate.applescript */; };
+		097F543C1968566300BC9A10 /* Arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54281968566300BC9A10 /* Arrows.png */; };
+		097F543D1968566300BC9A10 /* CopyRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54291968566300BC9A10 /* CopyRight.png */; };
+		097F543E1968566300BC9A10 /* Github.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542A1968566300BC9A10 /* Github.png */; };
+		097F543F1968566300BC9A10 /* icon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542B1968566300BC9A10 /* icon_<16x16>.png */; };
+		097F54401968566300BC9A10 /* iMovie.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542C1968566300BC9A10 /* iMovie.png */; };
+		097F54411968566300BC9A10 /* log.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542D1968566300BC9A10 /* log.png */; };
+		097F54421968566300BC9A10 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542E1968566300BC9A10 /* logo.png */; };
+		097F54431968566300BC9A10 /* MenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542F1968566300BC9A10 /* MenuIcon.png */; };
+		097F54441968566300BC9A10 /* Openplex copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54301968566300BC9A10 /* Openplex copy.png */; };
+		097F54451968566300BC9A10 /* OpenPlex.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54311968566300BC9A10 /* OpenPlex.png */; };
+		097F54461968566300BC9A10 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54321968566300BC9A10 /* Pause.png */; };
+		097F54471968566300BC9A10 /* paypal-donate-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54331968566300BC9A10 /* paypal-donate-button.png */; };
+		097F54481968566300BC9A10 /* Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54341968566300BC9A10 /* Play.png */; };
+		097F54491968566300BC9A10 /* PlexConnect Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54351968566300BC9A10 /* PlexConnect Icon.png */; };
+		097F544A1968566300BC9A10 /* quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54361968566300BC9A10 /* quit.png */; };
+		097F544B1968566300BC9A10 /* Stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54371968566300BC9A10 /* Stop.png */; };
+		097F544C1968566300BC9A10 /* stop2.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54381968566300BC9A10 /* stop2.png */; };
+		097F544D1968566300BC9A10 /* Trailers.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54391968566300BC9A10 /* Trailers.png */; };
+		097F544E1968566300BC9A10 /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F543A1968566300BC9A10 /* WebConnect.png */; };
+		097F544F1968566300BC9A10 /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F543B1968566300BC9A10 /* WSJ.png */; };
+		097F54511968573500BC9A10 /* atv.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54501968573500BC9A10 /* atv.png */; };
+		099068B3195D5ED800442FB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099068B2195D5ED800442FB5 /* Images.xcassets */; };
+		09947B22195BCABB0005EE4A /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B21195BCABB0005EE4A /* AppleScriptObjC.framework */; };
+		09947B28195BCDB30005EE4A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B25195BCDB30005EE4A /* AppKit.framework */; };
+		09947B29195BCDB30005EE4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B26195BCDB30005EE4A /* CoreData.framework */; };
+		09947B2A195BCDB30005EE4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B27195BCDB30005EE4A /* Foundation.framework */; };
+		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
+		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
+		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
+		DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */; };
+		DD4F7C3813C317A500825C6E /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3713C317A500825C6E /* MenubarController.m */; };
+		DD4F7C3C13C3180800825C6E /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3B13C3180800825C6E /* StatusItemView.m */; };
+		DD4F7C3F13C318D600825C6E /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3E13C318D600825C6E /* PanelController.m */; };
+		DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4013C31B4A00825C6E /* Panel.xib */; };
+		DD4F7C4413C31BD200825C6E /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C4313C31BD200825C6E /* Panel.m */; };
+		DD4F7C4713C3208500825C6E /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C4613C3208500825C6E /* BackgroundView.m */; };
+		DD4F7C4B13C322FA00825C6E /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4913C322FA00825C6E /* Status.png */; };
+		DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */; };
+		DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF4EFAB16C80A510044D141 /* Status@2x.png */; };
+		DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		097F5425196855FB00BC9A10 /* AppDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = AppDelegate.applescript; path = "OpenPlex 0.2/AppDelegate.applescript"; sourceTree = "<group>"; };
+		097F54281968566300BC9A10 /* Arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrows.png; sourceTree = "<group>"; };
+		097F54291968566300BC9A10 /* CopyRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CopyRight.png; sourceTree = "<group>"; };
+		097F542A1968566300BC9A10 /* Github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Github.png; sourceTree = "<group>"; };
+		097F542B1968566300BC9A10 /* icon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_<16x16>.png"; sourceTree = "<group>"; };
+		097F542C1968566300BC9A10 /* iMovie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMovie.png; sourceTree = "<group>"; };
+		097F542D1968566300BC9A10 /* log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = log.png; sourceTree = "<group>"; };
+		097F542E1968566300BC9A10 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		097F542F1968566300BC9A10 /* MenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon.png; sourceTree = "<group>"; };
+		097F54301968566300BC9A10 /* Openplex copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Openplex copy.png"; sourceTree = "<group>"; };
+		097F54311968566300BC9A10 /* OpenPlex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenPlex.png; sourceTree = "<group>"; };
+		097F54321968566300BC9A10 /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
+		097F54331968566300BC9A10 /* paypal-donate-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal-donate-button.png"; sourceTree = "<group>"; };
+		097F54341968566300BC9A10 /* Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play.png; sourceTree = "<group>"; };
+		097F54351968566300BC9A10 /* PlexConnect Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlexConnect Icon.png"; sourceTree = "<group>"; };
+		097F54361968566300BC9A10 /* quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quit.png; sourceTree = "<group>"; };
+		097F54371968566300BC9A10 /* Stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stop.png; sourceTree = "<group>"; };
+		097F54381968566300BC9A10 /* stop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop2.png; sourceTree = "<group>"; };
+		097F54391968566300BC9A10 /* Trailers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trailers.png; sourceTree = "<group>"; };
+		097F543A1968566300BC9A10 /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
+		097F543B1968566300BC9A10 /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
+		097F54501968573500BC9A10 /* atv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atv.png; sourceTree = "<group>"; };
+		099068B2195D5ED800442FB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OpenPlex/Images.xcassets; sourceTree = "<group>"; };
+		09947B21195BCABB0005EE4A /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
+		09947B25195BCDB30005EE4A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		09947B26195BCDB30005EE4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		09947B27195BCDB30005EE4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD4F7C0413C30F9F00825C6E /* OpenPlex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPlex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DD4F7C0C13C30F9F00825C6E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DD4F7C0D13C30F9F00825C6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD4F7C1013C30F9F00825C6E /* OpenPlex-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OpenPlex-Info.plist"; path = "Popup/OpenPlex-Info.plist"; sourceTree = "<group>"; };
+		DD4F7C1413C30F9F00825C6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD4F7C1613C30F9F00825C6E /* OpenPlex-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenPlex-Prefix.pch"; sourceTree = "<group>"; };
+		DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
+		DD4F7C1E13C30F9F00825C6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DD4F7C3613C317A500825C6E /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
+		DD4F7C3713C317A500825C6E /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
+		DD4F7C3A13C3180800825C6E /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		DD4F7C3B13C3180800825C6E /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		DD4F7C3D13C318D600825C6E /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
+		DD4F7C3E13C318D600825C6E /* PanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelController.m; sourceTree = "<group>"; };
+		DD4F7C4013C31B4A00825C6E /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Panel.xib; path = Popup/Panel.xib; sourceTree = "<group>"; };
+		DD4F7C4213C31BD200825C6E /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
+		DD4F7C4313C31BD200825C6E /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
+		DD4F7C4513C3208500825C6E /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		DD4F7C4613C3208500825C6E /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		DD4F7C4913C322FA00825C6E /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Status.png; path = Popup/Status.png; sourceTree = "<group>"; };
+		DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusHighlighted.png; path = Popup/StatusHighlighted.png; sourceTree = "<group>"; };
+		DDF4EFAB16C80A510044D141 /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status@2x.png"; path = "Popup/Status@2x.png"; sourceTree = "<group>"; };
+		DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StatusHighlighted@2x.png"; path = "Popup/StatusHighlighted@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD4F7C0113C30F9F00825C6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09947B2A195BCDB30005EE4A /* Foundation.framework in Frameworks */,
+				09947B28195BCDB30005EE4A /* AppKit.framework in Frameworks */,
+				09947B29195BCDB30005EE4A /* CoreData.framework in Frameworks */,
+				09947B22195BCABB0005EE4A /* AppleScriptObjC.framework in Frameworks */,
+				DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		097F54271968566300BC9A10 /* OpenPlexIcons */ = {
+			isa = PBXGroup;
+			children = (
+				097F54501968573500BC9A10 /* atv.png */,
+				097F54281968566300BC9A10 /* Arrows.png */,
+				097F54291968566300BC9A10 /* CopyRight.png */,
+				097F542A1968566300BC9A10 /* Github.png */,
+				097F542B1968566300BC9A10 /* icon_<16x16>.png */,
+				097F542C1968566300BC9A10 /* iMovie.png */,
+				097F542D1968566300BC9A10 /* log.png */,
+				097F542E1968566300BC9A10 /* logo.png */,
+				097F542F1968566300BC9A10 /* MenuIcon.png */,
+				097F54301968566300BC9A10 /* Openplex copy.png */,
+				097F54311968566300BC9A10 /* OpenPlex.png */,
+				097F54321968566300BC9A10 /* Pause.png */,
+				097F54331968566300BC9A10 /* paypal-donate-button.png */,
+				097F54341968566300BC9A10 /* Play.png */,
+				097F54351968566300BC9A10 /* PlexConnect Icon.png */,
+				097F54361968566300BC9A10 /* quit.png */,
+				097F54371968566300BC9A10 /* Stop.png */,
+				097F54381968566300BC9A10 /* stop2.png */,
+				097F54391968566300BC9A10 /* Trailers.png */,
+				097F543A1968566300BC9A10 /* WebConnect.png */,
+				097F543B1968566300BC9A10 /* WSJ.png */,
+			);
+			path = OpenPlexIcons;
+			sourceTree = "<group>";
+		};
+		09947B00195BC8C00005EE4A /* OpenPlex 0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				097F5425196855FB00BC9A10 /* AppDelegate.applescript */,
+				097F54271968566300BC9A10 /* OpenPlexIcons */,
+			);
+			name = "OpenPlex 0.2";
+			sourceTree = "<group>";
+		};
+		09947B24195BCD950005EE4A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09947B25195BCDB30005EE4A /* AppKit.framework */,
+				09947B26195BCDB30005EE4A /* CoreData.framework */,
+				09947B27195BCDB30005EE4A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DD4F7BF913C30F9F00825C6E = {
+			isa = PBXGroup;
+			children = (
+				099068B2195D5ED800442FB5 /* Images.xcassets */,
+				09947B24195BCD950005EE4A /* Other Frameworks */,
+				09947B00195BC8C00005EE4A /* OpenPlex 0.2 */,
+				DD4F7C0E13C30F9F00825C6E /* Sources */,
+				DD4F7C2813C3123E00825C6E /* User Interface */,
+				DD4F7C0713C30F9F00825C6E /* Frameworks */,
+				DD4F7C0513C30F9F00825C6E /* Products */,
+				DD4F7C1013C30F9F00825C6E /* OpenPlex-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		DD4F7C0513C30F9F00825C6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C0413C30F9F00825C6E /* OpenPlex.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD4F7C0713C30F9F00825C6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09947B21195BCABB0005EE4A /* AppleScriptObjC.framework */,
+				DD4F7C0B13C30F9F00825C6E /* AppKit.framework */,
+				DD4F7C0C13C30F9F00825C6E /* CoreData.framework */,
+				DD4F7C0D13C30F9F00825C6E /* Foundation.framework */,
+				DD4F7C0813C30F9F00825C6E /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD4F7C0E13C30F9F00825C6E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C2613C311DF00825C6E /* Controllers */,
+				DD4F7C3913C317EC00825C6E /* Views */,
+				DD4F7C0F13C30F9F00825C6E /* Supporting Files */,
+			);
+			name = Sources;
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		DD4F7C0F13C30F9F00825C6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C1613C30F9F00825C6E /* OpenPlex-Prefix.pch */,
+				DD4F7C1413C30F9F00825C6E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD4F7C2613C311DF00825C6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */,
+				DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */,
+				DD4F7C3613C317A500825C6E /* MenubarController.h */,
+				DD4F7C3713C317A500825C6E /* MenubarController.m */,
+				DD4F7C3D13C318D600825C6E /* PanelController.h */,
+				DD4F7C3E13C318D600825C6E /* PanelController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DD4F7C2813C3123E00825C6E /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C4813C322D800825C6E /* Graphics */,
+				DD4F7C2913C3124300825C6E /* XIBs */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		DD4F7C2913C3124300825C6E /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */,
+				DD4F7C4013C31B4A00825C6E /* Panel.xib */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
+		DD4F7C3913C317EC00825C6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C4213C31BD200825C6E /* Panel.h */,
+				DD4F7C4313C31BD200825C6E /* Panel.m */,
+				DD4F7C3A13C3180800825C6E /* StatusItemView.h */,
+				DD4F7C3B13C3180800825C6E /* StatusItemView.m */,
+				DD4F7C4513C3208500825C6E /* BackgroundView.h */,
+				DD4F7C4613C3208500825C6E /* BackgroundView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DD4F7C4813C322D800825C6E /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C4913C322FA00825C6E /* Status.png */,
+				DDF4EFAB16C80A510044D141 /* Status@2x.png */,
+				DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */,
+				DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD4F7C0313C30F9F00825C6E /* OpenPlex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "OpenPlex" */;
+			buildPhases = (
+				DD4F7C0013C30F9F00825C6E /* Sources */,
+				DD4F7C0113C30F9F00825C6E /* Frameworks */,
+				DD4F7C0213C30F9F00825C6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenPlex;
+			productName = Popup;
+			productReference = DD4F7C0413C30F9F00825C6E /* OpenPlex.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD4F7BFB13C30F9F00825C6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "OpenPlex" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD4F7BF913C30F9F00825C6E;
+			productRefGroup = DD4F7C0513C30F9F00825C6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD4F7C0313C30F9F00825C6E /* OpenPlex */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD4F7C0213C30F9F00825C6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097F54411968566300BC9A10 /* log.png in Resources */,
+				097F54451968566300BC9A10 /* OpenPlex.png in Resources */,
+				097F544A1968566300BC9A10 /* quit.png in Resources */,
+				097F543E1968566300BC9A10 /* Github.png in Resources */,
+				097F544C1968566300BC9A10 /* stop2.png in Resources */,
+				097F543D1968566300BC9A10 /* CopyRight.png in Resources */,
+				099068B3195D5ED800442FB5 /* Images.xcassets in Resources */,
+				097F54421968566300BC9A10 /* logo.png in Resources */,
+				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
+				097F544E1968566300BC9A10 /* WebConnect.png in Resources */,
+				097F54431968566300BC9A10 /* MenuIcon.png in Resources */,
+				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
+				097F543C1968566300BC9A10 /* Arrows.png in Resources */,
+				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
+				097F54441968566300BC9A10 /* Openplex copy.png in Resources */,
+				097F544D1968566300BC9A10 /* Trailers.png in Resources */,
+				097F54461968566300BC9A10 /* Pause.png in Resources */,
+				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
+				097F54491968566300BC9A10 /* PlexConnect Icon.png in Resources */,
+				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
+				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
+				097F54511968573500BC9A10 /* atv.png in Resources */,
+				097F544B1968566300BC9A10 /* Stop.png in Resources */,
+				097F54471968566300BC9A10 /* paypal-donate-button.png in Resources */,
+				097F54481968566300BC9A10 /* Play.png in Resources */,
+				097F544F1968566300BC9A10 /* WSJ.png in Resources */,
+				097F54401968566300BC9A10 /* iMovie.png in Resources */,
+				097F543F1968566300BC9A10 /* icon_<16x16>.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD4F7C0013C30F9F00825C6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097F5426196855FB00BC9A10 /* AppDelegate.applescript in Sources */,
+				DD4F7C1513C30F9F00825C6E /* main.m in Sources */,
+				DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */,
+				DD4F7C3813C317A500825C6E /* MenubarController.m in Sources */,
+				DD4F7C3C13C3180800825C6E /* StatusItemView.m in Sources */,
+				DD4F7C3F13C318D600825C6E /* PanelController.m in Sources */,
+				DD4F7C4413C31BD200825C6E /* Panel.m in Sources */,
+				DD4F7C4713C3208500825C6E /* BackgroundView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4F7C1E13C30F9F00825C6E /* en */,
+			);
+			name = MainMenu.xib;
+			path = Popup;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD4F7C2013C30F9F00825C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DD4F7C2113C30F9F00825C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD4F7C2313C30F9F00825C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Popup/OpenPlex-Prefix.pch";
+				INFOPLIST_FILE = "Popup/OpenPlex-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = OpenPlex;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD4F7C2413C30F9F00825C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Popup/OpenPlex-Prefix.pch";
+				INFOPLIST_FILE = "Popup/OpenPlex-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = OpenPlex;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "OpenPlex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4F7C2013C30F9F00825C6E /* Debug */,
+				DD4F7C2113C30F9F00825C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "OpenPlex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4F7C2313C30F9F00825C6E /* Debug */,
+				DD4F7C2413C30F9F00825C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD4F7BFB13C30F9F00825C6E /* Project object */;
+}
