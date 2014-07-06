@@ -1,5 +1,6 @@
 ![alt tag](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/MenuIcon.png)   OpenPlex
 ========
+What do you get when you combine Cyberghost84's amazing application design with my new code? Something pretty bad a$$
 
 ## OpenPlex Instruction
 
