@@ -29,7 +29,7 @@ check the log by clicking the PlexConnect icon or quit
 the app by clicking the exit icon.
 
 =========
-## ![alt tag](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/MenuIcon2.png) OpenPlex Download
+## OpenPlex Download
 https://www.dropbox.com/sh/8xf37pcn5lgsfve/j0OZH64Pxx
 
 ========
