@@ -4,9 +4,9 @@
 ## OpenPlex Instruction
 
 - Click the mini OpenPlex Icon to install the app
-   (required once unless updating or 1st time user)
+  (required once unless updating or 1st time user)
 - Choose a theme
-- Install CLT then Pillow *only required once*        
+- Install CLT then Pillow (only required once)        
 - Restore backup or extras or skip this step 
 - Choose app to Hijack on aTV
 - Follow Setup aTV PlexConnect and Certs guide
