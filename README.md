@@ -6,7 +6,8 @@ OpenPlex automatically installs PlexConnect on your Mac, easily generates certif
 [![ScreenShot](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/OpenplexVid.png)](https://www.youtube.com/watch?feature=player_detailpage&v=NhyRDrESDa8)
 
 ========
-## Tutorial
+## Tutorial :
+
 
 http://miapple.me/openplex-app-installs-manages-plexconnect-mac-os-x/
 
@@ -27,9 +28,8 @@ can start, update, and stop plexconnect. You may also
 check the log by clicking the PlexConnect icon or quit
 the app by clicking the exit icon.
 
-========
+=========
 ## ![alt tag](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/MenuIcon2.png) OpenPlex Download
-
 https://www.dropbox.com/sh/8xf37pcn5lgsfve/j0OZH64Pxx
 
 ========
