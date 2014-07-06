@@ -4,8 +4,7 @@ What do you get when you combine Cyberghost84's amazing application design with 
 
 [![ScreenShot](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/OpenplexVid.png)](https://www.youtube.com/watch?feature=player_detailpage&v=NhyRDrESDa8)
 
-### Tutorial
-========
+## Tutorial
 
 http://miapple.me/openplex-app-installs-manages-plexconnect-mac-os-x/
 
