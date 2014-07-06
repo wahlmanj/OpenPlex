@@ -1,4 +1,4 @@
-OpenPlex
+![alt tag](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/MenuIcon.png)   OpenPlex
 ========
 
 ## OpenPlex Instruction
