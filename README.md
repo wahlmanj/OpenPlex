@@ -2,6 +2,8 @@
 ========
 What do you get when you combine Cyberghost84's amazing application design with my new code? Something pretty bad a$$
 
+[![ScreenShot](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/OpenplexVid.png)](https://www.youtube.com/watch?feature=player_detailpage&v=NhyRDrESDa8)
+
 ## OpenPlex Instruction
 
 - Click the mini OpenPlex Icon to install the app
