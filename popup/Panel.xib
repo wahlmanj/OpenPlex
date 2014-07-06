@@ -46,7 +46,7 @@
 			<object class="NSWindowTemplate" id="194620731">
 				<int key="NSWindowStyleMask">400</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{162, 101}, {230, 75}}</string>
+				<string key="NSWindowRect">{{162, 101}, {230, 93}}</string>
 				<int key="NSWTFlags">1685586944</int>
 				<string key="NSWindowTitle"/>
 				<string key="NSWindowClass">Panel</string>
@@ -321,7 +321,7 @@
 							<bool key="NSEditable">YES</bool>
 						</object>
 					</array>
-					<string key="NSFrameSize">{230, 75}</string>
+					<string key="NSFrameSize">{230, 93}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="271758602"/>
@@ -1856,8 +1856,16 @@ ZSBleGl0IGljb24uA</bytes>
 								<string key="NSContents">OpenPlex Instructions :</string>
 								<reference key="NSSupport" ref="580893138"/>
 								<reference key="NSControlView" ref="751615419"/>
-								<reference key="NSBackgroundColor" ref="349450713"/>
-								<reference key="NSTextColor" ref="722061346"/>
+								<object class="NSColor" key="NSBackgroundColor" id="788338521">
+									<int key="NSColorSpace">6</int>
+									<string key="NSCatalogName">System</string>
+									<string key="NSColorName">selectedMenuItemColor</string>
+									<object class="NSColor" key="NSColor">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
+									</object>
+								</object>
+								<reference key="NSTextColor" ref="788338521"/>
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 							<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
@@ -3561,7 +3569,7 @@ ZSBleGl0IGljb24uA</bytes>
 				<boolean value="NO" key="189.showNotes"/>
 				<boolean value="NO" key="401.IBNSWindowAutoPositionCentersHorizontal"/>
 				<boolean value="NO" key="401.IBNSWindowAutoPositionCentersVertical"/>
-				<string key="401.IBPersistedLastKnownCanvasPosition">{197, 54.5}</string>
+				<string key="401.IBPersistedLastKnownCanvasPosition">{164, 24.5}</string>
 				<string key="401.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="NO" key="401.showNotes"/>
 				<reference key="402.IBNSViewMetadataConstraints" ref="0"/>
@@ -4028,7 +4036,7 @@ ZSBleGl0IGljb24uA</bytes>
 				<boolean value="NO" key="487.showNotes"/>
 				<string key="488.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="NO" key="488.showNotes"/>
-				<string key="5.IBPersistedLastKnownCanvasPosition">{-612, -21.5}</string>
+				<string key="5.IBPersistedLastKnownCanvasPosition">{-564, 90.5}</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBWindowTemplateEditedContentRect">{{609, 381}, {280, 378}}</string>
 				<boolean value="NO" key="5.NSWindowTemplate.visibleAtLaunch"/>
@@ -4049,7 +4057,7 @@ ZSBleGl0IGljb24uA</bytes>
 				<boolean value="NO" key="603.showNotes"/>
 				<boolean value="NO" key="610.IBNSWindowAutoPositionCentersHorizontal"/>
 				<boolean value="NO" key="610.IBNSWindowAutoPositionCentersVertical"/>
-				<string key="610.IBPersistedLastKnownCanvasPosition">{-74, 486.5}</string>
+				<string key="610.IBPersistedLastKnownCanvasPosition">{-387, 481.5}</string>
 				<string key="610.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="NO" key="610.showNotes"/>
 				<reference key="611.IBNSViewMetadataConstraints" ref="0"/>
@@ -4107,7 +4115,7 @@ ZSBleGl0IGljb24uA</bytes>
 				<boolean value="NO" key="624.showNotes"/>
 				<boolean value="NO" key="626.IBNSWindowAutoPositionCentersHorizontal"/>
 				<boolean value="NO" key="626.IBNSWindowAutoPositionCentersVertical"/>
-				<string key="626.IBPersistedLastKnownCanvasPosition">{-285.5, 1.5}</string>
+				<string key="626.IBPersistedLastKnownCanvasPosition">{-213.5, 24.5}</string>
 				<string key="626.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="NO" key="626.showNotes"/>
 				<reference key="627.IBNSViewMetadataConstraints" ref="0"/>
@@ -4234,7 +4242,7 @@ ZSBleGl0IGljb24uA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">704</int>
+			<int key="maxID">710</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
