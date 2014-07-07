@@ -25,8 +25,7 @@ http://miapple.me/openplex-app-installs-manages-plexconnect-mac-os-x/
 Once complete you can close the installer window and
 use the menubar icon to control PlexConnect. You
 can start, update, and stop plexconnect. You may also        
-check the log by clicking the PlexConnect icon or quit
-the app by clicking the exit icon.
+check the log or quit the app by clicking the exit icon.
 
 =========
 ## OpenPlex Download
