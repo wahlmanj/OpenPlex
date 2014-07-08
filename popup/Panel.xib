@@ -119,7 +119,7 @@
                         </connections>
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="d3M-Y5-lsM">
-                        <rect key="frame" x="10" y="33" width="35" height="61"/>
+                        <rect key="frame" x="10" y="35" width="35" height="61"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Openplex copy" id="Xuf-HN-if6"/>
                     </imageView>
