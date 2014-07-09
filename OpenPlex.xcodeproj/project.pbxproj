@@ -34,6 +34,17 @@
 		09947B28195BCDB30005EE4A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B25195BCDB30005EE4A /* AppKit.framework */; };
 		09947B29195BCDB30005EE4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B26195BCDB30005EE4A /* CoreData.framework */; };
 		09947B2A195BCDB30005EE4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B27195BCDB30005EE4A /* Foundation.framework */; };
+		DB23D048196D3BF000384B63 /* InstallIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D043196D3BF000384B63 /* InstallIcon.png */; };
+		DB23D049196D3BF000384B63 /* MenuIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D044196D3BF000384B63 /* MenuIcon2.png */; };
+		DB23D04A196D3BF000384B63 /* OpenplexVid.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D045196D3BF000384B63 /* OpenplexVid.png */; };
+		DB23D04B196D3BF000384B63 /* TryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D046196D3BF000384B63 /* TryIcon.png */; };
+		DB23D04C196D3BF000384B63 /* UpdateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D047196D3BF000384B63 /* UpdateIcon.png */; };
+		DB23D04E196D42B400384B63 /* getstart.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D04D196D42B400384B63 /* getstart.png */; };
+		DB23D051196D526200384B63 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D04F196D526200384B63 /* back.png */; };
+		DB23D052196D526200384B63 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D050196D526200384B63 /* next.png */; };
+		DB23D055196D52BA00384B63 /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D053196D52BA00384B63 /* back_button.png */; };
+		DB23D056196D52BA00384B63 /* next_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D054196D52BA00384B63 /* next_button.png */; };
+		DB23D058196D54A500384B63 /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = DB23D057196D54A500384B63 /* choose.png */; };
 		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
 		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
 		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
@@ -78,6 +89,17 @@
 		09947B25195BCDB30005EE4A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		09947B26195BCDB30005EE4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		09947B27195BCDB30005EE4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB23D043196D3BF000384B63 /* InstallIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstallIcon.png; sourceTree = "<group>"; };
+		DB23D044196D3BF000384B63 /* MenuIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon2.png; sourceTree = "<group>"; };
+		DB23D045196D3BF000384B63 /* OpenplexVid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenplexVid.png; sourceTree = "<group>"; };
+		DB23D046196D3BF000384B63 /* TryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TryIcon.png; sourceTree = "<group>"; };
+		DB23D047196D3BF000384B63 /* UpdateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpdateIcon.png; sourceTree = "<group>"; };
+		DB23D04D196D42B400384B63 /* getstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getstart.png; sourceTree = "<group>"; };
+		DB23D04F196D526200384B63 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		DB23D050196D526200384B63 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		DB23D053196D52BA00384B63 /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_button.png; path = ../../../Downloads/back_button.png; sourceTree = "<group>"; };
+		DB23D054196D52BA00384B63 /* next_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next_button.png; path = ../../../Downloads/next_button.png; sourceTree = "<group>"; };
+		DB23D057196D54A500384B63 /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose.png; sourceTree = "<group>"; };
 		DD4F7C0413C30F9F00825C6E /* OpenPlex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPlex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -125,6 +147,17 @@
 		097F54271968566300BC9A10 /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DB23D057196D54A500384B63 /* choose.png */,
+				DB23D053196D52BA00384B63 /* back_button.png */,
+				DB23D054196D52BA00384B63 /* next_button.png */,
+				DB23D04F196D526200384B63 /* back.png */,
+				DB23D050196D526200384B63 /* next.png */,
+				DB23D04D196D42B400384B63 /* getstart.png */,
+				DB23D043196D3BF000384B63 /* InstallIcon.png */,
+				DB23D044196D3BF000384B63 /* MenuIcon2.png */,
+				DB23D045196D3BF000384B63 /* OpenplexVid.png */,
+				DB23D046196D3BF000384B63 /* TryIcon.png */,
+				DB23D047196D3BF000384B63 /* UpdateIcon.png */,
 				097F54501968573500BC9A10 /* atv.png */,
 				097F54281968566300BC9A10 /* Arrows.png */,
 				097F54291968566300BC9A10 /* CopyRight.png */,
@@ -330,29 +363,40 @@
 			files = (
 				097F54411968566300BC9A10 /* log.png in Resources */,
 				097F54451968566300BC9A10 /* OpenPlex.png in Resources */,
+				DB23D052196D526200384B63 /* next.png in Resources */,
 				097F544A1968566300BC9A10 /* quit.png in Resources */,
 				097F543E1968566300BC9A10 /* Github.png in Resources */,
+				DB23D049196D3BF000384B63 /* MenuIcon2.png in Resources */,
 				097F544C1968566300BC9A10 /* stop2.png in Resources */,
+				DB23D04C196D3BF000384B63 /* UpdateIcon.png in Resources */,
+				DB23D04B196D3BF000384B63 /* TryIcon.png in Resources */,
 				097F543D1968566300BC9A10 /* CopyRight.png in Resources */,
 				099068B3195D5ED800442FB5 /* Images.xcassets in Resources */,
 				097F54421968566300BC9A10 /* logo.png in Resources */,
+				DB23D051196D526200384B63 /* back.png in Resources */,
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
 				097F544E1968566300BC9A10 /* WebConnect.png in Resources */,
 				097F54431968566300BC9A10 /* MenuIcon.png in Resources */,
+				DB23D048196D3BF000384B63 /* InstallIcon.png in Resources */,
+				DB23D04E196D42B400384B63 /* getstart.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
 				097F543C1968566300BC9A10 /* Arrows.png in Resources */,
+				DB23D056196D52BA00384B63 /* next_button.png in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				097F54441968566300BC9A10 /* Openplex copy.png in Resources */,
 				097F544D1968566300BC9A10 /* Trailers.png in Resources */,
 				097F54461968566300BC9A10 /* Pause.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
 				097F54491968566300BC9A10 /* PlexConnect Icon.png in Resources */,
+				DB23D058196D54A500384B63 /* choose.png in Resources */,
+				DB23D055196D52BA00384B63 /* back_button.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
 				097F54511968573500BC9A10 /* atv.png in Resources */,
 				097F544B1968566300BC9A10 /* Stop.png in Resources */,
 				097F54471968566300BC9A10 /* paypal-donate-button.png in Resources */,
 				097F54481968566300BC9A10 /* Play.png in Resources */,
+				DB23D04A196D3BF000384B63 /* OpenplexVid.png in Resources */,
 				097F544F1968566300BC9A10 /* WSJ.png in Resources */,
 				097F54401968566300BC9A10 /* iMovie.png in Resources */,
 				097F543F1968566300BC9A10 /* icon_<16x16>.png in Resources */,
