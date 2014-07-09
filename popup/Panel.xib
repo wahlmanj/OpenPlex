@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -358,7 +357,7 @@
                     <popUpButton toolTip="Extra optional options provided but not required." verticalHuggingPriority="750" id="411">
                         <rect key="frame" x="77" y="223" width="140" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Backup &amp; Extra" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="459" id="437">
+                        <popUpButtonCell key="cell" type="push" title="Backup &amp; Extra" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="437">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="438">
@@ -433,7 +432,7 @@
                                     <menuItem title="Auto Update" toolTip="Installs a plist in /Library/LaunchDaemons to check for github updates every 6 hours. Works with all githubs and themes." id="446">
                                         <modifierMask key="keyEquivalentModifierMask"/>
                                         <connections>
-                                            <action selector="buttonhandlerauto:" target="139" id="543"/>
+                                            <action selector="buttonhandlerautoupdate:" target="139" id="XUJ-oh-rn5"/>
                                         </connections>
                                     </menuItem>
                                     <menuItem title="PlexConnect Folder" toolTip="Opens PlexConnect Folder via finder" id="445">
@@ -452,7 +451,11 @@
                                             <action selector="buttonhandlercertfolder:" target="139" id="515"/>
                                         </connections>
                                     </menuItem>
-                                    <menuItem title="Fix Launchctl" toolTip="Fixes a errors in /LibraryLaunchDaemons" id="442"/>
+                                    <menuItem title="Fix Launchctl" toolTip="Fixes a errors in /LibraryLaunchDaemons" id="442">
+                                        <connections>
+                                            <action selector="buttonhandlerauto:" target="139" id="U0g-mJ-rHh"/>
+                                        </connections>
+                                    </menuItem>
                                     <menuItem title="Custom Plist" toolTip="Allows app to function with a custom plist" id="441">
                                         <connections>
                                             <action selector="buttonhandlercustomplist:" target="139" id="518"/>
@@ -683,19 +686,19 @@
         <window title="Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="626">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1337" y="575" width="311" height="385"/>
+            <rect key="contentRect" x="1337" y="575" width="292" height="405"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
             <view key="contentView" id="627">
-                <rect key="frame" x="0.0" y="0.0" width="311" height="385"/>
+                <rect key="frame" x="0.0" y="0.0" width="292" height="405"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="631">
-                        <rect key="frame" x="20" y="51" width="104" height="88"/>
+                        <rect key="frame" x="20" y="71" width="104" height="88"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="632"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="630">
-                        <rect key="frame" x="23" y="147" width="357" height="195"/>
+                        <rect key="frame" x="23" y="167" width="357" height="195"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="633">
                             <font key="font" metaFont="system" size="10"/>
@@ -716,7 +719,7 @@ ZSBleGl0IGljb24uA
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="629">
-                        <rect key="frame" x="73" y="356" width="307" height="17"/>
+                        <rect key="frame" x="73" y="376" width="307" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenPlex Instructions :" id="634">
                             <font key="font" metaFont="system"/>
@@ -725,7 +728,7 @@ ZSBleGl0IGljb24uA
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="628">
-                        <rect key="frame" x="139" y="51" width="133" height="88"/>
+                        <rect key="frame" x="139" y="71" width="133" height="88"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="PlexConnect Icon" id="635"/>
                     </imageView>
