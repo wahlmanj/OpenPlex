@@ -675,16 +675,16 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="IAZ-Qr-1E0">
-                                    <rect key="frame" x="16" y="44" width="28" height="17"/>
+                                    <rect key="frame" x="16" y="44" width="116" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CLT" id="k2R-JE-DDW">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Command Line Tools" id="k2R-JE-DDW">
                                         <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" red="1" green="0.89017970349999997" blue="0.1582253465" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="ucC-OZ-HNj">
-                                    <rect key="frame" x="172" y="41" width="16" height="16"/>
+                                    <rect key="frame" x="172" y="44" width="16" height="16"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </progressIndicator>
                                 <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="Vk6-uy-Oz4">
