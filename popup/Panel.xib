@@ -221,7 +221,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="J7h-0T-ya6">
-                                    <rect key="frame" x="65" y="29" width="64" height="17"/>
+                                    <rect key="frame" x="65" y="30" width="64" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenPlex" id="POR-er-lLr">
                                         <font key="font" metaFont="system" size="10"/>
@@ -627,14 +627,14 @@
         <window title="Dependencies" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="eck-by-qYs">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="136" y="168" width="319" height="178"/>
+            <rect key="contentRect" x="136" y="168" width="319" height="140"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
             <view key="contentView" id="wVf-UF-FLJ">
-                <rect key="frame" x="0.0" y="0.0" width="319" height="178"/>
+                <rect key="frame" x="0.0" y="0.0" width="319" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="vUj-CQ-fhO">
-                        <rect key="frame" x="18" y="126" width="145" height="17"/>
+                        <rect key="frame" x="18" y="114" width="145" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Theme dependencies :" id="lWq-nO-4XK">
                             <font key="font" metaFont="system"/>
@@ -643,7 +643,7 @@
                         </textFieldCell>
                     </textField>
                     <box autoresizesSubviews="NO" borderType="line" id="iS9-9T-7w0">
-                        <rect key="frame" x="9" y="43" width="301" height="89"/>
+                        <rect key="frame" x="9" y="31" width="301" height="89"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="299" height="73"/>
