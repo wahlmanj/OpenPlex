@@ -113,7 +113,6 @@
                                 <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hmQ-vj-mlT">
                                     <rect key="frame" x="8" y="11" width="34" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <constraints/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
@@ -121,12 +120,10 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
-                                    <metadata/>
                                 </button>
                                 <button toolTip="Stop PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="5Pe-sL-8D8">
                                     <rect key="frame" x="46" y="11" width="34" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <constraints/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
@@ -134,12 +131,10 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
-                                    <metadata/>
                                 </button>
                                 <button toolTip="Update PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="yxX-wR-Xvx">
                                     <rect key="frame" x="84" y="11" width="34" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <constraints/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
@@ -147,12 +142,10 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
-                                    <metadata/>
                                 </button>
                                 <button toolTip="PlexConnect Log" id="xza-Aj-2jC">
                                     <rect key="frame" x="155" y="11" width="34" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <constraints/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
@@ -160,12 +153,10 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
-                                    <metadata/>
                                 </button>
                                 <button toolTip="Settings" id="jcn-Or-5Td">
                                     <rect key="frame" x="193" y="11" width="34" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <constraints/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
@@ -176,12 +167,10 @@
                                             <action selector="orderFront:" target="wwu-5h-UAX" id="ZuP-Wt-VMJ"/>
                                         </connections>
                                     </buttonCell>
-                                    <metadata/>
                                 </button>
                                 <button toolTip="Exit OpenPlex" id="rlJ-Ya-c45">
                                     <rect key="frame" x="231" y="11" width="34" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <constraints/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
@@ -189,7 +178,6 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
-                                    <metadata/>
                                 </button>
                             </subviews>
                         </view>
@@ -199,28 +187,22 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Wk1-AE-LjH">
                         <rect key="frame" x="125" y="8" width="69" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenPlex" id="c2f-wl-KbP">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <metadata/>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="UPb-OI-rZD">
-                        <rect key="frame" x="98" y="8" width="28" height="16"/>
+                        <rect key="frame" x="91" y="8" width="28" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="qd4-VD-V4r"/>
-                        <metadata/>
                     </imageView>
                 </subviews>
                 <shadow key="shadow">
                     <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </shadow>
-                <metadata/>
             </view>
-            <metadata/>
         </window>
         <window title="OpenPlex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="wwu-5h-UAX">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -333,14 +315,14 @@
         <window title="PlexConnect" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="9NY-8I-S8C">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="136" y="168" width="319" height="249"/>
+            <rect key="contentRect" x="136" y="168" width="319" height="253"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
             <view key="contentView" id="ujd-jS-a8r">
-                <rect key="frame" x="0.0" y="0.0" width="319" height="249"/>
+                <rect key="frame" x="0.0" y="0.0" width="319" height="253"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button id="FzH-w0-Eaq">
-                        <rect key="frame" x="208" y="0.0" width="60" height="25"/>
+                        <rect key="frame" x="208" y="4" width="60" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="VLx-Vw-Mye">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -351,7 +333,7 @@
                         </connections>
                     </button>
                     <box autoresizesSubviews="NO" borderType="line" id="TiX-5C-jfn">
-                        <rect key="frame" x="9" y="170" width="300" height="79"/>
+                        <rect key="frame" x="9" y="174" width="300" height="79"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="298" height="63"/>
@@ -385,7 +367,7 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box autoresizesSubviews="NO" borderType="line" id="EJF-OL-N6G">
-                        <rect key="frame" x="9" y="100" width="300" height="79"/>
+                        <rect key="frame" x="9" y="104" width="300" height="79"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="298" height="63"/>
@@ -422,7 +404,7 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <button id="L75-I8-7NN">
-                        <rect key="frame" x="256" y="1" width="50" height="25"/>
+                        <rect key="frame" x="256" y="5" width="50" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="next_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="9Qh-pj-wgx">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -430,7 +412,7 @@
                         </buttonCell>
                     </button>
                     <button id="3dB-1P-9qv">
-                        <rect key="frame" x="12" y="3" width="82" height="18"/>
+                        <rect key="frame" x="12" y="8" width="82" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="paypal-donate-button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="9Os-f3-3AL">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -441,7 +423,7 @@
                         </connections>
                     </button>
                     <box autoresizesSubviews="NO" borderType="line" id="TtZ-iD-Xd7">
-                        <rect key="frame" x="9" y="34" width="300" height="79"/>
+                        <rect key="frame" x="9" y="38" width="300" height="79"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="298" height="63"/>
