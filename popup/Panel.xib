@@ -441,7 +441,7 @@
                                     </connections>
                                 </button>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Bwn-ja-tvD">
-                                    <rect key="frame" x="12" y="11" width="72" height="44"/>
+                                    <rect key="frame" x="8" y="11" width="72" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="WebConnect" id="MOa-fr-8x6"/>
                                 </imageView>
