@@ -93,7 +93,7 @@
             </items>
         </menu>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="hZp-0z-SCm" customClass="Panel">
-            <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES"/>
+            <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES" texturedBackground="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="162" y="101" width="287" height="91"/>
@@ -104,7 +104,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="9ij-nA-Rh3">
-                        <rect key="frame" x="4" y="28" width="278" height="70"/>
+                        <rect key="frame" x="4" y="21" width="278" height="70"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="276" height="54"/>
@@ -185,7 +185,7 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Wk1-AE-LjH">
-                        <rect key="frame" x="125" y="8" width="69" height="17"/>
+                        <rect key="frame" x="122" y="6" width="69" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenPlex" id="c2f-wl-KbP">
                             <font key="font" metaFont="system"/>
@@ -194,7 +194,7 @@
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="UPb-OI-rZD">
-                        <rect key="frame" x="91" y="8" width="28" height="16"/>
+                        <rect key="frame" x="97" y="6" width="28" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="qd4-VD-V4r"/>
                     </imageView>
