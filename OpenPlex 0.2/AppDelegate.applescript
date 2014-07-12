@@ -5,7 +5,7 @@
 --  Designed by iCyberGhost on 5/02/14.
 --  Coded by Wahlman.j on 5/02/14.
 --  Copyright (c) 2014 CyberGhost & Wahlman.j. All rights reserved.
---
+--  myProgressBar's incrementBy_(20)
 
 script AppDelegate
     property parent : class "NSObject"
@@ -21,6 +21,18 @@ script AppDelegate
     property imovieProgressBar : missing value
     
     property wsjProgressBar : missing value
+    
+    property baaProgressBar : missing value
+    
+    property ghostProgressBar : missing value
+    
+    property brotuserProgressBar : missing value
+    
+    property wahlmanjProgressBar : missing value
+    
+    property stoffezProgressBar : missing value
+    
+    property falcoProgressBar : missing value
     
     --scripts
     
@@ -374,8 +386,15 @@ script AppDelegate
         do shell script "startbash.bash"
         tell application "Finder"
             if (exists folder "Applications:PlexConnect_BACKUP:flow" of the startup disk) then
-                do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/flow/* /Applications/plexconnect_BACKUP/flow"
-                do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/top/* /Applications/plexconnect_BACKUP/top"
+                try
+                    do shell script "rm -R /Applications/plexconnect_BACKUP/flow"
+                    do shell script "rm -R /Applications/plexconnect_BACKUP/top"
+                    do shell script "mkdir /Applications/plexconnect_BACKUP/flow"
+                    do shell script "mkdir /Applications/plexconnect_BACKUP/top"
+                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/flow/* /Applications/plexconnect_BACKUP/flow"
+                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/top/* /Applications/plexconnect_BACKUP/top"
+                    onerror
+                end try
                 else if not (exists folder "Applications:PlexConnect_BACKUP:flow" of the startup disk) then
                 try
                     do shell script "mkdir /Applications/plexconnect_BACKUP/top"
@@ -400,8 +419,26 @@ script AppDelegate
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
         do shell script "cp /Applications/plexconnect_BACKUP/settings.cfg /Applications/PlexConnect"
         tell application "Finder"
+            if (exists folder "Applications:plexconnect_BACKUP:flow" of the startup disk) then
+                do shell script "echo already present"
+                else if not (exists folder "Applications:plexconnect_BACKUP:flow" of the startup disk) then
+                do shell script "mkdir /Applications/plexconnect_BACKUP/top"
+                do shell script "mkdir /Applications/plexconnect_BACKUP/flow"
+            end if
+        end tell
+        tell application "Finder"
+            if (exists folder "Applications:plexconnect_BACKUP:fanartcache" of the startup disk) then
+                do shell script "echo already present"
+                else if not (exists folder "Applications:plexconnect_BACKUP:fanartcache" of the startup disk) then
+                do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
+            end if
+        end tell
+        tell application "Finder"
             if (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
-                do shell script "cp -R /Applications/plexconnect_BACKUP/fanartcache/* /Applications/PlexConnect/assets/fanartcache"
+                try
+                    do shell script "cp -R /Applications/plexconnect_BACKUP/fanartcache/* /Applications/PlexConnect/assets/fanartcache"
+                    onerror
+                end try
                 else if not (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
                 do shell script "echo not present"
             end if
@@ -443,7 +480,7 @@ script AppDelegate
     end buttonhandlerbrew_
     
     on buttonhandlerclone_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell baaProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -479,12 +516,12 @@ script AppDelegate
         do shell script "sudoers.bash"
         delay 2
         do shell script "sudoersfixbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerclone_
     
     on buttonhandlerfalco_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell falcoProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -520,12 +557,12 @@ script AppDelegate
         do shell script "sudoers.bash"
         delay 2
         do shell script "sudoersfixbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell falcoProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerfalco_
     
     on buttonhandlerstoffez_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell stoffezProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -561,12 +598,12 @@ script AppDelegate
         do shell script "sudoers.bash"
         delay 2
         do shell script "sudoersfixbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell stoffezProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerstoffez_
     
     on buttonhandlerghost_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell ghostProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -602,12 +639,12 @@ script AppDelegate
         do shell script "sudoers.bash"
         delay 2
         do shell script "sudoersfixbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell ghostProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerghost_
     
     on buttonhandlerbrotuser_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell brotuserProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -643,12 +680,12 @@ script AppDelegate
         do shell script "sudoers.bash"
         delay 2
         do shell script "sudoersfixbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell brotuserProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerbrotuser_
     
     on buttonhandlerwahlmanj_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell wahlmanjProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -672,7 +709,7 @@ script AppDelegate
         do shell script "sudoers.bash"
         delay 2
         do shell script "sudoersfixbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwahlmanj_
     

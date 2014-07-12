@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -145,8 +145,16 @@
         </window>
         <customObject id="139" customClass="AppDelegate">
             <connections>
+                <outlet property="baaProgressBar" destination="JVe-Ah-FxJ" id="psd-RA-69Q"/>
+                <outlet property="brotuserProgressBar" destination="IW6-Ta-rFC" id="eo2-26-cam"/>
+                <outlet property="falcoProgressBar" destination="XzM-AS-NGH" id="2Ym-sn-Rjd"/>
+                <outlet property="ghostProgressBar" destination="aGc-Dv-d1R" id="SJc-XG-I7v"/>
+                <outlet property="gitProgressBar" destination="8Hd-0x-7df" id="PJ5-mk-dq6"/>
                 <outlet property="imovieProgressBar" destination="1550" id="1640"/>
+                <outlet property="myProgressBar" destination="kqI-af-e6O" id="FL9-Ju-n0z"/>
+                <outlet property="stoffezProgressBar" destination="eyG-z1-Y0f" id="zRE-pp-Y7w"/>
                 <outlet property="trailersProgressBar" destination="1551" id="1641"/>
+                <outlet property="wahlmanjProgressBar" destination="ekz-31-M05" id="YeX-oa-4YM"/>
                 <outlet property="wsjProgressBar" destination="1549" id="1642"/>
             </connections>
         </customObject>
@@ -417,7 +425,7 @@
                                         <font key="font" metaFont="system" size="15"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="buttonhandlerlaunchwcinstaller:" target="139" id="oDA-hX-1VG"/>
+                                        <action selector="buttonhandlerlaunchwc:" target="139" id="fCC-Gd-grc"/>
                                     </connections>
                                 </button>
                                 <button id="Q0m-rL-Wql">
@@ -428,7 +436,7 @@
                                         <font key="font" metaFont="system" size="15"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="buttonhandlerlaunchwcinstaller:" target="139" id="3gH-ld-bgq"/>
+                                        <action selector="buttonhandlerlaunchwcios:" target="139" id="BE1-gd-ZtB"/>
                                     </connections>
                                 </button>
                                 <button id="CKU-Ui-s6k">
@@ -439,7 +447,7 @@
                                         <font key="font" metaFont="system" size="15"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="buttonhandlerlaunchwcinstaller:" target="139" id="sUu-h5-BKX"/>
+                                        <action selector="buttonhandlerlaunchwclist:" target="139" id="A6d-uf-c2t"/>
                                     </connections>
                                 </button>
                                 <button id="1567">
@@ -450,7 +458,7 @@
                                         <font key="font" metaFont="system" size="15"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="buttonhandlerlaunchwcinstaller:" target="139" id="1581"/>
+                                        <action selector="buttonhandlerlaunchwcinstaller:" target="139" id="4O5-K0-iWy"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -489,7 +497,7 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="buttonhandlergitinstaller:" target="139" id="0mO-Pz-gSF"/>
+                                        <action selector="buttonhandleropenwc:" target="139" id="Zcz-ry-Utu"/>
                                     </connections>
                                 </button>
                                 <button id="cZm-az-sJe">
@@ -583,7 +591,7 @@
                                     </connections>
                                 </button>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1546">
-                                    <rect key="frame" x="39" y="35" width="51" height="17"/>
+                                    <rect key="frame" x="44" y="35" width="40" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Trailers" id="1554">
                                         <font key="font" metaFont="system" size="10"/>
@@ -592,7 +600,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1547">
-                                    <rect key="frame" x="154" y="35" width="41" height="17"/>
+                                    <rect key="frame" x="152" y="35" width="36" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iMovie" id="1553">
                                         <font key="font" metaFont="system" size="10"/>
@@ -601,7 +609,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1548">
-                                    <rect key="frame" x="257" y="35" width="55" height="17"/>
+                                    <rect key="frame" x="254" y="35" width="44" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WSJ Live" id="1552">
                                         <font key="font" metaFont="system" size="10"/>
@@ -636,7 +644,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" id="1528">
-                        <rect key="frame" x="188" y="56" width="89" height="25"/>
+                        <rect key="frame" x="188" y="58" width="89" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="squareTextured" title=" Setup Guide" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1541">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -694,12 +702,12 @@
                         </connections>
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1534">
-                        <rect key="frame" x="121" y="60" width="31" height="20"/>
+                        <rect key="frame" x="121" y="62" width="31" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Apple_logo_black.svg" id="1537"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1535">
-                        <rect key="frame" x="144" y="61" width="21" height="17"/>
+                        <rect key="frame" x="144" y="63" width="21" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="TV" id="1536">
                             <font key="font" metaFont="system"/>
@@ -1018,7 +1026,7 @@
                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator maxValue="100" displayedWhenStopped="NO" style="bar" id="kqI-af-e6O">
+                    <progressIndicator maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" id="kqI-af-e6O">
                         <rect key="frame" x="252" y="30" width="244" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </progressIndicator>
@@ -1617,7 +1625,7 @@ dGhlIGV4aXQgaWNvbi4
                                         <font key="font" metaFont="system" size="14"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="buttonhandlergitinstaller:" target="139" id="1561"/>
+                                        <action selector="buttonhandlerupdateoc:" target="139" id="NNg-tv-mWA"/>
                                     </connections>
                                 </button>
                                 <button id="OHQ-uE-zg5">
@@ -1627,6 +1635,9 @@ dGhlIGV4aXQgaWNvbi4
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandleruninstall:" target="139" id="QEd-J9-hPZ"/>
+                                    </connections>
                                 </button>
                                 <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="8Hd-0x-7df">
                                     <rect key="frame" x="135" y="33" width="16" height="16"/>
@@ -1739,14 +1750,6 @@ dGhlIGV4aXQgaWNvbi4
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="O1R-5V-Z5p">
-                                    <rect key="frame" x="165" y="14" width="16" height="16"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                </progressIndicator>
-                                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="ywV-56-5Ja">
-                                    <rect key="frame" x="165" y="41" width="16" height="16"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                </progressIndicator>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fwh-NT-Jql">
                                     <rect key="frame" x="16" y="14" width="116" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
