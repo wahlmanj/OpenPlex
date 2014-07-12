@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.21"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -17,10 +17,10 @@
             <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES" texturedBackground="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="162" y="101" width="287" height="98"/>
+            <rect key="contentRect" x="162" y="101" width="287" height="92"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" wantsLayer="YES" id="6" customClass="BackgroundView">
-                <rect key="frame" x="0.0" y="0.0" width="287" height="98"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="722">
@@ -86,20 +86,6 @@
                                         <action selector="makeKeyAndOrderFront:" target="1154" id="1625"/>
                                     </connections>
                                 </button>
-                                <button toolTip="Exit OpenPlex" id="727">
-                                    <rect key="frame" x="231" y="11" width="34" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <shadow key="shadow">
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="quit" imagePosition="only" alignment="left" borderStyle="border" id="738">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="stop:" target="-1" id="1056"/>
-                                    </connections>
-                                </button>
                                 <button toolTip="Stop PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="731">
                                     <rect key="frame" x="46" y="11" width="34" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -112,6 +98,20 @@
                                     </buttonCell>
                                     <connections>
                                         <action selector="buttonhandlerstop:" target="139" id="1634"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="Exit OpenPlex" id="727">
+                                    <rect key="frame" x="231" y="11" width="34" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <shadow key="shadow">
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </shadow>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="quit" imagePosition="only" alignment="left" borderStyle="border" id="738">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="stop:" target="-1" id="1056"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -141,7 +141,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="8"/>
             </connections>
-            <point key="canvasLocation" x="193.5" y="-610"/>
+            <point key="canvasLocation" x="-1549.5" y="-1702"/>
         </window>
         <customObject id="139" customClass="AppDelegate">
             <connections>
@@ -345,7 +345,7 @@
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="1076" y="-517.5"/>
+            <point key="canvasLocation" x="196" y="-1625.5"/>
         </window>
         <window title="WebConnect Setup" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1416">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -535,7 +535,7 @@
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="1106" y="-129"/>
+            <point key="canvasLocation" x="313" y="-1255"/>
         </window>
         <window title="Certificates" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1479">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -664,19 +664,8 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
-                    <button id="1531">
-                        <rect key="frame" x="272" y="7" width="60" height="25"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1540">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system" size="17"/>
-                            <connections>
-                                <action selector="orderBack:" target="1242" id="d2a-Hx-2jj"/>
-                            </connections>
-                        </buttonCell>
-                    </button>
                     <button id="1532">
-                        <rect key="frame" x="315" y="8" width="50" height="25"/>
+                        <rect key="frame" x="315" y="7" width="50" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="next_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1539">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -711,21 +700,32 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button id="1531">
+                        <rect key="frame" x="266" y="6" width="60" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1540">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="17"/>
+                            <connections>
+                                <action selector="orderFront:" target="1242" id="Jdv-7u-tnU"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-29.5" y="92.5"/>
+            <point key="canvasLocation" x="-292.5" y="-1600.5"/>
         </window>
         <window title="Avanced Options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1330">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1440" y="242" width="513" height="316"/>
+            <rect key="contentRect" x="1440" y="242" width="513" height="337"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="1331">
-                <rect key="frame" x="0.0" y="0.0" width="513" height="316"/>
+                <rect key="frame" x="0.0" y="-2" width="513" height="337"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="1348">
-                        <rect key="frame" x="14" y="53" width="485" height="233"/>
+                        <rect key="frame" x="14" y="74" width="485" height="233"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="483" height="231"/>
@@ -1014,7 +1014,7 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1349">
-                        <rect key="frame" x="21" y="292" width="127" height="17"/>
+                        <rect key="frame" x="21" y="313" width="127" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Advanced Options :" id="1356">
                             <font key="font" metaFont="system"/>
@@ -1022,12 +1022,12 @@
                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" id="kqI-af-e6O">
-                        <rect key="frame" x="252" y="30" width="244" height="20"/>
+                    <progressIndicator maxValue="100" displayedWhenStopped="NO" style="bar" id="kqI-af-e6O">
+                        <rect key="frame" x="252" y="51" width="244" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </progressIndicator>
                     <button id="1350">
-                        <rect key="frame" x="17" y="31" width="82" height="18"/>
+                        <rect key="frame" x="20" y="20" width="82" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="paypal-donate-button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="1355">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1037,9 +1037,20 @@
                             <action selector="buttonhandlerdonate:" target="139" id="1690"/>
                         </connections>
                     </button>
+                    <button id="dLB-7Y-o2C">
+                        <rect key="frame" x="441" y="13" width="60" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Faj-U3-jKb">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="17"/>
+                            <connections>
+                                <action selector="orderFront:" target="1242" id="efz-cJ-jd9"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="490.5" y="-234"/>
+            <point key="canvasLocation" x="-228.5" y="-1225.5"/>
         </window>
         <window title="Setup Complete" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="626" userLabel="Window - Setup Complete">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1103,7 +1114,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="561" y="-594"/>
+            <point key="canvasLocation" x="631" y="-1580"/>
         </window>
         <window title="Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1123">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1201,7 +1212,7 @@ dGhlIGV4aXQgaWNvbi4
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-17" y="-283"/>
+            <point key="canvasLocation" x="-1081" y="-1302"/>
         </window>
         <window title="Choose Theme" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1192">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1411,9 +1422,20 @@ dGhlIGV4aXQgaWNvbi4
                             <action selector="buttonhandlerdonate:" target="139" id="1685"/>
                         </connections>
                     </button>
+                    <button id="ggq-Y9-8hh">
+                        <rect key="frame" x="219" y="2" width="60" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="LT5-0v-uN4">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="17"/>
+                            <connections>
+                                <action selector="orderFront:" target="1242" id="lgm-nZ-hwv"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="572" y="166"/>
+            <point key="canvasLocation" x="-699" y="-1250"/>
         </window>
         <window title="PlexConnect" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1242">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1570,7 +1592,7 @@ dGhlIGV4aXQgaWNvbi4
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="987.5" y="237"/>
+            <point key="canvasLocation" x="-709.5" y="-1601"/>
         </window>
         <window title="OpenPlex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1154">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1688,35 +1710,35 @@ dGhlIGV4aXQgaWNvbi4
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="132.5" y="403.5"/>
+            <point key="canvasLocation" x="-1141.5" y="-1632.5"/>
         </window>
         <window title="Theme Requirements" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1090">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1337" y="575" width="319" height="143"/>
+            <rect key="contentRect" x="1337" y="575" width="286" height="143"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="1091">
-                <rect key="frame" x="0.0" y="0.0" width="319" height="143"/>
+                <rect key="frame" x="0.0" y="0.0" width="286" height="143"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1108">
-                        <rect key="frame" x="19" y="117" width="145" height="17"/>
+                        <rect key="frame" x="8" y="115" width="145" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Theme requirements :" id="1122">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <box autoresizesSubviews="NO" borderType="line" id="1109">
-                        <rect key="frame" x="10" y="34" width="301" height="89"/>
+                        <rect key="frame" x="7" y="34" width="271" height="89"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="299" height="73"/>
+                            <rect key="frame" x="1" y="1" width="269" height="73"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button id="1112">
-                                    <rect key="frame" x="202" y="41" width="79" height="22"/>
+                                    <rect key="frame" x="172" y="44" width="79" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="InstallIcon" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1121">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1727,7 +1749,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button id="1113">
-                                    <rect key="frame" x="202" y="11" width="79" height="22"/>
+                                    <rect key="frame" x="172" y="11" width="79" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="InstallIcon" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1120">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1738,9 +1760,9 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1115">
-                                    <rect key="frame" x="16" y="44" width="116" height="17"/>
+                                    <rect key="frame" x="16" y="47" width="123" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Command Line Tools" id="1118">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Command Line Tools :" id="1118">
                                         <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1749,19 +1771,27 @@ dGhlIGV4aXQgaWNvbi4
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fwh-NT-Jql">
                                     <rect key="frame" x="16" y="14" width="116" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pillow" id="em8-Ho-cOX">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PIL / Pillow :" id="em8-Ho-cOX">
                                         <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
+                                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="877-37-2kX">
+                                    <rect key="frame" x="148" y="47" width="16" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </progressIndicator>
+                                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="JhU-68-hIn">
+                                    <rect key="frame" x="148" y="14" width="16" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </progressIndicator>
                             </subviews>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <button id="1110">
-                        <rect key="frame" x="13" y="11" width="82" height="18"/>
+                        <rect key="frame" x="10" y="12" width="82" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="paypal-donate-button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="1111">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1771,9 +1801,20 @@ dGhlIGV4aXQgaWNvbi4
                             <action selector="buttonhandlerdonate:" target="139" id="1688"/>
                         </connections>
                     </button>
+                    <button id="5VU-0P-Rs3">
+                        <rect key="frame" x="220" y="5" width="60" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="nlR-Kk-RCc">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="17"/>
+                            <connections>
+                                <action selector="orderFront:" target="1192" id="yyz-qg-rKS"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="572.5" y="455.5"/>
+            <point key="canvasLocation" x="-699" y="-959.5"/>
         </window>
     </objects>
     <resources>
