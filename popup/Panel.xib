@@ -519,10 +519,6 @@
                                         <action selector="buttonhandlergitinstaller:" target="139" id="Jua-j7-dD9"/>
                                     </connections>
                                 </button>
-                                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="jF9-zv-xhW">
-                                    <rect key="frame" x="130" y="28" width="16" height="16"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                </progressIndicator>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1466">
                                     <rect key="frame" x="53" y="25" width="71" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
