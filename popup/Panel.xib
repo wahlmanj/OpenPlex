@@ -17,17 +17,17 @@
             <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES" texturedBackground="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="162" y="101" width="287" height="92"/>
+            <rect key="contentRect" x="162" y="101" width="297" height="79"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" wantsLayer="YES" id="6" customClass="BackgroundView">
-                <rect key="frame" x="0.0" y="0.0" width="287" height="92"/>
+                <rect key="frame" x="0.0" y="0.0" width="297" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="722">
-                        <rect key="frame" x="4" y="28" width="278" height="70"/>
+                        <rect key="frame" x="5" y="2" width="285" height="70"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="276" height="54"/>
+                            <rect key="frame" x="1" y="1" width="283" height="54"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button toolTip="Update PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="730">
@@ -45,7 +45,7 @@
                                     </connections>
                                 </button>
                                 <button toolTip="PlexConnect Log" id="729">
-                                    <rect key="frame" x="137" y="-4" width="63" height="64"/>
+                                    <rect key="frame" x="140" y="-3" width="63" height="64"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,7 +59,7 @@
                                     </connections>
                                 </button>
                                 <button toolTip="Settings" id="728">
-                                    <rect key="frame" x="185" y="10" width="45" height="37"/>
+                                    <rect key="frame" x="191" y="11" width="45" height="37"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,7 +87,7 @@
                                     </connections>
                                 </button>
                                 <button toolTip="Exit OpenPlex" id="727">
-                                    <rect key="frame" x="217" y="-1" width="63" height="59"/>
+                                    <rect key="frame" x="224" y="0.0" width="63" height="59"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,11 +119,6 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="o07-3B-vZm">
-                        <rect key="frame" x="124" y="5" width="39" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="qZb-Is-pfe"/>
-                    </imageView>
                 </subviews>
                 <shadow key="shadow">
                     <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1173,7 +1168,7 @@ dGhlIGV4aXQgaWNvbi4
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1126">
                         <rect key="frame" x="27" y="14" width="44" height="48"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Apple_logo_black.svg" id="1139"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Applelogo" id="1139"/>
                     </imageView>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1125">
                         <rect key="frame" x="140" y="13" width="72" height="44"/>
@@ -1606,7 +1601,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </textFieldCell>
                                 </textField>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1182">
-                                    <rect key="frame" x="5" y="14" width="54" height="55"/>
+                                    <rect key="frame" x="9" y="14" width="54" height="55"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="1190"/>
                                 </imageView>
@@ -1802,7 +1797,6 @@ dGhlIGV4aXQgaWNvbi4
         </window>
     </objects>
     <resources>
-        <image name="Apple_logo_black.svg" width="2000" height="2396"/>
         <image name="Applelogo" width="2000" height="2396"/>
         <image name="InstallIcon" width="85" height="27"/>
         <image name="OpenPlex" width="1000" height="1000"/>
