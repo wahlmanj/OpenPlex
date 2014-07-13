@@ -8,55 +8,83 @@
 
 /* Begin PBXBuildFile section */
 		097F5426196855FB00BC9A10 /* AppDelegate.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 097F5425196855FB00BC9A10 /* AppDelegate.applescript */; };
-		097F543C1968566300BC9A10 /* Arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54281968566300BC9A10 /* Arrows.png */; };
-		097F543D1968566300BC9A10 /* CopyRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54291968566300BC9A10 /* CopyRight.png */; };
-		097F543E1968566300BC9A10 /* Github.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542A1968566300BC9A10 /* Github.png */; };
-		097F543F1968566300BC9A10 /* icon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542B1968566300BC9A10 /* icon_<16x16>.png */; };
-		097F54401968566300BC9A10 /* iMovie.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542C1968566300BC9A10 /* iMovie.png */; };
-		097F54411968566300BC9A10 /* log.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542D1968566300BC9A10 /* log.png */; };
-		097F54421968566300BC9A10 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542E1968566300BC9A10 /* logo.png */; };
-		097F54431968566300BC9A10 /* MenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F542F1968566300BC9A10 /* MenuIcon.png */; };
-		097F54441968566300BC9A10 /* Openplex copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54301968566300BC9A10 /* Openplex copy.png */; };
-		097F54451968566300BC9A10 /* OpenPlex.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54311968566300BC9A10 /* OpenPlex.png */; };
-		097F54461968566300BC9A10 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54321968566300BC9A10 /* Pause.png */; };
-		097F54471968566300BC9A10 /* paypal-donate-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54331968566300BC9A10 /* paypal-donate-button.png */; };
-		097F54481968566300BC9A10 /* Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54341968566300BC9A10 /* Play.png */; };
-		097F54491968566300BC9A10 /* PlexConnect Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54351968566300BC9A10 /* PlexConnect Icon.png */; };
-		097F544A1968566300BC9A10 /* quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54361968566300BC9A10 /* quit.png */; };
-		097F544B1968566300BC9A10 /* Stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54371968566300BC9A10 /* Stop.png */; };
-		097F544C1968566300BC9A10 /* stop2.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54381968566300BC9A10 /* stop2.png */; };
-		097F544D1968566300BC9A10 /* Trailers.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54391968566300BC9A10 /* Trailers.png */; };
-		097F544E1968566300BC9A10 /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F543A1968566300BC9A10 /* WebConnect.png */; };
-		097F544F1968566300BC9A10 /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F543B1968566300BC9A10 /* WSJ.png */; };
-		097F54511968573500BC9A10 /* atv.png in Resources */ = {isa = PBXBuildFile; fileRef = 097F54501968573500BC9A10 /* atv.png */; };
 		099068B3195D5ED800442FB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 099068B2195D5ED800442FB5 /* Images.xcassets */; };
 		09947B22195BCABB0005EE4A /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B21195BCABB0005EE4A /* AppleScriptObjC.framework */; };
 		09947B28195BCDB30005EE4A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B25195BCDB30005EE4A /* AppKit.framework */; };
 		09947B29195BCDB30005EE4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B26195BCDB30005EE4A /* CoreData.framework */; };
 		09947B2A195BCDB30005EE4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B27195BCDB30005EE4A /* Foundation.framework */; };
-		09E71CA4197050050051A1FE /* Apple_logo_black.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C91197050050051A1FE /* Apple_logo_black.svg.png */; };
-		09E71CA5197050050051A1FE /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C92197050050051A1FE /* back_button.png */; };
-		09E71CA6197050050051A1FE /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C93197050050051A1FE /* back.png */; };
-		09E71CA7197050050051A1FE /* Backup.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C94197050050051A1FE /* Backup.png */; };
-		09E71CA8197050050051A1FE /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C95197050050051A1FE /* choose.png */; };
-		09E71CA9197050050051A1FE /* getstart.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C96197050050051A1FE /* getstart.png */; };
-		09E71CAA197050050051A1FE /* haken_wittmer_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C97197050050051A1FE /* haken_wittmer_01.png */; };
-		09E71CAB197050050051A1FE /* InstallIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C98197050050051A1FE /* InstallIcon.png */; };
-		09E71CAC197050050051A1FE /* Load.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C99197050050051A1FE /* Load.png */; };
-		09E71CAD197050050051A1FE /* MenuIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C9A197050050051A1FE /* MenuIcon2.png */; };
-		09E71CAE197050050051A1FE /* next_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C9B197050050051A1FE /* next_button.png */; };
-		09E71CAF197050050051A1FE /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C9C197050050051A1FE /* next.png */; };
-		09E71CB0197050050051A1FE /* OpenplexVid.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C9D197050050051A1FE /* OpenplexVid.png */; };
-		09E71CB1197050050051A1FE /* Restore.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C9E197050050051A1FE /* Restore.png */; };
-		09E71CB2197050050051A1FE /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71C9F197050050051A1FE /* select.png */; };
-		09E71CB3197050050051A1FE /* social-media-select-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71CA0197050050051A1FE /* social-media-select-button.png */; };
-		09E71CB4197050050051A1FE /* TryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71CA1197050050051A1FE /* TryIcon.png */; };
-		09E71CB5197050050051A1FE /* uninstall.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71CA2197050050051A1FE /* uninstall.png */; };
-		09E71CB6197050050051A1FE /* UpdateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E71CA3197050050051A1FE /* UpdateIcon.png */; };
-		DBE45E7A1971CE78009DF440 /* selectburtt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE45E781971CE78009DF440 /* selectburtt.png */; };
-		DBE45E7B1971CE78009DF440 /* selectbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE45E791971CE78009DF440 /* selectbutton.png */; };
-		DBE45E7D1971D225009DF440 /* installbutt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE45E7C1971D225009DF440 /* installbutt.png */; };
-		DBE45E7F1971D34C009DF440 /* uninstallbutt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE45E7E1971D34C009DF440 /* uninstallbutt.png */; };
+		DBAFD9B61972D6220099EE6E /* Applelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9881972D6220099EE6E /* Applelogo.png */; };
+		DBAFD9B81972D6220099EE6E /* atv.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD98A1972D6220099EE6E /* atv.png */; };
+		DBAFD9B91972D6220099EE6E /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD98B1972D6220099EE6E /* back_button.png */; };
+		DBAFD9BA1972D6220099EE6E /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD98C1972D6220099EE6E /* choose.png */; };
+		DBAFD9BB1972D6220099EE6E /* CopyRight.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD98D1972D6220099EE6E /* CopyRight.png */; };
+		DBAFD9BC1972D6220099EE6E /* getstart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD98E1972D6220099EE6E /* getstart.png */; };
+		DBAFD9BE1972D6220099EE6E /* haken_wittmer_01.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9901972D6220099EE6E /* haken_wittmer_01.png */; };
+		DBAFD9BF1972D6220099EE6E /* icon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9911972D6220099EE6E /* icon_<16x16>.png */; };
+		DBAFD9C01972D6220099EE6E /* iMovie.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9921972D6220099EE6E /* iMovie.png */; };
+		DBAFD9C11972D6220099EE6E /* installbutt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9931972D6220099EE6E /* installbutt.png */; };
+		DBAFD9C21972D6220099EE6E /* InstallIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9941972D6220099EE6E /* InstallIcon.png */; };
+		DBAFD9C51972D6220099EE6E /* logplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9971972D6220099EE6E /* logplex.png */; };
+		DBAFD9C61972D6220099EE6E /* MenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9981972D6220099EE6E /* MenuIcon.png */; };
+		DBAFD9C71972D6220099EE6E /* MenuIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9991972D6220099EE6E /* MenuIcon2.png */; };
+		DBAFD9C81972D6220099EE6E /* menuplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD99A1972D6220099EE6E /* menuplex.png */; };
+		DBAFD9C91972D6220099EE6E /* next_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD99B1972D6220099EE6E /* next_button.png */; };
+		DBAFD9CA1972D6220099EE6E /* Openplex copy.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD99C1972D6220099EE6E /* Openplex copy.png */; };
+		DBAFD9CB1972D6220099EE6E /* OpenPlex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD99D1972D6220099EE6E /* OpenPlex.png */; };
+		DBAFD9CC1972D6220099EE6E /* OpenplexVid.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD99E1972D6220099EE6E /* OpenplexVid.png */; };
+		DBAFD9CD1972D6220099EE6E /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD99F1972D6220099EE6E /* Pause.png */; };
+		DBAFD9CE1972D6220099EE6E /* paypal-donate-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9A01972D6220099EE6E /* paypal-donate-button.png */; };
+		DBAFD9D01972D6220099EE6E /* PlexConnect Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9A21972D6220099EE6E /* PlexConnect Icon.png */; };
+		DBAFD9D11972D6220099EE6E /* quit.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9A31972D6220099EE6E /* quit.png */; };
+		DBAFD9D21972D6220099EE6E /* quitplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9A41972D6220099EE6E /* quitplex.png */; };
+		DBAFD9D51972D6220099EE6E /* selectburtt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9A71972D6220099EE6E /* selectburtt.png */; };
+		DBAFD9D61972D6220099EE6E /* selectbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9A81972D6220099EE6E /* selectbutton.png */; };
+		DBAFD9D71972D6220099EE6E /* social-media-select-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9A91972D6220099EE6E /* social-media-select-button.png */; };
+		DBAFD9D81972D6220099EE6E /* startplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9AA1972D6220099EE6E /* startplex.png */; };
+		DBAFD9DB1972D6220099EE6E /* stopplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9AD1972D6220099EE6E /* stopplex.png */; };
+		DBAFD9DC1972D6220099EE6E /* Trailers.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9AE1972D6220099EE6E /* Trailers.png */; };
+		DBAFD9DE1972D6220099EE6E /* uninstall.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9B01972D6220099EE6E /* uninstall.png */; };
+		DBAFD9DF1972D6220099EE6E /* uninstallbutt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9B11972D6220099EE6E /* uninstallbutt.png */; };
+		DBAFD9E01972D6220099EE6E /* UpdateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9B21972D6220099EE6E /* UpdateIcon.png */; };
+		DBAFD9E11972D6220099EE6E /* updateplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9B31972D6220099EE6E /* updateplex.png */; };
+		DBAFD9E21972D6220099EE6E /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9B41972D6220099EE6E /* WebConnect.png */; };
+		DBAFD9E31972D6220099EE6E /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9B51972D6220099EE6E /* WSJ.png */; };
+		DBAFDA091972D7F60099EE6E /* Apple_logo_black.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9E51972D7F60099EE6E /* Apple_logo_black.svg.png */; };
+		DBAFDA0A1972D7F60099EE6E /* atv.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9E61972D7F60099EE6E /* atv.png */; };
+		DBAFDA0B1972D7F60099EE6E /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9E71972D7F60099EE6E /* back_button.png */; };
+		DBAFDA0C1972D7F60099EE6E /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9E81972D7F60099EE6E /* choose.png */; };
+		DBAFDA0D1972D7F60099EE6E /* CopyRight.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9E91972D7F60099EE6E /* CopyRight.png */; };
+		DBAFDA0E1972D7F60099EE6E /* getstart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9EA1972D7F60099EE6E /* getstart.png */; };
+		DBAFDA0F1972D7F60099EE6E /* haken_wittmer_01.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9EB1972D7F60099EE6E /* haken_wittmer_01.png */; };
+		DBAFDA101972D7F60099EE6E /* icon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9EC1972D7F60099EE6E /* icon_<16x16>.png */; };
+		DBAFDA111972D7F60099EE6E /* iMovie.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9ED1972D7F60099EE6E /* iMovie.png */; };
+		DBAFDA121972D7F60099EE6E /* installbutt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9EE1972D7F60099EE6E /* installbutt.png */; };
+		DBAFDA131972D7F60099EE6E /* InstallIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9EF1972D7F60099EE6E /* InstallIcon.png */; };
+		DBAFDA141972D7F60099EE6E /* logplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F01972D7F60099EE6E /* logplex.png */; };
+		DBAFDA151972D7F60099EE6E /* MenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F11972D7F60099EE6E /* MenuIcon.png */; };
+		DBAFDA161972D7F60099EE6E /* MenuIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F21972D7F60099EE6E /* MenuIcon2.png */; };
+		DBAFDA171972D7F60099EE6E /* menuplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F31972D7F60099EE6E /* menuplex.png */; };
+		DBAFDA181972D7F60099EE6E /* next_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F41972D7F60099EE6E /* next_button.png */; };
+		DBAFDA191972D7F60099EE6E /* Openplex copy.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F51972D7F60099EE6E /* Openplex copy.png */; };
+		DBAFDA1A1972D7F60099EE6E /* OpenPlex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F61972D7F60099EE6E /* OpenPlex.png */; };
+		DBAFDA1B1972D7F60099EE6E /* OpenplexVid.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F71972D7F60099EE6E /* OpenplexVid.png */; };
+		DBAFDA1C1972D7F60099EE6E /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F81972D7F60099EE6E /* Pause.png */; };
+		DBAFDA1D1972D7F60099EE6E /* paypal-donate-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9F91972D7F60099EE6E /* paypal-donate-button.png */; };
+		DBAFDA1E1972D7F60099EE6E /* PlexConnect Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9FA1972D7F60099EE6E /* PlexConnect Icon.png */; };
+		DBAFDA1F1972D7F60099EE6E /* quit.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9FB1972D7F60099EE6E /* quit.png */; };
+		DBAFDA201972D7F60099EE6E /* quitplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9FC1972D7F60099EE6E /* quitplex.png */; };
+		DBAFDA211972D7F60099EE6E /* selectburtt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9FD1972D7F60099EE6E /* selectburtt.png */; };
+		DBAFDA221972D7F60099EE6E /* selectbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9FE1972D7F60099EE6E /* selectbutton.png */; };
+		DBAFDA231972D7F60099EE6E /* social-media-select-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFD9FF1972D7F60099EE6E /* social-media-select-button.png */; };
+		DBAFDA241972D7F60099EE6E /* startplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA001972D7F60099EE6E /* startplex.png */; };
+		DBAFDA251972D7F60099EE6E /* stopplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA011972D7F60099EE6E /* stopplex.png */; };
+		DBAFDA261972D7F60099EE6E /* Trailers.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA021972D7F60099EE6E /* Trailers.png */; };
+		DBAFDA271972D7F60099EE6E /* uninstall.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA031972D7F60099EE6E /* uninstall.png */; };
+		DBAFDA281972D7F60099EE6E /* uninstallbutt.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA041972D7F60099EE6E /* uninstallbutt.png */; };
+		DBAFDA291972D7F60099EE6E /* UpdateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA051972D7F60099EE6E /* UpdateIcon.png */; };
+		DBAFDA2A1972D7F60099EE6E /* updateplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA061972D7F60099EE6E /* updateplex.png */; };
+		DBAFDA2B1972D7F60099EE6E /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA071972D7F60099EE6E /* WebConnect.png */; };
+		DBAFDA2C1972D7F60099EE6E /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA081972D7F60099EE6E /* WSJ.png */; };
 		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
 		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
 		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
@@ -75,55 +103,83 @@
 
 /* Begin PBXFileReference section */
 		097F5425196855FB00BC9A10 /* AppDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = AppDelegate.applescript; path = "OpenPlex 0.2/AppDelegate.applescript"; sourceTree = "<group>"; };
-		097F54281968566300BC9A10 /* Arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrows.png; sourceTree = "<group>"; };
-		097F54291968566300BC9A10 /* CopyRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CopyRight.png; sourceTree = "<group>"; };
-		097F542A1968566300BC9A10 /* Github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Github.png; sourceTree = "<group>"; };
-		097F542B1968566300BC9A10 /* icon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_<16x16>.png"; sourceTree = "<group>"; };
-		097F542C1968566300BC9A10 /* iMovie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMovie.png; sourceTree = "<group>"; };
-		097F542D1968566300BC9A10 /* log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = log.png; sourceTree = "<group>"; };
-		097F542E1968566300BC9A10 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		097F542F1968566300BC9A10 /* MenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon.png; sourceTree = "<group>"; };
-		097F54301968566300BC9A10 /* Openplex copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Openplex copy.png"; sourceTree = "<group>"; };
-		097F54311968566300BC9A10 /* OpenPlex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenPlex.png; sourceTree = "<group>"; };
-		097F54321968566300BC9A10 /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
-		097F54331968566300BC9A10 /* paypal-donate-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal-donate-button.png"; sourceTree = "<group>"; };
-		097F54341968566300BC9A10 /* Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play.png; sourceTree = "<group>"; };
-		097F54351968566300BC9A10 /* PlexConnect Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlexConnect Icon.png"; sourceTree = "<group>"; };
-		097F54361968566300BC9A10 /* quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quit.png; sourceTree = "<group>"; };
-		097F54371968566300BC9A10 /* Stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stop.png; sourceTree = "<group>"; };
-		097F54381968566300BC9A10 /* stop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop2.png; sourceTree = "<group>"; };
-		097F54391968566300BC9A10 /* Trailers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trailers.png; sourceTree = "<group>"; };
-		097F543A1968566300BC9A10 /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
-		097F543B1968566300BC9A10 /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
-		097F54501968573500BC9A10 /* atv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atv.png; sourceTree = "<group>"; };
 		099068B2195D5ED800442FB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OpenPlex/Images.xcassets; sourceTree = "<group>"; };
 		09947B21195BCABB0005EE4A /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		09947B25195BCDB30005EE4A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		09947B26195BCDB30005EE4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		09947B27195BCDB30005EE4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		09E71C91197050050051A1FE /* Apple_logo_black.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple_logo_black.svg.png; sourceTree = "<group>"; };
-		09E71C92197050050051A1FE /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
-		09E71C93197050050051A1FE /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		09E71C94197050050051A1FE /* Backup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Backup.png; sourceTree = "<group>"; };
-		09E71C95197050050051A1FE /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose.png; sourceTree = "<group>"; };
-		09E71C96197050050051A1FE /* getstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getstart.png; sourceTree = "<group>"; };
-		09E71C97197050050051A1FE /* haken_wittmer_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haken_wittmer_01.png; sourceTree = "<group>"; };
-		09E71C98197050050051A1FE /* InstallIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstallIcon.png; sourceTree = "<group>"; };
-		09E71C99197050050051A1FE /* Load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Load.png; sourceTree = "<group>"; };
-		09E71C9A197050050051A1FE /* MenuIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon2.png; sourceTree = "<group>"; };
-		09E71C9B197050050051A1FE /* next_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_button.png; sourceTree = "<group>"; };
-		09E71C9C197050050051A1FE /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
-		09E71C9D197050050051A1FE /* OpenplexVid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenplexVid.png; sourceTree = "<group>"; };
-		09E71C9E197050050051A1FE /* Restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restore.png; sourceTree = "<group>"; };
-		09E71C9F197050050051A1FE /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
-		09E71CA0197050050051A1FE /* social-media-select-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-media-select-button.png"; sourceTree = "<group>"; };
-		09E71CA1197050050051A1FE /* TryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TryIcon.png; sourceTree = "<group>"; };
-		09E71CA2197050050051A1FE /* uninstall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uninstall.png; sourceTree = "<group>"; };
-		09E71CA3197050050051A1FE /* UpdateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpdateIcon.png; sourceTree = "<group>"; };
-		DBE45E781971CE78009DF440 /* selectburtt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectburtt.png; sourceTree = "<group>"; };
-		DBE45E791971CE78009DF440 /* selectbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectbutton.png; sourceTree = "<group>"; };
-		DBE45E7C1971D225009DF440 /* installbutt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = installbutt.png; sourceTree = "<group>"; };
-		DBE45E7E1971D34C009DF440 /* uninstallbutt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uninstallbutt.png; sourceTree = "<group>"; };
+		DBAFD9881972D6220099EE6E /* Applelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Applelogo.png; sourceTree = "<group>"; };
+		DBAFD98A1972D6220099EE6E /* atv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atv.png; sourceTree = "<group>"; };
+		DBAFD98B1972D6220099EE6E /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
+		DBAFD98C1972D6220099EE6E /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose.png; sourceTree = "<group>"; };
+		DBAFD98D1972D6220099EE6E /* CopyRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CopyRight.png; sourceTree = "<group>"; };
+		DBAFD98E1972D6220099EE6E /* getstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getstart.png; sourceTree = "<group>"; };
+		DBAFD9901972D6220099EE6E /* haken_wittmer_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haken_wittmer_01.png; sourceTree = "<group>"; };
+		DBAFD9911972D6220099EE6E /* icon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_<16x16>.png"; sourceTree = "<group>"; };
+		DBAFD9921972D6220099EE6E /* iMovie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMovie.png; sourceTree = "<group>"; };
+		DBAFD9931972D6220099EE6E /* installbutt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = installbutt.png; sourceTree = "<group>"; };
+		DBAFD9941972D6220099EE6E /* InstallIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstallIcon.png; sourceTree = "<group>"; };
+		DBAFD9971972D6220099EE6E /* logplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logplex.png; sourceTree = "<group>"; };
+		DBAFD9981972D6220099EE6E /* MenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon.png; sourceTree = "<group>"; };
+		DBAFD9991972D6220099EE6E /* MenuIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon2.png; sourceTree = "<group>"; };
+		DBAFD99A1972D6220099EE6E /* menuplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuplex.png; sourceTree = "<group>"; };
+		DBAFD99B1972D6220099EE6E /* next_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_button.png; sourceTree = "<group>"; };
+		DBAFD99C1972D6220099EE6E /* Openplex copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Openplex copy.png"; sourceTree = "<group>"; };
+		DBAFD99D1972D6220099EE6E /* OpenPlex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenPlex.png; sourceTree = "<group>"; };
+		DBAFD99E1972D6220099EE6E /* OpenplexVid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenplexVid.png; sourceTree = "<group>"; };
+		DBAFD99F1972D6220099EE6E /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
+		DBAFD9A01972D6220099EE6E /* paypal-donate-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal-donate-button.png"; sourceTree = "<group>"; };
+		DBAFD9A21972D6220099EE6E /* PlexConnect Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlexConnect Icon.png"; sourceTree = "<group>"; };
+		DBAFD9A31972D6220099EE6E /* quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quit.png; sourceTree = "<group>"; };
+		DBAFD9A41972D6220099EE6E /* quitplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quitplex.png; sourceTree = "<group>"; };
+		DBAFD9A71972D6220099EE6E /* selectburtt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectburtt.png; sourceTree = "<group>"; };
+		DBAFD9A81972D6220099EE6E /* selectbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectbutton.png; sourceTree = "<group>"; };
+		DBAFD9A91972D6220099EE6E /* social-media-select-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-media-select-button.png"; sourceTree = "<group>"; };
+		DBAFD9AA1972D6220099EE6E /* startplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startplex.png; sourceTree = "<group>"; };
+		DBAFD9AD1972D6220099EE6E /* stopplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopplex.png; sourceTree = "<group>"; };
+		DBAFD9AE1972D6220099EE6E /* Trailers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trailers.png; sourceTree = "<group>"; };
+		DBAFD9B01972D6220099EE6E /* uninstall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uninstall.png; sourceTree = "<group>"; };
+		DBAFD9B11972D6220099EE6E /* uninstallbutt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uninstallbutt.png; sourceTree = "<group>"; };
+		DBAFD9B21972D6220099EE6E /* UpdateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpdateIcon.png; sourceTree = "<group>"; };
+		DBAFD9B31972D6220099EE6E /* updateplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updateplex.png; sourceTree = "<group>"; };
+		DBAFD9B41972D6220099EE6E /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
+		DBAFD9B51972D6220099EE6E /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
+		DBAFD9E51972D7F60099EE6E /* Apple_logo_black.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple_logo_black.svg.png; sourceTree = "<group>"; };
+		DBAFD9E61972D7F60099EE6E /* atv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atv.png; sourceTree = "<group>"; };
+		DBAFD9E71972D7F60099EE6E /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
+		DBAFD9E81972D7F60099EE6E /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose.png; sourceTree = "<group>"; };
+		DBAFD9E91972D7F60099EE6E /* CopyRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CopyRight.png; sourceTree = "<group>"; };
+		DBAFD9EA1972D7F60099EE6E /* getstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getstart.png; sourceTree = "<group>"; };
+		DBAFD9EB1972D7F60099EE6E /* haken_wittmer_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haken_wittmer_01.png; sourceTree = "<group>"; };
+		DBAFD9EC1972D7F60099EE6E /* icon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_<16x16>.png"; sourceTree = "<group>"; };
+		DBAFD9ED1972D7F60099EE6E /* iMovie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMovie.png; sourceTree = "<group>"; };
+		DBAFD9EE1972D7F60099EE6E /* installbutt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = installbutt.png; sourceTree = "<group>"; };
+		DBAFD9EF1972D7F60099EE6E /* InstallIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstallIcon.png; sourceTree = "<group>"; };
+		DBAFD9F01972D7F60099EE6E /* logplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logplex.png; sourceTree = "<group>"; };
+		DBAFD9F11972D7F60099EE6E /* MenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon.png; sourceTree = "<group>"; };
+		DBAFD9F21972D7F60099EE6E /* MenuIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuIcon2.png; sourceTree = "<group>"; };
+		DBAFD9F31972D7F60099EE6E /* menuplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuplex.png; sourceTree = "<group>"; };
+		DBAFD9F41972D7F60099EE6E /* next_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_button.png; sourceTree = "<group>"; };
+		DBAFD9F51972D7F60099EE6E /* Openplex copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Openplex copy.png"; sourceTree = "<group>"; };
+		DBAFD9F61972D7F60099EE6E /* OpenPlex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenPlex.png; sourceTree = "<group>"; };
+		DBAFD9F71972D7F60099EE6E /* OpenplexVid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenplexVid.png; sourceTree = "<group>"; };
+		DBAFD9F81972D7F60099EE6E /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
+		DBAFD9F91972D7F60099EE6E /* paypal-donate-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal-donate-button.png"; sourceTree = "<group>"; };
+		DBAFD9FA1972D7F60099EE6E /* PlexConnect Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlexConnect Icon.png"; sourceTree = "<group>"; };
+		DBAFD9FB1972D7F60099EE6E /* quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quit.png; sourceTree = "<group>"; };
+		DBAFD9FC1972D7F60099EE6E /* quitplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quitplex.png; sourceTree = "<group>"; };
+		DBAFD9FD1972D7F60099EE6E /* selectburtt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectburtt.png; sourceTree = "<group>"; };
+		DBAFD9FE1972D7F60099EE6E /* selectbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectbutton.png; sourceTree = "<group>"; };
+		DBAFD9FF1972D7F60099EE6E /* social-media-select-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-media-select-button.png"; sourceTree = "<group>"; };
+		DBAFDA001972D7F60099EE6E /* startplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startplex.png; sourceTree = "<group>"; };
+		DBAFDA011972D7F60099EE6E /* stopplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopplex.png; sourceTree = "<group>"; };
+		DBAFDA021972D7F60099EE6E /* Trailers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trailers.png; sourceTree = "<group>"; };
+		DBAFDA031972D7F60099EE6E /* uninstall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uninstall.png; sourceTree = "<group>"; };
+		DBAFDA041972D7F60099EE6E /* uninstallbutt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uninstallbutt.png; sourceTree = "<group>"; };
+		DBAFDA051972D7F60099EE6E /* UpdateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpdateIcon.png; sourceTree = "<group>"; };
+		DBAFDA061972D7F60099EE6E /* updateplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updateplex.png; sourceTree = "<group>"; };
+		DBAFDA071972D7F60099EE6E /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
+		DBAFDA081972D7F60099EE6E /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
 		DD4F7C0413C30F9F00825C6E /* OpenPlex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPlex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -171,50 +227,7 @@
 		097F54271968566300BC9A10 /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
-				DBE45E7E1971D34C009DF440 /* uninstallbutt.png */,
-				DBE45E7C1971D225009DF440 /* installbutt.png */,
-				DBE45E781971CE78009DF440 /* selectburtt.png */,
-				DBE45E791971CE78009DF440 /* selectbutton.png */,
-				09E71C91197050050051A1FE /* Apple_logo_black.svg.png */,
-				09E71C92197050050051A1FE /* back_button.png */,
-				09E71C93197050050051A1FE /* back.png */,
-				09E71C94197050050051A1FE /* Backup.png */,
-				09E71C95197050050051A1FE /* choose.png */,
-				09E71C96197050050051A1FE /* getstart.png */,
-				09E71C97197050050051A1FE /* haken_wittmer_01.png */,
-				09E71C98197050050051A1FE /* InstallIcon.png */,
-				09E71C99197050050051A1FE /* Load.png */,
-				09E71C9A197050050051A1FE /* MenuIcon2.png */,
-				09E71C9B197050050051A1FE /* next_button.png */,
-				09E71C9C197050050051A1FE /* next.png */,
-				09E71C9D197050050051A1FE /* OpenplexVid.png */,
-				09E71C9E197050050051A1FE /* Restore.png */,
-				09E71C9F197050050051A1FE /* select.png */,
-				09E71CA0197050050051A1FE /* social-media-select-button.png */,
-				09E71CA1197050050051A1FE /* TryIcon.png */,
-				09E71CA2197050050051A1FE /* uninstall.png */,
-				09E71CA3197050050051A1FE /* UpdateIcon.png */,
-				097F54501968573500BC9A10 /* atv.png */,
-				097F54281968566300BC9A10 /* Arrows.png */,
-				097F54291968566300BC9A10 /* CopyRight.png */,
-				097F542A1968566300BC9A10 /* Github.png */,
-				097F542B1968566300BC9A10 /* icon_<16x16>.png */,
-				097F542C1968566300BC9A10 /* iMovie.png */,
-				097F542D1968566300BC9A10 /* log.png */,
-				097F542E1968566300BC9A10 /* logo.png */,
-				097F542F1968566300BC9A10 /* MenuIcon.png */,
-				097F54301968566300BC9A10 /* Openplex copy.png */,
-				097F54311968566300BC9A10 /* OpenPlex.png */,
-				097F54321968566300BC9A10 /* Pause.png */,
-				097F54331968566300BC9A10 /* paypal-donate-button.png */,
-				097F54341968566300BC9A10 /* Play.png */,
-				097F54351968566300BC9A10 /* PlexConnect Icon.png */,
-				097F54361968566300BC9A10 /* quit.png */,
-				097F54371968566300BC9A10 /* Stop.png */,
-				097F54381968566300BC9A10 /* stop2.png */,
-				097F54391968566300BC9A10 /* Trailers.png */,
-				097F543A1968566300BC9A10 /* WebConnect.png */,
-				097F543B1968566300BC9A10 /* WSJ.png */,
+				DBAFD9871972D6220099EE6E /* OpenPlexIcons */,
 			);
 			path = OpenPlexIcons;
 			sourceTree = "<group>";
@@ -236,6 +249,93 @@
 				09947B27195BCDB30005EE4A /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DBAFD9871972D6220099EE6E /* OpenPlexIcons */ = {
+			isa = PBXGroup;
+			children = (
+				DBAFD9E41972D7F60099EE6E /* OpenPlexIcons */,
+				DBAFD9881972D6220099EE6E /* Applelogo.png */,
+				DBAFD98A1972D6220099EE6E /* atv.png */,
+				DBAFD98B1972D6220099EE6E /* back_button.png */,
+				DBAFD98C1972D6220099EE6E /* choose.png */,
+				DBAFD98D1972D6220099EE6E /* CopyRight.png */,
+				DBAFD98E1972D6220099EE6E /* getstart.png */,
+				DBAFD9901972D6220099EE6E /* haken_wittmer_01.png */,
+				DBAFD9911972D6220099EE6E /* icon_<16x16>.png */,
+				DBAFD9921972D6220099EE6E /* iMovie.png */,
+				DBAFD9931972D6220099EE6E /* installbutt.png */,
+				DBAFD9941972D6220099EE6E /* InstallIcon.png */,
+				DBAFD9971972D6220099EE6E /* logplex.png */,
+				DBAFD9981972D6220099EE6E /* MenuIcon.png */,
+				DBAFD9991972D6220099EE6E /* MenuIcon2.png */,
+				DBAFD99A1972D6220099EE6E /* menuplex.png */,
+				DBAFD99B1972D6220099EE6E /* next_button.png */,
+				DBAFD99C1972D6220099EE6E /* Openplex copy.png */,
+				DBAFD99D1972D6220099EE6E /* OpenPlex.png */,
+				DBAFD99E1972D6220099EE6E /* OpenplexVid.png */,
+				DBAFD99F1972D6220099EE6E /* Pause.png */,
+				DBAFD9A01972D6220099EE6E /* paypal-donate-button.png */,
+				DBAFD9A21972D6220099EE6E /* PlexConnect Icon.png */,
+				DBAFD9A31972D6220099EE6E /* quit.png */,
+				DBAFD9A41972D6220099EE6E /* quitplex.png */,
+				DBAFD9A71972D6220099EE6E /* selectburtt.png */,
+				DBAFD9A81972D6220099EE6E /* selectbutton.png */,
+				DBAFD9A91972D6220099EE6E /* social-media-select-button.png */,
+				DBAFD9AA1972D6220099EE6E /* startplex.png */,
+				DBAFD9AD1972D6220099EE6E /* stopplex.png */,
+				DBAFD9AE1972D6220099EE6E /* Trailers.png */,
+				DBAFD9B01972D6220099EE6E /* uninstall.png */,
+				DBAFD9B11972D6220099EE6E /* uninstallbutt.png */,
+				DBAFD9B21972D6220099EE6E /* UpdateIcon.png */,
+				DBAFD9B31972D6220099EE6E /* updateplex.png */,
+				DBAFD9B41972D6220099EE6E /* WebConnect.png */,
+				DBAFD9B51972D6220099EE6E /* WSJ.png */,
+			);
+			name = OpenPlexIcons;
+			sourceTree = "<group>";
+		};
+		DBAFD9E41972D7F60099EE6E /* OpenPlexIcons */ = {
+			isa = PBXGroup;
+			children = (
+				DBAFD9E51972D7F60099EE6E /* Apple_logo_black.svg.png */,
+				DBAFD9E61972D7F60099EE6E /* atv.png */,
+				DBAFD9E71972D7F60099EE6E /* back_button.png */,
+				DBAFD9E81972D7F60099EE6E /* choose.png */,
+				DBAFD9E91972D7F60099EE6E /* CopyRight.png */,
+				DBAFD9EA1972D7F60099EE6E /* getstart.png */,
+				DBAFD9EB1972D7F60099EE6E /* haken_wittmer_01.png */,
+				DBAFD9EC1972D7F60099EE6E /* icon_<16x16>.png */,
+				DBAFD9ED1972D7F60099EE6E /* iMovie.png */,
+				DBAFD9EE1972D7F60099EE6E /* installbutt.png */,
+				DBAFD9EF1972D7F60099EE6E /* InstallIcon.png */,
+				DBAFD9F01972D7F60099EE6E /* logplex.png */,
+				DBAFD9F11972D7F60099EE6E /* MenuIcon.png */,
+				DBAFD9F21972D7F60099EE6E /* MenuIcon2.png */,
+				DBAFD9F31972D7F60099EE6E /* menuplex.png */,
+				DBAFD9F41972D7F60099EE6E /* next_button.png */,
+				DBAFD9F51972D7F60099EE6E /* Openplex copy.png */,
+				DBAFD9F61972D7F60099EE6E /* OpenPlex.png */,
+				DBAFD9F71972D7F60099EE6E /* OpenplexVid.png */,
+				DBAFD9F81972D7F60099EE6E /* Pause.png */,
+				DBAFD9F91972D7F60099EE6E /* paypal-donate-button.png */,
+				DBAFD9FA1972D7F60099EE6E /* PlexConnect Icon.png */,
+				DBAFD9FB1972D7F60099EE6E /* quit.png */,
+				DBAFD9FC1972D7F60099EE6E /* quitplex.png */,
+				DBAFD9FD1972D7F60099EE6E /* selectburtt.png */,
+				DBAFD9FE1972D7F60099EE6E /* selectbutton.png */,
+				DBAFD9FF1972D7F60099EE6E /* social-media-select-button.png */,
+				DBAFDA001972D7F60099EE6E /* startplex.png */,
+				DBAFDA011972D7F60099EE6E /* stopplex.png */,
+				DBAFDA021972D7F60099EE6E /* Trailers.png */,
+				DBAFDA031972D7F60099EE6E /* uninstall.png */,
+				DBAFDA041972D7F60099EE6E /* uninstallbutt.png */,
+				DBAFDA051972D7F60099EE6E /* UpdateIcon.png */,
+				DBAFDA061972D7F60099EE6E /* updateplex.png */,
+				DBAFDA071972D7F60099EE6E /* WebConnect.png */,
+				DBAFDA081972D7F60099EE6E /* WSJ.png */,
+			);
+			name = OpenPlexIcons;
 			sourceTree = "<group>";
 		};
 		DD4F7BF913C30F9F00825C6E = {
@@ -397,57 +497,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E71CAD197050050051A1FE /* MenuIcon2.png in Resources */,
-				097F54411968566300BC9A10 /* log.png in Resources */,
-				09E71CAE197050050051A1FE /* next_button.png in Resources */,
-				DBE45E7A1971CE78009DF440 /* selectburtt.png in Resources */,
-				097F54451968566300BC9A10 /* OpenPlex.png in Resources */,
-				09E71CA5197050050051A1FE /* back_button.png in Resources */,
-				097F544A1968566300BC9A10 /* quit.png in Resources */,
-				097F543E1968566300BC9A10 /* Github.png in Resources */,
-				097F544C1968566300BC9A10 /* stop2.png in Resources */,
-				09E71CAC197050050051A1FE /* Load.png in Resources */,
-				097F543D1968566300BC9A10 /* CopyRight.png in Resources */,
+				DBAFDA141972D7F60099EE6E /* logplex.png in Resources */,
+				DBAFD9D61972D6220099EE6E /* selectbutton.png in Resources */,
+				DBAFDA111972D7F60099EE6E /* iMovie.png in Resources */,
+				DBAFD9C21972D6220099EE6E /* InstallIcon.png in Resources */,
+				DBAFD9CD1972D6220099EE6E /* Pause.png in Resources */,
+				DBAFD9CC1972D6220099EE6E /* OpenplexVid.png in Resources */,
+				DBAFD9BA1972D6220099EE6E /* choose.png in Resources */,
+				DBAFDA1F1972D7F60099EE6E /* quit.png in Resources */,
+				DBAFDA101972D7F60099EE6E /* icon_<16x16>.png in Resources */,
+				DBAFD9E31972D6220099EE6E /* WSJ.png in Resources */,
+				DBAFD9C51972D6220099EE6E /* logplex.png in Resources */,
 				099068B3195D5ED800442FB5 /* Images.xcassets in Resources */,
-				097F54421968566300BC9A10 /* logo.png in Resources */,
+				DBAFD9CB1972D6220099EE6E /* OpenPlex.png in Resources */,
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
-				097F544E1968566300BC9A10 /* WebConnect.png in Resources */,
-				097F54431968566300BC9A10 /* MenuIcon.png in Resources */,
+				DBAFDA121972D7F60099EE6E /* installbutt.png in Resources */,
+				DBAFDA241972D7F60099EE6E /* startplex.png in Resources */,
+				DBAFD9E11972D6220099EE6E /* updateplex.png in Resources */,
+				DBAFDA261972D7F60099EE6E /* Trailers.png in Resources */,
+				DBAFDA1E1972D7F60099EE6E /* PlexConnect Icon.png in Resources */,
+				DBAFD9D51972D6220099EE6E /* selectburtt.png in Resources */,
+				DBAFD9E21972D6220099EE6E /* WebConnect.png in Resources */,
+				DBAFD9D21972D6220099EE6E /* quitplex.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
-				097F543C1968566300BC9A10 /* Arrows.png in Resources */,
-				DBE45E7F1971D34C009DF440 /* uninstallbutt.png in Resources */,
+				DBAFD9D71972D6220099EE6E /* social-media-select-button.png in Resources */,
+				DBAFD9BC1972D6220099EE6E /* getstart.png in Resources */,
+				DBAFDA181972D7F60099EE6E /* next_button.png in Resources */,
+				DBAFD9DC1972D6220099EE6E /* Trailers.png in Resources */,
+				DBAFD9D11972D6220099EE6E /* quit.png in Resources */,
+				DBAFDA271972D7F60099EE6E /* uninstall.png in Resources */,
+				DBAFD9B81972D6220099EE6E /* atv.png in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
-				09E71CA9197050050051A1FE /* getstart.png in Resources */,
-				097F54441968566300BC9A10 /* Openplex copy.png in Resources */,
-				097F544D1968566300BC9A10 /* Trailers.png in Resources */,
-				097F54461968566300BC9A10 /* Pause.png in Resources */,
+				DBAFDA201972D7F60099EE6E /* quitplex.png in Resources */,
+				DBAFD9DF1972D6220099EE6E /* uninstallbutt.png in Resources */,
+				DBAFDA291972D7F60099EE6E /* UpdateIcon.png in Resources */,
+				DBAFD9CA1972D6220099EE6E /* Openplex copy.png in Resources */,
+				DBAFD9C61972D6220099EE6E /* MenuIcon.png in Resources */,
+				DBAFDA2B1972D7F60099EE6E /* WebConnect.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
-				09E71CB6197050050051A1FE /* UpdateIcon.png in Resources */,
-				09E71CA7197050050051A1FE /* Backup.png in Resources */,
-				09E71CB4197050050051A1FE /* TryIcon.png in Resources */,
-				09E71CB1197050050051A1FE /* Restore.png in Resources */,
-				097F54491968566300BC9A10 /* PlexConnect Icon.png in Resources */,
-				09E71CA8197050050051A1FE /* choose.png in Resources */,
-				09E71CB0197050050051A1FE /* OpenplexVid.png in Resources */,
-				09E71CAF197050050051A1FE /* next.png in Resources */,
-				09E71CB5197050050051A1FE /* uninstall.png in Resources */,
+				DBAFDA1C1972D7F60099EE6E /* Pause.png in Resources */,
+				DBAFD9E01972D6220099EE6E /* UpdateIcon.png in Resources */,
+				DBAFDA1D1972D7F60099EE6E /* paypal-donate-button.png in Resources */,
+				DBAFD9B61972D6220099EE6E /* Applelogo.png in Resources */,
+				DBAFD9D81972D6220099EE6E /* startplex.png in Resources */,
+				DBAFDA281972D7F60099EE6E /* uninstallbutt.png in Resources */,
+				DBAFDA091972D7F60099EE6E /* Apple_logo_black.svg.png in Resources */,
+				DBAFDA221972D7F60099EE6E /* selectbutton.png in Resources */,
+				DBAFDA191972D7F60099EE6E /* Openplex copy.png in Resources */,
+				DBAFDA161972D7F60099EE6E /* MenuIcon2.png in Resources */,
+				DBAFD9C91972D6220099EE6E /* next_button.png in Resources */,
+				DBAFDA2C1972D7F60099EE6E /* WSJ.png in Resources */,
+				DBAFD9C01972D6220099EE6E /* iMovie.png in Resources */,
+				DBAFDA251972D7F60099EE6E /* stopplex.png in Resources */,
+				DBAFDA1B1972D7F60099EE6E /* OpenplexVid.png in Resources */,
+				DBAFDA0F1972D7F60099EE6E /* haken_wittmer_01.png in Resources */,
+				DBAFD9C71972D6220099EE6E /* MenuIcon2.png in Resources */,
+				DBAFD9D01972D6220099EE6E /* PlexConnect Icon.png in Resources */,
+				DBAFD9BE1972D6220099EE6E /* haken_wittmer_01.png in Resources */,
+				DBAFDA211972D7F60099EE6E /* selectburtt.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
-				09E71CB2197050050051A1FE /* select.png in Resources */,
-				097F54511968573500BC9A10 /* atv.png in Resources */,
-				09E71CA4197050050051A1FE /* Apple_logo_black.svg.png in Resources */,
-				097F544B1968566300BC9A10 /* Stop.png in Resources */,
-				09E71CAA197050050051A1FE /* haken_wittmer_01.png in Resources */,
-				097F54471968566300BC9A10 /* paypal-donate-button.png in Resources */,
-				097F54481968566300BC9A10 /* Play.png in Resources */,
-				09E71CA6197050050051A1FE /* back.png in Resources */,
-				097F544F1968566300BC9A10 /* WSJ.png in Resources */,
-				DBE45E7D1971D225009DF440 /* installbutt.png in Resources */,
-				097F54401968566300BC9A10 /* iMovie.png in Resources */,
-				09E71CAB197050050051A1FE /* InstallIcon.png in Resources */,
-				DBE45E7B1971CE78009DF440 /* selectbutton.png in Resources */,
-				097F543F1968566300BC9A10 /* icon_<16x16>.png in Resources */,
-				09E71CB3197050050051A1FE /* social-media-select-button.png in Resources */,
+				DBAFDA0A1972D7F60099EE6E /* atv.png in Resources */,
+				DBAFD9DB1972D6220099EE6E /* stopplex.png in Resources */,
+				DBAFDA0C1972D7F60099EE6E /* choose.png in Resources */,
+				DBAFDA151972D7F60099EE6E /* MenuIcon.png in Resources */,
+				DBAFDA231972D7F60099EE6E /* social-media-select-button.png in Resources */,
+				DBAFD9DE1972D6220099EE6E /* uninstall.png in Resources */,
+				DBAFDA131972D7F60099EE6E /* InstallIcon.png in Resources */,
+				DBAFD9BB1972D6220099EE6E /* CopyRight.png in Resources */,
+				DBAFDA1A1972D7F60099EE6E /* OpenPlex.png in Resources */,
+				DBAFDA0E1972D7F60099EE6E /* getstart.png in Resources */,
+				DBAFD9BF1972D6220099EE6E /* icon_<16x16>.png in Resources */,
+				DBAFD9C11972D6220099EE6E /* installbutt.png in Resources */,
+				DBAFDA171972D7F60099EE6E /* menuplex.png in Resources */,
+				DBAFDA2A1972D7F60099EE6E /* updateplex.png in Resources */,
+				DBAFDA0B1972D7F60099EE6E /* back_button.png in Resources */,
+				DBAFD9CE1972D6220099EE6E /* paypal-donate-button.png in Resources */,
+				DBAFD9C81972D6220099EE6E /* menuplex.png in Resources */,
+				DBAFDA0D1972D7F60099EE6E /* CopyRight.png in Resources */,
+				DBAFD9B91972D6220099EE6E /* back_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

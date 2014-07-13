@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -30,27 +30,13 @@
                             <rect key="frame" x="1" y="1" width="276" height="54"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="732">
-                                    <rect key="frame" x="8" y="11" width="34" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <shadow key="shadow">
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSRightFacingTriangleTemplate" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="733">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerstart:" target="139" id="1633"/>
-                                    </connections>
-                                </button>
                                 <button toolTip="Update PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="730">
-                                    <rect key="frame" x="84" y="11" width="34" height="35"/>
+                                    <rect key="frame" x="87" y="10" width="42" height="38"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSRefreshTemplate" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="735">
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="updateplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="735">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -59,12 +45,12 @@
                                     </connections>
                                 </button>
                                 <button toolTip="PlexConnect Log" id="729">
-                                    <rect key="frame" x="155" y="11" width="34" height="35"/>
+                                    <rect key="frame" x="137" y="-4" width="63" height="64"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="log" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="736">
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="logplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="736">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -73,12 +59,12 @@
                                     </connections>
                                 </button>
                                 <button toolTip="Settings" id="728">
-                                    <rect key="frame" x="193" y="11" width="34" height="35"/>
+                                    <rect key="frame" x="185" y="10" width="45" height="37"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSActionTemplate" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="737">
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="menuplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="737">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -87,12 +73,12 @@
                                     </connections>
                                 </button>
                                 <button toolTip="Stop PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="731">
-                                    <rect key="frame" x="46" y="11" width="34" height="35"/>
+                                    <rect key="frame" x="49" y="10" width="37" height="38"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="stop2" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="734">
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="stopplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="734">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -101,12 +87,12 @@
                                     </connections>
                                 </button>
                                 <button toolTip="Exit OpenPlex" id="727">
-                                    <rect key="frame" x="231" y="11" width="34" height="35"/>
+                                    <rect key="frame" x="217" y="-1" width="63" height="59"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="quit" imagePosition="only" alignment="left" borderStyle="border" id="738">
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="quitplex" imagePosition="only" alignment="left" id="738">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -114,24 +100,29 @@
                                         <action selector="stop:" target="-1" id="1056"/>
                                     </connections>
                                 </button>
+                                <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="732">
+                                    <rect key="frame" x="9" y="6" width="36" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <shadow key="shadow">
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </shadow>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="startplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="733">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandlerstart:" target="139" id="1633"/>
+                                    </connections>
+                                </button>
                             </subviews>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="723">
-                        <rect key="frame" x="121" y="7" width="69" height="17"/>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="o07-3B-vZm">
+                        <rect key="frame" x="124" y="5" width="39" height="35"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenPlex" id="726">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="724">
-                        <rect key="frame" x="91" y="6" width="35" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="725"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="qZb-Is-pfe"/>
                     </imageView>
                 </subviews>
                 <shadow key="shadow">
@@ -141,7 +132,6 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="8"/>
             </connections>
-            <point key="canvasLocation" x="-1549.5" y="-1702"/>
         </window>
         <customObject id="139" customClass="AppDelegate">
             <connections>
@@ -255,7 +245,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Configure your aTV for PlexConnect :" id="1073">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -288,7 +278,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Install the SSL certificate on your aTV :" id="1070">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -345,7 +335,6 @@
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="196" y="-1625.5"/>
         </window>
         <window title="WebConnect Setup" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1416">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -361,7 +350,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WebConnect :" id="1465">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -370,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Advanced Options :" id="1464">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -490,7 +479,7 @@
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="WebConnect" id="1476"/>
                                 </imageView>
                                 <button id="dVG-u7-cHV">
-                                    <rect key="frame" x="159" y="25" width="81" height="25"/>
+                                    <rect key="frame" x="149" y="24" width="108" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="installbutt" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="34y-ef-3vY">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -501,15 +490,15 @@
                                     </connections>
                                 </button>
                                 <button id="cZm-az-sJe">
-                                    <rect key="frame" x="327" y="25" width="80" height="25"/>
+                                    <rect key="frame" x="327" y="23" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="uninstallbutt" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Q1O-DC-NrZ">
+                                    <buttonCell key="cell" type="roundTextured" title="Uninstall" bezelStyle="texturedRounded" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Q1O-DC-NrZ">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
                                 </button>
                                 <button id="522-TD-bv8">
-                                    <rect key="frame" x="248" y="25" width="71" height="25"/>
+                                    <rect key="frame" x="257" y="24" width="70" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="UpdateIcon" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="r43-4B-GW8">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -528,6 +517,10 @@
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
+                                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="Ej0-fS-kTb">
+                                    <rect key="frame" x="135" y="28" width="16" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </progressIndicator>
                             </subviews>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -535,7 +528,6 @@
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="313" y="-1255"/>
         </window>
         <window title="Certificates" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1479">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -543,7 +535,7 @@
             <rect key="contentRect" x="1440" y="242" width="385" height="251"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="1480">
-                <rect key="frame" x="0.0" y="1" width="385" height="251"/>
+                <rect key="frame" x="0.0" y="0.0" width="385" height="251"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="1526">
@@ -635,7 +627,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Choose App on aTV :" id="1542">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -687,9 +679,9 @@
                         </connections>
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1534">
-                        <rect key="frame" x="121" y="62" width="31" height="20"/>
+                        <rect key="frame" x="120" y="63" width="31" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Apple_logo_black.svg" id="1537"/>
+                        <imageCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Applelogo" id="1537"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1535">
                         <rect key="frame" x="144" y="63" width="21" height="17"/>
@@ -713,7 +705,6 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-292.5" y="-1600.5"/>
         </window>
         <window title="Avanced Options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1330">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -721,7 +712,7 @@
             <rect key="contentRect" x="1440" y="242" width="513" height="337"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="1331">
-                <rect key="frame" x="0.0" y="-2" width="513" height="337"/>
+                <rect key="frame" x="0.0" y="0.0" width="513" height="337"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="1348">
@@ -929,7 +920,7 @@
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1386">
                                     <rect key="frame" x="416" y="14" width="42" height="42"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Apple_logo_black.svg" id="1387"/>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Applelogo" id="1387"/>
                                 </imageView>
                                 <button verticalHuggingPriority="750" id="1651">
                                     <rect key="frame" x="410" y="191" width="55" height="25"/>
@@ -1018,7 +1009,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Advanced Options :" id="1356">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1050,7 +1041,6 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-228.5" y="-1225.5"/>
         </window>
         <window title="Setup Complete" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="626" userLabel="Window - Setup Complete">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1058,7 +1048,7 @@
             <rect key="contentRect" x="1337" y="575" width="262" height="184"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="627">
-                <rect key="frame" x="0.0" y="-7" width="262" height="184"/>
+                <rect key="frame" x="0.0" y="0.0" width="262" height="184"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1141">
@@ -1071,14 +1061,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Successfully Installed" id="1152">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1143">
                         <rect key="frame" x="168" y="79" width="26" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Apple_logo_black.svg" id="1151"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Applelogo" id="1151"/>
                     </imageView>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1144">
                         <rect key="frame" x="56" y="128" width="42" height="42"/>
@@ -1114,7 +1104,6 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="631" y="-1580"/>
         </window>
         <window title="Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1123">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1196,7 +1185,7 @@ dGhlIGV4aXQgaWNvbi4
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenPlex Instructions :" id="1135">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1212,7 +1201,6 @@ dGhlIGV4aXQgaWNvbi4
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1081" y="-1302"/>
         </window>
         <window title="Choose Theme" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1192">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1220,7 +1208,7 @@ dGhlIGV4aXQgaWNvbi4
             <rect key="contentRect" x="1337" y="575" width="286" height="288"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="1193">
-                <rect key="frame" x="0.0" y="1" width="286" height="288"/>
+                <rect key="frame" x="0.0" y="0.0" width="286" height="288"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="1210">
@@ -1387,18 +1375,18 @@ dGhlIGV4aXQgaWNvbi4
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1601">
-                                    <rect key="frame" x="16" y="19" width="107" height="13"/>
+                                    <rect key="frame" x="16" y="18" width="129" height="14"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Theme Requirements" id="1602">
-                                        <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" red="1" green="0.28424764203472497" blue="0.018879466036611725" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <button id="1599">
-                                    <rect key="frame" x="168" y="13" width="56" height="25"/>
+                                    <rect key="frame" x="153" y="13" width="86" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="selectburtt" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1604">
+                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="social-media-select-button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1604">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                         <connections>
@@ -1435,7 +1423,6 @@ dGhlIGV4aXQgaWNvbi4
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-699" y="-1250"/>
         </window>
         <window title="PlexConnect" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1242">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1485,9 +1472,9 @@ dGhlIGV4aXQgaWNvbi4
                                     </textFieldCell>
                                 </textField>
                                 <button id="ch3-MP-fgA">
-                                    <rect key="frame" x="212" y="21" width="60" height="25"/>
+                                    <rect key="frame" x="190" y="21" width="90" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="selectburtt" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="BqD-xM-1JB">
+                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="social-media-select-button" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="BqD-xM-1JB">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="15"/>
                                         <connections>
@@ -1529,9 +1516,9 @@ dGhlIGV4aXQgaWNvbi4
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="PlexConnect Icon" id="1326"/>
                                 </imageView>
                                 <button id="1590">
-                                    <rect key="frame" x="209" y="21" width="60" height="25"/>
+                                    <rect key="frame" x="180" y="20" width="110" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="selectburtt" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1591">
+                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="social-media-select-button" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1591">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="15"/>
                                         <connections>
@@ -1566,9 +1553,9 @@ dGhlIGV4aXQgaWNvbi4
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="PlexConnect Icon" id="1321"/>
                                 </imageView>
                                 <button id="rQt-hb-LPs">
-                                    <rect key="frame" x="210" y="21" width="60" height="25"/>
+                                    <rect key="frame" x="183" y="21" width="103" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="selectburtt" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="IKu-2W-IQY">
+                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="social-media-select-button" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="IKu-2W-IQY">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="15"/>
                                         <connections>
@@ -1592,7 +1579,6 @@ dGhlIGV4aXQgaWNvbi4
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-709.5" y="-1601"/>
         </window>
         <window title="OpenPlex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1154">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1625,7 +1611,7 @@ dGhlIGV4aXQgaWNvbi4
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="1190"/>
                                 </imageView>
                                 <button id="1183">
-                                    <rect key="frame" x="164" y="30" width="77" height="25"/>
+                                    <rect key="frame" x="159" y="29" width="96" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="installbutt" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1189">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1636,7 +1622,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button id="1184">
-                                    <rect key="frame" x="249" y="30" width="67" height="25"/>
+                                    <rect key="frame" x="256" y="30" width="71" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="UpdateIcon" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1188">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1647,11 +1633,11 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button id="OHQ-uE-zg5">
-                                    <rect key="frame" x="323" y="30" width="75" height="25"/>
+                                    <rect key="frame" x="324" y="29" width="73" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="uninstallbutt" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="TQe-th-4XL">
+                                    <buttonCell key="cell" type="roundTextured" title="Uninstall" bezelStyle="texturedRounded" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="TQe-th-4XL">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
                                     <connections>
                                         <action selector="buttonhandleruninstall:" target="139" id="QEd-J9-hPZ"/>
@@ -1671,7 +1657,7 @@ dGhlIGV4aXQgaWNvbi4
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Welcome to OpenPlex" id="1180">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="0.0022623732158708609" green="0.12084223381142878" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1710,7 +1696,6 @@ dGhlIGV4aXQgaWNvbi4
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1141.5" y="-1632.5"/>
         </window>
         <window title="Theme Requirements" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1090">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1726,7 +1711,7 @@ dGhlIGV4aXQgaWNvbi4
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Theme requirements :" id="1122">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.28424764200000002" blue="0.018879466040000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1814,15 +1799,12 @@ dGhlIGV4aXQgaWNvbi4
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-699" y="-959.5"/>
         </window>
     </objects>
     <resources>
         <image name="Apple_logo_black.svg" width="2000" height="2396"/>
+        <image name="Applelogo" width="2000" height="2396"/>
         <image name="InstallIcon" width="85" height="27"/>
-        <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSRefreshTemplate" width="10" height="12"/>
-        <image name="NSRightFacingTriangleTemplate" width="9" height="9"/>
         <image name="OpenPlex" width="1000" height="1000"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
         <image name="Trailers" width="188" height="108"/>
@@ -1835,13 +1817,15 @@ dGhlIGV4aXQgaWNvbi4
         <image name="haken_wittmer_01" width="120.59999847412109" height="96.120002746582031"/>
         <image name="iMovie" width="188" height="108"/>
         <image name="installbutt" width="81" height="19.5"/>
-        <image name="log" width="15" height="15"/>
+        <image name="logplex" width="36.479999542236328" height="36"/>
+        <image name="menuplex" width="36.479999542236328" height="36"/>
         <image name="next_button" width="245" height="169"/>
         <image name="paypal-donate-button" width="500" height="117"/>
-        <image name="quit" width="13" height="13"/>
-        <image name="selectburtt" width="78.75" height="29.25"/>
+        <image name="quitplex" width="36.479999542236328" height="36"/>
         <image name="selectbutton" width="77" height="23"/>
-        <image name="stop2" width="8" height="8"/>
-        <image name="uninstallbutt" width="79.5" height="20.25"/>
+        <image name="social-media-select-button" width="72" height="17.280000686645508"/>
+        <image name="startplex" width="36" height="36"/>
+        <image name="stopplex" width="36.479999542236328" height="36"/>
+        <image name="updateplex" width="36.479999542236328" height="36"/>
     </resources>
 </document>
