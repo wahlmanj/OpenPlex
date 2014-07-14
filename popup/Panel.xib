@@ -1862,7 +1862,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="Lym-AN-qwU">
-                                    <rect key="frame" x="175" y="195" width="80" height="25"/>
+                                    <rect key="frame" x="189" y="195" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Custom Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6WR-Au-gAK">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1873,7 +1873,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="hcH-XJ-mqI">
-                                    <rect key="frame" x="410" y="195" width="55" height="25"/>
+                                    <rect key="frame" x="403" y="195" width="55" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="All" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y0n-tc-eIc">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1884,7 +1884,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="s5d-pa-gNK">
-                                    <rect key="frame" x="410" y="165" width="55" height="25"/>
+                                    <rect key="frame" x="403" y="165" width="55" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="All" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9fy-mI-dkY">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1904,7 +1904,7 @@ dGhlIGV4aXQgaWNvbi4
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Applelogo" id="tjG-JZ-owA"/>
                                 </imageView>
                                 <button verticalHuggingPriority="750" id="ZSj-xc-Mqu">
-                                    <rect key="frame" x="268" y="195" width="55" height="25"/>
+                                    <rect key="frame" x="277" y="195" width="55" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fcM-o2-PoW">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1915,7 +1915,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="ti3-KY-WOS">
-                                    <rect key="frame" x="268" y="165" width="55" height="25"/>
+                                    <rect key="frame" x="277" y="165" width="55" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5bY-mq-4uU">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1926,7 +1926,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="7oN-4K-i5l">
-                                    <rect key="frame" x="175" y="165" width="80" height="25"/>
+                                    <rect key="frame" x="189" y="165" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Custom Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LvO-dP-d7B">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1937,7 +1937,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="n4o-zW-vzP">
-                                    <rect key="frame" x="87" y="195" width="80" height="25"/>
+                                    <rect key="frame" x="101" y="195" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Settings.cfg" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4IK-bv-StS">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1948,7 +1948,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="9AA-Dj-aAF">
-                                    <rect key="frame" x="87" y="165" width="80" height="25"/>
+                                    <rect key="frame" x="101" y="165" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Settings.cfg" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g2m-9q-lmx">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1959,7 +1959,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="qSA-CM-zPF">
-                                    <rect key="frame" x="87" y="135" width="80" height="25"/>
+                                    <rect key="frame" x="101" y="135" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="PlexConnect" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qYb-xS-Egx">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1979,7 +1979,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </textFieldCell>
                                 </textField>
                                 <button verticalHuggingPriority="750" id="LNC-mF-fIe">
-                                    <rect key="frame" x="87" y="105" width="80" height="25"/>
+                                    <rect key="frame" x="101" y="105" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="PlexConnect" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="52H-aU-v1a">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1990,7 +1990,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="NlS-5P-aad">
-                                    <rect key="frame" x="175" y="135" width="80" height="25"/>
+                                    <rect key="frame" x="189" y="135" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Custom Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TVa-JF-a7A">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1998,17 +1998,6 @@ dGhlIGV4aXQgaWNvbi4
                                     </buttonCell>
                                     <connections>
                                         <action selector="buttonhandlercertfolder:" target="139" id="uei-QU-6SE"/>
-                                    </connections>
-                                </button>
-                                <button verticalHuggingPriority="750" id="M4D-XS-SJP">
-                                    <rect key="frame" x="268" y="135" width="55" height="25"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qPA-R3-fhd">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system" size="10"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerloadbackupfanart:" target="139" id="ojx-5h-g22"/>
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="rRE-T9-A9d">
@@ -2023,7 +2012,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="gGv-o6-e92">
-                                    <rect key="frame" x="175" y="105" width="80" height="25"/>
+                                    <rect key="frame" x="189" y="105" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Custom Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yc1-26-xmE">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2034,7 +2023,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="y0l-gH-Fd4">
-                                    <rect key="frame" x="268" y="105" width="55" height="25"/>
+                                    <rect key="frame" x="277" y="105" width="55" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Ig-zm-cM7">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2054,7 +2043,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </textFieldCell>
                                 </textField>
                                 <button verticalHuggingPriority="750" id="khq-pS-AVQ">
-                                    <rect key="frame" x="268" y="76" width="55" height="25"/>
+                                    <rect key="frame" x="277" y="76" width="55" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Fix Plists" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FQe-Ux-Eqx">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2065,7 +2054,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="cV6-nU-MWY">
-                                    <rect key="frame" x="87" y="76" width="80" height="25"/>
+                                    <rect key="frame" x="101" y="76" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Auto Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Pab-82-PeC">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2076,7 +2065,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="5Cu-oO-yi3">
-                                    <rect key="frame" x="175" y="76" width="80" height="25"/>
+                                    <rect key="frame" x="189" y="76" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Custom Plist" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iFS-nE-OB6">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2095,6 +2084,17 @@ dGhlIGV4aXQgaWNvbi4
                                     </buttonCell>
                                     <connections>
                                         <action selector="buttonhandlerbackupfanart:" target="139" id="Fbk-2M-130"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" id="M4D-XS-SJP">
+                                    <rect key="frame" x="277" y="135" width="55" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qPA-R3-fhd">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system" size="10"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandlerloadbackupfanart:" target="139" id="ojx-5h-g22"/>
                                     </connections>
                                 </button>
                             </subviews>
