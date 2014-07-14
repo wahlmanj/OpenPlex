@@ -2044,19 +2044,8 @@ dGhlIGV4aXQgaWNvbi4
                                         <action selector="buttonhandlerloadbackupfanart:" target="139" id="dw1-Hj-Lnz"/>
                                     </connections>
                                 </button>
-                                <button verticalHuggingPriority="750" id="rOn-M7-uEi">
-                                    <rect key="frame" x="340" y="105" width="55" height="25"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="squareTextured" title="Certs" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2sS-VU-Lro">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system" size="10"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerbackupfanart:" target="139" id="Fbk-2M-130"/>
-                                    </connections>
-                                </button>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="y1t-6c-ybQ">
-                                    <rect key="frame" x="11" y="83" width="83" height="17"/>
+                                    <rect key="frame" x="11" y="81" width="83" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Extras :" id="dyw-EJ-08a">
                                         <font key="font" metaFont="smallSystem"/>
@@ -2065,7 +2054,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </textFieldCell>
                                 </textField>
                                 <button verticalHuggingPriority="750" id="khq-pS-AVQ">
-                                    <rect key="frame" x="268" y="78" width="55" height="25"/>
+                                    <rect key="frame" x="268" y="76" width="55" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Fix Plists" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FQe-Ux-Eqx">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2076,7 +2065,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="cV6-nU-MWY">
-                                    <rect key="frame" x="87" y="78" width="80" height="25"/>
+                                    <rect key="frame" x="87" y="76" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Auto Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Pab-82-PeC">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2087,7 +2076,7 @@ dGhlIGV4aXQgaWNvbi4
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" id="5Cu-oO-yi3">
-                                    <rect key="frame" x="175" y="78" width="80" height="25"/>
+                                    <rect key="frame" x="175" y="76" width="80" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="squareTextured" title="Custom Plist" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iFS-nE-OB6">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2095,6 +2084,17 @@ dGhlIGV4aXQgaWNvbi4
                                     </buttonCell>
                                     <connections>
                                         <action selector="buttonhandlercustomplist:" target="139" id="MWN-5z-S6w"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" id="rOn-M7-uEi">
+                                    <rect key="frame" x="340" y="105" width="55" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="squareTextured" title="Certs" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2sS-VU-Lro">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system" size="10"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandlerbackupfanart:" target="139" id="Fbk-2M-130"/>
                                     </connections>
                                 </button>
                             </subviews>
