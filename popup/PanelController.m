@@ -8,8 +8,8 @@
 
 #define SEARCH_INSET 17
 
-#define POPUP_HEIGHT 95
-#define PANEL_WIDTH 287
+#define POPUP_HEIGHT 60
+#define PANEL_WIDTH 279
 #define MENU_ANIMATION_DURATION .1
 
 #pragma mark -

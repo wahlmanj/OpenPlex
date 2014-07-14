@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -17,101 +17,101 @@
             <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES" texturedBackground="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="162" y="101" width="297" height="79"/>
+            <rect key="contentRect" x="162" y="101" width="279" height="60"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" wantsLayer="YES" id="6" customClass="BackgroundView">
-                <rect key="frame" x="0.0" y="0.0" width="297" height="79"/>
+                <rect key="frame" x="0.0" y="0.0" width="279" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="722">
-                        <rect key="frame" x="5" y="2" width="285" height="70"/>
+                        <rect key="frame" x="-3" y="-4" width="285" height="70"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="283" height="54"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button toolTip="Update PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="730">
-                                    <rect key="frame" x="87" y="10" width="42" height="38"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <shadow key="shadow">
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="updateplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="735">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerupdate:" target="139" id="1635"/>
-                                    </connections>
-                                </button>
-                                <button toolTip="PlexConnect Log" id="729">
-                                    <rect key="frame" x="140" y="-3" width="63" height="64"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <shadow key="shadow">
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="logplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="736">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerstatus:" target="139" id="1636"/>
-                                    </connections>
-                                </button>
-                                <button toolTip="Settings" id="728">
-                                    <rect key="frame" x="191" y="11" width="45" height="37"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <shadow key="shadow">
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="menuplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="737">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="makeKeyAndOrderFront:" target="1154" id="1625"/>
-                                    </connections>
-                                </button>
-                                <button toolTip="Stop PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="731">
-                                    <rect key="frame" x="49" y="10" width="37" height="38"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <shadow key="shadow">
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="stopplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="734">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerstop:" target="139" id="1634"/>
-                                    </connections>
-                                </button>
-                                <button toolTip="Exit OpenPlex" id="727">
+                                <button toolTip="Exit OpenPlex" id="4H7-FD-ajX">
                                     <rect key="frame" x="224" y="0.0" width="63" height="59"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="quitplex" imagePosition="only" alignment="left" id="738">
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="quitplex" imagePosition="only" alignment="left" id="uQK-QZ-kKX">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="stop:" target="-1" id="1056"/>
+                                        <action selector="stop:" target="-1" id="nlG-T6-wrb"/>
                                     </connections>
                                 </button>
-                                <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="732">
+                                <button toolTip="Settings" id="BcI-vL-0MB">
+                                    <rect key="frame" x="191" y="11" width="45" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <shadow key="shadow">
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </shadow>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="menuplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="kcZ-Dx-Fqq">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="makeKeyAndOrderFront:" target="1154" id="sE7-wz-yuY"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="PlexConnect Log" id="GSf-YK-BrT">
+                                    <rect key="frame" x="140" y="-3" width="63" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <shadow key="shadow">
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </shadow>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="logplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="nMx-3r-oH6">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandlerstatus:" target="139" id="sef-Xj-rtK"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="Update PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="c8p-ZM-IJW">
+                                    <rect key="frame" x="87" y="10" width="42" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <shadow key="shadow">
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </shadow>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="updateplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="bQf-EB-1t3">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandlerupdate:" target="139" id="I4c-OK-58l"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="Stop PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="x5E-Ti-jMR">
+                                    <rect key="frame" x="49" y="10" width="37" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <shadow key="shadow">
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </shadow>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="stopplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="u5J-7V-S98">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandlerstop:" target="139" id="OMr-HG-L4C"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Sql-3m-dHd">
                                     <rect key="frame" x="9" y="6" width="36" height="46"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <shadow key="shadow">
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="startplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="733">
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="startplex" imagePosition="only" alignment="left" imageScaling="proportionallyDown" id="Izw-u8-D4F">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="buttonhandlerstart:" target="139" id="1633"/>
+                                        <action selector="buttonhandlerstart:" target="139" id="Ehs-uy-S3j"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -127,6 +127,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="8"/>
             </connections>
+            <point key="canvasLocation" x="140.5" y="-117"/>
         </window>
         <customObject id="139" customClass="AppDelegate">
             <connections>
@@ -1008,7 +1009,7 @@
                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator maxValue="100" displayedWhenStopped="NO" style="bar" id="kqI-af-e6O">
+                    <progressIndicator maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" id="kqI-af-e6O">
                         <rect key="frame" x="252" y="51" width="244" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </progressIndicator>
