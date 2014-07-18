@@ -657,10 +657,10 @@
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="next_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1539">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="17"/>
-                            <connections>
-                                <action selector="orderFront:" target="626" id="heg-Eh-eEY"/>
-                            </connections>
                         </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="626" id="LS0-fb-IeN"/>
+                        </connections>
                     </button>
                     <button id="1533">
                         <rect key="frame" x="20" y="11" width="82" height="18"/>
@@ -693,10 +693,10 @@
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1540">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="17"/>
-                            <connections>
-                                <action selector="orderFront:" target="1242" id="Jdv-7u-tnU"/>
-                            </connections>
                         </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="1242" id="NSP-YU-cCo"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -1052,10 +1052,10 @@ dGhlIGV4aXQgaWNvbi4
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="social-media-select-button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1604">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
-                                        <connections>
-                                            <action selector="orderFront:" target="1090" id="KRq-wk-lrT"/>
-                                        </connections>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="makeKeyAndOrderFront:" target="1090" id="r8i-g4-ewA"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </view>
@@ -1079,10 +1079,10 @@ dGhlIGV4aXQgaWNvbi4
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="LT5-0v-uN4">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="17"/>
-                            <connections>
-                                <action selector="orderFront:" target="1242" id="lgm-nZ-hwv"/>
-                            </connections>
                         </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="1242" id="X6G-2l-hev"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -1102,10 +1102,10 @@ dGhlIGV4aXQgaWNvbi4
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1329">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="17"/>
-                            <connections>
-                                <action selector="orderFront:" target="1154" id="EQM-ul-rgU"/>
-                            </connections>
                         </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="1154" id="vfB-U2-Vwl"/>
+                        </connections>
                     </button>
                     <button id="1307">
                         <rect key="frame" x="12" y="9" width="82" height="18"/>
@@ -1140,10 +1140,10 @@ dGhlIGV4aXQgaWNvbi4
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="social-media-select-button" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="BqD-xM-1JB">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="15"/>
-                                        <connections>
-                                            <action selector="orderFront:" target="1416" id="GdZ-nS-9as"/>
-                                        </connections>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="makeKeyAndOrderFront:" target="1416" id="Nce-sF-s6h"/>
+                                    </connections>
                                 </button>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1310">
                                     <rect key="frame" x="11" y="11" width="72" height="44"/>
@@ -1161,10 +1161,10 @@ dGhlIGV4aXQgaWNvbi4
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="next_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1316">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="17"/>
-                            <connections>
-                                <action selector="orderFront:" target="1479" id="lcz-9v-r4U"/>
-                            </connections>
                         </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="1479" id="7EI-hZ-c0B"/>
+                        </connections>
                     </button>
                     <box autoresizesSubviews="NO" borderType="line" id="1304">
                         <rect key="frame" x="9" y="173" width="300" height="79"/>
@@ -1184,10 +1184,10 @@ dGhlIGV4aXQgaWNvbi4
                                     <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="social-media-select-button" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="1591">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="15"/>
-                                        <connections>
-                                            <action selector="orderFront:" target="1192" id="Kmt-uu-Tda"/>
-                                        </connections>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="makeKeyAndOrderFront:" target="1192" id="6Is-bE-hUx"/>
+                                    </connections>
                                 </button>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Uyg-Ci-Awm">
                                     <rect key="frame" x="76" y="21" width="47" height="17"/>
@@ -1222,6 +1222,9 @@ dGhlIGV4aXQgaWNvbi4
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="15"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="makeKeyAndOrderFront:" target="iNY-9Y-W9E" id="VMZ-lB-Feq"/>
+                                    </connections>
                                 </button>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="QlV-QX-TYI">
                                     <rect key="frame" x="77" y="22" width="92" height="17"/>
@@ -1329,7 +1332,7 @@ dGhlIGV4aXQgaWNvbi4
                             <font key="font" metaFont="system" size="17"/>
                         </buttonCell>
                         <connections>
-                            <action selector="orderFront:" target="1242" id="QIS-j2-3Wj"/>
+                            <action selector="makeKeyAndOrderFront:" target="1242" id="Clo-S4-NU4"/>
                         </connections>
                     </button>
                     <button id="1176">
@@ -1444,10 +1447,10 @@ dGhlIGV4aXQgaWNvbi4
                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="back_button" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="nlR-Kk-RCc">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="17"/>
-                            <connections>
-                                <action selector="orderFront:" target="1192" id="yyz-qg-rKS"/>
-                            </connections>
                         </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="1192" id="17I-Ii-lS9"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -1786,6 +1789,9 @@ dGhlIGV4aXQgaWNvbi4
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="17"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="1242" id="i5K-gA-tE3"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
