@@ -256,6 +256,20 @@ script AppDelegate
         do shell script "folder.bash"
     end buttonhandlercertfolder_
     
+    on buttonhandlerplexicon_(sender)
+        tell myProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        tell myProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerplexicon_
+    
     on buttonhandlerpillowinstaller_(sender)
         do shell script "quit Terminal"
         delay 2
