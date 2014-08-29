@@ -41,7 +41,7 @@ script AppDelegate
     end tell
     
     on buttonhandlergitinstaller_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell gitProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -63,22 +63,21 @@ script AppDelegate
                 do shell script "echo install not present"
             end if
         end tell
-        delay 8
         try
             set theFolder to "/Applications"
             do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
         end try
-        
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "sudoers.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-        delay 2
+        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
         do shell script "rm -R /Applications/PlexConnect"
         set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
         tell application "Safari" to make new document with properties {URL:theURL}
         display dialog "Git has been downloaded install the git dmg"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlergitinstaller_
     
@@ -527,9 +526,6 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
-        do shell script "sudoers.bash"
-        delay 2
-        do shell script "sudoersfixbash.bash"
         tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerclone_
@@ -568,9 +564,6 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
-        do shell script "sudoers.bash"
-        delay 2
-        do shell script "sudoersfixbash.bash"
         tell falcoProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerfalco_
@@ -609,9 +602,6 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
-        do shell script "sudoers.bash"
-        delay 2
-        do shell script "sudoersfixbash.bash"
         tell stoffezProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerstoffez_
@@ -650,9 +640,6 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
-        do shell script "sudoers.bash"
-        delay 2
-        do shell script "sudoersfixbash.bash"
         tell ghostProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerghost_
@@ -691,9 +678,6 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
-        do shell script "sudoers.bash"
-        delay 2
-        do shell script "sudoersfixbash.bash"
         tell brotuserProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerbrotuser_
@@ -720,9 +704,6 @@ script AppDelegate
         end try
         do shell script "installphpbash.bash"
         do shell script "websharing.bash"
-        do shell script "sudoers.bash"
-        delay 2
-        do shell script "sudoersfixbash.bash"
         tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwahlmanj_
