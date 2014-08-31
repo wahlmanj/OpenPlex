@@ -991,6 +991,17 @@ dGhlIGV4aXQgaWNvbi4
                                                 <action selector="buttonhandlercertfolder:" target="139" id="TLI-PI-1kt"/>
                                             </connections>
                                         </button>
+                                        <button verticalHuggingPriority="750" id="kQu-34-W8R">
+                                            <rect key="frame" x="394" y="137" width="58" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="storeFront" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Hy-6b-6In">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerstorefront:" target="139" id="V3g-a0-SVJ"/>
+                                            </connections>
+                                        </button>
                                         <button verticalHuggingPriority="750" id="BPH-m0-3L1">
                                             <rect key="frame" x="183" y="107" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

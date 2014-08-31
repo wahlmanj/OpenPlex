@@ -281,6 +281,11 @@ script AppDelegate
         end tell
     end buttonhandlerpillowinstaller_
     
+    on buttonhandlerstorefront_(sender)
+        do shell script "/Applications/PlexConnect/update/OSX/storefront.bash"
+        do shell script "open /Applications/PlexConnect/update/OSX/storeFront"
+    end buttonhandlerstorefront_
+    
     on buttonhandlerload_(sender)
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
