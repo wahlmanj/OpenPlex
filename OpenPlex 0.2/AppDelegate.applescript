@@ -81,6 +81,14 @@ script AppDelegate
         set animated to false
     end buttonhandlergitinstaller_
     
+    on buttonhandlerupdatecode_(sender)
+        tell gitProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "updatewcbash.bash"
+        tell gitProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerupdatecode_
+    
     on buttonhandlergitforum_(sender)
         set theURL to "https://forums.plex.tv/index.php/forum/136-appletv-plexconnect/"
         tell application "Safari" to make new document with properties {URL:theURL}
