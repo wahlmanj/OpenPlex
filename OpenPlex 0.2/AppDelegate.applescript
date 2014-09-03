@@ -105,6 +105,7 @@ script AppDelegate
     on buttonhandlertrailers_(sender)
         tell trailersProgressBar to startAnimation:me -- another way
         set animated to true
+        do shell script "modbash.bash"
         do shell script "createcertbash.bash"
         delay 2
         do shell script "createplistbash.bash"
@@ -121,6 +122,7 @@ script AppDelegate
     on buttonhandlerimovie_(sender)
         tell imovieProgressBar to startAnimation:me -- another way
         set animated to true
+        do shell script "modbash.bash"
         do shell script "createimoviebash.bash"
         delay 2
         do shell script "createplistbash.bash"
@@ -137,6 +139,7 @@ script AppDelegate
     on buttonhandlerwsj_(sender)
         tell wsjProgressBar to startAnimation:me -- another way
         set animated to true
+        do shell script "modbash.bash"
         do shell script "createwsjbash.bash"
         delay 2
         do shell script "createplistbash.bash"
@@ -389,9 +392,12 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/settings.cfg /Applications/plexconnect_BACKUP"
         tell application "Finder"
             if (exists folder "Applications:PlexConnect_BACKUP:fanartcache" of the startup disk) then
+                try
                 do shell script "rm -R /Applications/plexconnect_BACKUP/fanartcache"
                 do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
                 do shell script "cp -R /Applications/PlexConnect/assets/fanartcache/* /Applications/plexconnect_BACKUP/fanartcache"
+                onerror
+                end try
                 else if not (exists folder "Applications:PlexConnect_BACKUP:fanartcache" of the startup disk) then
                 try
                     do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
@@ -423,6 +429,7 @@ script AppDelegate
                 end try
             end if
         end tell
+        do shell script "modbash.bash"
         tell myProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerbackupall_
@@ -430,6 +437,7 @@ script AppDelegate
     on buttonhandlerrestoreall_(sender)
         tell myProgressBar to startAnimation:me -- another way
         set animated to true
+        do shell script "modbash.bash"
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
                 do shell script "rm /Applications/PlexConnect/assets/fanartcache/*"
@@ -437,7 +445,6 @@ script AppDelegate
                 do shell script "echo already present"
             end if
         end tell
-        
         do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
