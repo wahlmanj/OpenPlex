@@ -16,6 +16,8 @@ script AppDelegate
     
     property gitProgressBar : missing value
     
+    property WCProgressBar : missing value
+    
     property trailersProgressBar : missing value
     
     property imovieProgressBar : missing value
@@ -89,6 +91,14 @@ script AppDelegate
         set animated to false
     end buttonhandlerupdatecode_
     
+    on buttonhandlerupdatewccode_(sender)
+        tell WCProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "updatewcbash.bash"
+        tell WCProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerupdatewccode_
+    
     on buttonhandlergitforum_(sender)
         set theURL to "https://forums.plex.tv/index.php/forum/136-appletv-plexconnect/"
         tell application "Safari" to make new document with properties {URL:theURL}
@@ -123,6 +133,10 @@ script AppDelegate
         do shell script "createcertbash.bash"
         delay 4
         do shell script "startbash.bash"
+        delay 4
+        do shell script "createcertbash.bash"
+        delay 4
+        do shell script "restartbash.bash"
         tell trailersProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlertrailers_
@@ -140,6 +154,10 @@ script AppDelegate
         do shell script "createimoviebash.bash"
         delay 4
         do shell script "startbash.bash"
+        delay 4
+        do shell script "createimoviebash.bash"
+        delay 4
+        do shell script "restartbash.bash"
         tell imovieProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerimovie_
@@ -157,6 +175,10 @@ script AppDelegate
         do shell script "createwsjbash.bash"
         delay 4
         do shell script "startbash.bash"
+        delay 4
+        do shell script "createwsjbash.bash"
+        delay 4
+        do shell script "restartbash.bash"
         tell wsjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwsj_
@@ -164,6 +186,10 @@ script AppDelegate
     on buttonhandlerupdate_(sender)
         do shell script "updatebash.bash"
     end buttonhandlerupdate_
+    
+    on buttonhandlerrestart_(sender)
+        do shell script "restartbash.bash"
+    end buttonhandlerrestart_
     
     on buttonhandlerautoupdate_(sender)
         do shell script "createautobash.bash"
@@ -239,6 +265,11 @@ script AppDelegate
     on buttonhandlerstatus_(sender)
         do shell script "open /Applications/PlexConnect/PlexConnect.log"
     end buttonhandlerstatus_
+    
+    on buttonhandlerrmlog_(sender)
+        do shell script "modbash.bash"
+        do shell script "rm /Applications/PlexConnect/PlexConnect.log"
+    end buttonhandlerrmlog_
     
     on buttonhandleropenbase_(sender)
         do shell script "open /Applications/PlexConnect"
@@ -392,51 +423,7 @@ script AppDelegate
     on buttonhandlerbackupall_(sender)
         tell myProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "stopbash.bash"
-        delay 5
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.cer /Applications/plexconnect_BACKUP"
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.pem /Applications/plexconnect_BACKUP"
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.key /Applications/plexconnect_BACKUP"
-        do shell script "cp /Applications/PlexConnect/settings.cfg /Applications/plexconnect_BACKUP"
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect_BACKUP:fanartcache" of the startup disk) then
-                try
-                do shell script "rm -R /Applications/plexconnect_BACKUP/fanartcache"
-                do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
-                do shell script "cp -R /Applications/PlexConnect/assets/fanartcache/* /Applications/plexconnect_BACKUP/fanartcache"
-                onerror
-                end try
-                else if not (exists folder "Applications:PlexConnect_BACKUP:fanartcache" of the startup disk) then
-                try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
-                    do shell script "cp -R /Applications/PlexConnect/assets/fanartcache/* /Applications/plexconnect_BACKUP/fanartcache"
-                    onerror
-                end try
-            end if
-        end tell
-        do shell script "cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP"
-        do shell script "startbash.bash"
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect_BACKUP:flow" of the startup disk) then
-                try
-                    do shell script "rm -R /Applications/plexconnect_BACKUP/flow"
-                    do shell script "rm -R /Applications/plexconnect_BACKUP/top"
-                    do shell script "mkdir /Applications/plexconnect_BACKUP/flow"
-                    do shell script "mkdir /Applications/plexconnect_BACKUP/top"
-                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/flow/* /Applications/plexconnect_BACKUP/flow"
-                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/top/* /Applications/plexconnect_BACKUP/top"
-                    onerror
-                end try
-                else if not (exists folder "Applications:PlexConnect_BACKUP:flow" of the startup disk) then
-                try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP/top"
-                    do shell script "mkdir /Applications/plexconnect_BACKUP/flow"
-                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/flow/* /Applications/plexconnect_BACKUP/flow"
-                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/top/* /Applications/plexconnect_BACKUP/top"
-                    onerror
-                end try
-            end if
-        end tell
+        do shell script "backupbash.bash"
         do shell script "modbash.bash"
         tell myProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -446,52 +433,7 @@ script AppDelegate
         tell myProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "modbash.bash"
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
-                do shell script "rm /Applications/PlexConnect/assets/fanartcache/*"
-                else if not (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
-                do shell script "echo already present"
-            end if
-        end tell
-        do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-        do shell script "cp /Applications/plexconnect_BACKUP/settings.cfg /Applications/PlexConnect"
-        tell application "Finder"
-            if (exists folder "Applications:plexconnect_BACKUP:flow" of the startup disk) then
-                do shell script "echo already present"
-                else if not (exists folder "Applications:plexconnect_BACKUP:flow" of the startup disk) then
-                do shell script "mkdir /Applications/plexconnect_BACKUP/top"
-                do shell script "mkdir /Applications/plexconnect_BACKUP/flow"
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "Applications:plexconnect_BACKUP:fanartcache" of the startup disk) then
-                do shell script "echo already present"
-                else if not (exists folder "Applications:plexconnect_BACKUP:fanartcache" of the startup disk) then
-                do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
-                try
-                    do shell script "cp -R /Applications/plexconnect_BACKUP/fanartcache/* /Applications/PlexConnect/assets/fanartcache"
-                    onerror
-                end try
-                else if not (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
-                do shell script "echo not present"
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect:assets:templates:plex:images:custom:flow" of the startup disk) then
-                do shell script "cp -R /Applications/plexconnect_BACKUP/flow/* /Applications/PlexConnect/assets/templates/plex/images/custom/flow"
-                do shell script "cp -R /Applications/plexconnect_BACKUP/top/* /Applications/PlexConnect/assets/templates/plex/images/custom/top"
-                else if not (exists folder "Applications:PlexConnect:assets:templates:plex:images:custom:flow" of the startup disk) then
-                do shell script "echo not present"
-            end if
-        end tell
-        do shell script "restartbash.bash"
+        do shell script "restorebash.bash"
         tell myProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerrestoreall_

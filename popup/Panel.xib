@@ -131,11 +131,12 @@
         </window>
         <customObject id="139" customClass="AppDelegate">
             <connections>
+                <outlet property="WCProgressBar" destination="Mgj-dt-puf" id="8KX-ym-yyp"/>
                 <outlet property="baaProgressBar" destination="8DM-5z-Hq9" id="jc5-gC-ww7"/>
                 <outlet property="brotuserProgressBar" destination="aUI-cl-5Uo" id="fp7-Rf-9pm"/>
                 <outlet property="falcoProgressBar" destination="zJb-Gq-Am2" id="eWq-eG-K1P"/>
                 <outlet property="ghostProgressBar" destination="xiX-yL-YMf" id="Y9M-ck-ev3"/>
-                <outlet property="gitProgressBar" destination="XAi-Ul-2ow" id="ah5-iC-53p"/>
+                <outlet property="gitProgressBar" destination="XAi-Ul-2ow" id="M6J-IJ-6DZ"/>
                 <outlet property="imovieProgressBar" destination="P9m-4N-EVC" id="Xhg-FA-djq"/>
                 <outlet property="myProgressBar" destination="sne-YP-2aD" id="aqt-PS-boe"/>
                 <outlet property="stoffezProgressBar" destination="z2v-ld-GQZ" id="gcS-1q-v8G"/>
@@ -1030,14 +1031,14 @@ dGhlIGV4aXQgaWNvbi4
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="kQu-34-W8R">
-                                            <rect key="frame" x="394" y="137" width="58" height="25"/>
+                                            <rect key="frame" x="397" y="78" width="55" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="storeFront" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Hy-6b-6In">
+                                            <buttonCell key="cell" type="squareTextured" title="Restart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Hy-6b-6In">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerstorefront:" target="139" id="V3g-a0-SVJ"/>
+                                                <action selector="buttonhandlerrestart:" target="139" id="g2v-Lg-koG"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="BPH-m0-3L1">
@@ -1141,6 +1142,28 @@ dGhlIGV4aXQgaWNvbi4
                                                 <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button verticalHuggingPriority="750" id="5nr-7I-ulh">
+                                            <rect key="frame" x="397" y="107" width="55" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Log" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TT2-MC-Qqa">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerrmlog:" target="139" id="zKE-5t-gOm"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="Vqp-dP-C18">
+                                            <rect key="frame" x="397" y="137" width="55" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="S-Front" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YV5-XE-pRU">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerstorefront:" target="139" id="SIz-CU-lZI"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -1234,9 +1257,9 @@ dGhlIGV4aXQgaWNvbi4
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="AMN-Wm-9I2">
-                                            <rect key="frame" x="59" y="210" width="136" height="17"/>
+                                            <rect key="frame" x="59" y="210" width="236" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Choose App on aTV :" id="laH-C9-jtG">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Generate Certs/Choose App on aTV :" id="laH-C9-jtG">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
@@ -1437,6 +1460,9 @@ dGhlIGV4aXQgaWNvbi4
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="titleBar" size="12"/>
                                                         </buttonCell>
+                                                        <connections>
+                                                            <action selector="buttonhandlerupdatewccode:" target="139" id="H1u-kc-1iw"/>
+                                                        </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lcE-gZ-hEO">
                                                         <rect key="frame" x="53" y="25" width="71" height="17"/>
