@@ -223,9 +223,8 @@ script AppDelegate
     end buttonhandleropenwc_
     
     on buttonhandlerupdateoc_(sender)
-        set theURL to "https://www.dropbox.com/sh/8xf37pcn5lgsfve/j0OZH64Pxx"
-        tell application "Safari" to make new document with properties {URL:theURL}
-        do shell script "show Safari"
+        do shell script "10.6bash.bash"
+        display dialog "OpenPlex has been updated. Relaunch app to complete update."
     end buttonhandlerupdateoc_
     
     on buttonhandlerclt_(sender)
