@@ -76,11 +76,11 @@ script AppDelegate
         do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
         do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
         do shell script "rm -R /Applications/PlexConnect"
+        tell gitProgressBar to stopAnimation:me -- another way
+        set animated to false
         set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
         tell application "Safari" to make new document with properties {URL:theURL}
         display dialog "Git has been downloaded install the git dmg"
-        tell gitProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlergitinstaller_
     
     on buttonhandlerupdatecode_(sender)
@@ -188,7 +188,11 @@ script AppDelegate
     end buttonhandlerupdate_
     
     on buttonhandlerrestart_(sender)
+        tell myProgressBar to startAnimation:me -- another way
+        set animated to true
         do shell script "restartbash.bash"
+        tell myProgressBar to stopAnimation:me -- another way
+        set animated to false
     end buttonhandlerrestart_
     
     on buttonhandlerautoupdate_(sender)
@@ -223,7 +227,11 @@ script AppDelegate
     end buttonhandleropenwc_
     
     on buttonhandlerupdateoc_(sender)
+        tell gitProgressBar to startAnimation:me -- another way
+        set animated to true
         do shell script "10.6bash.bash"
+        tell gitProgressBar to stopAnimation:me -- another way
+        set animated to false
         display dialog "OpenPlex has been updated. Relaunch app to complete update."
     end buttonhandlerupdateoc_
     
