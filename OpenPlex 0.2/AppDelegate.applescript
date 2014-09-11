@@ -139,6 +139,7 @@ script AppDelegate
         do shell script "restartbash.bash"
         tell trailersProgressBar to stopAnimation:me -- another way
         set animated to false
+        do shell script "checkerbash.bash"
     end buttonhandlertrailers_
     
     on buttonhandlerimovie_(sender)
@@ -160,6 +161,7 @@ script AppDelegate
         do shell script "restartbash.bash"
         tell imovieProgressBar to stopAnimation:me -- another way
         set animated to false
+        do shell script "checkerbash.bash"
     end buttonhandlerimovie_
     
     on buttonhandlerwsj_(sender)
@@ -181,6 +183,7 @@ script AppDelegate
         do shell script "restartbash.bash"
         tell wsjProgressBar to stopAnimation:me -- another way
         set animated to false
+        do shell script "checkerbash.bash"
     end buttonhandlerwsj_
     
     on buttonhandlerupdate_(sender)
@@ -193,6 +196,7 @@ script AppDelegate
         do shell script "restartbash.bash"
         tell myProgressBar to stopAnimation:me -- another way
         set animated to false
+        do shell script "checkerbash.bash"
     end buttonhandlerrestart_
     
     on buttonhandlerautoupdate_(sender)
@@ -203,14 +207,14 @@ script AppDelegate
         do shell script "stopbash.bash"
         do shell script "quit Console"
         delay 2
-        do shell script "open /Applications/PlexConnect/PlexConnect.log"
+        do shell script "checkerbash.bash"
     end buttonhandlerstop_
     
     on buttonhandlerstart_(sender)
         do shell script "startbash.bash"
         do shell script "quit Console"
         delay 2
-        do shell script "open /Applications/PlexConnect/PlexConnect.log"
+       do shell script "checkerbash.bash"
     end buttonhandlerstart_
     
     on buttonhandlerquitconsole_(sender)
@@ -229,7 +233,7 @@ script AppDelegate
     on buttonhandlerupdateoc_(sender)
         tell gitProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.6bash.bash"
+        do shell script "10.10bash.bash"
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
         display dialog "OpenPlex has been updated. Relaunch app to complete update."
@@ -434,6 +438,7 @@ script AppDelegate
         do shell script "modbash.bash"
         tell myProgressBar to stopAnimation:me -- another way
         set animated to false
+        do shell script "checkerbash.bash"
     end buttonhandlerbackupall_
     
     on buttonhandlerrestoreall_(sender)
@@ -443,6 +448,7 @@ script AppDelegate
         do shell script "restorebash.bash"
         tell myProgressBar to stopAnimation:me -- another way
         set animated to false
+        do shell script "checkerbash.bash"
     end buttonhandlerrestoreall_
     
     on buttonhandlerbackupcerts_(sender)
