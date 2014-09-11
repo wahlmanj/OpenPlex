@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
+        <deployment defaultVersion="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -126,7 +127,6 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="8"/>
             </connections>
-            <point key="canvasLocation" x="-780.5" y="-561"/>
         </window>
         <customObject id="139" customClass="AppDelegate">
             <connections>
@@ -330,7 +330,6 @@
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-339" y="-292.5"/>
         </window>
         <window title="Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Al3-Uf-B23">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -408,7 +407,6 @@ dGhlIGV4aXQgaWNvbi4
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-937.5" y="-371"/>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="9yJ-66-mBe" userLabel="Window -Default">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -444,7 +442,7 @@ dGhlIGV4aXQgaWNvbi4
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="MDN-yz-Nzu">
+                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" controlSize="small" style="bar" id="MDN-yz-Nzu">
                                                         <rect key="frame" x="18" y="9" width="360" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
@@ -730,7 +728,7 @@ dGhlIGV4aXQgaWNvbi4
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="d4e-t1-YOX">
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" controlSize="small" style="bar" id="d4e-t1-YOX">
                                             <rect key="frame" x="17" y="32" width="151" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
@@ -1024,7 +1022,7 @@ dGhlIGV4aXQgaWNvbi4
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                         </button>
-                                        <progressIndicator maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" id="Wu1-0h-JgN">
+                                        <progressIndicator maxValue="100" displayedWhenStopped="NO" style="bar" id="Wu1-0h-JgN">
                                             <rect key="frame" x="7" y="22" width="445" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
@@ -1136,15 +1134,15 @@ dGhlIGV4aXQgaWNvbi4
                                                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Lw0-5M-GhY">
+                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" controlSize="small" style="bar" id="Lw0-5M-GhY">
                                                         <rect key="frame" x="238" y="14" width="77" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
-                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Pzm-gM-WjT">
+                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" controlSize="small" style="bar" id="Pzm-gM-WjT">
                                                         <rect key="frame" x="133" y="14" width="75" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
-                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="nAg-dN-m9l">
+                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" controlSize="small" style="bar" id="nAg-dN-m9l">
                                                         <rect key="frame" x="27" y="14" width="75" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
@@ -1347,7 +1345,7 @@ dGhlIGV4aXQgaWNvbi4
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="E5I-KK-6v6">
+                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" controlSize="small" style="bar" id="E5I-KK-6v6">
                                                         <rect key="frame" x="166" y="14" width="241" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
@@ -1428,7 +1426,7 @@ dGhlIGV4aXQgaWNvbi4
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OpenPlex" id="6mX-gT-WrC"/>
                                         </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="AZD-EB-fdp">
-                                            <rect key="frame" x="161" y="216" width="62" height="17"/>
+                                            <rect key="frame" x="152" y="210" width="62" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Authors :" id="NVp-V8-nbk">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1437,7 +1435,7 @@ dGhlIGV4aXQgaWNvbi4
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="8VD-K6-VJn">
-                                            <rect key="frame" x="250" y="205" width="74" height="17"/>
+                                            <rect key="frame" x="258" y="210" width="74" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wahlman J." id="9JE-cx-duC">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1446,7 +1444,7 @@ dGhlIGV4aXQgaWNvbi4
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eGR-f2-QX8">
-                                            <rect key="frame" x="250" y="185" width="94" height="17"/>
+                                            <rect key="frame" x="258" y="185" width="94" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CyberGhost84" id="O2S-JK-w5k">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1455,7 +1453,7 @@ dGhlIGV4aXQgaWNvbi4
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="FeM-Tv-vJg">
-                                            <rect key="frame" x="161" y="153" width="72" height="17"/>
+                                            <rect key="frame" x="152" y="137" width="72" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Coded by :" id="Kue-lT-t4y">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1464,7 +1462,7 @@ dGhlIGV4aXQgaWNvbi4
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="a5t-K4-Cfy">
-                                            <rect key="frame" x="161" y="97" width="90" height="17"/>
+                                            <rect key="frame" x="152" y="84" width="90" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Designed by :" id="4Sp-ic-II8">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1473,7 +1471,7 @@ dGhlIGV4aXQgaWNvbi4
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bQZ-Js-kud">
-                                            <rect key="frame" x="250" y="139" width="74" height="17"/>
+                                            <rect key="frame" x="258" y="137" width="74" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wahlman J." id="9hy-tb-lFD">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1482,7 +1480,7 @@ dGhlIGV4aXQgaWNvbi4
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qqO-fT-X9p">
-                                            <rect key="frame" x="250" y="84" width="94" height="17"/>
+                                            <rect key="frame" x="259" y="84" width="94" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CyberGhost84" id="bGA-oQ-EgO">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1490,31 +1488,31 @@ dGhlIGV4aXQgaWNvbi4
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <box autoresizesSubviews="NO" borderType="line" id="JhR-wM-vVa">
-                                            <rect key="frame" x="145" y="74" width="214" height="57"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="212" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </box>
-                                        <box autoresizesSubviews="NO" borderType="line" id="hdl-wn-Mpn">
-                                            <rect key="frame" x="144" y="129" width="214" height="61"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="212" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </box>
                                         <box autoresizesSubviews="NO" borderType="line" id="YPD-hC-UHH">
-                                            <rect key="frame" x="144" y="181" width="214" height="70"/>
+                                            <rect key="frame" x="144" y="178" width="214" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
                                                 <rect key="frame" x="1" y="1" width="212" height="54"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box autoresizesSubviews="NO" borderType="line" id="rO5-vj-WSK">
+                                            <rect key="frame" x="144" y="72" width="214" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="1" y="1" width="212" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box autoresizesSubviews="NO" borderType="line" id="b7u-9k-gVA">
+                                            <rect key="frame" x="144" y="126" width="214" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="1" y="1" width="212" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -1527,7 +1525,6 @@ dGhlIGV4aXQgaWNvbi4
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-322.5" y="-680"/>
         </window>
     </objects>
     <resources>
