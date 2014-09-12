@@ -48,9 +48,6 @@ script AppDelegate
 
 --scripts
 
-    tell application "OpenPlex"
-        activate
-    end tell
 
     on buttonhandlergitinstaller_(sender)
         tell gitProgressBar to startAnimation:me -- another way
@@ -319,7 +316,7 @@ script AppDelegate
     on buttonhandlerupdateoc_(sender)
         tell gitProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.10bash.bash"
+        do shell script "10.6bash.bash"
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
         display dialog "OpenPlex has been updated. Relaunch app to complete update."
