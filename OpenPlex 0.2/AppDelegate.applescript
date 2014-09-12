@@ -35,13 +35,23 @@ script AppDelegate
     property stoffezProgressBar : missing value
     
     property falcoProgressBar : missing value
+
+    property theNext : ""
     
-    --scripts
+    property theNetwork : ""
     
+    property theRouter : ""
+    
+    property theLocalNode : ""
+
+
+
+--scripts
+
     tell application "OpenPlex"
         activate
     end tell
-    
+
     on buttonhandlergitinstaller_(sender)
         tell gitProgressBar to startAnimation:me -- another way
         set animated to true
@@ -82,6 +92,84 @@ script AppDelegate
         tell application "Safari" to make new document with properties {URL:theURL}
         display dialog "Git has been downloaded install the git dmg"
     end buttonhandlergitinstaller_
+    
+    on buttonhandlerip_(sender)
+        try
+            set myTemp to do shell script "mktemp -t txt"
+            do shell script "curl -s http://checkip.dyndns.org &> " & myTemp & " &2> /dev/null"
+            
+            # CHANGE THE DELAY HERE…
+            delay 3
+            set extIP to do shell script "sed 's/[a-zA-Z/<> :]//g' " & myTemp
+            
+            if extIP = "" then
+                set my theNetwork to "No connection"
+                else if extIP contains "=" then
+                set theNetwork to "Can't get IP"
+                else
+                set theNetwork to extIP
+            end if
+            on error
+            set theNetwork to "No connection"
+        end try
+        
+        try
+            set oldDelims to AppleScript's text item delimiters
+            set AppleScript's text item delimiters to "gateway:"
+            set theGateway to do shell script "route get default | grep gateway"
+            set AppleScript's text item delimiters to oldDelims
+            set theRouter to the last word of theGateway
+            on error
+            set my theRouter to "No connection"
+        end try
+        
+        try
+            set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
+            set theLocalNode to the last word of theIP
+            on error
+            set theLocalNode to "Can't get Local IP"
+        end try
+        
+        display dialog "Router: " & theRouter & return & return & "Local IP: " & theLocalNode & return & return & "External IP: " & theNetwork buttons {"OK", "Cancel"} cancel button {"Cancel"} with title "Your IP addresses" default button "OK"
+        set theNext to the button returned of the result
+        return result
+        
+        repeat
+            try
+                getRouter()
+                getIP()
+                getLocalNode()
+                userInfo()
+                if result = "Try Again" then
+                    getIP()
+                    else if theNext = "Copy" then
+                    
+                    getCopyItem()
+                    exit repeat
+                    
+                end if
+                
+                on error
+                exit repeat
+            end try
+        end repeat
+    end buttonhandlerip_
+    
+    on buttonhandleruas_(sender)
+        tell gitProgressBar to startAnimation:me -- another way
+        set animated to true
+        try
+            set theFolder to "/Applications"
+            do shell script "PATH=/usr/local/git/bin:/usr/bin export PATH; cd " & theFolder & "; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
+        end try
+        do shell script "chmod +x /applications/unsupported/unsupported.bash" with administrator privileges
+        do shell script "/applications/unsupported/unsupported.bash" with administrator privileges
+        do shell script "unsupported2.bash"
+        do shell script "chmod +x /applications/unsupported/copy.bash" with administrator privileges
+        do shell script "/applications/unsupported/copy.bash" with administrator privileges
+        tell gitProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandleruas_
     
     on buttonhandlerupdatecode_(sender)
         tell gitProgressBar to startAnimation:me -- another way
@@ -205,14 +293,12 @@ script AppDelegate
     
     on buttonhandlerstop_(sender)
         do shell script "stopbash.bash"
-        do shell script "quit Console"
         delay 2
         do shell script "checkerbash.bash"
     end buttonhandlerstop_
     
     on buttonhandlerstart_(sender)
         do shell script "startbash.bash"
-        do shell script "quit Console"
         delay 2
        do shell script "checkerbash.bash"
     end buttonhandlerstart_
