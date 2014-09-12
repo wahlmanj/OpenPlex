@@ -155,6 +155,7 @@
 		09947B00195BC8C00005EE4A /* OpenPlex 0.2 */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F7C0F13C30F9F00825C6E /* Supporting Files */,
 				DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */,
 				097F5425196855FB00BC9A10 /* AppDelegate.applescript */,
 			);
@@ -253,7 +254,6 @@
 			children = (
 				DD4F7C2613C311DF00825C6E /* Controllers */,
 				DD4F7C3913C317EC00825C6E /* Views */,
-				DD4F7C0F13C30F9F00825C6E /* Supporting Files */,
 			);
 			name = Sources;
 			path = Popup;
@@ -266,6 +266,7 @@
 				DD4F7C1413C30F9F00825C6E /* main.m */,
 			);
 			name = "Supporting Files";
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		DD4F7C2613C311DF00825C6E /* Controllers */ = {
@@ -525,7 +526,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Popup/OpenPlex-Prefix.pch";
 				INFOPLIST_FILE = "Popup/OpenPlex-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = OpenPlex;
 				WRAPPER_EXTENSION = app;
 			};
@@ -539,7 +540,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Popup/OpenPlex-Prefix.pch";
 				INFOPLIST_FILE = "Popup/OpenPlex-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = OpenPlex;
 				WRAPPER_EXTENSION = app;
 			};

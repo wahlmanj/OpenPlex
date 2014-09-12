@@ -86,8 +86,8 @@ script AppDelegate
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
         set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
+        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
         tell application "Safari" to make new document with properties {URL:theURL}
-        display dialog "Git has been downloaded install the git dmg"
     end buttonhandlergitinstaller_
     
     on buttonhandlerip_(sender)
@@ -127,9 +127,9 @@ script AppDelegate
             set theLocalNode to "Can't get Local IP"
         end try
         
-        display dialog "Router: " & theRouter & return & return & "Local IP: " & theLocalNode & return & return & "External IP: " & theNetwork buttons {"OK", "Cancel"} cancel button {"Cancel"} with title "Your IP addresses" default button "OK"
-        set theNext to the button returned of the result
-        return result
+        
+        
+        display notification  theLocalNode with title "Mac IP Address"
         
         repeat
             try
@@ -152,8 +152,70 @@ script AppDelegate
         end repeat
     end buttonhandlerip_
     
+    on buttonhandlerSSL_(sender)
+        try
+            set myTemp to do shell script "mktemp -t txt"
+            do shell script "curl -s http://checkip.dyndns.org &> " & myTemp & " &2> /dev/null"
+            
+            # CHANGE THE DELAY HERE…
+            delay 3
+            set extIP to do shell script "sed 's/[a-zA-Z/<> :]//g' " & myTemp
+            
+            if extIP = "" then
+                set my theNetwork to "No connection"
+                else if extIP contains "=" then
+                set theNetwork to "Can't get IP"
+                else
+                set theNetwork to extIP
+            end if
+            on error
+            set theNetwork to "No connection"
+        end try
+        
+        try
+            set oldDelims to AppleScript's text item delimiters
+            set AppleScript's text item delimiters to "gateway:"
+            set theGateway to do shell script "route get default | grep gateway"
+            set AppleScript's text item delimiters to oldDelims
+            set theRouter to the last word of theGateway
+            on error
+            set my theRouter to "No connection"
+        end try
+        
+        try
+            set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
+            set theLocalNode to the last word of theIP
+            on error
+            set theLocalNode to "Can't get Local IP"
+        end try
+        
+        
+        
+        display notification  theLocalNode & "/trailer.cer" with title "Cert URL"
+        
+        repeat
+            try
+                getRouter()
+                getIP()
+                getLocalNode()
+                userInfo()
+                if result = "Try Again" then
+                    getIP()
+                    else if theNext = "Copy" then
+                    
+                    getCopyItem()
+                    exit repeat
+                    
+                end if
+                
+                on error
+                exit repeat
+            end try
+        end repeat
+    end buttonhandlerSSL_
+    
     on buttonhandleruas_(sender)
-        tell gitProgressBar to startAnimation:me -- another way
+        tell myProgressBar to startAnimation:me -- another way
         set animated to true
         try
             set theFolder to "/Applications"
@@ -164,7 +226,8 @@ script AppDelegate
         do shell script "unsupported2.bash"
         do shell script "chmod +x /applications/unsupported/copy.bash" with administrator privileges
         do shell script "/applications/unsupported/copy.bash" with administrator privileges
-        tell gitProgressBar to stopAnimation:me -- another way
+        display notification "Unsupported AppStore installed..." with title "UAS Status"
+        tell myProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandleruas_
     
@@ -300,6 +363,10 @@ script AppDelegate
        do shell script "checkerbash.bash"
     end buttonhandlerstart_
     
+    on buttonhandlerchecker_(sender)
+        do shell script "checkerbash.bash"
+    end buttonhandlerchecker_
+    
     on buttonhandlerquitconsole_(sender)
         do shell script "quit Console"
     end buttonhandlerquitconsole_
@@ -316,10 +383,10 @@ script AppDelegate
     on buttonhandlerupdateoc_(sender)
         tell gitProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.6bash.bash"
+        do shell script "10.10bash.bash"
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
-        display dialog "OpenPlex has been updated. Relaunch app to complete update."
+        display notification "OpenPlex updated. Relaunch app to complete update." with title "OpenPlex Status"
     end buttonhandlerupdateoc_
     
     on buttonhandlerclt_(sender)
@@ -421,6 +488,10 @@ script AppDelegate
         do shell script "/Applications/PlexConnect/update/OSX/storefront.bash"
         do shell script "open /Applications/PlexConnect/update/OSX/storeFront"
     end buttonhandlerstorefront_
+    
+    on buttonhandlersettingscfg_(sender)
+        do shell script "open /Applications/PlexConnect/settings.cfg"
+    end buttonhandlersettingscfg_
     
     on buttonhandlerload_(sender)
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
