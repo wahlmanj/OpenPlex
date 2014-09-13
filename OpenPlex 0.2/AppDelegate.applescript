@@ -389,7 +389,7 @@ script AppDelegate
     on buttonhandlerupdateoc_(sender)
         tell coodeProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.6bash.bash"
+        do shell script "10.10bash.bash"
         display notification "OpenPlex updated. Relaunch app to complete update." with title "OpenPlex Status"
         tell codeProgressBar to stopAnimation:me -- another way
         set animated to false
