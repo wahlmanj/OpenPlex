@@ -83,6 +83,7 @@ script AppDelegate
         do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
         do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
         do shell script "rm -R /Applications/PlexConnect"
+        do shell script "checkerbash.bash"
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
         set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
@@ -234,7 +235,14 @@ script AppDelegate
     on buttonhandlerupdatecode_(sender)
         tell gitProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "updatewcbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect" of the startup disk) then
+                do shell script "updatewcbash.bash"
+                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                display notification "Theme Required to update..." with title "Code Status"
+            end if
+        end tell
+        do shell script "checkerbash.bash"
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerupdatecode_
@@ -662,6 +670,7 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
+        do shell script "checkerbash.bash"
         tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerclone_
@@ -699,6 +708,7 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
+        do shell script "checkerbash.bash"
         tell falcoProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerfalco_
@@ -736,6 +746,7 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
+        do shell script "checkerbash.bash"
         tell stoffezProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerstoffez_
@@ -773,6 +784,7 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
+        do shell script "checkerbash.bash"
         tell ghostProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerghost_
@@ -810,6 +822,7 @@ script AppDelegate
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
+        do shell script "checkerbash.bash"
         tell brotuserProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerbrotuser_
@@ -835,6 +848,7 @@ script AppDelegate
         end try
         do shell script "installphpbash.bash"
         do shell script "websharing.bash"
+        do shell script "checkerbash.bash"
         tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwahlmanj_
