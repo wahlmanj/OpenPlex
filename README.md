@@ -7,6 +7,8 @@
 =========
 [Wiki](https://github.com/wahlmanj/OpenPlex/wiki)
 =========
+[RoadMap](https://github.com/wahlmanj/OpenPlex/wiki/Roadmap)
+=========
 [Tutorial](http://miapple.me/openplex-app-installs-manages-plexconnect-mac-os-x/) <----Needs update (use Wiki)
 =========
 [Download] (https://www.dropbox.com/sh/8xf37pcn5lgsfve/j0OZH64Pxx)
