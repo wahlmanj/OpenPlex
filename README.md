@@ -2,12 +2,12 @@
 
 ========
 
-[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://www.youtube.com/watch?v=-tHfQtULgno)
+[![ScreenShot](https://forums.plex.tv/uploads/monthly_09_2014/post-137692-0-16689400-1410594379.png)](https://www.youtube.com/watch?v=-tHfQtULgno)
 
 =========
-[Tutorial](http://miapple.me/openplex-app-installs-manages-plexconnect-mac-os-x/) <----Needs update (use Wiki)
-=========
 [Wiki](https://github.com/wahlmanj/OpenPlex/wiki)
+=========
+[Tutorial](http://miapple.me/openplex-app-installs-manages-plexconnect-mac-os-x/) <----Needs update (use Wiki)
 =========
 [Download] (https://www.dropbox.com/sh/8xf37pcn5lgsfve/j0OZH64Pxx)
 =========
