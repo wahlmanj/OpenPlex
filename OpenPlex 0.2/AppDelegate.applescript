@@ -12,9 +12,9 @@ script AppDelegate
     
     property aNotifcation:missing value
     
-    property myProgressBar : missing value
+    property advancedProgressBar : missing value
     
-    property gitProgressBar : missing value
+    property codeProgressBar : missing value
     
     property WCProgressBar : missing value
     
@@ -49,8 +49,8 @@ script AppDelegate
 --scripts
 
 
-    on buttonhandlergitinstaller_(sender)
-        tell gitProgressBar to startAnimation:me -- another way
+    on buttonhandlernewuserinstaller_(sender)
+        tell codeProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -88,10 +88,10 @@ script AppDelegate
         display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
         delay 7
         display notification "No Theme Installed..." with title "PlexConnect Status"
-        tell gitProgressBar to stopAnimation:me -- another way
+        tell codeProgressBar to stopAnimation:me -- another way
         set animated to false
 
-    end buttonhandlergitinstaller_
+    end buttonhandlernewuserinstaller_
     
     on buttonhandlerip_(sender)
         try
@@ -218,7 +218,7 @@ script AppDelegate
     end buttonhandlerSSL_
     
     on buttonhandleruas_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
         try
             set theFolder to "/Applications"
@@ -230,12 +230,12 @@ script AppDelegate
         do shell script "chmod +x /applications/unsupported/copy.bash" with administrator privileges
         do shell script "/applications/unsupported/copy.bash" with administrator privileges
         display notification "Unsupported AppStore installed..." with title "UAS Status"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandleruas_
     
     on buttonhandlerupdatecode_(sender)
-        tell gitProgressBar to startAnimation:me -- another way
+        tell codeProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect" of the startup disk) then
@@ -245,7 +245,7 @@ script AppDelegate
             end if
         end tell
         do shell script "checkerbash.bash"
-        tell gitProgressBar to stopAnimation:me -- another way
+        tell codeProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerupdatecode_
     
@@ -257,7 +257,7 @@ script AppDelegate
         set animated to false
     end buttonhandlerupdatewccode_
     
-    on buttonhandlergitforum_(sender)
+    on buttonhandlerforum_(sender)
         set theURL to "https://forums.plex.tv/index.php/forum/136-appletv-plexconnect/"
         tell application "Safari" to make new document with properties {URL:theURL}
     end buttonhandlerforum_
@@ -349,11 +349,7 @@ script AppDelegate
     end buttonhandlerupdate_
     
     on buttonhandlerrestart_(sender)
-        tell myProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "restartbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
-        set animated to false
         do shell script "checkerbash.bash"
     end buttonhandlerrestart_
     
@@ -385,17 +381,17 @@ script AppDelegate
         do shell script "uninstallbash.bash"
     end buttonhandleruninstall_
     
-    on buttonhandleropenwc_(sender)
+    on buttonhandlerinstallwc_(sender)
         do shell script "webconnectbash.bash"
         do shell script "websharingbash.bash"
-    end buttonhandleropenwc_
+    end buttonhandlerinstallwc_
     
     on buttonhandlerupdateoc_(sender)
-        tell gitProgressBar to startAnimation:me -- another way
+        tell coodeProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.10bash.bash"
+        do shell script "10.6bash.bash"
         display notification "OpenPlex updated. Relaunch app to complete update." with title "OpenPlex Status"
-        tell gitProgressBar to stopAnimation:me -- another way
+        tell codeProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerupdateoc_
     
@@ -405,12 +401,12 @@ script AppDelegate
         do shell script "show Safari"
     end buttonhandlerclt_
     
-    on buttonhandlerlaunchwc_(sender)
+    on buttonhandlerdefaultwc_(sender)
         set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
         set tURL to "http://" & tIP & ":1234/cgi-bin/bash.cgi"
         tell application "Safari" to make new document with properties {URL:tURL}
         do shell script "show Safari"
-    end buttonhandlerlaunchwc_
+    end buttonhandlerdefaultwc_
     
     on buttonhandlerlaunchwcios_(sender)
         set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
@@ -433,14 +429,9 @@ script AppDelegate
         do shell script "show Safari"
     end buttonhandlerlaunchwcinstaller_
     
-    on buttonhandlerstatus_(sender)
+    on buttonhandlerlog_(sender)
         do shell script "open /Applications/PlexConnect/PlexConnect.log"
-    end buttonhandlerstatus_
-    
-    on buttonhandlerrmlog_(sender)
-        do shell script "modbash.bash"
-        do shell script "rm /Applications/PlexConnect/PlexConnect.log"
-    end buttonhandlerrmlog_
+    end buttonhandlerlog_
     
     on buttonhandleropenbase_(sender)
         do shell script "open /Applications/PlexConnect"
@@ -460,16 +451,16 @@ script AppDelegate
         do shell script "trashbasebash.bash"
     end buttonhandlertrash_
     
-    on buttonhandlerauto_(sender)
+    on buttonhandlerfixplists_(sender)
         do shell script "auto.bash" with administrator privileges
-    end buttonhandlerauto_
+    end buttonhandlerfixplists_
     
     on buttonhandlercertfolder_(sender)
         do shell script "folder.bash"
     end buttonhandlercertfolder_
     
     on buttonhandlerplexicon_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
@@ -478,7 +469,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect/assets/thumbnails"
         delay 8
         do shell script "startbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerplexicon_
     
@@ -503,11 +494,11 @@ script AppDelegate
         do shell script "open /Applications/PlexConnect/settings.cfg"
     end buttonhandlersettingscfg_
     
-    on buttonhandlerload_(sender)
+    on buttonhandlerloadcerts_(sender)
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-    end buttonhandlerload_
+    end buttonhandlerloadcerts_
     
     on buttonhandlerbackupsettings_(sender)
         do shell script "cp /Applications/PlexConnect/settings.cfg /Applications/plexconnect_BACKUP"
@@ -596,21 +587,21 @@ script AppDelegate
     end buttonhandlercustomplist_
     
     on buttonhandlerbackupall_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "backupbash.bash"
         do shell script "modbash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
         do shell script "checkerbash.bash"
     end buttonhandlerbackupall_
     
     on buttonhandlerrestoreall_(sender)
-        tell myProgressBar to startAnimation:me -- another way
+        tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "modbash.bash"
         do shell script "restorebash.bash"
-        tell myProgressBar to stopAnimation:me -- another way
+        tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
         do shell script "checkerbash.bash"
     end buttonhandlerrestoreall_
