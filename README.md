@@ -2,7 +2,7 @@
 
 ========
 
-[![ScreenShot](https://forums.plex.tv/uploads/monthly_09_2014/post-137692-0-16689400-1410594379.png)](https://www.youtube.com/watch?v=-tHfQtULgno)
+[![ScreenShot](https://forums.plex.tv/uploads/monthly_09_2014/post-137692-0-17896100-1410594590.png)](https://www.youtube.com/watch?v=-tHfQtULgno)
 
 =========
 [Wiki](https://github.com/wahlmanj/OpenPlex/wiki)
