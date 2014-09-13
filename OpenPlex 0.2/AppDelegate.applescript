@@ -84,10 +84,10 @@ script AppDelegate
         do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
         do shell script "rm -R /Applications/PlexConnect"
         do shell script "checkerbash.bash"
+        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
         set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
-        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
         tell application "Safari" to make new document with properties {URL:theURL}
     end buttonhandlergitinstaller_
     
@@ -293,9 +293,9 @@ script AppDelegate
         do shell script "createcertbash.bash"
         delay 4
         do shell script "restartbash.bash"
+        do shell script "checkerbash.bash"
         tell trailersProgressBar to stopAnimation:me -- another way
         set animated to false
-        do shell script "checkerbash.bash"
     end buttonhandlertrailers_
     
     on buttonhandlerimovie_(sender)
@@ -315,9 +315,9 @@ script AppDelegate
         do shell script "createimoviebash.bash"
         delay 4
         do shell script "restartbash.bash"
+        do shell script "checkerbash.bash"
         tell imovieProgressBar to stopAnimation:me -- another way
         set animated to false
-        do shell script "checkerbash.bash"
     end buttonhandlerimovie_
     
     on buttonhandlerwsj_(sender)
@@ -337,9 +337,9 @@ script AppDelegate
         do shell script "createwsjbash.bash"
         delay 4
         do shell script "restartbash.bash"
+        do shell script "checkerbash.bash"
         tell wsjProgressBar to stopAnimation:me -- another way
         set animated to false
-        do shell script "checkerbash.bash"
     end buttonhandlerwsj_
     
     on buttonhandlerupdate_(sender)
@@ -392,9 +392,9 @@ script AppDelegate
         tell gitProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "10.10bash.bash"
+        display notification "OpenPlex updated. Relaunch app to complete update." with title "OpenPlex Status"
         tell gitProgressBar to stopAnimation:me -- another way
         set animated to false
-        display notification "OpenPlex updated. Relaunch app to complete update." with title "OpenPlex Status"
     end buttonhandlerupdateoc_
     
     on buttonhandlerclt_(sender)
