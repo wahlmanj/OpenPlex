@@ -83,12 +83,14 @@ script AppDelegate
         do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
         do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
         do shell script "rm -R /Applications/PlexConnect"
-        do shell script "checkerbash.bash"
-        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
-        tell gitProgressBar to stopAnimation:me -- another way
-        set animated to false
         set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
         tell application "Safari" to make new document with properties {URL:theURL}
+        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
+        delay 7
+        display notification "No Theme Installed..." with title "PlexConnect Status"
+        tell gitProgressBar to stopAnimation:me -- another way
+        set animated to false
+
     end buttonhandlergitinstaller_
     
     on buttonhandlerip_(sender)
