@@ -90,7 +90,6 @@ script AppDelegate
         display notification "No Theme Installed..." with title "PlexConnect Status"
         tell codeProgressBar to stopAnimation:me -- another way
         set animated to false
-
     end buttonhandlernewuserinstaller_
     
     on buttonhandlerip_(sender)
@@ -129,8 +128,6 @@ script AppDelegate
             on error
             set theLocalNode to "Can't get Local IP"
         end try
-        
-        
         
         display notification  theLocalNode with title "Mac IP Address"
         
@@ -191,8 +188,6 @@ script AppDelegate
             on error
             set theLocalNode to "Can't get Local IP"
         end try
-        
-        
         
         display notification  theLocalNode & "/trailer.cer" with title "Cert URL"
         
@@ -278,24 +273,41 @@ script AppDelegate
         do shell script "rm /Applications/PlexConnect/assets/certificates/trailers.cer"
     end buttonhandlerdelcerts_
     
+    on buttonhandlerdellog_(sender)
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "modbash.bash"
+                do shell script "rm /Applications/PlexConnect/plexconnect.log"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Log Detected..." with title "OpenPlex Status"
+            end if
+        end tell
+    end buttonhandlerdellog_
+    
     on buttonhandlertrailers_(sender)
         tell trailersProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "modbash.bash"
-        do shell script "createcertbash.bash"
-        delay 2
-        do shell script "createplistbash.bash"
-        delay 4
-        do shell script "stopbash.bash"
-        delay 4
-        do shell script "createcertbash.bash"
-        delay 4
-        do shell script "startbash.bash"
-        delay 4
-        do shell script "createcertbash.bash"
-        delay 4
-        do shell script "restartbash.bash"
-        do shell script "checkerbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "modbash.bash"
+                do shell script "createcertbash.bash"
+                delay 2
+                do shell script "createplistbash.bash"
+                delay 4
+                do shell script "stopbash.bash"
+                delay 4
+                do shell script "createcertbash.bash"
+                delay 4
+                do shell script "startbash.bash"
+                delay 4
+                do shell script "createcertbash.bash"
+                delay 4
+                do shell script "restartbash.bash"
+                do shell script "checkerbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "Theme Required to hijack..." with title "Hijack Status"
+            end if
+        end tell
         tell trailersProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlertrailers_
@@ -303,21 +315,27 @@ script AppDelegate
     on buttonhandlerimovie_(sender)
         tell imovieProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "modbash.bash"
-        do shell script "createimoviebash.bash"
-        delay 2
-        do shell script "createplistbash.bash"
-        delay 4
-        do shell script "stopbash.bash"
-        delay 4
-        do shell script "createimoviebash.bash"
-        delay 4
-        do shell script "startbash.bash"
-        delay 4
-        do shell script "createimoviebash.bash"
-        delay 4
-        do shell script "restartbash.bash"
-        do shell script "checkerbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "modbash.bash"
+                do shell script "createimoviebash.bash"
+                delay 2
+                do shell script "createplistbash.bash"
+                delay 4
+                do shell script "stopbash.bash"
+                delay 4
+                do shell script "createimoviebash.bash"
+                delay 4
+                do shell script "startbash.bash"
+                delay 4
+                do shell script "createimoviebash.bash"
+                delay 4
+                do shell script "restartbash.bash"
+                do shell script "checkerbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "Theme Required to hijack..." with title "Hijack Status"
+            end if
+        end tell
         tell imovieProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerimovie_
@@ -325,32 +343,51 @@ script AppDelegate
     on buttonhandlerwsj_(sender)
         tell wsjProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "modbash.bash"
-        do shell script "createwsjbash.bash"
-        delay 2
-        do shell script "createplistbash.bash"
-        delay 4
-        do shell script "stopbash.bash"
-        delay 4
-        do shell script "createwsjbash.bash"
-        delay 4
-        do shell script "startbash.bash"
-        delay 4
-        do shell script "createwsjbash.bash"
-        delay 4
-        do shell script "restartbash.bash"
-        do shell script "checkerbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "modbash.bash"
+                do shell script "createwsjbash.bash"
+                delay 2
+                do shell script "createplistbash.bash"
+                delay 4
+                do shell script "stopbash.bash"
+                delay 4
+                do shell script "createwsjbash.bash"
+                delay 4
+                do shell script "startbash.bash"
+                delay 4
+                do shell script "createwsjbash.bash"
+                delay 4
+                do shell script "restartbash.bash"
+                do shell script "checkerbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "Theme Required to hijack..." with title "Hijack Status"
+            end if
+        end tell
         tell wsjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwsj_
     
     on buttonhandlerupdate_(sender)
-        do shell script "updatebash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "updatebash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Folder Detected..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandlerupdate_
     
     on buttonhandlerrestart_(sender)
-        do shell script "restartbash.bash"
-        do shell script "checkerbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "restartbash.bash"
+                delay 2
+                do shell script "checkerbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Folder Detected..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandlerrestart_
     
     on buttonhandlerautoupdate_(sender)
@@ -358,15 +395,27 @@ script AppDelegate
     end buttonhandlerautoupdate_
     
     on buttonhandlerstop_(sender)
-        do shell script "stopbash.bash"
-        delay 2
-        do shell script "checkerbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "stopbash.bash"
+                delay 4
+                do shell script "checkerbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Folder Detected..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandlerstop_
     
     on buttonhandlerstart_(sender)
-        do shell script "startbash.bash"
-        delay 2
-       do shell script "checkerbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "startbash.bash"
+                delay 4
+                do shell script "checkerbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Folder Detected..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandlerstart_
     
     on buttonhandlerchecker_(sender)
@@ -387,12 +436,10 @@ script AppDelegate
     end buttonhandlerinstallwc_
     
     on buttonhandlerupdateoc_(sender)
-        tell coodeProgressBar to startAnimation:me -- another way
+        tell codeProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.10bash.bash"
-        display notification "OpenPlex updated. Relaunch app to complete update." with title "OpenPlex Status"
-        tell codeProgressBar to stopAnimation:me -- another way
-        set animated to false
+        do shell script "10.6bash.bash"
+        do shell script "quit.bash"
     end buttonhandlerupdateoc_
     
     on buttonhandlerclt_(sender)
@@ -434,7 +481,13 @@ script AppDelegate
     end buttonhandlerlog_
     
     on buttonhandleropenbase_(sender)
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
         do shell script "open /Applications/PlexConnect"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Folder Detected..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandleropenbase_
     
     on buttonhandlerguide_(sender)
@@ -446,9 +499,15 @@ script AppDelegate
     end buttonhandlerguide_
     
     on buttonhandlertrash_(sender)
-        do shell script "trashbasebash.bash"
-        do shell script "stopbash.bash"
-        do shell script "trashbasebash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "trashbasebash.bash"
+                do shell script "stopbash.bash"
+                do shell script "trashbasebash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Folder Detected..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandlertrash_
     
     on buttonhandlerfixplists_(sender)
