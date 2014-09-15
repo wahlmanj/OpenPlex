@@ -1,6 +1,6 @@
 --
 --  AppDelegate.applescript
---  OpenPlex 0.2.7
+--  OpenPlex 0.2.8
 --
 --  Originally designed by iCyberGhost on 5/02/14.
 --  Originally coded by Wahlman.j on 5/02/14.
@@ -291,9 +291,9 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "modbash.bash"
                 do shell script "createcertbash.bash"
-                delay 2
-                do shell script "createplistbash.bash"
                 delay 4
+                do shell script "createplistbash.bash"
+                delay 6
                 do shell script "stopbash.bash"
                 delay 4
                 do shell script "createcertbash.bash"
@@ -319,9 +319,9 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "modbash.bash"
                 do shell script "createimoviebash.bash"
-                delay 2
-                do shell script "createplistbash.bash"
                 delay 4
+                do shell script "createplistbash.bash"
+                delay 6
                 do shell script "stopbash.bash"
                 delay 4
                 do shell script "createimoviebash.bash"
@@ -347,9 +347,9 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "modbash.bash"
                 do shell script "createwsjbash.bash"
-                delay 2
-                do shell script "createplistbash.bash"
                 delay 4
+                do shell script "createplistbash.bash"
+                delay 6
                 do shell script "stopbash.bash"
                 delay 4
                 do shell script "createwsjbash.bash"
