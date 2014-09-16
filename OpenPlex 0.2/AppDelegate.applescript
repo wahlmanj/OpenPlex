@@ -265,7 +265,22 @@ script AppDelegate
     on buttonhandlerroadmap_(sender)
         set theURL to "https://github.com/iBaa/PlexConnect/wiki/Roadmap"
         tell application "Safari" to make new document with properties {URL:theURL}
-    end buttonhandlerroadmap_
+    end buttonhandlerOProadmap_
+    
+    on buttonhandlerOPforum_(sender)
+        set theURL to "https://forums.plex.tv/index.php/topic/108332-openplex-osx-app/"
+        tell application "Safari" to make new document with properties {URL:theURL}
+    end buttonhandlerOPforum_
+    
+    on buttonhandlerOPwiki_(sender)
+        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki"
+        tell application "Safari" to make new document with properties {URL:theURL}
+    end buttonhandlerwiki_
+    
+    on buttonhandlerOProadmap_(sender)
+        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki/Roadmap"
+        tell application "Safari" to make new document with properties {URL:theURL}
+    end buttonhandlerOProadmap_
     
     on buttonhandlerdelcerts_(sender)
         do shell script "rm /Applications/PlexConnect/assets/certificates/trailers.pem"
@@ -442,7 +457,7 @@ script AppDelegate
     on buttonhandlerupdateoc_(sender)
         tell codeProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.10bash.bash"
+        do shell script "10.6bash.bash"
         do shell script "quit.bash"
     end buttonhandlerupdateoc_
     
