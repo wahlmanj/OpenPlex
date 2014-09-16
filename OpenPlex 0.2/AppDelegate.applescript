@@ -394,10 +394,6 @@ script AppDelegate
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "createautobash.bash"
-        delay 5
-        do shell script "cd /Library/LaunchDaemons; launchctl load -w com.plex.plexconnect.auto.plist"
-        do shell script "cd /Library/LaunchDaemons; launchctl unload -w com.plex.plexconnect.auto.plist"
-        do shell script "cd /Library/LaunchDaemons; launchctl load -w com.plex.plexconnect.auto.plist"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerautoupdate_
@@ -446,7 +442,7 @@ script AppDelegate
     on buttonhandlerupdateoc_(sender)
         tell codeProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "10.6bash.bash"
+        do shell script "10.10bash.bash"
         do shell script "quit.bash"
     end buttonhandlerupdateoc_
     
