@@ -1,6 +1,6 @@
 --
 --  AppDelegate.applescript
---  OpenPlex 0.2.8
+--  OpenPlex 0.3
 --
 --  Originally designed by iCyberGhost on 5/02/14.
 --  Originally coded by Wahlman.j on 5/02/14.
@@ -409,6 +409,7 @@ script AppDelegate
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "createautobash.bash"
+        display notification "Automatic GitHub Updates Enabled..." with title "PlexConnect Status"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerautoupdate_
@@ -547,6 +548,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect/assets/thumbnails"
         delay 8
         do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerplexicon_
@@ -707,6 +709,33 @@ script AppDelegate
         do shell script "rm /usr/bin/brew.bash" with administrator privileges
         do shell script "rm /brew.bash" with administrator privileges
     end buttonhandlerbrew_
+    
+    on buttonhandlermacports_(sender)
+        do shell script "show Safari"
+        set theURL to "http://www.macports.org/install.php"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "show Safari"
+        display notification "Install Macports.pkg..." with title "Airplay status"
+    end buttonhandlermacports_
+    
+    on buttonhandlerxcode_(sender)
+        do shell script "show Safari"
+        set theURL to "https://itunes.apple.com/app/xcode/id497799835?mt=12"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "show Safari"
+        display notification "Install Xcode..." with title "Airplay status"
+    end buttonhandlerxcode_
+    
+    on buttonhandlerairplayinstaller_(sender)
+        tell application "Terminal"
+            activate
+            activate
+            activate
+            tell application "System Events" to keystroke "/Applications/PlexConnect/update/OSX/shairport.bash"
+            tell application "System Events" to keystroke return
+        end tell
+        display notification "Mac airplay enabled!" with title "Airplay status"
+    end buttonhandlerairplayinstaller_
     
     on buttonhandlerclone_(sender)
         tell baaProgressBar to startAnimation:me -- another way
