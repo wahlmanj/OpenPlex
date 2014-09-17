@@ -727,6 +727,9 @@ script AppDelegate
     end buttonhandlerxcode_
     
     on buttonhandlerairplayinstaller_(sender)
+        do shell script "quit Terminal"
+        delay 2
+        do shell script "open /Applications/Utilities/Terminal.app"
         tell application "Terminal"
             activate
             activate
@@ -734,7 +737,7 @@ script AppDelegate
             tell application "System Events" to keystroke "/Applications/PlexConnect/update/OSX/shairport.bash"
             tell application "System Events" to keystroke return
         end tell
-        display notification "Mac airplay enabled!" with title "Airplay status"
+        display notification "Follow instructions to enable Airplay" with title "Airplay status"
     end buttonhandlerairplayinstaller_
     
     on buttonhandlerclone_(sender)
