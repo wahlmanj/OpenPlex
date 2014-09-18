@@ -462,6 +462,14 @@ script AppDelegate
         do shell script "quit.bash"
     end buttonhandlerupdateoc_
     
+    on buttonhandlerloginon_(sender)
+    tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
+    end buttonhandlerloginon_
+    
+    on buttonhandlerloginoff_(sender)
+        tell application "System Events" to delete login item "OpenPlex"
+    end buttonhandlerloginoff_
+    
     on buttonhandlerclt_(sender)
         set theURL to "https://www.dropbox.com/sh/4ebx2bmx7ca6c0h/AAA2diPOo3wsdWJK6OM74wida"
         tell application "Safari" to make new document with properties {URL:theURL}
