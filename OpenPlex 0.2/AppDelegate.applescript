@@ -6,6 +6,7 @@
 --  Originally coded by Wahlman.j on 5/02/14.
 --  Copyright (c) 2014 CyberGhost & Wahlman.j. All rights reserved.
 --  myProgressBar's incrementBy_(20)
+--  do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git:/usr/local/bin; cd /Applications; curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.1.tar.bz2; tar xf MacPorts-2.3.1.tar.bz2; cd /Applications/MacPorts-2.3.1; ./configure && make && sudo make install; sudo port -v selfupdate" with administrator privileges
 
 script AppDelegate
     property parent : class "NSObject"
@@ -48,7 +49,6 @@ script AppDelegate
 
 --scripts
 
-
     on buttonhandlernewuserinstaller_(sender)
         tell codeProgressBar to startAnimation:me -- another way
         set animated to true
@@ -83,9 +83,6 @@ script AppDelegate
         do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
         do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
         do shell script "rm -R /Applications/PlexConnect"
-        set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
-        tell application "Safari" to make new document with properties {URL:theURL}
-        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
         delay 7
         display notification "No Theme Installed..." with title "PlexConnect Status"
         tell codeProgressBar to stopAnimation:me -- another way
@@ -706,7 +703,11 @@ script AppDelegate
         do shell script "echo ruby -e " & quoted form of quotedmsgDate & " >> /" & "brew.bash" with administrator privileges
         do shell script "cp /brew.bash /usr/bin" with administrator privileges
         do shell script "chmod +x /usr/bin/brew.bash" with administrator privileges
+        do shell script "quit Terminal"
+        delay 2
+        do shell script "open /Applications/Utilities/Terminal.app"
         tell application "Terminal"
+            activate
             activate
             activate
             tell application "System Events" to keystroke "brew.bash"
@@ -742,7 +743,7 @@ script AppDelegate
             activate
             activate
             activate
-            tell application "System Events" to keystroke "/Applications/PlexConnect/update/OSX/shairport.bash"
+            tell application "System Events" to keystroke "sudo /Applications/PlexConnect/update/OSX/airplay.bash"
             tell application "System Events" to keystroke return
         end tell
         display notification "Follow instructions to enable Airplay" with title "Airplay status"
@@ -971,6 +972,25 @@ script AppDelegate
         tell application "Safari" to make new document with properties {URL:theURL}
         do shell script "show Safari"
     end buttonhandlerdonate_
+    
+    on buttonhandlerpregit_(sender)
+        do shell script "quit Terminal"
+        delay 2
+        do shell script "open /Applications/Utilities/Terminal.app"
+        tell application "Terminal"
+            activate
+            activate
+            activate
+            tell application "System Events" to keystroke "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git:/usr/local/bin; cd /Applications; curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.1.tar.bz2; tar xf MacPorts-2.3.1.tar.bz2; cd /Applications/MacPorts-2.3.1; ./configure && make && sudo make install; sudo port -v selfupdate; sudo port install git"
+            tell application "System Events" to keystroke return
+        end tell
+    end buttonhandlerpregit_
+    
+    on buttonhandlergitdownload_(sender)
+        set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
+    end buttonhandlergitdownload_
     
     --scripts
     
