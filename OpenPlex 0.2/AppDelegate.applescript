@@ -974,20 +974,22 @@ script AppDelegate
     end buttonhandlerdonate_
     
     on buttonhandlerpregit_(sender)
-        do shell script "quit Terminal"
-        delay 2
+        try
+        do shell script "killall Terminal"
+        onerror
+        end try
         do shell script "open /Applications/Utilities/Terminal.app"
         tell application "Terminal"
             activate
             activate
             activate
-            tell application "System Events" to keystroke "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git:/usr/local/bin; cd /Applications; curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.1.tar.bz2; tar xf MacPorts-2.3.1.tar.bz2; cd /Applications/MacPorts-2.3.1; ./configure && make && sudo make install; sudo port -v selfupdate; sudo port install git"
+            tell application "System Events" to keystroke "sudo PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git:/usr/local/bin; cd /Applications; curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.1.tar.bz2; tar xf MacPorts-2.3.1.tar.bz2; cd /Applications/MacPorts-2.3.1; ./configure && make && sudo make install"
             tell application "System Events" to keystroke return
         end tell
     end buttonhandlerpregit_
     
     on buttonhandlergitdownload_(sender)
-        set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
+     set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-2.0.1-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
         tell application "Safari" to make new document with properties {URL:theURL}
         display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
     end buttonhandlergitdownload_
