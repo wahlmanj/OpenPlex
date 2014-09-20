@@ -6,7 +6,6 @@
 --  Originally coded by Wahlman.j on 5/02/14.
 --  Copyright (c) 2014 CyberGhost & Wahlman.j. All rights reserved.
 --  myProgressBar's incrementBy_(20)
---  do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git:/usr/local/bin; cd /Applications; curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.1.tar.bz2; tar xf MacPorts-2.3.1.tar.bz2; cd /Applications/MacPorts-2.3.1; ./configure && make && sudo make install; sudo port -v selfupdate" with administrator privileges
 
 script AppDelegate
     property parent : class "NSObject"
@@ -49,179 +48,61 @@ script AppDelegate
 
 --scripts
 
+
     on buttonhandlernewuserinstaller_(sender)
         tell codeProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
-            if (exists folder "usr:local:git" of the startup disk) then
-                tell application "Finder"
-                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "echo install present"
-                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        try
-                            do shell script "mkdir /Applications/plexconnect_BACKUP"
-                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                            do shell script "rm -R /Applications/PlexConnect"
-                            onerror
-                        end try
-                    end if
-                end tell
-                tell application "Finder"
-                    if (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                        do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "echo install not present"
-                    end if
-                end tell
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "echo install present"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 try
-                    set theFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    do shell script "mkdir /Applications/plexconnect_BACKUP"
+                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                    do shell script "rm -R /Applications/PlexConnect"
+                    onerror
                 end try
-                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "sudoers.bash"
-                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                do shell script "rm -R /Applications/PlexConnect"
-                delay 7
-                display notification "No Theme Installed..." with title "PlexConnect Status"
-                else if not (exists folder "usr:local:git" of the startup disk) then
-                        do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "echo install present"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                                do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        try
-                            set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
-                        end try
-                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "sudoers.bash"
-                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                        do shell script "rm -R /Applications/PlexConnect"
-                        delay 7
-                        do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
-                        do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
-                        do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
-                        do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
-                        display notification "No Theme Installed..." with title "PlexConnect Status"
-        end if
+            end if
         end tell
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect" of the startup disk) then
+                do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                do shell script "echo install not present"
+            end if
+        end tell
+        try
+            set theFolder to "/Applications"
+            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+        end try
+        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "sudoers.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+        do shell script "rm -R /Applications/PlexConnect"
+        set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-1.9.0-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
+        delay 7
+        display notification "No Theme Installed..." with title "PlexConnect Status"
         tell codeProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlernewuserinstaller_
     
     on buttonhandlerip_(sender)
         try
-            set myTemp to do shell script "mktemp -t txt"
-            do shell script "curl -s http://checkip.dyndns.org &> " & myTemp & " &2> /dev/null"
-            
-            # CHANGE THE DELAY HERE…
-            delay 3
-            set extIP to do shell script "sed 's/[a-zA-Z/<> :]//g' " & myTemp
-            
-            if extIP = "" then
-                set my theNetwork to "No connection"
-                else if extIP contains "=" then
-                set theNetwork to "Can't get IP"
-                else
-                set theNetwork to extIP
-            end if
-            on error
-            set theNetwork to "No connection"
-        end try
-        
-        try
-            set oldDelims to AppleScript's text item delimiters
-            set AppleScript's text item delimiters to "gateway:"
-            set theGateway to do shell script "route get default | grep gateway"
-            set AppleScript's text item delimiters to oldDelims
-            set theRouter to the last word of theGateway
-            on error
-            set my theRouter to "No connection"
-        end try
-        
-        try
             set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
             set theLocalNode to the last word of theIP
             on error
             set theLocalNode to "Can't get Local IP"
         end try
-        
         display notification  theLocalNode with title "Mac IP Address"
-        
-        repeat
-            try
-                getRouter()
-                getIP()
-                getLocalNode()
-                userInfo()
-                if result = "Try Again" then
-                    getIP()
-                    else if theNext = "Copy" then
-                    
-                    getCopyItem()
-                    exit repeat
-                    
-                end if
-                
-                on error
-                exit repeat
-            end try
-        end repeat
     end buttonhandlerip_
     
     on buttonhandlerSSL_(sender)
-        try
-            set myTemp to do shell script "mktemp -t txt"
-            do shell script "curl -s http://checkip.dyndns.org &> " & myTemp & " &2> /dev/null"
-            
-            # CHANGE THE DELAY HERE…
-            delay 3
-            set extIP to do shell script "sed 's/[a-zA-Z/<> :]//g' " & myTemp
-            
-            if extIP = "" then
-                set my theNetwork to "No connection"
-                else if extIP contains "=" then
-                set theNetwork to "Can't get IP"
-                else
-                set theNetwork to extIP
-            end if
-            on error
-            set theNetwork to "No connection"
-        end try
-        
-        try
-            set oldDelims to AppleScript's text item delimiters
-            set AppleScript's text item delimiters to "gateway:"
-            set theGateway to do shell script "route get default | grep gateway"
-            set AppleScript's text item delimiters to oldDelims
-            set theRouter to the last word of theGateway
-            on error
-            set my theRouter to "No connection"
-        end try
-        
         try
             set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
             set theLocalNode to the last word of theIP
@@ -230,26 +111,6 @@ script AppDelegate
         end try
         
         display notification  theLocalNode & "/trailer.cer" with title "Cert URL"
-        
-        repeat
-            try
-                getRouter()
-                getIP()
-                getLocalNode()
-                userInfo()
-                if result = "Try Again" then
-                    getIP()
-                    else if theNext = "Copy" then
-                    
-                    getCopyItem()
-                    exit repeat
-                    
-                end if
-                
-                on error
-                exit repeat
-            end try
-        end repeat
     end buttonhandlerSSL_
     
     on buttonhandleruas_(sender)
@@ -544,6 +405,27 @@ script AppDelegate
         do shell script "show Safari"
     end buttonhandlerlaunchwcinstaller_
     
+    on buttonhandlerloghigh_(sender)
+    do shell script "cd /Applications/PlexConnect; sed -i '' 's/Normal/High/g' settings.cfg"
+    end buttonhandlerloghigh_
+    
+    on buttonhandlerlognormal_(sender)
+        do shell script "cd /Applications/PlexConnect; sed -i '' 's/High/Normal/g' settings.cfg"
+    end buttonhandlerlognormal_
+    
+    on buttonhandlerplexweb_(sender)
+        try
+            set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
+            set theLocalNode to the last word of theIP
+            on error
+            set theLocalNode to "Can't get Local IP"
+        end try
+        
+        set tURL to "http://" & theLocalNode & ":32400/web/index.html#!/dashboard"
+        tell application "Safari" to make new document with properties {URL:tURL}
+        do shell script "show Safari"
+    end buttonhandlerplexweb_
+    
     on buttonhandlerlog_(sender)
         do shell script "open /Applications/PlexConnect/PlexConnect.log"
     end buttonhandlerlog_
@@ -746,11 +628,7 @@ script AppDelegate
         do shell script "echo ruby -e " & quoted form of quotedmsgDate & " >> /" & "brew.bash" with administrator privileges
         do shell script "cp /brew.bash /usr/bin" with administrator privileges
         do shell script "chmod +x /usr/bin/brew.bash" with administrator privileges
-        do shell script "quit Terminal"
-        delay 2
-        do shell script "open /Applications/Utilities/Terminal.app"
         tell application "Terminal"
-            activate
             activate
             activate
             tell application "System Events" to keystroke "brew.bash"
@@ -786,7 +664,7 @@ script AppDelegate
             activate
             activate
             activate
-            tell application "System Events" to keystroke "sudo /Applications/PlexConnect/update/OSX/airplay.bash"
+            tell application "System Events" to keystroke "/Applications/PlexConnect/update/OSX/shairport.bash"
             tell application "System Events" to keystroke return
         end tell
         display notification "Follow instructions to enable Airplay" with title "Airplay status"
@@ -1015,27 +893,6 @@ script AppDelegate
         tell application "Safari" to make new document with properties {URL:theURL}
         do shell script "show Safari"
     end buttonhandlerdonate_
-    
-    on buttonhandlerpregit_(sender)
-        try
-        do shell script "killall Terminal"
-        onerror
-        end try
-        do shell script "open /Applications/Utilities/Terminal.app"
-        tell application "Terminal"
-            activate
-            activate
-            activate
-            tell application "System Events" to keystroke "sudo PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git:/usr/local/bin; cd /Applications; curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.1.tar.bz2; tar xf MacPorts-2.3.1.tar.bz2; cd /Applications/MacPorts-2.3.1; ./configure && make && sudo make install"
-            tell application "System Events" to keystroke return
-        end tell
-    end buttonhandlerpregit_
-    
-    on buttonhandlergitdownload_(sender)
-     set theURL to "http://sourceforge.net/projects/git-osx-installer/files/git-2.0.1-intel-universal-snow-leopard.dmg/download?use_mirror=autoselect"
-        tell application "Safari" to make new document with properties {URL:theURL}
-        display notification "Git has been downloaded install the git dmg" with title "OpenPlex Status"
-    end buttonhandlergitdownload_
     
     --scripts
     

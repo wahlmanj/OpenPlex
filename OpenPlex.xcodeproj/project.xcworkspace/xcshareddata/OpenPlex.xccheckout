@@ -14,7 +14,7 @@
 		<string>https://github.com/wahlmanj/OpenPlex.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OpenPlex.xcodeproj</string>
+	<string>OpenPlex.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B0F3CC8E1B03CF11BA4F9BE8BFD08D33454A9967</key>
