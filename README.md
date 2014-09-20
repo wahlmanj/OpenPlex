@@ -12,7 +12,7 @@ OpenPlex automatically installs PlexConnect on your Mac, easily generates certif
 =========
 [Faq](https://github.com/wahlmanj/OpenPlex/wiki/Faq)
 =========
-[Tutorial](http://miapple.me/openplex-app-installs-manages-plexconnect-mac-os-x/) <----Needs update (use Wiki)
+[Tutorial](https://miapple.me/plex-plexconnect-openplex-running-mac-os-x-10-10-yosemite-beta-8/)
 =========
 [Download] (https://www.dropbox.com/sh/8xf37pcn5lgsfve/j0OZH64Pxx)
 =========
