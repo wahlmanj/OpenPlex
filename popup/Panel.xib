@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -16,7 +16,6 @@
         <customObject id="139" customClass="AppDelegate">
             <connections>
                 <outlet property="WCProgressBar" destination="3e5-lz-lcw" id="qfo-ZU-Hbr"/>
-                <outlet property="advancedProgressBar" destination="3at-SR-tBE" id="PO6-bo-rGs"/>
                 <outlet property="baaProgressBar" destination="bB6-sb-93a" id="T3G-9B-Qda"/>
                 <outlet property="brotuserProgressBar" destination="bB6-sb-93a" id="74z-B8-azg"/>
                 <outlet property="codeProgressBar" destination="xL3-CI-Stx" id="lPq-Ao-Tvk"/>
@@ -491,20 +490,20 @@ Step 4:   Add this address to aTV to add your cert:</string>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="pJn-5B-TFo" userLabel="Window -Default">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
-            <rect key="contentRect" x="734" y="420" width="513" height="310"/>
+            <rect key="contentRect" x="734" y="420" width="572" height="310"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="ZgJ-D1-F3G">
-                <rect key="frame" x="0.0" y="0.0" width="513" height="310"/>
+                <rect key="frame" x="0.0" y="0.0" width="572" height="310"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tabView initialItem="FYZ-T2-hnr" id="hbf-Kz-RnW">
-                        <rect key="frame" x="13" y="10" width="487" height="294"/>
+                        <rect key="frame" x="13" y="10" width="540" height="294"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Settings" identifier="1" id="FYZ-T2-hnr">
                                 <view key="view" id="lLO-sw-jXE">
-                                    <rect key="frame" x="10" y="33" width="467" height="248"/>
+                                    <rect key="frame" x="10" y="33" width="520" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" focusRingType="none" borderType="line" id="UZe-St-IWl">
@@ -670,7 +669,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                             </tabViewItem>
                             <tabViewItem label="Theme" identifier="" id="hgG-AI-IWu">
                                 <view key="view" id="BSy-6w-9PC">
-                                    <rect key="frame" x="10" y="33" width="467" height="248"/>
+                                    <rect key="frame" x="10" y="33" width="520" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" borderType="line" id="YEz-Kt-QuX">
@@ -869,7 +868,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                             </tabViewItem>
                             <tabViewItem label="Hijack" identifier="" id="FIX-rc-PAp">
                                 <view key="view" id="xYe-gU-16d">
-                                    <rect key="frame" x="10" y="33" width="467" height="248"/>
+                                    <rect key="frame" x="10" y="33" width="520" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" borderType="line" id="DEv-e5-1xn">
@@ -1015,7 +1014,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                             </tabViewItem>
                             <tabViewItem label="Advanced" identifier="2" id="dae-Gs-maF">
                                 <view key="view" id="JUh-62-WxX">
-                                    <rect key="frame" x="10" y="33" width="467" height="248"/>
+                                    <rect key="frame" x="10" y="33" width="520" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="W06-rw-vEM">
@@ -1208,17 +1207,6 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                 <action selector="buttonhandlercertfolder:" target="139" id="DQ1-XS-h03"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="EQS-qU-Kco">
-                                            <rect key="frame" x="397" y="63" width="55" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="UAS" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SFj-bT-7Qr">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandleruas:" target="139" id="IQP-Ks-tjO"/>
-                                            </connections>
-                                        </button>
                                         <button verticalHuggingPriority="750" id="POd-Aa-eYa">
                                             <rect key="frame" x="183" y="96" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1234,48 +1222,6 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jto-MO-TkS">
-                                            <rect key="frame" x="5" y="65" width="83" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Extras :" id="TdO-1d-6FU">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" id="Jw7-iU-njo">
-                                            <rect key="frame" x="271" y="63" width="55" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Airplay" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WXH-yy-fcP">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="makeKeyAndOrderFront:" target="s5f-fr-nxU" id="RDx-dL-Hjc"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="1Gc-J9-gZS">
-                                            <rect key="frame" x="95" y="63" width="80" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Auto Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HAv-Gs-ijb">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerautoupdate:" target="139" id="XpZ-FX-DMF"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="f6c-8P-UA0">
-                                            <rect key="frame" x="183" y="63" width="80" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Custom Plist" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yIC-m5-Byh">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlercustomplist:" target="139" id="zag-f4-bTp"/>
-                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="pt2-5B-Zip">
                                             <rect key="frame" x="334" y="96" width="55" height="25"/>
@@ -1297,21 +1243,6 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlerlog:" target="139" id="ada-Ne-IVJ"/>
-                                            </connections>
-                                        </button>
-                                        <progressIndicator maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" id="3at-SR-tBE">
-                                            <rect key="frame" x="7" y="0.0" width="445" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
-                                        <button toolTip="Install Custom Plex Icon" verticalHuggingPriority="750" id="xNN-oT-NTM">
-                                            <rect key="frame" x="334" y="63" width="55" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Plex Icon" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DFy-bZ-VfJ">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerplexicon:" target="139" id="fBH-6s-Maq"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="XFr-rQ-ONM">
@@ -1336,45 +1267,116 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                 <action selector="buttonhandlerstorefront:" target="139" id="d2p-k3-dwD"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="Gzl-pR-1su">
-                                            <rect key="frame" x="95" y="30" width="80" height="25"/>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="sGA-q9-aTL">
+                                            <rect key="frame" x="95" y="10" width="357" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="PlexWeb" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LbC-FN-y1j">
+                                        </progressIndicator>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Extras" identifier="2" id="WuU-fN-KwN">
+                                <view key="view" id="kIZ-7N-v3u">
+                                    <rect key="frame" x="10" y="33" width="520" height="248"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" id="8Mc-Zt-TpI">
+                                            <rect key="frame" x="256" y="118" width="55" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="UAS" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yWm-hS-JAV">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerplexweb:" target="139" id="hLk-1a-qRV"/>
+                                                <action selector="buttonhandleruas:" target="139" id="dMB-CQ-8k6"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="7N7-je-uTQ">
-                                            <rect key="frame" x="183" y="30" width="80" height="25"/>
+                                        <button verticalHuggingPriority="750" id="MtO-qB-ti2">
+                                            <rect key="frame" x="256" y="197" width="55" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Log Normal" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fNm-pk-vhR">
+                                            <buttonCell key="cell" type="squareTextured" title="Airplay" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="l6S-Ym-FMn">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerlognormal:" target="139" id="WVI-uP-20T"/>
+                                                <action selector="makeKeyAndOrderFront:" target="s5f-fr-nxU" id="cTC-Fv-p9d"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="Mj5-iK-cJj">
-                                            <rect key="frame" x="271" y="30" width="55" height="25"/>
+                                        <button verticalHuggingPriority="750" id="q3H-pc-Bzh">
+                                            <rect key="frame" x="37" y="197" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Log High" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="F7m-h9-4OQ">
+                                            <buttonCell key="cell" type="squareTextured" title="Auto Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q0u-v8-0Ta">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerloghigh:" target="139" id="ODz-tr-H8M"/>
+                                                <action selector="buttonhandlerautoupdate:" target="139" id="RuA-Dm-COZ"/>
                                             </connections>
                                         </button>
+                                        <button verticalHuggingPriority="750" id="W4d-zx-tld">
+                                            <rect key="frame" x="37" y="158" width="80" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Custom Plist" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kAm-ou-bsd">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlercustomplist:" target="139" id="sDs-8u-ipY"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Install Custom Plex Icon" verticalHuggingPriority="750" id="jwn-u1-tH7">
+                                            <rect key="frame" x="256" y="158" width="55" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Plex Icon" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qvg-fb-Saq">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerplexicon:" target="139" id="pxn-aq-J58"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="9Y4-wq-eA5">
+                                            <rect key="frame" x="37" y="118" width="80" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="PlexWeb" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b6s-nK-d66">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerplexweb:" target="139" id="GYa-yX-YZu"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="ev7-Bw-olB">
+                                            <rect key="frame" x="37" y="79" width="80" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Log Normal" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cuD-qd-uwb">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerlognormal:" target="139" id="DRN-Uy-lm4"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="4Gn-3f-x1g">
+                                            <rect key="frame" x="256" y="79" width="55" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Log High" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sSk-F9-zee">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerloghigh:" target="139" id="52u-gc-Zlt"/>
+                                            </connections>
+                                        </button>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="mjy-Pi-AR1">
+                                            <rect key="frame" x="17" y="3" width="360" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
                                     </subviews>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="WebConnect" identifier="" id="zTI-Qy-2ud">
                                 <view key="view" id="UEq-r8-Obc">
-                                    <rect key="frame" x="10" y="33" width="467" height="248"/>
+                                    <rect key="frame" x="10" y="33" width="520" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" borderType="line" id="Umb-tr-kRj">
@@ -1534,7 +1536,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                             </tabViewItem>
                             <tabViewItem label="About" identifier="" id="Anh-Fa-ynm">
                                 <view key="view" id="NHI-YF-YCN">
-                                    <rect key="frame" x="10" y="33" width="467" height="248"/>
+                                    <rect key="frame" x="10" y="33" width="520" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button id="yji-Iz-Zk8">
