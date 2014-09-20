@@ -14,6 +14,8 @@ script AppDelegate
     
     property advancedProgressBar : missing value
     
+    property extraProgressBar : missing value
+    
     property codeProgressBar : missing value
     
     property WCProgressBar : missing value
@@ -116,6 +118,8 @@ script AppDelegate
     on buttonhandleruas_(sender)
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
+        tell extraProgressBar to startAnimation:me -- another way
+        set animated to true
         try
             set theFolder to "/Applications"
             do shell script "PATH=/usr/local/git/bin:/usr/bin export PATH; cd " & theFolder & "; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
@@ -127,6 +131,8 @@ script AppDelegate
         do shell script "/applications/unsupported/copy.bash" with administrator privileges
         display notification "Unsupported AppStore installed..." with title "UAS Status"
         tell advancedProgressBar to stopAnimation:me -- another way
+        set animated to false
+        tell extraProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandleruas_
     
@@ -309,9 +315,13 @@ script AppDelegate
     on buttonhandlerautoupdate_(sender)
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
+        tell extraProgressBar to startAnimation:me -- another way
+        set animated to true
         do shell script "createautobash.bash"
         display notification "Automatic GitHub Updates Enabled..." with title "PlexConnect Status"
         tell advancedProgressBar to stopAnimation:me -- another way
+        set animated to false
+        tell extraProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerautoupdate_
     
@@ -471,6 +481,8 @@ script AppDelegate
     on buttonhandlerplexicon_(sender)
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
+        tell extraProgressBar to startAnimation:me -- another way
+        set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
@@ -481,7 +493,27 @@ script AppDelegate
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
+        tell extraProgressBar to stopAnimation:me -- another way
+        set animated to false
     end buttonhandlerplexicon_
+    
+    on buttonhandlerios8_(sender)
+        tell advancedProgressBar to startAnimation:me -- another way
+        set animated to true
+        tell extraProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/imovie/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/imovie/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/imovie/PlexConnect.py /Applications/PlexConnect"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "iMovie enabled for iOS 8..." with title "PlexConnect Status"
+        tell advancedProgressBar to stopAnimation:me -- another way
+        set animated to false
+        tell extraProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerios8_
     
     on buttonhandlerpillowinstaller_(sender)
         do shell script "quit Terminal"
@@ -599,9 +631,13 @@ script AppDelegate
     on buttonhandlerbackupall_(sender)
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
+        tell extraProgressBar to startAnimation:me -- another way
+        set animated to true
         do shell script "backupbash.bash"
         do shell script "modbash.bash"
         tell advancedProgressBar to stopAnimation:me -- another way
+        set animated to false
+        tell extraProgressBar to stopAnimation:me -- another way
         set animated to false
         do shell script "checkerbash.bash"
     end buttonhandlerbackupall_
@@ -609,9 +645,13 @@ script AppDelegate
     on buttonhandlerrestoreall_(sender)
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
+        tell extraProgressBar to startAnimation:me -- another way
+        set animated to true
         do shell script "modbash.bash"
         do shell script "restorebash.bash"
         tell advancedProgressBar to stopAnimation:me -- another way
+        set animated to false
+        tell extraProgressBar to stopAnimation:me -- another way
         set animated to false
         do shell script "checkerbash.bash"
     end buttonhandlerrestoreall_
