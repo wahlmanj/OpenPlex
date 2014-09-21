@@ -923,9 +923,9 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="V13-md-iz0">
-                                                        <rect key="frame" x="254" y="35" width="44" height="17"/>
+                                                        <rect key="frame" x="265" y="35" width="22" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WSJ Live" id="bN0-uj-o3t">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WSJ" id="bN0-uj-o3t">
                                                             <font key="font" metaFont="system" size="10"/>
                                                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
@@ -1561,7 +1561,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="w9a-aX-70M">
                                             <rect key="frame" x="384" y="154" width="121" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AppStore on local PMS" id="CmH-bS-CaX">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AppStore on PMS" id="CmH-bS-CaX">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1979,19 +1979,8 @@ Step 4:   Add this address to aTV to add your cert:</string>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" id="tii-dK-C87">
-                        <rect key="frame" x="24" y="84" width="55" height="25"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="squareTextured" title="MacPorts" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Glh-OC-bn2">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system" size="10"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="buttonhandlermacports:" target="139" id="o8G-dV-7nz"/>
-                        </connections>
-                    </button>
                     <button verticalHuggingPriority="750" id="vcG-wx-wnR">
-                        <rect key="frame" x="87" y="84" width="55" height="25"/>
+                        <rect key="frame" x="55" y="84" width="55" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="squareTextured" title="Xcode" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BKN-Hh-PKj">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2002,7 +1991,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Ta0-aj-HP6">
-                        <rect key="frame" x="29" y="116" width="44" height="17"/>
+                        <rect key="frame" x="60" y="116" width="44" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 1" id="U8k-ix-FT7">
                             <font key="font" metaFont="system"/>
@@ -2011,7 +2000,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bbS-Wx-ggj">
-                        <rect key="frame" x="92" y="116" width="44" height="17"/>
+                        <rect key="frame" x="123" y="116" width="44" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 2" id="7rN-IF-X5S">
                             <font key="font" metaFont="system"/>
@@ -2020,7 +2009,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" id="6DQ-Zc-aEF">
-                        <rect key="frame" x="150" y="84" width="55" height="25"/>
+                        <rect key="frame" x="118" y="84" width="55" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f6Q-6b-9oY">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2030,17 +2019,17 @@ Step 4:   Add this address to aTV to add your cert:</string>
                             <action selector="buttonhandlerairplayinstaller:" target="139" id="CM5-VR-LsC"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EVj-y8-p4z">
-                        <rect key="frame" x="155" y="116" width="44" height="17"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="j0U-9F-iz9">
+                        <rect key="frame" x="38" y="194" width="153" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 3" id="gOZ-Lc-MFS">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This will close terminal!" id="gBG-pO-VbD">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <box autoresizesSubviews="NO" borderType="line" id="rOa-Qf-TrF">
-                        <rect key="frame" x="11" y="6" width="207" height="189"/>
+                        <rect key="frame" x="15" y="1" width="207" height="189"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="205" height="173"/>
@@ -2065,15 +2054,6 @@ Step 4:   Add this address to aTV to add your cert:</string>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="j0U-9F-iz9">
-                        <rect key="frame" x="38" y="194" width="153" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This will close terminal!" id="gBG-pO-VbD">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                 </subviews>
             </view>
         </window>

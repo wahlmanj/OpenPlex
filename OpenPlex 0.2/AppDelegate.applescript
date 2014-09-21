@@ -77,8 +77,22 @@ script AppDelegate
                     end if
                 end tell
                 try
-                    set theFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    tell application "Finder"
+                        if (exists folder "Applications:onlytemp" of the startup disk) then
+                            do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                            do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                            else if not (exists folder "Applications:onlytemp" of the startup disk) then
+                            do shell script "echo install not present"
+                        end if
+                    end tell
+                    do shell script "mkdir /Applications/onlytemp"
+                    set myFolder to "/Applications/onlytemp"
+                    do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                    do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                    do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                    do shell script "rm -R /Applications/onlytemp"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -112,8 +126,22 @@ script AppDelegate
                     end if
                 end tell
                 try
-                    set theFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    tell application "Finder"
+                        if (exists folder "Applications:onlytemp" of the startup disk) then
+                            do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                            do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                            else if not (exists folder "Applications:onlytemp" of the startup disk) then
+                            do shell script "echo install not present"
+                        end if
+                    end tell
+                    do shell script "mkdir /Applications/onlytemp"
+                    set myFolder to "/Applications/onlytemp"
+                    do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                    do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                    do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                    do shell script "rm -R /Applications/onlytemp"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
