@@ -253,7 +253,18 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "modbash.bash"
                 do shell script "createcertbash.bash"
+                do shell script "createplistbash.bash"
+                delay 6
+                do shell script "stopbash.bash"
                 delay 4
+                do shell script "createcertbash.bash"
+                delay 4
+                do shell script "startbash.bash"
+                delay 4
+                do shell script "createcertbash.bash"
+                delay 4
+                do shell script "restartbash.bash"
+                do shell script "createcertbash.bash"
                 do shell script "createplistbash.bash"
                 delay 6
                 do shell script "stopbash.bash"
@@ -281,7 +292,18 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "modbash.bash"
                 do shell script "createimoviebash.bash"
+                do shell script "createplistbash.bash"
+                delay 6
+                do shell script "stopbash.bash"
                 delay 4
+                do shell script "createimoviebash.bash"
+                delay 4
+                do shell script "startbash.bash"
+                delay 4
+                do shell script "createimoviebash.bash"
+                delay 4
+                do shell script "restartbash.bash"
+                do shell script "createimoviebash.bash"
                 do shell script "createplistbash.bash"
                 delay 6
                 do shell script "stopbash.bash"
@@ -309,7 +331,18 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "modbash.bash"
                 do shell script "createwsjbash.bash"
+                do shell script "createplistbash.bash"
+                delay 6
+                do shell script "stopbash.bash"
                 delay 4
+                do shell script "createwsjbash.bash"
+                delay 4
+                do shell script "startbash.bash"
+                delay 4
+                do shell script "createwsjbash.bash"
+                delay 4
+                do shell script "restartbash.bash"
+                do shell script "createwsjbash.bash"
                 do shell script "createplistbash.bash"
                 delay 6
                 do shell script "stopbash.bash"
@@ -560,6 +593,7 @@ script AppDelegate
     on buttonhandlerpillowinstaller_(sender)
         do shell script "quit Terminal"
         delay 2
+        do shell script "open /Applications/Utilities/Terminal.app"
         tell application "Terminal"
             activate
             activate
