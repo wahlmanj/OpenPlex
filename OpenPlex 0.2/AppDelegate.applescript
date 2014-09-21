@@ -549,6 +549,8 @@ script AppDelegate
         delay 8
         do shell script "startbash.bash"
         display notification "iMovie enabled for iOS 8..." with title "PlexConnect Status"
+        delay 6
+        do shell script "checkerbash.bash"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
         tell extraProgressBar to stopAnimation:me -- another way
