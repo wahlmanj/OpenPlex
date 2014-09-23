@@ -85,14 +85,8 @@ script AppDelegate
                             do shell script "echo install not present"
                         end if
                     end tell
-                    do shell script "mkdir /Applications/onlytemp"
-                    set myFolder to "/Applications/onlytemp"
-                    do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
-                    do shell script "rm -R /Applications/PlexConnect/update/OSX"
-                    do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                    set myFolder to "/Applications"
                     do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
-                    do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
-                    do shell script "rm -R /Applications/onlytemp"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -100,8 +94,8 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
                 do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                do shell script "rm -R /Applications/PlexConnect"
                 delay 7
+                do shell script "rm -R /Applications/PlexConnect"
                 display notification "No Theme Installed..." with title "PlexConnect Status"
                 else if not (exists folder "usr:local:git" of the startup disk) then
                 do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
@@ -134,14 +128,8 @@ script AppDelegate
                             do shell script "echo install not present"
                         end if
                     end tell
-                    do shell script "mkdir /Applications/onlytemp"
-                    set myFolder to "/Applications/onlytemp"
-                    do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
-                    do shell script "rm -R /Applications/PlexConnect/update/OSX"
-                    do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                    set myFolder to "/Applications"
                     do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
-                    do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
-                    do shell script "rm -R /Applications/onlytemp"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -149,8 +137,8 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
                 do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                do shell script "rm -R /Applications/PlexConnect"
                 delay 7
+                do shell script "rm -R /Applications/PlexConnect"
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
                 do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
@@ -266,7 +254,6 @@ script AppDelegate
     on buttonhandlerdellog_(sender)
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "modbash.bash"
                 do shell script "rm /Applications/PlexConnect/plexconnect.log"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "No Log Detected..." with title "OpenPlex Status"
@@ -279,7 +266,6 @@ script AppDelegate
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "modbash.bash"
                 do shell script "createcertbash.bash"
                 delay 4
                 do shell script "createplistbash.bash"
@@ -307,7 +293,6 @@ script AppDelegate
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "modbash.bash"
                 do shell script "createimoviebash.bash"
                 delay 4
                 do shell script "createplistbash.bash"
@@ -335,7 +320,6 @@ script AppDelegate
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "modbash.bash"
                 do shell script "createwsjbash.bash"
                 delay 4
                 do shell script "createplistbash.bash"
@@ -705,7 +689,6 @@ script AppDelegate
         tell extraProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "backupbash.bash"
-        do shell script "modbash.bash"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
         tell extraProgressBar to stopAnimation:me -- another way
@@ -718,7 +701,6 @@ script AppDelegate
         set animated to true
         tell extraProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "modbash.bash"
         do shell script "restorebash.bash"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -990,6 +972,8 @@ script AppDelegate
             set theFolder to "/Applications"
             do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
         end try
+        delay 2
+        do shell script "installbash.bash"
         do shell script "installphpbash.bash"
         do shell script "websharing.bash"
         do shell script "checkerbash.bash"
