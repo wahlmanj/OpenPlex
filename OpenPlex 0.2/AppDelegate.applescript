@@ -37,6 +37,8 @@ script AppDelegate
     property stoffezProgressBar : missing value
     
     property falcoProgressBar : missing value
+    
+    property iconProgressBar : missing value
 
     property theNext : ""
     
@@ -530,24 +532,92 @@ script AppDelegate
         do shell script "folder.bash"
     end buttonhandlercertfolder_
     
-    on buttonhandlerplexicon_(sender)
-        tell advancedProgressBar to startAnimation:me -- another way
+    on buttonhandlerios7greyplexicon_(sender)
+        tell iconProgressBar to startAnimation:me -- another way
         set animated to true
-        tell extraProgressBar to startAnimation:me -- another way
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+        tell iconProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerios7greyplexicon_
+    
+    on buttonhandlerios7blackplexicon_(sender)
+        tell iconProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+        tell iconProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerios7blackplexicon_
+    
+    on buttonhandlerios7gradientplexicon_(sender)
+        tell iconProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+        tell iconProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerios7gradientplexicon_
+    
+    on buttonhandlerios8greyplexicon_(sender)
+        tell iconProgressBar to startAnimation:me -- another way
         set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
         delay 8
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-        tell advancedProgressBar to stopAnimation:me -- another way
+        tell iconProgressBar to stopAnimation:me -- another way
         set animated to false
-        tell extraProgressBar to stopAnimation:me -- another way
+    end buttonhandlerios8greyplexicon_
+    
+    on buttonhandlerios8blackplexicon_(sender)
+        tell iconProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+        tell iconProgressBar to stopAnimation:me -- another way
         set animated to false
-    end buttonhandlerplexicon_
+    end buttonhandlerios8blackplexicon_
+    
+    on buttonhandlerios8gradientplexicon_(sender)
+        tell iconProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+        tell iconProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerios8gradientplexicon_
     
     on buttonhandlerios8_(sender)
         tell advancedProgressBar to startAnimation:me -- another way

@@ -14,6 +14,9 @@
 		09947B29195BCDB30005EE4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B26195BCDB30005EE4A /* CoreData.framework */; };
 		09947B2A195BCDB30005EE4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B27195BCDB30005EE4A /* Foundation.framework */; };
 		3843A80019CA0DE500BE9516 /* airplay-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3843A7FF19CA0DE500BE9516 /* airplay-logo.png */; };
+		CE0B59EB19D609A200A5C392 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E819D609A200A5C392 /* black.png */; };
+		CE0B59EC19D609A200A5C392 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E919D609A200A5C392 /* gradient.png */; };
+		CE0B59ED19D609A200A5C392 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59EA19D609A200A5C392 /* grey.png */; };
 		DBAFDA521972DCA00099EE6E /* Applelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA2E1972DCA00099EE6E /* Applelogo.png */; };
 		DBAFDA531972DCA00099EE6E /* atv.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA2F1972DCA00099EE6E /* atv.png */; };
 		DBAFDA541972DCA00099EE6E /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA301972DCA00099EE6E /* back_button.png */; };
@@ -74,6 +77,9 @@
 		09947B26195BCDB30005EE4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		09947B27195BCDB30005EE4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3843A7FF19CA0DE500BE9516 /* airplay-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airplay-logo.png"; sourceTree = "<group>"; };
+		CE0B59E819D609A200A5C392 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
+		CE0B59E919D609A200A5C392 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
+		CE0B59EA19D609A200A5C392 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
 		DBAFDA2E1972DCA00099EE6E /* Applelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Applelogo.png; sourceTree = "<group>"; };
 		DBAFDA2F1972DCA00099EE6E /* atv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atv.png; sourceTree = "<group>"; };
 		DBAFDA301972DCA00099EE6E /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
@@ -177,6 +183,9 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B59E819D609A200A5C392 /* black.png */,
+				CE0B59E919D609A200A5C392 /* gradient.png */,
+				CE0B59EA19D609A200A5C392 /* grey.png */,
 				DBAFDA2E1972DCA00099EE6E /* Applelogo.png */,
 				DBAFDA2F1972DCA00099EE6E /* atv.png */,
 				3843A7FF19CA0DE500BE9516 /* airplay-logo.png */,
@@ -382,6 +391,7 @@
 				099068B3195D5ED800442FB5 /* Images.xcassets in Resources */,
 				3843A80019CA0DE500BE9516 /* airplay-logo.png in Resources */,
 				DBAFDA5E1972DCA00099EE6E /* MenuIcon.png in Resources */,
+				CE0B59EC19D609A200A5C392 /* gradient.png in Resources */,
 				DBAFDA571972DCA00099EE6E /* getstart.png in Resources */,
 				DBAFDA611972DCA00099EE6E /* next_button.png in Resources */,
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
@@ -406,8 +416,10 @@
 				DBAFDA601972DCA00099EE6E /* menuplex.png in Resources */,
 				DBAFDA641972DCA00099EE6E /* OpenplexVid.png in Resources */,
 				DBAFDA701972DCA00099EE6E /* uninstall.png in Resources */,
+				CE0B59EB19D609A200A5C392 /* black.png in Resources */,
 				DBAFDA691972DCA00099EE6E /* quitplex.png in Resources */,
 				DBAFDA531972DCA00099EE6E /* atv.png in Resources */,
+				CE0B59ED19D609A200A5C392 /* grey.png in Resources */,
 				DBAFDA621972DCA00099EE6E /* Openplex copy.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
 				DBAFDA661972DCA00099EE6E /* paypal-donate-button.png in Resources */,
