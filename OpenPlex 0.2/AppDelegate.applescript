@@ -170,7 +170,7 @@ script AppDelegate
             set theLocalNode to "Can't get Local IP"
         end try
         
-        display notification  theLocalNode & "/trailer.cer" with title "Cert URL"
+        display notification  theLocalNode & "/trailers.cer" with title "Cert URL"
     end buttonhandlerSSL_
     
     on buttonhandleruas_(sender)
