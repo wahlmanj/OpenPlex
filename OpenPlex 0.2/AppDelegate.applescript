@@ -985,44 +985,6 @@ script AppDelegate
         set animated to false
     end buttonhandlerghost_
     
-    on buttonhandlerghost7_(sender)
-        tell ghostProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "trashbasebash.bash"
-                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                    do shell script "rm -R /Applications/PlexConnect"
-                    onerror
-                end try
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "Applications:onlytemp" of the startup disk) then
-                do shell script "rm -R /Applications/onlytemp"
-            end if
-        end tell
-        try
-            set theFolder to "/Applications"
-            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/CyberGhost85/PlexConnect.git"
-        end try
-        do shell script "mkdir /Applications/onlytemp"
-        set myFolder to "/Applications/onlytemp"
-        do shell script "mkdir -p /Applications/Plexconnect/update/OSX"
-        do shell script "rm -R /Applications/PlexConnect/update/OSX"
-        do shell script "mkdir /Applications/PlexConnect/update/OSX"
-        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
-        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
-        do shell script "rm -R /Applications/onlytemp"
-        do shell script "installbash.bash"
-        do shell script "checkerbash.bash"
-        tell ghostProgressBar to stopAnimation:me -- another way
-        set animated to false
-    end buttonhandlerghost7_
-    
     on buttonhandlerbrotuser_(sender)
         tell brotuserProgressBar to startAnimation:me -- another way
         set animated to true
