@@ -671,14 +671,14 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" borderType="line" id="YEz-Kt-QuX">
-                                            <rect key="frame" x="249" y="30" width="257" height="187"/>
+                                            <rect key="frame" x="249" y="11" width="257" height="206"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="255" height="171"/>
+                                                <rect key="frame" x="1" y="1" width="255" height="190"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" id="KTe-Dx-nxJ">
-                                                        <rect key="frame" x="158" y="103" width="79" height="25"/>
+                                                        <rect key="frame" x="158" y="122" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zyX-ti-YIm">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -689,7 +689,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" id="HSy-xt-ABm">
-                                                        <rect key="frame" x="158" y="74" width="79" height="25"/>
+                                                        <rect key="frame" x="158" y="67" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zfC-Ie-rDY">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -700,7 +700,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" id="w09-qz-fAa">
-                                                        <rect key="frame" x="158" y="45" width="79" height="25"/>
+                                                        <rect key="frame" x="158" y="38" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OKp-nv-IyL">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -711,7 +711,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="gte-bR-43q">
-                                                        <rect key="frame" x="16" y="22" width="70" height="14"/>
+                                                        <rect key="frame" x="16" y="15" width="70" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wahlman.j :" id="gro-lH-me9">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -720,7 +720,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="mNr-ML-LH2">
-                                                        <rect key="frame" x="16" y="51" width="48" height="14"/>
+                                                        <rect key="frame" x="16" y="44" width="48" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Stoffez :" id="nSt-6s-S3y">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -729,7 +729,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="N5b-zD-rwq">
-                                                        <rect key="frame" x="16" y="80" width="61" height="14"/>
+                                                        <rect key="frame" x="16" y="73" width="61" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Falco953 :" id="FXS-H0-6sl">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -738,7 +738,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="JJV-t6-pTw">
-                                                        <rect key="frame" x="16" y="109" width="94" height="14"/>
+                                                        <rect key="frame" x="16" y="128" width="94" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CyberGhost84 :" id="kg4-HE-Tlw">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -747,7 +747,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" id="PaU-99-O0S">
-                                                        <rect key="frame" x="158" y="130" width="79" height="28"/>
+                                                        <rect key="frame" x="158" y="149" width="79" height="28"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zd0-Zx-HxH">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -758,7 +758,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X98-Xu-Tar">
-                                                        <rect key="frame" x="16" y="137" width="94" height="14"/>
+                                                        <rect key="frame" x="16" y="156" width="94" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iBaa (original) :" id="2HY-pk-Zt3">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -767,7 +767,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" id="6T0-nr-LB9">
-                                                        <rect key="frame" x="158" y="16" width="79" height="25"/>
+                                                        <rect key="frame" x="158" y="9" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cBt-s5-9xQ">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -777,6 +777,26 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <action selector="buttonhandlerwahlmanj:" target="139" id="NxZ-Hq-Fbr"/>
                                                         </connections>
                                                     </button>
+                                                    <button verticalHuggingPriority="750" id="4vC-AI-QPj">
+                                                        <rect key="frame" x="158" y="95" width="79" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HXf-UR-gQS">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="buttonhandlerghost:" target="139" id="83C-93-Mas"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eco-7Z-iyn">
+                                                        <rect key="frame" x="16" y="101" width="118" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CyberGhost84 iOS 7 :" id="ffB-a0-qFi">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
                                                 </subviews>
                                             </view>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
