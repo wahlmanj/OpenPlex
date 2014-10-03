@@ -209,14 +209,6 @@ script AppDelegate
         set animated to false
     end buttonhandlerupdatecode_
     
-    on buttonhandlerupdatewccode_(sender)
-        tell WCProgressBar to startAnimation:me -- another way
-        set animated to true
-        do shell script "updatewcbash.bash"
-        tell WCProgressBar to stopAnimation:me -- another way
-        set animated to false
-    end buttonhandlerupdatewccode_
-    
     on buttonhandlerforum_(sender)
         set theURL to "https://forums.plex.tv/index.php/forum/136-appletv-plexconnect/"
         tell application "Safari" to make new document with properties {URL:theURL}
@@ -416,9 +408,29 @@ script AppDelegate
     end buttonhandleruninstall_
     
     on buttonhandlerinstallwc_(sender)
-        do shell script "webconnectbash.bash"
+        tell WCProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "cp /Applications/PlexConnect/update/OSX/httpd.conf /etc/apache2" with administrator privileges
         do shell script "websharingbash.bash"
+        tell WCProgressBar to stopAnimation:me -- another way
+        set animated to false
     end buttonhandlerinstallwc_
+    
+    on buttonhandlerinstallwc10_(sender)
+        tell WCProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "cp /Applications/PlexConnect/update/OSX/10.10/httpd.conf /etc/apache2" with administrator privileges
+        try
+        do shell script "sudo apachectl start" with administrator privileges
+        onerror
+    end try
+        try
+            do shell script "sudo apachectl restart" with administrator privileges
+            onerror
+        end try
+        tell WCProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerinstallwc10_
     
     on buttonhandlerupdateoc_(sender)
         tell codeProgressBar to startAnimation:me -- another way
@@ -700,7 +712,6 @@ script AppDelegate
             end if
         end tell
     end buttonhandlerloadbackupfanart_
-    
     
     on buttonhandlerbackupicons_(sender)
         tell application "Finder"
