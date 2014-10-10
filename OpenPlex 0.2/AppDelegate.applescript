@@ -252,6 +252,13 @@ script AppDelegate
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "stopbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+            onerror
+            end if
+        end tell
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 try
@@ -288,6 +295,13 @@ script AppDelegate
     on buttonhandlerfalco_(sender)
         tell falcoProgressBar to startAnimation:me -- another way
         set animated to true
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "stopbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                onerror
+            end if
+        end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -328,6 +342,13 @@ script AppDelegate
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "stopbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                onerror
+            end if
+        end tell
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 try
@@ -364,6 +385,13 @@ script AppDelegate
     on buttonhandlerghost_(sender)
         tell ghostProgressBar to startAnimation:me -- another way
         set animated to true
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "stopbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                onerror
+            end if
+        end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -404,6 +432,13 @@ script AppDelegate
         set animated to true
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "stopbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                onerror
+            end if
+        end tell
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 try
@@ -440,6 +475,13 @@ script AppDelegate
     on buttonhandlerwahlmanj_(sender)
         tell wahlmanjProgressBar to startAnimation:me -- another way
         set animated to true
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                do shell script "stopbash.bash"
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                onerror
+            end if
+        end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
