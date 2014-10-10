@@ -251,11 +251,13 @@ script AppDelegate
         tell baaProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
+            try
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "stopbash.bash"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
             onerror
             end if
+            end try
         end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -296,11 +298,13 @@ script AppDelegate
         tell falcoProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "stopbash.bash"
-                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                onerror
-            end if
+            try
+                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    do shell script "stopbash.bash"
+                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    onerror
+                end if
+            end try
         end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -341,11 +345,13 @@ script AppDelegate
         tell stoffezProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "stopbash.bash"
-                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                onerror
-            end if
+            try
+                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    do shell script "stopbash.bash"
+                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    onerror
+                end if
+            end try
         end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -386,11 +392,13 @@ script AppDelegate
         tell ghostProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "stopbash.bash"
-                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                onerror
-            end if
+            try
+                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    do shell script "stopbash.bash"
+                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    onerror
+                end if
+            end try
         end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -431,11 +439,13 @@ script AppDelegate
         tell brotuserProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "stopbash.bash"
-                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                onerror
-            end if
+            try
+                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    do shell script "stopbash.bash"
+                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    onerror
+                end if
+            end try
         end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -476,11 +486,13 @@ script AppDelegate
         tell wahlmanjProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "stopbash.bash"
-                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                onerror
-            end if
+            try
+                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    do shell script "stopbash.bash"
+                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    onerror
+                end if
+            end try
         end tell
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
