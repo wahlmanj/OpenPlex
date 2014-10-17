@@ -3,49 +3,49 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "icon_<16x16>.png",
+      "filename" : "OP-Logo-7.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "icon_<32x32>-2.png",
+      "filename" : "OP-Logo-6.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "icon_<32x32>.png",
+      "filename" : "OP-Logo-5.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "icon_<64x64>.png",
+      "filename" : "OP-Logo-4.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "icon_<128x128>.png",
+      "filename" : "OP-Logo-3.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "icon_<256x256>-1.png",
+      "filename" : "OP-Logo-2.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "icon_<256x256>.png",
+      "filename" : "OP-Logo-1.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "icon_<512x512>-2.png",
+      "filename" : "OP-Logo.png",
       "scale" : "2x"
     },
     {
