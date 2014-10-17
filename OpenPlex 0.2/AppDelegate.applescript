@@ -259,6 +259,7 @@ script AppDelegate
             end if
             end try
         end tell
+delay 4
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -306,6 +307,7 @@ script AppDelegate
                 end if
             end try
         end tell
+        delay 4
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -353,6 +355,7 @@ script AppDelegate
                 end if
             end try
         end tell
+        delay 4
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -400,6 +403,7 @@ script AppDelegate
                 end if
             end try
         end tell
+        delay 4
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -447,6 +451,7 @@ script AppDelegate
                 end if
             end try
         end tell
+        delay 4
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -494,6 +499,7 @@ script AppDelegate
                 end if
             end try
         end tell
+        delay 4
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "trashbasebash.bash"
@@ -512,8 +518,6 @@ script AppDelegate
         end try
         delay 2
         do shell script "installbash.bash"
-        do shell script "installphpbash.bash"
-        do shell script "websharing.bash"
         do shell script "checkerbash.bash"
         tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
