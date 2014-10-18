@@ -3,61 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "OP-Logo-7.png",
+      "filename" : "OPLOGO-9.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "OP-Logo-6.png",
+      "filename" : "OPLOGO-8.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "OP-Logo-5.png",
+      "filename" : "OPLOGO-7.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "OP-Logo-4.png",
+      "filename" : "OPLOGO-6.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "OP-Logo-3.png",
+      "filename" : "OPLOGO-5.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "OP-Logo-2.png",
+      "filename" : "OPLOGO-4.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "OP-Logo-1.png",
+      "filename" : "OPLOGO-3.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "OP-Logo.png",
+      "filename" : "OPLOGO.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "icon_<512x512>.png",
+      "filename" : "OPLOGO-1.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "icon_<1024x1024>.png",
+      "filename" : "OPLOGO-2.png",
       "scale" : "2x"
     }
   ],
