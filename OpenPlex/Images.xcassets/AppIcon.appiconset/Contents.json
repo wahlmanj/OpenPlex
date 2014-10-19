@@ -3,61 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "OPLOGO-9.png",
+      "filename" : "opicon_<16x16>.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "OPLOGO-8.png",
+      "filename" : "opicon_<32x32>.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "OPLOGO-7.png",
+      "filename" : "opicon_<32x32>-1.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "OPLOGO-6.png",
+      "filename" : "opicon_<64x64>.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "OPLOGO-5.png",
+      "filename" : "opicon_<128x128>.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "OPLOGO-4.png",
+      "filename" : "opicon_<256x256>.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "OPLOGO-3.png",
+      "filename" : "opicon_<256x256>-1.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "OPLOGO.png",
+      "filename" : "opicon_<512x512>.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "OPLOGO-1.png",
+      "filename" : "opicon_<512x512>-1.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "OPLOGO-2.png",
+      "filename" : "opicon_<1024x1024>.png",
       "scale" : "2x"
     }
   ],
