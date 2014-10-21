@@ -906,25 +906,19 @@ delay 4
         set animated to false
     end buttonhandlerios8gradientplexicon_
     
-    on buttonhandlerios8_(sender)
+    on buttonhandlermuteboot_(sender)
         tell advancedProgressBar to startAnimation:me -- another way
         set animated to true
         tell extraProgressBar to startAnimation:me -- another way
         set animated to true
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/imovie/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/imovie/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/imovie/PlexConnect.py /Applications/PlexConnect"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "iMovie enabled for iOS 8..." with title "PlexConnect Status"
-        delay 6
-        do shell script "checkerbash.bash"
+        do shell script "sudo defaults write com.apple.loginwindow LoginHook /usr/bin/unmuteboot.bash" with administrator privileges
+        do shell script "sudo defaults write com.apple.loginwindow LogoutHook /usr/bin/muteboot.bash" with administrator privileges
+        display notification "Boot startup sound muted..." with title "OSX Status"
         tell advancedProgressBar to stopAnimation:me -- another way
         set animated to false
         tell extraProgressBar to stopAnimation:me -- another way
         set animated to false
-    end buttonhandlerios8_
+    end buttonhandlermuteboot_
     
     on buttonhandlerpillowinstaller_(sender)
         do shell script "quit Terminal"
