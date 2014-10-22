@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6246" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6246"/>
+        <deployment defaultVersion="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -160,17 +160,6 @@
                             <action selector="makeKeyAndOrderFront:" target="pJn-5B-TFo" id="pTO-YK-elf"/>
                         </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hwG-Yl-MeJ">
-                        <rect key="frame" x="11" y="174" width="26" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSBonjour" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="CTE-xX-JXI">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="label"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="buttonhandlerchecker:" target="139" id="Anj-RZ-fm1"/>
-                        </connections>
-                    </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FdK-kT-cDP">
                         <rect key="frame" x="49" y="134" width="61" height="66"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -181,6 +170,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="atv" id="B4w-x2-Z1d"/>
                     </imageView>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hwG-Yl-MeJ">
+                        <rect key="frame" x="11" y="174" width="26" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="circular" image="status" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="CTE-xX-JXI">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="label"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonhandlerchecker:" target="139" id="Anj-RZ-fm1"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <shadow key="shadow">
                     <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -2258,7 +2258,6 @@ Step 4:   Add this address to aTV to add your cert:</string>
     </objects>
     <resources>
         <image name="Applelogo" width="2000" height="2396"/>
-        <image name="NSBonjour" width="32" height="32"/>
         <image name="NSSmartBadgeTemplate" width="14" height="14"/>
         <image name="OpenPlex" width="1000" height="1000"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
@@ -2277,6 +2276,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
         <image name="paypal-donate-button" width="500" height="117"/>
         <image name="quitplex" width="36.479999542236328" height="36"/>
         <image name="startplex" width="36" height="36"/>
+        <image name="status" width="26" height="26"/>
         <image name="stopplex" width="36.479999542236328" height="36"/>
         <image name="updateplex" width="36.479999542236328" height="36"/>
     </resources>

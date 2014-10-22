@@ -17,6 +17,7 @@
 		CE0B59EB19D609A200A5C392 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E819D609A200A5C392 /* black.png */; };
 		CE0B59EC19D609A200A5C392 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E919D609A200A5C392 /* gradient.png */; };
 		CE0B59ED19D609A200A5C392 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59EA19D609A200A5C392 /* grey.png */; };
+		DB3778FA19F852C00036C9BB /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = DB3778F919F852C00036C9BB /* status.png */; };
 		DBAFDA521972DCA00099EE6E /* Applelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA2E1972DCA00099EE6E /* Applelogo.png */; };
 		DBAFDA531972DCA00099EE6E /* atv.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA2F1972DCA00099EE6E /* atv.png */; };
 		DBAFDA541972DCA00099EE6E /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA301972DCA00099EE6E /* back_button.png */; };
@@ -80,6 +81,7 @@
 		CE0B59E819D609A200A5C392 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		CE0B59E919D609A200A5C392 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 		CE0B59EA19D609A200A5C392 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
+		DB3778F919F852C00036C9BB /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
 		DBAFDA2E1972DCA00099EE6E /* Applelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Applelogo.png; sourceTree = "<group>"; };
 		DBAFDA2F1972DCA00099EE6E /* atv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atv.png; sourceTree = "<group>"; };
 		DBAFDA301972DCA00099EE6E /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DB3778F919F852C00036C9BB /* status.png */,
 				CE0B59E819D609A200A5C392 /* black.png */,
 				CE0B59E919D609A200A5C392 /* gradient.png */,
 				CE0B59EA19D609A200A5C392 /* grey.png */,
@@ -403,6 +406,7 @@
 				DBAFDA6B1972DCA00099EE6E /* selectbutton.png in Resources */,
 				DBAFDA6F1972DCA00099EE6E /* Trailers.png in Resources */,
 				DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */,
+				DB3778FA19F852C00036C9BB /* status.png in Resources */,
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				DBAFDA581972DCA00099EE6E /* haken_wittmer_01.png in Resources */,
