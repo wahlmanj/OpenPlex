@@ -38,6 +38,7 @@
 		DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA4F1972DCA00099EE6E /* updateplex.png */; };
 		DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA501972DCA00099EE6E /* WebConnect.png */; };
 		DBAFDA751972DCA00099EE6E /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA511972DCA00099EE6E /* WSJ.png */; };
+		DBD4AF371A06227500480691 /* OP-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBD4AF361A06227500480691 /* OP-Logo.png */; };
 		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
 		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
 		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
@@ -86,6 +87,7 @@
 		DBAFDA4F1972DCA00099EE6E /* updateplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updateplex.png; sourceTree = "<group>"; };
 		DBAFDA501972DCA00099EE6E /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
 		DBAFDA511972DCA00099EE6E /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
+		DBD4AF361A06227500480691 /* OP-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OP-Logo.png"; sourceTree = "<group>"; };
 		DD4F7C0413C30F9F00825C6E /* OpenPlex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPlex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -153,6 +155,7 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DBD4AF361A06227500480691 /* OP-Logo.png */,
 				DB3778F919F852C00036C9BB /* status.png */,
 				CE0B59E819D609A200A5C392 /* black.png */,
 				CE0B59E919D609A200A5C392 /* gradient.png */,
@@ -367,6 +370,7 @@
 				CE0B59ED19D609A200A5C392 /* grey.png in Resources */,
 				DBAFDA621972DCA00099EE6E /* Openplex copy.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
+				DBD4AF371A06227500480691 /* OP-Logo.png in Resources */,
 				DBAFDA661972DCA00099EE6E /* paypal-donate-button.png in Resources */,
 				DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */,
 				DBAFDA561972DCA00099EE6E /* CopyRight.png in Resources */,
