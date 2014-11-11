@@ -542,7 +542,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <action selector="buttonhandleruninstall:" target="139" id="zyO-aa-uSy"/>
                                                         </connections>
                                                     </button>
-                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="xL3-CI-Stx">
+                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="xL3-CI-Stx">
                                                         <rect key="frame" x="18" y="14" width="250" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
