@@ -1066,7 +1066,14 @@ delay 4
         tell application "Safari" to make new document with properties {URL:tURL}
         do shell script "show Safari"
     end buttonhandlerlaunchwcinstaller_
-    
+
+on buttonhandlerlaunchwcopenplex_(sender)
+        set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
+        set tURL to "http://" & tIP & ":1234/cgi-bin/openplex.cgi"
+        tell application "Safari" to make new document with properties {URL:tURL}
+        do shell script "show Safari"
+    end buttonhandlerlaunchwcopenplex_
+   
     --About Tab
     
     on buttonhandlerforum_(sender)
