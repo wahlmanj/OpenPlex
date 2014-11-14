@@ -1041,7 +1041,7 @@ delay 4
     
     on buttonhandlerwview_(sender)
     set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
-    set tURL to "http://" & tIP & ":1234/cgi-bin/openplex.cgi"
+    set tURL to "http://" & tIP & ":1234/cgi-bin/webconnect.cgi"
     tell application "Safari" to make new document with properties {URL:tURL}
     do shell script "show Safari"
     end buttonhandlerwcview_
