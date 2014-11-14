@@ -1468,98 +1468,6 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                     <rect key="frame" x="10" y="33" width="554" height="245"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <box autoresizesSubviews="NO" borderType="line" id="Umb-tr-kRj">
-                                            <rect key="frame" x="20" y="-1" width="225" height="137"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="223" height="121"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EJ8-QE-UsR">
-                                                        <rect key="frame" x="15" y="18" width="101" height="14"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="List View :" id="OMM-t2-wYc">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Xxn-tk-OtJ">
-                                                        <rect key="frame" x="15" y="68" width="101" height="14"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default View :" id="xeU-tQ-TzY">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zO5-sv-IcX">
-                                                        <rect key="frame" x="15" y="93" width="101" height="14"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Installer View :" id="QIE-W1-6X9">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="6Cd-Km-EBd">
-                                                        <rect key="frame" x="15" y="43" width="101" height="14"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS View :" id="Phw-Im-Dd7">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <button verticalHuggingPriority="750" id="UVS-IS-S4Y">
-                                                        <rect key="frame" x="140" y="62" width="65" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="roundTextured" title="Select" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JdZ-hw-p8d">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerdefaultwc:" target="139" id="yB8-sE-w3E"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button verticalHuggingPriority="750" id="8kk-Y9-ecn">
-                                                        <rect key="frame" x="140" y="37" width="65" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="roundTextured" title="Select" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RhV-ku-qp2">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerlaunchwcios:" target="139" id="HvZ-zm-h94"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button verticalHuggingPriority="750" id="RVY-GQ-KcW">
-                                                        <rect key="frame" x="140" y="12" width="65" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="roundTextured" title="Select" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xnL-Xc-KpJ">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerlaunchwclist:" target="139" id="QQT-QM-4Lh"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button verticalHuggingPriority="750" id="rrS-4S-riF">
-                                                        <rect key="frame" x="140" y="87" width="65" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="roundTextured" title="Select" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7go-Xt-c08">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerlaunchwcinstaller:" target="139" id="Dtc-D8-eME"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </box>
                                         <box autoresizesSubviews="NO" borderType="line" id="tgv-ub-uaO">
                                             <rect key="frame" x="20" y="140" width="528" height="105"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1651,7 +1559,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box autoresizesSubviews="NO" borderType="line" id="5PB-qt-I8C">
-                                            <rect key="frame" x="293" y="54" width="255" height="82"/>
+                                            <rect key="frame" x="150" y="54" width="255" height="82"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
                                                 <rect key="frame" x="1" y="1" width="253" height="66"/>
@@ -1669,7 +1577,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="vES-3E-gHL">
                                                         <rect key="frame" x="7" y="14" width="134" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenPlex iOS view : " id="ho4-7p-bzz">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WebConnect views : " id="ho4-7p-bzz">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1683,7 +1591,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <font key="font" metaFont="smallSystem"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerwcopenplex:" target="139" id="63w-ez-We4"/>
+                                                            <action selector="buttonhandlerwview:" target="139" id="9zy-ig-82f"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

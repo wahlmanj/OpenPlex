@@ -1039,40 +1039,12 @@ delay 4
         set animated to false
     end buttonhandlerinstallwc10_
     
-    on buttonhandlerdefaultwc_(sender)
-        set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
-        set tURL to "http://" & tIP & ":1234/cgi-bin/bash.cgi"
-        tell application "Safari" to make new document with properties {URL:tURL}
-        do shell script "show Safari"
-    end buttonhandlerdefaultwc_
-    
-    on buttonhandlerlaunchwcios_(sender)
-        set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
-        set tURL to "http://" & tIP & ":1234/cgi-bin/ios.cgi"
-        tell application "Safari" to make new document with properties {URL:tURL}
-        do shell script "show Safari"
-    end buttonhandlerlaunchwcios_
-    
-    on buttonhandlerlaunchwclist_(sender)
-        set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
-        set tURL to "http://" & tIP & ":1234/cgi-bin/list.cgi"
-        tell application "Safari" to make new document with properties {URL:tURL}
-        do shell script "show Safari"
-    end buttonhandlerlaunchwclist_
-    
-    on buttonhandlerlaunchwcinstaller_(sender)
-        set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
-        set tURL to "http://" & tIP & ":1234/cgi-bin/installer.cgi"
-        tell application "Safari" to make new document with properties {URL:tURL}
-        do shell script "show Safari"
-    end buttonhandlerlaunchwcinstaller_
-    
-    on buttonhandlerwcopenplex_(sender)
+    on buttonhandlerwview_(sender)
     set tIP to do shell script "ifconfig en0|grep 'inet '|cut -d ' ' -f 2"
     set tURL to "http://" & tIP & ":1234/cgi-bin/openplex.cgi"
     tell application "Safari" to make new document with properties {URL:tURL}
     do shell script "show Safari"
-    end buttonhandlerwcopenplex_
+    end buttonhandlerwcview_
     
     --About Tab
     
