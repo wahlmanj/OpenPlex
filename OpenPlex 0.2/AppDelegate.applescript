@@ -224,21 +224,6 @@ script AppDelegate
         set animated to false
     end buttonhandlernewuserinstaller_
     
-    on buttonhandlerupdatecode_(sender)
-        tell codeProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect" of the startup disk) then
-                do shell script "updatewcbash.bash"
-                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                display notification "Theme Required to update..." with title "Code Status"
-            end if
-        end tell
-        do shell script "checkerbash.bash"
-        tell codeProgressBar to stopAnimation:me -- another way
-        set animated to false
-    end buttonhandlerupdatecode_
-    
     --Theme Tab
     
     on buttonhandlerclt_(sender)
@@ -1045,6 +1030,14 @@ delay 4
     tell application "Safari" to make new document with properties {URL:tURL}
     do shell script "show Safari"
     end buttonhandlerwcview_
+    
+    on buttonhandlerupdatecode_(sender)
+        tell WCProgressBar to startAnimation:me -- another way
+        set animated to true
+        do shell script "updatewcbash.bash"
+        tell WCProgressBar to stopAnimation:me -- another way
+        set animated to false
+    end buttonhandlerupdatecode_
     
     --About Tab
     
