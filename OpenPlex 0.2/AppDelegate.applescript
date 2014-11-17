@@ -288,6 +288,25 @@ script AppDelegate
                             do shell script "rm -R /Applications/PlexConnect"
                             onerror
                         end try
+                        tell application "Finder"
+                            if (exists folder "Applications:onlytemp" of the startup disk) then
+                                do shell script "rm -R /Applications/onlytemp"
+                            end if
+                        end tell
+                        try
+                            set theFolder to "/Applications"
+                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
+                        end try
+                        do shell script "mkdir /Applications/onlytemp"
+                        set myFolder to "/Applications/onlytemp"
+                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/onlytemp"
+                        do shell script "installbash.bash"
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
                 
@@ -443,6 +462,25 @@ script AppDelegate
                             do shell script "rm -R /Applications/PlexConnect"
                             onerror
                         end try
+                        tell application "Finder"
+                            if (exists folder "Applications:onlytemp" of the startup disk) then
+                                do shell script "rm -R /Applications/onlytemp"
+                            end if
+                        end tell
+                        try
+                            set theFolder to "/Applications"
+                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
+                        end try
+                        do shell script "mkdir /Applications/onlytemp"
+                        set myFolder to "/Applications/onlytemp"
+                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/onlytemp"
+                        do shell script "installbash.bash"
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
                 
@@ -598,6 +636,25 @@ script AppDelegate
                             do shell script "rm -R /Applications/PlexConnect"
                             onerror
                         end try
+                        tell application "Finder"
+                            if (exists folder "Applications:onlytemp" of the startup disk) then
+                                do shell script "rm -R /Applications/onlytemp"
+                            end if
+                        end tell
+                        try
+                            set theFolder to "/Applications"
+                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
+                        end try
+                        do shell script "mkdir /Applications/onlytemp"
+                        set myFolder to "/Applications/onlytemp"
+                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/onlytemp"
+                        do shell script "installbash.bash"
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
                 
@@ -753,6 +810,25 @@ script AppDelegate
                             do shell script "rm -R /Applications/PlexConnect"
                             onerror
                         end try
+                        tell application "Finder"
+                            if (exists folder "Applications:onlytemp" of the startup disk) then
+                                do shell script "rm -R /Applications/onlytemp"
+                            end if
+                        end tell
+                        try
+                            set theFolder to "/Applications"
+                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                        end try
+                        do shell script "mkdir /Applications/onlytemp"
+                        set myFolder to "/Applications/onlytemp"
+                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/onlytemp"
+                        do shell script "installbash.bash"
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
                 
@@ -1094,9 +1170,9 @@ script AppDelegate
     end buttonhandlersettingscfg_
     
     on buttonhandlerloadcerts_(sender)
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates" with administrator privileges
+        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates" with administrator privileges
+        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates" with administrator privileges
     end buttonhandlerloadcerts_
     
     on buttonhandlerbackupsettings_(sender)
@@ -1162,50 +1238,26 @@ script AppDelegate
     end buttonhandlerloadicons_
     
     on buttonhandlerbackupall_(sender)
-        tell advancedProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell extraProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "backupbash.bash"
-        tell advancedProgressBar to stopAnimation:me -- another way
-        set animated to false
-        tell extraProgressBar to stopAnimation:me -- another way
-        set animated to false
-        do shell script "checkerbash.bash"
+        display notification "All available settings Backed up..." with title "PlexConnect Status"
     end buttonhandlerbackupall_
     
     on buttonhandlerrestoreall_(sender)
-        tell advancedProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell extraProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "restorebash.bash"
-        tell advancedProgressBar to stopAnimation:me -- another way
-        set animated to false
-        tell extraProgressBar to stopAnimation:me -- another way
-        set animated to false
-        do shell script "checkerbash.bash"
+        display notification "All available settings restored..." with title "PlexConnect Status"
     end buttonhandlerrestoreall_
     
     on buttonhandlerbackupcerts_(sender)
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.cer /Applications/plexconnect_BACKUP"
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.pem /Applications/plexconnect_BACKUP"
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.key /Applications/plexconnect_BACKUP"
+        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.cer /Applications/plexconnect_BACKUP" with administrator privileges
+        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.pem /Applications/plexconnect_BACKUP" with administrator privileges
+        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.key /Applications/plexconnect_BACKUP" with administrator privileges
     end buttonhandlerbackupcerts_
     
     --Extras Tab
     
     on buttonhandlerautoupdate_(sender)
-        tell advancedProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell extraProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "createautobash.bash"
         display notification "Automatic GitHub Updates Enabled..." with title "PlexConnect Status"
-        tell advancedProgressBar to stopAnimation:me -- another way
-        set animated to false
-        tell extraProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerautoupdate_
     
     on buttonhandlerloghigh_(sender)
@@ -1230,8 +1282,6 @@ script AppDelegate
     end buttonhandlerplexweb_
     
     on buttonhandlerios7greyplexicon_(sender)
-        tell iconProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
@@ -1240,13 +1290,9 @@ script AppDelegate
         delay 8
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-        tell iconProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerios7greyplexicon_
     
     on buttonhandlerios7blackplexicon_(sender)
-        tell iconProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
@@ -1255,13 +1301,9 @@ script AppDelegate
         delay 8
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-        tell iconProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerios7blackplexicon_
     
     on buttonhandlerios7gradientplexicon_(sender)
-        tell iconProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
@@ -1270,13 +1312,9 @@ script AppDelegate
         delay 8
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-        tell iconProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerios7gradientplexicon_
     
     on buttonhandlerios8greyplexicon_(sender)
-        tell iconProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
@@ -1285,13 +1323,9 @@ script AppDelegate
         delay 8
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-        tell iconProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerios8greyplexicon_
     
     on buttonhandlerios8blackplexicon_(sender)
-        tell iconProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
@@ -1300,13 +1334,9 @@ script AppDelegate
         delay 8
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-        tell iconProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerios8blackplexicon_
     
     on buttonhandlerios8gradientplexicon_(sender)
-        tell iconProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
@@ -1315,22 +1345,12 @@ script AppDelegate
         delay 8
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-        tell iconProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerios8gradientplexicon_
     
     on buttonhandlermuteboot_(sender)
-        tell advancedProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell extraProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "sudo defaults write com.apple.loginwindow LoginHook /usr/bin/unmuteboot.bash" with administrator privileges
         do shell script "sudo defaults write com.apple.loginwindow LogoutHook /usr/bin/muteboot.bash" with administrator privileges
-        display notification "Boot startup sound muted..." with title "OSX Status"
-        tell advancedProgressBar to stopAnimation:me -- another way
-        set animated to false
-        tell extraProgressBar to stopAnimation:me -- another way
-        set animated to false
+        display notification "Boot startup sound muted..." with title "OS X Status"
     end buttonhandlermuteboot_
     
     on buttonhandlerpillowinstaller_(sender)
@@ -1392,10 +1412,6 @@ script AppDelegate
     end buttonhandlerairplayinstaller_
     
     on buttonhandleruas_(sender)
-        tell advancedProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell extraProgressBar to startAnimation:me -- another way
-        set animated to true
         try
             set theFolder to "/Applications"
             do shell script "PATH=/usr/local/git/bin:/usr/bin export PATH; cd " & theFolder & "; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
@@ -1406,34 +1422,18 @@ script AppDelegate
         do shell script "chmod +x /applications/unsupported/copy.bash" with administrator privileges
         do shell script "/applications/unsupported/copy.bash" with administrator privileges
         display notification "Unsupported AppStore installed..." with title "UAS Status"
-        tell advancedProgressBar to stopAnimation:me -- another way
-        set animated to false
-        tell extraProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandleruas_
     
     on buttonhandlerwol_(sender)
-        tell advancedProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell extraProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "wol.bash" with administrator privileges
         display notification "aTV WOL Plists installed..." with title "WOL Status"
-        tell advancedProgressBar to stopAnimation:me -- another way
-        set animated to false
-        tell extraProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerwol_
     
     --WebConnect Tab
     
     on buttonhandlerinstallwc_(sender)
-        tell WCProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "cp /Applications/PlexConnect/update/OSX/httpd.conf /etc/apache2" with administrator privileges
         do shell script "websharingbash.bash"
-        tell WCProgressBar to stopAnimation:me -- another way
-        set animated to false
     end buttonhandlerinstallwc_
     
     on buttonhandlerinstallwc10_(sender)
@@ -1460,11 +1460,8 @@ script AppDelegate
     end buttonhandlerwcview_
     
     on buttonhandlerupdatecode_(sender)
-        tell WCProgressBar to startAnimation:me -- another way
-        set animated to true
         do shell script "updatewcbash.bash"
-        tell WCProgressBar to stopAnimation:me -- another way
-        set animated to false
+        display notification "WebConnect Views Updated..." with title "OpenPlex Status"
     end buttonhandlerupdatecode_
     
     --About Tab
