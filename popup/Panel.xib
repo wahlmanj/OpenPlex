@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
@@ -163,7 +163,7 @@
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tqw-Cw-oRb">
                         <rect key="frame" x="53" y="135" width="64" height="64"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opicon_&lt;64x64>" id="sky-0K-Arl"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opicon_&lt;64x64&gt;" id="sky-0K-Arl"/>
                     </imageView>
                     <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hwG-Yl-MeJ">
                         <rect key="frame" x="11" y="174" width="26" height="18"/>
@@ -287,7 +287,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lwK-EW-cka">
-                        <rect key="frame" x="23" y="29" width="378" height="74"/>
+                        <rect key="frame" x="23" y="31" width="378" height="74"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Qsj-eV-QXM">
                             <font key="font" metaFont="system" size="10"/>
@@ -303,33 +303,32 @@ dGhlIGV4aXQgaWNvbi4
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="5qp-pW-OgI">
-                        <rect key="frame" x="23" y="88" width="361" height="104"/>
+                        <rect key="frame" x="23" y="75" width="361" height="104"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="XBl-lT-gId">
                             <font key="font" metaFont="system" size="10"/>
-                            <string key="title">Step 1:   Install OpenPlex (required once unless updating or 1st time user)
-Step 2:   Choose a theme
-Step 3:   Install CLT then Pillow (only required once)      
-Step 4:   Restore backup or extras or skip this step 
-Step 5:   Choose app to Hijack on aTV
-Step 6:   Follow Setup aTV PlexConnect and Certs guide
+                            <string key="title">Step 1:   Choose a theme
+Step 2:   Install CLT then Pillow (only required once)      
+Step 3:   Restore backup or extras or skip this step 
+Step 4:   Choose app to Hijack on aTV
+Step 5:   Follow Setup aTV PlexConnect and Certs guide
 
 </string>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <box autoresizesSubviews="NO" borderType="line" id="HS8-ql-EPg">
-                        <rect key="frame" x="9" y="25" width="400" height="188"/>
+                    <box autoresizesSubviews="NO" borderType="line" id="37W-q4-bgh">
+                        <rect key="frame" x="9" y="21" width="400" height="181"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="398" height="172"/>
+                            <rect key="frame" x="1" y="1" width="398" height="165"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <imageView id="KWk-Ur-yDo">
+                                <imageView id="Fv7-b2-Gjs">
                                     <rect key="frame" x="348" y="14" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="opicon_&lt;32x32>" id="Tfg-2r-XDP"/>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="opicon_&lt;32x32&gt;" id="f5h-A9-YoF"/>
                                 </imageView>
                             </subviews>
                         </view>
@@ -511,17 +510,17 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="L7O-CJ-s2U">
                                             <rect key="frame" x="-8" y="122" width="185" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opicon_&lt;128x128>" id="HZY-Ln-UiR"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opicon_&lt;128x128&gt;" id="HZY-Ln-UiR"/>
                                         </imageView>
                                         <box autoresizesSubviews="NO" focusRingType="none" borderType="line" id="UZe-St-IWl">
-                                            <rect key="frame" x="212" y="140" width="294" height="74"/>
+                                            <rect key="frame" x="294" y="140" width="212" height="74"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="292" height="58"/>
+                                                <rect key="frame" x="1" y="1" width="210" height="58"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button toolTip="Check for updates " verticalHuggingPriority="750" id="NgL-xR-F4c">
-                                                        <rect key="frame" x="112" y="18" width="68" height="25"/>
+                                                        <rect key="frame" x="18" y="18" width="68" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Update App" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LYr-ND-YsQ">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -532,7 +531,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Unistall App" verticalHuggingPriority="750" id="BZe-0r-Dav">
-                                                        <rect key="frame" x="206" y="18" width="68" height="25"/>
+                                                        <rect key="frame" x="124" y="18" width="68" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Uninstall" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HCX-jo-HcG">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -542,19 +541,8 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <action selector="buttonhandleruninstall:" target="139" id="zyO-aa-uSy"/>
                                                         </connections>
                                                     </button>
-                                                    <button toolTip="Install Code" verticalHuggingPriority="750" id="v6e-9a-rop">
-                                                        <rect key="frame" x="18" y="18" width="68" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TPH-5F-rWR">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system" size="10"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlernewuserinstaller:" target="139" id="j4E-uU-V0k"/>
-                                                        </connections>
-                                                    </button>
                                                     <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="xL3-CI-Stx">
-                                                        <rect key="frame" x="18" y="6" width="256" height="12"/>
+                                                        <rect key="frame" x="18" y="6" width="174" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
                                                 </subviews>
@@ -840,7 +828,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="V13-md-iz0">
-                                                        <rect key="frame" x="254" y="7" width="44" height="17"/>
+                                                        <rect key="frame" x="252" y="7" width="49" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WSJ Live" id="bN0-uj-o3t">
                                                             <font key="font" metaFont="system" size="10"/>
@@ -1834,7 +1822,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                         <imageView id="WHX-Hd-X2Q">
                                             <rect key="frame" x="6" y="140" width="107" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="opicon_&lt;128x128>" id="lR3-fI-wBp"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="opicon_&lt;128x128&gt;" id="lR3-fI-wBp"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -2141,9 +2129,9 @@ Step 4:   Add this address to aTV to add your cert:</string>
         <image name="instruction" width="320" height="61"/>
         <image name="logplex" width="36.479999542236328" height="36"/>
         <image name="menuplex" width="36.479999542236328" height="36"/>
-        <image name="opicon_&lt;128x128>" width="128" height="128"/>
-        <image name="opicon_&lt;32x32>" width="32" height="32"/>
-        <image name="opicon_&lt;64x64>" width="64" height="64"/>
+        <image name="opicon_&lt;128x128&gt;" width="128" height="128"/>
+        <image name="opicon_&lt;32x32&gt;" width="32" height="32"/>
+        <image name="opicon_&lt;64x64&gt;" width="64" height="64"/>
         <image name="paypal-donate-button" width="500" height="117"/>
         <image name="quitplex" width="36.479999542236328" height="36"/>
         <image name="startplex" width="36" height="36"/>
