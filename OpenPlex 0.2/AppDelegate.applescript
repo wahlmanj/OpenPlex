@@ -423,7 +423,7 @@ script AppDelegate
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
+                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
@@ -578,7 +578,7 @@ script AppDelegate
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
+                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
@@ -733,7 +733,7 @@ script AppDelegate
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
+                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
