@@ -1853,7 +1853,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-610.5" y="145.5"/>
+            <point key="canvasLocation" x="-348.5" y="128.5"/>
         </window>
         <window title="Plex Icon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="RUh-JC-ccg">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2033,7 +2033,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </imageView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1182.5" y="127"/>
+            <point key="canvasLocation" x="-855.5" y="129"/>
         </window>
     </objects>
     <resources>
