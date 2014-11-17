@@ -97,8 +97,28 @@ script AppDelegate
     end buttonhandlerstart_
     
     on buttonhandlerchecker_(sender)
-        do shell script "checkerbash.bash"
-    end buttonhandlerchecker_
+do shell script "checkerbash.bash"
+            end buttonhandlerchecker_
+    
+    on buttonhandlernewchecker_(sender)
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect" of the startup disk) then
+                do shell script "echo install not present"
+                else
+                display notification "No Theme Installed..." with title "PlexConnect Status"
+            end if
+        end tell
+        
+        set xxx to "if grep \"Shutting down\" /Applications/PlexConnect/PlexConnect.log"
+        do shell script quoted form of xxx & "then; afplay /System/Library/Sounds/Basso.aiff"
+        
+        tell application "Finder"
+            if exists file "Applications:PlexConnect:assets:certificates:trailers.cer" then
+                else
+                display notification "No Certs present, Choose hijack..." with title "PlexConnect Status"
+            end if
+        end tell
+    end buttonhandlernewchecker_
     
     on buttonhandleruninstall_(sender)
         do shell script "uninstallbash.bash"
