@@ -168,7 +168,7 @@
                             <font key="font" metaFont="label"/>
                         </buttonCell>
                         <connections>
-                            <action selector="buttonhandlerchecker:" target="139" id="zDJ-13-GoE"/>
+                            <action selector="buttonhandlernewchecker:" target="139" id="6ah-xI-wJJ"/>
                         </connections>
                     </button>
                 </subviews>
