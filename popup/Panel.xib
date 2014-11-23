@@ -401,7 +401,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="283" y="191"/>
+            <point key="canvasLocation" x="196" y="19"/>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="pJn-5B-TFo" userLabel="Window -Default">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -436,7 +436,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerupdateoc:" target="139" id="U0u-yo-ljf"/>
+                                                            <action selector="buttonhandlerupdateoc:" target="139" id="8L4-CK-P1C"/>
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Unistall App" verticalHuggingPriority="750" id="BZe-0r-Dav">

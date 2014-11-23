@@ -251,6 +251,46 @@ do shell script "checkerbash.bash"
         do shell script "uninstallbash.bash"
     end buttonhandleruninstall_
     
+    on buttonhandlernewupdateoc_(sender)
+        tell appupdateProgressBar to startAnimation:me -- another way
+        set animated to true
+        tell application "Finder"
+        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+            tell application "Finder"
+                if (exists folder "Applications:OpenPlex" of the startup disk) then
+                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd /Applications/OpenPlex; git fetch; git merge origin"
+                    try
+                        if (exists file "Applications:OpenPlex.app" of the startup disk) then
+                            do shell script "cd /Applications; rm -R OpenPlex.app"
+                            else
+                            do shell script ""
+                        end if
+                        do shell script "cd /Applications/OpenPlex/10.6; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.6"
+                        do shell script "cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; rm -R OpenPlex.app"
+                    end try
+                    do shell script "quit.bash"
+                    else if not (exists folder "Applications:OpenPlex" of the startup disk) then
+                    try
+                        if (exists file "Applications:OpenPlex.app" of the startup disk) then
+                            do shell script "cd /Applications; rm -R OpenPlex.app"
+                            else
+                            do shell script ""
+                        end if
+                        set myFolder to "/Applications"
+                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/OpenPlex.git; cd /Applications/OpenPlex/10.6; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.6"
+                        do shell script "cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; rm -R OpenPlex.app"
+                        tell appupdateProgressBar to stopAnimation:me -- another way
+                        set animated to false
+                    end try
+                end if
+            end tell
+            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+            display notification "No Theme Installed..." with title "PlexConnect Status"
+        end if
+        end tell
+        
+     end buttonhandlernewupdateoc_
+    
     on buttonhandlerupdateoc_(sender)
         tell appupdateProgressBar to startAnimation:me -- another way
         set animated to true
