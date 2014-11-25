@@ -499,7 +499,18 @@ do shell script "checkerbash.bash"
                 
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
                 display notification "Installing git..." with title "OpenPlex Status"
-                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                tell application "Finder"
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                        else
+                        do shell script ""
+                    end if
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                        else
+                        do shell script ""
+                    end if
+                end tell
                 do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -586,6 +597,7 @@ do shell script "checkerbash.bash"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "installbash.bash"
+                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
@@ -673,7 +685,18 @@ do shell script "checkerbash.bash"
                 
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
                 display notification "Installing git..." with title "OpenPlex Status"
-                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                tell application "Finder"
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                        else
+                        do shell script ""
+                    end if
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                        else
+                        do shell script ""
+                    end if
+                end tell
                 do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -760,6 +783,7 @@ do shell script "checkerbash.bash"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "installbash.bash"
+                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
@@ -847,7 +871,18 @@ do shell script "checkerbash.bash"
                 
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
                 display notification "Installing git..." with title "OpenPlex Status"
-                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                tell application "Finder"
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                        else
+                        do shell script ""
+                    end if
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                        else
+                        do shell script ""
+                    end if
+                end tell
                 do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -934,6 +969,7 @@ do shell script "checkerbash.bash"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "installbash.bash"
+                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
@@ -1021,7 +1057,18 @@ do shell script "checkerbash.bash"
                 
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
                 display notification "Installing git..." with title "OpenPlex Status"
-                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                tell application "Finder"
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                        else
+                        do shell script ""
+                    end if
+                    if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                        else
+                        do shell script ""
+                    end if
+                end tell
                 do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -1108,6 +1155,7 @@ do shell script "checkerbash.bash"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "installbash.bash"
+                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
