@@ -466,7 +466,16 @@ do shell script "checkerbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        tell application "Finder"
+                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                                display notification "Certs auto-loaded, Choose Matching Hijack..." with title "PlexConnect Status"
+                                else
+                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                            end if
+                        end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -652,7 +661,16 @@ do shell script "checkerbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        tell application "Finder"
+                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                                display notification "Certs auto-loaded, Choose Matching Hijack..." with title "PlexConnect Status"
+                                else
+                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                            end if
+                        end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -838,7 +856,16 @@ do shell script "checkerbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        tell application "Finder"
+                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                                display notification "Certs auto-loaded, Choose Matching Hijack..." with title "PlexConnect Status"
+                                else
+                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                            end if
+                        end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1024,7 +1051,16 @@ do shell script "checkerbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        tell application "Finder"
+                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                                display notification "Certs auto-loaded, Choose Matching Hijack..." with title "PlexConnect Status"
+                                else
+                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                            end if
+                        end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1585,9 +1621,9 @@ do shell script "checkerbash.bash"
     end buttonhandlersettingscfg_
     
     on buttonhandlerloadcerts_(sender)
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates" with administrator privileges
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates" with administrator privileges
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates" with administrator privileges
+        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
     end buttonhandlerloadcerts_
     
     on buttonhandlerbackupsettings_(sender)
@@ -1669,6 +1705,32 @@ do shell script "checkerbash.bash"
     end buttonhandlerbackupcerts_
     
     --Extras Tab
+    
+    on buttonhandlerautocerts_(sender)
+        tell application "Finder"
+            if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                tell application "Finder"
+                if (exists file "Applications:plexconnect_BACKUP:trailers.cer" of the startup disk) then
+                do shell script "cd /Applications/plexconnect_BACKUP; touch trailers.auto"
+                display notification "Automatic Cert loading Enabled..." with title "PlexConnect Status"
+                else
+                display notification "Backup certs first, then enable auto certs loader..." with title "PlexConnect Status"
+                end if
+                end tell
+            else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+            display notification "No Certs present, Choose hijack..." with title "PlexConnect Status"
+                end if
+        end tell
+    end buttonhandlerautocerts_
+    
+    on buttonhandlerautocertsremove_(sender)
+        try
+        do shell script "cd /Applications/plexconnect_BACKUP; rm -Rf trailers.auto"
+        display notification "Automatic Cert loading Disabled..." with title "PlexConnect Status"
+        onerror
+        display notification "Enable Automatic Cert loading first..." with title "PlexConnect Status"
+        end try
+    end buttonhandlerautocertsremove_
     
     on buttonhandlerautoupdate_(sender)
         do shell script "createautobash.bash"

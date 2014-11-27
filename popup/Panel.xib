@@ -1192,7 +1192,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button verticalHuggingPriority="750" id="8Mc-Zt-TpI">
-                                            <rect key="frame" x="319" y="125" width="80" height="25"/>
+                                            <rect key="frame" x="319" y="135" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="UAS" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yWm-hS-JAV">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1203,7 +1203,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <button toolTip="Airplay to your mac" verticalHuggingPriority="750" id="MtO-qB-ti2">
-                                            <rect key="frame" x="319" y="53" width="80" height="25"/>
+                                            <rect key="frame" x="319" y="63" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Airplay" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="l6S-Ym-FMn">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1214,7 +1214,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <button toolTip="install a plist to enable automatic updates" verticalHuggingPriority="750" id="q3H-pc-Bzh">
-                                            <rect key="frame" x="17" y="91" width="80" height="25"/>
+                                            <rect key="frame" x="17" y="101" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Auto Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q0u-v8-0Ta">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1225,7 +1225,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <button toolTip="10.6 cutom plist" verticalHuggingPriority="750" id="W4d-zx-tld">
-                                            <rect key="frame" x="17" y="53" width="80" height="25"/>
+                                            <rect key="frame" x="17" y="63" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Custom Plist" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kAm-ou-bsd">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1236,7 +1236,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="9Y4-wq-eA5">
-                                            <rect key="frame" x="17" y="195" width="80" height="25"/>
+                                            <rect key="frame" x="17" y="205" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="PlexWeb" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b6s-nK-d66">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1247,7 +1247,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <button toolTip="Set PlexConnect log to high" verticalHuggingPriority="750" id="4Gn-3f-x1g">
-                                            <rect key="frame" x="319" y="160" width="80" height="25"/>
+                                            <rect key="frame" x="319" y="170" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Log High" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sSk-F9-zee">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1258,7 +1258,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <button toolTip="iOS 8 fix for aTV" verticalHuggingPriority="750" id="PZX-ao-kgQ">
-                                            <rect key="frame" x="17" y="160" width="80" height="25"/>
+                                            <rect key="frame" x="17" y="170" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Mute Boot" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hSb-BE-jAG">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1269,7 +1269,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wqO-UM-WFT">
-                                            <rect key="frame" x="112" y="194" width="140" height="28"/>
+                                            <rect key="frame" x="112" y="204" width="140" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open local PlexWeb  on port 32400" id="9Zd-yt-NmB">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1278,7 +1278,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zxb-jO-sKG">
-                                            <rect key="frame" x="410" y="201" width="140" height="15"/>
+                                            <rect key="frame" x="410" y="211" width="140" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PlexConnect Log Normal " id="rSD-X7-ZqB">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1287,7 +1287,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Q35-8w-MFt">
-                                            <rect key="frame" x="112" y="90" width="205" height="28"/>
+                                            <rect key="frame" x="112" y="100" width="205" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Install a plist to check for updates to PlexConnect every 6 hours" id="dJF-fu-IxB">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1296,7 +1296,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="YJl-gn-CVW">
-                                            <rect key="frame" x="410" y="52" width="116" height="28"/>
+                                            <rect key="frame" x="410" y="62" width="116" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Turn your mac into a AirPlay speaker" id="uDj-Oq-PLg">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1305,7 +1305,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="iZS-nn-QLH">
-                                            <rect key="frame" x="112" y="131" width="133" height="14"/>
+                                            <rect key="frame" x="112" y="141" width="133" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Upload Plex Icon to aTV" id="2XV-bb-XEy">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1314,7 +1314,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <button toolTip="Upload Custom Plex Icon" verticalHuggingPriority="750" id="jwn-u1-tH7">
-                                            <rect key="frame" x="17" y="125" width="80" height="25"/>
+                                            <rect key="frame" x="17" y="135" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Plex Icon" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qvg-fb-Saq">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1325,7 +1325,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <button toolTip="Set PlexConnect log to normal" verticalHuggingPriority="750" id="ev7-Bw-olB">
-                                            <rect key="frame" x="319" y="195" width="80" height="25"/>
+                                            <rect key="frame" x="319" y="205" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Log Normal" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cuD-qd-uwb">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1336,7 +1336,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="dpI-UV-Vuz">
-                                            <rect key="frame" x="410" y="124" width="113" height="28"/>
+                                            <rect key="frame" x="410" y="134" width="113" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Install Unsupported AppStore on PMS" id="ONl-O1-zHm">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1345,7 +1345,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <button verticalHuggingPriority="750" id="1Vg-bt-d6t">
-                                            <rect key="frame" x="319" y="91" width="80" height="25"/>
+                                            <rect key="frame" x="319" y="101" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="WOL" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vRT-sp-O6F">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1356,7 +1356,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="5II-cH-QdX">
-                                            <rect key="frame" x="410" y="97" width="97" height="14"/>
+                                            <rect key="frame" x="410" y="107" width="97" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Install WOL Plists" id="EN8-9y-aHW">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1365,7 +1365,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fQc-y6-09p">
-                                            <rect key="frame" x="410" y="165" width="126" height="17"/>
+                                            <rect key="frame" x="410" y="175" width="126" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PlexConnect Log High " id="kTR-hZ-vo7">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1374,7 +1374,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7zN-gW-Ccx">
-                                            <rect key="frame" x="112" y="166" width="152" height="14"/>
+                                            <rect key="frame" x="112" y="176" width="152" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disable Boot Startup Sound" id="oC2-U8-J60">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1383,9 +1383,49 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Me8-Ae-Yfx">
-                                            <rect key="frame" x="112" y="52" width="187" height="28"/>
+                                            <rect key="frame" x="112" y="62" width="187" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.6 custom Plist to enable basic  menubar function" id="dcc-AL-Zls">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button toolTip="Airplay to your mac" verticalHuggingPriority="750" id="BHg-l9-ffN">
+                                            <rect key="frame" x="319" y="25" width="80" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Basic Certs" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ttC-OK-9GM">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerautocertsremove:" target="139" id="g2b-Oq-sgY"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="10.6 cutom plist" verticalHuggingPriority="750" id="JEK-rO-iam">
+                                            <rect key="frame" x="17" y="25" width="80" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Auto Certs" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3up-F9-FBr">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerautocerts:" target="139" id="qdq-bo-5c3"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="NIW-Am-MmS">
+                                            <rect key="frame" x="410" y="31" width="134" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disable Auto Cert loader" id="GD6-jG-tcz">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Olf-6t-9xK">
+                                            <rect key="frame" x="112" y="31" width="134" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enable Auto Cert loader" id="UkI-Or-7wL">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
