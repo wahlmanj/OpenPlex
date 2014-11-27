@@ -550,17 +550,7 @@ do shell script "checkerbash.bash"
                             do shell script "echo install not present"
                         end if
                     end tell
-                    set myFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 end try
-                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "sudoers.bash"
-                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                delay 7
-                do shell script "rm -R /Applications/PlexConnect"
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
                 do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
@@ -605,7 +595,12 @@ do shell script "checkerbash.bash"
                 do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
-                do shell script "installbash.bash"
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "sudoers.bash"
+                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
@@ -745,17 +740,7 @@ do shell script "checkerbash.bash"
                             do shell script "echo install not present"
                         end if
                     end tell
-                    set myFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 end try
-                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "sudoers.bash"
-                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                delay 7
-                do shell script "rm -R /Applications/PlexConnect"
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
                 do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
@@ -800,7 +785,12 @@ do shell script "checkerbash.bash"
                 do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
-                do shell script "installbash.bash"
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "sudoers.bash"
+                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
@@ -940,17 +930,7 @@ do shell script "checkerbash.bash"
                             do shell script "echo install not present"
                         end if
                     end tell
-                    set myFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 end try
-                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "sudoers.bash"
-                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                delay 7
-                do shell script "rm -R /Applications/PlexConnect"
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
                 do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
@@ -995,7 +975,12 @@ do shell script "checkerbash.bash"
                 do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
-                do shell script "installbash.bash"
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "sudoers.bash"
+                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
@@ -1135,17 +1120,7 @@ do shell script "checkerbash.bash"
                             do shell script "echo install not present"
                         end if
                     end tell
-                    set myFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 end try
-                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "sudoers.bash"
-                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                delay 7
-                do shell script "rm -R /Applications/PlexConnect"
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
                 do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
                 do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
