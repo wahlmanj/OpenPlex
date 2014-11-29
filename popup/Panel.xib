@@ -1394,7 +1394,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                         <button toolTip="Airplay to your mac" verticalHuggingPriority="750" id="BHg-l9-ffN">
                                             <rect key="frame" x="319" y="25" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Basic Certs" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ttC-OK-9GM">
+                                            <buttonCell key="cell" type="squareTextured" title="Default Load" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ttC-OK-9GM">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
@@ -1405,7 +1405,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                         <button toolTip="10.6 cutom plist" verticalHuggingPriority="750" id="JEK-rO-iam">
                                             <rect key="frame" x="17" y="25" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Auto Certs" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3up-F9-FBr">
+                                            <buttonCell key="cell" type="squareTextured" title="Auto Load" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3up-F9-FBr">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
@@ -1413,19 +1413,19 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="buttonhandlerautocerts:" target="139" id="qdq-bo-5c3"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="NIW-Am-MmS">
-                                            <rect key="frame" x="410" y="31" width="134" height="14"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ePw-LR-3UU">
+                                            <rect key="frame" x="410" y="24" width="113" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disable Auto Cert loader" id="GD6-jG-tcz">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disable Auto Cert  and Hijack loader" id="io3-GY-Rqc">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Olf-6t-9xK">
-                                            <rect key="frame" x="112" y="31" width="134" height="14"/>
+                                            <rect key="frame" x="112" y="31" width="190" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enable Auto Cert loader" id="UkI-Or-7wL">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enable Auto Cert and Hijack loader" id="UkI-Or-7wL">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
