@@ -2166,7 +2166,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
             </tabViewItems>
             <point key="canvasLocation" x="-746" y="85"/>
         </tabView>
-        <window title="CyberGhost Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="pNl-3v-01e">
+        <window title="CyberGhost Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="pNl-3v-01e">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="136" y="168" width="715" height="382"/>
@@ -2238,7 +2238,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
             </view>
             <point key="canvasLocation" x="-634.5" y="141"/>
         </window>
-        <window title="iBaa Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="Lae-7e-Ocr">
+        <window title="iBaa Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Lae-7e-Ocr">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="136" y="168" width="678" height="398"/>
@@ -2310,7 +2310,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
             </view>
             <point key="canvasLocation" x="-32" y="88"/>
         </window>
-        <window title="Falco Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="afR-Af-K9C">
+        <window title="Falco Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="afR-Af-K9C">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="136" y="168" width="678" height="398"/>
@@ -2382,7 +2382,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
             </view>
             <point key="canvasLocation" x="-653" y="149"/>
         </window>
-        <window title="Stoffez Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="SxY-2V-N44">
+        <window title="Stoffez Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="SxY-2V-N44">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="136" y="168" width="678" height="398"/>
