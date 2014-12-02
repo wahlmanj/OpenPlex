@@ -1824,7 +1824,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-752" y="-298.5"/>
+            <point key="canvasLocation" x="-896" y="-558.5"/>
         </window>
         <window title="Airplay to your mac!" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="s5f-fr-nxU">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1924,10 +1924,10 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
         </window>
         <window title="Plex Icon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="RUh-JC-ccg">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
-            <rect key="contentRect" x="1337" y="575" width="385" height="280"/>
+            <rect key="contentRect" x="1337" y="575" width="385" height="322"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="mzg-cQ-n8i">
-                <rect key="frame" x="0.0" y="0.0" width="385" height="280"/>
+                <rect key="frame" x="0.0" y="0.0" width="385" height="322"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button id="KOa-Ya-kMW">
@@ -2060,18 +2060,8 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <box autoresizesSubviews="NO" borderType="line" id="gRF-W9-Zpz">
-                        <rect key="frame" x="18" y="26" width="351" height="97"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="349" height="81"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </box>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="OEk-yZ-Bo4">
-                        <rect key="frame" x="133" y="119" width="136" height="17"/>
+                        <rect key="frame" x="151" y="120" width="136" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS 5 - iOS 6 - iOS 7" id="UdO-kq-HOY">
                             <font key="font" metaFont="smallSystem"/>
@@ -2080,7 +2070,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Qvg-xa-wXZ">
-                        <rect key="frame" x="176" y="253" width="38" height="17"/>
+                        <rect key="frame" x="190" y="255" width="38" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS 8" id="4XG-MV-a5x">
                             <font key="font" metaFont="smallSystem"/>
@@ -2089,18 +2079,39 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                         </textFieldCell>
                     </textField>
                     <imageView id="Iky-Nn-s6h">
-                        <rect key="frame" x="94" y="98" width="33" height="61"/>
+                        <rect key="frame" x="108" y="98" width="33" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="atv" id="k6p-3C-m7s"/>
                     </imageView>
                     <imageView id="sVG-61-ZT9">
-                        <rect key="frame" x="135" y="233" width="33" height="61"/>
+                        <rect key="frame" x="151" y="233" width="33" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="atv" id="Q8U-P7-NpB"/>
                     </imageView>
+                    <button verticalHuggingPriority="750" id="vvr-IR-QW4">
+                        <rect key="frame" x="132" y="286" width="123" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" title="Upload Instructions" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y7B-M6-SAk">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="orderFront:" target="7Q9-gE-dCp" id="7GL-Lw-qjt"/>
+                        </connections>
+                    </button>
+                    <box autoresizesSubviews="NO" borderType="line" id="gRF-W9-Zpz">
+                        <rect key="frame" x="18" y="30" width="351" height="97"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="349" height="81"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-855.5" y="129"/>
+            <point key="canvasLocation" x="-895.5" y="-67"/>
         </window>
         <drawer trailingOffset="15" id="WpU-ee-Wam">
             <size key="contentSize" width="100" height="100"/>
@@ -2453,6 +2464,40 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                 </subviews>
             </view>
             <point key="canvasLocation" x="-653" y="149"/>
+        </window>
+        <window title="Icon Upload Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="7Q9-gE-dCp">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="136" y="168" width="451" height="255"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+            <view key="contentView" id="gd7-1m-PN3">
+                <rect key="frame" x="0.0" y="0.0" width="451" height="255"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" id="jry-xf-dh2">
+                        <rect key="frame" x="20" y="-40" width="679" height="275"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" id="nJw-jc-Z6m">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">- Unplug the internet from the router.
+- Make a Reset All Settings on aTV.
+- Change the DNS to whatever plexconnect host.
+- Plug your internet back to the router.
+- Send the trailers.cer to your aTV.
+
+
+* If some others apps doesn't have icons, just put your DNS 
+back to automatic, 
+restart your aTV and put your DNS back to manuel 
+with your plexconnect host ip. 
+Don't worry the Plex Icon won't disappear.</string>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="-826.5" y="317.5"/>
         </window>
     </objects>
     <resources>
