@@ -179,7 +179,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="8"/>
             </connections>
-            <point key="canvasLocation" x="-232" y="-327.5"/>
+            <point key="canvasLocation" x="-568" y="-924.5"/>
         </window>
         <customObject id="140" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="141">
@@ -401,7 +401,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="196" y="19"/>
+            <point key="canvasLocation" x="-723" y="476"/>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="pJn-5B-TFo" userLabel="Window -Default">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1824,7 +1824,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-896" y="-558.5"/>
+            <point key="canvasLocation" x="-785" y="-558.5"/>
         </window>
         <window title="Airplay to your mac!" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="s5f-fr-nxU">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -1920,7 +1920,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-348.5" y="128.5"/>
+            <point key="canvasLocation" x="-596.5" y="828.5"/>
         </window>
         <window title="Plex Icon" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="RUh-JC-ccg">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2111,72 +2111,12 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-895.5" y="-67"/>
+            <point key="canvasLocation" x="-674.5" y="-143"/>
         </window>
         <drawer trailingOffset="15" id="WpU-ee-Wam">
             <size key="contentSize" width="100" height="100"/>
             <size key="maxContentSize" width="10000" height="10000"/>
         </drawer>
-        <tabView id="4hH-7u-bPk">
-            <rect key="frame" x="0.0" y="0.0" width="406" height="216"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <font key="font" metaFont="system"/>
-            <tabViewItems>
-                <tabViewItem label="Library" identifier="1" id="a6Z-VJ-4bu">
-                    <view key="view" id="QQA-nr-LGh">
-                        <rect key="frame" x="10" y="33" width="386" height="170"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Fb2-DA-Wn0">
-                                <rect key="frame" x="30" y="-127" width="516" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1309" id="F1p-lA-Tr2"/>
-                            </imageView>
-                        </subviews>
-                    </view>
-                </tabViewItem>
-                <tabViewItem label="Movie PrePlay" identifier="2" id="Vbs-uT-fdv">
-                    <view key="view" id="KzP-Am-qU8">
-                        <rect key="frame" x="10" y="33" width="386" height="170"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jNq-PP-W7n">
-                                <rect key="frame" x="30" y="-127" width="516" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1312" id="0X1-LY-9Xk"/>
-                            </imageView>
-                        </subviews>
-                    </view>
-                </tabViewItem>
-                <tabViewItem label="Episode Preplay" identifier="2" id="3Lk-BY-ATv">
-                    <view key="view" id="dTQ-Hw-gHK">
-                        <rect key="frame" x="10" y="33" width="386" height="170"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bFF-gD-5Xb">
-                                <rect key="frame" x="30" y="-127" width="516" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1310" id="tC3-m2-ymb"/>
-                            </imageView>
-                        </subviews>
-                    </view>
-                </tabViewItem>
-                <tabViewItem label="Settings" identifier="2" id="A5d-Pg-xgk">
-                    <view key="view" id="5hV-AR-ww1">
-                        <rect key="frame" x="10" y="33" width="386" height="170"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TLX-qk-TUd">
-                                <rect key="frame" x="12" y="-138" width="516" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1309" id="zse-Dv-FsX"/>
-                            </imageView>
-                        </subviews>
-                    </view>
-                </tabViewItem>
-            </tabViewItems>
-            <point key="canvasLocation" x="-746" y="85"/>
-        </tabView>
         <window title="CyberGhost Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="pNl-3v-01e">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -2247,7 +2187,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-634.5" y="141"/>
+            <point key="canvasLocation" x="-13.5" y="-596"/>
         </window>
         <window title="iBaa Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Lae-7e-Ocr">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2319,7 +2259,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-32" y="88"/>
+            <point key="canvasLocation" x="-32" y="-105"/>
         </window>
         <window title="Falco Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="afR-Af-K9C">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2391,7 +2331,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-653" y="149"/>
+            <point key="canvasLocation" x="-32" y="390"/>
         </window>
         <window title="Stoffez Theme Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="SxY-2V-N44">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2463,7 +2403,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-653" y="149"/>
+            <point key="canvasLocation" x="-32" y="883"/>
         </window>
         <window title="Icon Upload Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="7Q9-gE-dCp">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2490,8 +2430,68 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-982.5" y="351"/>
+            <point key="canvasLocation" x="-655.5" y="162"/>
         </window>
+        <tabView id="4hH-7u-bPk">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="216"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <font key="font" metaFont="system"/>
+            <tabViewItems>
+                <tabViewItem label="Library" identifier="1" id="a6Z-VJ-4bu">
+                    <view key="view" id="QQA-nr-LGh">
+                        <rect key="frame" x="10" y="33" width="386" height="170"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Fb2-DA-Wn0">
+                                <rect key="frame" x="30" y="-127" width="516" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1309" id="F1p-lA-Tr2"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                </tabViewItem>
+                <tabViewItem label="Movie PrePlay" identifier="2" id="Vbs-uT-fdv">
+                    <view key="view" id="KzP-Am-qU8">
+                        <rect key="frame" x="10" y="33" width="386" height="170"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jNq-PP-W7n">
+                                <rect key="frame" x="30" y="-127" width="516" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1312" id="0X1-LY-9Xk"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                </tabViewItem>
+                <tabViewItem label="Episode Preplay" identifier="2" id="3Lk-BY-ATv">
+                    <view key="view" id="dTQ-Hw-gHK">
+                        <rect key="frame" x="10" y="33" width="386" height="170"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bFF-gD-5Xb">
+                                <rect key="frame" x="30" y="-127" width="516" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1310" id="tC3-m2-ymb"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                </tabViewItem>
+                <tabViewItem label="Settings" identifier="2" id="A5d-Pg-xgk">
+                    <view key="view" id="5hV-AR-ww1">
+                        <rect key="frame" x="10" y="33" width="386" height="170"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TLX-qk-TUd">
+                                <rect key="frame" x="12" y="-138" width="516" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1309" id="zse-Dv-FsX"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                </tabViewItem>
+            </tabViewItems>
+            <point key="canvasLocation" x="-175" y="1260"/>
+        </tabView>
     </objects>
     <resources>
         <image name="IMG_1309" width="3264" height="2448"/>
