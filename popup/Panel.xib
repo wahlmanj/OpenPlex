@@ -2096,7 +2096,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                             <font key="font" metaFont="smallSystem"/>
                         </buttonCell>
                         <connections>
-                            <action selector="orderFront:" target="7Q9-gE-dCp" id="7GL-Lw-qjt"/>
+                            <action selector="makeKeyAndOrderFront:" target="7Q9-gE-dCp" id="T7b-rU-vfP"/>
                         </connections>
                     </button>
                     <box autoresizesSubviews="NO" borderType="line" id="gRF-W9-Zpz">
@@ -2467,37 +2467,30 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
         </window>
         <window title="Icon Upload Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="7Q9-gE-dCp">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="136" y="168" width="451" height="255"/>
+            <rect key="contentRect" x="136" y="168" width="347" height="112"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
             <view key="contentView" id="gd7-1m-PN3">
-                <rect key="frame" x="0.0" y="0.0" width="451" height="255"/>
+                <rect key="frame" x="0.0" y="0.0" width="347" height="112"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="jry-xf-dh2">
-                        <rect key="frame" x="20" y="-40" width="679" height="275"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bpJ-gn-tlF">
+                        <rect key="frame" x="18" y="20" width="311" height="72"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" id="nJw-jc-Z6m">
-                            <font key="font" metaFont="system"/>
-                            <string key="title">- Unplug the internet from the router.
-- Make a Reset All Settings on aTV.
-- Change the DNS to whatever plexconnect host.
-- Plug your internet back to the router.
-- Send the trailers.cer to your aTV.
-
-
-* If some others apps doesn't have icons, just put your DNS 
-back to automatic, 
-restart your aTV and put your DNS back to manuel 
-with your plexconnect host ip. 
-Don't worry the Plex Icon won't disappear.</string>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Gqq-SH-gaX">
+                            <font key="font" metaFont="miniSystem"/>
+                            <string key="title">Step 1:   Pick an icon that matches your aTV iOS revision                                                     
+Step 2:   Unplug internet from your router      
+Step 3:   Reset all settings on aTV.      
+Step 4:   Change aTV DNS to your PlexConnect Host
+Step 5:   Send Trailers.cer to aTV
+Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-826.5" y="317.5"/>
+            <point key="canvasLocation" x="-982.5" y="351"/>
         </window>
     </objects>
     <resources>
