@@ -97,20 +97,6 @@
                             <rect key="frame" x="1" y="1" width="153" height="55"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button toolTip="Update PlexConnect" id="1fa-ay-5vv">
-                                    <rect key="frame" x="55" y="10" width="42" height="38"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <shadow key="shadow">
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </shadow>
-                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="menuplex" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="sm4-LU-cQ9">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerupdate:" target="139" id="x67-La-qxM"/>
-                                    </connections>
-                                </button>
                                 <button toolTip="Exit OpenPlex" id="aSG-yA-djP">
                                     <rect key="frame" x="104" y="10" width="42" height="38"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -137,6 +123,20 @@
                                     </buttonCell>
                                     <connections>
                                         <action selector="buttonhandlerlog:" target="139" id="6yY-mP-Ljz"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="Update PlexConnect" id="x4p-zu-ssi">
+                                    <rect key="frame" x="55" y="10" width="42" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <shadow key="shadow">
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </shadow>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="update" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="RFG-Ct-YVB">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="buttonhandlerupdate:" target="139" id="DXo-I3-eMa"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -2522,7 +2522,6 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
         <image name="grey" width="188" height="108"/>
         <image name="iMovie" width="188" height="108"/>
         <image name="logplex" width="36.479999542236328" height="36"/>
-        <image name="menuplex" width="36.479999542236328" height="36"/>
         <image name="opicon_&lt;128x128&gt;" width="128" height="128"/>
         <image name="opicon_&lt;64x64&gt;" width="64" height="64"/>
         <image name="paypal-donate-button" width="500" height="117"/>
@@ -2530,6 +2529,7 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
         <image name="startplex" width="36" height="36"/>
         <image name="status" width="26" height="26"/>
         <image name="stopplex" width="36.479999542236328" height="36"/>
+        <image name="update" width="36.479999542236328" height="36.479999542236328"/>
         <image name="updateplex" width="36.479999542236328" height="36"/>
     </resources>
 </document>
