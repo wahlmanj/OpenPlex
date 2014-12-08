@@ -322,7 +322,7 @@ do shell script "checkerbash.bash"
         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
             tell application "Finder"
                 if (exists folder "Applications:OpenPlex" of the startup disk) then
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd /Applications/OpenPlex; git fetch; git merge origin"
+                    do shell script "echo hi; cd /Applications/OpenPlex; git fetch; git merge origin"
                     try
                         if (exists file "Applications:OpenPlex.app" of the startup disk) then
                             do shell script "cd /Applications; rm -R OpenPlex.app"
@@ -341,7 +341,7 @@ do shell script "checkerbash.bash"
                             do shell script ""
                         end if
                         set myFolder to "/Applications"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/OpenPlex.git; cd /Applications/OpenPlex/10.7; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.7"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/OpenPlex.git; cd /Applications/OpenPlex/10.7; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.7"
                         do shell script "cd /Applications/OpenPlex/10.7; cp -R OpenPlex.app /Applications; rm -R OpenPlex.app"
                         tell appupdateProgressBar to stopAnimation:me -- another way
                         set animated to false
@@ -414,7 +414,7 @@ do shell script "checkerbash.bash"
                         end if
                     end tell
                     set myFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -460,7 +460,7 @@ do shell script "checkerbash.bash"
                         end if
                     end tell
                     set myFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -528,14 +528,14 @@ do shell script "checkerbash.bash"
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -828,14 +828,14 @@ do shell script "checkerbash.bash"
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -936,14 +936,14 @@ do shell script "checkerbash.bash"
                 end tell
                 try
                     set theFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
+                    do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/iBaa/PlexConnect.git"
                 end try
                 do shell script "mkdir /Applications/onlytemp"
                 set myFolder to "/Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -999,14 +999,14 @@ do shell script "checkerbash.bash"
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -1299,14 +1299,14 @@ do shell script "checkerbash.bash"
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -1403,14 +1403,14 @@ end try
                 end tell
                 try
                     set theFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
+                    do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/falco953/PlexConnect.git"
                 end try
                 do shell script "mkdir /Applications/onlytemp"
                 set myFolder to "/Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -1466,14 +1466,14 @@ end try
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -1766,14 +1766,14 @@ end try
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -1871,14 +1871,14 @@ end try
                 end tell
                 try
                     set theFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
+                    do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/stoffez/PlexConnect.git"
                 end try
                 do shell script "mkdir /Applications/onlytemp"
                 set myFolder to "/Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -1934,14 +1934,14 @@ end try
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -2234,14 +2234,14 @@ end try
                         end tell
                         try
                             set theFolder to "/Applications"
-                            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
                         end try
                         do shell script "mkdir /Applications/onlytemp"
                         set myFolder to "/Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -2339,14 +2339,14 @@ end try
                 end tell
                 try
                     set theFolder to "/Applications"
-                    do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                    do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/CyberGhost84/PlexConnect.git"
                 end try
                 do shell script "mkdir /Applications/onlytemp"
                 set myFolder to "/Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -2398,14 +2398,14 @@ end try
         end tell
         try
             set theFolder to "/Applications"
-            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/brotuser/PlexConnect.git"
+            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/brotuser/PlexConnect.git"
         end try
         do shell script "mkdir /Applications/onlytemp"
         set myFolder to "/Applications/onlytemp"
         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/PlexConnect/update/OSX"
         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-        do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
         do shell script "rm -R /Applications/onlytemp"
         do shell script "installbash.bash"
@@ -2489,7 +2489,7 @@ end try
         end tell
         try
             set theFolder to "/Applications"
-            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+            do shell script "echo hi; cd " & theFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
         end try
         delay 2
         do shell script "installbash.bash"
@@ -3139,7 +3139,7 @@ end try
         try
             do shell script "mkdir /Applications/onlytemp"
             set myFolder to "/Applications/onlytemp"
-            do shell script "PATH=/usr/local/git/bin:/usr/bin:/opt/local/bin:/usr/local/bin/git export PATH; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
+            do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/PlexConnect.git"
             do shell script "chmod +x /Applications/onlytemp/PlexConnect/update/OSX/start.bash" with administrator privileges
             do shell script "chmod +x /Applications/onlytemp/PlexConnect/update/OSX/stop.bash" with administrator privileges
             do shell script "chmod +x /Applications/onlytemp/PlexConnect/update/OSX/startbash.bash" with administrator privileges
