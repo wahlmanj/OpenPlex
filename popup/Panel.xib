@@ -2445,7 +2445,7 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Fb2-DA-Wn0">
                                 <rect key="frame" x="30" y="-127" width="516" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1309" id="F1p-lA-Tr2"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1316" id="F1p-lA-Tr2"/>
                             </imageView>
                         </subviews>
                     </view>
@@ -2471,7 +2471,7 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bFF-gD-5Xb">
                                 <rect key="frame" x="30" y="-127" width="516" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1310" id="tC3-m2-ymb"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1311" id="tC3-m2-ymb"/>
                             </imageView>
                         </subviews>
                     </view>
@@ -2484,7 +2484,7 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TLX-qk-TUd">
                                 <rect key="frame" x="12" y="-138" width="516" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1309" id="zse-Dv-FsX"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IMG_1315" id="zse-Dv-FsX"/>
                             </imageView>
                         </subviews>
                     </view>
@@ -2494,8 +2494,6 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
         </tabView>
     </objects>
     <resources>
-        <image name="IMG_1309" width="3264" height="2448"/>
-        <image name="IMG_1310" width="3264" height="2448"/>
         <image name="IMG_1311" width="3264" height="2448"/>
         <image name="IMG_1312" width="3264" height="2448"/>
         <image name="IMG_1315" width="3264" height="2448"/>

@@ -561,6 +561,7 @@ do shell script "checkerbash.bash"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "iMovie certs found, Hijacking iMovie..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -647,6 +648,7 @@ do shell script "checkerbash.bash"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "Trailers certs found, Hijacking Trailers..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -733,6 +735,7 @@ do shell script "checkerbash.bash"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "WSJ certs found, Hijacking WSJ..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -1032,6 +1035,7 @@ do shell script "checkerbash.bash"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "iMovie certs found, Hijacking iMovie..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -1118,6 +1122,7 @@ do shell script "checkerbash.bash"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "Trailers certs found, Hijacking Trailers..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -1204,6 +1209,7 @@ do shell script "checkerbash.bash"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "WSJ certs found, Hijacking WSJ..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -1499,6 +1505,7 @@ end try
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "iMovie certs found, Hijacking iMovie..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -1585,6 +1592,7 @@ end try
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "Trailers certs found, Hijacking Trailers..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -1671,6 +1679,7 @@ end try
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is "2" then
                                     try
+                                    delay 2
                                     display notification "WSJ certs found, Hijacking WSJ..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -1967,6 +1976,7 @@ end try
                                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                     if searchResult is "2" then
                                         try
+                                    delay 2
                                     display notification "iMovie certs found, Hijacking iMovie..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -2053,6 +2063,7 @@ end try
                                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                     if searchResult is "2" then
                                         try
+                                    delay 2
                                     display notification "Trailers certs found, Hijacking Trailers..." with title "OpenPlex Status"
                                     onerror
                                     end try
@@ -2139,6 +2150,7 @@ end try
                                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                     if searchResult is "2" then
                                         try
+                                    delay 2
                                     display notification "WSJ certs found, Hijacking WSJ..." with title "OpenPlex Status"
                                     onerror
                                     end try
