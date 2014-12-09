@@ -1,6 +1,6 @@
 --
 --  AppDelegate.applescript
---  OpenPlex 0.3.5
+--  OpenPlex 0.3.6
 --
 --  Originally designed by iCyberGhost on 5/02/14.
 --  Originally coded by Wahlman.j on 5/02/14.
@@ -57,10 +57,15 @@ script AppDelegate
     on buttonhandlerupdate_(sender)
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "updatebash.bash"
+                set x to do shell script "cd /Applications/PlexConnect; git fetch; git merge origin"
+                if x is equal to "Already up-to-date." then
+                    display notification "No updates avaliable" with title "PlexConnect Status"
+                    else if x is not equal to "Already up-to-date." then
+                    display notification "PlexConnect updated, Exit hijacked app on aTV..." with title "PlexConnect Status"
+                    end if
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 try
-                                    display notification "No Folder Detected..." with title "OpenPlex Status"
+                                    display notification "No Theme Detected..." with title "OpenPlex Status"
                     onerror
                     end try
             end if
@@ -323,29 +328,17 @@ do shell script "checkerbash.bash"
             tell application "Finder"
                 if (exists folder "Applications:OpenPlex" of the startup disk) then
                     do shell script "echo hi; cd /Applications/OpenPlex; git fetch; git merge origin"
-                    try
-                        if (exists file "Applications:OpenPlex.app" of the startup disk) then
-                            do shell script "cd /Applications; rm -R OpenPlex.app"
-                            else
-                            do shell script ""
-                        end if
-                        do shell script "cd /Applications/OpenPlex/10.6; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.6"
-                        do shell script "cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; rm -R OpenPlex.app"
-                    end try
+                    set myFolder to "/Applications"
+                    do shell script "echo hi; cd " & myFolder & "; cd /Applications/OpenPlex/10.6; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.6"
+                    do shell script "cd /Applications; rm -R OpenPlex.app; cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; " with administrator privileges
                     do shell script "quit.bash"
                     else if not (exists folder "Applications:OpenPlex" of the startup disk) then
-                    try
-                        if (exists file "Applications:OpenPlex.app" of the startup disk) then
-                            do shell script "cd /Applications; rm -R OpenPlex.app"
-                            else
-                            do shell script ""
-                        end if
                         set myFolder to "/Applications"
                         do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/OpenPlex.git; cd /Applications/OpenPlex/10.6; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.6"
-                        do shell script "cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; rm -R OpenPlex.app"
+                        do shell script "cd /Applications; rm -R OpenPlex.app; cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; " with administrator privileges
+                        do shell script "quit.bash"
                         tell appupdateProgressBar to stopAnimation:me -- another way
                         set animated to false
-                    end try
                 end if
             end tell
             else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
