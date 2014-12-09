@@ -336,7 +336,7 @@ do shell script "checkerbash.bash"
                 if (exists folder "Applications:OpenPlex" of the startup disk) then
                     set x to do shell script "cd /Applications/OpenPlex; git fetch; git merge origin"
                     if x is equal to "Already up-to-date." then
-                        display notification "No updates avaliable" with title "PlexConnect Status"
+                        display notification "No app updates avaliable" with title "OpenPlex Status"
                         else if x is not equal to "Already up-to-date." then
                         do shell script "updatewcbash.bash"
                         do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
