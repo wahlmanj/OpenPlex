@@ -343,7 +343,7 @@ do shell script "checkerbash.bash"
                     end if
                     else if not (exists folder "Applications:OpenPlex" of the startup disk) then
                     do shell script "updatewcbash.bash"
-                   do shell script "git clone https://github.com/wahlmanj/OpenPlex.git; cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/10.7; cp -R OpenPlex.app /Applications;cd /Applications; open updater.app"
+                   do shell script "git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
                    
                 end if
             end tell
