@@ -50,7 +50,14 @@ script AppDelegate
     
     set sysinfo to system info
     
+    on applicationWillFinishLaunching_(aNotification)
+        -- Insert code here to initialize your application before any files are opened
+    end applicationWillFinishLaunching_
     
+    on applicationShouldTerminate_(sender)
+        -- Insert code here to do any housekeeping before your application quits
+        return current application's NSTerminateNow
+    end applicationShouldTerminate_
     
     --Menubar
     
@@ -327,18 +334,17 @@ do shell script "checkerbash.bash"
         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
             tell application "Finder"
                 if (exists folder "Applications:OpenPlex" of the startup disk) then
-                    do shell script "echo hi; cd /Applications/OpenPlex; git fetch; git merge origin"
-                    set myFolder to "/Applications"
-                    do shell script "echo hi; cd " & myFolder & "; cd /Applications/OpenPlex/10.6; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.6"
-                    do shell script "cd /Applications; rm -R OpenPlex.app; cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; " with administrator privileges
-                    do shell script "quit.bash"
+                    set x to do shell script "cd /Applications/OpenPlex; git fetch; git merge origin"
+                    if x is equal to "Already up-to-date." then
+                        display notification "No updates avaliable" with title "PlexConnect Status"
+                        else if x is not equal to "Already up-to-date." then
+                        do shell script "updatewcbash.bash"
+                        do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/10.7; cp -R OpenPlex.app /Applications;cd /Applications; open updater.app"
+                    end if
                     else if not (exists folder "Applications:OpenPlex" of the startup disk) then
-                        set myFolder to "/Applications"
-                        do shell script "echo hi; cd " & myFolder & "; git clone https://github.com/wahlmanj/OpenPlex.git; cd /Applications/OpenPlex/10.6; ditto -xk OpenPlex.zip /Applications/OpenPlex/10.6"
-                        do shell script "cd /Applications; rm -R OpenPlex.app; cd /Applications/OpenPlex/10.6; cp -R OpenPlex.app /Applications; " with administrator privileges
-                        do shell script "quit.bash"
-                        tell appupdateProgressBar to stopAnimation:me -- another way
-                        set animated to false
+                    do shell script "updatewcbash.bash"
+                   do shell script "git clone https://github.com/wahlmanj/OpenPlex.git; cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/10.7; cp -R OpenPlex.app /Applications;cd /Applications; open updater.app"
+                   
                 end if
             end tell
             else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -348,7 +354,8 @@ do shell script "checkerbash.bash"
                         end try
         end if
         end tell
-        
+        tell appupdateProgressBar to stopAnimation:me -- another way
+        set animated to false
      end buttonhandlernewupdateoc_
     
     on buttonhandlerupdateoc_(sender)
@@ -3340,14 +3347,5 @@ end try
         onerror
         end try
     end buttonhandlermacports_
-    
-    on applicationWillFinishLaunching_(aNotification)
-        -- Insert code here to initialize your application before any files are opened
-    end applicationWillFinishLaunching_
-    
-    on applicationShouldTerminate_(sender)
-        -- Insert code here to do any housekeeping before your application quits
-        return current application's NSTerminateNow
-    end applicationShouldTerminate_
     
 end script

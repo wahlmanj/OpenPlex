@@ -436,7 +436,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerupdateoc:" target="139" id="ctO-Sf-Y01"/>
+                                                            <action selector="buttonhandlernewupdateoc:" target="139" id="hXk-jy-9UB"/>
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Unistall App" verticalHuggingPriority="750" id="BZe-0r-Dav">
