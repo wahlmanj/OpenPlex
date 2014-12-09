@@ -361,6 +361,7 @@ do shell script "checkerbash.bash"
     on buttonhandlerupdateoc_(sender)
         tell appupdateProgressBar to startAnimation:me -- another way
         set animated to true
+        do shell script "updatewcbash.bash"
         do shell script "10.6bash.bash"
         do shell script "quit.bash"
     end buttonhandlerupdateoc_
