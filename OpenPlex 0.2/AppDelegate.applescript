@@ -338,20 +338,21 @@ do shell script "checkerbash.bash"
                     if x is equal to "Already up-to-date." then
                         display notification "No app updates avaliable" with title "OpenPlex Status"
                         else if x is not equal to "Already up-to-date." then
+                        display notification "OpenPlex update available...Downloading" with title "OpenPlex Status"
+                        delay 1
                         do shell script "updatewcbash.bash"
                         do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
                     end if
                     else if not (exists folder "Applications:OpenPlex" of the startup disk) then
+                    display notification "OpenPlex update available...Downloading" with title "OpenPlex Status"
+                    delay 1
                     do shell script "updatewcbash.bash"
                    do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
                    
                 end if
             end tell
             else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-            try
                         display notification "No Theme Installed..." with title "OpenPlex Status"
-                        onerror
-                        end try
         end if
         end tell
         tell appupdateProgressBar to stopAnimation:me -- another way
@@ -367,10 +368,12 @@ do shell script "checkerbash.bash"
     end buttonhandlerupdateoc_
     
     on buttonhandlerloginon_(sender)
+        display notification "OpenPlex added to login items..." with title "OpenPlex Status"
         tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
     end buttonhandlerloginon_
     
     on buttonhandlerloginoff_(sender)
+        display notification "OpenPlex removed from login items..." with title "OpenPlex Status"
         tell application "System Events" to delete login item "OpenPlex"
     end buttonhandlerloginoff_
     
