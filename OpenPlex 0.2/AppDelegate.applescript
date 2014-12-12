@@ -758,8 +758,6 @@ do shell script "checkerbash.bash"
                                                 end if
                                             end tell
                                             
-                                            do shell script "purgesettingsbash.bash"
-                                            
                                             else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             display notification "Theme Required to hijack..." with title "OpenPlex Status"
                                         end if
@@ -768,6 +766,7 @@ do shell script "checkerbash.bash"
                                     do shell script ""
                                 end if
                             end try
+                            do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -1227,8 +1226,6 @@ do shell script "checkerbash.bash"
                                                 end if
                                             end tell
                                             
-                                            do shell script "purgesettingsbash.bash"
-                                            
                                             else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             display notification "Theme Required to hijack..." with title "OpenPlex Status"
                                         end if
@@ -1237,6 +1234,7 @@ do shell script "checkerbash.bash"
                                     do shell script ""
                                 end if
                             end try
+do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -1696,8 +1694,6 @@ do shell script "checkerbash.bash"
                                                 end if
                                             end tell
                                             
-                                            do shell script "purgesettingsbash.bash"
-                                            
                                             else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             display notification "Theme Required to hijack..." with title "OpenPlex Status"
                                         end if
@@ -1706,6 +1702,7 @@ do shell script "checkerbash.bash"
                                     do shell script ""
                                 end if
                             end try
+                            do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -2165,8 +2162,6 @@ do shell script "checkerbash.bash"
                                                 end if
                                             end tell
                                             
-                                            do shell script "purgesettingsbash.bash"
-                                            
                                             else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                                 display notification "Theme Required to hijack..." with title "OpenPlex Status"
                                         end if
@@ -2175,6 +2170,7 @@ do shell script "checkerbash.bash"
                                     do shell script ""
                                 end if
                             end try
+                            do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
