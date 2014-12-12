@@ -342,6 +342,33 @@ do shell script "checkerbash.bash"
                         try
                         display notification "OpenPlex update available...Downloading" with title "OpenPlex Status"
                         delay 1
+                        tell application "Finder"
+                            if (exists file "Applications:OpenPlex:10.6:OpenPlex.app" of the startup disk) then
+                                try
+                                    do shell script "cd /Applications/OpenPlex/10.6; rm -R OpenPlex.app"
+                                    onerror
+                                end try
+                                else
+                            end if
+                        end tell
+                        tell application "Finder"
+                            if (exists file "Applications:OpenPlex:10.7:OpenPlex.app" of the startup disk) then
+                                try
+                                    do shell script "cd /Applications/OpenPlex/10.7; rm -R OpenPlex.app"
+                                    onerror
+                                end try
+                                else
+                            end if
+                        end tell
+                        tell application "Finder"
+                            if (exists file "Applications:OpenPlex:updater:updater.app" of the startup disk) then
+                                try
+                                    do shell script "cd /Applications/OpenPlex/updater; rm -R updater.app"
+                                    onerror
+                                end try
+                                else
+                            end if
+                        end tell
                         do shell script "updatewcbash.bash"
                         do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
                         onerror
