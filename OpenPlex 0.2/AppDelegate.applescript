@@ -370,17 +370,17 @@ do shell script "checkerbash.bash"
                             end if
                         end tell
                         do shell script "updatewcbash.bash"
-                        do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
+                        do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                         onerror
                         do shell script "rm -R /Applications/OpenPlex" with administrator privileges
-                        do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
+                        do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                         end try
                     end if
                     else if not (exists folder "Applications:OpenPlex" of the startup disk) then
                     display notification "OpenPlex update available...Downloading" with title "OpenPlex Status"
                     delay 1
                     do shell script "updatewcbash.bash"
-                   do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
+                   do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                    
                 end if
             end tell
