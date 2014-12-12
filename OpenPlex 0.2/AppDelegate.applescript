@@ -336,12 +336,18 @@ do shell script "checkerbash.bash"
                 if (exists folder "Applications:OpenPlex" of the startup disk) then
                     set x to do shell script "cd /Applications/OpenPlex; git fetch; git merge origin"
                     if x is equal to "Already up-to-date." then
+                        
                         display notification "No app updates avaliable" with title "OpenPlex Status"
                         else if x is not equal to "Already up-to-date." then
+                        try
                         display notification "OpenPlex update available...Downloading" with title "OpenPlex Status"
                         delay 1
                         do shell script "updatewcbash.bash"
                         do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
+                        onerror
+                        do shell script "rm -R /Applications/OpenPlex" with administrator privileges
+                        do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cp -R updater.app /Applications; cd /Applications; open updater.app"
+                        end try
                     end if
                     else if not (exists folder "Applications:OpenPlex" of the startup disk) then
                     display notification "OpenPlex update available...Downloading" with title "OpenPlex Status"
