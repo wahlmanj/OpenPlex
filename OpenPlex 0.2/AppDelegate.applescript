@@ -466,6 +466,7 @@ do shell script "checkerbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -695,6 +696,7 @@ do shell script "checkerbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
@@ -839,6 +841,7 @@ do shell script "checkerbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1068,6 +1071,7 @@ do shell script "purgesettingsbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
@@ -1212,6 +1216,7 @@ do shell script "purgesettingsbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1441,6 +1446,7 @@ do shell script "purgesettingsbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
@@ -1585,6 +1591,7 @@ do shell script "purgesettingsbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1814,6 +1821,7 @@ do shell script "purgesettingsbash.bash"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
+                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
