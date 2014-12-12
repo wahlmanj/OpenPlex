@@ -323,6 +323,12 @@ do shell script "checkerbash.bash"
         end tell
     end buttonhandlernewchecker_
     
+    on buttonhandlerlog_(sender)
+        do shell script "open /Applications/PlexConnect/PlexConnect.log"
+    end buttonhandlerlog_
+    
+      --Settings Tab
+    
     on buttonhandleruninstall_(sender)
         do shell script "uninstallbash.bash"
     end buttonhandleruninstall_
@@ -410,115 +416,6 @@ do shell script "checkerbash.bash"
         tell application "System Events" to delete login item "OpenPlex"
     end buttonhandlerloginoff_
     
-    on buttonhandlerlog_(sender)
-        do shell script "open /Applications/PlexConnect/PlexConnect.log"
-    end buttonhandlerlog_
-
-  --Settings Tab
-
-    on buttonhandlernewuserinstaller_(sender)
-        tell codeProgressBar to startAnimation:me -- another way
-        set animated to true
-        tell application "Finder"
-            if (exists folder "usr:local:git" of the startup disk) then
-                tell application "Finder"
-                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "echo install present"
-                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        try
-                            do shell script "mkdir /Applications/plexconnect_BACKUP"
-                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                            do shell script "rm -R /Applications/PlexConnect"
-                            onerror
-                        end try
-                    end if
-                end tell
-                tell application "Finder"
-                    if (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                        do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "echo install not present"
-                    end if
-                end tell
-                try
-                    tell application "Finder"
-                        if (exists folder "Applications:onlytemp" of the startup disk) then
-                            do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
-                            do shell script "rm -R /Applications/onlytemp" with administrator privileges
-                            else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                            do shell script "echo install not present"
-                        end if
-                    end tell
-                    do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
-                end try
-                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "sudoers.bash"
-                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                delay 7
-                do shell script "rm -R /Applications/PlexConnect"
-                try
-                        display notification "No Theme Installed..." with title "OpenPlex Status"
-                        onerror
-                        end try
-                else if not (exists folder "usr:local:git" of the startup disk) then
-                do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
-                tell application "Finder"
-                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "echo install present"
-                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        try
-                            do shell script "mkdir /Applications/plexconnect_BACKUP"
-                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                            do shell script "rm -R /Applications/PlexConnect"
-                            onerror
-                        end try
-                    end if
-                end tell
-                tell application "Finder"
-                    if (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                        do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "echo install not present"
-                    end if
-                end tell
-                try
-                    tell application "Finder"
-                        if (exists folder "Applications:onlytemp" of the startup disk) then
-                            do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
-                            do shell script "rm -R /Applications/onlytemp" with administrator privileges
-                            else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                            do shell script "echo install not present"
-                        end if
-                    end tell
-                    do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
-                end try
-                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "sudoers.bash"
-                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
-                delay 7
-                do shell script "rm -R /Applications/PlexConnect"
-                do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
-                do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
-                do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
-                do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
-                try
-                        display notification "No Theme Installed..." with title "OpenPlex Status"
-                        onerror
-                        end try
-            end if
-        end tell
-        tell codeProgressBar to stopAnimation:me -- another way
-        set animated to false
-    end buttonhandlernewuserinstaller_
-    
     --Theme Tab
     
     on buttonhandlerclt_(sender)
@@ -568,7 +465,102 @@ do shell script "checkerbash.bash"
                         do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
+                        try
                         do shell script "installbash.bash"
+                        onerror
+                        do shell script "cd /usr/local/git; rm -R OP" with administrator privileges
+                        display notification "Fixing error..." with title "OpenPlex Status"
+                        delay 1
+                        tell application "Finder"
+                            if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                                do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                                else
+                                do shell script ""
+                            end if
+                            if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                                do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                                else
+                                do shell script ""
+                            end if
+                        end tell
+                        do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                        tell application "Finder"
+                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                do shell script "echo install present"
+                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                try
+                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                    do shell script "rm -R /Applications/PlexConnect"
+                                    onerror
+                                end try
+                            end if
+                        end tell
+                        tell application "Finder"
+                            if (exists folder "Applications:PlexConnect" of the startup disk) then
+                                do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                                do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                                do shell script "echo install not present"
+                            end if
+                        end tell
+                        tell application "Finder"
+                            if (exists folder "Applications:onlytemp" of the startup disk) then
+                                do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                                do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                                else if not (exists folder "Applications:onlytemp" of the startup disk) then
+                                do shell script "echo install not present"
+                            end if
+                        end tell
+                        do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                        do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                        do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                        do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                        display notification "Installing theme..." with title "PlexConnect Status"
+                        tell application "Finder"
+                            try
+                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    do shell script "stopbash.bash"
+                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    onerror
+                                end if
+                            end try
+                        end tell
+                        delay 4
+                        tell application "Finder"
+                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                do shell script "trashbasebash.bash"
+                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                try
+                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                    do shell script "rm -R /Applications/PlexConnect"
+                                    onerror
+                                end try
+                            end if
+                        end tell
+                        tell application "Finder"
+                            if (exists folder "Applications:onlytemp" of the startup disk) then
+                                do shell script "rm -R /Applications/onlytemp"
+                            end if
+                        end tell
+                        do shell script "cd /Applications; git clone https://github.com/iBaa/PlexConnect.git"
+                        do shell script "mkdir /Applications/onlytemp"
+                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                        do shell script "rm -R /Applications/onlytemp"
+                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                        do shell script "sudoers.bash"
+                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+                        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                        do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        end try
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -942,7 +934,102 @@ do shell script "checkerbash.bash"
                         do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
-                        do shell script "installbash.bash"
+                        try
+                            do shell script "installbash.bash"
+                            onerror
+                            do shell script "cd /usr/local/git; rm -R OP" with administrator privileges
+                            display notification "Installing git..." with title "OpenPlex Status"
+                            delay 1
+                            tell application "Finder"
+                                if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                                    do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                                    else
+                                    do shell script ""
+                                end if
+                                if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                                    do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                                    else
+                                    do shell script ""
+                                end if
+                            end tell
+                            do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    do shell script "echo install present"
+                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    try
+                                        do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                        do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                        do shell script "rm -R /Applications/PlexConnect"
+                                        onerror
+                                    end try
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect" of the startup disk) then
+                                    do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                                    do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                                    else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                                    do shell script "echo install not present"
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                                    do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                                    else if not (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "echo install not present"
+                                end if
+                            end tell
+                            do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                            do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                            do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                            do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                            display notification "Installing theme..." with title "PlexConnect Status"
+                            tell application "Finder"
+                                try
+                                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                        do shell script "stopbash.bash"
+                                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                        onerror
+                                    end if
+                                end try
+                            end tell
+                            delay 4
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    do shell script "trashbasebash.bash"
+                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    try
+                                        do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                        do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                        do shell script "rm -R /Applications/PlexConnect"
+                                        onerror
+                                    end try
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "rm -R /Applications/onlytemp"
+                                end if
+                            end tell
+                            do shell script "cd /Applications; git clone https://github.com/falco953/PlexConnect.git"
+                            do shell script "mkdir /Applications/onlytemp"
+                            do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                            do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                            do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                            do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                            do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                            do shell script "rm -R /Applications/onlytemp"
+                            do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                            do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                            do shell script "sudoers.bash"
+                            do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                            do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+                            do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                            do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        end try
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1316,7 +1403,102 @@ do shell script "checkerbash.bash"
                         do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
-                        do shell script "installbash.bash"
+                        try
+                            do shell script "installbash.bash"
+                            onerror
+                            do shell script "cd /usr/local/git; rm -R OP" with administrator privileges
+                            display notification "Fixing error..." with title "OpenPlex Status"
+                            delay 1
+                            tell application "Finder"
+                                if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                                    do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                                    else
+                                    do shell script ""
+                                end if
+                                if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                                    do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                                    else
+                                    do shell script ""
+                                end if
+                            end tell
+                            do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    do shell script "echo install present"
+                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    try
+                                        do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                        do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                        do shell script "rm -R /Applications/PlexConnect"
+                                        onerror
+                                    end try
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect" of the startup disk) then
+                                    do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                                    do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                                    else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                                    do shell script "echo install not present"
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                                    do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                                    else if not (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "echo install not present"
+                                end if
+                            end tell
+                            do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                            do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                            do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                            do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                            display notification "Installing theme..." with title "PlexConnect Status"
+                            tell application "Finder"
+                                try
+                                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                        do shell script "stopbash.bash"
+                                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                        onerror
+                                    end if
+                                end try
+                            end tell
+                            delay 4
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    do shell script "trashbasebash.bash"
+                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    try
+                                        do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                        do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                        do shell script "rm -R /Applications/PlexConnect"
+                                        onerror
+                                    end try
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "rm -R /Applications/onlytemp"
+                                end if
+                            end tell
+                            do shell script "cd /Applications; git clone https://github.com/stoffez/PlexConnect.git"
+                            do shell script "mkdir /Applications/onlytemp"
+                            do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                            do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                            do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                            do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                            do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                            do shell script "rm -R /Applications/onlytemp"
+                            do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                            do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                            do shell script "sudoers.bash"
+                            do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                            do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+                            do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                            do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        end try
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1690,7 +1872,102 @@ do shell script "checkerbash.bash"
                         do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
-                        do shell script "installbash.bash"
+                        try
+                            do shell script "installbash.bash"
+                            onerror
+                            do shell script "cd /usr/local/git; rm -R OP" with administrator privileges
+                            display notification "Fixing error..." with title "OpenPlex Status"
+                            delay 1
+                            tell application "Finder"
+                                if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                                    do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.dmg"
+                                    else
+                                    do shell script ""
+                                end if
+                                if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                                    do shell script "cd /Applications; rm -R git-2.0.1-intel-universal-snow-leopard.pkg"
+                                    else
+                                    do shell script ""
+                                end if
+                            end tell
+                            do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.0.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.0.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.0.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.0.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.0.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    do shell script "echo install present"
+                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    try
+                                        do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                        do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                        do shell script "rm -R /Applications/PlexConnect"
+                                        onerror
+                                    end try
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect" of the startup disk) then
+                                    do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                                    do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                                    else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                                    do shell script "echo install not present"
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                                    do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                                    else if not (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "echo install not present"
+                                end if
+                            end tell
+                            do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                            do shell script "chmod 777 /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                            do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                            do shell script "rm /Applications/git-2.0.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                            display notification "Installing theme..." with title "PlexConnect Status"
+                            tell application "Finder"
+                                try
+                                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                        do shell script "stopbash.bash"
+                                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                        onerror
+                                    end if
+                                end try
+                            end tell
+                            delay 4
+                            tell application "Finder"
+                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    do shell script "trashbasebash.bash"
+                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    try
+                                        do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                        do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                        do shell script "rm -R /Applications/PlexConnect"
+                                        onerror
+                                    end try
+                                end if
+                            end tell
+                            tell application "Finder"
+                                if (exists folder "Applications:onlytemp" of the startup disk) then
+                                    do shell script "rm -R /Applications/onlytemp"
+                                end if
+                            end tell
+                            do shell script "cd /Applications; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                            do shell script "mkdir /Applications/onlytemp"
+                            do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                            do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                            do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                            do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                            do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                            do shell script "rm -R /Applications/onlytemp"
+                            do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                            do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                            do shell script "sudoers.bash"
+                            do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                            do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
+                            do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                            do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        end try
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
