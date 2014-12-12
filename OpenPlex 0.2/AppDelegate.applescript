@@ -938,7 +938,7 @@ do shell script "checkerbash.bash"
                             do shell script "installbash.bash"
                             onerror
                             do shell script "cd /usr/local/git; rm -R OP" with administrator privileges
-                            display notification "Installing git..." with title "OpenPlex Status"
+                            display notification "Fixing error..." with title "OpenPlex Status"
                             delay 1
                             tell application "Finder"
                                 if (exists file "Applications:git-2.0.1-intel-universal-snow-leopard.dmg" of the startup disk) then
