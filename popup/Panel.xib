@@ -153,7 +153,7 @@
                             <font key="font" metaFont="label"/>
                         </buttonCell>
                         <connections>
-                            <action selector="makeKeyAndOrderFront:" target="pJn-5B-TFo" id="pTO-YK-elf"/>
+                            <action selector="orderFront:" target="pJn-5B-TFo" id="NY8-WM-DMs"/>
                         </connections>
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tqw-Cw-oRb">
