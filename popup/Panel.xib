@@ -23,6 +23,7 @@
                 <outlet property="imovieProgressBar" destination="STe-li-arj" id="e5m-VR-9Jk"/>
                 <outlet property="stoffezProgressBar" destination="XHR-1W-cxu" id="FZp-o3-yF4"/>
                 <outlet property="trailersProgressBar" destination="kE3-DQ-NlO" id="Bhi-za-4Qg"/>
+                <outlet property="uninstallProgressBar" destination="1r4-wI-ok4" id="7p1-gL-3vI"/>
                 <outlet property="wsjProgressBar" destination="NQP-Qr-HWz" id="y82-kN-1hS"/>
             </connections>
         </customObject>
@@ -452,6 +453,10 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                     </button>
                                                     <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="xL3-CI-Stx">
                                                         <rect key="frame" x="18" y="6" width="68" height="12"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    </progressIndicator>
+                                                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="1r4-wI-ok4">
+                                                        <rect key="frame" x="124" y="6" width="68" height="12"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
                                                 </subviews>

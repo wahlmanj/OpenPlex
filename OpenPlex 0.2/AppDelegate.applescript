@@ -39,6 +39,8 @@ script AppDelegate
     property falcoProgressBar : missing value
     
     property iconProgressBar : missing value
+    
+    property uninstallProgressBar : missing value
 
     property theNext : ""
     
@@ -330,6 +332,10 @@ do shell script "checkerbash.bash"
       --Settings Tab
     
     on buttonhandleruninstall_(sender)
+        tell uninstallProgressBar to startAnimation:me -- another way
+        set animated to true
+        display notification "Uninstalling OpenPlex..." with title "OpenPlex Status"
+        delay 1
         do shell script "uninstallbash.bash"
     end buttonhandleruninstall_
     
