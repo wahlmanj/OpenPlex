@@ -270,10 +270,6 @@ script AppDelegate
         end tell
     end buttonhandlerstart_
     
-    on buttonhandlerchecker_(sender)
-do shell script "checkerbash.bash"
-            end buttonhandlerchecker_
-    
     on buttonhandlernewchecker_(sender)
         tell application "Finder"
             if (exists folder "Applications:PlexConnect" of the startup disk) then
@@ -348,7 +344,6 @@ do shell script "checkerbash.bash"
                 if (exists folder "Applications:OpenPlex" of the startup disk) then
                     set x to do shell script "cd /Applications/OpenPlex; git fetch; git merge origin"
                     if x is equal to "Already up-to-date." then
-                        
                         display notification "No app updates avaliable" with title "OpenPlex Status"
                         else if x is not equal to "Already up-to-date." then
                         try
@@ -2025,6 +2020,11 @@ do shell script "purgesettingsbash.bash"
                                             onerror
                                             end try
             end if
+            tell application "Finder"
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                end if
+            end tell
         end tell
         tell trailersProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -2103,6 +2103,11 @@ do shell script "purgesettingsbash.bash"
                                             onerror
                                             end try
             end if
+            tell application "Finder"
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                end if
+            end tell
         end tell
         tell imovieProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -2181,6 +2186,11 @@ do shell script "purgesettingsbash.bash"
                                             onerror
                                             end try
             end if
+            tell application "Finder"
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                end if
+            end tell
         end tell
         tell wsjProgressBar to stopAnimation:me -- another way
         set animated to false
