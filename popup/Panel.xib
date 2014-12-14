@@ -27,13 +27,13 @@
             </connections>
         </customObject>
         <window title="OpenPlex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="5" customClass="Panel">
-            <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES" texturedBackground="YES"/>
+            <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="162" y="101" width="172" height="219"/>
+            <rect key="contentRect" x="162" y="101" width="172" height="206"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="6" customClass="BackgroundView">
-                <rect key="frame" x="0.0" y="0.0" width="172" height="219"/>
+                <rect key="frame" x="0.0" y="0.0" width="172" height="206"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="4L3-hc-xfF">
@@ -179,7 +179,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="8"/>
             </connections>
-            <point key="canvasLocation" x="-568" y="-924.5"/>
+            <point key="canvasLocation" x="-568" y="-918"/>
         </window>
         <customObject id="140" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="141">
