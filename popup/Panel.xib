@@ -145,7 +145,7 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <button id="rYy-bx-Umk">
+                    <button toolTip="Settings" id="rYy-bx-Umk">
                         <rect key="frame" x="134" y="160" width="26" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSSmartBadgeTemplate" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="ZHY-Ls-Wl6">
@@ -161,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opicon_&lt;64x64&gt;" id="0PB-0T-TKi"/>
                     </imageView>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hwG-Yl-MeJ">
+                    <button toolTip="PlexConnect Status" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hwG-Yl-MeJ">
                         <rect key="frame" x="11" y="160" width="26" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="circular" image="status" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="CTE-xX-JXI">
@@ -429,7 +429,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                 <rect key="frame" x="1" y="1" width="210" height="58"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button toolTip="Check for updates " verticalHuggingPriority="750" id="NgL-xR-F4c">
+                                                    <button toolTip="Check for app updates " verticalHuggingPriority="750" id="NgL-xR-F4c">
                                                         <rect key="frame" x="18" y="18" width="68" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Update App" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LYr-ND-YsQ">
@@ -1269,7 +1269,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="buttonhandleruas:" target="139" id="dMB-CQ-8k6"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="Airplay to your mac" verticalHuggingPriority="750" id="MtO-qB-ti2">
+                                        <button verticalHuggingPriority="750" id="MtO-qB-ti2">
                                             <rect key="frame" x="319" y="54" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Airplay" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="l6S-Ym-FMn">
@@ -1280,7 +1280,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="makeKeyAndOrderFront:" target="s5f-fr-nxU" id="cTC-Fv-p9d"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="install a plist to enable automatic updates" verticalHuggingPriority="750" id="q3H-pc-Bzh">
+                                        <button verticalHuggingPriority="750" id="q3H-pc-Bzh">
                                             <rect key="frame" x="17" y="93" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Auto Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q0u-v8-0Ta">
@@ -1291,7 +1291,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="buttonhandlerautoupdate:" target="139" id="RuA-Dm-COZ"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="10.6 cutom plist" verticalHuggingPriority="750" id="W4d-zx-tld">
+                                        <button verticalHuggingPriority="750" id="W4d-zx-tld">
                                             <rect key="frame" x="17" y="54" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Custom Plist" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kAm-ou-bsd">
@@ -1313,7 +1313,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="buttonhandlerplexweb:" target="139" id="GYa-yX-YZu"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="Set PlexConnect log to high" verticalHuggingPriority="750" id="4Gn-3f-x1g">
+                                        <button verticalHuggingPriority="750" id="4Gn-3f-x1g">
                                             <rect key="frame" x="319" y="167" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Log High" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sSk-F9-zee">
@@ -1324,7 +1324,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="buttonhandlerloghigh:" target="139" id="52u-gc-Zlt"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="iOS 8 fix for aTV" verticalHuggingPriority="750" id="PZX-ao-kgQ">
+                                        <button verticalHuggingPriority="750" id="PZX-ao-kgQ">
                                             <rect key="frame" x="17" y="167" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Mute Boot" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hSb-BE-jAG">
@@ -1380,7 +1380,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button toolTip="Upload Custom Plex Icon" verticalHuggingPriority="750" id="jwn-u1-tH7">
+                                        <button verticalHuggingPriority="750" id="jwn-u1-tH7">
                                             <rect key="frame" x="17" y="131" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Plex Icon" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qvg-fb-Saq">
@@ -1391,7 +1391,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="makeKeyAndOrderFront:" target="RUh-JC-ccg" id="kVy-3A-Inn"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="Set PlexConnect log to normal" verticalHuggingPriority="750" id="ev7-Bw-olB">
+                                        <button verticalHuggingPriority="750" id="ev7-Bw-olB">
                                             <rect key="frame" x="319" y="205" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Log Normal" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cuD-qd-uwb">
@@ -1458,7 +1458,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button toolTip="Airplay to your mac" verticalHuggingPriority="750" id="BHg-l9-ffN">
+                                        <button verticalHuggingPriority="750" id="BHg-l9-ffN">
                                             <rect key="frame" x="319" y="14" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Default Load" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ttC-OK-9GM">
@@ -1469,7 +1469,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                                 <action selector="buttonhandlerautocertsremove:" target="139" id="g2b-Oq-sgY"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="10.6 cutom plist" verticalHuggingPriority="750" id="JEK-rO-iam">
+                                        <button verticalHuggingPriority="750" id="JEK-rO-iam">
                                             <rect key="frame" x="17" y="14" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Auto Load" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3up-F9-FBr">
