@@ -28,13 +28,13 @@
             </connections>
         </customObject>
         <window title="OpenPlex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="5" customClass="Panel">
-            <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES" texturedBackground="YES"/>
+            <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="162" y="101" width="172" height="219"/>
+            <rect key="contentRect" x="162" y="101" width="172" height="198"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="6" customClass="BackgroundView">
-                <rect key="frame" x="0.0" y="0.0" width="172" height="219"/>
+                <rect key="frame" x="0.0" y="0.0" width="172" height="198"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" borderType="line" id="4L3-hc-xfF">
@@ -146,7 +146,7 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <button id="rYy-bx-Umk">
-                        <rect key="frame" x="135" y="174" width="26" height="18"/>
+                        <rect key="frame" x="134" y="160" width="26" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSSmartBadgeTemplate" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="ZHY-Ls-Wl6">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -156,13 +156,13 @@
                             <action selector="makeKeyAndOrderFront:" target="pJn-5B-TFo" id="CUb-8V-Ls1"/>
                         </connections>
                     </button>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tqw-Cw-oRb">
-                        <rect key="frame" x="53" y="135" width="64" height="64"/>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ppG-hd-pys">
+                        <rect key="frame" x="61" y="135" width="48" height="48"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opicon_&lt;64x64&gt;" id="sky-0K-Arl"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="opicon_&lt;64x64&gt;" id="0PB-0T-TKi"/>
                     </imageView>
                     <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hwG-Yl-MeJ">
-                        <rect key="frame" x="11" y="174" width="26" height="18"/>
+                        <rect key="frame" x="11" y="160" width="26" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="circular" image="status" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="CTE-xX-JXI">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -180,7 +180,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="8"/>
             </connections>
-            <point key="canvasLocation" x="-568" y="-924.5"/>
+            <point key="canvasLocation" x="-1194" y="-1161"/>
         </window>
         <customObject id="140" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="141">
@@ -1829,7 +1829,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-785" y="-558.5"/>
+            <point key="canvasLocation" x="-744" y="-1105.5"/>
         </window>
         <window title="Airplay to your mac!" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="s5f-fr-nxU">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2116,7 +2116,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-674.5" y="-143"/>
+            <point key="canvasLocation" x="-1087.5" y="-671"/>
         </window>
         <drawer trailingOffset="15" id="WpU-ee-Wam">
             <size key="contentSize" width="100" height="100"/>
