@@ -370,14 +370,14 @@ script AppDelegate
                                 do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                                 onerror
                                 do shell script "rm -R /Applications/OpenPlex" with administrator privileges
-                                do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
+                                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                             end try
                         end if
                         else if not (exists folder "Applications:OpenPlex" of the startup disk) then
                         display notification "OpenPlex update available...Downloading" with title "OpenPlex Status"
                         delay 1
                         do shell script "updatewcbash.bash"
-                        do shell script "cd /Applications; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                         
                     end if
                 end tell
@@ -450,12 +450,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/iBaa/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -706,12 +706,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/iBaa/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -992,12 +992,12 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                     end if
                 end tell
-                do shell script "cd /Applications; git clone https://github.com/iBaa/PlexConnect.git"
+                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
                 do shell script "mkdir /Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -1240,12 +1240,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/falco953/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/falco953/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -1498,12 +1498,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/falco953/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/falco953/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -1784,12 +1784,12 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                     end if
                 end tell
-                do shell script "cd /Applications; git clone https://github.com/falco953/PlexConnect.git"
+                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/falco953/PlexConnect.git"
                 do shell script "mkdir /Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -2032,12 +2032,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/stoffez/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/stoffez/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -2290,12 +2290,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/stoffez/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/stoffez/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -2576,12 +2576,12 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                     end if
                 end tell
-                do shell script "cd /Applications; git clone https://github.com/stoffez/PlexConnect.git"
+                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/stoffez/PlexConnect.git"
                 do shell script "mkdir /Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -2824,12 +2824,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/CyberGhost84/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
@@ -3082,12 +3082,12 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "cd /Applications; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/CyberGhost84/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/PlexConnect/update/OSX"
                         do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                         do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -3368,12 +3368,12 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                     end if
                 end tell
-                do shell script "cd /Applications; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/CyberGhost84/PlexConnect.git"
                 do shell script "mkdir /Applications/onlytemp"
                 do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/PlexConnect/update/OSX"
                 do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
                 do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
                 do shell script "rm -R /Applications/onlytemp"
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
@@ -4164,7 +4164,7 @@ script AppDelegate
     on buttonhandlercustomplist_(sender)
         try
             do shell script "mkdir /Applications/onlytemp"
-            do shell script "cd /Applications/onlytemp; git clone https://github.com/wahlmanj/PlexConnect.git"
+            do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
             do shell script "chmod +x /Applications/onlytemp/PlexConnect/update/OSX/start.bash" with administrator privileges
             do shell script "chmod +x /Applications/onlytemp/PlexConnect/update/OSX/stop.bash" with administrator privileges
             do shell script "chmod +x /Applications/onlytemp/PlexConnect/update/OSX/startbash.bash" with administrator privileges
@@ -4213,7 +4213,7 @@ script AppDelegate
     
     on buttonhandleruas_(sender)
         try
-            do shell script "PATH=/usr/local/git/bin:/usr/bin export PATH; cd /Applications; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
+            do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/unsupported.git"
         end try
         do shell script "chmod +x /applications/unsupported/unsupported.bash" with administrator privileges
         do shell script "/applications/unsupported/unsupported.bash" with administrator privileges
