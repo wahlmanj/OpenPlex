@@ -4266,6 +4266,7 @@ script AppDelegate
     
     on buttonhandlerupdatecode_(sender)
         do shell script "updatewcbash.bash"
+        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
         try
             display notification "WebConnect Views Updated..." with title "OpenPlex Status"
             onerror
