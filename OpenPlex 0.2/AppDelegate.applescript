@@ -450,7 +450,6 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
-                        do shell script "purgesettingsbash.bash"
                         do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
@@ -720,8 +719,7 @@ script AppDelegate
                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                         do shell script "sudoers.bash"
                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                        do shell script "purgesettingsbash.bash"
                         do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -1006,8 +1004,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                do shell script "purgesettingsbash.bash"
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -1513,8 +1510,7 @@ script AppDelegate
                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                         do shell script "sudoers.bash"
                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                        do shell script "purgesettingsbash.bash"
                         do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -1799,8 +1795,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                do shell script "purgesettingsbash.bash"
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -2306,8 +2301,7 @@ script AppDelegate
                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                         do shell script "sudoers.bash"
                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                        do shell script "purgesettingsbash.bash"
                         do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -2592,8 +2586,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                do shell script "purgesettingsbash.bash"
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -3099,8 +3092,7 @@ script AppDelegate
                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                         do shell script "sudoers.bash"
                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                        do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                        do shell script "purgesettingsbash.bash"
                         do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -3385,8 +3377,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                do shell script "cp /Applications/Plexconnect/update/OSX/fixuser.bash /usr/bin" with administrator privileges
-                do shell script "chmod +x /usr/bin/fixuser.bash" with administrator privileges
+                do shell script "purgesettingsbash.bash"
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
