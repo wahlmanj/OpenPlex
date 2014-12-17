@@ -450,6 +450,7 @@ script AppDelegate
                                 do shell script "rm -R /Applications/onlytemp"
                             end if
                         end tell
+                        do shell script "purgesettingsbash.bash"
                         do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
                         do shell script "mkdir /Applications/onlytemp"
                         do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
@@ -460,6 +461,7 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
                         do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+                        do shell script "purgesettingsbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1250,6 +1252,7 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
                         do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+                        do shell script "purgesettingsbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -2042,6 +2045,7 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
                         do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+                        do shell script "purgesettingsbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -2834,6 +2838,7 @@ script AppDelegate
                         do shell script "rm -R /Applications/onlytemp"
                         do shell script "installbash.bash"
                         do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+                        do shell script "purgesettingsbash.bash"
                         tell application "Finder"
                             if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
