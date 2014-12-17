@@ -66,7 +66,7 @@ script AppDelegate
     on buttonhandlerupdate_(sender)
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                set x to do shell script "cd /Applications/PlexConnect; git fetch; git merge origin"
+                set x to do shell script "cd /Applications/PlexConnect; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git fetch; git merge origin"
                 if x is equal to "Already up-to-date." then
                     display notification "No updates avaliable" with title "PlexConnect Status"
                     else if x is not equal to "Already up-to-date." then
@@ -332,7 +332,7 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:OpenPlex" of the startup disk) then
-                        set x to do shell script "cd /Applications/OpenPlex; git fetch; git merge origin"
+                        set x to do shell script "cd /Applications/OpenPlex; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git fetch; git merge origin"
                         if x is equal to "Already up-to-date." then
                             display notification "No app updates avaliable" with title "OpenPlex Status"
                             else if x is not equal to "Already up-to-date." then
@@ -4209,7 +4209,7 @@ script AppDelegate
     
     on buttonhandleruas_(sender)
         try
-            do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/unsupported.git"
+            do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
         end try
         do shell script "chmod +x /applications/unsupported/unsupported.bash" with administrator privileges
         do shell script "/applications/unsupported/unsupported.bash" with administrator privileges
