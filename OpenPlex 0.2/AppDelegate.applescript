@@ -317,6 +317,18 @@ script AppDelegate
     
     --Settings Tab
     
+    on buttonhandlerinstalldark_(sender)
+    do shell script "defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true" with administrator privileges
+    tell application "System Events" to log out
+    display notification "Log out to enable Dark Mode..." with title "OpenPlex Status"
+    end buttonhandlerinstalldark_
+    
+    on buttonhandlerdarkmode_(sender)
+    tell application "System Events"
+        keystroke "t" using {command down, option down, control down}
+    end tell
+    end buttonhandlerdarkmode_
+        
     on buttonhandleruninstall_(sender)
         tell uninstallProgressBar to startAnimation:me -- another way
         set animated to true
