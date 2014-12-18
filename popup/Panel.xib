@@ -502,7 +502,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="HjF-PC-EA2">
+                                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="HjF-PC-EA2">
                                                         <rect key="frame" x="171" y="8" width="18" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <shadow key="shadow">
@@ -516,7 +516,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <action selector="buttonhandlerdark:" target="139" id="HDu-MD-iFa"/>
                                                         </connections>
                                                     </button>
-                                                    <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Wql-gp-k40">
+                                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Wql-gp-k40">
                                                         <rect key="frame" x="119" y="8" width="18" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <shadow key="shadow">
