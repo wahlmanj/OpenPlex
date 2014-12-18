@@ -3,8 +3,8 @@
 #import "StatusItemView.h"
 #import "MenubarController.h"
 
-#define OPEN_DURATION .3
-#define CLOSE_DURATION .3
+#define OPEN_DURATION .1
+#define CLOSE_DURATION .1
 
 #define SEARCH_INSET 17
 
