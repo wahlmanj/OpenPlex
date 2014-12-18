@@ -63,10 +63,6 @@ script AppDelegate
     
     --Menubar
     
-    on buttonhandlerdark_(sender)
-       do shell script "dark-mode"
-    end buttonhandlerdark_
-    
     on buttonhandlerupdate_(sender)
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -320,6 +316,14 @@ script AppDelegate
     end buttonhandlerlog_
     
     --Settings Tab
+    
+    on buttonhandlerdarklight_(sender)
+        do shell script "dark-mode --mode Light"
+    end buttonhandlerdarklight_
+    
+    on buttonhandlerdark_(sender)
+        do shell script "dark-mode --mode Dark"
+    end buttonhandlerdark_
     
     on buttonhandleruninstall_(sender)
         tell uninstallProgressBar to startAnimation:me -- another way

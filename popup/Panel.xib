@@ -513,7 +513,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerdark:" target="139" id="SI4-CW-lna"/>
+                                                            <action selector="buttonhandlerdark:" target="139" id="HDu-MD-iFa"/>
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Wql-gp-k40">
@@ -527,7 +527,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerdark:" target="139" id="9L9-23-pIv"/>
+                                                            <action selector="buttonhandlerdarklight:" target="139" id="yYy-DM-QsA"/>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="xeA-EB-klK">
