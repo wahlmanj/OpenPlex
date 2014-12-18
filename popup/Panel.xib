@@ -465,14 +465,14 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box autoresizesSubviews="NO" borderType="line" id="07d-8i-BdA">
-                                            <rect key="frame" x="327" y="22" width="212" height="86"/>
+                                            <rect key="frame" x="330" y="33" width="212" height="62"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="210" height="70"/>
+                                                <rect key="frame" x="1" y="1" width="210" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" id="zpk-XP-fuV">
-                                                        <rect key="frame" x="107" y="36" width="43" height="25"/>
+                                                        <rect key="frame" x="107" y="12" width="43" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="On" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Amv-fA-C3Y">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -483,7 +483,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" id="L2E-Of-cTE">
-                                                        <rect key="frame" x="159" y="36" width="43" height="25"/>
+                                                        <rect key="frame" x="159" y="12" width="43" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kcQ-V6-uFX">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -494,46 +494,9 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="LGW-ft-UYl">
-                                                        <rect key="frame" x="11" y="42" width="89" height="14"/>
+                                                        <rect key="frame" x="11" y="18" width="89" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open at Login :" id="q12-MZ-Esh">
-                                                            <font key="font" metaFont="smallSystem"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <button toolTip="Dark Mode on" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="HjF-PC-EA2">
-                                                        <rect key="frame" x="171" y="14" width="18" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <shadow key="shadow">
-                                                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </shadow>
-                                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="StatusHighlighted" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="bfX-pv-Ctu">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerdark:" target="139" id="HDu-MD-iFa"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button toolTip="Dark Mode off" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Wql-gp-k40">
-                                                        <rect key="frame" x="119" y="14" width="18" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <shadow key="shadow">
-                                                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </shadow>
-                                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="oldStatus" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="jdP-gt-uld">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerdarklight:" target="139" id="yYy-DM-QsA"/>
-                                                        </connections>
-                                                    </button>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="xeA-EB-klK">
-                                                        <rect key="frame" x="11" y="16" width="74" height="14"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Dark Mode :" id="hU0-g4-ufd">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -584,9 +547,9 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bMo-mi-bh4">
-                                            <rect key="frame" x="464" y="-3" width="74" height="21"/>
+                                            <rect key="frame" x="474" y="-3" width="65" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" Version 0.3.6" id="rmh-XM-sWI">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" Version 0.4" id="rmh-XM-sWI">
                                                 <font key="font" size="11" name="HelveticaNeue-Bold"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1738,9 +1701,9 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Hos-pr-O7t">
-                                            <rect key="frame" x="100" y="78" width="93" height="21"/>
+                                            <rect key="frame" x="102" y="78" width="81" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" Version 0.3.6" id="Q2v-UQ-0dK">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" Version 0.4" id="Q2v-UQ-0dK">
                                                 <font key="font" size="14" name="HelveticaNeue-Bold"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2552,7 +2515,6 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
         <image name="IMG_4223" width="3264" height="2448"/>
         <image name="NSSmartBadgeTemplate" width="14" height="14"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
-        <image name="StatusHighlighted" width="18" height="18"/>
         <image name="Trailers" width="188" height="108"/>
         <image name="WSJ" width="188" height="108"/>
         <image name="WebConnect" width="512" height="512"/>
@@ -2563,7 +2525,6 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
         <image name="grey" width="188" height="108"/>
         <image name="iMovie" width="188" height="108"/>
         <image name="logplex" width="36.479999542236328" height="36"/>
-        <image name="oldStatus" width="18" height="18"/>
         <image name="opicon_&lt;128x128&gt;" width="128" height="128"/>
         <image name="opicon_&lt;64x64&gt;" width="64" height="64"/>
         <image name="paypal-donate-button" width="500" height="117"/>

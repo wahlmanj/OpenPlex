@@ -1,6 +1,6 @@
 --
 --  AppDelegate.applescript
---  OpenPlex 0.3.6
+--  OpenPlex 0.4
 --
 --  Originally designed by iCyberGhost on 5/02/14.
 --  Originally coded by Wahlman.j on 5/02/14.
@@ -316,14 +316,6 @@ script AppDelegate
     end buttonhandlerlog_
     
     --Settings Tab
-    
-    on buttonhandlerdarklight_(sender)
-        do shell script "dark-mode --mode Light"
-    end buttonhandlerdarklight_
-    
-    on buttonhandlerdark_(sender)
-        do shell script "dark-mode --mode Dark"
-    end buttonhandlerdark_
     
     on buttonhandleruninstall_(sender)
         tell uninstallProgressBar to startAnimation:me -- another way
