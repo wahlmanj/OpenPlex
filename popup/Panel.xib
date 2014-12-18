@@ -465,14 +465,14 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box autoresizesSubviews="NO" borderType="line" id="07d-8i-BdA">
-                                            <rect key="frame" x="327" y="33" width="212" height="62"/>
+                                            <rect key="frame" x="327" y="15" width="212" height="80"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="210" height="46"/>
+                                                <rect key="frame" x="1" y="1" width="210" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" id="zpk-XP-fuV">
-                                                        <rect key="frame" x="107" y="12" width="43" height="25"/>
+                                                        <rect key="frame" x="107" y="30" width="43" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="On" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Amv-fA-C3Y">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -483,7 +483,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" id="L2E-Of-cTE">
-                                                        <rect key="frame" x="159" y="12" width="43" height="25"/>
+                                                        <rect key="frame" x="159" y="30" width="43" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kcQ-V6-uFX">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -494,9 +494,46 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="LGW-ft-UYl">
-                                                        <rect key="frame" x="11" y="18" width="89" height="14"/>
+                                                        <rect key="frame" x="11" y="36" width="89" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open at Login :" id="q12-MZ-Esh">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="HjF-PC-EA2">
+                                                        <rect key="frame" x="171" y="8" width="18" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <shadow key="shadow">
+                                                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </shadow>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="StatusHighlighted" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="bfX-pv-Ctu">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="buttonhandlerdark:" target="139" id="SI4-CW-lna"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Wql-gp-k40">
+                                                        <rect key="frame" x="119" y="8" width="18" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <shadow key="shadow">
+                                                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </shadow>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Status" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="jdP-gt-uld">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="buttonhandlerdark:" target="139" id="9L9-23-pIv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="xeA-EB-klK">
+                                                        <rect key="frame" x="11" y="10" width="74" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Dark Mode :" id="hU0-g4-ufd">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2515,6 +2552,8 @@ Step 6:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
         <image name="IMG_4223" width="3264" height="2448"/>
         <image name="NSSmartBadgeTemplate" width="14" height="14"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
+        <image name="Status" width="18" height="18"/>
+        <image name="StatusHighlighted" width="18" height="18"/>
         <image name="Trailers" width="188" height="108"/>
         <image name="WSJ" width="188" height="108"/>
         <image name="WebConnect" width="512" height="512"/>

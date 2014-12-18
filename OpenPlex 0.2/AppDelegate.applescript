@@ -63,6 +63,10 @@ script AppDelegate
     
     --Menubar
     
+    on buttonhandlerdark_(sender)
+       do shell script "dark-mode"
+    end buttonhandlerdark_
+    
     on buttonhandlerupdate_(sender)
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then

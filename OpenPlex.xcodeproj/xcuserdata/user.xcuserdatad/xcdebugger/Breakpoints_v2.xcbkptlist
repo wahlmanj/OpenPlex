@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OpenPlex 0.2/AppDelegate.applescript"
-            timestampString = "439791348.776837"
+            timestampString = "440606011.732263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "on buttonhandlerstart_(sender)"
             landmarkType = "5">
          </BreakpointContent>
