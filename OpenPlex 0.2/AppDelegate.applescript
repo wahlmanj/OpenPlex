@@ -349,9 +349,9 @@ script AppDelegate
                          --  display notification "No app updates avaliable" with title "OpenPlex Status"
                            -- else if x is not equal to "Already up-to-date." then
                            if (exists folder "Applications:OpenPlex" of the startup disk) then
+                               do shell script "cd /Applications/OpenPlex; git remote update"
                            set x to do shell script "appupdatebash.bash"
-                           if x is equal to "Fetching origin
-                           Need to pull" then
+                           if x is equal to "pull" then
                             try
                                 display notification "OpenPlex update available..." with title "OpenPlex Status"
                                 delay 1
@@ -388,8 +388,7 @@ script AppDelegate
                                 do shell script "rm -R /Applications/OpenPlex" with administrator privileges
                                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                             end try
-                           else if x is not equal to "Fetching origin
-                           Need to pull" then
+                           else if x is not equal to "pull" then
                            display notification "No app updates avaliable" with title "OpenPlex Status"
                         end if
                         else if not (exists folder "Applications:OpenPlex" of the startup disk) then
