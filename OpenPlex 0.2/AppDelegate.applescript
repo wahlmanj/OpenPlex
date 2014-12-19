@@ -388,13 +388,15 @@ script AppDelegate
                                 do shell script "rm -R /Applications/OpenPlex" with administrator privileges
                                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                             end try
+                           else if x is not equal to "Fetching origin
+                           Need to pull" then
+                           display notification "No app updates avaliable" with title "OpenPlex Status"
                         end if
                         else if not (exists folder "Applications:OpenPlex" of the startup disk) then
                         display notification "OpenPlex update available..." with title "OpenPlex Status"
                         delay 1
                         do shell script "updatewcbash.bash; cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
-                        
                     end if
                 end tell
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
