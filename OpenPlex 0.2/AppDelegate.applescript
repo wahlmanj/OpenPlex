@@ -352,9 +352,10 @@ script AppDelegate
                                do shell script "cd /Applications/OpenPlex; git remote update"
                            set x to do shell script "appupdatebash.bash"
                            if x is equal to "pull" then
+                               delay 1
+                               display notification "OpenPlex update available..." with title "OpenPlex Status"
+                               delay 1
                             try
-                                display notification "OpenPlex update available..." with title "OpenPlex Status"
-                                delay 1
                                 tell application "Finder"
                                     if (exists file "Applications:OpenPlex:10.6:OpenPlex.app" of the startup disk) then
                                         try
