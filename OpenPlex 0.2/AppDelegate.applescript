@@ -317,6 +317,12 @@ script AppDelegate
     
     --Settings Tab
     
+    on buttonhandlervideotut_(sender)
+        set theURL to "https://www.youtube.com/watch?v=upEE9JghOcw"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "show Safari"
+    end buttonhandlervideotut_
+    
     on buttonhandlerinstalldark_(sender)
     do shell script "defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true" with administrator privileges
     tell application "System Events" to log out
@@ -343,11 +349,6 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
-                    -- if (exists folder "Applications:OpenPlex" of the startup disk) then
-                      -- set x to do shell script "cd /Applications/OpenPlex; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git fetch; git merge origin"
-                       -- if x is equal to "Already up-to-date." then
-                         --  display notification "No app updates avaliable" with title "OpenPlex Status"
-                           -- else if x is not equal to "Already up-to-date." then
                            if (exists folder "Applications:OpenPlex" of the startup disk) then
                                do shell script "cd /Applications/OpenPlex; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git remote update"
                            set x to do shell script "appupdatebash.bash"
@@ -406,14 +407,6 @@ script AppDelegate
         tell appupdateProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlernewupdateoc_
-    
-    on buttonhandlerupdateoc_(sender)
-        tell appupdateProgressBar to startAnimation:me -- another way
-        set animated to true
-        do shell script "updatewcbash.bash"
-        do shell script "10.6bash.bash"
-        do shell script "quit.bash"
-    end buttonhandlerupdateoc_
     
     on buttonhandlerloginon_(sender)
         display notification "OpenPlex added to login items..." with title "OpenPlex Status"
@@ -684,7 +677,6 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -964,9 +956,7 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
-
                     end if
                 end tell
                 
@@ -985,7 +975,7 @@ script AppDelegate
                         do shell script ""
                     end if
                 end tell
-                do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.2.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
                 do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -1267,7 +1257,6 @@ script AppDelegate
                             do shell script ""
                         end if
                     end try
-                    do shell script "purgesettingsbash.bash"
                 end tell
 
             end if
@@ -1529,7 +1518,6 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -1809,7 +1797,6 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
 
                     end if
@@ -1830,7 +1817,7 @@ script AppDelegate
                         do shell script ""
                     end if
                 end tell
-                do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.2.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
                 do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -2112,7 +2099,6 @@ script AppDelegate
                             do shell script ""
                         end if
                     end try
-                    do shell script "purgesettingsbash.bash"
                 end tell
 
             end if
@@ -2374,7 +2360,6 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -2654,7 +2639,6 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
 
                     end if
@@ -2675,7 +2659,7 @@ script AppDelegate
                         do shell script ""
                     end if
                 end tell
-                do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.2.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
                 do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -2957,7 +2941,6 @@ script AppDelegate
                             do shell script ""
                         end if
                     end try
-                    do shell script "purgesettingsbash.bash"
                 end tell
 
             end if
@@ -3219,7 +3202,6 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
                         
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -3499,7 +3481,6 @@ script AppDelegate
                                     do shell script ""
                                 end if
                             end try
-                            do shell script "purgesettingsbash.bash"
                         end tell
 
                     end if
@@ -3520,7 +3501,7 @@ script AppDelegate
                         do shell script ""
                     end if
                 end tell
-                do shell script "cd /Applications; curl -O http://193.1.193.64/disk1/download.sourceforge.net/pub/sourceforge/g/gi/git-osx-installer/git-2.2.1-intel-universal-snow-leopard.dmg; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal" with administrator privileges
+                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
                 do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -3802,7 +3783,6 @@ script AppDelegate
                             do shell script ""
                         end if
                     end try
-                    do shell script "purgesettingsbash.bash"
                 end tell
 
             end if
@@ -4294,13 +4274,12 @@ script AppDelegate
         try
             set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
             set theLocalNode to the last word of theIP
+            set tURL to "http://" & theLocalNode & ":32400/web/index.html#!/dashboard"
+            tell application "Safari" to make new document with properties {URL:tURL}
+            do shell script "show Safari"
             on error
-            set theLocalNode to "Can't get Local IP"
+            display notification "Can't get Local IP..." with title "OpenPlex Status"
         end try
-        
-        set tURL to "http://" & theLocalNode & ":32400/web/index.html#!/dashboard"
-        tell application "Safari" to make new document with properties {URL:tURL}
-        do shell script "show Safari"
     end buttonhandlerplexweb_
     
     on buttonhandlerios7greyplexicon_(sender)
@@ -4536,7 +4515,7 @@ script AppDelegate
     on buttonhandlerroadmap_(sender)
         set theURL to "https://github.com/iBaa/PlexConnect/wiki/Roadmap"
         tell application "Safari" to make new document with properties {URL:theURL}
-    end buttonhandlerOProadmap_
+    end buttonhandlerroadmap_
     
     on buttonhandlerOPforum_(sender)
         set theURL to "https://forums.plex.tv/index.php/topic/108332-openplex-osx-app/"
@@ -4546,7 +4525,7 @@ script AppDelegate
     on buttonhandlerOPwiki_(sender)
         set theURL to "https://github.com/wahlmanj/OpenPlex/wiki"
         tell application "Safari" to make new document with properties {URL:theURL}
-    end buttonhandlerwiki_
+    end buttonhandlerOPwiki_
     
     on buttonhandlerOProadmap_(sender)
         set theURL to "https://github.com/wahlmanj/OpenPlex/wiki/Roadmap"
@@ -4560,6 +4539,12 @@ script AppDelegate
         tell application "Safari" to make new document with properties {URL:theURL}
         do shell script "show Safari"
     end buttonhandlerdonate_
+    
+    on buttonhandlerOPchangelog_(sender)
+        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki/Changelog"
+        tell application "Safari" to make new document with properties {URL:theURL}
+    end buttonhandlerOPchangelog_
+    
     
     --Other Scripts
     
