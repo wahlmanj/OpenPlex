@@ -278,12 +278,14 @@ script AppDelegate
             end if
         end tell
         tell application "Finder"
-            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                try
-                    do shell script "restartbash.bash"
-                    onerror
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end try
+            if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                tell application "Finder"
+                    if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                        display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                    end if
+                end tell
+                else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
         try
@@ -304,11 +306,6 @@ script AppDelegate
                 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
             end if
         end try
-        tell application "Finder"
-            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-            end if
-        end tell
     end buttonhandlernewchecker_
     
     on buttonhandlerlog_(sender)
@@ -3872,11 +3869,13 @@ script AppDelegate
                 
                 tell application "Finder"
                     if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                        else
-                        try
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                            onerror
-                        end try
+                        tell application "Finder"
+                            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                                display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                            end if
+                        end tell
+                        else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
                 
@@ -3886,11 +3885,7 @@ script AppDelegate
                     onerror
                 end try
             end if
-            tell application "Finder"
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
-            end tell
+
         end tell
         tell trailersProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -3955,11 +3950,13 @@ script AppDelegate
                 
                 tell application "Finder"
                     if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                        else
-                        try
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                            onerror
-                        end try
+                        tell application "Finder"
+                            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                                display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                            end if
+                        end tell
+                        else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
                 
@@ -3969,11 +3966,6 @@ script AppDelegate
                     onerror
                 end try
             end if
-            tell application "Finder"
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
-            end tell
         end tell
         tell imovieProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -4038,11 +4030,13 @@ script AppDelegate
                 
                 tell application "Finder"
                     if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                        else
-                        try
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                            onerror
-                        end try
+                        tell application "Finder"
+                            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                                display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                            end if
+                        end tell
+                        else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                     end if
                 end tell
                 
@@ -4052,11 +4046,6 @@ script AppDelegate
                     onerror
                 end try
             end if
-            tell application "Finder"
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
-            end tell
         end tell
         tell wsjProgressBar to stopAnimation:me -- another way
         set animated to false
