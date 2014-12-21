@@ -589,7 +589,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                         <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="zFE-iU-zYM">
                                             <rect key="frame" x="17" y="1" width="84" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="roundRect" title="Demo Video" bezelStyle="roundedRect" image="8B444961-DCC9-451F-A662-945BC384C180" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="4Ni-Zd-5sM">
+                                            <buttonCell key="cell" type="roundRect" title="Demo Video" bezelStyle="roundedRect" image="D9030B72-F1AA-4D10-8690-60A4A8EECAAC" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="4Ni-Zd-5sM">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
@@ -2565,7 +2565,7 @@ Step 7:   Once Plex Icon is "Stuck" on aTV reinstall your theme</string>
         </tabView>
     </objects>
     <resources>
-        <image name="8B444961-DCC9-451F-A662-945BC384C180" width="1" height="1">
+        <image name="D9030B72-F1AA-4D10-8690-60A4A8EECAAC" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
