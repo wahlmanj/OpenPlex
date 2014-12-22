@@ -4153,33 +4153,109 @@ script AppDelegate
         end tell
     end buttonhandlerloadbackupfanart_
     
-    on buttonhandlerbackupicons_(sender)
+    on buttonhandlerbackupATVSettings_(sender)
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect_BACKUP:flow" of the startup disk) then
-                do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/flow/* /Applications/plexconnect_BACKUP/flow"
-                do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/top/* /Applications/plexconnect_BACKUP/top"
-                else if not (exists folder "Applications:PlexConnect_BACKUP:flow" of the startup disk) then
-                try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP/top"
-                    do shell script "mkdir /Applications/plexconnect_BACKUP/flow"
-                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/flow/* /Applications/plexconnect_BACKUP/flow"
-                    do shell script "cp -R /Applications/PlexConnect/assets/templates/plex/images/custom/top/* /Applications/plexconnect_BACKUP/top"
-                    onerror
-                end try
+            if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
+                do shell script "cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP"
+                else if not (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
+                display notification "No ATVSettings.cfg present..." with title "OpenPlex Status"
             end if
         end tell
-    end buttonhandlerbackupicons_
+    end buttonhandlerbackupATVSettings_
     
-    on buttonhandlerloadicons_(sender)
+    on buttonhandlerloadATVSettings_(sender)
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:assets:templates:plex:images:custom:flow" of the startup disk) then
-                do shell script "cp -R /Applications/plexconnect_BACKUP/flow/* /Applications/PlexConnect/assets/templates/plex/images/custom/flow"
-                do shell script "cp -R /Applications/plexconnect_BACKUP/top/* /Applications/PlexConnect/assets/templates/plex/images/custom/top"
-                else if not (exists folder "Applications:PlexConnect:assets:templates:plex:images:custom:flow" of the startup disk) then
-                do shell script "echo not present"
+            if (exists file "Applications:plexconnect_BACKUP:ATVSettings.cfg" of the startup disk) then
+                display notification "Exit and/or Open aTV hijack to load PlexConnect Settings..." with title "OpenPlex Status"
+                delay 1
+                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect; startbash.bash"
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        else
+                        display notification "No Theme Installed..." with title "OpenPlex Status"
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                        tell application "Finder"
+                            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                                display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                            end if
+                        end tell
+                        else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                    end if
+                end tell
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "Shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is not "0" then
+                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                    end if
+                end try
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "serving\\|shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "3" then
+                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                    end if
+                end try
+                else if not (exists file "Applications:plexconnect_BACKUP:ATVSettings.cfg" of the startup disk) then
+                display notification "Backup ATVSettings.cfg first..." with title "OpenPlex Status"
             end if
         end tell
-    end buttonhandlerloadicons_
+    end buttonhandlerloadATVSettings_
+    
+    on buttonhandlerdeleteATVSettings_(sender)
+        tell application "Finder"
+            if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
+        display notification "Exit and/or Open aTV hijack to load default PlexConnect Settings..." with title "OpenPlex Status"
+        delay 1
+        do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; startbash.bash"
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect" of the startup disk) then
+                else
+                display notification "No Theme Installed..." with title "OpenPlex Status"
+            end if
+        end tell
+        tell application "Finder"
+            if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                tell application "Finder"
+                    if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                        display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                    end if
+                end tell
+                else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+            end if
+        end tell
+        try
+            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+            set theString to quoted form of "Shutting"
+            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+            if searchResult is not "0" then
+                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+            end if
+        end try
+        try
+            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+            set theString to quoted form of "serving\\|shutting"
+            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+            if searchResult is equal to "3" then
+                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+            end if
+        end try
+        else if not (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
+        display notification "No ATVSettings.cfg present..." with title "OpenPlex Status"
+            end if
+        end tell
+    end buttonhandlerdeleteATVSettings_
     
     on buttonhandlerbackupall_(sender)
         do shell script "backupbash.bash"
@@ -4198,9 +4274,9 @@ script AppDelegate
     end buttonhandlerrestoreall_
     
     on buttonhandlerbackupcerts_(sender)
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.cer /Applications/plexconnect_BACKUP" with administrator privileges
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.pem /Applications/plexconnect_BACKUP" with administrator privileges
-        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.key /Applications/plexconnect_BACKUP" with administrator privileges
+        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.cer /Applications/plexconnect_BACKUP"
+        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.pem /Applications/plexconnect_BACKUP"
+        do shell script "cp /Applications/PlexConnect/assets/certificates/trailers.key /Applications/plexconnect_BACKUP"
     end buttonhandlerbackupcerts_
     
     --Extras Tab
@@ -4245,11 +4321,13 @@ script AppDelegate
     
     on buttonhandlerautoupdate_(sender)
         do shell script "createautobash.bash"
-        try
             display notification "Automatic GitHub Updates Enabled..." with title "OpenPlex Status"
-            onerror
-        end try
     end buttonhandlerautoupdate_
+    
+    on buttonhandlerdefaultupdate_(sender)
+        do shell script "cd /Library/LaunchDaemons; launchctl unload com.plex.plexconnect.auto.plist; rm com.plex.plexconncet.auto.plist" with administrator privileges
+            display notification "Automatic GitHub Updates Disabled..." with title "OpenPlex Status"
+    end buttonhandlerdefaultupdate_
     
     on buttonhandlerloghigh_(sender)
         do shell script "cd /Applications/PlexConnect; sed -i '' 's/Normal/High/g' settings.cfg"
@@ -4458,8 +4536,7 @@ script AppDelegate
     end buttonhandlerinstallwc_
     
     on buttonhandlerinstallwc10_(sender)
-        tell WCProgressBar to startAnimation:me -- another way
-        set animated to true
+
         do shell script "cp /Applications/PlexConnect/update/OSX/10.10/httpd.conf /etc/apache2" with administrator privileges
         try
             do shell script "sudo apachectl start" with administrator privileges
@@ -4469,8 +4546,7 @@ script AppDelegate
             do shell script "sudo apachectl restart" with administrator privileges
             onerror
         end try
-        tell WCProgressBar to stopAnimation:me -- another way
-        set animated to false
+
     end buttonhandlerinstallwc10_
     
     on buttonhandlerwview_(sender)
@@ -4481,12 +4557,16 @@ script AppDelegate
     end buttonhandlerwcview_
     
     on buttonhandlerupdatecode_(sender)
+        tell WCProgressBar to startAnimation:me -- another way
+        set animated to true
         do shell script "updatewcbash.bash"
         do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
         try
             display notification "WebConnect Views Updated..." with title "OpenPlex Status"
             onerror
         end try
+        tell WCProgressBar to stopAnimation:me -- another way
+        set animated to false
     end buttonhandlerupdatecode_
     
     --About Tab
