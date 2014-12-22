@@ -4325,7 +4325,7 @@ script AppDelegate
     end buttonhandlerautoupdate_
     
     on buttonhandlerdefaultupdate_(sender)
-        do shell script "cd /Library/LaunchDaemons; launchctl unload com.plex.plexconnect.auto.plist; rm com.plex.plexconncet.auto.plist" with administrator privileges
+        do shell script "cd /Library/LaunchDaemons; launchctl unload com.plex.plexconnect.auto.plist; rm com.plex.plexconnect.auto.plist" with administrator privileges
             display notification "Automatic GitHub Updates Disabled..." with title "OpenPlex Status"
     end buttonhandlerdefaultupdate_
     
