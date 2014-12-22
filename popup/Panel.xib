@@ -440,7 +440,7 @@ Step 4:   Add this address to aTV to add your cert:</string>
                                                             <action selector="buttonhandlernewupdateoc:" target="139" id="hXk-jy-9UB"/>
                                                         </connections>
                                                     </button>
-                                                    <button toolTip="Unistall App" verticalHuggingPriority="750" id="BZe-0r-Dav">
+                                                    <button toolTip="Uninstall App" verticalHuggingPriority="750" id="BZe-0r-Dav">
                                                         <rect key="frame" x="124" y="18" width="68" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Uninstall" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HCX-jo-HcG">
@@ -589,7 +589,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                         <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="zFE-iU-zYM">
                                             <rect key="frame" x="17" y="1" width="84" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="roundRect" title="Demo Video" bezelStyle="roundedRect" image="316E0154-6F5D-4B01-890D-6E4E2EBCC0AC" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="4Ni-Zd-5sM">
+                                            <buttonCell key="cell" type="roundRect" title="Demo Video" bezelStyle="roundedRect" image="727A1DA3-9A33-4F94-A6D1-5C556C5AA3FD" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="4Ni-Zd-5sM">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
@@ -2575,7 +2575,7 @@ Step 8:   Reboot aTV to load remaining icons</string>
         </tabView>
     </objects>
     <resources>
-        <image name="316E0154-6F5D-4B01-890D-6E4E2EBCC0AC" width="1" height="1">
+        <image name="727A1DA3-9A33-4F94-A6D1-5C556C5AA3FD" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
