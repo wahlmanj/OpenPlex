@@ -485,18 +485,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -552,18 +540,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -617,18 +593,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -762,18 +726,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -831,18 +783,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -896,18 +836,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -1063,18 +991,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -1132,18 +1048,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -1197,18 +1101,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -1324,18 +1216,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -1393,18 +1273,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -1458,18 +1326,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -1603,18 +1459,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -1672,18 +1516,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -1737,18 +1569,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -1905,18 +1725,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -1974,18 +1782,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -2039,18 +1835,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -2166,18 +1950,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -2235,18 +2007,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -2300,18 +2060,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -2445,18 +2193,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -2514,18 +2250,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -2579,18 +2303,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -2747,18 +2459,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -2816,18 +2516,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -2881,18 +2569,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -3008,18 +2684,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -3077,18 +2741,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -3142,18 +2794,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -3287,18 +2927,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createimoviebash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -3356,18 +2984,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createcertbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -3421,18 +3037,6 @@ script AppDelegate
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                             do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "createplistbash.bash"
-                                            delay 6
-                                            do shell script "stopbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "startbash.bash"
-                                            delay 4
-                                            do shell script "createwsjbash.bash"
-                                            delay 4
-                                            do shell script "restartbash.bash"
                                             tell application "Finder"
                                                 if (exists folder "Applications:PlexConnect" of the startup disk) then
                                                     do shell script "echo install present"
@@ -3589,18 +3193,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createimoviebash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -3658,18 +3250,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createcertbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -3723,18 +3303,6 @@ script AppDelegate
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "createplistbash.bash"
-                                    delay 6
-                                    do shell script "stopbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "startbash.bash"
-                                    delay 4
-                                    do shell script "createwsjbash.bash"
-                                    delay 4
-                                    do shell script "restartbash.bash"
                                     tell application "Finder"
                                         if (exists folder "Applications:PlexConnect" of the startup disk) then
                                             do shell script "echo install present"
@@ -3815,18 +3383,6 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "createcertbash.bash"
-                delay 4
-                do shell script "createplistbash.bash"
-                delay 6
-                do shell script "stopbash.bash"
-                delay 4
-                do shell script "createcertbash.bash"
-                delay 4
-                do shell script "startbash.bash"
-                delay 4
-                do shell script "createcertbash.bash"
-                delay 4
-                do shell script "restartbash.bash"
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
                         do shell script "echo install present"
@@ -3896,18 +3452,6 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "createimoviebash.bash"
-                delay 4
-                do shell script "createplistbash.bash"
-                delay 6
-                do shell script "stopbash.bash"
-                delay 4
-                do shell script "createimoviebash.bash"
-                delay 4
-                do shell script "startbash.bash"
-                delay 4
-                do shell script "createimoviebash.bash"
-                delay 4
-                do shell script "restartbash.bash"
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
                         do shell script "echo install present"
@@ -3976,18 +3520,6 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 do shell script "createwsjbash.bash"
-                delay 4
-                do shell script "createplistbash.bash"
-                delay 6
-                do shell script "stopbash.bash"
-                delay 4
-                do shell script "createwsjbash.bash"
-                delay 4
-                do shell script "startbash.bash"
-                delay 4
-                do shell script "createwsjbash.bash"
-                delay 4
-                do shell script "restartbash.bash"
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
                         do shell script "echo install present"
