@@ -348,7 +348,7 @@ script AppDelegate
                 tell application "Finder"
                            if (exists folder "Applications:OpenPlex" of the startup disk) then
                                set x to do shell script "updateappbash.bash"
-                               if x is equal to "Already up-to-date." then
+                               if x is not equal to "Already up-to-date." then
                                delay 1
                                display notification "OpenPlex update available, Installing..." with title "OpenPlex Status"
                                delay 1
@@ -386,7 +386,7 @@ script AppDelegate
                                 do shell script "rm -R /Applications/OpenPlex" with administrator privileges
                                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                             end try
-                           else if x is not equal to "pull" then
+                           else if x is equal to "Already up-to-date." then
                            display notification "No app updates avaliable" with title "OpenPlex Status"
                         end if
                         else if not (exists folder "Applications:OpenPlex" of the startup disk) then
@@ -431,15 +431,13 @@ script AppDelegate
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            try
+                        try
+                            tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
                                 end if
-                            end try
-                        end tell
+                            end tell
+                        end try
                         tell application "Finder"
                             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                 do shell script "trashbasebash.bash"
@@ -473,437 +471,75 @@ script AppDelegate
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "icloud"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                        do shell script "createimoviebash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "trailers"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                        do shell script "createcertbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "marketwatch"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                        do shell script "createwsjbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "Shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is not "0" then
+                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "serving\\|shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is equal to "3" then
+                                        delay 0.1
+                                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                        delay 0.1
+                                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                    end if
+                                end try
+                                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                            end if
+                            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                             end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
                         end tell
-                        
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "echo install present"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                                do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
-                                do shell script "rm -R /Applications/onlytemp" with administrator privileges
-                                else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            try
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
-                                end if
-                            end try
-                        end tell
-                        delay 4
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "trashbasebash.bash"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "rm -R /Applications/onlytemp"
-                            end if
-                        end tell
-                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
-                        do shell script "mkdir /Applications/onlytemp"
-                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
-                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
-                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/onlytemp"
-                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "sudoers.bash"
-                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "purgesettingsbash.bash"
-                        do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
-                        tell application "Finder"
-                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
-                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                            end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                        end tell
                     end if
                 end tell
-                
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
-                display notification "Installing git..." with title "OpenPlex Status"
-                delay 1
-                tell application "Finder"
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
-                        else
-                        do shell script ""
-                    end if
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
-                        else
-                        do shell script ""
-                    end if
-                end tell
-                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
-                do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+            end if
+            end tell
+        
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "echo install present"
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
                             do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -918,7 +554,6 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
                         else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "echo install not present"
                     end if
                 end tell
                 tell application "Finder"
@@ -926,13 +561,8 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
                         do shell script "rm -R /Applications/onlytemp" with administrator privileges
                         else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                        do shell script "echo install not present"
                     end if
                 end tell
-                do shell script "chmod 777 /Applications/git-2.2.1-intel-universal-snow-leopard.pkg" with administrator privileges
-                do shell script "chmod 777 /Applications/git-2.2.1-intel-universal-snow-leopard.dmg" with administrator privileges
-                do shell script "rm /Applications/git-2.2.1-intel-universal-snow-leopard.pkg" with administrator privileges
-                do shell script "rm /Applications/git-2.2.1-intel-universal-snow-leopard.dmg" with administrator privileges
                 tell application "Finder"
                     try
                         if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -979,180 +609,231 @@ script AppDelegate
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                        else
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "icloud"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                do shell script "createimoviebash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "trailers"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                do shell script "createcertbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "marketwatch"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                do shell script "createwsjbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "Shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is not "0" then
+                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "serving\\|shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is equal to "3" then
+                                delay 0.1
+                                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                delay 0.1
+                                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                            end if
+                        end try
                     end if
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "icloud"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createimoviebash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            try
-                                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                onerror
-                                            end try
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "trailers"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createcertbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createwsjbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
                 end tell
-
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
+        
+            tell application "Finder"
+                if not (exists folder "usr:local:git:OP" of the startup disk) then
+                    display notification "Installing git..." with title "OpenPlex Status"
+                    delay 1
+                    tell application "Finder"
+                        if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                            do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
+                        end if
+                        if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                            do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
+                        end if
+                    end tell
+                    do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
+                    set fileAsPOSIX to (POSIX path of "/etc/paths")
+                    set theString to quoted form of "/usr/local/git/bin"
+                    try
+                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                        if searchResult is equal to "1" then
+                        end if
+                    end try
+                    try
+                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                        on error
+do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+                    end try
+                    tell application "Finder"
+                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            try
+                                do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                do shell script "rm -R /Applications/PlexConnect"
+                                onerror
+                            end try
+                        end if
+                    end tell
+                    tell application "Finder"
+                        if (exists folder "Applications:PlexConnect" of the startup disk) then
+                            do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                            do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                            else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                        end if
+                    end tell
+                    tell application "Finder"
+                        if (exists folder "Applications:onlytemp" of the startup disk) then
+                            do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                            do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                            else if not (exists folder "Applications:onlytemp" of the startup disk) then
+                        end if
+                    end tell
+                    do shell script "chmod 777 /Applications/git-2.2.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                    do shell script "chmod 777 /Applications/git-2.2.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                    do shell script "rm /Applications/git-2.2.1-intel-universal-snow-leopard.pkg" with administrator privileges
+                    do shell script "rm /Applications/git-2.2.1-intel-universal-snow-leopard.dmg" with administrator privileges
+                    tell application "Finder"
+                        try
+                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                do shell script "stopbash.bash"
+                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                onerror
+                            end if
+                        end try
+                    end tell
+                    delay 4
+                    tell application "Finder"
+                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            do shell script "trashbasebash.bash"
+                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            try
+                                do shell script "mkdir /Applications/plexconnect_BACKUP"
+                                do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                                do shell script "rm -R /Applications/PlexConnect"
+                                onerror
+                            end try
+                        end if
+                    end tell
+                    tell application "Finder"
+                        if (exists folder "Applications:onlytemp" of the startup disk) then
+                            do shell script "rm -R /Applications/onlytemp"
+                        end if
+                    end tell
+                    do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
+                    do shell script "mkdir /Applications/onlytemp"
+                    do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                    do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                    do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                    do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
+                    do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                    do shell script "rm -R /Applications/onlytemp"
+                    do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                    do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                    do shell script "sudoers.bash"
+                    do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                    do shell script "purgesettingsbash.bash"
+                    do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                    tell application "Finder"
+                        if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                            do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                            do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                            do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                            
+                            try
+                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                set theString to quoted form of "icloud"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                    do shell script "createimoviebash.bash"
+                                end if
+                            end try
+                            
+                            try
+                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                set theString to quoted form of "trailers"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                    do shell script "createcertbash.bash"
+                                end if
+                            end try
+                            
+                            try
+                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                set theString to quoted form of "marketwatch"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                    do shell script "createwsjbash.bash"
+                                end if
+                            end try
+                            
+                            try
+                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                set theString to quoted form of "Shutting"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is not "0" then
+                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                                end if
+                            end try
+                            
+                            try
+                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                set theString to quoted form of "serving\\|shutting"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is equal to "3" then
+                                    delay 0.1
+                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                    delay 0.1
+                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                end if
+                            end try
+                        end if
+                    end tell
+                    else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                    end if
+                    if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                    end if
+            end tell
         tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerclone_
-    
+
     on buttonhandlerfalco_(sender)
         tell falcoProgressBar to startAnimation:me -- another way
         set animated to true
@@ -1162,15 +843,13 @@ script AppDelegate
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            try
+                        try
+                            tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
                                 end if
-                            end try
-                        end tell
+                            end tell
+                        end try
                         tell application "Finder"
                             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                 do shell script "trashbasebash.bash"
@@ -1204,440 +883,75 @@ script AppDelegate
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "icloud"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                        do shell script "createimoviebash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "trailers"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                        do shell script "createcertbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "marketwatch"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                        do shell script "createwsjbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "Shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is not "0" then
+                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "serving\\|shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is equal to "3" then
+                                        delay 0.1
+                                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                        delay 0.1
+                                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                    end if
+                                end try
+                                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                            end if
+                            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                             end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
                         end tell
-                        
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "echo install present"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                                do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
-                                do shell script "rm -R /Applications/onlytemp" with administrator privileges
-                                else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            try
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
-                                end if
-                            end try
-                        end tell
-                        delay 4
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "trashbasebash.bash"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "rm -R /Applications/onlytemp"
-                            end if
-                        end tell
-                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/falco953/PlexConnect.git"
-                        do shell script "mkdir /Applications/onlytemp"
-                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
-                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
-                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/onlytemp"
-                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "sudoers.bash"
-                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "purgesettingsbash.bash"
-                        do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
-                        tell application "Finder"
-                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
-                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                            end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                        end tell
-
                     end if
                 end tell
-                
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
-                display notification "Installing git..." with title "OpenPlex Status"
-                delay 1
-                tell application "Finder"
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
-                        else
-                        do shell script ""
-                    end if
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
-                        else
-                        do shell script ""
-                    end if
-                end tell
-                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
-                do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+            end if
+        end tell
+        
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "echo install present"
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
                             do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -1652,7 +966,6 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
                         else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "echo install not present"
                     end if
                 end tell
                 tell application "Finder"
@@ -1660,7 +973,163 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
                         do shell script "rm -R /Applications/onlytemp" with administrator privileges
                         else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                        do shell script "echo install not present"
+                    end if
+                end tell
+                tell application "Finder"
+                    try
+                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            do shell script "stopbash.bash"
+                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            onerror
+                        end if
+                    end try
+                end tell
+                delay 4
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        do shell script "trashbasebash.bash"
+                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        try
+                            do shell script "mkdir /Applications/plexconnect_BACKUP"
+                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                            do shell script "rm -R /Applications/PlexConnect"
+                            onerror
+                        end try
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:onlytemp" of the startup disk) then
+                        do shell script "rm -R /Applications/onlytemp"
+                    end if
+                end tell
+                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/falco953/PlexConnect.git"
+                do shell script "mkdir /Applications/onlytemp"
+                do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                do shell script "rm -R /Applications/onlytemp"
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "sudoers.bash"
+                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                do shell script "purgesettingsbash.bash"
+                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                tell application "Finder"
+                    if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "icloud"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                do shell script "createimoviebash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "trailers"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                do shell script "createcertbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "marketwatch"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                do shell script "createwsjbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "Shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is not "0" then
+                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "serving\\|shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is equal to "3" then
+                                delay 0.1
+                                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                delay 0.1
+                                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                            end if
+                        end try
+                    end if
+                end tell
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+            end if
+        end tell
+        
+        tell application "Finder"
+            if not (exists folder "usr:local:git:OP" of the startup disk) then
+                display notification "Installing git..." with title "OpenPlex Status"
+                delay 1
+                tell application "Finder"
+                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
+                    end if
+                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
+                    end if
+                end tell
+                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
+                set fileAsPOSIX to (POSIX path of "/etc/paths")
+                set theString to quoted form of "/usr/local/git/bin"
+                try
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "1" then
+                    end if
+                end try
+                try
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    on error
+                    do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+                end try
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        try
+                            do shell script "mkdir /Applications/plexconnect_BACKUP"
+                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                            do shell script "rm -R /Applications/PlexConnect"
+                            onerror
+                        end try
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                        do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:onlytemp" of the startup disk) then
+                        do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                        do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                        else if not (exists folder "Applications:onlytemp" of the startup disk) then
                     end if
                 end tell
                 do shell script "chmod 777 /Applications/git-2.2.1-intel-universal-snow-leopard.pkg" with administrator privileges
@@ -1713,174 +1182,64 @@ script AppDelegate
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                        else
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "icloud"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                do shell script "createimoviebash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "trailers"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                do shell script "createcertbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "marketwatch"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                do shell script "createwsjbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "Shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is not "0" then
+                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "serving\\|shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is equal to "3" then
+                                delay 0.1
+                                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                delay 0.1
+                                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                            end if
+                        end try
                     end if
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "icloud"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createimoviebash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            try
-                                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                onerror
-                                            end try
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "trailers"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createcertbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createwsjbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
                 end tell
-
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
         tell falcoProgressBar to stopAnimation:me -- another way
@@ -1896,15 +1255,13 @@ script AppDelegate
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            try
+                        try
+                            tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
                                 end if
-                            end try
-                        end tell
+                            end tell
+                        end try
                         tell application "Finder"
                             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                 do shell script "trashbasebash.bash"
@@ -1938,440 +1295,75 @@ script AppDelegate
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "icloud"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                        do shell script "createimoviebash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "trailers"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                        do shell script "createcertbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "marketwatch"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                        do shell script "createwsjbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "Shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is not "0" then
+                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "serving\\|shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is equal to "3" then
+                                        delay 0.1
+                                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                        delay 0.1
+                                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                    end if
+                                end try
+                                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                            end if
+                            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                             end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
                         end tell
-                        
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "echo install present"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                                do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
-                                do shell script "rm -R /Applications/onlytemp" with administrator privileges
-                                else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            try
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
-                                end if
-                            end try
-                        end tell
-                        delay 4
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "trashbasebash.bash"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "rm -R /Applications/onlytemp"
-                            end if
-                        end tell
-                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/stoffez/PlexConnect.git"
-                        do shell script "mkdir /Applications/onlytemp"
-                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
-                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
-                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/onlytemp"
-                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "sudoers.bash"
-                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "purgesettingsbash.bash"
-                        do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
-                        tell application "Finder"
-                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
-                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                            end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                        end tell
-
                     end if
                 end tell
-                
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
-                display notification "Installing git..." with title "OpenPlex Status"
-                delay 1
-                tell application "Finder"
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
-                        else
-                        do shell script ""
-                    end if
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
-                        else
-                        do shell script ""
-                    end if
-                end tell
-                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
-                do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+            end if
+        end tell
+        
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "echo install present"
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
                             do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -2386,7 +1378,6 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
                         else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "echo install not present"
                     end if
                 end tell
                 tell application "Finder"
@@ -2394,7 +1385,163 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
                         do shell script "rm -R /Applications/onlytemp" with administrator privileges
                         else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                        do shell script "echo install not present"
+                    end if
+                end tell
+                tell application "Finder"
+                    try
+                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            do shell script "stopbash.bash"
+                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            onerror
+                        end if
+                    end try
+                end tell
+                delay 4
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        do shell script "trashbasebash.bash"
+                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        try
+                            do shell script "mkdir /Applications/plexconnect_BACKUP"
+                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                            do shell script "rm -R /Applications/PlexConnect"
+                            onerror
+                        end try
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:onlytemp" of the startup disk) then
+                        do shell script "rm -R /Applications/onlytemp"
+                    end if
+                end tell
+                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/stoffez/PlexConnect.git"
+                do shell script "mkdir /Applications/onlytemp"
+                do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                do shell script "rm -R /Applications/onlytemp"
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "sudoers.bash"
+                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                do shell script "purgesettingsbash.bash"
+                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                tell application "Finder"
+                    if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "icloud"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                do shell script "createimoviebash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "trailers"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                do shell script "createcertbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "marketwatch"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                do shell script "createwsjbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "Shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is not "0" then
+                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "serving\\|shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is equal to "3" then
+                                delay 0.1
+                                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                delay 0.1
+                                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                            end if
+                        end try
+                    end if
+                end tell
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+            end if
+        end tell
+        
+        tell application "Finder"
+            if not (exists folder "usr:local:git:OP" of the startup disk) then
+                display notification "Installing git..." with title "OpenPlex Status"
+                delay 1
+                tell application "Finder"
+                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
+                    end if
+                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
+                    end if
+                end tell
+                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
+                set fileAsPOSIX to (POSIX path of "/etc/paths")
+                set theString to quoted form of "/usr/local/git/bin"
+                try
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "1" then
+                    end if
+                end try
+                try
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    on error
+                    do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+                end try
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        try
+                            do shell script "mkdir /Applications/plexconnect_BACKUP"
+                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                            do shell script "rm -R /Applications/PlexConnect"
+                            onerror
+                        end try
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                        do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:onlytemp" of the startup disk) then
+                        do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                        do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                        else if not (exists folder "Applications:onlytemp" of the startup disk) then
                     end if
                 end tell
                 do shell script "chmod 777 /Applications/git-2.2.1-intel-universal-snow-leopard.pkg" with administrator privileges
@@ -2447,174 +1594,64 @@ script AppDelegate
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                        else
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "icloud"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                do shell script "createimoviebash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "trailers"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                do shell script "createcertbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "marketwatch"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                do shell script "createwsjbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "Shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is not "0" then
+                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "serving\\|shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is equal to "3" then
+                                delay 0.1
+                                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                delay 0.1
+                                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                            end if
+                        end try
                     end if
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "icloud"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createimoviebash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            try
-                                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                onerror
-                                            end try
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "trailers"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createcertbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createwsjbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
                 end tell
-
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
         tell stoffezProgressBar to stopAnimation:me -- another way
@@ -2630,15 +1667,13 @@ script AppDelegate
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            try
+                        try
+                            tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
                                 end if
-                            end try
-                        end tell
+                            end tell
+                        end try
                         tell application "Finder"
                             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                 do shell script "trashbasebash.bash"
@@ -2672,440 +1707,75 @@ script AppDelegate
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                                 do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "icloud"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                        do shell script "createimoviebash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "trailers"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                        do shell script "createcertbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                                    set theString to quoted form of "marketwatch"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is "2" then
+                                        display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                        do shell script "createwsjbash.bash"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "Shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is not "0" then
+                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                                    end if
+                                end try
+                                
+                                try
+                                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                                    set theString to quoted form of "serving\\|shutting"
+                                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                    if searchResult is equal to "3" then
+                                        delay 0.1
+                                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                        delay 0.1
+                                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                    end if
+                                end try
+                                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                            end if
+                            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
                             end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
                         end tell
-                        
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "echo install present"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
-                                do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                                else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
-                                do shell script "rm -R /Applications/onlytemp" with administrator privileges
-                                else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "echo install not present"
-                            end if
-                        end tell
-                        tell application "Finder"
-                            try
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    onerror
-                                end if
-                            end try
-                        end tell
-                        delay 4
-                        tell application "Finder"
-                            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                do shell script "trashbasebash.bash"
-                                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                try
-                                    do shell script "mkdir /Applications/plexconnect_BACKUP"
-                                    do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
-                                    do shell script "rm -R /Applications/PlexConnect"
-                                    onerror
-                                end try
-                            end if
-                        end tell
-                        tell application "Finder"
-                            if (exists folder "Applications:onlytemp" of the startup disk) then
-                                do shell script "rm -R /Applications/onlytemp"
-                            end if
-                        end tell
-                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/CyberGhost84/PlexConnect.git"
-                        do shell script "mkdir /Applications/onlytemp"
-                        do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/PlexConnect/update/OSX"
-                        do shell script "mkdir /Applications/PlexConnect/update/OSX"
-                        do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
-                        do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
-                        do shell script "rm -R /Applications/onlytemp"
-                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                        do shell script "sudoers.bash"
-                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-                        do shell script "purgesettingsbash.bash"
-                        do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
-                        tell application "Finder"
-                            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
-                                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                                else
-                                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                            end if
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "icloud"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createimoviebash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    try
-                                                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                        onerror
-                                                    end try
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "trailers"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createcertbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                            try
-                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                                set theString to quoted form of "marketwatch"
-                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                if searchResult is "2" then
-                                    display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            do shell script "createwsjbash.bash"
-                                            tell application "Finder"
-                                                if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                                    do shell script "echo install present"
-                                                    else
-                                                    display notification "No Theme Installed..." with title "OpenPlex Status"
-                                                end if
-                                            end tell
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "Shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is not "0" then
-                                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                    else
-                                                    do shell script ""
-                                                end if
-                                            end try
-                                            try
-                                                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                                set theString to quoted form of "serving\\|shutting"
-                                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                                if searchResult is equal to "3" then
-                                                    delay .1
-                                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                                    delay .1
-                                                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                                end if
-                                            end try
-                                            tell application "Finder"
-                                                if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                                    else
-                                                    display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                                end if
-                                            end tell
-                                            
-                                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                            display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    else
-                                    do shell script ""
-                                end if
-                            end try
-                        end tell
-
                     end if
                 end tell
-                
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
-                display notification "Installing git..." with title "OpenPlex Status"
-                delay 1
-                tell application "Finder"
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
-                        else
-                        do shell script ""
-                    end if
-                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
-                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
-                        else
-                        do shell script ""
-                    end if
-                end tell
-                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
-                do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+            end if
+        end tell
+        
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "echo install present"
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
                             do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -3120,7 +1790,6 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
                         else if not (exists folder "Applications:PlexConnect" of the startup disk) then
-                        do shell script "echo install not present"
                     end if
                 end tell
                 tell application "Finder"
@@ -3128,7 +1797,163 @@ script AppDelegate
                         do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
                         do shell script "rm -R /Applications/onlytemp" with administrator privileges
                         else if not (exists folder "Applications:onlytemp" of the startup disk) then
-                        do shell script "echo install not present"
+                    end if
+                end tell
+                tell application "Finder"
+                    try
+                        if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            do shell script "stopbash.bash"
+                            else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                            onerror
+                        end if
+                    end try
+                end tell
+                delay 4
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        do shell script "trashbasebash.bash"
+                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        try
+                            do shell script "mkdir /Applications/plexconnect_BACKUP"
+                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                            do shell script "rm -R /Applications/PlexConnect"
+                            onerror
+                        end try
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:onlytemp" of the startup disk) then
+                        do shell script "rm -R /Applications/onlytemp"
+                    end if
+                end tell
+                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/CyberGhost84/PlexConnect.git"
+                do shell script "mkdir /Applications/onlytemp"
+                do shell script "mkdir -p /Applications/PlexConnect/update/OSX"
+                do shell script "rm -R /Applications/PlexConnect/update/OSX"
+                do shell script "mkdir /Applications/PlexConnect/update/OSX"
+                do shell script "cd /Applications/onlytemp; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/PlexConnect.git"
+                do shell script "cp -R /Applications/onlytemp/PlexConnect/update/OSX/* /Applications/PlexConnect/update/OSX"
+                do shell script "rm -R /Applications/onlytemp"
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "sudoers.bash"
+                do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                do shell script "purgesettingsbash.bash"
+                do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
+                tell application "Finder"
+                    if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "icloud"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                do shell script "createimoviebash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "trailers"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                do shell script "createcertbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "marketwatch"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                do shell script "createwsjbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "Shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is not "0" then
+                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "serving\\|shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is equal to "3" then
+                                delay 0.1
+                                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                delay 0.1
+                                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                            end if
+                        end try
+                    end if
+                end tell
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+            end if
+        end tell
+        
+        tell application "Finder"
+            if not (exists folder "usr:local:git:OP" of the startup disk) then
+                display notification "Installing git..." with title "OpenPlex Status"
+                delay 1
+                tell application "Finder"
+                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.dmg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.dmg"
+                    end if
+                    if (exists file "Applications:git-2.2.1-intel-universal-snow-leopard.pkg" of the startup disk) then
+                        do shell script "cd /Applications; rm -R git-2.2.1-intel-universal-snow-leopard.pkg"
+                    end if
+                end tell
+                do shell script "cd /Applications; curl -L https://github.com/wahlmanj/git/raw/master/git.zip > git.zip; ditto -xk git.zip /Applications; hdiutil attach /Applications/git-2.2.1-intel-universal-snow-leopard.dmg; cp /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal/git-2.2.1-intel-universal-snow-leopard.pkg /Applications; sudo installer -pkg /Applications/git-2.2.1-intel-universal-snow-leopard.pkg -target /; hdiutil unmount /Volumes/Git\\ 2.2.1\\ Snow\\ Leopard\\ Intel\\ Universal; chmod 777 /Applications/git.zip; cd /Applications; rm git.zip" with administrator privileges
+                set fileAsPOSIX to (POSIX path of "/etc/paths")
+                set theString to quoted form of "/usr/local/git/bin"
+                try
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "1" then
+                    end if
+                end try
+                try
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    on error
+                    do shell script "cd /etc; echo '/usr/local/git/bin' | cat - paths > temp && mv temp paths" with administrator privileges
+                end try
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        try
+                            do shell script "mkdir /Applications/plexconnect_BACKUP"
+                            do shell script "cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP"
+                            do shell script "rm -R /Applications/PlexConnect"
+                            onerror
+                        end try
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
+                        do shell script "rm -R /Applications/PlexConnect" with administrator privileges
+                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                    end if
+                end tell
+                tell application "Finder"
+                    if (exists folder "Applications:onlytemp" of the startup disk) then
+                        do shell script "chmod -R 777 /Applications/onlytemp" with administrator privileges
+                        do shell script "rm -R /Applications/onlytemp" with administrator privileges
+                        else if not (exists folder "Applications:onlytemp" of the startup disk) then
                     end if
                 end tell
                 do shell script "chmod 777 /Applications/git-2.2.1-intel-universal-snow-leopard.pkg" with administrator privileges
@@ -3181,174 +2006,64 @@ script AppDelegate
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
-                        else
-                        display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "icloud"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                                do shell script "createimoviebash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "trailers"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                                do shell script "createcertbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                            set theString to quoted form of "marketwatch"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is "2" then
+                                display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                                do shell script "createwsjbash.bash"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "Shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is not "0" then
+                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                            end if
+                        end try
+                        
+                        try
+                            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                            set theString to quoted form of "serving\\|shutting"
+                            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                            if searchResult is equal to "3" then
+                                delay 0.1
+                                display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                                delay 0.1
+                                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                            end if
+                        end try
                     end if
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "icloud"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createimoviebash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            try
-                                                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                                do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                                onerror
-                                            end try
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "trailers"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createcertbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
-                    try
-                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
-                            tell application "Finder"
-                                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "createwsjbash.bash"
-                                    tell application "Finder"
-                                        if (exists folder "Applications:PlexConnect" of the startup disk) then
-                                            do shell script "echo install present"
-                                            else
-                                            display notification "No Theme Installed..." with title "OpenPlex Status"
-                                        end if
-                                    end tell
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "Shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is not "0" then
-                                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                            do shell script "afplay /System/Library/Sounds/Basso.aiff"
-                                            else
-                                            do shell script ""
-                                        end if
-                                    end try
-                                    try
-                                        set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-                                        set theString to quoted form of "serving\\|shutting"
-                                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                                        if searchResult is equal to "3" then
-                                            delay .1
-                                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                            delay .1
-                                            do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-                                        end if
-                                    end try
-                                    tell application "Finder"
-                                        if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                                            else
-                                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                                        end if
-                                    end tell
-                                    
-                                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    display notification "Theme Required to hijack..." with title "OpenPlex Status"
-                                end if
-                            end tell
-                            else
-                            do shell script ""
-                        end if
-                    end try
                 end tell
-
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
         end tell
         tell ghostProgressBar to stopAnimation:me -- another way
@@ -3622,6 +2337,7 @@ script AppDelegate
                 do shell script "trashbasebash.bash"
                 do shell script "stopbash.bash"
                 do shell script "trashbasebash.bash"
+                display notification "PlexConnect deleted..." with title "OpenPlex Status"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 try
                     display notification "No Folder Detected..." with title "OpenPlex Status"
@@ -3814,26 +2530,12 @@ script AppDelegate
     
     on buttonhandlerautocerts_(sender)
         tell application "Finder"
-            if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:trailers.cer" of the startup disk) then
                         do shell script "cd /Applications/plexconnect_BACKUP; touch trailers.auto"
-                        try
                             display notification "Automatic Cert loading Enabled..." with title "OpenPlex Status"
-                            onerror
-                        end try
-                        else
-                        try
+else if not (exists file "Applications:plexconnect_BACKUP:trailers.cer" of the startup disk) then
+
                             display notification "Backup certs first, then enable auto certs loader..." with title "OpenPlex Status"
-                            onerror
-                        end try
-                    end if
-                end tell
-                else if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                try
-                    display notification "No Certs present, Choose Hijack..." with title "OpenPlex Status"
-                    onerror
-                end try
             end if
         end tell
     end buttonhandlerautocerts_
