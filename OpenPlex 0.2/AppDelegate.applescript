@@ -66,7 +66,7 @@ script AppDelegate
     on buttonhandlerupdate_(sender)
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                set x to do shell script "cd /Applications/PlexConnect; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git fetch; git merge origin"
+                set x to do shell script "updategitbash.bash"
                 if x is equal to "Already up-to-date." then
                     display notification "No updates avaliable" with title "PlexConnect Status"
                     else if x is not equal to "Already up-to-date." then
