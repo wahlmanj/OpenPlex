@@ -589,7 +589,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide
                                         <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="zFE-iU-zYM">
                                             <rect key="frame" x="17" y="1" width="84" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="roundRect" title="Demo Video" bezelStyle="roundedRect" image="02249995-DB45-4429-9FB7-358276DECB68" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="4Ni-Zd-5sM">
+                                            <buttonCell key="cell" type="roundRect" title="Demo Video" bezelStyle="roundedRect" image="2DAE5A7B-A7F4-4C91-AA4F-3CADC31768B2" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="4Ni-Zd-5sM">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
@@ -2575,7 +2575,7 @@ Step 8:   Reboot aTV to load remaining icons</string>
         </tabView>
     </objects>
     <resources>
-        <image name="02249995-DB45-4429-9FB7-358276DECB68" width="1" height="1">
+        <image name="2DAE5A7B-A7F4-4C91-AA4F-3CADC31768B2" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
