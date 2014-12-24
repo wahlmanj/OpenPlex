@@ -67,10 +67,11 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 set x to do shell script "updategitbash.bash"
+                set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git reset --hard"
                 if x is equal to "Already up-to-date." then
-                    display notification "No updates avaliable" with title "PlexConnect Status"
+                    display notification "No updates avaliable..." & y with title "PlexConnect Status"
                     else if x is not equal to "Already up-to-date." then
-                    display notification "PlexConnect updated, Exit hijacked app on aTV..." with title "PlexConnect Status"
+                    display notification "PlexConnect updated, Exit hijacked app on aTV..." & y with title "PlexConnect Status"
                 end if
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 try
@@ -274,7 +275,8 @@ script AppDelegate
                            if (exists folder "Applications:OpenPlex" of the startup disk) then
                                set x to do shell script "updateappbash.bash"
                                if x is not equal to "Already up-to-date." then
-                               display notification "OpenPlex update available, Installing..." with title "OpenPlex Status"
+                                   set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; git reset --hard"
+                               display notification "OpenPlex update available, Installing..." & y with title "OpenPlex Status"
                                delay 0
                             try
                                 tell application "Finder"
@@ -311,7 +313,8 @@ script AppDelegate
                                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
                             end try
                            else if x is equal to "Already up-to-date." then
-                           display notification "No app updates avaliable" with title "OpenPlex Status"
+                           set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; git reset --hard"
+                           display notification "No app updates avaliable..." & y with title "OpenPlex Status"
                         end if
                         else if not (exists folder "Applications:OpenPlex" of the startup disk) then
                         display notification "OpenPlex update available, Installing..." with title "OpenPlex Status"
