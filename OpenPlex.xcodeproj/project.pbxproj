@@ -46,6 +46,10 @@
 		DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA4F1972DCA00099EE6E /* updateplex.png */; };
 		DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA501972DCA00099EE6E /* WebConnect.png */; };
 		DBAFDA751972DCA00099EE6E /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA511972DCA00099EE6E /* WSJ.png */; };
+		DBB6099A1A4C0B890077307F /* christmas.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB609981A4C0B890077307F /* christmas.png */; };
+		DBB6099B1A4C0B890077307F /* XMAs.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB609991A4C0B890077307F /* XMAs.png */; };
+		DBB6099E1A4C0EC80077307F /* christmas tree.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB6099C1A4C0EC80077307F /* christmas tree.png */; };
+		DBB6099F1A4C0EC80077307F /* Gift02.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB6099D1A4C0EC80077307F /* Gift02.png */; };
 		DBD4AF371A06227500480691 /* OP-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBD4AF361A06227500480691 /* OP-Logo.png */; };
 		DBDAEC551A2D943500313EF2 /* IMG_1311.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DBDAEC421A2D943500313EF2 /* IMG_1311.JPG */; };
 		DBDAEC561A2D943500313EF2 /* IMG_1312.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DBDAEC431A2D943500313EF2 /* IMG_1312.JPG */; };
@@ -119,6 +123,10 @@
 		DBAFDA4F1972DCA00099EE6E /* updateplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updateplex.png; sourceTree = "<group>"; };
 		DBAFDA501972DCA00099EE6E /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
 		DBAFDA511972DCA00099EE6E /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
+		DBB609981A4C0B890077307F /* christmas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = christmas.png; sourceTree = "<group>"; };
+		DBB609991A4C0B890077307F /* XMAs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XMAs.png; sourceTree = "<group>"; };
+		DBB6099C1A4C0EC80077307F /* christmas tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "christmas tree.png"; sourceTree = "<group>"; };
+		DBB6099D1A4C0EC80077307F /* Gift02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gift02.png; sourceTree = "<group>"; };
 		DBD4AF361A06227500480691 /* OP-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OP-Logo.png"; sourceTree = "<group>"; };
 		DBDAEC421A2D943500313EF2 /* IMG_1311.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1311.JPG; sourceTree = "<group>"; };
 		DBDAEC431A2D943500313EF2 /* IMG_1312.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1312.JPG; sourceTree = "<group>"; };
@@ -211,6 +219,10 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DBB6099C1A4C0EC80077307F /* christmas tree.png */,
+				DBB6099D1A4C0EC80077307F /* Gift02.png */,
+				DBB609981A4C0B890077307F /* christmas.png */,
+				DBB609991A4C0B890077307F /* XMAs.png */,
 				DB4D6A151A2B01AD0056B561 /* Previews */,
 				DB837E8D1A12732600DED213 /* opicon_<16x16>.png */,
 				DB837E8E1A12732600DED213 /* opicon_<32x32>.png */,
@@ -466,6 +478,7 @@
 			files = (
 				CEBEDE911A31473100F60D15 /* update.png in Resources */,
 				DBDAEC5E1A2D943500313EF2 /* IMG_1321.JPG in Resources */,
+				DBB6099B1A4C0B890077307F /* XMAs.png in Resources */,
 				DB837E9A1A12732600DED213 /* opicon_<1024x1024>.png in Resources */,
 				DBAFDA751972DCA00099EE6E /* WSJ.png in Resources */,
 				DBDAEC641A2D943500313EF2 /* IMG_1331.JPG in Resources */,
@@ -475,6 +488,7 @@
 				3843A80019CA0DE500BE9516 /* airplay-logo.png in Resources */,
 				DBAFDA5E1972DCA00099EE6E /* MenuIcon.png in Resources */,
 				DB837E961A12732600DED213 /* opicon_<64x64>.png in Resources */,
+				DBB6099F1A4C0EC80077307F /* Gift02.png in Resources */,
 				DBDAEC611A2D943500313EF2 /* IMG_1328.JPG in Resources */,
 				DBDAEC5C1A2D943500313EF2 /* IMG_1327.JPG in Resources */,
 				DB837E951A12732600DED213 /* opicon_<32x32>.png in Resources */,
@@ -502,6 +516,7 @@
 				DBAFDA631972DCA00099EE6E /* OpenPlex.png in Resources */,
 				DBAFDA601972DCA00099EE6E /* menuplex.png in Resources */,
 				CE0B59EB19D609A200A5C392 /* black.png in Resources */,
+				DBB6099E1A4C0EC80077307F /* christmas tree.png in Resources */,
 				DBDAEC631A2D943500313EF2 /* IMG_1330.JPG in Resources */,
 				DBAFDA691972DCA00099EE6E /* quitplex.png in Resources */,
 				DBDAEC5D1A2D943500313EF2 /* IMG_1320.JPG in Resources */,
@@ -512,6 +527,7 @@
 				DBAFDA621972DCA00099EE6E /* Openplex copy.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
 				DBD4AF371A06227500480691 /* OP-Logo.png in Resources */,
+				DBB6099A1A4C0B890077307F /* christmas.png in Resources */,
 				DBAFDA661972DCA00099EE6E /* paypal-donate-button.png in Resources */,
 				DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */,
 				DBAFDA561972DCA00099EE6E /* CopyRight.png in Resources */,
