@@ -2034,7 +2034,7 @@ script AppDelegate
     end buttonhandlerairplayinstaller_
     
     on buttonhandlercodesign_(sender)
-        do shell script "codesign -f -s - /System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app; restartbash.bash" with administrator privileges
+        do shell script "codesign -f -s - /Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app; restartbash.bash" with administrator privileges
         display notification "Allow both Python.app firewall popups" with title "OS X Firewall"
     end buttonhandlercodesign_
     
