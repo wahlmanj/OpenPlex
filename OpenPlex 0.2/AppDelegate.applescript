@@ -1693,11 +1693,17 @@ script AppDelegate
     end buttonhandlerstorefront_
     
     on buttonhandlersettingscfg_(sender)
-        try
-            do shell script "open /Applications/PlexConnect/settings.cfg"
-            on error
-            display notification "No Theme Detected or no program set to open .cfg files..." with title "OpenPlex Status"
-        end try
+        tell application "Finder"
+            if (exists file "Applications:PlexConnect:Settings.cfg" of the startup disk) then
+                try
+                    do shell script "open /Applications/PlexConnect/Settings.cfg"
+                    on error
+                    display notification "No program set to open .cfg files..." with title "OpenPlex Status"
+                end try
+                else if not (exists file "Applications:PlexConnect:Settings.cfg" of the startup disk) then
+                display notification "No Theme Detected..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandlersettingscfg_
     
     on buttonhandlerloadcerts_(sender)
