@@ -1475,6 +1475,12 @@ script AppDelegate
     
     --Hijack Tab
     
+    on buttonhandlercertstut_(sender)
+        set theURL to "https://www.youtube.com/watch?v=PvyQhwYfECE"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "show Safari"
+    end buttonhandlercertstut_
+    
     on buttonhandlerip_(sender)
         try
             set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
@@ -2020,6 +2026,11 @@ script AppDelegate
         end tell
         display notification "Follow instructions to enable Airplay" with title "Airplay status"
     end buttonhandlerairplayinstaller_
+    
+    on buttonhandlercodesign_(sender)
+        do shell script "codesign -f -s - /System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app" with administrator privileges
+        display notification "Allow both Python.app firewall popups" with title "OS X Firewall"
+    end buttonhandlercodesign_
     
     on buttonhandleruas_(sender)
         do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"

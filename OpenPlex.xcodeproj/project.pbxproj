@@ -16,6 +16,7 @@
 		CE0B59EB19D609A200A5C392 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E819D609A200A5C392 /* black.png */; };
 		CE0B59EC19D609A200A5C392 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E919D609A200A5C392 /* gradient.png */; };
 		CE0B59ED19D609A200A5C392 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59EA19D609A200A5C392 /* grey.png */; };
+		CE3F0A5F1A4E388300B78592 /* firewall.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3F0A5E1A4E388300B78592 /* firewall.png */; };
 		CEBC1C7E1A4DC4A80037CEA3 /* Remote.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */; };
 		CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */; };
 		CEBEDE911A31473100F60D15 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBEDE901A31473100F60D15 /* update.png */; };
@@ -76,6 +77,7 @@
 		CE0B59E819D609A200A5C392 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		CE0B59E919D609A200A5C392 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 		CE0B59EA19D609A200A5C392 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
+		CE3F0A5E1A4E388300B78592 /* firewall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firewall.png; sourceTree = "<group>"; };
 		CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Remote.png; sourceTree = "<group>"; };
 		CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirPlayIcon.png; sourceTree = "<group>"; };
 		CEBEDE901A31473100F60D15 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				CE3F0A5E1A4E388300B78592 /* firewall.png */,
 				CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */,
 				CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */,
 				DBB6099C1A4C0EC80077307F /* christmas tree.png */,
@@ -393,6 +396,7 @@
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
 				CEFFE2181A436A0A006493FD /* oldStatus.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
+				CE3F0A5F1A4E388300B78592 /* firewall.png in Resources */,
 				DBAFDA521972DCA00099EE6E /* Applelogo.png in Resources */,
 				DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */,
 				DBAFDA6F1972DCA00099EE6E /* Trailers.png in Resources */,
