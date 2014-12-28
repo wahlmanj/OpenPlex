@@ -286,7 +286,7 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:OpenPlex" of the startup disk) then
-                        set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; git reset --hard; updateappbash.bash"
+                        set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; updateappbash.bash"
                         if x is not equal to "Already up-to-date." then
                             display notification "OpenPlex update available, Installing... Current" & x with title "OpenPlex Status"
                             delay 0
