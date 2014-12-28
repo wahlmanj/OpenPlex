@@ -67,7 +67,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 set x to do shell script "updategitbash.bash"
-                set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git reset --hard"
+                set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git reset --hard; restartbash.bash"
                 if x is equal to "Already up-to-date." then
                     display notification "No updates avaliable..." & y with title "PlexConnect Status"
                     else if x is not equal to "Already up-to-date." then
@@ -230,11 +230,24 @@ script AppDelegate
     end buttonhandlernewchecker_
     
     on buttonhandlerlog_(sender)
-        try
-            do shell script "open /Applications/PlexConnect/PlexConnect.log"
-            on error
-            display notification "No Theme Detected..." with title "OpenPlex Status"
-        end try
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                if (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    try
+                        do shell script "open /Applications/PlexConnect/PlexConnect.log"
+                        on error
+                        display notification "No program set to open .log files..." with title "OpenPlex Status"
+                        delay 0
+                    end try
+                    else if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    display notification "No theme detected..." with title "OpenPlex Status"
+                    delay 0
+                end if
+            end if
+        end tell
+        
     end buttonhandlerlog_
     
     --Settings Tab
@@ -246,10 +259,10 @@ script AppDelegate
     end buttonhandlervideotut_
     
     on buttonhandlerinstalldark_(sender)
+        display notification "Enter password then log out to enable Yosemite Dark Mode..." with title "OpenPlex Status"
+        delay 0
         do shell script "defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true" with administrator privileges
         tell application "System Events" to log out
-        display notification "Log out to enable Dark Mode..." with title "OpenPlex Status"
-        delay 0
     end buttonhandlerinstalldark_
     
     on buttonhandlerdarkmode_(sender)
@@ -273,10 +286,9 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:OpenPlex" of the startup disk) then
-                        set x to do shell script "updateappbash.bash"
+                        set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; git reset --hard; updateappbash.bash"
                         if x is not equal to "Already up-to-date." then
-                            set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; git reset --hard"
-                            display notification "OpenPlex update available, Installing..." & y with title "OpenPlex Status"
+                            display notification "OpenPlex update available, Installing... Current" & x with title "OpenPlex Status"
                             delay 0
                             try
                                 tell application "Finder"
@@ -317,7 +329,7 @@ script AppDelegate
                             display notification "No app updates avaliable..." & y with title "OpenPlex Status"
                         end if
                         else if not (exists folder "Applications:OpenPlex" of the startup disk) then
-                        display notification "OpenPlex update available, Installing..." with title "OpenPlex Status"
+                        display notification "No OpenPlex folder detected, this will take awhile to install..." with title "OpenPlex Status"
                         delay 0
                         do shell script "updatewcbash.bash; cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                         do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
@@ -1636,6 +1648,8 @@ script AppDelegate
     --Advanced Tab
     
     on buttonhandlerdelcerts_(sender)
+        display notification "Certs deleted from PlexConnect folder..." with title "OpenPlex Status"
+        delay 0
         do shell script "rm /Applications/PlexConnect/assets/certificates/trailers.pem"
         do shell script "rm /Applications/PlexConnect/assets/certificates/trailers.key"
         do shell script "rm /Applications/PlexConnect/assets/certificates/trailers.cer"
@@ -1643,13 +1657,25 @@ script AppDelegate
     
     on buttonhandlerdellog_(sender)
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                do shell script "rm /Applications/PlexConnect/plexconnect.log"
-                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+            if (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                display notification "PlexConnect.log deleted..." with title "OpenPlex Status"
+                delay 0
+                do shell script "rm /Applications/PlexConnect/PlexConnect.log"
+                else if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
                 display notification "No Log Detected..." with title "OpenPlex Status"
             end if
         end tell
     end buttonhandlerdellog_
+    
+    on buttonhandlerbackupfolder_(sender)
+        tell application "Finder"
+            if (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
+                do shell script "open /Applications/plexconnect_BACKUP"
+                else if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
+                display notification "No backup folder detected..." with title "OpenPlex Status"
+            end if
+        end tell
+    end buttonhandlerbackupfolder_
     
     on buttonhandleropenbase_(sender)
         tell application "Finder"
@@ -1670,27 +1696,18 @@ script AppDelegate
                 do shell script "stopbash.bash"
                 do shell script "trashbasebash.bash"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                display notification "No Folder Detected..." with title "OpenPlex Status"
+                display notification "Cannot delete, no folder detected..." with title "OpenPlex Status"
             end if
         end tell
     end buttonhandlertrash_
     
     on buttonhandlercertfolder_(sender)
         try
-            do shell script "folder.bash"
+            do shell script "open /Applications/PlexConnect/assets/certificates"
             on error
             display notification "No Theme Detected..." with title "OpenPlex Status"
         end try
     end buttonhandlercertfolder_
-    
-    on buttonhandlerstorefront_(sender)
-        try
-            do shell script "/Applications/PlexConnect/update/OSX/storefront.bash"
-            do shell script "open /Applications/PlexConnect/update/OSX/storeFront"
-            on error
-            display notification "No Theme Detected..." with title "OpenPlex Status"
-        end try
-    end buttonhandlerstorefront_
     
     on buttonhandlersettingscfg_(sender)
         tell application "Finder"
@@ -1707,28 +1724,39 @@ script AppDelegate
     end buttonhandlersettingscfg_
     
     on buttonhandlerloadcerts_(sender)
+        display notification "Restoring certs..." with title "OpenPlex Status"
+        delay 0
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
         do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
     end buttonhandlerloadcerts_
     
     on buttonhandlerbackupsettings_(sender)
+        display notification "Backing up Settings.cfg..." with title "OpenPlex Status"
+        delay 0
         do shell script "cp /Applications/PlexConnect/settings.cfg /Applications/plexconnect_BACKUP"
     end buttonhandlerbackupsettings_
     
     on buttonhandlerloadsettings_(sender)
         --Needs work to remove password only
+        display notification "Restoring Settings.cfg..." with title "OpenPlex Status"
+        delay 0
         do shell script "cp /Applications/plexconnect_BACKUP/settings.cfg /Applications/PlexConnect" with administrator privileges
     end buttonhandlerloadsettings_
     
     on buttonhandlerbackupfanart_(sender)
+        --may remove button eventually
         tell application "Finder"
             if (exists folder "Applications:PlexConnect_BACKUP:fanartcache" of the startup disk) then
+                display notification "Fanart backed up..." with title "OpenPlex Status"
+                delay 0
                 do shell script "rm -R /Applications/plexconnect_BACKUP/fanartcache"
                 do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
                 do shell script "cp -R /Applications/PlexConnect/assets/fanartcache/* /Applications/plexconnect_BACKUP/fanartcache"
                 else if not (exists folder "Applications:PlexConnect_BACKUP:fanartcache" of the startup disk) then
                 try
+                    display notification "Fanart backed up..." with title "OpenPlex Status"
+                    delay 0
                     do shell script "mkdir /Applications/plexconnect_BACKUP/fanartcache"
                     do shell script "cp -R /Applications/PlexConnect/assets/fanartcache/* /Applications/plexconnect_BACKUP/fanartcache"
                     onerror
@@ -1737,8 +1765,23 @@ script AppDelegate
         end tell
     end buttonhandlerbackupfanart_
     
+    on buttonhandlerfanartfolder_(sender)
+        --may remove button eventually
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                if (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
+                    do shell script "open /Applications/PlexConnect/assets/fanartcache"
+                    else if not (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
+                    display notification "No fanart folder Detected..." with title "OpenPlex Status"
+                    else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                    display notification "No theme detected..." with title "OpenPlex Status"
+                end if
+            end if
+        end tell
+    end buttonhandlerfanartfolder_
+    
     on buttonhandlerloadbackupfanart_(sender)
-        --Needs work to remove password only
+        --Needs work to remove password only --may remove button eventually
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:assets:fanartcache" of the startup disk) then
                 do shell script "cp -R /Applications/plexconnect_BACKUP/fanartcache/* /Applications/PlexConnect/assets/fanartcache" with administrator privileges
@@ -1750,6 +1793,8 @@ script AppDelegate
     on buttonhandlerbackupATVSettings_(sender)
         tell application "Finder"
             if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
+                display notification "ATVSettings.cfg backed up..." with title "OpenPlex Status"
+                delay 0
                 do shell script "cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP"
                 else if not (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
                 display notification "No ATVSettings.cfg present..." with title "OpenPlex Status"
@@ -1874,6 +1919,27 @@ script AppDelegate
     end buttonhandlerbackupcerts_
     
     --Extras Tab
+    on buttonhandlergitreset_(sender)
+        try
+            set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git reset --soft HEAD^; git reset --hard"
+            display notification "PlexConnect updated, Exit hijacked app on aTV..." & y with title "PlexConnect Status"
+            delay 0
+            do shell script "restartbash.bash"
+            on error
+            display notification "Reinstall theme to rollback versions again since you updated to latest commit..." with title "PlexConnect Status"
+        end try
+    end buttonhandlergitreset_
+    
+    on buttonhandlerstorefront_(sender)
+        display notification "Downloading current aTV storeFront (aTV homescreen apps config)..." with title "OpenPlex Status"
+        delay 0
+        try
+            do shell script "/Applications/PlexConnect/update/OSX/storefront.bash"
+            do shell script "open /Applications/PlexConnect/update/OSX/storeFront"
+            on error
+            display notification "No Theme Detected..." with title "OpenPlex Status"
+        end try
+    end buttonhandlerstorefront_
     
     on buttonhandlerautocerts_(sender)
         tell application "Finder"
@@ -1901,6 +1967,7 @@ script AppDelegate
     end buttonhandlerautoupdate_
     
     on buttonhandlerdefaultupdate_(sender)
+        --Needs work to remove password only
         do shell script "cd /Library/LaunchDaemons; launchctl unload com.plex.plexconnect.auto.plist; rm com.plex.plexconnect.auto.plist" with administrator privileges
         display notification "Automatic GitHub Updates Disabled..." with title "OpenPlex Status"
     end buttonhandlerdefaultupdate_
@@ -1915,10 +1982,11 @@ script AppDelegate
     
     on buttonhandlerplexweb_(sender)
         try
-            set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
-            set theLocalNode to the last word of theIP
-            set tURL to "http://" & theLocalNode & ":32400/web/index.html#!/dashboard"
-            tell application "Safari" to make new document with properties {URL:tURL}
+            --set theIP to (do shell script "ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2")
+            --set theLocalNode to the last word of theIP
+            --set tURL to "http://" & theLocalNode & ":32400/web/index.html#!/dashboard"
+            set theURL to "http://127.0.0.1:32400/web"
+            tell application "Safari" to make new document with properties {URL:theURL}
             do shell script "show Safari"
             on error
             display notification "Can't get Local IP..." with title "OpenPlex Status"
@@ -2010,15 +2078,6 @@ script AppDelegate
         end tell
     end buttonhandlerpillowinstaller_
     
-    on buttonhandlerxcode_(sender)
-        display notification "Install Xcode..." with title "Airplay status"
-        delay 0
-        do shell script "show Safari"
-        set theURL to "https://itunes.apple.com/app/xcode/id497799835?mt=12"
-        tell application "Safari" to make new document with properties {URL:theURL}
-        do shell script "show Safari"
-    end buttonhandlerxcode_
-    
     on buttonhandlerairplayinstaller_(sender)
         do shell script "quit Terminal"
         delay 2
@@ -2032,11 +2091,6 @@ script AppDelegate
         end tell
         display notification "Follow instructions to enable Airplay" with title "Airplay status"
     end buttonhandlerairplayinstaller_
-    
-    on buttonhandlercodesign_(sender)
-        do shell script "codesign -f -s - /Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app; restartbash.bash" with administrator privileges
-        display notification "Allow both Python.app firewall popups" with title "OS X Firewall"
-    end buttonhandlercodesign_
     
     on buttonhandleruas_(sender)
         do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
@@ -2082,7 +2136,6 @@ script AppDelegate
                 display notification "WebConnect Enabled..." with title "OpenPlex Status"
             end if
         end tell
-        
     end buttonhandlerinstallwc10_
     
     on buttonhandlerwview_(sender)
@@ -2115,11 +2168,6 @@ script AppDelegate
         set theURL to "https://github.com/wahlmanj/OpenPlex/wiki"
         tell application "Safari" to make new document with properties {URL:theURL}
     end buttonhandlerOPwiki_
-    
-    on buttonhandlerOProadmap_(sender)
-        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki/Roadmap"
-        tell application "Safari" to make new document with properties {URL:theURL}
-    end buttonhandlerOProadmap_
     
     on buttonhandlerdonate_(sender)
         set theURL to "http://alturl.com/5js9g"
