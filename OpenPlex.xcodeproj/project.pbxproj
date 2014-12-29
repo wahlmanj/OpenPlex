@@ -45,7 +45,6 @@
 		DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA4F1972DCA00099EE6E /* updateplex.png */; };
 		DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA501972DCA00099EE6E /* WebConnect.png */; };
 		DBAFDA751972DCA00099EE6E /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA511972DCA00099EE6E /* WSJ.png */; };
-		DBB6099B1A4C0B890077307F /* XMAs.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB609991A4C0B890077307F /* XMAs.png */; };
 		DBD4AF371A06227500480691 /* OP-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBD4AF361A06227500480691 /* OP-Logo.png */; };
 		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
 		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
@@ -102,7 +101,6 @@
 		DBAFDA4F1972DCA00099EE6E /* updateplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updateplex.png; sourceTree = "<group>"; };
 		DBAFDA501972DCA00099EE6E /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
 		DBAFDA511972DCA00099EE6E /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
-		DBB609991A4C0B890077307F /* XMAs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XMAs.png; sourceTree = "<group>"; };
 		DBD4AF361A06227500480691 /* OP-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OP-Logo.png"; sourceTree = "<group>"; };
 		DD4F7C0413C30F9F00825C6E /* OpenPlex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPlex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -173,7 +171,6 @@
 			children = (
 				CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */,
 				CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */,
-				DBB609991A4C0B890077307F /* XMAs.png */,
 				DB837E8D1A12732600DED213 /* opicon_<16x16>.png */,
 				DB837E8E1A12732600DED213 /* opicon_<32x32>.png */,
 				DB837E8F1A12732600DED213 /* opicon_<64x64>.png */,
@@ -369,7 +366,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBEDE911A31473100F60D15 /* update.png in Resources */,
-				DBB6099B1A4C0B890077307F /* XMAs.png in Resources */,
 				DB837E9A1A12732600DED213 /* opicon_<1024x1024>.png in Resources */,
 				DBAFDA751972DCA00099EE6E /* WSJ.png in Resources */,
 				DBAFDA671972DCA00099EE6E /* PlexConnect Icon.png in Resources */,

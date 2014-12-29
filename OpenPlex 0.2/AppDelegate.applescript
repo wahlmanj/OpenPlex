@@ -2026,6 +2026,17 @@ script AppDelegate
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
     end buttonhandlerios7gradientplexicon_
     
+    on buttonhandlerios7plexconnecticon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios7plexconnecticon_
+    
     on buttonhandlerios8greyplexicon_(sender)
         do shell script "stopbash.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
@@ -2058,6 +2069,17 @@ script AppDelegate
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
     end buttonhandlerios8gradientplexicon_
+    
+    on buttonhandlerios8plexconnecticon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios8plexconnecticon_
     
     on buttonhandlermuteboot_(sender)
         do shell script "sudo defaults write com.apple.loginwindow LoginHook /usr/bin/unmuteboot.bash" with administrator privileges
