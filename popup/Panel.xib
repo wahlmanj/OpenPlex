@@ -642,17 +642,6 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button id="bAU-4g-3J7">
-                                            <rect key="frame" x="399" y="49" width="152" height="88"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="demo" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="bUX-pY-mga">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlervideotut:" target="139" id="tRZ-uJ-hGJ"/>
-                                            </connections>
-                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="q4V-0H-8MY">
                                             <rect key="frame" x="313" y="123" width="72" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -662,6 +651,17 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button id="bAU-4g-3J7">
+                                            <rect key="frame" x="371" y="44" width="187" height="101"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="demo" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="bUX-pY-mga">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlervideotut:" target="139" id="tRZ-uJ-hGJ"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -2230,7 +2230,7 @@ outside your local area network. </string>
         <image name="WebConnect" width="512" height="512"/>
         <image name="atv" width="228" height="147"/>
         <image name="black" width="188" height="108"/>
-        <image name="demo" width="1200" height="872.4000244140625"/>
+        <image name="demo" width="1151" height="739.20001220703125"/>
         <image name="gradient" width="188" height="108"/>
         <image name="grey" width="188" height="108"/>
         <image name="iMovie" width="188" height="108"/>
