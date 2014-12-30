@@ -1807,7 +1807,8 @@ script AppDelegate
             if (exists file "Applications:plexconnect_BACKUP:ATVSettings.cfg" of the startup disk) then
                 display notification "Exit and/or Open aTV hijack to load PlexConnect Settings..." with title "OpenPlex Status"
                 delay 0
-                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect; startbash.bash"
+                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect; startbash.bash; sleep 2"
+                -- allow PlexConnect.log to populate (sleep 2)
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
                         else
