@@ -20,6 +20,7 @@
 		CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */; };
 		CEBEDE911A31473100F60D15 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBEDE901A31473100F60D15 /* update.png */; };
 		CEFFE2181A436A0A006493FD /* oldStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFFE2171A436A0A006493FD /* oldStatus.png */; };
+		DB00AF8F1A52B8A100CB58F5 /* VideoScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DB00AF8E1A52B8A100CB58F5 /* VideoScreen.png */; };
 		DB3778FA19F852C00036C9BB /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = DB3778F919F852C00036C9BB /* status.png */; };
 		DB837E941A12732600DED213 /* opicon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8D1A12732600DED213 /* opicon_<16x16>.png */; };
 		DB837E951A12732600DED213 /* opicon_<32x32>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8E1A12732600DED213 /* opicon_<32x32>.png */; };
@@ -76,6 +77,7 @@
 		CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirPlayIcon.png; sourceTree = "<group>"; };
 		CEBEDE901A31473100F60D15 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
 		CEFFE2171A436A0A006493FD /* oldStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oldStatus.png; path = popup/oldStatus.png; sourceTree = "<group>"; };
+		DB00AF8E1A52B8A100CB58F5 /* VideoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideoScreen.png; sourceTree = "<group>"; };
 		DB3778F919F852C00036C9BB /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
 		DB837E8D1A12732600DED213 /* opicon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<16x16>.png"; sourceTree = "<group>"; };
 		DB837E8E1A12732600DED213 /* opicon_<32x32>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<32x32>.png"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DB00AF8E1A52B8A100CB58F5 /* VideoScreen.png */,
 				CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */,
 				CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */,
 				DB837E8D1A12732600DED213 /* opicon_<16x16>.png */,
@@ -382,6 +385,7 @@
 				DBAFDA521972DCA00099EE6E /* Applelogo.png in Resources */,
 				DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */,
 				DBAFDA6F1972DCA00099EE6E /* Trailers.png in Resources */,
+				DB00AF8F1A52B8A100CB58F5 /* VideoScreen.png in Resources */,
 				DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */,
 				DB3778FA19F852C00036C9BB /* status.png in Resources */,
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
