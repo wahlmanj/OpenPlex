@@ -642,17 +642,8 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="q4V-0H-8MY">
-                                            <rect key="frame" x="313" y="123" width="72" height="14"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Demo Video:" id="Zr2-Gu-hDo">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <button id="bAU-4g-3J7">
-                                            <rect key="frame" x="371" y="44" width="187" height="101"/>
+                                            <rect key="frame" x="365" y="48" width="173" height="111"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="demo" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="bUX-pY-mga">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
