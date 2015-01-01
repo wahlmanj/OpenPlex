@@ -353,6 +353,29 @@ script AppDelegate
         tell application "System Events" to delete login item "OpenPlex"
     end buttonhandlerloginoff_
     
+    on buttonhandlerOPforum_(sender)
+        set theURL to "https://forums.plex.tv/index.php/topic/108332-openplex-osx-app/"
+        tell application "Safari" to make new document with properties {URL:theURL}
+    end buttonhandlerOPforum_
+    
+    on buttonhandlerOPwiki_(sender)
+        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki"
+        tell application "Safari" to make new document with properties {URL:theURL}
+    end buttonhandlerOPwiki_
+    
+    on buttonhandlerdonate_(sender)
+        set theURL to "http://alturl.com/5js9g"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        set theURL to "http://alturl.com/j8xdb"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "show Safari"
+    end buttonhandlerdonate_
+    
+    on buttonhandlerOPchangelog_(sender)
+        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki/Changelog"
+        tell application "Safari" to make new document with properties {URL:theURL}
+    end buttonhandlerOPchangelog_
+    
     --Theme Tab
     
     on buttonhandlerbaapreview_(sender)
@@ -361,7 +384,7 @@ script AppDelegate
     end buttonhandlerbaapreview_
     
     on buttonhandlerghostpreview_(sender)
-        set theURL to "https://www.youtube.com/watch?v=YHvFNckkbbY"
+        set theURL to "https://www.youtube.com/watch?v=l0QahH1zlUQ"
         tell application "Safari" to make new document with properties {URL:theURL}
     end buttonhandlerghostpreview_
     
@@ -653,6 +676,34 @@ script AppDelegate
             if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
+            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                display notification "PIL is not installed or theme is experiencing issues, attempting repairs..." with title "OpenPlex Status"
+                do shell script "/Applications/PlexConnect/update/OSX/fixbash.bash; pythonkillerbash.bash; restartbash.bash"
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "Shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is not "0" then
+                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "serving\\|shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "3" then
+                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                    end if
+                end try
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "Repair unsuccessful, PIL is not installed or theme is experiencing issues"
+                end if
+            end if
         end tell
         tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -790,6 +841,9 @@ script AppDelegate
                         end if
                     end tell
                 end tell
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -929,6 +983,34 @@ script AppDelegate
             if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
+            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                display notification "PIL is not installed or theme is experiencing issues, attempting repairs..." with title "OpenPlex Status"
+                do shell script "/Applications/PlexConnect/update/OSX/fixbash.bash; pythonkillerbash.bash; restartbash.bash"
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "Shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is not "0" then
+                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "serving\\|shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "3" then
+                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                    end if
+                end try
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "Repair unsuccessful, PIL is not installed or theme is experiencing issues"
+                end if
+            end if
         end tell
         tell falcoProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -1066,6 +1148,9 @@ script AppDelegate
                         end if
                     end tell
                 end tell
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -1205,6 +1290,34 @@ script AppDelegate
             if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
+            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                display notification "PIL is not installed or theme is experiencing issues, attempting repairs..." with title "OpenPlex Status"
+                do shell script "/Applications/PlexConnect/update/OSX/fixbash.bash; pythonkillerbash.bash; restartbash.bash"
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "Shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is not "0" then
+                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "serving\\|shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "3" then
+                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                    end if
+                end try
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "Repair unsuccessful, PIL is not installed or theme is experiencing issues"
+                end if
+            end if
         end tell
         tell stoffezProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -1341,6 +1454,9 @@ script AppDelegate
                         end if
                     end tell
                 end tell
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -1480,6 +1596,34 @@ script AppDelegate
             if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
+            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                display notification "PIL is not installed or theme is experiencing issues, attempting repairs..." with title "OpenPlex Status"
+                do shell script "/Applications/PlexConnect/update/OSX/fixbash.bash; pythonkillerbash.bash; restartbash.bash"
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "Shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is not "0" then
+                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "serving\\|shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "3" then
+                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                    end if
+                end try
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "Repair unsuccessful, PIL is not installed or theme is experiencing issues"
+                end if
+            end if
         end tell
         tell ghostProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -1616,6 +1760,9 @@ script AppDelegate
                         end if
                     end tell
                 end tell
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
+                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -1754,6 +1901,34 @@ script AppDelegate
             end if
             if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+            end if
+            if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                display notification "PIL is not installed or theme is experiencing issues, attempting repairs..." with title "OpenPlex Status"
+                do shell script "/Applications/PlexConnect/update/OSX/fixbash.bash; pythonkillerbash.bash; restartbash.bash"
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "Shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is not "0" then
+                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "serving\\|shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "3" then
+                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                    end if
+                end try
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "Repair unsuccessful, PIL is not installed or theme is experiencing issues"
+                end if
             end if
         end tell
         tell wahlmanjProgressBar to stopAnimation:me -- another way
@@ -1920,6 +2095,96 @@ script AppDelegate
         set animated to false
     end buttonhandlerwsj_
     
+    --Hijack Tab
+    
+    on buttonhandlerios7greyplexicon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios7greyplexicon_
+    
+    on buttonhandlerios7blackplexicon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios7blackplexicon_
+    
+    on buttonhandlerios7gradientplexicon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios7gradientplexicon_
+    
+    on buttonhandlerios7plexconnecticon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios7plexconnecticon_
+    
+    on buttonhandlerios8greyplexicon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios8greyplexicon_
+    
+    on buttonhandlerios8blackplexicon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios8blackplexicon_
+    
+    on buttonhandlerios8gradientplexicon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios8gradientplexicon_
+    
+    on buttonhandlerios8plexconnecticon_(sender)
+        do shell script "stopbash.bash"
+        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
+        delay 8
+        do shell script "startbash.bash"
+        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
+    end buttonhandlerios8plexconnecticon_
+    
     --Advanced Tab
     
     on buttonhandlerdelcerts_(sender)
@@ -1999,11 +2264,71 @@ script AppDelegate
     end buttonhandlersettingscfg_
     
     on buttonhandlerloadcerts_(sender)
-        display notification "Restoring certs..." with title "OpenPlex Status"
-        delay 0
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
-        do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+        tell application "Finder"
+            if (exists file "Applications:plexconnect_BACKUP:trailers.cer" of the startup disk) then
+                display notification "Restoring certs..." with title "OpenPlex Status"
+                delay 0
+                do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
+                do shell script "cp /Applications/plexconnect_BACKUP/trailers.pem /Applications/PlexConnect/assets/certificates"
+                do shell script "cp /Applications/plexconnect_BACKUP/trailers.key /Applications/PlexConnect/assets/certificates"
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                    set theString to quoted form of "icloud"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is "2" then
+                        display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
+                        delay 0
+                        do shell script "createimoviebash.bash"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                    set theString to quoted form of "trailers"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is "2" then
+                        display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
+                        delay 0
+                        do shell script "createcertbash.bash"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
+                    set theString to quoted form of "marketwatch"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is "2" then
+                        display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
+                        delay 0
+                        do shell script "createwsjbash.bash"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "Shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is not "0" then
+                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                    end if
+                end try
+                
+                try
+                    set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                    set theString to quoted form of "serving\\|shutting"
+                    set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                    if searchResult is equal to "3" then
+                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                        delay 0
+                        do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                    end if
+                end try
+                else if not (exists file "Applications:plexconnect_BACKUP:trailers.cer" of the startup disk) then
+                display notification "Backup certs first..." with title "OpenPlex Status"
+            end if
+        end tell
     end buttonhandlerloadcerts_
     
     on buttonhandlerbackupsettings_(sender)
@@ -2072,9 +2397,33 @@ script AppDelegate
                 delay 0
                 do shell script "cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP"
                 else if not (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
+                try
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        do shell script "stopbash.bash"
+                        do shell script "cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP"
+                        do shell script "startbash.bash"
+                        display notification "Exit and/or Open aTV hijack to load PlexConnect Settings..." with title "OpenPlex Status"
+                        delay 0
+                    end if
+                end try
+            end if
+            if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
+                display notification "ATVSettings.cfg backed up..." with title "OpenPlex Status"
+                delay 0
+                do shell script "cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP"
+                else if not (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
                 display notification "No ATVSettings.cfg present..." with title "OpenPlex Status"
             end if
+            if (exists file "Applications:plexconnect_BACKUP:ATVSettings.cfg" of the startup disk) then
+                display notification "Exit and/or Open aTV hijack to load PlexConnect Settings..." with title "OpenPlex Status"
+                delay 0
+            end if
+            if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
+                display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
+                delay 0
+            end if
         end tell
+        
     end buttonhandlerbackupATVSettings_
     
     on buttonhandlerloadATVSettings_(sender)
@@ -2195,6 +2544,7 @@ script AppDelegate
     end buttonhandlerbackupcerts_
     
     --Extras Tab
+    
     on buttonhandlergitreset_(sender)
         try
             set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git reset --soft HEAD^; git reset --hard"
@@ -2268,94 +2618,6 @@ script AppDelegate
             display notification "Can't get Local IP..." with title "OpenPlex Status"
         end try
     end buttonhandlerplexweb_
-    
-    on buttonhandlerios7greyplexicon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios7greyplexicon_
-    
-    on buttonhandlerios7blackplexicon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios7blackplexicon_
-    
-    on buttonhandlerios7gradientplexicon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios7gradientplexicon_
-    
-    on buttonhandlerios7plexconnecticon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios7plexconnecticon_
-    
-    on buttonhandlerios8greyplexicon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios8greyplexicon_
-    
-    on buttonhandlerios8blackplexicon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios8blackplexicon_
-    
-    on buttonhandlerios8gradientplexicon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios8gradientplexicon_
-    
-    on buttonhandlerios8plexconnecticon_(sender)
-        do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
-        do shell script "startbash.bash"
-        display notification "Custom icon ready for upload..." with title "PlexConnect Status"
-    end buttonhandlerios8plexconnecticon_
     
     on buttonhandlermuteboot_(sender)
         do shell script "sudo defaults write com.apple.loginwindow LoginHook /usr/bin/unmuteboot.bash" with administrator privileges
@@ -2454,31 +2716,6 @@ script AppDelegate
         tell WCProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerupdatecode_
-    
-    --About Tab
-    
-    on buttonhandlerOPforum_(sender)
-        set theURL to "https://forums.plex.tv/index.php/topic/108332-openplex-osx-app/"
-        tell application "Safari" to make new document with properties {URL:theURL}
-    end buttonhandlerOPforum_
-    
-    on buttonhandlerOPwiki_(sender)
-        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki"
-        tell application "Safari" to make new document with properties {URL:theURL}
-    end buttonhandlerOPwiki_
-    
-    on buttonhandlerdonate_(sender)
-        set theURL to "http://alturl.com/5js9g"
-        tell application "Safari" to make new document with properties {URL:theURL}
-        set theURL to "http://alturl.com/j8xdb"
-        tell application "Safari" to make new document with properties {URL:theURL}
-        do shell script "show Safari"
-    end buttonhandlerdonate_
-    
-    on buttonhandlerOPchangelog_(sender)
-        set theURL to "https://github.com/wahlmanj/OpenPlex/wiki/Changelog"
-        tell application "Safari" to make new document with properties {URL:theURL}
-    end buttonhandlerOPchangelog_
     
     --Other Scripts
     
