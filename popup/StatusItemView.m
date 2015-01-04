@@ -11,8 +11,17 @@
 
 #pragma mark -
 
+
+//////////////////////////LAST IMAGE ROUTE?//////////////////////////
+//////////////////////////LAST IMAGE ROUTE?//////////////////////////
+
 - (id)initWithStatusItem:(NSStatusItem *)statusItem
 {
+    
+//////////////////////////LOOP BACK IMAGE TO FIRST ROUTE HERE////////
+//////////////////////////LOOP BACK IMAGE TO FIRST ROUTE HERE////////
+    
+    
     CGFloat itemWidth = [statusItem length];
     CGFloat itemHeight = [[NSStatusBar systemStatusBar] thickness];
     NSRect itemRect = NSMakeRect(0.0, 0.0, itemWidth, itemHeight);
@@ -25,6 +34,8 @@
     return self;
 }
 
+//////////////////////////LAST IMAGE ROUTE?//////////////////////////
+//////////////////////////LAST IMAGE ROUTE?//////////////////////////
 
 #pragma mark -
 
@@ -38,8 +49,9 @@
     CGFloat iconX = roundf((NSWidth(bounds) - iconSize.width) / 2);
     CGFloat iconY = roundf((NSHeight(bounds) - iconSize.height) / 2);
     NSPoint iconPoint = NSMakePoint(iconX, iconY);
-
-	[icon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+    
+//////// Menubar icon blur
+	[icon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:0.8];
 }
 
 #pragma mark -
