@@ -545,14 +545,8 @@ script AppDelegate
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
-                        if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                        end if
                     end tell
                 end tell
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -701,7 +695,6 @@ script AppDelegate
             if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                 display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
             end if
-            
         end tell
         tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
@@ -838,14 +831,8 @@ script AppDelegate
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
-                        if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                        end if
                     end tell
                 end tell
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -1131,14 +1118,8 @@ script AppDelegate
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
-                        if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                        end if
                     end tell
                 end tell
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -1423,14 +1404,8 @@ script AppDelegate
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
-                        if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                        end if
                     end tell
                 end tell
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -1715,14 +1690,8 @@ script AppDelegate
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
-                        if not (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
-                            display notification "No Certs present, Choose Hijack..." with title "PlexConnect Status"
-                        end if
                     end tell
                 end tell
-                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                end if
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
@@ -1907,48 +1876,50 @@ script AppDelegate
     on buttonhandlertrailers_(sender)
         tell trailersProgressBar to startAnimation:me -- another way
         set animated to true
-        display notification "Creating Trailers certs if needed and setting hijack to WSJ..." with title "OpenPlex Status"
-        delay 0
         try
-            do shell script "createcertbash.bash"
-            on error
+            display notification "Creating Trailers certs if needed and setting hijack to WSJ..." with title "OpenPlex Status"
+            delay 0
+            try
+                do shell script "createcertbash.bash"
+                on error
+                tell application "Finder"
+                    if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        display notification "No Theme installed..." with title "OpenPlex Status"
+                        delay 0
+                    end if
+                end tell
+            end try
             tell application "Finder"
-                if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                    display notification "No Theme installed..." with title "OpenPlex Status"
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
                     delay 0
                 end if
             end tell
-        end try
-        tell application "Finder"
+            try
+                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                set theString to quoted form of "Shutting"
+                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                if searchResult is not "0" then
+                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                    delay 0
+                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                end if
+            end try
+            
+            try
+                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                set theString to quoted form of "serving\\|shutting"
+                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                if searchResult is equal to "3" then
+                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                    delay 0
+                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                end if
+            end try
             if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
                 display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                delay 0
-            end if
-        end tell
-        try
-            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-            set theString to quoted form of "Shutting"
-            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-            if searchResult is not "0" then
-                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                delay 0
-                do shell script "afplay /System/Library/Sounds/Basso.aiff"
             end if
         end try
-        
-        try
-            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-            set theString to quoted form of "serving\\|shutting"
-            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-            if searchResult is equal to "3" then
-                display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                delay 0
-                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-            end if
-        end try
-        if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-            display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-        end if
         tell trailersProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlertrailers_
@@ -1956,48 +1927,50 @@ script AppDelegate
     on buttonhandlerimovie_(sender)
         tell imovieProgressBar to startAnimation:me -- another way
         set animated to true
-        display notification "Creating iMovie certs if needed and setting hijack to iMovie..." with title "OpenPlex Status"
-        delay 0
         try
-            do shell script "createimoviebash.bash"
-            on error
+            display notification "Creating iMovie certs if needed and setting hijack to iMovie..." with title "OpenPlex Status"
+            delay 0
+            try
+                do shell script "createimoviebash.bash"
+                on error
+                tell application "Finder"
+                    if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        display notification "No Theme installed..." with title "OpenPlex Status"
+                        delay 0
+                    end if
+                end tell
+            end try
             tell application "Finder"
-                if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                    display notification "No Theme installed..." with title "OpenPlex Status"
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
                     delay 0
                 end if
             end tell
-        end try
-        tell application "Finder"
+            try
+                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                set theString to quoted form of "Shutting"
+                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                if searchResult is not "0" then
+                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                    delay 0
+                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                end if
+            end try
+            
+            try
+                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                set theString to quoted form of "serving\\|shutting"
+                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                if searchResult is equal to "3" then
+                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                    delay 0
+                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                end if
+            end try
             if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
                 display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                delay 0
-            end if
-        end tell
-        try
-            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-            set theString to quoted form of "Shutting"
-            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-            if searchResult is not "0" then
-                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                delay 0
-                do shell script "afplay /System/Library/Sounds/Basso.aiff"
             end if
         end try
-        
-        try
-            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-            set theString to quoted form of "serving\\|shutting"
-            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-            if searchResult is equal to "3" then
-                display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                delay 0
-                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-            end if
-        end try
-        if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-            display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-        end if
         tell imovieProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerimovie_
@@ -2005,48 +1978,50 @@ script AppDelegate
     on buttonhandlerwsj_(sender)
         tell wsjProgressBar to startAnimation:me -- another way
         set animated to true
-        display notification "Creating WSJ certs if needed and setting hijack to WSJ..." with title "OpenPlex Status"
-        delay 0
         try
-            do shell script "createwsjbash.bash"
-            on error
+            display notification "Creating WSJ certs if needed and setting hijack to WSJ..." with title "OpenPlex Status"
+            delay 0
+            try
+                do shell script "createwsjbash.bash"
+                on error
+                tell application "Finder"
+                    if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        display notification "No Theme installed..." with title "OpenPlex Status"
+                        delay 0
+                    end if
+                end tell
+            end try
             tell application "Finder"
-                if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                    display notification "No Theme installed..." with title "OpenPlex Status"
+                if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
+                    display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
                     delay 0
                 end if
             end tell
-        end try
-        tell application "Finder"
+            try
+                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                set theString to quoted form of "Shutting"
+                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                if searchResult is not "0" then
+                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
+                    delay 0
+                    do shell script "afplay /System/Library/Sounds/Basso.aiff"
+                end if
+            end try
+            
+            try
+                set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
+                set theString to quoted form of "serving\\|shutting"
+                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                if searchResult is equal to "3" then
+                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
+                    delay 0
+                    do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                end if
+            end try
             if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
                 display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-                delay 0
-            end if
-        end tell
-        try
-            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-            set theString to quoted form of "Shutting"
-            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-            if searchResult is not "0" then
-                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                delay 0
-                do shell script "afplay /System/Library/Sounds/Basso.aiff"
             end if
         end try
-        
-        try
-            set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
-            set theString to quoted form of "serving\\|shutting"
-            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-            if searchResult is equal to "3" then
-                display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                delay 0
-                do shell script "afplay /System/Library/Sounds/Submarine.aiff"
-            end if
-        end try
-        if not (exists file "Applications:PlexConnect:PlexConnect.log" of the startup disk) then
-            display notification "PIL is not installed or theme is experiencing issues..." with title "OpenPlex Status"
-        end if
         tell wsjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwsj_
