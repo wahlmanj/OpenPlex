@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
+        <customObject id="-2" userLabel="File's Owner">
             <connections>
                 <outlet property="backgroundView" destination="6" id="20"/>
-                <outlet property="window" destination="5" id="7"/>
+                <outlet property="window" destination="pJn-5B-TFo" id="XlT-Dd-UIE"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -28,7 +28,7 @@
                 <outlet property="wsjProgressBar" destination="NQP-Qr-HWz" id="y82-kN-1hS"/>
             </connections>
         </customObject>
-        <window title="MenuBar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="5" customClass="Panel">
+        <window title="MenuBar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="5">
             <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <rect key="contentRect" x="162" y="101" width="172" height="179"/>
