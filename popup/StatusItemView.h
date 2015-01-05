@@ -8,9 +8,6 @@
     __unsafe_unretained id _target;
 }
 
-//////////////////////////SECOND IMAGE ROUTE//////////////////////////
-//////////////////////////SECOND IMAGE ROUTE//////////////////////////
-
 - (id)initWithStatusItem:(NSStatusItem *)statusItem;
 
 @property (nonatomic, strong, readonly) NSStatusItem *statusItem;
@@ -22,6 +19,3 @@
 @property (nonatomic, unsafe_unretained) id target;
 
 @end
-
-//////////////////////////SECOND IMAGE ROUTE//////////////////////////
-//////////////////////////SECOND IMAGE ROUTE//////////////////////////

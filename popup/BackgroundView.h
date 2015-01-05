@@ -1,4 +1,3 @@
-/////Panel arrow sizing
 #define ARROW_WIDTH 12
 #define ARROW_HEIGHT 8
 

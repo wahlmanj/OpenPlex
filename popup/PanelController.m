@@ -3,12 +3,14 @@
 #import "StatusItemView.h"
 #import "MenubarController.h"
 
-// Speed up panel so it doesnt freeze
-#define OPEN_DURATION 0
-#define CLOSE_DURATION 1
+#define OPEN_DURATION .1
+#define CLOSE_DURATION .1
+
+#define SEARCH_INSET 17
+
 #define POPUP_HEIGHT 179
 #define PANEL_WIDTH 172
-#define MENU_ANIMATION_DURATION 0
+#define MENU_ANIMATION_DURATION .1
 
 #pragma mark -
 
@@ -16,7 +18,8 @@
 
 @synthesize backgroundView = _backgroundView;
 @synthesize delegate = _delegate;
-
+@synthesize searchField = _searchField;
+@synthesize textField = _textField;
 
 #pragma mark -
 
@@ -30,6 +33,15 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSControlTextDidChangeNotification object:self.searchField];
+}
+
+#pragma mark -
+
+
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -41,6 +53,8 @@
     [panel setOpaque:NO];
     [panel setBackgroundColor:[NSColor clearColor]];
     
+    // Follow search string
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(runSearch) name:NSControlTextDidChangeNotification object:self.searchField];
 }
 
 #pragma mark - Public accessors
@@ -93,6 +107,36 @@
     
     self.backgroundView.arrowX = panelX;
     
+    NSRect searchRect = [self.searchField frame];
+    searchRect.size.width = NSWidth([self.backgroundView bounds]) - SEARCH_INSET * 2;
+    searchRect.origin.x = SEARCH_INSET;
+    searchRect.origin.y = NSHeight([self.backgroundView bounds]) - ARROW_HEIGHT - SEARCH_INSET - NSHeight(searchRect);
+    
+    if (NSIsEmptyRect(searchRect))
+    {
+        [self.searchField setHidden:YES];
+    }
+    else
+    {
+        [self.searchField setFrame:searchRect];
+        [self.searchField setHidden:NO];
+    }
+    
+    NSRect textRect = [self.textField frame];
+    textRect.size.width = NSWidth([self.backgroundView bounds]) - SEARCH_INSET * 2;
+    textRect.origin.x = SEARCH_INSET;
+    textRect.size.height = NSHeight([self.backgroundView bounds]) - ARROW_HEIGHT - SEARCH_INSET * 3 - NSHeight(searchRect);
+    textRect.origin.y = SEARCH_INSET;
+    
+    if (NSIsEmptyRect(textRect))
+    {
+        [self.textField setHidden:YES];
+    }
+    else
+    {
+        [self.textField setFrame:textRect];
+        [self.textField setHidden:NO];
+    }
 }
 
 #pragma mark - Keyboard
@@ -100,6 +144,18 @@
 - (void)cancelOperation:(id)sender
 {
     self.hasActivePanel = NO;
+}
+
+- (void)runSearch
+{
+    NSString *searchFormat = @"";
+    NSString *searchString = [self.searchField stringValue];
+    if ([searchString length] > 0)
+    {
+        searchFormat = NSLocalizedString(@"Search for ‘%@’…", @"Format for search request");
+    }
+    NSString *searchRequest = [NSString stringWithFormat:searchFormat, searchString];
+    [self.textField setStringValue:searchRequest];
 }
 
 #pragma mark - Public methods
@@ -145,8 +201,7 @@
     if (NSMaxX(panelRect) > (NSMaxX(screenRect) - ARROW_HEIGHT))
         panelRect.origin.x -= NSMaxX(panelRect) - (NSMaxX(screenRect) - ARROW_HEIGHT);
     
-    /////////Make app MakeKeyAndOrderFront
-    [NSApp activateIgnoringOtherApps:YES];
+    [NSApp activateIgnoringOtherApps:NO];
     [panel setAlphaValue:0];
     [panel setFrame:statusRect display:YES];
     [panel makeKeyAndOrderFront:nil];
@@ -185,7 +240,7 @@
     [[[self window] animator] setAlphaValue:0];
     [NSAnimationContext endGrouping];
     
-    dispatch_after(dispatch_walltime(NULL, NSEC_PER_SEC * CLOSE_DURATION * 0.1), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_walltime(NULL, NSEC_PER_SEC * CLOSE_DURATION * 2), dispatch_get_main_queue(), ^{
         
         [self.window orderOut:nil];
     });

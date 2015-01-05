@@ -28,7 +28,7 @@
                 <outlet property="wsjProgressBar" destination="NQP-Qr-HWz" id="y82-kN-1hS"/>
             </connections>
         </customObject>
-        <window title="OpenPlex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="5" customClass="Panel">
+        <window title="MenuBar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="5" customClass="Panel">
             <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" ignoresCycle="YES"/>
             <rect key="contentRect" x="162" y="101" width="172" height="179"/>
@@ -140,9 +140,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="label"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="makeKeyAndOrderFront:" target="pJn-5B-TFo" id="CUb-8V-Ls1"/>
-                        </connections>
                     </button>
                     <button toolTip="PlexConnect Status" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hwG-Yl-MeJ">
                         <rect key="frame" x="11" y="141" width="26" height="18"/>
@@ -387,7 +384,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
                         <connections>
-                            <action selector="buttonhandlercertstut:" target="139" id="ccX-Vt-pRl"/>
+                            <action selector="buttonhandlercertstut:" target="139" id="dhc-9g-eOM"/>
                         </connections>
                     </button>
                     <box autoresizesSubviews="NO" borderType="line" id="LhX-wd-WVx">
@@ -433,7 +430,7 @@ load certs</string>
             </view>
             <point key="canvasLocation" x="-1331" y="-855"/>
         </window>
-        <window title="OpenPlex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="pJn-5B-TFo" userLabel="Window -Default">
+        <window title="Setup" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="pJn-5B-TFo">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <rect key="contentRect" x="734" y="420" width="600" height="333"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
@@ -2108,7 +2105,7 @@ outside your local area network. </string>
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-804" y="-1272.5"/>
+            <point key="canvasLocation" x="-842" y="-1300.5"/>
         </window>
         <window title="Airplay to your mac!" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="s5f-fr-nxU">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>

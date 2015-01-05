@@ -1,17 +1,15 @@
 //
 //  main.m
-//  OpenPlex 0.2
+//  OpenPlex
 //
-//  Designed by iCyberGhost coded by wahlman.j on 24/06/14.
-//  Copyright (c) 2014 CyberGhost. All rights reserved.
+//  Created by user on 1/4/15.
+//  Copyright (c) 2015 OpenPlex. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
-
 #import <AppleScriptObjC/AppleScriptObjC.h>
 
-int main(int argc, const char * argv[])
-{
+int main(int argc, const char * argv[]) {
     [[NSBundle mainBundle] loadAppleScriptObjectiveCScripts];
     return NSApplicationMain(argc, argv);
 }
