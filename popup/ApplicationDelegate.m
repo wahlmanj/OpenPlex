@@ -29,6 +29,7 @@
     ///////////////////////POPUP///////////////////////
     self.winCon = [[NSWindowController alloc] initWithWindowNibName:@"NoMenu"];
     [[self.winCon window] makeKeyAndOrderFront:self];
+    [NSApp activateIgnoringOtherApps:YES];
 
     NSEvent *event = [NSApp currentEvent];
     if([event modifierFlags] & NSControlKeyMask) {
