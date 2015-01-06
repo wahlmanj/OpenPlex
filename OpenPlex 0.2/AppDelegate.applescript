@@ -2362,8 +2362,8 @@ script AppDelegate
             if (exists file "Applications:plexconnect_BACKUP:ATVSettings.cfg" of the startup disk) then
                 display notification "Exit and/or Open aTV hijack to restore PlexConnect Settings..." with title "OpenPlex Status"
                 delay 0
-                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect; startbash.bash; sleep 2"
-                -- allow PlexConnect.log to populate (sleep 2)
+                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; restoreatvsettingsbash.bash; startbash.bash; sleep 4"
+                -- allow PlexConnect.log to save and repopulate (sleep 4)
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
                         else
@@ -2413,7 +2413,8 @@ script AppDelegate
             if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
                 display notification "Exit and/or Open aTV hijack to restore default PlexConnect Settings..." with title "OpenPlex Status"
                 delay 0
-                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; startbash.bash"
+                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; startbash.bash; sleep 4"
+                -- allow PlexConnect.log to save and repopulate (sleep 4)
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
                         else
