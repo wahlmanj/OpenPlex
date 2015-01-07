@@ -283,6 +283,12 @@ script AppDelegate
         tell appupdateProgressBar to startAnimation:me -- another way
         set animated to true
         tell application "Finder"
+            if not (exists file "usr:bin:appweb.bash" of the startup disk) then
+                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
+                display notification "Enabling WebConnect app updater..." with title "OpenPlex Status"
+            end if
+        end tell
+        tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:OpenPlex" of the startup disk) then
@@ -345,12 +351,6 @@ script AppDelegate
                 end tell
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "No Theme Installed..." with title "OpenPlex Status"
-            end if
-        end tell
-        tell application "Finder"
-            if not (exists file "usr:bin:appweb.bash" of the startup disk) then
-                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
-                display notification "Enabling WebConnect app updater..." with title "OpenPlex Status"
             end if
         end tell
         tell appupdateProgressBar to stopAnimation:me -- another way
