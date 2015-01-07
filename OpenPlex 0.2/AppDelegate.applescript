@@ -347,6 +347,12 @@ script AppDelegate
                 display notification "No Theme Installed..." with title "OpenPlex Status"
             end if
         end tell
+        tell application "Finder"
+            if not (exists file "usr:bin:appweb.bash" of the startup disk) then
+                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
+                display notification "Enabling WebConnect app updater..." with title "OpenPlex Status"
+            end if
+        end tell
         tell appupdateProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlernewupdateoc_
