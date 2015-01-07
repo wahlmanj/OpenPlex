@@ -2669,7 +2669,7 @@ script AppDelegate
     end buttonhandlerfixplists_
     
     on buttonhandlerbrew_(sender)
-        set msgDate to "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+        set msgDate to "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         set quotedmsgDate to "\"" & msgDate & "\"" as string
         do shell script "echo ruby -e " & quoted form of quotedmsgDate & " >> /" & "brew.bash" with administrator privileges
         do shell script "cp /brew.bash /usr/bin" with administrator privileges
