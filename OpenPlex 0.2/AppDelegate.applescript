@@ -286,61 +286,62 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:OpenPlex" of the startup disk) then
-                        set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; updateappbash.bash"
-                        if x is not equal to "Already up-to-date." then
-                            display notification "OpenPlex update available, Installing... Current" & x with title "OpenPlex Status"
-                            delay 0
-                            try
-                                tell application "Finder"
-                                    if (exists file "Applications:OpenPlex:10.6:OpenPlex.app" of the startup disk) then
-                                        try
-                                            do shell script "cd /Applications/OpenPlex/10.6; rm -R OpenPlex.app"
-                                            onerror
-                                        end try
-                                        else
-                                    end if
-                                end tell
-                                tell application "Finder"
-                                    if (exists file "Applications:OpenPlex:10.7:OpenPlex.app" of the startup disk) then
-                                        try
-                                            do shell script "cd /Applications/OpenPlex/10.7; rm -R OpenPlex.app"
-                                            onerror
-                                        end try
-                                        else
-                                    end if
-                                end tell
-                                tell application "Finder"
-                                    if (exists file "Applications:OpenPlex:updater:updater.app" of the startup disk) then
-                                        try
-                                            do shell script "cd /Applications/OpenPlex/updater; rm -R updater.app"
-                                            onerror
-                                        end try
-                                        else
-                                    end if
-                                end tell
-                                do shell script "updatewcbash.bash; cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
-                                do shell script "cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
-                                display notification "OpenPlex Updated" with title "OpenPlex Status"
-                                delay 0
-                                onerror
-                                do shell script "rm -R /Applications/OpenPlex" with administrator privileges
-                                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
-                                display notification "OpenPlex Updated" with title "OpenPlex Status"
-                                delay 0
-                            end try
-                            
-                            else if x is equal to "Already up-to-date." then
-                            set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/OpenPlex; git reset --hard"
-                            display notification "No app updates avaliable..." & y with title "OpenPlex Status"
-                        end if
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex; sleep 2"
                         else if not (exists folder "Applications:OpenPlex" of the startup disk) then
+                    end if
+                    try
+                        set OpenPlex to (path to home folder as text) & "Library:Application Support:OpenPlex" as alias
+                        if OpenPlex exists then
+                            set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd ~/Library/Application\\ Support/OpenPlex; updateappbash.bash"
+                            if x is not equal to "Already up-to-date." then
+                                display notification "OpenPlex update available, Installing... Current" & x with title "OpenPlex Status"
+                                delay 0
+                                try
+                                    try
+                                        set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:10.6:OpenPlex.app" as alias
+                                        if theDefault exists then
+                                            do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/10.6/OpenPlex.app"
+                                        end if
+                                    end try
+                                    try
+                                        set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:10.7:OpenPlex.app" as alias
+                                        if theDefault exists then
+                                            do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/10.7/OpenPlex.app"
+                                        end if
+                                    end try
+                                    try
+                                        set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:updater:updater.app" as alias
+                                        if theDefault exists then
+                                            do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/updater/updater.app"
+                                        end if
+                                    end try
+                                    
+                                    do shell script "updatewcbash.bash; cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+                                    do shell script "cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
+                                    display notification "OpenPlex Updated" with title "OpenPlex Status"
+                                    delay 0
+                                    onerror
+                                    display notification "OpenPlex folder corrupted" with title "OpenPlex Status"
+                                    delay 0
+                                    do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
+                                    do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
+                                    display notification "OpenPlex Updated" with title "OpenPlex Status"
+                                    delay 0
+                                end try
+                                
+                                else if x is equal to "Already up-to-date." then
+                                set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd ~/Library/Application\\ Support/OpenPlex; git reset --hard"
+                                display notification "No app updates avaliable..." & y with title "OpenPlex Status"
+                            end if
+                        end if
+                        on error
                         display notification "No OpenPlex folder detected, this will take awhile to install..." with title "OpenPlex Status"
                         delay 0
                         do shell script "updatewcbash.bash; cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
-                        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
+                        do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git; cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
                         display notification "OpenPlex Updated" with title "OpenPlex Status"
                         delay 0
-                    end if
+                    end try
                 end tell
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "No Theme Installed..." with title "OpenPlex Status"
