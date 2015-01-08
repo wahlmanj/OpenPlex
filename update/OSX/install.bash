@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 2
+
 while : ; do
     [[ -f "/Applications/PlexConnect/Settings.py" ]] && break
     echo "Pausing until file exists."
