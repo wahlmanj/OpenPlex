@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sleep 2
+while : ; do
+    [[ -f "/Applications/PlexConnect/Settings.py" ]] && break
+    echo "Pausing until file exists."
+    sleep 2
+done
 
 ## save path to installer files
 ## cd "$( cd "$( dirname "$0" )" && pwd )"
