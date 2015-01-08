@@ -1,5 +1,13 @@
 #!/bin/bash
 
+sleep 1
+
+while : ; do
+    [[ -f "/Applications/PlexConnect/update/OSX/PlexCon" ]] && break
+    echo "Pausing until file exists."
+    sleep 1
+done
+
 ## save path to installer files
 ## cd "$( cd "$( dirname "$0" )" && pwd )"
 cd /Applications/PlexConnect/update/OSX
