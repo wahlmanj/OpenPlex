@@ -15,13 +15,11 @@ newUpdatesAvailable=`git diff HEAD FETCH_HEAD`
 if [ "$newUpdatesAvailable" != "" ]
 then
 git pull
-cp -R __HOME__/Library/Application\ Support/OpenPlex/update /Applications/PlexConnect
 cd /Applications/PlexConnect/update/OSX
-chmod -R ugo+rw /Applications/PlexConnect/update/OSX/
-chmod +x install.bash
-./install.bash
 git reset --hard
 else
 echo "no updates available"
 fi
 echo 'Wahlman.j cloned to /Applications/PlexConnect'
+chmod 777 /Applications/PlexConnect/Update/OSX
+cp -R __HOME__/Library/Application\ Support/OpenPlex/update/* /Applications/PlexConnect
