@@ -405,40 +405,40 @@ script AppDelegate
         set animated to true
         display dialog "Installing iBaa Theme..." with title "OpenPlex Status"
         delay 0
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                tell application "Finder"
-                    if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                        display dialog "Optimizing new app features..." with title "OpenPlex Status"
-                        delay 0
-                        if (exists folder "Applications:OpenPlex" of the startup disk) then
-                            try
-                                do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
-                            end try
-                            try
-                                set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                                do shell script x
-                            end try
-                            try
-                                do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                            end try
-                        end if
-                        try
-                            set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                            do shell script x
-                        end try
-                        try
-                            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                        end try
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
-                        do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
-                    end if
-                end tell
-            end if
-        end tell
     tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        tell application "Finder"
+                            if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
+                                display dialog "Optimizing new app features..." with title "OpenPlex Status"
+                                delay 0
+                                if (exists folder "Applications:OpenPlex" of the startup disk) then
+                                    try
+                                        do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
+                                    end try
+                                    try
+                                        set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                        do shell script x
+                                    end try
+                                    try
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                    end try
+                                end if
+                                try
+                                    set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                    do shell script x
+                                end try
+                                try
+                                    do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                end try
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
+                                do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                            end if
+                        end tell
+                    end if
+                end tell
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -626,7 +626,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git; cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -723,39 +723,39 @@ script AppDelegate
         display dialog "Installing Falco953 Theme..." with title "OpenPlex Status"
         delay 0
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+            if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
-                    if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                        display dialog "Optimizing new app features..." with title "OpenPlex Status"
-                        delay 0
-                        if (exists folder "Applications:OpenPlex" of the startup disk) then
-                            try
-                                do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
-                            end try
-                            try
-                                set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                                do shell script x
-                            end try
-                            try
-                                do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                            end try
-                        end if
-                        try
-                            set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                            do shell script x
-                        end try
-                        try
-                            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                        end try
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
-                        do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        tell application "Finder"
+                            if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
+                                display dialog "Optimizing new app features..." with title "OpenPlex Status"
+                                delay 0
+                                if (exists folder "Applications:OpenPlex" of the startup disk) then
+                                    try
+                                        do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
+                                    end try
+                                    try
+                                        set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                        do shell script x
+                                    end try
+                                    try
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                    end try
+                                end if
+                                try
+                                    set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                    do shell script x
+                                end try
+                                try
+                                    do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                end try
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
+                                do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                            end if
+                        end tell
                     end if
                 end tell
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -945,7 +945,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git; cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -1040,40 +1040,40 @@ script AppDelegate
         set animated to true
         display dialog "Installing Stoffez Theme..." with title "OpenPlex Status"
         delay 0
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 tell application "Finder"
-                    if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                        display dialog "Optimizing new app features..." with title "OpenPlex Status"
-                        delay 0
-                        if (exists folder "Applications:OpenPlex" of the startup disk) then
-                            try
-                                do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
-                            end try
-                            try
-                                set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                                do shell script x
-                            end try
-                            try
-                                do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                            end try
-                        end if
-                        try
-                            set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                            do shell script x
-                        end try
-                        try
-                            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                        end try
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
-                        do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+            if (exists folder "usr:local:git:OP" of the startup disk) then
+                tell application "Finder"
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        tell application "Finder"
+                            if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
+                                display dialog "Optimizing new app features..." with title "OpenPlex Status"
+                                delay 0
+                                if (exists folder "Applications:OpenPlex" of the startup disk) then
+                                    try
+                                        do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
+                                    end try
+                                    try
+                                        set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                        do shell script x
+                                    end try
+                                    try
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                    end try
+                                end if
+                                try
+                                    set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                    do shell script x
+                                end try
+                                try
+                                    do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                end try
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
+                                do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                            end if
+                        end tell
                     end if
                 end tell
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1200,7 +1200,6 @@ script AppDelegate
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
             end if
         end tell
-        
         tell application "Finder"
             if not (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
@@ -1261,7 +1260,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git; cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -1291,7 +1290,6 @@ script AppDelegate
                                 do shell script "createimoviebash.bash"
                             end if
                         end try
-                        
                         try
                             set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
                             set theString to quoted form of "trailers"
@@ -1313,7 +1311,6 @@ script AppDelegate
                                 do shell script "createwsjbash.bash"
                             end if
                         end try
-                        
                         if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
                             -- take a nap so notifications work right :)
                             do shell script "sleep 1"
@@ -1357,39 +1354,39 @@ script AppDelegate
         display dialog "Installing CyberGhost84 Theme..." with title "OpenPlex Status"
         delay 0
         tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+            if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
-                    if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                        display dialog "Optimizing new app features..." with title "OpenPlex Status"
-                        delay 0
-                        if (exists folder "Applications:OpenPlex" of the startup disk) then
-                            try
-                                do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
-                            end try
-                            try
-                                set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                                do shell script x
-                            end try
-                            try
-                                do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                            end try
-                        end if
-                        try
-                            set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                            do shell script x
-                        end try
-                        try
-                            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                        end try
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
-                        do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        tell application "Finder"
+                            if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
+                                display dialog "Optimizing new app features..." with title "OpenPlex Status"
+                                delay 0
+                                if (exists folder "Applications:OpenPlex" of the startup disk) then
+                                    try
+                                        do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
+                                    end try
+                                    try
+                                        set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                        do shell script x
+                                    end try
+                                    try
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                    end try
+                                end if
+                                try
+                                    set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                    do shell script x
+                                end try
+                                try
+                                    do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                end try
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
+                                do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                            end if
+                        end tell
                     end if
                 end tell
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1575,7 +1572,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git; cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -1670,41 +1667,41 @@ script AppDelegate
         set animated to true
         display dialog "Installing Wahlman.J Theme..." with title "OpenPlex Status"
         delay 0
-        tell application "Finder"
-            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+            tell application "Finder"
+            if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
-                    if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                        display dialog "Optimizing new app features..." with title "OpenPlex Status"
-                        delay 0
-                        if (exists folder "Applications:OpenPlex" of the startup disk) then
-                            try
-                                do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
-                            end try
-                            try
-                                set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                                do shell script x
-                            end try
-                            try
-                                do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                            end try
-                        end if
-                        
-                        try
-                            set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
-                            do shell script x
-                        end try
-                        try
-                            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                        end try
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
-                        do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
-                        do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                    if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                        tell application "Finder"
+                            if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
+                                display dialog "Optimizing new app features..." with title "OpenPlex Status"
+                                delay 0
+                                if (exists folder "Applications:OpenPlex" of the startup disk) then
+                                    try
+                                        do shell script "mv /Applications/OpenPlex ~/Library/Application\\ Support/OpenPlex"
+                                    end try
+                                    try
+                                        set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                        do shell script x
+                                    end try
+                                    try
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                    end try
+                                end if
+                                
+                                try
+                                    set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; git pull"
+                                    do shell script x
+                                end try
+                                try
+                                    do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                end try
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./themewebhome.bash" with administrator privileges
+                                do shell script "cd /Applications/PlexConnect/update/OSX; ./appwebhome.bash" with administrator privileges
+                                do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
+                            end if
+                        end tell
                     end if
                 end tell
-            end if
-        end tell
-        tell application "Finder"
-            if (exists folder "usr:local:git:OP" of the startup disk) then
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1895,7 +1892,7 @@ script AppDelegate
                 delay 0
                 do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 do shell script "updatewcbash.bash; cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git; cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
