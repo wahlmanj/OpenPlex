@@ -22,6 +22,6 @@ echo "no updates available"
 fi
 echo 'Falco953 cloned to /Applications/PlexConnect'
 chmod 777 /Applications/PlexConnect/Update/OSX
-cp -R __HOME__/Library/Application\ Support/OpenPlex/update/* /Applications/PlexConnect
+cp -R __HOME__/Library/Application\ Support/OpenPlex/update/OSX/* /Applications/PlexConnect/update/OSX
 
 
