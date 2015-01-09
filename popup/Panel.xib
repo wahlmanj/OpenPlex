@@ -110,9 +110,6 @@
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
-                                    <connections>
-                                        <action selector="buttonhandlerupdate:" target="139" id="DXo-I3-eMa"/>
-                                    </connections>
                                 </button>
                                 <button toolTip="Exit OpenPlex" id="aSG-yA-djP">
                                     <rect key="frame" x="104" y="14" width="42" height="38"/>
@@ -2069,9 +2066,6 @@ High output </string>
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="smallSystem"/>
                                                         </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerupdatecode:" target="139" id="14T-AN-JKR"/>
-                                                        </connections>
                                                     </button>
                                                     <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="Dfd-15-JNs">
                                                         <rect key="frame" x="146" y="14" width="16" height="16"/>

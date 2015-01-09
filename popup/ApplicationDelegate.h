@@ -1,3 +1,4 @@
+
 /*!
  --  OpenPlex 0.4
  --
@@ -13,6 +14,7 @@
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @property (assign, nonatomic) BOOL darkModeOn;
 @property (nonatomic, retain) NSWindowController *winCon;
+- (IBAction)darkMenu_Button:(id)sender;
 
 //@property (nonatomic, strong) NSWinCon *WinCon;
 //@property (nonatomic, strong) MenubarController *menubarController;
@@ -28,4 +30,3 @@
 //- (IBAction)togglePanel:(id)sender;
 
 @end
-

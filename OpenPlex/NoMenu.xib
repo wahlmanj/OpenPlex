@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
+        <customObject id="-2" userLabel="File's Owner" customClass="ApplicationDelegate">
             <connections>
                 <outlet property="window" destination="Pir-Ha-tob" id="8HJ-C1-S7g"/>
             </connections>
@@ -106,7 +106,7 @@
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-900.5" y="-887.5"/>
+            <point key="canvasLocation" x="-919.5" y="-902.5"/>
         </window>
         <window title="Setup" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="Pir-Ha-tob">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -206,17 +206,6 @@
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlerinstalldark:" target="qo8-lj-syM" id="0ek-Tg-2aV"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="Rhk-Yq-bkq">
-                                            <rect key="frame" x="494" y="174" width="43" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NoK-tV-hhq">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerdarkmode:" target="qo8-lj-syM" id="w5i-xk-bJb"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KIT-oI-Iv9">
@@ -347,9 +336,6 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerupdate:" target="qo8-lj-syM" id="pGS-6g-BlB"/>
-                                            </connections>
                                         </button>
                                         <button toolTip="PlexConnect Status" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Rxg-JV-yOF">
                                             <rect key="frame" x="511" y="9" width="20" height="20"/>
@@ -374,6 +360,17 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlerlog:" target="qo8-lj-syM" id="WVN-tf-N5G"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="Rhk-Yq-bkq">
+                                            <rect key="frame" x="494" y="174" width="43" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NoK-tV-hhq">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="darkMenu_Button:" target="-2" id="13D-Vv-5Gs"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -1776,7 +1773,7 @@ High output </string>
                                                             <font key="font" metaFont="smallSystem"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerwview:" target="qo8-lj-syM" id="TFv-3y-d39"/>
+                                                            <action selector="buttonhandlerwcview:" target="qo8-lj-syM" id="gTn-ac-Qxs"/>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Ac6-Zc-bAt">
@@ -1796,7 +1793,7 @@ High output </string>
                                                             <font key="font" metaFont="smallSystem"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerupdatecode:" target="qo8-lj-syM" id="XHC-we-mz2"/>
+                                                            <action selector="buttonhandlerupdatecode:" target="qo8-lj-syM" id="mvi-RL-gB6"/>
                                                         </connections>
                                                     </button>
                                                     <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="m9h-8X-21A">
@@ -1885,7 +1882,7 @@ outside your local area network. </string>
                     </tabView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1077" y="-1272.5"/>
+            <point key="canvasLocation" x="-1269" y="-1254.5"/>
         </window>
         <window title="Setup Plex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IPm-4I-Pv8">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2070,7 +2067,7 @@ load certs</string>
         <customObject id="qo8-lj-syM" customClass="AppDelegate">
             <connections>
                 <outlet property="WCProgressBar" destination="m9h-8X-21A" id="5jG-Oq-XDM"/>
-                <outlet property="appupdateProgressBar" destination="zPX-Ux-wbC" id="fir-qL-NJR"/>
+                <outlet property="appupdateProgressBar" destination="zPX-Ux-wbC" id="6jS-q2-3Oz"/>
                 <outlet property="baaProgressBar" destination="chn-x3-Nf6" id="D1a-pO-GnL"/>
                 <outlet property="falcoProgressBar" destination="gOB-lB-R6Z" id="qSv-n5-XBG"/>
                 <outlet property="ghostProgressBar" destination="SOb-eG-qjU" id="f3N-nb-pPF"/>

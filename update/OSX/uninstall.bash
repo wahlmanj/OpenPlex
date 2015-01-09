@@ -108,7 +108,6 @@ rm /usr/bin/stopbash.bash
 rm /usr/bin/sudoers.bash
 rm /usr/bin/sudoersfix.bash
 rm /usr/bin/sudoersfixbash.bash
-rm /usr/bin/themewebhome.bash
 rm /usr/bin/timemachine.bash
 rm /usr/bin/timemachinebash.bash
 rm /usr/bin/trash.bash

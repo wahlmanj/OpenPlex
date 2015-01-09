@@ -7,7 +7,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "ApplicationDelegate.h"
 
 @interface NoMenu : NSWindowController
-
 @end

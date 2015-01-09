@@ -607,27 +607,41 @@ chmod +x /usr/bin/who.bash
 chmod +x /usr/bin/whobash.bash
 chmod +x /usr/bin/wol.bash
 chmod +x /usr/bin/xml.bash
+
+if [ -s /Applications/PlexConnect/update/OSX/appwebhome.bash ]
+then
 chmod +x /Applications/PlexConnect/update/OSX/appwebhome.bash
+fi
+if [ -s /Applications/PlexConnect/update/OSX/airplay.bash ]
+then
 chmod +x /Applications/PlexConnect/update/OSX/airplay.bash
+fi
+if [ -s /Applications/PlexConnect/update/OSX/clt.bash ]
+then
 chmod +x /Applications/PlexConnect/update/OSX/clt.bash
+fi
+if [ -s /Applications/PlexConnect/update/OSX/shairport.bash ]
+then
 chmod +x /Applications/PlexConnect/update/OSX/shairport.bash
+fi
+if [ -s /Applications/PlexConnect/update/OSX/storefront.bash ]
+then
 chmod +x /Applications/PlexConnect/update/OSX/storefront.bash
+fi
+if [ -s /Applications/PlexConnect/update/OSX/PlexConnect.bash ]
+then
 chmod +x /Applications/PlexConnect/update/OSX/PlexConnect.bash
-chmod +x /Applications/PlexConnect/update/OSX/themewebhome.bash
+fi
+if [ -s /Applications/PlexConnect/update/OSX/uninstall.bash ]
+then
 chmod +x /Applications/PlexConnect/update/OSX/uninstall.bash
+fi
 
 ## Themes
-chmod 4755 /usr/bin/ibaa.bash
-chmod 4755 /usr/bin/cyberghost.bash
-chmod 4755 /usr/bin/falco.bash
-chmod 4755 /usr/bin/stoffez.bash
-chmod 4755 /usr/bin/wahlmanj.bash
+## appwewebhome.bash fixes these permissions due to users home dir requirement
 
 ## PlexConnect Commands
-if [ -s /usr/bin/appweb.bash ]
-then
-chmod 4755 /usr/bin/appweb.bash
-fi
+## appwewebhome.bash fixes appweb.bash
 chmod 4755 /usr/bin/backupatvsettings.bash
 chmod 4755 /usr/bin/restoreatvsettings.bash
 chmod 4755 /usr/bin/backup.bash
@@ -749,11 +763,6 @@ fi
 if [ -s /Applications/plexconnect_BACKUP ]
 then
 chmod -R 777 /Applications/plexconnect_BACKUP
-fi
-
-if [ -s /usr/bin/dark-mode ]
-then
-rm /usr/bin/dark-mode
 fi
 
 echo 'WebConnect has been updated. Refresh your browser if no icons appear.'
