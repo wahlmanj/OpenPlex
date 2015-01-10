@@ -22,3 +22,6 @@ chmod 4755 /usr/bin/stoffez.bash
 chmod 4755 /usr/bin/falco.bash
 chmod 4755 /usr/bin/wahlmanj.bash
 chmod 4755 /usr/bin/updatewc.bash
+
+## Modify script permissions so everything can be removed if desired
+chmod +x /usr/bin/uninstall.bash

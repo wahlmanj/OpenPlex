@@ -628,9 +628,9 @@ if [ -s /Applications/PlexConnect/update/OSX/PlexConnect.bash ]
 then
 chmod +x /Applications/PlexConnect/update/OSX/PlexConnect.bash
 fi
-if [ -s /Applications/PlexConnect/update/OSX/uninstall.bash ]
+if [ -s /usr/bin/uninstall.bash ]
 then
-chmod +x /Applications/PlexConnect/update/OSX/uninstall.bash
+chmod +x /usr/bin/uninstall.bash
 fi
 
 ## Themes

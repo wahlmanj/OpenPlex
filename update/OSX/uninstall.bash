@@ -113,6 +113,7 @@ rm /usr/bin/timemachinebash.bash
 rm /usr/bin/trash.bash
 rm /usr/bin/trashbash.bash
 rm /usr/bin/trashbase.bash
+rm /usr/bin/trashbasebash.bash
 rm /usr/bin/tv.bash
 rm /usr/bin/tvbash.bash
 rm /usr/bin/uninstallbash.bash
@@ -130,9 +131,11 @@ rm /usr/bin/wahlmanjbash.bash
 rm /usr/bin/wake.bash
 rm /usr/bin/wakebash.bash
 rm /usr/bin/wcdefault.bash
+rm /usr/bin/wcdefaultbash.bash
 rm /usr/bin/wcinstaller.bash
 rm /usr/bin/wcinstallerbash.bash
 rm /usr/bin/wcios.bash
+rm /usr/bin/wciosbash.bash
 rm /usr/bin/wclist.bash
 rm /usr/bin/wclistbash.bash
 rm /usr/bin/wcopenplex.bash
@@ -167,9 +170,9 @@ then
 rm -Rf /Applications/OpenPlex.app
 fi
 
-
-
 killall OpenPlex
+
+rm /usr/bin/uninstall.bash
 
 ## Explain uninstall has been completed
 echo 'OpenConnect and WebConnect have been uninstalled if there is numerous rm commands during this script you did not install WebConnect'
