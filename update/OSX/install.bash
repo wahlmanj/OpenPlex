@@ -422,7 +422,6 @@ cp uninstallbash.bash /usr/bin
 cp unmuteboot.bash /usr/bin
 cp updatebash.bash /usr/bin
 cp updaterbash.bash /usr/bin
-cp updatewc.bash /usr/bin
 cp updatewcbash.bash /usr/bin
 cp utorrent.bash /usr/bin
 cp utorrentbash.bash /usr/bin
@@ -582,7 +581,6 @@ chmod +x /usr/bin/uninstallbash.bash
 chmod +x /usr/bin/unmuteboot.bash
 chmod +x /usr/bin/update.bash
 chmod +x /usr/bin/updatebash.bash
-chmod +x /usr/bin/updatewc.bash
 chmod +x /usr/bin/updatewcbash.bash
 chmod +x /usr/bin/updater.bash
 chmod +x /usr/bin/updaterbash.bash
@@ -653,7 +651,7 @@ chmod 4755 /usr/bin/start.bash
 chmod 4755 /usr/bin/stop.bash
 chmod 4755 /usr/bin/restart.bash
 chmod 4755 /usr/bin/status.bash
-chmod 4755 /usr/bin/updatewc.bash
+## appwewebhome.bash fixes updatewc.bash
 
 ## Hijacks
 chmod 4755 /usr/bin/restorecerts.bash
