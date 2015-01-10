@@ -15,10 +15,12 @@
 @implementation NoMenu
 @synthesize darkModeOn;
 
+/*
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    [self refreshDarkMode];
+    
 }
+*/
 
 - (IBAction)dark:(id)sender{
     
@@ -39,7 +41,8 @@
     
 }
 
-- (void)refreshDarkMode {
+/*
+ - (void)refreshDarkMode {
     
     NSString * value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
     if ([value isEqualToString:@"Dark"]) {
@@ -50,6 +53,8 @@
         
     }
 }
+ 
+*/
 
 -(id)initWithWindow:(NSWindow *)window
 {

@@ -12,7 +12,7 @@
 @property (assign) IBOutlet NSWindow *window;
 @end
 @implementation ApplicationDelegate
-@synthesize winCon,darkModeOn,statusItem;
+@synthesize winCon,statusItem,darkModeOn;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
@@ -22,7 +22,20 @@
     statusItem.highlightMode = NO;
     [statusItem setAction:@selector(itemClicked:)];
     statusItem.toolTip = @"Control-click to quit";
+    [self refreshDarkMode];
     
+}
+
+- (void)refreshDarkMode {
+    
+    NSString * value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
+    if ([value isEqualToString:@"Dark"]) {
+        self.darkModeOn = YES;
+    }
+    else {
+        self.darkModeOn = NO;
+        
+    }
 }
 
 - (void)itemClicked:(id)sender {

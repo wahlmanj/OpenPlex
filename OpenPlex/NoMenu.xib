@@ -362,7 +362,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="dark:" target="Y8d-nb-MOE" id="FFk-ZL-Y1R"/>
+                                                <action selector="dark:" target="Y8d-nb-MOE" id="BEY-Kg-xbP"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -2062,7 +2062,7 @@ load certs</string>
         <customObject id="yA6-dK-NsI" userLabel="Application Delegate" customClass="ApplicationDelegate"/>
         <customObject id="Y8d-nb-MOE" userLabel="NoMenu" customClass="NoMenu">
             <connections>
-                <outlet property="dark" destination="bIX-AS-xFy" id="WPs-Zp-3xp"/>
+                <outlet property="dark" destination="bIX-AS-xFy" id="iz8-Qq-vIz"/>
                 <outlet property="window" destination="Pir-Ha-tob" id="zWN-H8-Vue"/>
             </connections>
         </customObject>
