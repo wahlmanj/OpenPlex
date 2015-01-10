@@ -443,14 +443,14 @@ load certs</string>
                                                 <action selector="buttonhandlerlog:" target="qo8-lj-syM" id="1Ai-JR-OAZ"/>
                                             </connections>
                                         </button>
-                                        <imageView id="4EY-LX-Y01">
-                                            <rect key="frame" x="560" y="238" width="20" height="20"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="status" id="zFg-c8-YuP"/>
-                                            <connections>
-                                                <action selector="buttonhandlernewchecker:" target="qo8-lj-syM" id="llM-GY-UDS"/>
-                                            </connections>
-                                        </imageView>
+                                        <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hqv-Xy-7Di">
+                                            <rect key="frame" x="548" y="224" width="39" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="round" bezelStyle="circular" image="status" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="Cuu-li-zyv">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="label"/>
+                                            </buttonCell>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -474,7 +474,7 @@ load certs</string>
                                             </textFieldCell>
                                         </textField>
                                         <button toolTip="Check for App updates " verticalHuggingPriority="750" id="c4Z-9H-Fji">
-                                            <rect key="frame" x="206" y="204" width="68" height="25"/>
+                                            <rect key="frame" x="305" y="205" width="68" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Update App" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LMO-Dl-0fP">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -485,7 +485,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <button toolTip="Uninstall App" verticalHuggingPriority="750" id="jc0-4b-cID">
-                                            <rect key="frame" x="305" y="204" width="68" height="25"/>
+                                            <rect key="frame" x="401" y="205" width="68" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Uninstall" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CE7-Ad-ROL">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -496,11 +496,11 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="8HK-XJ-acf">
-                                            <rect key="frame" x="206" y="186" width="68" height="12"/>
+                                            <rect key="frame" x="306" y="186" width="68" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Khw-gH-XPZ">
-                                            <rect key="frame" x="305" y="186" width="68" height="12"/>
+                                            <rect key="frame" x="401" y="186" width="68" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <button verticalHuggingPriority="750" id="ozn-4O-wgn">
@@ -577,11 +577,39 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
+                                            <rect key="frame" x="204" y="205" width="73" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <shadow key="shadow">
+                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="squareTextured" title="Demo Video" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="aIt-iG-KRl">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="PlexConnect Log" id="DK8-z6-rNU">
+                                            <rect key="frame" x="17" y="-7" width="64" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <shadow key="shadow">
+                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="paypal-donate-button" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="Ltk-6r-vrF">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerdonate:" target="qo8-lj-syM" id="ED2-LN-cg8"/>
+                                            </connections>
+                                        </button>
                                         <box autoresizesSubviews="NO" borderType="line" id="6pt-Rh-BkW">
-                                            <rect key="frame" x="379" y="32" width="212" height="93"/>
+                                            <rect key="frame" x="390" y="32" width="201" height="93"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="210" height="77"/>
+                                                <rect key="frame" x="1" y="1" width="199" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button toolTip="Enable open at login" verticalHuggingPriority="750" id="9Pg-ab-Qr5">
@@ -629,34 +657,6 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
-                                            <rect key="frame" x="514" y="198" width="42" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <shadow key="shadow">
-                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            </shadow>
-                                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="demo" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="aIt-iG-KRl">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
-                                            </connections>
-                                        </button>
-                                        <button toolTip="PlexConnect Log" id="DK8-z6-rNU">
-                                            <rect key="frame" x="17" y="-7" width="64" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <shadow key="shadow">
-                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            </shadow>
-                                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="paypal-donate-button" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="Ltk-6r-vrF">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerdonate:" target="qo8-lj-syM" id="ED2-LN-cg8"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -2118,7 +2118,6 @@ outside your local area network. </string>
         <image name="WebConnect" width="512" height="512"/>
         <image name="atv" width="228" height="147"/>
         <image name="black" width="188" height="108"/>
-        <image name="demo" width="1151" height="739.20001220703125"/>
         <image name="gradient" width="188" height="108"/>
         <image name="grey" width="188" height="108"/>
         <image name="iMovie" width="188" height="108"/>
