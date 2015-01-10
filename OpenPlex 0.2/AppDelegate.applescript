@@ -71,10 +71,12 @@ script AppDelegate
                     set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git fetch; git merge origin"
                     set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect;  git reset --hard"
                     if x is equal to "Already up-to-date." then
+                        do shell script "afplay /System/Library/Sounds/Ping.aiff"
                         display notification "No PlexConnect updates avaliable..." & y with title "OpenPlex Status"
                         delay 0
                         else if x is not equal to "Already up-to-date." then
                         do shell script "restartbash.bash"
+                        do shell script "afplay /System/Library/Sounds/Glass.aiff"
                        display notification "PlexConnect updated, Exit hijacked app on aTV..." & y with title "OpenPlex Status"
                         delay 0
                    end if
@@ -309,6 +311,7 @@ script AppDelegate
             do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
             set x to do shell script "appwebbash.bash"
             if x is equal to "no updates available" then
+                do shell script "afplay /System/Library/Sounds/Ping.aiff"
                 display notification "No OpenPlex updates avaliable..." with title "OpenPlex Status"
                 delay 0
                 else if x is not equal to "no updates available" then

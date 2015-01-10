@@ -417,7 +417,6 @@ cp trash.bash /usr/bin
 cp trashbash.bash /usr/bin
 cp tv.bash /usr/bin
 cp tvbash.bash /usr/bin
-cp uninstall.bash /usr/bin
 cp uninstallbash.bash /usr/bin
 cp unmuteboot.bash /usr/bin
 cp updatebash.bash /usr/bin
@@ -576,7 +575,6 @@ chmod +x /usr/bin/trashbash.bash
 chmod +x /usr/bin/trashbasebash.bash
 chmod +x /usr/bin/tv.bash
 chmod +x /usr/bin/tvbash.bash
-chmod +x /usr/bin/uninstall.bash
 chmod +x /usr/bin/uninstallbash.bash
 chmod +x /usr/bin/unmuteboot.bash
 chmod +x /usr/bin/update.bash

@@ -262,7 +262,7 @@
                                                 <action selector="dark:" target="Y8d-nb-MOE" id="FtM-5A-Aei"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="Exit OpenPlex" id="9a6-6x-NhK">
+                                        <button toolTip="Status PlexConnect" id="9a6-6x-NhK">
                                             <rect key="frame" x="502" y="17" width="42" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">

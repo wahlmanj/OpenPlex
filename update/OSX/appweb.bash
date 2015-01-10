@@ -26,6 +26,7 @@ open updater.app
 git pull
 git reset --hard
 else
+afplay /System/Library/Sounds/Ping.aiff
 echo "no updates available"
 fi
 # Allow OpenPlex git and app to update to display proper git HEAD commit

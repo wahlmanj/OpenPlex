@@ -11,6 +11,7 @@ sed -e "s/__HOME__/${HOME//\//\\/}/" "${DefaultPath}/ibaa.bash" > /usr/bin/ibaa.
 sed -e "s/__HOME__/${HOME//\//\\/}/" "${DefaultPath}/stoffez.bash" > /usr/bin/stoffez.bash
 sed -e "s/__HOME__/${HOME//\//\\/}/" "${DefaultPath}/falco.bash" > /usr/bin/falco.bash
 sed -e "s/__HOME__/${HOME//\//\\/}/" "${DefaultPath}/wahlmanj.bash" > /usr/bin/wahlmanj.bash
+sed -e "s/__HOME__/${HOME//\//\\/}/" "${DefaultPath}/uninstall.bash" > /usr/bin/uninstall.bash
 sed -e "s/__HOME__/${HOME//\//\\/}/" "${DefaultPath}/updatewc.bash" > /usr/bin/updatewc.bash
 
 ## Modify script permissions so they can be ran from WebConnect
