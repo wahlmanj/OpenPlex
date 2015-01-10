@@ -115,6 +115,7 @@ rm /usr/bin/trashbash.bash
 rm /usr/bin/trashbase.bash
 rm /usr/bin/tv.bash
 rm /usr/bin/tvbash.bash
+rm /usr/bin/uninstallbash.bash
 rm /usr/bin/unmuteboot.bash
 rm /usr/bin/update.bash
 rm /usr/bin/updatebash.bash
@@ -162,9 +163,6 @@ rm -Rf /Applications/OpenPlex.app
 fi
 
 killall OpenPlex
-
-rm /usr/bin/uninstall.bash
-rm /usr/bin/uninstallbash.bash
 
 ## Explain uninstall has been completed
 echo 'OpenConnect and WebConnect have been uninstalled if there is numerous rm commands during this script you did not install WebConnect'
