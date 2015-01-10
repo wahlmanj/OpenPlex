@@ -1,13 +1,16 @@
 /*!
- --  OpenPlex 0.4
+ --  OpenPlex 0.4.1
  --
  --  Originally designed by iCyberGhost on 5/02/14.
  --  Originally coded by Wahlman.j on 5/02/14.
  Copyright (c) 2015 CyberGhost & Wahlman.j. All rights reserved.
  */
 
-#import <Cocoa/Cocoa.h>
 #import "ApplicationDelegate.h"
+#import <Cocoa/Cocoa.h>
 
-@interface NoMenu : NSWindowController
+
+@interface NoMenu : NSWindowController <NSApplicationDelegate>
+@property (weak) IBOutlet NSButton *dark;
+@property (assign, nonatomic) BOOL darkModeOn;
 @end

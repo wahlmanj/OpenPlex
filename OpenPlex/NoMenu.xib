@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ApplicationDelegate">
+        <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
             <connections>
-                <outlet property="window" destination="Pir-Ha-tob" id="8HJ-C1-S7g"/>
+                <outlet property="window" destination="Pir-Ha-tob" id="QaF-3D-mhW"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -140,7 +140,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button toolTip="Check for app updates " verticalHuggingPriority="750" id="iOc-f8-tB0">
+                                        <button toolTip="Check for App updates " verticalHuggingPriority="750" id="iOc-f8-tB0">
                                             <rect key="frame" x="159" y="216" width="68" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Update App" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MJH-xm-w4V">
@@ -186,7 +186,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button id="Qfo-D2-imF">
+                                        <button toolTip="Donate in $US or $EUR" id="Qfo-D2-imF">
                                             <rect key="frame" x="193" y="5" width="60" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="paypal-donate-button" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Tau-aw-kzj">
@@ -195,17 +195,6 @@
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlerdonate:" target="qo8-lj-syM" id="2Tn-up-yTm"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="0qj-CP-6Y9">
-                                            <rect key="frame" x="443" y="174" width="43" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zlH-lt-szD">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerinstalldark:" target="qo8-lj-syM" id="0ek-Tg-2aV"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KIT-oI-Iv9">
@@ -226,7 +215,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button verticalHuggingPriority="750" id="Wni-5h-tkl">
+                                        <button toolTip="Enable open at login" verticalHuggingPriority="750" id="Wni-5h-tkl">
                                             <rect key="frame" x="443" y="213" width="43" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="On" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i41-aE-fBf">
@@ -237,7 +226,7 @@
                                                 <action selector="buttonhandlerloginon:" target="qo8-lj-syM" id="KpD-ma-bCK"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="Fhg-Qe-i7z">
+                                        <button toolTip="Disable open at login" verticalHuggingPriority="750" id="Fhg-Qe-i7z">
                                             <rect key="frame" x="494" y="214" width="43" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nJe-LP-L0t">
@@ -336,6 +325,9 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerupdate:" target="qo8-lj-syM" id="WzB-Ck-R9y"/>
+                                            </connections>
                                         </button>
                                         <button toolTip="PlexConnect Status" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Rxg-JV-yOF">
                                             <rect key="frame" x="511" y="9" width="20" height="20"/>
@@ -362,15 +354,15 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <action selector="buttonhandlerlog:" target="qo8-lj-syM" id="WVN-tf-N5G"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="Rhk-Yq-bkq">
+                                        <button toolTip="Dark Mode toggle" verticalHuggingPriority="750" id="bIX-AS-xFy">
                                             <rect key="frame" x="494" y="174" width="43" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NoK-tV-hhq">
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nXd-x3-WiG">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="darkMenu_Button:" target="-2" id="13D-Vv-5Gs"/>
+                                                <action selector="dark:" target="Y8d-nb-MOE" id="FFk-ZL-Y1R"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -1541,12 +1533,12 @@ Automatic updates</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Xom-Nn-DWJ">
-                                            <rect key="frame" x="113" y="92" width="114" height="28"/>
+                                            <rect key="frame" x="113" y="92" width="129" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="LwE-oN-3qK">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <string key="title">Rollback to previous
-PlexConnect version </string>
+PlexConnect version(s) </string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -2062,8 +2054,18 @@ load certs</string>
                     </box>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="delegate" destination="Pir-Ha-tob" id="qJg-a2-iO0"/>
+            </connections>
             <point key="canvasLocation" x="-1331" y="-855"/>
         </window>
+        <customObject id="yA6-dK-NsI" userLabel="Application Delegate" customClass="ApplicationDelegate"/>
+        <customObject id="Y8d-nb-MOE" userLabel="NoMenu" customClass="NoMenu">
+            <connections>
+                <outlet property="dark" destination="bIX-AS-xFy" id="WPs-Zp-3xp"/>
+                <outlet property="window" destination="Pir-Ha-tob" id="zWN-H8-Vue"/>
+            </connections>
+        </customObject>
         <customObject id="qo8-lj-syM" customClass="AppDelegate">
             <connections>
                 <outlet property="WCProgressBar" destination="m9h-8X-21A" id="5jG-Oq-XDM"/>
@@ -2079,6 +2081,27 @@ load certs</string>
                 <outlet property="wsjProgressBar" destination="8hn-T3-5GC" id="1VM-q3-698"/>
             </connections>
         </customObject>
+        <window title="DarkMode" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="M44-pQ-tbK">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
+            <rect key="contentRect" x="0.0" y="666" width="229" height="211"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="XZZ-iU-Lxy">
+                <rect key="frame" x="0.0" y="0.0" width="229" height="211"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" id="9W6-fL-IDd">
+                        <rect key="frame" x="61" y="127" width="124" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="squareTextured" title="New DarkMode button" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fcZ-O5-BZH">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="10"/>
+                        </buttonCell>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="-798.5" y="-1193.5"/>
+        </window>
     </objects>
     <resources>
         <image name="AirPlayIcon" width="343" height="368"/>
