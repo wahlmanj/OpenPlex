@@ -147,6 +147,11 @@ rm /usr/bin/xml.bash
 cp /Applications/PlexConnect/update/OSX/defaultsudoers /etc/sudoers
 chmod 440 /etc/sudoers
 
+if [ -s /Applications/PlexConnect ]
+then
+rm -Rf /Applications/PlexConnect
+fi
+
 if [ -s __HOME__/Library/Application\ Support/OpenPlex ]
 then
 rm -Rf __HOME__/Library/Application\ Support/OpenPlex
@@ -161,6 +166,8 @@ if [ -s /Applications/OpenPlex.app ]
 then
 rm -Rf /Applications/OpenPlex.app
 fi
+
+
 
 killall OpenPlex
 
