@@ -13,17 +13,27 @@
 @property (assign) IBOutlet NSWindow *window;
 @end
 @implementation NoMenu
-@synthesize darkModeOn;
+//@synthesize darkModeOn,dark;
+@synthesize dark;
 
-/*
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
-    
+
+- (void)refreshDarkMode {
+    NSString * value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
+    if ([value isEqualToString:@"Dark"]) {
+        darkModeOn = YES;
+    }
+    else {
+        darkModeOn = NO;
+    }
+    if (darkModeOn==YES) {
+        dark.title=@"On";
+    } else {
+        dark.title=@"Off";
+    }
 }
-*/
 
 - (IBAction)dark:(id)sender{
-    
+    [self refreshDarkMode];
     darkModeOn = !darkModeOn;
     
     //Change pref
@@ -38,23 +48,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), (CFStringRef)@"AppleInterfaceThemeChangedNotification", NULL, NULL, YES);
     });
-    
+    [self refreshDarkMode];
 }
-
-/*
- - (void)refreshDarkMode {
-    
-    NSString * value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
-    if ([value isEqualToString:@"Dark"]) {
-        self.darkModeOn = YES;
-    }
-    else {
-        self.darkModeOn = NO;
-        
-    }
-}
- 
-*/
 
 -(id)initWithWindow:(NSWindow *)window
 {
@@ -67,6 +62,15 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     
+    [self refreshDarkMode];
+    if (darkModeOn==YES) {
+        dark.title=@"On";
+
+    } else {
+        dark.title=@"Off";
+
+    }
+
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 

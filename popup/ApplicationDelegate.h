@@ -7,8 +7,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
+
+extern BOOL darkModeOn;
+
 @interface ApplicationDelegate : NSObject <NSApplicationDelegate>
-@property (strong, nonatomic) NSStatusItem *statusItem;
-@property (assign, nonatomic) BOOL darkModeOn;
 @property (nonatomic, retain) NSWindowController *winCon;
+@property (strong, nonatomic) NSStatusItem *statusItem;
 @end

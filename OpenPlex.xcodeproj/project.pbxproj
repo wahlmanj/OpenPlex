@@ -295,8 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				CE172FCC1A5B6F450071F436 /* NoMenu.xib */,
-				DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */,
 				DD4F7C4013C31B4A00825C6E /* Panel.xib */,
+				DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";

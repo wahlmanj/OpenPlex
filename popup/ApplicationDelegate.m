@@ -7,34 +7,34 @@
  */
 
 #import "ApplicationDelegate.h"
+#import "NoMenu.h"
+
+BOOL darkModeOn;
 
 @interface ApplicationDelegate ()
 @property (assign) IBOutlet NSWindow *window;
+
 @end
 @implementation ApplicationDelegate
-@synthesize winCon,statusItem,darkModeOn;
+@synthesize winCon, statusItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
+
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     statusItem.image = [NSImage imageNamed:@"switchIcon.png"];
     [statusItem.image setTemplate:YES];
     statusItem.highlightMode = NO;
     [statusItem setAction:@selector(itemClicked:)];
     statusItem.toolTip = @"Control-click to quit";
-    [self refreshDarkMode];
-    
-}
-
-- (void)refreshDarkMode {
     
     NSString * value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
     if ([value isEqualToString:@"Dark"]) {
-        self.darkModeOn = YES;
+        darkModeOn = YES;
+   //     NSLog(@"Dark On");
     }
     else {
-        self.darkModeOn = NO;
-        
+        darkModeOn = NO;
+     //   NSLog(@"Dark Off");
     }
 }
 
@@ -43,13 +43,12 @@
     self.winCon = [[NSWindowController alloc]initWithWindowNibName:@"NoMenu"];
     [[self.winCon window] makeKeyAndOrderFront:self];
     [NSApp activateIgnoringOtherApps:YES];
-    
     NSEvent *event = [NSApp currentEvent];
     if([event modifierFlags] & NSControlKeyMask) {
         [[NSApplication sharedApplication] terminate:self];
         return;
-        
     }
+
 }
 
 @end

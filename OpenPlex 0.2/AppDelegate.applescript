@@ -267,19 +267,6 @@ script AppDelegate
         do shell script "show Safari"
     end buttonhandlervideotut_
     
-    on buttonhandlerinstalldark_(sender)
-        display notification "Enter password then log out to enable Yosemite Dark Mode..." with title "OpenPlex Status"
-        delay 0
-        do shell script "defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true" with administrator privileges
-        tell application "System Events" to log out
-    end buttonhandlerinstalldark_
-    
-    on buttonhandlerdarkmode_(sender)
-        tell application "System Events"
-            keystroke "t" using {command down, option down, control down}
-        end tell
-    end buttonhandlerdarkmode_
-    
     on buttonhandleruninstall_(sender)
         tell uninstallProgressBar to startAnimation:me -- another way
         set animated to true
@@ -346,17 +333,25 @@ script AppDelegate
         set animated to false
     end buttonhandlernewupdateoc_
     
-    on buttonhandlerloginon_(sender)
-        display notification "OpenPlex added to login items..." with title "OpenPlex Status"
-        delay 0
-        tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
-    end buttonhandlerloginon_
+ --   on buttonhandlerloginon_(sender)
+--        display notification "OpenPlex added to login items..." with title "OpenPlex Status"
+ --       delay 0
+ --       tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
+ --   end buttonhandlerloginon_
     
-    on buttonhandlerloginoff_(sender)
-        display notification "OpenPlex removed from login items..." with title "OpenPlex Status"
-        delay 0
-        tell application "System Events" to delete login item "OpenPlex"
-    end buttonhandlerloginoff_
+    on buttonhandlerloginitemOP_(sender)
+        tell application "System Events"
+            if (exists login item "OpenPlex") then
+                display notification "OpenPlex removed from login items..." with title "OpenPlex Status"
+                delay 0
+                tell application "System Events" to delete login item "OpenPlex"
+                else
+                display notification "OpenPlex added to login items..." with title "OpenPlex Status"
+                delay 0
+                tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
+            end if
+        end tell
+    end buttonhandlerloginitemOP_
     
     on buttonhandlerOPforum_(sender)
         set theURL to "https://forums.plex.tv/index.php/topic/108332-openplex-osx-app/"
@@ -2484,6 +2479,7 @@ script AppDelegate
     end buttonhandlerloadbackupfanart_
     
     on buttonhandlerbackupATVSettings_(sender)
+        do shell script "stopbash.bash; sleep 4"
         tell application "Finder"
             if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
                 display notification "ATVSettings.cfg backed up..." with title "OpenPlex Status"
@@ -2492,9 +2488,7 @@ script AppDelegate
                 else if not (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
                 try
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                        do shell script "stopbash.bash"
                         do shell script "cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP"
-                        do shell script "startbash.bash"
                         display notification "Exit and/or Open aTV hijack to load PlexConnect Settings..." with title "OpenPlex Status"
                         delay 0
                     end if
@@ -2517,7 +2511,7 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        
+        do shell script "startbash.bash"
     end buttonhandlerbackupATVSettings_
     
     on buttonhandlerloadATVSettings_(sender)
@@ -2525,7 +2519,7 @@ script AppDelegate
             if (exists file "Applications:plexconnect_BACKUP:ATVSettings.cfg" of the startup disk) then
                 display notification "Exit and/or Open aTV hijack to restore PlexConnect Settings..." with title "OpenPlex Status"
                 delay 0
-                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; restoreatvsettingsbash.bash; startbash.bash; sleep 4"
+                do shell script "restoreatvsettingsbash.bash"
                 -- allow PlexConnect.log to save and repopulate (sleep 4)
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
