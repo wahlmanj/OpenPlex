@@ -1,4 +1,3 @@
-restart.bash
 stop.bash
 cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect
 cd /Applications/PlexConnect
@@ -10,7 +9,6 @@ while : ; do
     sleep 1
 done
 start.bash
-
 ## Display ATVSettings.cfg
 FILE="/Applications/PlexConnect/ATVSettings.cfg"
 echo "*** File - $FILE contents ***"
