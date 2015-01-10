@@ -20,7 +20,7 @@ echo "OpenPlex update available, Installing..."
 killall updater
 updatewcbash.bash
 cd __HOME__/Library/Application\ Support/OpenPlex/updater
-ditto -xk updater.zip __HOME__/Library/Application\ Support/OpenPlex
+ditto -xk updater.zip __HOME__/Library/Application\ Support/OpenPlex/updater
 cd __HOME__/Library/Application\ Support/OpenPlex
 open updater.app
 git pull
@@ -30,3 +30,5 @@ echo "no updates available"
 fi
 # Allow OpenPlex git and app to update to display proper git HEAD commit
 sleep 1
+chmod 777 /Applications/PlexConnect/Update/OSX
+cp -R __HOME__/Library/Application\ Support/OpenPlex/update/OSX/* /Applications/PlexConnect/update/OSX

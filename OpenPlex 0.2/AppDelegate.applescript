@@ -306,28 +306,17 @@ script AppDelegate
             end if
         end try
         tell application "Finder"
-            try
-                if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                    set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd ~/Library/Application\\ Support/OpenPlex; git fetch; git merge origin"
-                    set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd ~/Library/Application\\ Support/OpenPlex;  git reset --hard"
-                    if x is equal to "Already up-to-date." then
-                        display notification "No App updates avaliable..." & y with title "OpenPlex Status"
-                        delay 0
-                        else if x is not equal to "Already up-to-date." then
-                        display notification "OpenPlex Updated " & y with title "OpenPlex Status"
-                        delay 0
-                        do shell script "cd ~/Library/Application\\ Support/OpenPlex/updater; ditto -xk updater.zip ~/Library/Application\\ Support/OpenPlex/updater; cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
-                        do shell script "installbash.bash"
-                        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
-
-                    end if
-                end if
-                on error
-                display notification "OpenPlex folder corrupted" with title "OpenPlex Status"
+            do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+            set x to do shell script "appwebbash.bash"
+            if x is equal to "no updates available" then
+                display notification "No OpenPlex updates avaliable..." with title "OpenPlex Status"
                 delay 0
-                do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
-                do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone git://github.com/wahlmanj/OpenPlex.git;cd /Applications/OpenPlex/updater; ditto -xk updater.zip /Applications/OpenPlex/updater; cd /Applications/OpenPlex/updater; open updater.app"
-            end try
+                else if x is not equal to "no updates available" then
+                do shell script "installbash.bash"
+                do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+                display notification "OpenPlex updated, Exit hijacked app on aTV..." with title "OpenPlex Status"
+                delay 0
+            end if
         end tell
         tell appupdateProgressBar to stopAnimation:me -- another way
         set animated to false
