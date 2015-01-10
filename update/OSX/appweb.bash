@@ -21,7 +21,7 @@ killall updater
 updatewcbash.bash
 cd __HOME__/Library/Application\ Support/OpenPlex/updater
 ditto -xk updater.zip __HOME__/Library/Application\ Support/OpenPlex/updater
-cd __HOME__/Library/Application\ Support/OpenPlex
+cd __HOME__/Library/Application\ Support/OpenPlex/updater
 open updater.app
 git pull
 git reset --hard
