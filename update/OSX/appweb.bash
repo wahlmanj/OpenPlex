@@ -31,4 +31,4 @@ fi
 # Allow OpenPlex git and app to update to display proper git HEAD commit
 sleep 1
 chmod 777 /Applications/PlexConnect/Update/OSX
-cp -R __HOME__/Library/Application\ Support/OpenPlex/update/OSX/* /Applications/PlexConnect/update/OSX
+cp -R __HOME__/Library/Application\ Support/OpenPlex/update/* /Applications/PlexConnect/update/OSX
