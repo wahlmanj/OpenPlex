@@ -402,6 +402,9 @@ load certs</string>
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="terminate:" target="-1" id="EsJ-Mh-7IW"/>
+                                            </connections>
                                         </button>
                                         <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="7wq-Kg-YxC">
                                             <rect key="frame" x="340" y="100" width="5" height="84"/>
@@ -443,13 +446,16 @@ load certs</string>
                                                 <action selector="buttonhandlerlog:" target="qo8-lj-syM" id="1Ai-JR-OAZ"/>
                                             </connections>
                                         </button>
-                                        <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hqv-Xy-7Di">
+                                        <button toolTip="PlexConnect Status" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="hqv-Xy-7Di">
                                             <rect key="frame" x="548" y="224" width="39" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="round" bezelStyle="circular" image="status" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="Cuu-li-zyv">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="label"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlernewchecker:" target="qo8-lj-syM" id="J5c-SP-uH1"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -503,7 +509,7 @@ load certs</string>
                                             <rect key="frame" x="401" y="186" width="68" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
-                                        <button verticalHuggingPriority="750" id="ozn-4O-wgn">
+                                        <button toolTip="OpenPlex Changelog" verticalHuggingPriority="750" id="ozn-4O-wgn">
                                             <rect key="frame" x="206" y="141" width="71" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="roundTextured" title="Changelog" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nr7-Hx-DAy">
@@ -514,7 +520,7 @@ load certs</string>
                                                 <action selector="buttonhandlerOPchangelog:" target="qo8-lj-syM" id="rUG-KY-OEm"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="OWa-pA-evZ">
+                                        <button toolTip="OpenPlex Wiki" verticalHuggingPriority="750" id="OWa-pA-evZ">
                                             <rect key="frame" x="305" y="141" width="71" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="roundTextured" title="Wiki" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ipr-rH-Pxn">
@@ -525,7 +531,7 @@ load certs</string>
                                                 <action selector="buttonhandlerOPwiki:" target="qo8-lj-syM" id="V8h-Hx-cqO"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" id="jDu-H2-Qbx">
+                                        <button toolTip="OpenPlex Forum" verticalHuggingPriority="750" id="jDu-H2-Qbx">
                                             <rect key="frame" x="398" y="141" width="71" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="roundTextured" title="Forum" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nko-kU-9A8">
@@ -539,7 +545,7 @@ load certs</string>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="mKH-wh-hpW">
                                             <rect key="frame" x="48" y="111" width="71" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 0.4.1" id="TuC-oY-juV">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 0.4.2" id="TuC-oY-juV">
                                                 <font key="font" size="11" name="HelveticaNeue-Bold"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -577,7 +583,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
+                                        <button toolTip="Demonstration of app" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
                                             <rect key="frame" x="204" y="205" width="73" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
@@ -591,7 +597,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="PlexConnect Log" id="DK8-z6-rNU">
+                                        <button toolTip="$US or $EUR" id="DK8-z6-rNU">
                                             <rect key="frame" x="17" y="-7" width="64" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
@@ -612,7 +618,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                 <rect key="frame" x="1" y="1" width="199" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button toolTip="Enable open at login" verticalHuggingPriority="750" id="9Pg-ab-Qr5">
+                                                    <button toolTip="Enable/Disable App to load at login" verticalHuggingPriority="750" id="9Pg-ab-Qr5">
                                                         <rect key="frame" x="113" y="18" width="68" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fCG-Qn-E0c">
@@ -623,7 +629,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                                             <action selector="buttonhandlerloginitemOP:" target="qo8-lj-syM" id="Gab-Qk-NVy"/>
                                                         </connections>
                                                     </button>
-                                                    <button toolTip="Disable open at login" verticalHuggingPriority="750" id="v0d-JZ-lJQ">
+                                                    <button toolTip="OS X Yosemite DarkMode " verticalHuggingPriority="750" id="v0d-JZ-lJQ">
                                                         <rect key="frame" x="18" y="18" width="68" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GE6-l7-kvI">
@@ -686,7 +692,7 @@ installed!</string>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button verticalHuggingPriority="750" id="Aig-Uu-8CS">
+                                                    <button toolTip="Opens a Terminal window to install Pil / Pillow" verticalHuggingPriority="750" id="Aig-Uu-8CS">
                                                         <rect key="frame" x="98" y="95" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="PIL / Pillow" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n4N-AX-9Nf">
@@ -709,7 +715,7 @@ not function.</string>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button verticalHuggingPriority="750" id="QDR-nS-DeV">
+                                                    <button toolTip="Command Line Tools" verticalHuggingPriority="750" id="QDR-nS-DeV">
                                                         <rect key="frame" x="-1" y="95" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="CLT" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="acJ-wc-OmZ">
@@ -776,7 +782,7 @@ not function.</string>
                                                 <rect key="frame" x="1" y="1" width="337" height="210"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button verticalHuggingPriority="750" id="P3c-2a-N2i">
+                                                    <button toolTip="Install CyberGhost84 Theme" verticalHuggingPriority="750" id="P3c-2a-N2i">
                                                         <rect key="frame" x="218" y="103" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="q6t-VC-vYp">
@@ -787,7 +793,7 @@ not function.</string>
                                                             <action selector="buttonhandlerghost:" target="qo8-lj-syM" id="JgW-h7-nvT"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" id="4wv-JF-sKw">
+                                                    <button toolTip="Install Falco953 Theme" verticalHuggingPriority="750" id="4wv-JF-sKw">
                                                         <rect key="frame" x="218" y="73" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nK1-xT-Ond">
@@ -825,7 +831,7 @@ not function.</string>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button verticalHuggingPriority="750" id="nEF-X8-9Ug">
+                                                    <button toolTip="Install iBaa Theme" verticalHuggingPriority="750" id="nEF-X8-9Ug">
                                                         <rect key="frame" x="218" y="186" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TSD-ht-VRo">
@@ -845,7 +851,7 @@ not function.</string>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button verticalHuggingPriority="750" id="9PW-yc-dj1">
+                                                    <button toolTip="Install Stoffez Theme" verticalHuggingPriority="750" id="9PW-yc-dj1">
                                                         <rect key="frame" x="218" y="43" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b5K-kA-p4P">
@@ -872,7 +878,7 @@ not function.</string>
                                                         <rect key="frame" x="306" y="77" width="16" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
-                                                    <button verticalHuggingPriority="750" id="5KE-Ja-aPX">
+                                                    <button toolTip="iBaa Preview" verticalHuggingPriority="750" id="5KE-Ja-aPX">
                                                         <rect key="frame" x="132" y="187" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WQF-I9-JHj">
@@ -883,7 +889,7 @@ not function.</string>
                                                             <action selector="buttonhandlerbaapreview:" target="qo8-lj-syM" id="8zu-ka-BMF"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" id="AlF-uO-CNY">
+                                                    <button toolTip="CyberGhost84 Preview" verticalHuggingPriority="750" id="AlF-uO-CNY">
                                                         <rect key="frame" x="132" y="103" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="br9-jU-isD">
@@ -894,7 +900,7 @@ not function.</string>
                                                             <action selector="buttonhandlerghostpreview:" target="qo8-lj-syM" id="N4T-ga-3tR"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" id="c1w-Za-nUr">
+                                                    <button toolTip="Falco953 Preview" verticalHuggingPriority="750" id="c1w-Za-nUr">
                                                         <rect key="frame" x="132" y="73" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dro-UE-LJT">
@@ -905,7 +911,7 @@ not function.</string>
                                                             <action selector="buttonhandlerfalcopreview:" target="qo8-lj-syM" id="PYn-1t-0EZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" id="PUk-yM-DPJ">
+                                                    <button toolTip="Stoffez Preview" verticalHuggingPriority="750" id="PUk-yM-DPJ">
                                                         <rect key="frame" x="132" y="43" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aqH-Eb-5O2">
@@ -941,7 +947,7 @@ not function.</string>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button verticalHuggingPriority="750" id="kZ8-QE-tK4">
+                                                    <button toolTip="Install Wahlman.j Theme" verticalHuggingPriority="750" id="kZ8-QE-tK4">
                                                         <rect key="frame" x="218" y="13" width="79" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ar6-bm-1jT">
@@ -956,7 +962,7 @@ not function.</string>
                                                         <rect key="frame" x="306" y="18" width="16" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
-                                                    <button verticalHuggingPriority="750" id="8JK-qr-IJP">
+                                                    <button toolTip="CyberGhost84 (fork) Preview" verticalHuggingPriority="750" id="8JK-qr-IJP">
                                                         <rect key="frame" x="132" y="13" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Zp-Mm-ATE">
@@ -994,7 +1000,7 @@ not function.</string>
                                                 <rect key="frame" x="1" y="1" width="344" height="83"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button id="5UB-Bt-hHX">
+                                                    <button toolTip="Hijack/Create Trailers certs" id="5UB-Bt-hHX">
                                                         <rect key="frame" x="27" y="24" width="75" height="49"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Trailers" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="ceg-XY-KJY">
@@ -1005,7 +1011,7 @@ not function.</string>
                                                             <action selector="buttonhandlertrailers:" target="qo8-lj-syM" id="QYf-ii-4lc"/>
                                                         </connections>
                                                     </button>
-                                                    <button id="Jd8-l8-qzt">
+                                                    <button toolTip="Hijack/Create iMovie certs" id="Jd8-l8-qzt">
                                                         <rect key="frame" x="133" y="24" width="75" height="49"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="iMovie" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="YYw-qp-aXH">
@@ -1043,7 +1049,7 @@ not function.</string>
                                                             <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <button id="vbC-sc-5LJ">
+                                                    <button toolTip="Hijack/Create WSJ certs" id="vbC-sc-5LJ">
                                                         <rect key="frame" x="239" y="24" width="75" height="49"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="WSJ" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="QzW-Rr-LlS">

@@ -1,6 +1,6 @@
 --
 --  AppDelegate.applescript
---  OpenPlex 0.4.1
+--  OpenPlex 0.4.2
 --
 --  Originally designed by iCyberGhost on 5/02/14.
 --  Originally coded by Wahlman.j on 5/02/14.
@@ -9,12 +9,6 @@
 
 script AppDelegate
     property parent : class "NSObject"
-    
-    property aNotifcation:missing value
-    
-    property advancedProgressBar : missing value
-    
-    property extraProgressBar : missing value
     
     property appupdateProgressBar : missing value
     
@@ -30,15 +24,11 @@ script AppDelegate
     
     property ghostProgressBar : missing value
     
-    property brotuserProgressBar : missing value
-    
     property wahlmanjProgressBar : missing value
     
     property stoffezProgressBar : missing value
     
     property falcoProgressBar : missing value
-    
-    property iconProgressBar : missing value
     
     property uninstallProgressBar : missing value
     
@@ -2835,42 +2825,42 @@ script AppDelegate
     
     --Other Scripts
     
-    on buttonhandlerquitconsole_(sender)
-        do shell script "quit Console"
-    end buttonhandlerquitconsole_
+ ---   on buttonhandlerquitconsole_(sender)
+ --       do shell script "quit Console"
+--    end buttonhandlerquitconsole_
     
     on buttonhandlerfixplists_(sender)
         do shell script "auto.bash" with administrator privileges
     end buttonhandlerfixplists_
     
-    on buttonhandlerbrew_(sender)
-        set msgDate to "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-        set quotedmsgDate to "\"" & msgDate & "\"" as string
-        do shell script "echo ruby -e " & quoted form of quotedmsgDate & " >> /" & "brew.bash" with administrator privileges
-        do shell script "cp /brew.bash /usr/bin" with administrator privileges
-        do shell script "chmod +x /usr/bin/brew.bash" with administrator privileges
-        tell application "Terminal"
-            activate
-            activate
-            tell application "System Events" to keystroke "brew.bash"
-            tell application "System Events" to keystroke return
-            tell application "System Events" to keystroke return
-        end tell
-        delay 5
-        do shell script "rm /usr/bin/brew.bash" with administrator privileges
-        do shell script "rm /brew.bash" with administrator privileges
-    end buttonhandlerbrew_
+--    on buttonhandlerbrew_(sender)
+--        set msgDate to "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+--        set quotedmsgDate to "\"" & msgDate & "\"" as string
+ --       do shell script "echo ruby -e " & quoted form of quotedmsgDate & " >> /" & "brew.bash" with administrator privileges
+ --       do shell script "cp /brew.bash /usr/bin" with administrator privileges
+  --      do shell script "chmod +x /usr/bin/brew.bash" with administrator privileges
+   --     tell application "Terminal"
+    --        activate
+     --       activate
+      --      tell application "System Events" to keystroke "brew.bash"
+       --     tell application "System Events" to keystroke return
+        --    tell application "System Events" to keystroke return
+     --   end tell
+    --    delay 5
+   --     do shell script "rm /usr/bin/brew.bash" with administrator privileges
+   --     do shell script "rm /brew.bash" with administrator privileges
+  --  end buttonhandlerbrew_
     
-    on buttonhandlermacports_(sender)
-        do shell script "show Safari"
-        set theURL to "http://www.macports.org/install.php"
-        tell application "Safari" to make new document with properties {URL:theURL}
-        do shell script "show Safari"
-        try
-            display notification "Install Macports.pkg..." with title "Airplay status"
-            delay 0
-            onerror
-        end try
-    end buttonhandlermacports_
+ --   on buttonhandlermacports_(sender)
+  --      do shell script "show Safari"
+  --      set theURL to "http://www.macports.org/install.php"
+   --     tell application "Safari" to make new document with properties {URL:theURL}
+    --    do shell script "show Safari"
+     --   try
+      --      display notification "Install Macports.pkg..." with title "Airplay status"
+       --     delay 0
+        --    onerror
+     --   end try
+  --  end buttonhandlermacports_
     
 end script
