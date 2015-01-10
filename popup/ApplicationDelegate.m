@@ -9,7 +9,7 @@
 #import "ApplicationDelegate.h"
 
 @interface ApplicationDelegate ()
-@property (weak) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSWindow *window;
 @end
 @implementation ApplicationDelegate
 @synthesize winCon,darkModeOn,statusItem;

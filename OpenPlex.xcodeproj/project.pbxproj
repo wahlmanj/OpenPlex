@@ -529,7 +529,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Popup/OpenPlex-Prefix.pch";
 				INFOPLIST_FILE = "Popup/OpenPlex-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = OpenPlex;
 				WRAPPER_EXTENSION = app;
 			};
@@ -544,7 +544,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Popup/OpenPlex-Prefix.pch";
 				INFOPLIST_FILE = "Popup/OpenPlex-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = OpenPlex;
 				WRAPPER_EXTENSION = app;
 			};

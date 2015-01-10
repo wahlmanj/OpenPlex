@@ -11,6 +11,6 @@
 
 
 @interface NoMenu : NSWindowController <NSApplicationDelegate>
-@property (weak) IBOutlet NSButton *dark;
+@property (assign) IBOutlet NSButton *dark;
 @property (assign, nonatomic) BOOL darkModeOn;
 @end

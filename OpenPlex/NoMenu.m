@@ -10,7 +10,7 @@
 #import "NoMenu.h"
 
 @interface NoMenu ()
-@property (weak) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSWindow *window;
 @end
 @implementation NoMenu
 @synthesize darkModeOn;
