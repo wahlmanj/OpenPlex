@@ -334,13 +334,10 @@ cp createimovie.bash /usr/bin
 cp createimoviebash.bash /usr/bin
 cp createwsj.bash /usr/bin
 cp createwsjbash.bash /usr/bin
-cp cyberghost.bash /usr/bin
 cp cyberghostbash.bash /usr/bin
-cp falco.bash /usr/bin
 cp falcobash.bash /usr/bin
 cp hide /usr/bin
 cp hide.bash /usr/bin
-cp ibaa.bash /usr/bin
 cp ibaabash.bash /usr/bin
 cp install.bash /usr/bin
 cp installbash.bash /usr/bin
@@ -402,7 +399,6 @@ cp start.bash /usr/bin
 cp startbash.bash /usr/bin
 cp status.bash /usr/bin
 cp statusbash.bash /usr/bin
-cp stoffez.bash /usr/bin
 cp stoffezbash.bash /usr/bin
 cp stop.bash /usr/bin
 cp stopbash.bash /usr/bin
@@ -424,7 +420,6 @@ cp updaterbash.bash /usr/bin
 cp updatewcbash.bash /usr/bin
 cp utorrent.bash /usr/bin
 cp utorrentbash.bash /usr/bin
-cp wahlmanj.bash /usr/bin
 cp wahlmanjbash.bash /usr/bin
 cp wake.bash /usr/bin
 cp wakebash.bash /usr/bin
