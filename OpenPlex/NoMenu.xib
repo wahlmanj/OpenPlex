@@ -342,7 +342,7 @@ load certs</string>
                                             </textFieldCell>
                                         </textField>
                                         <button toolTip="Check for App updates " verticalHuggingPriority="750" id="c4Z-9H-Fji">
-                                            <rect key="frame" x="232" y="209" width="68" height="25"/>
+                                            <rect key="frame" x="222" y="209" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Update App" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LMO-Dl-0fP">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -353,7 +353,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <button toolTip="Uninstall App" verticalHuggingPriority="750" id="jc0-4b-cID">
-                                            <rect key="frame" x="308" y="209" width="68" height="25"/>
+                                            <rect key="frame" x="302" y="209" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Uninstall" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CE7-Ad-ROL">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -364,41 +364,41 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="8HK-XJ-acf">
-                                            <rect key="frame" x="232" y="197" width="68" height="12"/>
+                                            <rect key="frame" x="222" y="197" width="72" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Khw-gH-XPZ">
-                                            <rect key="frame" x="308" y="197" width="68" height="12"/>
+                                            <rect key="frame" x="302" y="197" width="72" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <button toolTip="OpenPlex Changelog" verticalHuggingPriority="750" id="ozn-4O-wgn">
-                                            <rect key="frame" x="151" y="165" width="71" height="25"/>
+                                            <rect key="frame" x="142" y="165" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="roundTextured" title="Changelog" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nr7-Hx-DAy">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlerOPchangelog:" target="qo8-lj-syM" id="rUG-KY-OEm"/>
                                             </connections>
                                         </button>
                                         <button toolTip="OpenPlex Wiki" verticalHuggingPriority="750" id="OWa-pA-evZ">
-                                            <rect key="frame" x="231" y="165" width="68" height="25"/>
+                                            <rect key="frame" x="222" y="165" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="roundTextured" title="Wiki" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ipr-rH-Pxn">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlerOPwiki:" target="qo8-lj-syM" id="V8h-Hx-cqO"/>
                                             </connections>
                                         </button>
                                         <button toolTip="OpenPlex Forum" verticalHuggingPriority="750" id="jDu-H2-Qbx">
-                                            <rect key="frame" x="307" y="165" width="71" height="25"/>
+                                            <rect key="frame" x="302" y="165" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="roundTextured" title="Forum" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nko-kU-9A8">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlerOPforum:" target="qo8-lj-syM" id="azs-6k-3wM"/>
@@ -423,14 +423,14 @@ load certs</string>
                                             </textFieldCell>
                                         </textField>
                                         <button toolTip="Demonstration of app" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
-                                            <rect key="frame" x="151" y="209" width="73" height="25"/>
+                                            <rect key="frame" x="142" y="209" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </shadow>
                                             <buttonCell key="cell" type="squareTextured" title="Demo Video" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="left" borderStyle="border" imageScaling="proportionallyDown" id="aIt-iG-KRl">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
@@ -503,7 +503,7 @@ load certs</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <button toolTip="Stop PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Rg8-AO-3uh">
-                                            <rect key="frame" x="469" y="204" width="42" height="38"/>
+                                            <rect key="frame" x="469" y="201" width="42" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -517,7 +517,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Jj7-SC-C0k">
-                                            <rect key="frame" x="416" y="204" width="36" height="38"/>
+                                            <rect key="frame" x="416" y="201" width="36" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -531,7 +531,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <button toolTip="Restart PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="UaK-7f-9Os">
-                                            <rect key="frame" x="528" y="204" width="42" height="38"/>
+                                            <rect key="frame" x="528" y="201" width="42" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -545,7 +545,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <button toolTip="Update PlexConnect" id="cen-27-la9">
-                                            <rect key="frame" x="469" y="158" width="42" height="38"/>
+                                            <rect key="frame" x="469" y="155" width="42" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -558,8 +558,8 @@ load certs</string>
                                                 <action selector="buttonhandlerupdate:" target="qo8-lj-syM" id="XtV-Ey-4h8"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="Exit OpenPlex" id="uJJ-OU-fph">
-                                            <rect key="frame" x="528" y="158" width="42" height="38"/>
+                                        <button toolTip="Status OpenPlex" id="uJJ-OU-fph">
+                                            <rect key="frame" x="528" y="155" width="42" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -569,32 +569,32 @@ load certs</string>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="terminate:" target="-1" id="87j-m7-kOm"/>
+                                                <action selector="buttonhandlernewchecker:" target="qo8-lj-syM" id="Tem-AM-hY5"/>
                                             </connections>
                                         </button>
                                         <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="lMq-5l-fWM">
-                                            <rect key="frame" x="458" y="158" width="5" height="84"/>
+                                            <rect key="frame" x="458" y="155" width="5" height="84"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="NJH-3S-WBc">
-                                            <rect key="frame" x="517" y="158" width="5" height="84"/>
+                                            <rect key="frame" x="517" y="155" width="5" height="84"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="Eow-B7-SWl">
-                                            <rect key="frame" x="410" y="198" width="160" height="5"/>
+                                            <rect key="frame" x="410" y="195" width="160" height="5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <button toolTip="PlexConnect Log" id="z64-ia-2Q1">
-                                            <rect key="frame" x="412" y="158" width="42" height="38"/>
+                                            <rect key="frame" x="412" y="155" width="42" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -608,7 +608,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <box autoresizesSubviews="NO" borderType="line" id="140-Sy-WyQ">
-                                            <rect key="frame" x="390" y="140" width="201" height="131"/>
+                                            <rect key="frame" x="390" y="136" width="201" height="131"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
                                                 <rect key="frame" x="1" y="1" width="199" height="115"/>
@@ -667,7 +667,7 @@ installed!</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="PIL / Pillow" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n4N-AX-9Nf">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerpillowinstaller:" target="qo8-lj-syM" id="QLN-KA-58L"/>
@@ -690,7 +690,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="CLT" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="acJ-wc-OmZ">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerclt:" target="qo8-lj-syM" id="s7E-GA-39w"/>
@@ -757,7 +757,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="q6t-VC-vYp">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerghost:" target="qo8-lj-syM" id="JgW-h7-nvT"/>
@@ -768,7 +768,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nK1-xT-Ond">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerfalco:" target="qo8-lj-syM" id="aYM-db-Dqe"/>
@@ -806,7 +806,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TSD-ht-VRo">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerclone:" target="qo8-lj-syM" id="BaU-jq-kLy"/>
@@ -826,7 +826,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b5K-kA-p4P">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerstoffez:" target="qo8-lj-syM" id="qXe-l9-89p"/>
@@ -853,7 +853,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WQF-I9-JHj">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerbaapreview:" target="qo8-lj-syM" id="8zu-ka-BMF"/>
@@ -864,7 +864,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="br9-jU-isD">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerghostpreview:" target="qo8-lj-syM" id="N4T-ga-3tR"/>
@@ -875,7 +875,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dro-UE-LJT">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerfalcopreview:" target="qo8-lj-syM" id="PYn-1t-0EZ"/>
@@ -886,7 +886,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aqH-Eb-5O2">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerstoffezpreview:" target="qo8-lj-syM" id="Ki9-lA-Ksd"/>
@@ -922,7 +922,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ar6-bm-1jT">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerwahlmanj:" target="qo8-lj-syM" id="sGV-uH-mMM"/>
@@ -937,7 +937,7 @@ not function.</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Zp-Mm-ATE">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerghostpreview:" target="qo8-lj-syM" id="Wca-H2-Ev2"/>
@@ -1047,7 +1047,7 @@ not function.</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title=" Setup Guide" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gNM-gw-doR">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                         </button>
                                         <imageView id="Png-Th-eVE">
@@ -1952,7 +1952,7 @@ High output </string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Select" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="icd-hb-GrZ">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerwcview:" target="qo8-lj-syM" id="SUV-cM-KMh"/>
@@ -1972,7 +1972,7 @@ High output </string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="squareTextured" title="Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZgP-En-7KB">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerupdatecode:" target="qo8-lj-syM" id="6Ee-Yz-TaD"/>
@@ -2015,7 +2015,7 @@ outside your local area network. </string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xhL-ec-di4">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerinstallwc10:" target="qo8-lj-syM" id="m7K-q9-L8N"/>
@@ -2026,7 +2026,7 @@ outside your local area network. </string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N3s-af-wnG">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerinstallwc:" target="qo8-lj-syM" id="lIR-qO-vfF"/>
@@ -2037,7 +2037,7 @@ outside your local area network. </string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Install" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BaV-BS-5eY">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="buttonhandlerclt:" target="qo8-lj-syM" id="LRS-a7-dVf"/>
