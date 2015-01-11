@@ -270,6 +270,15 @@ script AppDelegate
     on buttonhandlernewupdateoc_(sender)
         tell appupdateProgressBar to startAnimation:me -- another way
         set animated to true
+        try
+            set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+            set theString to quoted form of "HOME"
+            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+            if searchResult is "2" then
+                display notification "Patching code..." with title "OpenPlex Status"
+                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
+            end if
+        end try
         tell application "Finder"
             tell application "Finder"
                 if not (exists file "usr:bin:appweb.bash" of the startup disk) then
@@ -541,6 +550,16 @@ script AppDelegate
                                     display notification "PlexConnect is Running..." with title "PlexConnect Status"
                                     delay 0
                                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                end if
+                            end try
+                            try
+                                set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                                set theString to quoted form of "HOME"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "Optimizing new app features..." with title "OpenPlex Status"
+                                    delay 0
+                                    do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                 end if
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -862,6 +881,16 @@ script AppDelegate
                                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                                 end if
                             end try
+                            try
+                                set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                                set theString to quoted form of "HOME"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "Optimizing new app features..." with title "OpenPlex Status"
+                                    delay 0
+                                    do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
+                                end if
+                            end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
                     end tell
@@ -1170,6 +1199,16 @@ script AppDelegate
                                     display notification "PlexConnect is Running..." with title "PlexConnect Status"
                                     delay 0
                                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                end if
+                            end try
+                            try
+                                set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                                set theString to quoted form of "HOME"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "Optimizing new app features..." with title "OpenPlex Status"
+                                    delay 0
+                                    do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                 end if
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -1482,6 +1521,16 @@ script AppDelegate
                                     display notification "PlexConnect is Running..." with title "PlexConnect Status"
                                     delay 0
                                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                end if
+                            end try
+                            try
+                                set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                                set theString to quoted form of "HOME"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "Optimizing new app features..." with title "OpenPlex Status"
+                                    delay 0
+                                    do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                 end if
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
@@ -1797,6 +1846,16 @@ script AppDelegate
                                     display notification "PlexConnect is Running..." with title "PlexConnect Status"
                                     delay 0
                                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+                                end if
+                            end try
+                            try
+                                set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                                set theString to quoted form of "HOME"
+                                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
+                                if searchResult is "2" then
+                                    display notification "Optimizing new app features..." with title "OpenPlex Status"
+                                    delay 0
+                                    do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                 end if
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
