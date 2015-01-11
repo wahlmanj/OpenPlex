@@ -314,10 +314,10 @@ script AppDelegate
                 display notification "No OpenPlex updates avaliable..." with title "OpenPlex Status"
                 delay 0
                 else if x is not equal to "no updates available" then
-                do shell script "installbash.bash"
-                do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                 display notification "OpenPlex updated, Exit hijacked app on aTV..." with title "OpenPlex Status"
                 delay 0
+                do shell script "installbash.bash"
+                do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
             end if
         end tell
         tell appupdateProgressBar to stopAnimation:me -- another way
@@ -2052,7 +2052,7 @@ script AppDelegate
         tell trailersProgressBar to startAnimation:me -- another way
         set animated to true
         try
-            display notification "Creating Trailers certs if needed and setting hijack to WSJ..." with title "OpenPlex Status"
+            display notification "Creating Trailers certs if needed and setting hijack to Trailers..." with title "OpenPlex Status"
             delay 0
             try
                 do shell script "createcertbash.bash"
