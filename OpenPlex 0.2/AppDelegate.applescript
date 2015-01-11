@@ -67,10 +67,10 @@ script AppDelegate
                         else if x is not equal to "Already up-to-date." then
                         do shell script "restartbash.bash"
                         do shell script "afplay /System/Library/Sounds/Glass.aiff"
-                       display notification "PlexConnect updated, Exit hijacked app on aTV..." & y with title "OpenPlex Status"
+                        display notification "PlexConnect updated, Exit hijacked app on aTV..." & y with title "OpenPlex Status"
                         delay 0
-                   end if
-               end if
+                    end if
+                end if
                 on error
                 display notification "PlexConnect folder corrupted reinstall theme" with title "OpenPlex Status"
                 delay 0
@@ -315,11 +315,11 @@ script AppDelegate
         set animated to false
     end buttonhandlernewupdateoc_
     
- --   on buttonhandlerloginon_(sender)
---        display notification "OpenPlex added to login items..." with title "OpenPlex Status"
- --       delay 0
- --       tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
- --   end buttonhandlerloginon_
+    --   on buttonhandlerloginon_(sender)
+    --        display notification "OpenPlex added to login items..." with title "OpenPlex Status"
+    --       delay 0
+    --       tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
+    --   end buttonhandlerloginon_
     
     on buttonhandlerloginitemOP_(sender)
         tell application "System Events"
@@ -2628,6 +2628,10 @@ script AppDelegate
     
     --Extras Tab
     
+    on buttonhandlerfixplists_(sender)
+        do shell script "auto.bash" with administrator privileges
+    end buttonhandlerfixplists_
+    
     on buttonhandlergitreset_(sender)
         try
             set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git reset --soft HEAD^; git reset --hard"
@@ -2782,6 +2786,7 @@ script AppDelegate
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:httpd.conf" of the startup disk) then
                 do shell script "websharingbash.bash"
+                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 display notification "Install pref pane and turn on WebSharing to enable WebConnect..." with title "OpenPlex Status"
                 delay 0
             end if
@@ -2797,6 +2802,7 @@ script AppDelegate
         end try
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:10.10:httpd.conf" of the startup disk) then
+                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "sudo apachectl start" with administrator privileges
                 do shell script "sudo apachectl restart" with administrator privileges
                 display notification "WebConnect Enabled..." with title "OpenPlex Status"
@@ -2811,56 +2817,6 @@ script AppDelegate
         tell application "Safari" to make new document with properties {URL:tURL}
         do shell script "show Safari"
     end buttonhandlerwcview_
-    
-    on buttonhandlerupdatecode_(sender)
-        tell WCProgressBar to startAnimation:me -- another way
-        set animated to true
-        display notification "WebConnect Views Updated..." with title "OpenPlex Status"
-        delay 0
-        do shell script "updatewcbash.bash"
-        do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
-        tell WCProgressBar to stopAnimation:me -- another way
-        set animated to false
-    end buttonhandlerupdatecode_
-    
-    --Other Scripts
-    
- ---   on buttonhandlerquitconsole_(sender)
- --       do shell script "quit Console"
---    end buttonhandlerquitconsole_
-    
-    on buttonhandlerfixplists_(sender)
-        do shell script "auto.bash" with administrator privileges
-    end buttonhandlerfixplists_
-    
---    on buttonhandlerbrew_(sender)
---        set msgDate to "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
---        set quotedmsgDate to "\"" & msgDate & "\"" as string
- --       do shell script "echo ruby -e " & quoted form of quotedmsgDate & " >> /" & "brew.bash" with administrator privileges
- --       do shell script "cp /brew.bash /usr/bin" with administrator privileges
-  --      do shell script "chmod +x /usr/bin/brew.bash" with administrator privileges
-   --     tell application "Terminal"
-    --        activate
-     --       activate
-      --      tell application "System Events" to keystroke "brew.bash"
-       --     tell application "System Events" to keystroke return
-        --    tell application "System Events" to keystroke return
-     --   end tell
-    --    delay 5
-   --     do shell script "rm /usr/bin/brew.bash" with administrator privileges
-   --     do shell script "rm /brew.bash" with administrator privileges
-  --  end buttonhandlerbrew_
-    
- --   on buttonhandlermacports_(sender)
-  --      do shell script "show Safari"
-  --      set theURL to "http://www.macports.org/install.php"
-   --     tell application "Safari" to make new document with properties {URL:theURL}
-    --    do shell script "show Safari"
-     --   try
-      --      display notification "Install Macports.pkg..." with title "Airplay status"
-       --     delay 0
-        --    onerror
-     --   end try
-  --  end buttonhandlermacports_
+
     
 end script
