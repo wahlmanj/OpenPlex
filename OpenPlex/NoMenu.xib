@@ -943,15 +943,15 @@ not function.</string>
                                                         <rect key="frame" x="306" y="18" width="16" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </progressIndicator>
-                                                    <button toolTip="CyberGhost84 (fork) Preview" verticalHuggingPriority="750" id="8JK-qr-IJP">
+                                                    <button toolTip="Install Wahlman.j Theme" verticalHuggingPriority="750" id="U5s-tm-ggR">
                                                         <rect key="frame" x="132" y="13" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="roundTextured" title="Preview" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Zp-Mm-ATE">
+                                                        <buttonCell key="cell" type="roundTextured" title="Dev theme" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Flk-WO-sIT">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerghostpreview:" target="qo8-lj-syM" id="Wca-H2-Ev2"/>
+                                                            <action selector="buttonhandlerwahlmanjdev:" target="qo8-lj-syM" id="P4J-Kd-NGA"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
