@@ -564,6 +564,12 @@ script AppDelegate
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
+                        if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
+                        try
+                            do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                            do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                        end try
+                        end if
                     end tell
                 end tell
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
@@ -893,6 +899,12 @@ script AppDelegate
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         end if
+                        if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
+                            try
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                            end try
+                        end if
                     end tell
                 end tell
                 else if not (exists folder "usr:local:git:OP" of the startup disk) then
@@ -1212,6 +1224,12 @@ script AppDelegate
                                 end if
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                        end if
+                        if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
+                            try
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                            end try
                         end if
                     end tell
                 end tell
@@ -1534,6 +1552,12 @@ script AppDelegate
                                 end if
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                        end if
+                        if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
+                            try
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                            end try
                         end if
                     end tell
                 end tell
@@ -1859,6 +1883,12 @@ script AppDelegate
                                 end if
                             end try
                             else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                        end if
+                        if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
+                            try
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                                do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                            end try
                         end if
                     end tell
                 end tell
@@ -2691,6 +2721,7 @@ script AppDelegate
         try
             do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
             do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+            do shell script "cd /Applications/plexconnect_BACKUP; touch icon.auto"
         end try
     end buttonhandlercustomicons_
     
@@ -2796,17 +2827,24 @@ script AppDelegate
     end buttonhandlermuteboot_
     
     on buttonhandlerpillowinstaller_(sender)
-        do shell script "quit Terminal; sleep 2"
-        do shell script "open /Applications/Utilities/Terminal.app"
-        tell application "Terminal"
-            activate
-            activate
-            activate
-            tell application "System Events" to keystroke "pillow.bash"
-            tell application "System Events" to keystroke return
+        tell application "Finder"
+            if (exists file "Applications:PlexConnect:update:OSX:pillow.bash" of the startup disk) then
+                do shell script "quit Terminal; sleep 2"
+                do shell script "open /Applications/Utilities/Terminal.app"
+                tell application "Terminal"
+                    activate
+                    activate
+                    activate
+                    tell application "System Events" to keystroke "pillow.bash"
+                    tell application "System Events" to keystroke return
+                end tell
+                display notification "Enter password to install pillow if command line tools have beeen installed..." with title "OpenPlex Status"
+                delay 0
+                else
+                display notification "Install a theme before installing pillow..." with title "OpenPlex Status"
+                delay 0
+            end if
         end tell
-        display notification "Enter password to install pillow if command line tools have beeen installed..." with title "OpenPlex Status"
-        delay 0
     end buttonhandlerpillowinstaller_
     
     on buttonhandlerairplayinstaller_(sender)
