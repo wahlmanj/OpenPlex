@@ -339,6 +339,7 @@ cp falcobash.bash /usr/bin
 cp hide /usr/bin
 cp hide.bash /usr/bin
 cp ibaabash.bash /usr/bin
+cp icon.bash /usr/bin
 cp install.bash /usr/bin
 cp installbash.bash /usr/bin
 cp itunes.bash /usr/bin
@@ -497,6 +498,7 @@ chmod +x /usr/bin/falcobash.bash
 chmod +x /usr/bin/hide
 chmod +x /usr/bin/hide.bash
 chmod +x /usr/bin/ibaabash.bash
+chmod +x /usr/bin/icon.bash
 chmod +x /usr/bin/install.bash
 chmod +x /usr/bin/installbash.bash
 chmod +x /usr/bin/itunes.bash

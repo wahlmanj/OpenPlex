@@ -40,6 +40,7 @@ rm /usr/bin/falcobash.bash
 rm /usr/bin/hide
 rm /usr/bin/hide.bash
 rm /usr/bin/ibaa.bash
+rm /usr/bin/icon.bash
 rm /usr/bin/ibaabash.bash
 rm /usr/bin/install.bash
 rm /usr/bin/installbash.bash

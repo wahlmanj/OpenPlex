@@ -2687,6 +2687,13 @@ script AppDelegate
     
     --Extras Tab
     
+    on buttonhandlercustomicons_(sender)
+        try
+            do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+            do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+        end try
+    end buttonhandlercustomicons_
+    
     on buttonhandlerfixplists_(sender)
         do shell script "auto.bash" with administrator privileges
     end buttonhandlerfixplists_
