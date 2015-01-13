@@ -3123,47 +3123,59 @@ script AppDelegate
     
     on buttonhandlerautocerts_(sender)
         tell application "Finder"
-            if (exists file "Applications:plexconnect_BACKUP:trailers.cer" of the startup disk) then
+            if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
+                do shell script "cd /Applications/plexconnect_BACKUP; rm trailers.auto"
+                display notification "Automatic Cert loading Disabled..." with title "OpenPlex Status"
+                delay 0
+                else
                 do shell script "cd /Applications/plexconnect_BACKUP; touch trailers.auto"
                 display notification "Automatic Cert loading Enabled..." with title "OpenPlex Status"
-                delay 0
-                else if not (exists file "Applications:plexconnect_BACKUP:trailers.cer" of the startup disk) then
-                display notification "Backup certs first, then enable auto certs loader..." with title "OpenPlex Status"
                 delay 0
             end if
         end tell
     end buttonhandlerautocerts_
     
-    on buttonhandlerautocertsremove_(sender)
-        try
-            do shell script "cd /Applications/plexconnect_BACKUP; rm trailers.auto"
-            display notification "Automatic Cert loading Disabled..." with title "OpenPlex Status"
-            delay 0
-            on error
-            display notification "Automatic Cert loading already Disabled..." with title "OpenPlex Status"
-            delay 0
-        end try
-    end buttonhandlerautocertsremove_
-    
     on buttonhandlerautoupdate_(sender)
-        do shell script "createautobash.bash"
-        display notification "Automatic GitHub Updates Enabled..." with title "OpenPlex Status"
-        delay 0
-    end buttonhandlerautoupdate_
-    
-    on buttonhandlerdefaultupdate_(sender)
-        --Needs work to remove password only
         tell application "Finder"
             if (exists file "Library:LaunchDaemons:com.plex.plexconnect.auto.plist" of the startup disk) then
                 do shell script "cd /Library/LaunchDaemons; launchctl unload com.plex.plexconnect.auto.plist; rm com.plex.plexconnect.auto.plist" with administrator privileges
                 display notification "Automatic GitHub Updates Disabled..." with title "OpenPlex Status"
                 delay 0
                 else
-                display notification "Automatic GitHub Updates already Disabled..." with title "OpenPlex Status"
+                do shell script "createautobash.bash"
+                display notification "Automatic GitHub Updates Enabled..." with title "OpenPlex Status"
                 delay 0
             end if
         end tell
-    end buttonhandlerdefaultupdate_
+    end buttonhandlerautoupdate_
+    
+    on buttonhandlerautomyplex_(sender)
+        tell application "Finder"
+            if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
+                do shell script "cd /Applications/plexconnect_BACKUP; rm myplex.auto"
+                display notification "Automatic MyPlex loading Disabled..." with title "OpenPlex Status"
+                delay 0
+                else
+                do shell script "cd /Applications/plexconnect_BACKUP; touch myplex.auto"
+                display notification "Automatic MyPlex loading Enabled..." with title "OpenPlex Status"
+                delay 0
+            end if
+        end tell
+    end buttonhandlerautomyplex_
+    
+    on buttonhandlerautosettings_(sender)
+        tell application "Finder"
+            if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
+                do shell script "cd /Applications/plexconnect_BACKUP; rm settings.auto"
+                display notification "Automatic Settings.cfg loading Disabled..." with title "OpenPlex Status"
+                delay 0
+                else
+                do shell script "cd /Applications/plexconnect_BACKUP; touch settings.auto"
+                display notification "Automatic Settings.cfg loading Enabled..." with title "OpenPlex Status"
+                delay 0
+            end if
+        end tell
+    end buttonhandlerautosettings_
     
     on buttonhandlerloghigh_(sender)
         do shell script "cd /Applications/PlexConnect; sed -i '' 's/Normal/High/g' settings.cfg"

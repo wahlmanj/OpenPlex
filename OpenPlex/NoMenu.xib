@@ -1657,12 +1657,12 @@ Step 8:   Reboot aTV to load remaining icons</string>
                                         <button verticalHuggingPriority="750" id="XKD-KD-cqT">
                                             <rect key="frame" x="22" y="237" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Auto Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U6u-6x-i4c">
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U6u-6x-i4c">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerautoupdate:" target="qo8-lj-syM" id="YxU-Zp-GCE"/>
+                                                <action selector="buttonhandlerautoupdate:" target="qo8-lj-syM" id="Tyb-2x-m6h"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="TSC-G7-cd0">
@@ -1677,12 +1677,12 @@ Step 8:   Reboot aTV to load remaining icons</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="30p-iH-Xpi">
-                                            <rect key="frame" x="117" y="236" width="111" height="28"/>
+                                            <rect key="frame" x="117" y="236" width="104" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Mzu-ZR-44a">
                                                 <font key="font" metaFont="smallSystem"/>
-                                                <string key="title">Enable PlexConnect
-Automatic updates</string>
+                                                <string key="title">PlexConnect
+Auto updates</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -1730,41 +1730,43 @@ Startup Sound</string>
                                         <button verticalHuggingPriority="750" id="Dwt-ah-Yeq">
                                             <rect key="frame" x="22" y="129" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Default Load" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nI3-8g-ND8">
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nI3-8g-ND8">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerautocertsremove:" target="qo8-lj-syM" id="PTt-hb-HYb"/>
+                                                <action selector="buttonhandlerautosettings:" target="qo8-lj-syM" id="4NL-2W-tUP"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="SYR-ml-fG0">
                                             <rect key="frame" x="22" y="165" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Auto Load" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9Kk-QG-Rh3">
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9Kk-QG-Rh3">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerautocerts:" target="qo8-lj-syM" id="bR2-9E-GOQ"/>
+                                                <action selector="buttonhandlerautomyplex:" target="qo8-lj-syM" id="3mf-vR-92g"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qOt-bi-nml">
-                                            <rect key="frame" x="117" y="128" width="97" height="28"/>
+                                            <rect key="frame" x="117" y="164" width="79" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disable Auto Cert   and Hijack loader" id="Zt6-s0-OCi">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Zt6-s0-OCi">
                                                 <font key="font" metaFont="smallSystem"/>
+                                                <string key="title">Myplex 
+Auto loader</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="r3s-S9-30s">
-                                            <rect key="frame" x="117" y="164" width="97" height="28"/>
+                                            <rect key="frame" x="117" y="200" width="90" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="16F-Hy-Kez">
                                                 <font key="font" metaFont="smallSystem"/>
-                                                <string key="title">Enable Auto Cert
-and Hijack loader</string>
+                                                <string key="title">Cert and Hijack 
+Auto loader</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -1772,25 +1774,14 @@ and Hijack loader</string>
                                         <button verticalHuggingPriority="750" id="N02-M4-EuG">
                                             <rect key="frame" x="23" y="201" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Default Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uO2-Of-Vut">
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uO2-Of-Vut">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerdefaultupdate:" target="qo8-lj-syM" id="F5Q-n5-5HJ"/>
+                                                <action selector="buttonhandlerautocerts:" target="qo8-lj-syM" id="3AE-e4-c2k"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rqv-Rk-Vr2">
-                                            <rect key="frame" x="117" y="200" width="114" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="svk-45-aJD">
-                                                <font key="font" metaFont="smallSystem"/>
-                                                <string key="title">Disable PlexConnect
-Automatic updates</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="XxT-H2-ibC">
                                             <rect key="frame" x="436" y="236" width="113" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1812,7 +1803,7 @@ Automatic updates</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="8JA-sK-NNW">
-                                            <rect key="frame" x="118" y="92" width="129" height="28"/>
+                                            <rect key="frame" x="117" y="92" width="129" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="TyE-GD-rtv">
                                                 <font key="font" metaFont="smallSystem"/>
@@ -1931,6 +1922,17 @@ Normal output</string>
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <string key="title">PlexConnect Log 
 High output </string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rqv-Rk-Vr2">
+                                            <rect key="frame" x="117" y="128" width="97" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="svk-45-aJD">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <string key="title">Settings.cfg 
+Auto loader</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
