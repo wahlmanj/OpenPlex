@@ -488,6 +488,7 @@ script AppDelegate
                     do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
                     do shell script "purgesettingsbash.bash"
                     tell application "Finder"
+                    
                         if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                             do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
                         end if
@@ -528,6 +529,12 @@ script AppDelegate
                                     do shell script "createwsjbash.bash"
                                 end if
                             end try
+                            
+                            if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
+                                do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                                display notification "Myplex loaded..." with title "OpenPlex Status"
+                                delay 0
+                            end if
                             
                             try
                                 set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
@@ -865,6 +872,13 @@ script AppDelegate
                                     do shell script "createwsjbash.bash"
                                 end if
                             end try
+                            
+                            if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
+                                do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                                display notification "Myplex loaded..." with title "OpenPlex Status"
+                                delay 0
+                            end if
+                            
                             try
                                 set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
                                 set theString to quoted form of "Shutting"
@@ -1191,6 +1205,13 @@ script AppDelegate
                                     do shell script "createwsjbash.bash"
                                 end if
                             end try
+                            
+                            if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
+                                do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                                display notification "Myplex loaded..." with title "OpenPlex Status"
+                                delay 0
+                            end if
+                            
                             try
                                 set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
                                 set theString to quoted form of "Shutting"
@@ -1517,6 +1538,12 @@ script AppDelegate
                                     do shell script "createwsjbash.bash"
                                 end if
                             end try
+                            
+                            if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
+                                do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                                display notification "Myplex loaded..." with title "OpenPlex Status"
+                                delay 0
+                            end if
                             
                             try
                                 set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
@@ -1849,6 +1876,12 @@ script AppDelegate
                                 end if
                             end try
                             
+                            if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
+                                do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                                display notification "Myplex loaded..." with title "OpenPlex Status"
+                                delay 0
+                            end if
+                            
                             try
                                 set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
                                 set theString to quoted form of "Shutting"
@@ -2179,6 +2212,12 @@ script AppDelegate
                                     do shell script "createwsjbash.bash"
                                 end if
                             end try
+                            
+                            if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
+                                do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                                display notification "Myplex loaded..." with title "OpenPlex Status"
+                                delay 0
+                            end if
                             
                             try
                                 set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/PlexConnect.log")
