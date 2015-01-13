@@ -490,7 +490,7 @@ script AppDelegate
                     tell application "Finder"
                     
                         if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                            do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                            do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                         end if
                         if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                             do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -655,7 +655,7 @@ script AppDelegate
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                        do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                        do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                     end if
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -833,7 +833,7 @@ script AppDelegate
                     do shell script "purgesettingsbash.bash"
                     tell application "Finder"
                         if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                            do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                            do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                         end if
                         if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                             do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -996,7 +996,7 @@ script AppDelegate
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                        do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                        do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                     end if
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1166,7 +1166,7 @@ script AppDelegate
                     do shell script "purgesettingsbash.bash"
                     tell application "Finder"
                         if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                            do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                            do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                         end if
                         if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                             do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1329,7 +1329,7 @@ script AppDelegate
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                        do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                        do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                     end if
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1499,7 +1499,7 @@ script AppDelegate
                     do shell script "purgesettingsbash.bash"
                     tell application "Finder"
                         if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                            do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                            do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                         end if
                         if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                             do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1664,7 +1664,7 @@ script AppDelegate
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                        do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                        do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                     end if
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -1836,7 +1836,7 @@ script AppDelegate
                     do shell script "purgesettingsbash.bash"
                     tell application "Finder"
                         if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                            do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                            do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                         end if
                         if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                             do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -2001,7 +2001,7 @@ script AppDelegate
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                        do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                        do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                     end if
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -2173,7 +2173,7 @@ script AppDelegate
                     do shell script "purgesettingsbash.bash"
                     tell application "Finder"
                         if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                            do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                            do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                         end if
                         if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                             do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
@@ -2338,7 +2338,7 @@ script AppDelegate
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
-                        do shell script "cp /Applications/plexconnect_BACKUP/ATVSettings.cfg /Applications/PlexConnect"
+                        do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
                     end if
                     if (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                         do shell script "cp /Applications/plexconnect_BACKUP/trailers.cer /Applications/PlexConnect/assets/certificates"
