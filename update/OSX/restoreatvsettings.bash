@@ -1,5 +1,4 @@
 stop.bash
-sleep 4
 while : ; do
     [[ -f "/Applications/PlexConnect/ATVSettings.cfg" ]] && break
     echo "Pausing until ATVSettings.cfg exists."
