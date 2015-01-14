@@ -323,10 +323,10 @@ script AppDelegate
         delay 0
         do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-            do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
             do shell script "installbash.bash" with administrator privileges
             set x to do shell script "appwebbash.bash"
             if x is equal to "no updates available" then
@@ -461,8 +461,9 @@ script AppDelegate
                                         do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                                         on error
                                     do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                    do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                     do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                                     do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                                     do shell script "installbash.bash" with administrator privileges
                                     end try
@@ -675,8 +676,9 @@ script AppDelegate
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "purgesettingsbash.bash; restart.bash"
@@ -814,8 +816,9 @@ script AppDelegate
                                         do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                                         on error
                                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                                         do shell script "installbash.bash" with administrator privileges
                                     end try
@@ -1025,8 +1028,9 @@ script AppDelegate
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "purgesettingsbash.bash; restart.bash"
@@ -1156,8 +1160,9 @@ script AppDelegate
                                         do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                                         on error
                                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                                         do shell script "installbash.bash" with administrator privileges
                                     end try
@@ -1367,8 +1372,9 @@ script AppDelegate
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "purgesettingsbash.bash; restart.bash"
@@ -1498,8 +1504,9 @@ script AppDelegate
                                         do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                                         on error
                                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                                         do shell script "installbash.bash" with administrator privileges
                                     end try
@@ -1711,8 +1718,9 @@ script AppDelegate
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "purgesettingsbash.bash; restart.bash"
@@ -1844,8 +1852,9 @@ script AppDelegate
                                         do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                                         on error
                                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                                         do shell script "installbash.bash" with administrator privileges
                                     end try
@@ -2057,8 +2066,9 @@ script AppDelegate
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "purgesettingsbash.bash; restart.bash"
@@ -2190,8 +2200,9 @@ script AppDelegate
                                         do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                                         on error
                                         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                                         do shell script "installbash.bash" with administrator privileges
                                     end try
@@ -2403,8 +2414,9 @@ script AppDelegate
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
                 do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "purgesettingsbash.bash; restart.bash"
@@ -3339,8 +3351,9 @@ script AppDelegate
             do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
         end try
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
         do shell script "installbash.bash" with administrator privileges
         try
@@ -3364,8 +3377,9 @@ script AppDelegate
             do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
         end try
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
         do shell script "installbash.bash" with administrator privileges
         try
