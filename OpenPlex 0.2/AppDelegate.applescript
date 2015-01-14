@@ -274,6 +274,7 @@ script AppDelegate
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is "2" then
                 display notification "Patching code..." with title "OpenPlex Status"
+                delay 0
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
             end if
         end try
@@ -304,7 +305,9 @@ script AppDelegate
                 do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/updater/updater.app"
             end if
         end try
-        tell application "Finder"
+        try
+            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+            do shell script "installbash.bash"
             do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
             set x to do shell script "appwebbash.bash"
             if x is equal to "no updates available" then
@@ -314,10 +317,26 @@ script AppDelegate
                 else if x is not equal to "no updates available" then
                 display notification "OpenPlex updated, Exit hijacked app on aTV..." with title "OpenPlex Status"
                 delay 0
-                do shell script "installbash.bash"
-                do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
             end if
-        end tell
+        on error
+        display notification "Patching code..." with title "OpenPlex Status"
+        delay 0
+        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+            do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+            set x to do shell script "appwebbash.bash"
+            if x is equal to "no updates available" then
+                do shell script "afplay /System/Library/Sounds/Ping.aiff"
+                display notification "No OpenPlex updates avaliable..." with title "OpenPlex Status"
+                delay 0
+                else if x is not equal to "no updates available" then
+                display notification "OpenPlex updated, Exit hijacked app on aTV..." with title "OpenPlex Status"
+                delay 0
+            end if
+        end try
         tell appupdateProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlernewupdateoc_
@@ -436,7 +455,15 @@ script AppDelegate
                         try
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                                    try
                                     do shell script "stopbash.bash"
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                        on error
+                                    do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                    do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                    do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                    end try
                                 end if
                             end tell
                         end try
@@ -780,7 +807,15 @@ script AppDelegate
                         try
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
+                                    try
+                                        do shell script "stopbash.bash"
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                        on error
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                    end try
                                 end if
                             end tell
                         end try
@@ -1113,7 +1148,15 @@ script AppDelegate
                         try
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
+                                    try
+                                        do shell script "stopbash.bash"
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                        on error
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                    end try
                                 end if
                             end tell
                         end try
@@ -1446,7 +1489,15 @@ script AppDelegate
                         try
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
+                                    try
+                                        do shell script "stopbash.bash"
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                        on error
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                    end try
                                 end if
                             end tell
                         end try
@@ -1783,7 +1834,15 @@ script AppDelegate
                         try
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
+                                    try
+                                        do shell script "stopbash.bash"
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                        on error
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                    end try
                                 end if
                             end tell
                         end try
@@ -2120,7 +2179,15 @@ script AppDelegate
                         try
                             tell application "Finder"
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
-                                    do shell script "stopbash.bash"
+                                    try
+                                        do shell script "stopbash.bash"
+                                        do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+                                        on error
+                                        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+                                        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+                                        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                    end try
                                 end if
                             end tell
                         end try
@@ -3262,6 +3329,13 @@ script AppDelegate
     
     on buttonhandlerinstallwc_(sender)
         try
+            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+        end try
+        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+        try
             do shell script "cp /Applications/PlexConnect/update/OSX/httpd.conf /etc/apache2" with administrator privileges
             on error
             display notification "Install theme then try again" with title "OpenPlex Status"
@@ -3278,6 +3352,13 @@ script AppDelegate
     end buttonhandlerinstallwc_
     
     on buttonhandlerinstallwc10_(sender)
+        try
+            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
+        end try
+        do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
+        do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/10.10/httpd.conf /etc/apache2" with administrator privileges
             on error
