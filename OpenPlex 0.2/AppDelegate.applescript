@@ -327,6 +327,7 @@ script AppDelegate
         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
             do shell script "cd /Applications/PlexConnect/update/OSX; sudoers.bash; sudoersfixbash.bash"
+            do shell script "installbash.bash" with administrator privileges
             set x to do shell script "appwebbash.bash"
             if x is equal to "no updates available" then
                 do shell script "afplay /System/Library/Sounds/Ping.aiff"
@@ -463,6 +464,7 @@ script AppDelegate
                                     do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                                     do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                     do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                    do shell script "installbash.bash" with administrator privileges
                                     end try
                                 end if
                             end tell
@@ -815,6 +817,7 @@ script AppDelegate
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                        do shell script "installbash.bash" with administrator privileges
                                     end try
                                 end if
                             end tell
@@ -1156,6 +1159,7 @@ script AppDelegate
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                        do shell script "installbash.bash" with administrator privileges
                                     end try
                                 end if
                             end tell
@@ -1497,6 +1501,7 @@ script AppDelegate
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                        do shell script "installbash.bash" with administrator privileges
                                     end try
                                 end if
                             end tell
@@ -1842,6 +1847,7 @@ script AppDelegate
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                        do shell script "installbash.bash" with administrator privileges
                                     end try
                                 end if
                             end tell
@@ -2187,6 +2193,7 @@ script AppDelegate
                                         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                                         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
                                         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+                                        do shell script "installbash.bash" with administrator privileges
                                     end try
                                 end if
                             end tell
@@ -3335,6 +3342,7 @@ script AppDelegate
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+        do shell script "installbash.bash" with administrator privileges
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/httpd.conf /etc/apache2" with administrator privileges
             on error
@@ -3359,6 +3367,7 @@ script AppDelegate
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
+        do shell script "installbash.bash" with administrator privileges
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/10.10/httpd.conf /etc/apache2" with administrator privileges
             on error

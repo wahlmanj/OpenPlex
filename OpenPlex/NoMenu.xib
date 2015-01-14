@@ -2018,7 +2018,7 @@ outside your local area network. </string>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="0Xl-lt-e8i">
                                                         <rect key="frame" x="107" y="44" width="54" height="13"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.6-10.9" id="CFq-XR-uaF">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.8-10.9" id="CFq-XR-uaF">
                                                             <font key="font" metaFont="system" size="10"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
