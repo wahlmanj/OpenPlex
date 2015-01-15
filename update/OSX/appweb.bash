@@ -19,7 +19,7 @@ then
 echo "OpenPlex update available, Installing..."
 killall updater
 cd __HOME__/Library/Application\ Support/OpenPlex/updater
-ditto -xk updater.zip __HOME__/Library/Application\ Support/OpenPlex/updater
+unzip updater.zip
 cd __HOME__/Library/Application\ Support/OpenPlex/updater
 open updater.app
 git pull
