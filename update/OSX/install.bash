@@ -403,7 +403,6 @@ cp statusbash.bash /usr/bin
 cp stoffezbash.bash /usr/bin
 cp stop.bash /usr/bin
 cp stopbash.bash /usr/bin
-cp sudoers.bash /usr/bin
 cp sudoersfix.bash /usr/bin
 cp sudoersfixbash.bash /usr/bin
 cp timemachine.bash /usr/bin
@@ -562,7 +561,6 @@ chmod +x /usr/bin/statusbash.bash
 chmod +x /usr/bin/stoffezbash.bash
 chmod +x /usr/bin/stop.bash
 chmod +x /usr/bin/stopbash.bash
-chmod +x /usr/bin/sudoers.bash
 chmod +x /usr/bin/sudoersfix.bash
 chmod +x /usr/bin/sudoersfixbash.bash
 chmod +x /usr/bin/timemachine.bash
