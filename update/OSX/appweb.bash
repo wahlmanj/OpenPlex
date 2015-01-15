@@ -18,7 +18,6 @@ then
 ## get update
 echo "OpenPlex update available, Installing..."
 killall updater
-updatewcbash.bash
 cd __HOME__/Library/Application\ Support/OpenPlex/updater
 ditto -xk updater.zip __HOME__/Library/Application\ Support/OpenPlex/updater
 cd __HOME__/Library/Application\ Support/OpenPlex/updater
