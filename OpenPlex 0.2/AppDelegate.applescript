@@ -316,11 +316,6 @@ script AppDelegate
                 do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/updater/updater.app"
             end if
         end try
-        try
-            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-            do shell script "sudoersfixbash.bash"
-            do shell script "installbash.bash"
             set x to do shell script "appwebbash.bash"
             if x is equal to "no updates available" then
                 try
@@ -332,64 +327,6 @@ script AppDelegate
                 display notification "OpenPlex updated, Exit hijacked app on aTV..." with title "OpenPlex Status"
                 delay 0
             end if
-            on error
-            display notification "Optimizing new app features..." with title "OpenPlex Status"
-            delay 0
-            do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-            do shell script "chmod +x /Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-            do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
-            do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-            try
-                set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
-                set theString to quoted form of "HOME"
-                set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                if searchResult is "2" then
-                    display notification "Patching code..." with title "OpenPlex Status"
-                    delay 0
-                    do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                end if
-            end try
-            tell application "Finder"
-                tell application "Finder"
-                    if not (exists file "usr:bin:appweb.bash" of the startup disk) then
-                        do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                        display notification "Enabling WebConnect app updater..." with title "OpenPlex Status"
-                        delay 0
-                    end if
-                end tell
-            end tell
-            try
-                set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:10.6:OpenPlex.app" as alias
-                if theDefault exists then
-                    do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/10.6/OpenPlex.app"
-                end if
-            end try
-            try
-                set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:10.7:OpenPlex.app" as alias
-                if theDefault exists then
-                    do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/10.7/OpenPlex.app"
-                end if
-            end try
-            try
-                set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:updater:updater.app" as alias
-                if theDefault exists then
-                    do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/updater/updater.app"
-                end if
-            end try
-            do shell script "installbash.bash"
-            set x to do shell script "appwebbash.bash"
-            if x is equal to "no updates available" then
-                try
-                    do shell script "afplay /System/Library/Sounds/Ping.aiff"
-                end try
-                display notification "No OpenPlex updates avaliable..." with title "OpenPlex Status"
-                delay 0
-                else if x is not equal to "no updates available" then
-                display notification "OpenPlex updated, Exit hijacked app on aTV..." with title "OpenPlex Status"
-                delay 0
-            end if
-        end try
         tell appupdateProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlernewupdateoc_
@@ -637,9 +574,10 @@ script AppDelegate
                         end try
                     end if
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        try
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                        end try
                     end if
                 end tell
                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/iBaa/PlexConnect.git"
@@ -922,9 +860,10 @@ script AppDelegate
                         end try
                     end if
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        try
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                        end try
                     end if
                 end tell
                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/falco953/PlexConnect.git"
@@ -1207,9 +1146,10 @@ script AppDelegate
                         end try
                     end if
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        try
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                        end try
                     end if
                 end tell
                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/stoffez/PlexConnect.git"
@@ -1492,9 +1432,10 @@ script AppDelegate
                         end try
                     end if
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        try
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                        end try
                     end if
                 end tell
                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/CyberGhost84/PlexConnect.git"
@@ -1777,9 +1718,10 @@ script AppDelegate
                         end try
                     end if
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        try
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                        end try
                     end if
                 end tell
                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj3/PlexConnect.git"
@@ -2062,9 +2004,10 @@ script AppDelegate
                         end try
                     end if
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
+                        try
                         do shell script "chmod -R 777 /Applications/PlexConnect" with administrator privileges
                         do shell script "rm -R /Applications/PlexConnect" with administrator privileges
-                        else if not (exists folder "Applications:PlexConnect" of the startup disk) then
+                        end try
                     end if
                 end tell
                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj2/PlexConnect.git"
