@@ -403,6 +403,10 @@ script AppDelegate
         set animated to true
         display notification "Installing iBaa Theme..." with title "OpenPlex Status"
         delay 0
+        try
+            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+            do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+        end try
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
@@ -668,8 +672,6 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerclone_
@@ -679,6 +681,10 @@ script AppDelegate
         set animated to true
         display notification "Installing Falco953 Theme..." with title "OpenPlex Status"
         delay 0
+        try
+            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+            do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+        end try
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
@@ -943,8 +949,6 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell falcoProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerfalco_
@@ -954,6 +958,10 @@ script AppDelegate
         set animated to true
         display notification "Installing Stoffez Theme..." with title "OpenPlex Status"
         delay 0
+        try
+            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+            do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+        end try
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
@@ -1218,8 +1226,6 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell stoffezProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerstoffez_
@@ -1229,6 +1235,10 @@ script AppDelegate
         set animated to true
         display notification "Installing CyberGhost84 Theme..." with title "OpenPlex Status"
         delay 0
+        try
+            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+            do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+        end try
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
@@ -1493,8 +1503,6 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell ghostProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerghost_
@@ -1504,6 +1512,10 @@ script AppDelegate
         set animated to true
         display notification "Installing Wahlman.J-Dev Theme..." with title "OpenPlex Status"
         delay 0
+        try
+            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+            do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+        end try
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
@@ -1768,8 +1780,6 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwahlmanjdev_
@@ -1779,6 +1789,10 @@ script AppDelegate
         set animated to true
         display notification "Installing Wahlman.J Theme..." with title "OpenPlex Status"
         delay 0
+        try
+            do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+            do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+        end try
         tell application "Finder"
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
@@ -2043,8 +2057,6 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwahlmanj_
