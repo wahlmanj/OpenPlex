@@ -3,48 +3,66 @@ OSX_VERS=$(sw_vers -productVersion | awk -F "." '{print $2}')
  
 if [ "$OSX_VERS" -eq 6 ]; then
 killall OpenPlex
-purgeappbash.bash
+rm -Rf OpenPlex.app
 cd /Applications
 curl -L https://github.com/wahlmanj/OpenPlex/raw/master/10.7/OpenPlex.zip > OpenPlex.zip
-ditto -xk OpenPlex.zip /Applications
+unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 7 ]; then
 killall OpenPlex
-purgeappbash.bash
+rm -Rf OpenPlex.app
 cd /Applications
 curl -L https://github.com/wahlmanj/OpenPlex/raw/master/10.7/OpenPlex.zip > OpenPlex.zip
-ditto -xk OpenPlex.zip /Applications
+unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 8 ]; then
 killall OpenPlex
-purgeappbash.bash
+rm -Rf OpenPlex.app
 cd /Applications
 curl -L https://github.com/wahlmanj/OpenPlex/raw/master/10.7/OpenPlex.zip > OpenPlex.zip
-ditto -xk OpenPlex.zip /Applications
+unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 9 ]; then
 killall OpenPlex
-purgeappbash.bash
+rm -Rf OpenPlex.app
 cd /Applications
 curl -L https://github.com/wahlmanj/OpenPlex/raw/master/10.6/OpenPlex.zip > OpenPlex.zip
-ditto -xk OpenPlex.zip /Applications
+unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 10 ]; then
 killall OpenPlex
-purgeappbash.bash
+rm -Rf OpenPlex.app
 cd /Applications
 curl -L https://github.com/wahlmanj/OpenPlex/raw/master/10.6/OpenPlex.zip > OpenPlex.zip
-ditto -xk OpenPlex.zip /Applications
+unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
+echo $OSX_VERS
+elif [ "$OSX_VERS" -eq 11 ]; then
+killall OpenPlex
+rm -Rf OpenPlex.app
+cd /Applications
+curl -L https://github.com/wahlmanj/OpenPlex/raw/master/10.6/OpenPlex.zip > OpenPlex.zip
+unzip OpenPlex.zip
+rm OpenPlex.zip
+open OpenPlex.app
+elif [ "$OSX_VERS" -eq 12 ]; then
+killall OpenPlex
+rm -Rf OpenPlex.app
+cd /Applications
+curl -L https://github.com/wahlmanj/OpenPlex/raw/master/10.6/OpenPlex.zip > OpenPlex.zip
+unzip OpenPlex.zip
+rm OpenPlex.zip
+open OpenPlex.app
+echo $OSX_VERS
 echo $OSX_VERS
 fi
 
