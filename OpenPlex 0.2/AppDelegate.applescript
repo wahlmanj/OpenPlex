@@ -450,8 +450,6 @@ script AppDelegate
                     display notification "iBaa's Theme has been installed..." with title "OpenPlex Status"
                     delay 0
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                    do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                         try
                             do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -670,6 +668,8 @@ script AppDelegate
                 delay 0
             end if
         end tell
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell baaProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerclone_
@@ -726,8 +726,6 @@ script AppDelegate
                     display notification "Falco953's Theme has been installed..." with title "OpenPlex Status"
                     delay 0
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                    do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                         try
                             do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -945,6 +943,8 @@ script AppDelegate
                 delay 0
             end if
         end tell
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell falcoProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerfalco_
@@ -1001,8 +1001,6 @@ script AppDelegate
                     display notification "Stoffez's Theme has been installed..." with title "OpenPlex Status"
                     delay 0
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                    do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                         try
                         do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -1220,6 +1218,8 @@ script AppDelegate
                 delay 0
             end if
         end tell
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell stoffezProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerstoffez_
@@ -1276,8 +1276,6 @@ script AppDelegate
                     display notification "CyberGhost84's Theme has been installed..." with title "OpenPlex Status"
                     delay 0
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                    do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                         try
                             do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -1495,6 +1493,8 @@ script AppDelegate
                 delay 0
             end if
         end tell
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell ghostProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerghost_
@@ -1551,8 +1551,6 @@ script AppDelegate
                     display notification "Wahlmanj's-Dev Theme has been installed..." with title "OpenPlex Status"
                     delay 0
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                    do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                         try
                             do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -1770,6 +1768,8 @@ script AppDelegate
                 delay 0
             end if
         end tell
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwahlmanjdev_
@@ -1826,8 +1826,6 @@ script AppDelegate
                     display notification "Wahlmanj's Theme has been installed..." with title "OpenPlex Status"
                     delay 0
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
-                    do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                    do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                         try
                             do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -2045,6 +2043,8 @@ script AppDelegate
                 delay 0
             end if
         end tell
+        do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
+        do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
         tell wahlmanjProgressBar to stopAnimation:me -- another way
         set animated to false
     end buttonhandlerwahlmanj_
