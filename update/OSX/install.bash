@@ -686,6 +686,11 @@ wcios.bash
 wcdefault.bash
 wcopenplex.bash
 
+if [ -s /usr/bin/sudoers.bash ]
+then
+rm /usr/bin/sudoers.bash
+fi
+
 if [ -s /wclist.bash ]
 then
 rm /wclist.bash
