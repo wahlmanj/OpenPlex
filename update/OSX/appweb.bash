@@ -4,8 +4,8 @@ fi
 if [ -s __HOME__/Library/Application\ Support/OpenPlex/10.6/OpenPlex.app ]
 then rm -Rf __HOME__/Library/Application\ Support/OpenPlex/10.6/OpenPlex.app
 fi
-if [ -s __HOME__/Library/Application\ Support/OpenPlex/10.6/OpenPlex.app ]
-then rm -Rf __HOME__/Library/Application\ Support/OpenPlex/10.6/OpenPlex.app
+if [ -s __HOME__/Library/Application\ Support/OpenPlex/updater/updater.app ]
+then rm -Rf __HOME__/Library/Application\ Support/OpenPlex/updater/updater.app
 fi
 export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 cd __HOME__/Library/Application\ Support/OpenPlex
@@ -17,11 +17,6 @@ if [ "$newUpdatesAvailable" != "" ]
 then
 ## get update
 echo "OpenPlex update available, Installing..."
-killall updater
-cd __HOME__/Library/Application\ Support/OpenPlex/updater
-unzip updater.zip
-cd __HOME__/Library/Application\ Support/OpenPlex/updater
-open updater.app
 git pull
 git reset --hard
 afplay /System/Library/Sounds/Glass.aiff
