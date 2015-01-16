@@ -2099,7 +2099,7 @@ outside your local area network. </string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WBL-uh-OE0">
-                                            <rect key="frame" x="207" y="112" width="422" height="330"/>
+                                            <rect key="frame" x="207" y="-29" width="422" height="330"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Web_Connect" id="Aqf-WC-C4g"/>
                                         </imageView>
