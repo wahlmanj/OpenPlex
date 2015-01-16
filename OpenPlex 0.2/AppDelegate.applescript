@@ -397,7 +397,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP; cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -636,7 +636,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP; cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -875,7 +875,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP; cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -1114,7 +1114,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP; cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -1353,7 +1353,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP; cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -1592,7 +1592,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "mkdir /Applications/plexconnect_BACKUP; cp -R /Applications/PlexConnect/* /Applications/plexconnect_BACKUP; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
