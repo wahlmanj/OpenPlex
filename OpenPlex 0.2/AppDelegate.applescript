@@ -299,22 +299,13 @@ script AppDelegate
             end tell
         end tell
         try
-            set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:10.6:OpenPlex.app" as alias
-            if theDefault exists then
-                do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/10.6/OpenPlex.app"
-            end if
+                do shell script "rm -R ~/Library/Application\\ Support/OpenPlex/10.6/OpenPlex.app"
         end try
         try
-            set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:10.7:OpenPlex.app" as alias
-            if theDefault exists then
-                do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/10.7/OpenPlex.app"
-            end if
+                do shell script "rm -R ~/Library/Application\\ Support/OpenPlex/10.7/OpenPlex.app"
         end try
         try
-            set theDefault to (path to home folder as text) & "Library:Application Support:OpenPlex:updater:updater.app" as alias
-            if theDefault exists then
-                do shell script "rm -r ~/Library/Application\\ Support/OpenPlex/updater/updater.app"
-            end if
+                do shell script "rm -R ~/Library/Application\\ Support/OpenPlex/updater/updater.app"
         end try
             set x to do shell script "appwebbash.bash"
             if x is equal to "no updates available" then
@@ -324,7 +315,7 @@ script AppDelegate
                 display notification "No OpenPlex updates avaliable..." with title "OpenPlex Status"
                 delay 0
                 else if x is not equal to "no updates available" then
-                display notification "OpenPlex updated, Exit hijacked app on aTV..." with title "OpenPlex Status"
+                do shell script "cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
                 delay 0
             end if
         tell appupdateProgressBar to stopAnimation:me -- another way
