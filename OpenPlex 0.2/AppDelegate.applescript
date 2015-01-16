@@ -315,7 +315,7 @@ script AppDelegate
                 display notification "No OpenPlex updates avaliable..." with title "OpenPlex Status"
                 delay 0
                 else if x is not equal to "no updates available" then
-                do shell script "cd ~/Library/Application\\ Support/OpenPlex/updater; open updater.app"
+                do shell script "cd ~/Library/Application\\ Support/OpenPlex/updater; unzip updater.zip; open updater.app"
                 delay 0
             end if
         tell appupdateProgressBar to stopAnimation:me -- another way
