@@ -2695,7 +2695,47 @@ script AppDelegate
     
     --WebConnect Tab
     
-    on buttonhandlerinstallwc_(sender)
+    on buttonhandlerinstallwc6_(sender)
+        try
+            do shell script "cp /Applications/PlexConnect/update/OSX/httpd/10.6/httpd.conf /etc/apache2" with administrator privileges
+            on error
+            display notification "Install theme then try again" with title "OpenPlex Status"
+            delay 0
+        end try
+        tell application "Finder"
+            if (exists file "Applications:PlexConnect:update:OSX:httpd:10.6:httpd.conf" of the startup disk) then
+                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator
+        try
+            do shell script "sudo apache start" with administrator privileges
+        end try
+        do shell script "sudo apachectl restart" with administrator privileges
+        display notification "WebConnect Enabled on 10.6.x..." with title "OpenPlex Status"
+        delay 0
+        end if
+        end tell
+    end buttonhandlerinstallwc6_
+    
+    on buttonhandlerinstallwc7_(sender)
+        try
+            do shell script "cp /Applications/PlexConnect/update/OSX/httpd/10.7/httpd.conf /etc/apache2" with administrator privileges
+            on error
+            display notification "Install theme then try again" with title "OpenPlex Status"
+            delay 0
+        end try
+        tell application "Finder"
+            if (exists file "Applications:PlexConnect:update:OSX:httpd:10.7:httpd.conf" of the startup disk) then
+                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator
+                try
+                    do shell script "sudo apache start" with administrator privileges
+                end try
+                do shell script "sudo apachectl restart" with administrator privileges
+                display notification "WebConnect Enabled on 10.7.x..." with title "OpenPlex Status"
+                delay 0
+            end if
+        end tell
+    end buttonhandlerinstallwc7_
+    
+    on buttonhandlerinstallwc8or9_(sender)
         try
             do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
         end try
@@ -2715,11 +2755,11 @@ script AppDelegate
             if (exists file "Applications:PlexConnect:update:OSX:httpd.conf" of the startup disk) then
                 do shell script "websharingbash.bash"
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                display notification "Install pref pane and turn on WebSharing to enable WebConnect..." with title "OpenPlex Status"
+                display notification "Install pref pane and turn on WebSharing to enable WebConnect on 10.8.x or 10.9.x..." with title "OpenPlex Status"
                 delay 0
             end if
         end tell
-    end buttonhandlerinstallwc_
+    end buttonhandlerinstallwc8or9_
     
     on buttonhandlerinstallwc10_(sender)
         try
@@ -2740,9 +2780,11 @@ script AppDelegate
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:10.10:httpd.conf" of the startup disk) then
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                do shell script "sudo apachectl start" with administrator privileges
+                try
+                    do shell script "sudo apachectl start" with administrator privileges
+                end try
                 do shell script "sudo apachectl restart" with administrator privileges
-                display notification "WebConnect Enabled..." with title "OpenPlex Status"
+                display notification "WebConnect Enabled on 10.10.x..." with title "OpenPlex Status"
                 delay 0
             end if
         end tell
