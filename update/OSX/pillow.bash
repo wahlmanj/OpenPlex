@@ -6,7 +6,7 @@ yes | ./pillow
 echo 'IF YOU ENCOUNTER ERRORS WITH PILLOW NOT INSTALLING DOWNGRADE YOUR PYTHON TO 2.7.2 FROM THE PYTHON WEBSITE THEN TRY THESE COMMANDS IN A TERMINAL SESSION'
 echo ' '
 echo 'sudo /Library/Frameworks/Python.framework/Versions/2.7/bin/easy_install-2.7 pip'
-echo 'sudo /Library/Frameworks/Python.framework/Versions/2.7/bin/easy_install-2.7 pip'
+echo 'sudo /Library/Frameworks/Python.framework/Versions/2.7/bin/easy_install-2.7 pillow'
 echo 'sudo /usr/bin/easy_install-2.7 pip'
 echo 'sudo /usr/bin/easy-install-2.7 pillow'
 echo ' '
