@@ -527,7 +527,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone git://github.com/wahlmanj/OpenPlex.git"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -766,7 +766,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone git://github.com/wahlmanj/OpenPlex.git"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -1005,7 +1005,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone git://github.com/wahlmanj/OpenPlex.git"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -1244,7 +1244,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone git://github.com/wahlmanj/OpenPlex.git"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -1483,7 +1483,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone git://github.com/wahlmanj/OpenPlex.git"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
@@ -1722,7 +1722,7 @@ script AppDelegate
                 try
                     do shell script "rm -R ~/Library/Application\\ Support/OpenPlex" with administrator privileges
                 end try
-                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone git://github.com/wahlmanj/OpenPlex.git"
+                do shell script "cd ~/Library/Application\\ Support; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj/OpenPlex.git"
                 try
                     do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 end try
