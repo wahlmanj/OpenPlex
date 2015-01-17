@@ -19,7 +19,6 @@ then
 echo "OpenPlex update available, Installing..."
 git pull
 git reset --hard
-afplay /System/Library/Sounds/Glass.aiff
 else
 echo "no updates available"
 fi
