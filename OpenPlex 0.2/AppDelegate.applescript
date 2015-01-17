@@ -384,7 +384,7 @@ script AppDelegate
     on buttonhandlerclt_(sender)
         display notification "Download and install command line tools then install pillow..." with title "OpenPlex Status"
         delay 0
-        set theURL to "https://www.dropbox.com/sh/4ebx2bmx7ca6c0h/AAA2diPOo3wsdWJK6OM74wida"
+        set theURL to "https://www.dropbox.com/sh/ipepio1fkvnits0/AAADjjwPDQvyTEhwT7Ez0GwYa?dl=0"
         tell application "Safari" to make new document with properties {URL:theURL}
         do shell script "show Safari"
     end buttonhandlerclt_
