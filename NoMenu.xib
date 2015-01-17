@@ -7,6 +7,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
             <connections>
+                <outlet property="certURL" destination="Ulh-Ut-p2r" id="BMN-S4-ixr"/>
+                <outlet property="dark" destination="v0d-JZ-lJQ" id="1wT-FD-Osw"/>
+                <outlet property="macIP" destination="ESX-3q-9lT" id="CW1-w6-TDq"/>
                 <outlet property="window" destination="att-0O-MIU" id="dQg-AE-iCa"/>
             </connections>
         </customObject>
@@ -291,7 +294,6 @@ load certs</string>
         <customObject id="yA6-dK-NsI" userLabel="Application Delegate" customClass="ApplicationDelegate"/>
         <customObject id="Y8d-nb-MOE" userLabel="NoMenu" customClass="NoMenu">
             <connections>
-                <outlet property="dark" destination="v0d-JZ-lJQ" id="dbU-Nv-azY"/>
                 <outlet property="window" destination="att-0O-MIU" id="uia-jU-2fi"/>
             </connections>
         </customObject>
@@ -467,7 +469,7 @@ load certs</string>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="dark:" target="Y8d-nb-MOE" id="qMb-gZ-7Zh"/>
+                                                            <action selector="dark:" target="-2" id="mld-EF-FFZ"/>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="IV6-4v-zQA">
@@ -644,6 +646,24 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Ulh-Ut-p2r">
+                                            <rect key="frame" x="178" y="3" width="208" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cert URL" id="fLE-Dr-75M">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ESX-3q-9lT">
+                                            <rect key="frame" x="178" y="22" width="164" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="IP Label" id="YYO-m4-0xn">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>

@@ -13,11 +13,24 @@
 @property (assign) IBOutlet NSWindow *window;
 @end
 @implementation NoMenu
-//@synthesize darkModeOn,dark;
-@synthesize dark;
+@synthesize darkModeOn,dark;
+@synthesize macIP,certURL;
 
+-(id)init{
+    
+    self=[super initWithWindowNibName:@"NoMenu"];
+    if(self)
+    {
+        //perform any initializations
+    }
+    return self;
+    
+
+
+}
 
 - (void)refreshDarkMode {
+
     NSString * value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
     if ([value isEqualToString:@"Dark"]) {
         darkModeOn = YES;
@@ -57,12 +70,19 @@
     if (self) {
     }
     return self;
+    
+
 }
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    
     [self refreshDarkMode];
+    if (darkModeCapable) {
+        dark.enabled=YES;
+    }else{
+        dark.enabled=NO;
+    }
+
     if (darkModeOn==YES) {
         dark.title=@"On";
 
@@ -70,9 +90,49 @@
         dark.title=@"Off";
 
     }
+    
+    NSString *localIP=[[NSString alloc] initWithFormat:@"Mac IP:  %@",[self getLocalIPAddress]];
+    NSString *certString=[[NSString alloc] initWithFormat:@"Cert URL:  %@/trailers.cer",[self getLocalIPAddress]];
+    
+    [macIP setTitleWithMnemonic:localIP];
+    [macIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
+    
+    [certURL setTitleWithMnemonic:certString];
+    [certURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
+
 
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
-
-@end
+- (NSString *)getLocalIPAddress
+{
+    NSArray *ipAddresses = [[NSHost currentHost] addresses];
+    NSArray *sortedIPAddresses = [ipAddresses sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    numberFormatter.allowsFloats = NO;
+    
+    for (NSString *potentialIPAddress in sortedIPAddresses)
+    {
+        if ([potentialIPAddress isEqualToString:@"127.0.0.1"]) {
+            continue;
+        }
+        
+        NSArray *ipParts = [potentialIPAddress componentsSeparatedByString:@"."];
+        
+        BOOL isMatch = YES;
+        
+        for (NSString *ipPart in ipParts) {
+            if (![numberFormatter numberFromString:ipPart]) {
+                isMatch = NO;
+                break;
+            }
+        }
+        if (isMatch) {
+            return potentialIPAddress;
+        }
+    }
+    
+    // No IP found
+    return @"?.?.?.?";
+}@end

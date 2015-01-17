@@ -9,8 +9,13 @@
 #import <Cocoa/Cocoa.h>
 
 extern BOOL darkModeOn;
+extern BOOL darkModeCapable;
 
-@interface ApplicationDelegate : NSObject <NSApplicationDelegate>
-@property (nonatomic, retain) NSWindowController *winCon;
+@class NoMenu;
+
+
+@interface ApplicationDelegate : NSObject <NSApplicationDelegate>{
+    NoMenu *winCon;
+}
 @property (strong, nonatomic) NSStatusItem *statusItem;
 @end

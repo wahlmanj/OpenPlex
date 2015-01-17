@@ -10,13 +10,16 @@
 #import "NoMenu.h"
 
 BOOL darkModeOn;
+BOOL darkModeCapable;
+
 
 @interface ApplicationDelegate ()
 @property (assign) IBOutlet NSWindow *window;
 
 @end
 @implementation ApplicationDelegate
-@synthesize winCon, statusItem;
+//@synthesize winCon, statusItem;
+@synthesize statusItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
@@ -36,12 +39,25 @@ BOOL darkModeOn;
         darkModeOn = NO;
      //   NSLog(@"Dark Off");
     }
+    
+    NSDictionary *version = [NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"];
+    NSString *productVersion = [version objectForKey:@"ProductVersion"];
+//    NSLog (@"productVersion =========== %@", productVersion);
+    float versionNumber = [productVersion floatValue];
+    if (versionNumber >= 10.10) {
+        darkModeCapable = YES;
+    }
+    
+
 }
 
 - (void)itemClicked:(id)sender {
     
-    self.winCon = [[NSWindowController alloc]initWithWindowNibName:@"NoMenu"];
-    [[self.winCon window] makeKeyAndOrderFront:self];
+    winCon = [[NoMenu alloc] init];
+    [winCon showWindow:self];
+    
+//    winCon = [[NSWindowController alloc]initWithWindowNibName:@"NoMenu"];
+    [[winCon window] makeKeyAndOrderFront:self];
     [NSApp activateIgnoringOtherApps:YES];
     NSEvent *event = [NSApp currentEvent];
     if([event modifierFlags] & NSControlKeyMask) {

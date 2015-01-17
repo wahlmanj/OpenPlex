@@ -11,6 +11,12 @@
 
 
 @interface NoMenu : NSWindowController <NSApplicationDelegate>
-@property (assign) IBOutlet NSButton *dark;
-//@property (assign, nonatomic) BOOL darkModeOn;
+
+
+@property (strong) IBOutlet NSTextField *macIP;
+@property (strong) IBOutlet NSTextField *certURL;
+
+
+@property (strong, nonatomic) IBOutlet NSButton *dark;
+@property (assign, nonatomic) BOOL darkModeOn;
 @end
