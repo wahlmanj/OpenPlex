@@ -14,7 +14,7 @@
 @end
 @implementation NoMenu
 @synthesize darkModeOn,dark;
-@synthesize macIP,certURL;
+@synthesize macIP,certURL,guideIP,guideURL,mainIP;
 
 -(id)init{
     
@@ -91,14 +91,28 @@
 
     }
     
-    NSString *localIP=[[NSString alloc] initWithFormat:@"Mac IP:  %@",[self getLocalIPAddress]];
+    NSString *setupIP=[[NSString alloc] initWithFormat:@"%@",[self getLocalIPAddress]];
+    NSString *localIP=[[NSString alloc] initWithFormat:@"Local IP:  %@",[self getLocalIPAddress]];
     NSString *certString=[[NSString alloc] initWithFormat:@"Cert URL:  %@/trailers.cer",[self getLocalIPAddress]];
+    NSString *guidelocalIP=[[NSString alloc] initWithFormat:@"Local IP :  %@",[self getLocalIPAddress]];
+    NSString *guidecertString=[[NSString alloc] initWithFormat:@"Cert URL :  %@/trailers.cer",[self getLocalIPAddress]];
+    
+    [mainIP setTitleWithMnemonic:setupIP];
+    [mainIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
     
     [macIP setTitleWithMnemonic:localIP];
     [macIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
     
+    
     [certURL setTitleWithMnemonic:certString];
     [certURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
+    
+    
+    [guideIP setTitleWithMnemonic:guidelocalIP];
+    [guideIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
+    
+    [guideURL setTitleWithMnemonic:guidecertString];
+    [guideURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
 
 
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
