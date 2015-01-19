@@ -14,7 +14,7 @@
 @end
 @implementation NoMenu
 @synthesize darkModeOn,dark;
-@synthesize guideIP,guideURL;
+@synthesize guideIP,guideURL,updateButton;
 // @synthesize macIP,certURL,mainIP;
 
 -(id)init{
@@ -94,8 +94,17 @@
 
     } else {
         dark.title=@"Off";
-
     }
+    
+    
+    if ([self checkForUpdate]==YES){
+        updateButton.enabled=YES;
+        updateButton.title=@"Update App";
+    } else {
+        updateButton.enabled=NO;
+        updateButton.title=@"No Updates";
+    }
+
     
 //    NSString *setupIP=[[NSString alloc] initWithFormat:@"%@",[self getLocalIPAddress]];
 //    NSString *localIP=[[NSString alloc] initWithFormat:@"Local IP:  %@",[self getLocalIPAddress]];
@@ -120,25 +129,37 @@
     
     [guideURL setTitleWithMnemonic:guidecertString];
     [guideURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
+}
 
-
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    
+-(BOOL) checkForUpdate{
     NSDictionary* errorDict;
     NSAppleEventDescriptor* returnDescriptor = NULL;
-
-    NSMutableString *scriptText = [NSMutableString stringWithString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/update.sh\"\n"];
+    
+    NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
+    [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/update.sh\"\n"];
     [scriptText appendString:@"if x is equal to \"Already up-to-date.\" then\n"];
-    [scriptText appendString:@"display dialog x\n"];
+    //    [scriptText appendString:@"display dialog x\n"];
+    [scriptText appendString:@"set y to \"NoUpdate\"\n"];
     [scriptText appendString:@"else if x is not equal to \"Already up-to-date.\" then\n"];
-    [scriptText appendString:@"display dialog x\n"];
+    [scriptText appendString:@"set y to \"YesUpdate\"\n"];
+    //    [scriptText appendString:@"display dialog x\n"];
     [scriptText appendString:@"end if\n"];
- 
+    //    [scriptText appendString:@"return y\n"];
+    //    [scriptText appendString:@"display dialog y\n"];
+    //    [scriptText appendString:@"return y\n"];
+    
+    
     NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource: scriptText];
-    
-    
-    
     returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
+    NSString *returnString = [returnDescriptor stringValue];
+    NSLog(@"returnString: %@",returnString);
+    
+    if ([returnString isEqual:@"NoUpdate"]) {
+        return NO;
+    } else {
+        return YES;
+    }
+
 }
 
 - (NSString *)getLocalIPAddress

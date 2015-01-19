@@ -2573,11 +2573,11 @@ script AppDelegate
     on buttonhandlerautoupdate_(sender)
         tell application "Finder"
             if (exists file "Library:LaunchDaemons:com.plex.plexconnect.auto.plist" of the startup disk) then
-                do shell script "cd /Library/LaunchDaemons; launchctl unload com.plex.plexconnect.auto.plist; rm com.plex.plexconnect.auto.plist" with administrator privileges
+                do shell script "cd /Library/LaunchDaemons; launchctl unload com.plex.plexconnect.auto.plist; rm com.plex.plexconnect.auto.plist; cd /Applications/plexconnect_BACKUP; rm update.auto" with administrator privileges
                 display notification "Automatic GitHub Updates Disabled..." with title "OpenPlex Status"
                 delay 0
                 else
-                do shell script "createautobash.bash"
+                do shell script "createautobash.bash; cd /Applications/plexconnect_BACKUP; touch update.auto"
                 display notification "Automatic GitHub Updates Enabled..." with title "OpenPlex Status"
                 delay 0
             end if

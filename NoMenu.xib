@@ -10,6 +10,7 @@
                 <outlet property="dark" destination="v0d-JZ-lJQ" id="0gN-cv-1Ix"/>
                 <outlet property="guideIP" destination="jui-yr-icb" id="Hsb-TA-sIJ"/>
                 <outlet property="guideURL" destination="w78-e3-0cw" id="xgW-Wi-rUi"/>
+                <outlet property="updateButton" destination="c4Z-9H-Fji" id="THH-Mz-rQU"/>
                 <outlet property="window" destination="att-0O-MIU" id="dQg-AE-iCa"/>
             </connections>
         </customObject>
