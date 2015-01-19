@@ -14,7 +14,8 @@
 @end
 @implementation NoMenu
 @synthesize darkModeOn,dark;
-@synthesize macIP,certURL,guideIP,guideURL,mainIP;
+@synthesize guideIP,guideURL;
+// @synthesize macIP,certURL,mainIP;
 
 -(id)init{
     
@@ -77,7 +78,12 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     [self refreshDarkMode];
-    if (darkModeCapable) {
+    NSDictionary *version = [NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"];
+    NSString *productVersion = [version objectForKey:@"ProductVersion"];
+    NSString *shortProductVersion = [productVersion substringWithRange:NSMakeRange(3, [productVersion length]-3)];
+    //    NSLog (@"productVersion =========== %@", productVersion);
+    float versionNumber = [shortProductVersion floatValue];
+    if (versionNumber >= 10) {
         dark.enabled=YES;
     }else{
         dark.enabled=NO;
@@ -91,11 +97,12 @@
 
     }
     
-    NSString *setupIP=[[NSString alloc] initWithFormat:@"%@",[self getLocalIPAddress]];
-    NSString *localIP=[[NSString alloc] initWithFormat:@"Local IP:  %@",[self getLocalIPAddress]];
-    NSString *certString=[[NSString alloc] initWithFormat:@"Cert URL:  %@/trailers.cer",[self getLocalIPAddress]];
+//    NSString *setupIP=[[NSString alloc] initWithFormat:@"%@",[self getLocalIPAddress]];
+//    NSString *localIP=[[NSString alloc] initWithFormat:@"Local IP:  %@",[self getLocalIPAddress]];
+//    NSString *certString=[[NSString alloc] initWithFormat:@"Cert URL:  %@/trailers.cer",[self getLocalIPAddress]];
     NSString *guidelocalIP=[[NSString alloc] initWithFormat:@"Local IP :  %@",[self getLocalIPAddress]];
     NSString *guidecertString=[[NSString alloc] initWithFormat:@"Cert URL :  %@/trailers.cer",[self getLocalIPAddress]];
+/*
     
     [mainIP setTitleWithMnemonic:setupIP];
     [mainIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
@@ -107,7 +114,7 @@
     [certURL setTitleWithMnemonic:certString];
     [certURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
     
-    
+*/
     [guideIP setTitleWithMnemonic:guidelocalIP];
     [guideIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
     
@@ -116,6 +123,22 @@
 
 
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    
+    NSDictionary* errorDict;
+    NSAppleEventDescriptor* returnDescriptor = NULL;
+
+    NSMutableString *scriptText = [NSMutableString stringWithString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/update.sh\"\n"];
+    [scriptText appendString:@"if x is equal to \"Already up-to-date.\" then\n"];
+    [scriptText appendString:@"display dialog x\n"];
+    [scriptText appendString:@"else if x is not equal to \"Already up-to-date.\" then\n"];
+    [scriptText appendString:@"display dialog x\n"];
+    [scriptText appendString:@"end if\n"];
+ 
+    NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource: scriptText];
+    
+    
+    
+    returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
 }
 
 - (NSString *)getLocalIPAddress

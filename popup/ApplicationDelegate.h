@@ -10,7 +10,6 @@
 
 extern BOOL darkModeOn;
 extern BOOL darkModeCapable;
-
 @class NoMenu;
 
 

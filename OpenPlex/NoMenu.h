@@ -12,9 +12,9 @@
 
 @interface NoMenu : NSWindowController <NSApplicationDelegate>
 
-@property (strong) IBOutlet NSTextField *mainIP;
-@property (strong) IBOutlet NSTextField *macIP;
-@property (strong) IBOutlet NSTextField *certURL;
+//@property (strong) IBOutlet NSTextField *mainIP;
+//@property (strong) IBOutlet NSTextField *macIP;
+//@property (strong) IBOutlet NSTextField *certURL;
 @property (strong) IBOutlet NSTextField *guideIP;
 @property (strong) IBOutlet NSTextField *guideURL;
 
