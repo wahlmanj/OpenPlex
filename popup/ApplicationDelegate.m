@@ -60,6 +60,7 @@ BOOL darkModeOn;
         [[NSApplication sharedApplication] terminate:self];
         return;
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkUpdate" object:nil];
 
 }
 

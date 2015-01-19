@@ -10,6 +10,8 @@
                 <outlet property="dark" destination="v0d-JZ-lJQ" id="0gN-cv-1Ix"/>
                 <outlet property="guideIP" destination="jui-yr-icb" id="Hsb-TA-sIJ"/>
                 <outlet property="guideURL" destination="w78-e3-0cw" id="xgW-Wi-rUi"/>
+                <outlet property="statusImage" destination="WbJ-7R-cbs" id="PZu-rB-CPZ"/>
+                <outlet property="statusText" destination="0Tc-cR-gIk" id="wEV-6O-gln"/>
                 <outlet property="updateButton" destination="c4Z-9H-Fji" id="THH-Mz-rQU"/>
                 <outlet property="window" destination="att-0O-MIU" id="dQg-AE-iCa"/>
             </connections>
@@ -197,10 +199,10 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="w78-e3-0cw">
-                                    <rect key="frame" x="7" y="11" width="316" height="17"/>
+                                    <rect key="frame" x="7" y="5" width="316" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cert URL OUTLET" id="M9U-e5-jxX">
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" size="12" name="HelveticaNeue-Bold"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -233,10 +235,10 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jui-yr-icb">
-                                    <rect key="frame" x="7" y="14" width="261" height="17"/>
+                                    <rect key="frame" x="7" y="7" width="261" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Local IP OUTLET" id="QL2-9h-szC">
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" size="12" name="HelveticaNeue-Bold"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
@@ -406,10 +408,13 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Tsf-gm-Sik">
-                                            <rect key="frame" x="404" y="-1" width="192" height="14"/>
+                                            <rect key="frame" x="467" y="1" width="135" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copyright 2015 - Wahlman.J &amp; CyberGhost84" id="bKj-Km-3qV">
-                                                <font key="font" metaFont="system" size="8"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="bKj-Km-3qV">
+                                                <font key="font" metaFont="system" size="10"/>
+                                                <string key="title">Wahlman.J  (UNIX Code)
+CyberGhost84  (GUI)
+Flipman6 (Obj-C Code)</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -443,7 +448,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <box autoresizesSubviews="NO" borderType="line" id="6pt-Rh-BkW">
-                                            <rect key="frame" x="390" y="32" width="201" height="87"/>
+                                            <rect key="frame" x="390" y="43" width="201" height="87"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView">
                                                 <rect key="frame" x="1" y="1" width="199" height="71"/>
@@ -600,7 +605,7 @@ load certs</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lyD-8B-Dmd">
-                                            <rect key="frame" x="15" y="36" width="284" height="66"/>
+                                            <rect key="frame" x="15" y="47" width="284" height="66"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="A4j-2P-rLv">
                                                 <font key="font" metaFont="system" size="10"/>
@@ -645,6 +650,36 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KQm-Id-0cV">
+                                            <rect key="frame" x="391" y="6" width="61" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="mIT-iK-b49">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <string key="title">    penPlex
+Developers</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9C-QQ-Fvu">
+                                            <rect key="frame" x="394" y="20" width="12" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MenuIcon" id="S5s-Dv-mbc"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0Tc-cR-gIk">
+                                            <rect key="frame" x="562" y="123" width="12" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusNone" id="zTe-7P-OO3"/>
+                                        </imageView>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="WbJ-7R-cbs">
+                                            <rect key="frame" x="433" y="125" width="115" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PlexConnect is not running" id="yTR-dz-lhn">
+                                                <font key="font" size="8" name="Helvetica-Bold"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -2165,6 +2200,8 @@ outside your local area network. </string>
     </objects>
     <resources>
         <image name="AirPlayIcon" width="343" height="368"/>
+        <image name="MenuIcon" width="15.359999656677246" height="15.359999656677246"/>
+        <image name="NSStatusNone" width="16" height="16"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
         <image name="Remote" width="80" height="318"/>
         <image name="Trailers" width="188" height="108"/>

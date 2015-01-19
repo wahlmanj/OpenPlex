@@ -18,6 +18,9 @@
 @property (strong) IBOutlet NSTextField *guideIP;
 @property (strong) IBOutlet NSTextField *guideURL;
 @property (strong) IBOutlet NSButton *updateButton;
+@property (strong) IBOutlet NSTextField *statusImage;
+@property (strong) IBOutlet NSImageView *statusText;
+
 
 @property (strong, nonatomic) IBOutlet NSButton *dark;
 @property (assign, nonatomic) BOOL darkModeOn;

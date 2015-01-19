@@ -14,7 +14,7 @@
 @end
 @implementation NoMenu
 @synthesize darkModeOn,dark;
-@synthesize guideIP,guideURL,updateButton;
+@synthesize guideIP,guideURL,updateButton,statusImage,statusText;
 // @synthesize macIP,certURL,mainIP;
 
 -(id)init{
@@ -26,8 +26,6 @@
     }
     return self;
     
-
-
 }
 
 - (void)refreshDarkMode {
@@ -74,10 +72,16 @@
     
 
 }
+-(void)windowWillLoad{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkForUpdate) name:@"checkUpdate" object:nil];
+}
 
 - (void)windowDidLoad {
     [super windowDidLoad];
     [self refreshDarkMode];
+    [self checkServerStatus];
+    
+//    [self checkForUpdate];
     NSDictionary *version = [NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"];
     NSString *productVersion = [version objectForKey:@"ProductVersion"];
     NSString *shortProductVersion = [productVersion substringWithRange:NSMakeRange(3, [productVersion length]-3)];
@@ -95,16 +99,6 @@
     } else {
         dark.title=@"Off";
     }
-    
-    
-    if ([self checkForUpdate]==YES){
-        updateButton.enabled=YES;
-        updateButton.title=@"Update App";
-    } else {
-        updateButton.enabled=NO;
-        updateButton.title=@"No Updates";
-    }
-
     
 //    NSString *setupIP=[[NSString alloc] initWithFormat:@"%@",[self getLocalIPAddress]];
 //    NSString *localIP=[[NSString alloc] initWithFormat:@"Local IP:  %@",[self getLocalIPAddress]];
@@ -125,42 +119,107 @@
     
 */
     [guideIP setTitleWithMnemonic:guidelocalIP];
-    [guideIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
     
     [guideURL setTitleWithMnemonic:guidecertString];
-    [guideURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
 }
 
--(BOOL) checkForUpdate{
+-(void) checkForUpdate{
     NSDictionary* errorDict;
     NSAppleEventDescriptor* returnDescriptor = NULL;
-    
     NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
     [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/update.sh\"\n"];
     [scriptText appendString:@"if x is equal to \"Already up-to-date.\" then\n"];
-    //    [scriptText appendString:@"display dialog x\n"];
     [scriptText appendString:@"set y to \"NoUpdate\"\n"];
     [scriptText appendString:@"else if x is not equal to \"Already up-to-date.\" then\n"];
     [scriptText appendString:@"set y to \"YesUpdate\"\n"];
-    //    [scriptText appendString:@"display dialog x\n"];
     [scriptText appendString:@"end if\n"];
-    //    [scriptText appendString:@"return y\n"];
-    //    [scriptText appendString:@"display dialog y\n"];
-    //    [scriptText appendString:@"return y\n"];
-    
     
     NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource: scriptText];
     returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
     NSString *returnString = [returnDescriptor stringValue];
-    NSLog(@"returnString: %@",returnString);
+//    NSLog(@"returnString: %@",returnString);
     
     if ([returnString isEqual:@"NoUpdate"]) {
-        return NO;
-    } else {
-        return YES;
-    }
+//        return NO;
+        updateButton.enabled=NO;
+        updateButton.title=@"No Updates";
 
+    } else {
+        updateButton.enabled=YES;
+        updateButton.title=@"Update App";
+
+//        return YES;
+    }
 }
+
+-(void)checkServerStatus{
+    NSDictionary* errorDict;
+//    NSAppleEventDescriptor* returnDescriptor = NULL;
+/*
+    NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
+    [scriptText appendString:@"try\n"];
+    [scriptText appendString:@"set fileAsPOSIX to (POSIX path of \"/Applications/PlexConnect/PlexConnect.log\")\n"];
+    [scriptText appendString:@"set theString to quoted form of \"Shutting\"\n"];
+    [scriptText appendString:@"set searchResult to do shell script \"/usr/bin/grep -ic \" & theString & space & quoted form of fileAsPOSIX\n"];
+    [scriptText appendString:@"if searchResult is not \"0\" then\n"];
+    [scriptText appendString:@"set y to \"NotRunning\"\n"];
+    [scriptText appendString:@"end if\n"];
+    [scriptText appendString:@"end try\n"];
+
+    
+    NSAppleScript* scriptObject1 = [[NSAppleScript alloc] initWithSource: scriptText];
+    returnDescriptor = [scriptObject1 executeAndReturnError: &errorDict];
+    NSString *returnString1 = [returnDescriptor stringValue];
+    NSLog(@"ServerString1: %@",returnString1);
+*/
+    
+    NSAppleEventDescriptor *returnDescriptor2 = NULL;
+    NSMutableString *scriptText2 = [NSMutableString stringWithString:@"set z to missing value\n"];
+//    [scriptText2 appendString:@"set z to 0\n"];
+    [scriptText2 appendString:@"try\n"];
+    [scriptText2 appendString:@"set z to do shell script \"grep -c 'Shutting' /Applications/PlexConnect/PlexConnect.log\"\n"];
+    [scriptText2 appendString:@"end try\n"];
+    [scriptText2 appendString:@"if z > 0 then\n"];
+    [scriptText2 appendString:@"set z to \"NotRunning\"\n"];
+    [scriptText2 appendString:@"else\n"];
+    [scriptText2 appendString:@"set z to \"Running\"\n"];
+    [scriptText2 appendString:@"end if\n"];
+    
+//     [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/update.sh\"\n"];
+                    
+    
+    
+
+    NSAppleScript* scriptObject2 = [[NSAppleScript alloc] initWithSource: scriptText2];
+    returnDescriptor2 = [scriptObject2 executeAndReturnError: &errorDict];
+    NSString *returnString2 = [returnDescriptor2 stringValue];
+        NSLog(@"ServerString2: %@",returnString2);
+    
+    
+    
+//    if ([ServerString2 isEqual:@"Running"]) {
+//        [self.statusImage setImage:[NSImage imageNamed:@"Running"]];
+        [self.statusText setStringValue:NSLocalizedString(@"PlexConnect is running", nil)];
+//} else {
+//        [self.statusImage setImage:[NSImage imageNamed:@"NotRunning"]];
+ //       [self.statusText setStringValue:NSLocalizedString(@"PlexConnect is not running", nil)];
+
+    
+     //   if ([returnString isEqual:@"NoUpdate"]) {
+     //       updateButton.enabled=NO;
+     //       updateButton.title=@"No Updates";
+            
+     //   } else {
+      //      updateButton.enabled=YES;
+      //      updateButton.title=@"Update App";
+            
+            //        return YES;
+     //   }
+    }
+        
+        
+        
+
 
 - (NSString *)getLocalIPAddress
 {

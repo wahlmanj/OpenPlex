@@ -12,7 +12,6 @@ extern BOOL darkModeOn;
 extern BOOL darkModeCapable;
 @class NoMenu;
 
-
 @interface ApplicationDelegate : NSObject <NSApplicationDelegate>{
     NoMenu *winCon;
 }
