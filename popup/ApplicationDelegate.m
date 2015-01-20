@@ -21,7 +21,7 @@ BOOL darkModeOn;
 @synthesize statusItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-
+    
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     statusItem.image = [NSImage imageNamed:@"switchIcon.png"];
     [statusItem.image setTemplate:YES];
@@ -32,11 +32,11 @@ BOOL darkModeOn;
     NSString * value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
     if ([value isEqualToString:@"Dark"]) {
         darkModeOn = YES;
-   //     NSLog(@"Dark On");
+        //     NSLog(@"Dark On");
     }
     else {
         darkModeOn = NO;
-     //   NSLog(@"Dark Off");
+        //   NSLog(@"Dark Off");
     }
 }
 
@@ -46,12 +46,12 @@ BOOL darkModeOn;
         winCon = [[NoMenu alloc] init];
         [winCon showWindow:self];
         [NSApp activateIgnoringOtherApps:YES];
-
+        
     } else if (winCon.window.isMainWindow){
         [winCon close];
     } else{
         [winCon showWindow:self];
-    //    winCon = [[NSWindowController alloc]initWithWindowNibName:@"NoMenu"];
+        //    winCon = [[NSWindowController alloc]initWithWindowNibName:@"NoMenu"];
         [[winCon window] makeKeyAndOrderFront:self];
         [NSApp activateIgnoringOtherApps:YES];
     }
@@ -60,8 +60,7 @@ BOOL darkModeOn;
         [[NSApplication sharedApplication] terminate:self];
         return;
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkUpdate" object:nil];
-
+    
 }
 
 @end
