@@ -328,10 +328,16 @@ script AppDelegate
                 display notification "OpenPlex removed from login items..." with title "OpenPlex Status"
                 delay 0
                 tell application "System Events" to delete login item "OpenPlex"
+                try
+                    do shell script "cd /Applications/plexconnect_BACKUP; rm login.auto"
+                end try
                 else
                 display notification "OpenPlex added to login items..." with title "OpenPlex Status"
                 delay 0
                 tell application "System Events" to make login item at end with properties {path:"/Applications/OpenPlex.app", hidden:false}
+                try
+                    do shell script "cd /Applications/plexconnect_BACKUP; touch login.auto"
+                end try
             end if
         end tell
     end buttonhandlerloginitemOP_
