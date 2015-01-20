@@ -199,7 +199,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="w78-e3-0cw">
-                                    <rect key="frame" x="7" y="5" width="316" height="17"/>
+                                    <rect key="frame" x="6" y="10" width="316" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cert URL OUTLET" id="M9U-e5-jxX">
                                         <font key="font" size="12" name="HelveticaNeue-Bold"/>
@@ -235,7 +235,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jui-yr-icb">
-                                    <rect key="frame" x="7" y="7" width="261" height="17"/>
+                                    <rect key="frame" x="7" y="12" width="261" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Local IP OUTLET" id="QL2-9h-szC">
                                         <font key="font" size="12" name="HelveticaNeue-Bold"/>
@@ -407,18 +407,6 @@ load certs</string>
                                                 <action selector="buttonhandlerOPforum:" target="qo8-lj-syM" id="azs-6k-3wM"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Tsf-gm-Sik">
-                                            <rect key="frame" x="471" y="1" width="119" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="bKj-Km-3qV">
-                                                <font key="font" metaFont="system" size="10"/>
-                                                <string key="title">Wahlman.J         (Unix)
-CyberGhost84    (Gui)
-Flipman6            (Obj-C)</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <button toolTip="Demonstration of app" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
                                             <rect key="frame" x="142" y="199" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -650,8 +638,42 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KQm-Id-0cV">
-                                            <rect key="frame" x="391" y="1" width="74" height="39"/>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0Tc-cR-gIk">
+                                            <rect key="frame" x="568" y="123" width="12" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusNone" id="zTe-7P-OO3"/>
+                                        </imageView>
+                                        <button hidden="YES" toolTip="Check for App updates " verticalHuggingPriority="750" id="yqv-bV-WSO">
+                                            <rect key="frame" x="393" y="121" width="161" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="PlexConnect Status" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WWM-rc-7Yf">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nns-zn-Ecz">
+                                            <rect key="frame" x="398" y="-1" width="192" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copyright 2015 - Wahlman.J &amp; CyberGhost84" id="J5z-KB-yg2">
+                                                <font key="font" metaFont="system" size="8"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Tsf-gm-Sik">
+                                            <rect key="frame" x="257" y="5" width="119" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="bKj-Km-3qV">
+                                                <font key="font" metaFont="system" size="10"/>
+                                                <string key="title">Wahlman.J         (Unix)
+CyberGhost84    (Gui)
+Flipman6            (Obj-C)</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KQm-Id-0cV">
+                                            <rect key="frame" x="177" y="5" width="74" height="39"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="mIT-iK-b49">
                                                 <font key="font" metaFont="system" size="10"/>
@@ -662,24 +684,11 @@ the authors</string>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9C-QQ-Fvu">
-                                            <rect key="frame" x="393" y="28" width="12" height="12"/>
+                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9C-QQ-Fvu">
+                                            <rect key="frame" x="179" y="32" width="12" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MenuIcon" id="S5s-Dv-mbc"/>
                                         </imageView>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0Tc-cR-gIk">
-                                            <rect key="frame" x="568" y="123" width="12" height="12"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusNone" id="zTe-7P-OO3"/>
-                                        </imageView>
-                                        <button toolTip="Check for App updates " verticalHuggingPriority="750" id="yqv-bV-WSO">
-                                            <rect key="frame" x="393" y="121" width="161" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="PlexConnect Status" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WWM-rc-7Yf">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>

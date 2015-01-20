@@ -68,7 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		097F5425196855FB00BC9A10 /* AppDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = AppDelegate.applescript; path = "OpenPlex 0.2/AppDelegate.applescript"; sourceTree = "<group>"; };
+		097F5425196855FB00BC9A10 /* AppDelegate.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = AppDelegate.applescript; path = "../OpenPlex 0.2/AppDelegate.applescript"; sourceTree = "<group>"; };
 		099068B2195D5ED800442FB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OpenPlex/Images.xcassets; sourceTree = "<group>"; };
 		09947B21195BCABB0005EE4A /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		09947B25195BCDB30005EE4A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -162,7 +162,6 @@
 			children = (
 				DD4F7C0F13C30F9F00825C6E /* Supporting Files */,
 				DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */,
-				097F5425196855FB00BC9A10 /* AppDelegate.applescript */,
 			);
 			name = "OpenPlex 0.3.4";
 			sourceTree = "<group>";
@@ -175,6 +174,26 @@
 				09947B27195BCDB30005EE4A /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CEE1E71F1A6EC8F300B25DC1 /* Other Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C3613C317A500825C6E /* MenubarController.h */,
+				DD4F7C3713C317A500825C6E /* MenubarController.m */,
+				DD4F7C3D13C318D600825C6E /* PanelController.h */,
+				DD4F7C3E13C318D600825C6E /* PanelController.m */,
+			);
+			name = "Other Controllers";
+			sourceTree = "<group>";
+		};
+		CEE1E7201A6ECC1100B25DC1 /* Old XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C4013C31B4A00825C6E /* Panel.xib */,
+				DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */,
+			);
+			name = "Old XIBs";
 			sourceTree = "<group>";
 		};
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
@@ -256,7 +275,9 @@
 		DD4F7C0E13C30F9F00825C6E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F7C2613C311DF00825C6E /* Controllers */,
+				097F5425196855FB00BC9A10 /* AppDelegate.applescript */,
+				DD4F7C2613C311DF00825C6E /* OpenPlex Controllers */,
+				CEE1E71F1A6EC8F300B25DC1 /* Other Controllers */,
 				DD4F7C3913C317EC00825C6E /* Views */,
 			);
 			name = Sources;
@@ -273,26 +294,23 @@
 			path = Popup;
 			sourceTree = "<group>";
 		};
-		DD4F7C2613C311DF00825C6E /* Controllers */ = {
+		DD4F7C2613C311DF00825C6E /* OpenPlex Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */,
 				DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */,
 				CE3597031A5A1B3700A913D4 /* NoMenu.h */,
 				CE3597041A5A1B3700A913D4 /* NoMenu.m */,
-				DD4F7C3613C317A500825C6E /* MenubarController.h */,
-				DD4F7C3713C317A500825C6E /* MenubarController.m */,
-				DD4F7C3D13C318D600825C6E /* PanelController.h */,
-				DD4F7C3E13C318D600825C6E /* PanelController.m */,
 			);
-			name = Controllers;
+			name = "OpenPlex Controllers";
 			sourceTree = "<group>";
 		};
 		DD4F7C2813C3123E00825C6E /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F7C4813C322D800825C6E /* Graphics */,
 				DD4F7C2913C3124300825C6E /* XIBs */,
+				CEE1E7201A6ECC1100B25DC1 /* Old XIBs */,
+				DD4F7C4813C322D800825C6E /* Graphics */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -301,8 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				CE2DF92B1A6AF16300C4FCB2 /* NoMenu.xib */,
-				DD4F7C4013C31B4A00825C6E /* Panel.xib */,
-				DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
