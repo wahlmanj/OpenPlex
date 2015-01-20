@@ -322,6 +322,7 @@ chmod +x /Library/WebServer/CGI-Executables/webconnect.cgi
 ## copy files to /usr/bin for system wide access
 cp 10.10vb.bash /usr/bin
 cp appupdate.bash /usr/bin
+cp appupdatebash.bash /usr/bin
 cp appwebbash.bash /usr/bin
 cp auto.bash /usr/bin
 cp backup.bash /usr/bin
@@ -480,6 +481,7 @@ sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${DefaultPath}/updater.b
 ## fix permissions
 chmod +x /usr/bin/10.10vb.bash
 chmod +x /usr/bin/appupdate.bash
+chmod +x /usr/bin/appupdatebash.bash
 chmod +x /usr/bin/appwebbash.bash
 chmod +x /usr/bin/auto.bash
 chmod +x /usr/bin/backupatvsettings.bash

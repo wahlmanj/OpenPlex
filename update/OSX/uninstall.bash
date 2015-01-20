@@ -18,6 +18,7 @@ rm /Library/WebServer/CGI-Executables/openplex.cgi
 rm /Library/WebServer/CGI-Executables/webconnect.cgi
 rm /usr/bin/10.10vb.bash
 rm /usr/bin/appupdate.bash
+rm /usr/bin/appupdatebash.bash
 rm /usr/bin/appweb.bash
 rm /usr/bin/appwebbash.bash
 rm /usr/bin/auto.bash
