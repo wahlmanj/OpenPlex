@@ -144,7 +144,7 @@
     NSDictionary* errorDict;
     NSAppleEventDescriptor* returnDescriptor = NULL;
     NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
-    [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/update.sh\"\n"];
+    [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/appupdate.bash\"\n"];
     [scriptText appendString:@"if x is equal to \"Already up-to-date.\" then\n"];
     [scriptText appendString:@"set y to \"NoUpdate\"\n"];
     [scriptText appendString:@"else if x is not equal to \"Already up-to-date.\" then\n"];
