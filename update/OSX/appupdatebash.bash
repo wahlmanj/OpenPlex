@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/appupdatebash.bash
+sudo /usr/bin/appupdate.bash
