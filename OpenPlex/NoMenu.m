@@ -99,14 +99,7 @@
         dark.title=@"Off";
     }
     
-    if ([self checkForUpdate]==YES){
-        updateButton.enabled=YES;
-        updateButton.title=@"Update App";
-    } else {
-        updateButton.enabled=NO;
-        updateButton.title=@"No Updates";
-    }
-    
+    [self checkForUpdate];
     [self setButtonStatus];
     
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkServerStatus) userInfo:nil repeats:YES];
@@ -155,7 +148,7 @@
     if (updateStatus==YES) {updateButtonOutlet.title=@"On";} else {updateButtonOutlet.title=@"Off";}
 }
 
--(BOOL) checkForUpdate{
+-(void) checkForUpdate{
     NSDictionary* errorDict;
     NSAppleEventDescriptor* returnDescriptor = NULL;
     NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
@@ -172,9 +165,11 @@
    // NSLog(@"returnString: %@",returnString);
     
     if ([returnString isEqual:@"NoUpdate"]) {
-        return NO;
+        updateButton.enabled=NO;
+        updateButton.title=@"No Updates";
     } else {
-        return YES;
+        updateButton.enabled=YES;
+        updateButton.title=@"Update App";
     }
 }
 
@@ -321,7 +316,7 @@
     if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;} else {settingsStatus=NO;}
     if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;} else {updateStatus=NO;}
     if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;} else {myplexStatus=NO;}
-    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
+//    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
 }
 
 

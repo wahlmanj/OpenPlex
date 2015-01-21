@@ -80,7 +80,7 @@ BOOL loginStatus,myplexStatus,settingsStatus,trailersStatus,updateStatus;
     if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;}
     if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;}
     if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;}
-    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
+//    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
 }
 
 @end
