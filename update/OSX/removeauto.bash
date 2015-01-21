@@ -7,4 +7,4 @@ cd /Library/LaunchDaemons
 launchctl unload com.plex.plexconnect.auto.plist
 
 ## Copy com.plex.plexconnect.auto.plist
-rm com.plex.plexconnect.auto.plist /Library/LaunchDaemons
+rm com.plex.plexconnect.auto.plist
