@@ -382,6 +382,8 @@ cp quititunes.bash /usr/bin
 cp quititunesbash.bash /usr/bin
 cp reboot.bash /usr/bin
 cp rebootbash.bash /usr/bin
+cp removeauto.bash /usr/bin
+cp removeautobash.bash /usr/bin
 cp removecerts.bash /usr/bin
 cp removecertsbash.bash /usr/bin
 cp restart.bash /usr/bin
@@ -542,6 +544,8 @@ chmod +x /usr/bin/quititunes.bash
 chmod +x /usr/bin/quititunesbash.bash
 chmod +x /usr/bin/reboot.bash
 chmod +x /usr/bin/rebootbash.bash
+chmod +x /usr/bin/removeauto.bash
+chmod +x /usr/bin/removeautobash.bash
 chmod +x /usr/bin/removecerts.bash
 chmod +x /usr/bin/removecertsbash.bash
 chmod +x /usr/bin/restart.bash

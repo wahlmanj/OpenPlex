@@ -9,7 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 extern BOOL darkModeOn;
-extern BOOL darkModeCapable;
+//extern BOOL darkModeCapable;
+extern BOOL loginStatus,myplexStatus,settingsStatus,trailersStatus,updateStatus;
+
 @class NoMenu;
 
 @interface ApplicationDelegate : NSObject <NSApplicationDelegate>{

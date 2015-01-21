@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B70AC68F-A574-44B2-A21E-2EEE2CD2F34A</string>
+	<string>167FA9DC-14F8-4FA3-B5D9-460D6C365CC7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>OpenPlex</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B0F3CC8E1B03CF11BA4F9BE8BFD08D33454A9967</key>
-		<string>https://github.com/wahlmanj/OpenPlex.git</string>
+		<string>https://github.com/flipman/OpenPlex.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>OpenPlex.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/wahlmanj/OpenPlex.git</string>
+	<string>https://github.com/flipman/OpenPlex.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

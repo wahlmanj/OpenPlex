@@ -84,6 +84,8 @@ rm /usr/bin/quititunes.bash
 rm /usr/bin/quititunesbash.bash
 rm /usr/bin/reboot.bash
 rm /usr/bin/rebootbash.bash
+rm /usr/bin/removeauto.bash
+rm /usr/bin/removeautobash.bash
 rm /usr/bin/removecerts.bash
 rm /usr/bin/removecertsbash.bash
 rm /usr/bin/restart.bash

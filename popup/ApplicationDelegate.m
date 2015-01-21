@@ -10,7 +10,7 @@
 #import "NoMenu.h"
 
 BOOL darkModeOn;
-
+BOOL loginStatus,myplexStatus,settingsStatus,trailersStatus,updateStatus;
 
 @interface ApplicationDelegate ()
 @property (assign) IBOutlet NSWindow *window;
@@ -38,6 +38,7 @@ BOOL darkModeOn;
         darkModeOn = NO;
         //   NSLog(@"Dark Off");
     }
+    [self checkOnOffStates];
 }
 
 - (void)itemClicked:(id)sender {
@@ -61,6 +62,25 @@ BOOL darkModeOn;
         return;
     }
     
+}
+
+-(void)checkOnOffStates{
+    NSURL *path = [NSURL URLWithString:@"/Applications/plexconnect_Backup"];
+    NSDirectoryEnumerator *directoryEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:path includingPropertiesForKeys:@[] options:NSDirectoryEnumerationSkipsHiddenFiles|NSDirectoryEnumerationSkipsPackageDescendants|NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:nil];
+    NSMutableArray *autoFiles = [NSMutableArray new];
+    for (NSString *path in directoryEnumerator) {
+        if ([[path pathExtension] isEqualToString:@"auto"]) {
+            NSString *path2 =[NSString stringWithFormat:@"%@",path];
+            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP/" withString:@""]];
+        }
+    }
+    
+    if ([autoFiles containsObject:@"login.auto"]){loginStatus = YES;}
+    if ([autoFiles containsObject:@"trailers.auto"]){trailersStatus = YES;}
+    if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;}
+    if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;}
+    if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;}
+    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
 }
 
 @end

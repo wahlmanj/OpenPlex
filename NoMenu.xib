@@ -10,9 +10,13 @@
                 <outlet property="dark" destination="v0d-JZ-lJQ" id="0gN-cv-1Ix"/>
                 <outlet property="guideIP" destination="jui-yr-icb" id="Hsb-TA-sIJ"/>
                 <outlet property="guideURL" destination="w78-e3-0cw" id="xgW-Wi-rUi"/>
-                <outlet property="statusButton" destination="yqv-bV-WSO" id="piA-2O-nJA"/>
+                <outlet property="loginButtonOutlet" destination="9Pg-ab-Qr5" id="Ehd-eS-dsv"/>
+                <outlet property="myplexButtonOutlet" destination="SYR-ml-fG0" id="onf-Uc-5aa"/>
+                <outlet property="settingsButtonOutlet" destination="Dwt-ah-Yeq" id="EIN-Vh-1nP"/>
                 <outlet property="statusImage" destination="0Tc-cR-gIk" id="fMI-X7-zvi"/>
+                <outlet property="trailersButtonOutlet" destination="N02-M4-EuG" id="94w-b8-svZ"/>
                 <outlet property="updateButton" destination="c4Z-9H-Fji" id="THH-Mz-rQU"/>
+                <outlet property="updateButtonOutlet" destination="XKD-KD-cqT" id="z6r-Ad-c1R"/>
                 <outlet property="window" destination="att-0O-MIU" id="dQg-AE-iCa"/>
             </connections>
         </customObject>
@@ -314,14 +318,14 @@ load certs</string>
         </customObject>
         <window title="Setup" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="att-0O-MIU">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
-            <rect key="contentRect" x="734" y="420" width="643" height="333"/>
+            <rect key="contentRect" x="734" y="420" width="643" height="341"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="3bW-lg-YyR">
-                <rect key="frame" x="0.0" y="5" width="643" height="333"/>
+                <rect key="frame" x="0.0" y="-2" width="643" height="341"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tabView id="KD6-UZ-mZm">
-                        <rect key="frame" x="13" y="10" width="617" height="317"/>
+                        <rect key="frame" x="13" y="18" width="617" height="317"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
@@ -450,7 +454,7 @@ load certs</string>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerloginitemOP:" target="qo8-lj-syM" id="Gab-Qk-NVy"/>
+                                                            <action selector="loginButtonAction:" target="-2" id="4TE-tK-WUF"/>
                                                         </connections>
                                                     </button>
                                                     <button toolTip="OS X Yosemite DarkMode " verticalHuggingPriority="750" id="v0d-JZ-lJQ">
@@ -638,19 +642,6 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0Tc-cR-gIk">
-                                            <rect key="frame" x="568" y="123" width="12" height="12"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusNone" id="zTe-7P-OO3"/>
-                                        </imageView>
-                                        <button hidden="YES" toolTip="Check for App updates " verticalHuggingPriority="750" id="yqv-bV-WSO">
-                                            <rect key="frame" x="393" y="121" width="161" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="PlexConnect Status" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WWM-rc-7Yf">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nns-zn-Ecz">
                                             <rect key="frame" x="398" y="-1" width="192" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1678,7 +1669,7 @@ Step 8:   Reboot aTV to load remaining icons</string>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerautoupdate:" target="qo8-lj-syM" id="Tyb-2x-m6h"/>
+                                                <action selector="updateButtonAction:" target="-2" id="Cvy-XC-P9d"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="TSC-G7-cd0">
@@ -1751,7 +1742,7 @@ Startup Sound</string>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerautosettings:" target="qo8-lj-syM" id="4NL-2W-tUP"/>
+                                                <action selector="settingButtonAction:" target="-2" id="64u-Ku-kFV"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="SYR-ml-fG0">
@@ -1762,7 +1753,7 @@ Startup Sound</string>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerautomyplex:" target="qo8-lj-syM" id="3mf-vR-92g"/>
+                                                <action selector="myplexButtonAction:" target="-2" id="7ar-lu-Lpg"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qOt-bi-nml">
@@ -1795,7 +1786,7 @@ Auto loader</string>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerautocerts:" target="qo8-lj-syM" id="3AE-e4-c2k"/>
+                                                <action selector="trailersButtonAction:" target="-2" id="tVb-jN-S1c"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="XxT-H2-ibC">
@@ -2124,9 +2115,23 @@ outside your local area network. </string>
                             </tabViewItem>
                         </tabViewItems>
                     </tabView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0Tc-cR-gIk">
+                        <rect key="frame" x="605" y="6" width="18" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="statusRed" id="zTe-7P-OO3"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="5xB-Au-uan">
+                        <rect key="frame" x="503" y="8" width="103" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PlexConnect Status:" id="2HE-MS-yVt">
+                            <font key="font" metaFont="system" size="10"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1075.5" y="-1342.5"/>
+            <point key="canvasLocation" x="-1075.5" y="-1338.5"/>
         </window>
         <window title="Cutom folder icons" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="RCS-xH-a7x">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2210,7 +2215,6 @@ outside your local area network. </string>
     <resources>
         <image name="AirPlayIcon" width="343" height="368"/>
         <image name="MenuIcon" width="15.359999656677246" height="15.359999656677246"/>
-        <image name="NSStatusNone" width="16" height="16"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
         <image name="Remote" width="80" height="318"/>
         <image name="Trailers" width="188" height="108"/>
@@ -2229,6 +2233,7 @@ outside your local area network. </string>
         <image name="quitplex" width="36.479999542236328" height="36"/>
         <image name="startplex" width="36" height="36"/>
         <image name="status" width="26" height="26"/>
+        <image name="statusRed" width="460" height="460"/>
         <image name="stopplex" width="36.479999542236328" height="36"/>
         <image name="update" width="36.479999542236328" height="36.479999542236328"/>
         <image name="updateplex" width="36.479999542236328" height="36"/>

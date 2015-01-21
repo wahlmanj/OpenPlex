@@ -14,7 +14,8 @@
 @end
 @implementation NoMenu
 @synthesize darkModeOn,dark;
-@synthesize guideIP,guideURL,updateButton,statusImage,statusButton;
+@synthesize guideIP,guideURL,updateButton,statusImage;
+@synthesize loginButtonOutlet,myplexButtonOutlet,settingsButtonOutlet,trailersButtonOutlet,updateButtonOutlet;
 // @synthesize macIP,certURL,mainIP;
 
 -(id)init{
@@ -78,6 +79,9 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     [self refreshDarkMode];
+
+    
+    
     NSDictionary *version = [NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"];
     NSString *productVersion = [version objectForKey:@"ProductVersion"];
     NSString *shortProductVersion = [productVersion substringWithRange:NSMakeRange(3, [productVersion length]-3)];
@@ -91,11 +95,9 @@
     
     if (darkModeOn==YES) {
         dark.title=@"On";
-        
     } else {
         dark.title=@"Off";
     }
-    
     
     if ([self checkForUpdate]==YES){
         updateButton.enabled=YES;
@@ -105,15 +107,20 @@
         updateButton.title=@"No Updates";
     }
     
+    [self setButtonStatus];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkServerStatus) userInfo:nil repeats:YES];
+
+//    [self checkServerStatus];
   //  if ([self checkServerStatus]==YES){
   //      statusText.title=@"Update App";
   //  } else {
   //      statusText.title=@"No Updates";
   //  }
-    if ([self checkServerStatus]==NO){
-       statusButton.enabled=NO;
+//    if ([self checkServerStatus]==NO){
+//       statusButton.enabled=NO;
 //       statusButton.title=@"*returnString2";
-    }
+//    }
     
     //    NSString *setupIP=[[NSString alloc] initWithFormat:@"%@",[self getLocalIPAddress]];
     //    NSString *localIP=[[NSString alloc] initWithFormat:@"Local IP:  %@",[self getLocalIPAddress]];
@@ -140,6 +147,14 @@
     [guideURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
 }
 
+-(void)setButtonStatus{
+    if (loginStatus==YES) {loginButtonOutlet.title=@"On";} else {loginButtonOutlet.title=@"Off";}
+    if (myplexStatus==YES) {myplexButtonOutlet.title=@"On";} else {myplexButtonOutlet.title=@"Off";}
+    if (settingsStatus==YES) {settingsButtonOutlet.title=@"On";} else {settingsButtonOutlet.title=@"Off";}
+    if (trailersStatus==YES) {trailersButtonOutlet.title=@"On";} else {trailersButtonOutlet.title=@"Off";}
+    if (updateStatus==YES) {updateButtonOutlet.title=@"On";} else {updateButtonOutlet.title=@"Off";}
+}
+
 -(BOOL) checkForUpdate{
     NSDictionary* errorDict;
     NSAppleEventDescriptor* returnDescriptor = NULL;
@@ -161,41 +176,43 @@
     } else {
         return YES;
     }
-    
 }
 
--(BOOL) checkServerStatus{
+-(void) checkServerStatus{
     NSDictionary* errorDict;
-    NSAppleEventDescriptor *returnDescriptor2 = NULL;
-    NSMutableString *scriptText2 = [NSMutableString stringWithString:@"set z to missing value\n"];
-    [scriptText2 appendString:@"tell application \"Finder\"\n"];
-    [scriptText2 appendString:@"if exists file \"Applications:PlexConnect:PlexConnect.log\" of the startup disk then\n"];
-    [scriptText2 appendString:@"try\n"];
-    [scriptText2 appendString:@"set z to do shell script \"grep -c 'Shutting' /Applications/PlexConnect/PlexConnect.log\"\n"];
-    [scriptText2 appendString:@"end try\n"];
-    [scriptText2 appendString:@"if z > 0 then\n"];
-    [scriptText2 appendString:@"set z to \"PlexConnect is Not Running\"\n"];
-    [scriptText2 appendString:@"else\n"];
-    [scriptText2 appendString:@"set z to \"PlexConnect is Running\"\n"];
-    [scriptText2 appendString:@"end if\n"];
-    [scriptText2 appendString:@"else if not exists file \"Applications:PlexConnect:PlexConnect.log\" of the startup disk then\n"];
-    [scriptText2 appendString:@"set z to \"No PlexConnect.Log Detected\"\n"];
-    [scriptText2 appendString:@"end if\n"];
-    [scriptText2 appendString:@"end tell\n"];
-    NSAppleScript* scriptObject2 = [[NSAppleScript alloc] initWithSource: scriptText2];
-    returnDescriptor2 = [scriptObject2 executeAndReturnError: &errorDict];
-    NSString *returnString2 = [returnDescriptor2 stringValue];
-    NSLog(@"returnString2: %@",returnString2);
+    NSAppleEventDescriptor *returnDescriptor = NULL;
+    NSMutableString *scriptText = [NSMutableString stringWithString:@"set z to missing value\n"];
+    [scriptText appendString:@"tell application \"Finder\"\n"];
+    [scriptText appendString:@"if exists file \"Applications:PlexConnect:PlexConnect.log\" of the startup disk then\n"];
+    [scriptText appendString:@"try\n"];
+    [scriptText appendString:@"set z to do shell script \"grep -c 'Shutting' /Applications/PlexConnect/PlexConnect.log\"\n"];
+    [scriptText appendString:@"end try\n"];
+    [scriptText appendString:@"if z > 0 then\n"];
+    [scriptText appendString:@"set z to \"PlexConnect is Not Running\"\n"];
+    [scriptText appendString:@"else\n"];
+    [scriptText appendString:@"set z to \"PlexConnect is Running\"\n"];
+    [scriptText appendString:@"end if\n"];
+    [scriptText appendString:@"else if not exists file \"Applications:PlexConnect:PlexConnect.log\" of the startup disk then\n"];
+    [scriptText appendString:@"set z to \"No PlexConnect.Log Detected\"\n"];
+    [scriptText appendString:@"end if\n"];
+    [scriptText appendString:@"end tell\n"];
+    NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource: scriptText];
+    returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
+    NSString *returnString = [returnDescriptor stringValue];
+//    NSLog(@"returnString: %@",returnString);
     
-    if ([returnString2 isEqual:@"No PlexConnect.Log Detected"]) {
-        return NO;
+    if ([returnString isEqual:@"PlexConnect is Running"]) {
+        [statusImage setImage:[NSImage imageNamed:@"statusGreen"]];
+    } else {
+        [statusImage setImage:[NSImage imageNamed:@"statusRed"]];
     }
-    if ([returnString2 isEqual:@"PlexConnect is Not Running"]) {
-        return NO;
-    }
-    if ([returnString2 isEqual:@"PlexConnect is Running"]) {
-        return NO;
-    }
+    
+//    if ([returnString isEqual:@"No PlexConnect.Log Detected"]) {
+//        return NO;
+//    }
+//    if ([returnString isEqual:@"PlexConnect is Not Running"]) {
+//        return NO;
+//    }
     
  //   [self.statusText setStringValue:NSLocalizedString(@"PlexConnect is running", nil)];
     
@@ -286,4 +303,71 @@
     
     // No IP found
     return @"?.?.?.?";
-}@end
+}
+
+-(void)checkOnOffStates{
+    NSURL *path = [NSURL URLWithString:@"/Applications/plexconnect_Backup"];
+    NSDirectoryEnumerator *directoryEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:path includingPropertiesForKeys:@[] options:NSDirectoryEnumerationSkipsHiddenFiles|NSDirectoryEnumerationSkipsPackageDescendants|NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:nil];
+    NSMutableArray *autoFiles = [NSMutableArray new];
+    for (NSString *path in directoryEnumerator) {
+        if ([[path pathExtension] isEqualToString:@"auto"]) {
+            NSString *path2 =[NSString stringWithFormat:@"%@",path];
+            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP/" withString:@""]];
+        }
+    }
+    
+    if ([autoFiles containsObject:@"login.auto"]){loginStatus = YES;} else {loginStatus=NO;}
+    if ([autoFiles containsObject:@"trailers.auto"]){trailersStatus = YES;} else {trailersStatus=NO;}
+    if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;} else {settingsStatus=NO;}
+    if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;} else {updateStatus=NO;}
+    if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;} else {myplexStatus=NO;}
+    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
+}
+
+
+- (IBAction)loginButtonAction:(id)sender {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"loginStatus" ofType:@"scpt"];
+    NSURL* url = [NSURL fileURLWithPath:path];NSDictionary* errors = [NSDictionary dictionary];
+    NSAppleScript* appleScript = [[NSAppleScript alloc] initWithContentsOfURL:url error:&errors];
+    [appleScript executeAndReturnError:nil];
+    
+    [self checkOnOffStates];
+    [self setButtonStatus];
+}
+- (IBAction)updateButtonAction:(id)sender {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"updateStatus" ofType:@"scpt"];
+    NSURL* url = [NSURL fileURLWithPath:path];NSDictionary* errors = [NSDictionary dictionary];
+    NSAppleScript* appleScript = [[NSAppleScript alloc] initWithContentsOfURL:url error:&errors];
+    [appleScript executeAndReturnError:nil];
+    
+    [self checkOnOffStates];
+    [self setButtonStatus];
+}
+- (IBAction)trailersButtonAction:(id)sender {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"trailersStatus" ofType:@"scpt"];
+    NSURL* url = [NSURL fileURLWithPath:path];NSDictionary* errors = [NSDictionary dictionary];
+    NSAppleScript* appleScript = [[NSAppleScript alloc] initWithContentsOfURL:url error:&errors];
+    [appleScript executeAndReturnError:nil];
+    
+    [self checkOnOffStates];
+    [self setButtonStatus];
+}
+- (IBAction)myplexButtonAction:(id)sender {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"myplexStatus" ofType:@"scpt"];
+    NSURL* url = [NSURL fileURLWithPath:path];NSDictionary* errors = [NSDictionary dictionary];
+    NSAppleScript* appleScript = [[NSAppleScript alloc] initWithContentsOfURL:url error:&errors];
+    [appleScript executeAndReturnError:nil];
+    
+    [self checkOnOffStates];
+    [self setButtonStatus];
+}
+- (IBAction)settingButtonAction:(id)sender {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"settingsStatus" ofType:@"scpt"];
+    NSURL* url = [NSURL fileURLWithPath:path];NSDictionary* errors = [NSDictionary dictionary];
+    NSAppleScript* appleScript = [[NSAppleScript alloc] initWithContentsOfURL:url error:&errors];
+    [appleScript executeAndReturnError:nil];
+    
+    [self checkOnOffStates];
+    [self setButtonStatus];
+}
+@end
