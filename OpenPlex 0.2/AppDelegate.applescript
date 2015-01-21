@@ -97,7 +97,6 @@ script AppDelegate
             set theString to quoted form of "Shutting"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is not "0" then
-                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
                 try
                     do shell script "afplay /System/Library/Sounds/Basso.aiff"
                 end try
@@ -108,7 +107,6 @@ script AppDelegate
             set theString to quoted form of "serving\\|shutting"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is equal to "3" then
-                display notification "PlexConnect is Running..." with title "PlexConnect Status"
                 try
                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                 end try
@@ -137,7 +135,6 @@ script AppDelegate
             set theString to quoted form of "Shutting"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is not "0" then
-                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
                 delay 0
                 try
                     do shell script "afplay /System/Library/Sounds/Basso.aiff"
@@ -149,7 +146,6 @@ script AppDelegate
             set theString to quoted form of "serving\\|shutting"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is equal to "3" then
-                display notification "PlexConnect is Running..." with title "PlexConnect Status"
                 delay 0
                 try
                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -179,7 +175,6 @@ script AppDelegate
             set theString to quoted form of "Shutting"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is not "0" then
-                display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
                 delay 0
                 try
                     do shell script "afplay /System/Library/Sounds/Basso.aiff"
@@ -191,7 +186,6 @@ script AppDelegate
             set theString to quoted form of "serving\\|shutting"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is equal to "3" then
-                display notification "PlexConnect is Running..." with title "PlexConnect Status"
                 delay 0
                 try
                     do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -465,8 +459,6 @@ script AppDelegate
                         set theString to quoted form of "Shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is not "0" then
-                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Basso.aiff"
                             end try
@@ -477,8 +469,6 @@ script AppDelegate
                         set theString to quoted form of "serving\\|shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is equal to "3" then
-                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                             end try
@@ -593,8 +583,6 @@ script AppDelegate
                                 set theString to quoted form of "Shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is not "0" then
-                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                                     end try
@@ -605,8 +593,6 @@ script AppDelegate
                                 set theString to quoted form of "serving\\|shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is equal to "3" then
-                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         try
                                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -704,8 +690,6 @@ script AppDelegate
                         set theString to quoted form of "Shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is not "0" then
-                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Basso.aiff"
                             end try
@@ -716,8 +700,6 @@ script AppDelegate
                         set theString to quoted form of "serving\\|shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is equal to "3" then
-                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                             end try
@@ -832,8 +814,6 @@ script AppDelegate
                                 set theString to quoted form of "Shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is not "0" then
-                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                                     end try
@@ -844,8 +824,6 @@ script AppDelegate
                                 set theString to quoted form of "serving\\|shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is equal to "3" then
-                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         try
                                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -943,8 +921,6 @@ script AppDelegate
                         set theString to quoted form of "Shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is not "0" then
-                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Basso.aiff"
                             end try
@@ -955,8 +931,6 @@ script AppDelegate
                         set theString to quoted form of "serving\\|shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is equal to "3" then
-                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                             end try
@@ -1071,8 +1045,6 @@ script AppDelegate
                                 set theString to quoted form of "Shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is not "0" then
-                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                                     end try
@@ -1083,8 +1055,6 @@ script AppDelegate
                                 set theString to quoted form of "serving\\|shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is equal to "3" then
-                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         try
                                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -1182,8 +1152,6 @@ script AppDelegate
                         set theString to quoted form of "Shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is not "0" then
-                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Basso.aiff"
                             end try
@@ -1194,8 +1162,6 @@ script AppDelegate
                         set theString to quoted form of "serving\\|shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is equal to "3" then
-                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                             end try
@@ -1310,8 +1276,6 @@ script AppDelegate
                                 set theString to quoted form of "Shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is not "0" then
-                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                                     end try
@@ -1322,8 +1286,6 @@ script AppDelegate
                                 set theString to quoted form of "serving\\|shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is equal to "3" then
-                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         try
                                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -1421,8 +1383,6 @@ script AppDelegate
                         set theString to quoted form of "Shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is not "0" then
-                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Basso.aiff"
                             end try
@@ -1433,8 +1393,6 @@ script AppDelegate
                         set theString to quoted form of "serving\\|shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is equal to "3" then
-                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                             end try
@@ -1549,8 +1507,6 @@ script AppDelegate
                                 set theString to quoted form of "Shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is not "0" then
-                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                                     end try
@@ -1561,8 +1517,6 @@ script AppDelegate
                                 set theString to quoted form of "serving\\|shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is equal to "3" then
-                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         try
                                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -1660,8 +1614,6 @@ script AppDelegate
                         set theString to quoted form of "Shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is not "0" then
-                            display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Basso.aiff"
                             end try
@@ -1672,8 +1624,6 @@ script AppDelegate
                         set theString to quoted form of "serving\\|shutting"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is equal to "3" then
-                            display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                            delay 0
                             try
                                 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                             end try
@@ -1788,8 +1738,6 @@ script AppDelegate
                                 set theString to quoted form of "Shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is not "0" then
-                                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                                     end try
@@ -1800,8 +1748,6 @@ script AppDelegate
                                 set theString to quoted form of "serving\\|shutting"
                                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                                 if searchResult is equal to "3" then
-                                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                                    delay 0
                                     try
                                         try
                                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
@@ -1886,8 +1832,6 @@ script AppDelegate
                 set theString to quoted form of "Shutting"
                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                 if searchResult is not "0" then
-                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                    delay 0
                     try
                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                     end try
@@ -1899,8 +1843,6 @@ script AppDelegate
                 set theString to quoted form of "serving\\|shutting"
                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                 if searchResult is equal to "3" then
-                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                    delay 0
                     try
                         do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                     end try
@@ -1942,8 +1884,6 @@ script AppDelegate
                 set theString to quoted form of "Shutting"
                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                 if searchResult is not "0" then
-                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                    delay 0
                     try
                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                     end try
@@ -1955,8 +1895,6 @@ script AppDelegate
                 set theString to quoted form of "serving\\|shutting"
                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                 if searchResult is equal to "3" then
-                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                    delay 0
                     try
                         do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                     end try
@@ -1998,8 +1936,6 @@ script AppDelegate
                 set theString to quoted form of "Shutting"
                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                 if searchResult is not "0" then
-                    display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                    delay 0
                     try
                         do shell script "afplay /System/Library/Sounds/Basso.aiff"
                     end try
@@ -2011,8 +1947,6 @@ script AppDelegate
                 set theString to quoted form of "serving\\|shutting"
                 set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                 if searchResult is equal to "3" then
-                    display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                    delay 0
                     try
                         do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                     end try
@@ -2256,8 +2190,6 @@ script AppDelegate
                     set theString to quoted form of "Shutting"
                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                     if searchResult is not "0" then
-                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                        delay 0
                         try
                             do shell script "afplay /System/Library/Sounds/Basso.aiff"
                         end try
@@ -2269,8 +2201,6 @@ script AppDelegate
                     set theString to quoted form of "serving\\|shutting"
                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                     if searchResult is equal to "3" then
-                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                        delay 0
                         try
                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                         end try
@@ -2414,8 +2344,6 @@ script AppDelegate
                     set theString to quoted form of "Shutting"
                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                     if searchResult is not "0" then
-                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                        delay 0
                         try
                             do shell script "afplay /System/Library/Sounds/Basso.aiff"
                         end try
@@ -2427,8 +2355,6 @@ script AppDelegate
                     set theString to quoted form of "serving\\|shutting"
                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                     if searchResult is equal to "3" then
-                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                        delay 0
                         try
                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                         end try
@@ -2473,8 +2399,6 @@ script AppDelegate
                     set theString to quoted form of "Shutting"
                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                     if searchResult is not "0" then
-                        display notification "PlexConnect is Not Running..." with title "PlexConnect Status"
-                        delay 0
                         try
                             do shell script "afplay /System/Library/Sounds/Basso.aiff"
                         end try
@@ -2486,8 +2410,6 @@ script AppDelegate
                     set theString to quoted form of "serving\\|shutting"
                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                     if searchResult is equal to "3" then
-                        display notification "PlexConnect is Running..." with title "PlexConnect Status"
-                        delay 0
                         try
                             do shell script "afplay /System/Library/Sounds/Submarine.aiff"
                         end try
