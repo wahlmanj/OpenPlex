@@ -21,6 +21,8 @@ rm /usr/bin/appupdate.bash
 rm /usr/bin/appupdatebash.bash
 rm /usr/bin/appweb.bash
 rm /usr/bin/appwebbash.bash
+rm /usr/bin/atvsettingsauto.bash
+rm /usr/bin/atvsettingsautobash.bash
 rm /usr/bin/auto.bash
 rm /usr/bin/backupatvsettings.bash
 rm /usr/bin/backupatvsettingsbash.bash

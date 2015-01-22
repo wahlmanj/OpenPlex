@@ -11,6 +11,7 @@
 
 BOOL darkModeOn;
 BOOL loginStatus,myplexStatus,settingsStatus,trailersStatus,updateStatus;
+BOOL updateAvailable;
 
 @interface ApplicationDelegate ()
 @property (assign) IBOutlet NSWindow *window;
@@ -39,6 +40,9 @@ BOOL loginStatus,myplexStatus,settingsStatus,trailersStatus,updateStatus;
         //   NSLog(@"Dark Off");
     }
     [self checkOnOffStates];
+    [self checkForUpdateSetBool];
+    [NSTimer scheduledTimerWithTimeInterval:3600 target:self selector:@selector(checkForUpdateSetBool) userInfo:nil repeats:YES];
+
 }
 
 - (void)itemClicked:(id)sender {
@@ -61,26 +65,56 @@ BOOL loginStatus,myplexStatus,settingsStatus,trailersStatus,updateStatus;
         [[NSApplication sharedApplication] terminate:self];
         return;
     }
-    
+    [self checkForUpdateSetBool];
 }
 
 -(void)checkOnOffStates{
     NSURL *path = [NSURL URLWithString:@"/Applications/plexconnect_Backup"];
     NSDirectoryEnumerator *directoryEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:path includingPropertiesForKeys:@[] options:NSDirectoryEnumerationSkipsHiddenFiles|NSDirectoryEnumerationSkipsPackageDescendants|NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:nil];
-    NSMutableArray *autoFiles = [NSMutableArray new];
+    //    NSMutableArray *autoFiles = [NSMutableArray new];
     for (NSString *path in directoryEnumerator) {
-        if ([[path pathExtension] isEqualToString:@"auto"]) {
-            NSString *path2 =[NSString stringWithFormat:@"%@",path];
-            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP/" withString:@""]];
-        }
+        //        if ([[path pathExtension] isEqualToString:@"auto"]) {
+        NSString *path2 =[NSString stringWithFormat:@"%@",path];
+        //            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP/" withString:@""]];
+        //        }
+        //    }
+        
+        if ([path2 rangeOfString:@"login.auto"].location != NSNotFound) {loginStatus=YES;}
+        if ([path2 rangeOfString:@"trailers.auto"].location != NSNotFound) {trailersStatus=YES;}
+        if ([path2 rangeOfString:@"settings.auto"].location != NSNotFound) {settingsStatus=YES;}
+        if ([path2 rangeOfString:@"update.auto"].location != NSNotFound) {updateStatus=YES;}
+        if ([path2 rangeOfString:@"myplex.auto"].location != NSNotFound) {myplexStatus=YES;}
     }
-    
-    if ([autoFiles containsObject:@"login.auto"]){loginStatus = YES;}
-    if ([autoFiles containsObject:@"trailers.auto"]){trailersStatus = YES;}
-    if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;}
-    if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;}
-    if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;}
+    //    if ([autoFiles containsObject:@"login.auto"]){loginStatus = YES;}
+    //    if ([autoFiles containsObject:@"trailers.auto"]){trailersStatus = YES;}
+    //    if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;}
+    //    if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;}
+    //    if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;}
 //    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
 }
+
+-(void) checkForUpdateSetBool{
+    NSDictionary* errorDict;
+    NSAppleEventDescriptor* returnDescriptor = NULL;
+    NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
+    [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/appupdatebash.bash\"\n"];
+    [scriptText appendString:@"if x is equal to \"Already up-to-date.\" then\n"];
+    [scriptText appendString:@"set y to \"NoUpdate\"\n"];
+    [scriptText appendString:@"else if x is not equal to \"Already up-to-date.\" then\n"];
+    [scriptText appendString:@"set y to \"YesUpdate\"\n"];
+    [scriptText appendString:@"end if\n"];
+    
+    NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource: scriptText];
+    returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
+    NSString *returnString = [returnDescriptor stringValue];
+    
+    if ([returnString isEqual:@"NoUpdate"]) {
+        updateAvailable=NO;
+    } else {
+        updateAvailable=YES;
+    }
+//        NSLog(@"updateCheck");
+}
+
 
 @end

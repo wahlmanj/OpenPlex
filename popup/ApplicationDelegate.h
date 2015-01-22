@@ -11,6 +11,7 @@
 extern BOOL darkModeOn;
 //extern BOOL darkModeCapable;
 extern BOOL loginStatus,myplexStatus,settingsStatus,trailersStatus,updateStatus;
+extern BOOL updateAvailable;
 
 @class NoMenu;
 

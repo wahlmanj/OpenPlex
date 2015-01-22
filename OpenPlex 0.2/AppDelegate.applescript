@@ -78,7 +78,7 @@ script AppDelegate
             end try
         end tell
     end buttonhandlerupdate_
-    
+
     on buttonhandlerrestart_(sender)
         do shell script "restartbash.bash"
         tell application "Finder"
@@ -450,7 +450,7 @@ script AppDelegate
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
-                        do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                        do shell script "atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                     end if
@@ -681,7 +681,7 @@ script AppDelegate
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
-                        do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                        do shell script "atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                     end if
@@ -912,7 +912,7 @@ script AppDelegate
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
-                        do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                        do shell script "atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                     end if
@@ -1143,7 +1143,7 @@ script AppDelegate
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
-                        do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                        do shell script "atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                     end if
@@ -1374,7 +1374,7 @@ script AppDelegate
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
-                        do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                        do shell script "atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                     end if
@@ -1605,7 +1605,7 @@ script AppDelegate
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
-                        do shell script "startbash.bash; backupatvsettingsbash.bash; cd /Applications/plexconnect_BACKUP; cat myplex.auto >> ATVSettings.cfg; restoreatvsettingsbash.bash"
+                        do shell script "atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                     end if

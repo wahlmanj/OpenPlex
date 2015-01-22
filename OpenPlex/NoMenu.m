@@ -149,22 +149,23 @@
 }
 
 -(void) checkForUpdate{
-    NSDictionary* errorDict;
-    NSAppleEventDescriptor* returnDescriptor = NULL;
-    NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
-    [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/appupdatebash.bash\"\n"];
-    [scriptText appendString:@"if x is equal to \"Already up-to-date.\" then\n"];
-    [scriptText appendString:@"set y to \"NoUpdate\"\n"];
-    [scriptText appendString:@"else if x is not equal to \"Already up-to-date.\" then\n"];
-    [scriptText appendString:@"set y to \"YesUpdate\"\n"];
-    [scriptText appendString:@"end if\n"];
-
-    NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource: scriptText];
-    returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
-    NSString *returnString = [returnDescriptor stringValue];
-   // NSLog(@"returnString: %@",returnString);
-    
-    if ([returnString isEqual:@"NoUpdate"]) {
+    /*    NSDictionary* errorDict;
+     NSAppleEventDescriptor* returnDescriptor = NULL;
+     NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
+     [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/appupdatebash.bash\"\n"];
+     [scriptText appendString:@"if x is equal to \"Already up-to-date.\" then\n"];
+     [scriptText appendString:@"set y to \"NoUpdate\"\n"];
+     [scriptText appendString:@"else if x is not equal to \"Already up-to-date.\" then\n"];
+     [scriptText appendString:@"set y to \"YesUpdate\"\n"];
+     [scriptText appendString:@"end if\n"];
+     
+     NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource: scriptText];
+     returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
+     NSString *returnString = [returnDescriptor stringValue];
+     // NSLog(@"returnString: %@",returnString);
+     */
+    //    if ([returnString isEqual:@"NoUpdate"]) {
+    if (updateAvailable==NO) {
         updateButton.enabled=NO;
         updateButton.title=@"No Updates";
     } else {
@@ -172,6 +173,7 @@
         updateButton.title=@"Update App";
     }
 }
+
 
 -(void) checkServerStatus{
     NSDictionary* errorDict;
@@ -303,19 +305,26 @@
 -(void)checkOnOffStates{
     NSURL *path = [NSURL URLWithString:@"/Applications/plexconnect_Backup"];
     NSDirectoryEnumerator *directoryEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:path includingPropertiesForKeys:@[] options:NSDirectoryEnumerationSkipsHiddenFiles|NSDirectoryEnumerationSkipsPackageDescendants|NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:nil];
-    NSMutableArray *autoFiles = [NSMutableArray new];
+    //    NSMutableArray *autoFiles = [NSMutableArray new];
+    loginStatus=NO;trailersStatus=NO;settingsStatus=NO,updateStatus=NO;myplexStatus=NO;
     for (NSString *path in directoryEnumerator) {
-        if ([[path pathExtension] isEqualToString:@"auto"]) {
-            NSString *path2 =[NSString stringWithFormat:@"%@",path];
-            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP/" withString:@""]];
-        }
+        //        if ([[path pathExtension] isEqualToString:@"auto"]) {
+        NSString *path2 =[NSString stringWithFormat:@"%@",path];
+        //            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP/" withString:@""]];
+        //        }
+        //    }
+        
+        if ([path2 rangeOfString:@"login.auto"].location != NSNotFound) {loginStatus=YES;}
+        if ([path2 rangeOfString:@"trailers.auto"].location != NSNotFound) {trailersStatus=YES;}
+        if ([path2 rangeOfString:@"settings.auto"].location != NSNotFound) {settingsStatus=YES;}
+        if ([path2 rangeOfString:@"update.auto"].location != NSNotFound) {updateStatus=YES;}
+        if ([path2 rangeOfString:@"myplex.auto"].location != NSNotFound) {myplexStatus=YES;}
     }
-    
-    if ([autoFiles containsObject:@"login.auto"]){loginStatus = YES;} else {loginStatus=NO;}
-    if ([autoFiles containsObject:@"trailers.auto"]){trailersStatus = YES;} else {trailersStatus=NO;}
-    if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;} else {settingsStatus=NO;}
-    if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;} else {updateStatus=NO;}
-    if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;} else {myplexStatus=NO;}
+    //    if ([autoFiles containsObject:@"login.auto"]){loginStatus = YES;}
+    //    if ([autoFiles containsObject:@"trailers.auto"]){trailersStatus = YES;}
+    //    if ([autoFiles containsObject:@"settings.auto"]){settingsStatus = YES;}
+    //    if ([autoFiles containsObject:@"update.auto"]){updateStatus = YES;}
+    //    if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;}
 //    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
 }
 

@@ -324,6 +324,8 @@ cp 10.10vb.bash /usr/bin
 cp appupdate.bash /usr/bin
 cp appupdatebash.bash /usr/bin
 cp appwebbash.bash /usr/bin
+cp atvsettingsauto.bash /usr/bin
+cp atvsettingsautobash.bash /usr/bin
 cp auto.bash /usr/bin
 cp backup.bash /usr/bin
 cp backupbash.bash /usr/bin
@@ -485,6 +487,8 @@ chmod +x /usr/bin/10.10vb.bash
 chmod +x /usr/bin/appupdate.bash
 chmod +x /usr/bin/appupdatebash.bash
 chmod +x /usr/bin/appwebbash.bash
+chmod +x /usr/bin/atvsettingsauto.bash
+chmod +x /usr/bin/atvsettingsautobash.bash
 chmod +x /usr/bin/auto.bash
 chmod +x /usr/bin/backupatvsettings.bash
 chmod +x /usr/bin/backupatvsettingsbash.bash
