@@ -8,7 +8,7 @@ while : ; do
 done
 cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP/ATVSettingsauto.cfg
 cd /Applications/plexconnect_BACKUP
-grep -B2 myplex_auth ATVSettingsauto.cfg | sed '/^--$/d' > myplex.temp
+grep -B2 myplex_auth ATVSettings.cfg | sed '/^--$/d' > myplex.temp
 sed '1,3d' myplex.temp > myplex.auto
 rm myplex.temp
 cat myplex.auto >> ATVSettingsauto.cfg
