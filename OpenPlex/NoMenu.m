@@ -76,12 +76,14 @@
     
 }
 
+-(void)windowWillLoad{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkForUpdate) name:@"updateAvailable" object:nil];
+}
+
 - (void)windowDidLoad {
     [super windowDidLoad];
     [self refreshDarkMode];
 
-    
-    
     NSDictionary *version = [NSDictionary dictionaryWithContentsOfFile:@"/System/Library/CoreServices/SystemVersion.plist"];
     NSString *productVersion = [version objectForKey:@"ProductVersion"];
     NSString *shortProductVersion = [productVersion substringWithRange:NSMakeRange(3, [productVersion length]-3)];

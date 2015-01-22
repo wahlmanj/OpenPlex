@@ -112,6 +112,7 @@ BOOL updateAvailable;
         updateAvailable=NO;
     } else {
         updateAvailable=YES;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateAvailable" object:nil];
     }
 //        NSLog(@"updateCheck");
 }

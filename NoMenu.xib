@@ -631,17 +631,8 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nns-zn-Ecz">
-                                            <rect key="frame" x="398" y="-1" width="192" height="14"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copyright 2015 - Wahlman.J &amp; CyberGhost84" id="J5z-KB-yg2">
-                                                <font key="font" metaFont="system" size="8"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Tsf-gm-Sik">
-                                            <rect key="frame" x="257" y="5" width="119" height="38"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Tsf-gm-Sik">
+                                            <rect key="frame" x="471" y="5" width="119" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="bKj-Km-3qV">
                                                 <font key="font" metaFont="system" size="10"/>
@@ -652,23 +643,32 @@ Flipman6            (Obj-C)</string>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KQm-Id-0cV">
-                                            <rect key="frame" x="177" y="5" width="74" height="39"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KQm-Id-0cV">
+                                            <rect key="frame" x="391" y="4" width="74" height="39"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="mIT-iK-b49">
                                                 <font key="font" metaFont="system" size="10"/>
                                                 <string key="title">    penPlex
-created by
-the authors</string>
+Developers
+© 2015</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9C-QQ-Fvu">
-                                            <rect key="frame" x="179" y="32" width="12" height="12"/>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9C-QQ-Fvu">
+                                            <rect key="frame" x="393" y="32" width="12" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MenuIcon" id="S5s-Dv-mbc"/>
                                         </imageView>
+                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nns-zn-Ecz">
+                                            <rect key="frame" x="134" y="16" width="192" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copyright 2015 - Wahlman.J &amp; CyberGhost84" id="J5z-KB-yg2">
+                                                <font key="font" metaFont="system" size="8"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>
