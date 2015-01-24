@@ -26,9 +26,6 @@
         //perform any initializations
     }
     return self;
-    
-    
-    
 }
 
 - (void)refreshDarkMode {
@@ -72,8 +69,6 @@
     if (self) {
     }
     return self;
-    
-    
 }
 
 -(void)windowWillLoad{
@@ -126,18 +121,14 @@
      
      [mainIP setTitleWithMnemonic:setupIP];
      [mainIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
-     
      [macIP setTitleWithMnemonic:localIP];
      [macIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
-     
-     
      [certURL setTitleWithMnemonic:certString];
      [certURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:12]];
-     
      */
+    
     [guideIP setTitleWithMnemonic:guidelocalIP];
     [guideIP setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
-    
     [guideURL setTitleWithMnemonic:guidecertString];
     [guideURL setFont:[NSFont fontWithName:@"Helvetica Neue" size:14]];
 }
@@ -176,7 +167,6 @@
     }
 }
 
-
 -(void) checkServerStatus{
     NSDictionary* errorDict;
     NSAppleEventDescriptor *returnDescriptor = NULL;
@@ -214,8 +204,7 @@
 //    }
     
  //   [self.statusText setStringValue:NSLocalizedString(@"PlexConnect is running", nil)];
-    
-    
+
     //    NSAppleEventDescriptor* returnDescriptor = NULL;
 
    //  NSMutableString *scriptText = [NSMutableString stringWithString:@"set y to missing value\n"];
@@ -232,20 +221,8 @@
    //  returnDescriptor = [scriptObject1 executeAndReturnError: &errorDict];
    //  NSString *returnString1 = [returnDescriptor stringValue];
    //  NSLog(@"ServerString1: %@",returnString1);
- 
 
-
-    
-    
-    
     //     [scriptText appendString:@"set x to do shell script \"export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; /usr/bin/update.sh\"\n"];
-    
-    
-    
-    
-    
-    
-    
     
     //    if ([ServerString2 isEqual:@"Running"]) {
     //        [self.statusImage setImage:[NSImage imageNamed:@"Running"]];
@@ -266,10 +243,6 @@
     //        return YES;
     //   }
 }
-
-
-
-
 
 - (NSString *)getLocalIPAddress
 {
@@ -329,7 +302,6 @@
     //    if ([autoFiles containsObject:@"myplex.auto"]){myplexStatus = YES;}
 //    NSLog(@"\nloginStatus=%hhd\ntrailersStatus=%hhd\nsettingsStatus=%hhd\nupdateStatus=%hhd\nmyPlexStatus=%hhd",loginStatus,trailersStatus,settingsStatus,updateStatus,myplexStatus);
 }
-
 
 - (IBAction)loginButtonAction:(id)sender {
     NSString* path = [[NSBundle mainBundle] pathForResource:@"loginStatus" ofType:@"scpt"];

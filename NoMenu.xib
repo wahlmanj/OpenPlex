@@ -656,7 +656,7 @@ Developers
                                             </textFieldCell>
                                         </textField>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9C-QQ-Fvu">
-                                            <rect key="frame" x="393" y="32" width="12" height="12"/>
+                                            <rect key="frame" x="393" y="30" width="12" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="MenuIcon" id="S5s-Dv-mbc"/>
                                         </imageView>
