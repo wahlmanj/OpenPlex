@@ -2200,6 +2200,20 @@ outside your local area network. </string>
             </view>
             <point key="canvasLocation" x="-431.5" y="-982.5"/>
         </window>
+        <menu id="VDZ-mf-dqy">
+            <items>
+                <menuItem title="Item 1" id="xtk-V7-BEC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Item 2" id="0li-zu-ChA">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Item 3" id="0Tr-rd-wBF">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-652" y="-1368.5"/>
+        </menu>
     </objects>
     <resources>
         <image name="AirPlayIcon" width="343" height="368"/>

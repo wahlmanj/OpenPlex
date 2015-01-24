@@ -18,5 +18,8 @@ extern BOOL updateAvailable;
 @interface ApplicationDelegate : NSObject <NSApplicationDelegate>{
     NoMenu *winCon;
 }
+
 @property (strong, nonatomic) NSStatusItem *statusItem;
+@property (strong, nonatomic) IBOutlet NSMenu *menuDropDown;
+
 @end

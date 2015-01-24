@@ -19,7 +19,9 @@ BOOL updateAvailable;
 @end
 @implementation ApplicationDelegate
 //@synthesize winCon, statusItem;
+//@synthesize menuDropDown;
 @synthesize statusItem;
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
@@ -42,10 +44,11 @@ BOOL updateAvailable;
     [self checkOnOffStates];
     [self checkForUpdateSetBool];
     [NSTimer scheduledTimerWithTimeInterval:3600 target:self selector:@selector(checkForUpdateSetBool) userInfo:nil repeats:YES];
-
 }
 
 - (void)itemClicked:(id)sender {
+
+//    self.menuDropDown = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     if (winCon==nil) {
         winCon = [[NoMenu alloc] init];
@@ -65,7 +68,7 @@ BOOL updateAvailable;
         [[NSApplication sharedApplication] terminate:self];
         return;
     }
-    [self checkForUpdateSetBool];
+ //   [self checkForUpdateSetBool];
 }
 
 -(void)checkOnOffStates{
