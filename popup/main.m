@@ -2,8 +2,7 @@
 //  main.m
 //  OpenPlex 0.4.2
 //
-//  Designed by iCyberGhost coded by wahlman.j on 24/06/14.
-//  Copyright (c) 2014 CyberGhost. All rights reserved.
+//  Copyright (c) 2014 Wahlman.j & Flipman6 All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

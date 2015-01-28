@@ -532,7 +532,7 @@ load certs</string>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="6dN-ql-nJ7">
                                             <rect key="frame" x="3" y="4" width="192" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copyright 2015 - Wahlman.J &amp; CyberGhost84" id="DVS-8S-yWN">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copyright 2015 - Wahlman.J &amp; Flipman6" id="DVS-8S-yWN">
                                                 <font key="font" metaFont="system" size="8"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

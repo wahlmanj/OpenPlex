@@ -1,9 +1,8 @@
 /*!
  --  OpenPlex 0.4.2
  --
- --  Originally designed by iCyberGhost on 5/02/14.
  --  Originally coded by Wahlman.j on 5/02/14.
- Copyright (c) 2015 CyberGhost & Wahlman.j. All rights reserved.
+ Copyright (c) 2015 Wahlman.j & Flipman6. All rights reserved.
  */
 
 #import "StatusItemView.h"
