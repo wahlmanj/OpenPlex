@@ -2215,14 +2215,14 @@ script AppDelegate
     on buttonhandlerbackupsettings_(sender)
         display notification "Backing up Settings.cfg..." with title "OpenPlex Status"
         delay 0
-        do shell script "cp /Applications/PlexConnect/settings.cfg /Applications/plexconnect_BACKUP"
+        do shell script "cp /Applications/PlexConnect/Settings.cfg /Applications/plexconnect_BACKUP"
     end buttonhandlerbackupsettings_
     
     on buttonhandlerloadsettings_(sender)
         --Needs work to remove password only
         display notification "Restoring Settings.cfg..." with title "OpenPlex Status"
         delay 0
-        do shell script "cp /Applications/plexconnect_BACKUP/settings.cfg /Applications/PlexConnect" with administrator privileges
+        do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect" with administrator privileges
     end buttonhandlerloadsettings_
     
     on buttonhandlerbackupfanart_(sender)
@@ -2540,11 +2540,11 @@ script AppDelegate
     end buttonhandlerautosettings_
     
     on buttonhandlerloghigh_(sender)
-        do shell script "cd /Applications/PlexConnect; sed -i '' 's/Normal/High/g' settings.cfg"
+        do shell script "cd /Applications/PlexConnect; sed -i '' 's/Normal/High/g' Settings.cfg"
     end buttonhandlerloghigh_
     
     on buttonhandlerlognormal_(sender)
-        do shell script "cd /Applications/PlexConnect; sed -i '' 's/High/Normal/g' settings.cfg"
+        do shell script "cd /Applications/PlexConnect; sed -i '' 's/High/Normal/g' Settings.cfg"
     end buttonhandlerlognormal_
     
     on buttonhandlerplexweb_(sender)
