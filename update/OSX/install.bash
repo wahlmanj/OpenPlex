@@ -336,6 +336,8 @@ cp createcert.bash /usr/bin
 cp createcertbash.bash /usr/bin
 cp createimovie.bash /usr/bin
 cp createimoviebash.bash /usr/bin
+cp createpurge.bash /usr/bin
+cp createpurgebash.bash /usr/bin
 cp createwsj.bash /usr/bin
 cp createwsjbash.bash /usr/bin
 cp cyberghostbash.bash /usr/bin
@@ -374,6 +376,8 @@ cp plexweblistwanbash.bash /usr/bin
 cp pms.bash /usr/bin
 cp pmsscan.bash /usr/bin
 cp pmsscanbash.bash /usr/bin
+cp purge.bash /usr/bin
+cp purgebash.bash /usr/bin
 cp purgesettings.bash /usr/bin
 cp purgesettingsbash.bash /usr/bin
 cp pythonkiller.bash /usr/bin
@@ -500,6 +504,8 @@ chmod +x /usr/bin/createcert.bash
 chmod +x /usr/bin/createcertbash.bash
 chmod +x /usr/bin/createimovie.bash
 chmod +x /usr/bin/createimoviebash.bash
+chmod +x /usr/bin/createpurge.bash
+chmod +x /usr/bin/createpurgebash.bash
 chmod +x /usr/bin/createwsj.bash
 chmod +x /usr/bin/createwsjbash.bash
 chmod +x /usr/bin/cyberghostbash.bash
@@ -538,6 +544,8 @@ chmod +x /usr/bin/pms.bash
 chmod +x /usr/bin/pmsbash.bash
 chmod +x /usr/bin/pmsscan.bash
 chmod +x /usr/bin/pmsscanbash.bash
+chmod +x /usr/bin/purge.bash
+chmod +x /usr/bin/purgebash.bash
 chmod +x /usr/bin/purgesettings.bash
 chmod +x /usr/bin/purgesettingsbash.bash
 chmod +x /usr/bin/pythonkiller.bash

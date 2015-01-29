@@ -34,6 +34,8 @@ rm /usr/bin/createcert.bash
 rm /usr/bin/createcertbash.bash
 rm /usr/bin/createimovie.bash
 rm /usr/bin/createimoviebash.bash
+rm /usr/bin/createpurge.bash
+rm /usr/bin/createpurgebash.bash
 rm /usr/bin/createplist.bash
 rm /usr/bin/createwsj.bash
 rm /usr/bin/createwsjbash.bash
@@ -76,6 +78,8 @@ rm /usr/bin/pms.bash
 rm /usr/bin/pmsbash.bash
 rm /usr/bin/pmsscan.bash
 rm /usr/bin/pmsscanbash.bash
+rm /usr/bin/purge.bash
+rm /usr/bin/purgebash.bash
 rm /usr/bin/purgesettings.bash
 rm /usr/bin/purgesettingsbash.bash
 rm /usr/bin/pythonkiller.bash
