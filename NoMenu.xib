@@ -2090,7 +2090,7 @@ outside your local area network. </string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator maxValue="100" style="bar" id="mb1-9z-jj7">
+                    <progressIndicator hidden="YES" maxValue="100" style="bar" id="mb1-9z-jj7">
                         <rect key="frame" x="211" y="1" width="96" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </progressIndicator>
