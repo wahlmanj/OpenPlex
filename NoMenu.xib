@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
             <connections>
                 <outlet property="dark" destination="v0d-JZ-lJQ" id="0gN-cv-1Ix"/>
+                <outlet property="github" destination="mb1-9z-jj7" id="Dcj-hy-AiE"/>
                 <outlet property="guideIP" destination="jui-yr-icb" id="Hsb-TA-sIJ"/>
                 <outlet property="guideURL" destination="w78-e3-0cw" id="xgW-Wi-rUi"/>
                 <outlet property="loginButtonOutlet" destination="9Pg-ab-Qr5" id="Ehd-eS-dsv"/>
@@ -634,7 +635,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nns-zn-Ecz">
                                             <rect key="frame" x="391" y="-3" width="192" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="©opyright 2015 - Wahlman.J &amp; Flipman6" id="J5z-KB-yg2">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© 2015 Wahlman.J, CyberGhost84 &amp; Flipman6" id="J5z-KB-yg2">
                                                 <font key="font" metaFont="system" size="8"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2089,6 +2090,10 @@ outside your local area network. </string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <progressIndicator maxValue="100" style="bar" id="mb1-9z-jj7">
+                        <rect key="frame" x="211" y="1" width="96" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
                 </subviews>
             </view>
             <point key="canvasLocation" x="-1075.5" y="-1344"/>

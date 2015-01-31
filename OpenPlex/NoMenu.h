@@ -1,8 +1,9 @@
-/*!
+/*
  --  OpenPlex 0.4.2
  --
- --  Originally coded by Wahlman.j on 5/02/14.
- Copyright (c) 2015 Wahlman.j & Flipman6. All rights reserved.
+ --  Originally Designed by CyberGhost84 on 5/02/14.
+ --  Originally Coded by Wahlman.j on 5/02/14.
+ --  Copyright (©) 2015 Wahlman.j, CyberGhost84 & Flipman6 All rights reserved.
  */
 
 #import "ApplicationDelegate.h"
@@ -13,7 +14,7 @@
 //@property (strong) IBOutlet NSTextField *macIP;
 //@property (strong) IBOutlet NSTextField *certURL;
 
-
+@property (strong) IBOutlet NSProgressIndicator *github;
 @property (strong) IBOutlet NSTextField *guideIP;
 @property (strong) IBOutlet NSTextField *guideURL;
 @property (strong) IBOutlet NSButton *updateButton;

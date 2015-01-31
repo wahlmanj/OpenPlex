@@ -1,9 +1,9 @@
-//
+/*
 //  main.m
 //  OpenPlex 0.4.2
 //
-//  Copyright (c) 2014 Wahlman.j & Flipman6 All rights reserved.
-//
+//  Copyright (©) 2015 Wahlman.j, CyberGhost84 & Flipman6 All rights reserved.
+*/
 
 #import <Cocoa/Cocoa.h>
 

@@ -2,8 +2,9 @@
 --  AppDelegate.applescript
 --  OpenPlex 0.4.2
 --
---  Originally coded by Wahlman.j on 5/02/14.
---  Copyright (c) 2014 Wahlman.j & Flipman6 All rights reserved.
+--  Originally Designed by CyberGhost84 on 5/02/14.
+--  Originally Coded by Wahlman.j on 5/02/14.
+--  Copyright (©) 2015 Wahlman.j, CyberGhost84 & Flipman6 All rights reserved.
 --  myProgressBar's incrementBy_(20)
 
 script AppDelegate
