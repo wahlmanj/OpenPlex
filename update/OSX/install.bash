@@ -392,6 +392,8 @@ cp removeauto.bash /usr/bin
 cp removeautobash.bash /usr/bin
 cp removecerts.bash /usr/bin
 cp removecertsbash.bash /usr/bin
+cp removepurge.bash /usr/bin
+cp removepurgebash.bash /usr/bin
 cp restart.bash /usr/bin
 cp restartbash.bash /usr/bin
 cp restoreatvsettings.bash /usr/bin
@@ -560,6 +562,8 @@ chmod +x /usr/bin/removeauto.bash
 chmod +x /usr/bin/removeautobash.bash
 chmod +x /usr/bin/removecerts.bash
 chmod +x /usr/bin/removecertsbash.bash
+chmod +x /usr/bin/removepurge.bash
+chmod +x /usr/bin/removepurgebash.bash
 chmod +x /usr/bin/restart.bash
 chmod +x /usr/bin/restartbash.bash
 chmod +x /usr/bin/restore.bash

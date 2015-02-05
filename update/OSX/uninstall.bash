@@ -94,6 +94,8 @@ rm /usr/bin/removeauto.bash
 rm /usr/bin/removeautobash.bash
 rm /usr/bin/removecerts.bash
 rm /usr/bin/removecertsbash.bash
+rm /usr/bin/removepurge.bash
+rm /usr/bin/removepurgebash.bash
 rm /usr/bin/restart.bash
 rm /usr/bin/restartbash.bash
 rm /usr/bin/restore.bash
