@@ -371,7 +371,7 @@ load certs</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="64D-wH-8Vu">
                                                 <font key="font" size="10" name="HelveticaNeue-Bold"/>
-                                                <mutableString key="title">OpenPlex automatically installs PlexConnect on your Mac, 
+                                                <string key="title">OpenPlex automatically installs PlexConnect on your Mac, 
 easily generates certificate files, updates, starts and stops 
 PlexConnect without Mac terminal. OpenPlex is a open 
 source app that will automatically properly install PlexConnect 
@@ -380,7 +380,7 @@ on your Mac to enable easily updates, generate any desired
 certificate file (trailers, wsj, or iMovie), hi-jack desired 
 Apple TV app (trailers, wsj, or iMovie), and update 
 PlexConnect automatically or on demand. 
-OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
+OpenPlex is running on up to Mac OS X 10.10 Yosemite.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -503,12 +503,12 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <button toolTip="Demonstration of app" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
-                                            <rect key="frame" x="232" y="224" width="72" height="25"/>
+                                            <rect key="frame" x="121" y="224" width="52" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
                                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </shadow>
-                                            <buttonCell key="cell" type="squareTextured" title="Demo Video" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" id="aIt-iG-KRl">
+                                            <buttonCell key="cell" type="squareTextured" title="Demo" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" id="aIt-iG-KRl">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
@@ -517,7 +517,7 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
                                             </connections>
                                         </button>
                                         <button toolTip="Check for App updates " verticalHuggingPriority="750" id="c4Z-9H-Fji">
-                                            <rect key="frame" x="112" y="224" width="52" height="25"/>
+                                            <rect key="frame" x="241" y="224" width="73" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LMO-Dl-0fP">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -528,7 +528,7 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
                                             </connections>
                                         </button>
                                         <button toolTip="Uninstall App" verticalHuggingPriority="750" id="jc0-4b-cID">
-                                            <rect key="frame" x="172" y="224" width="52" height="25"/>
+                                            <rect key="frame" x="181" y="224" width="52" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" title="Uninstall" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CE7-Ad-ROL">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -539,11 +539,11 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
                                             </connections>
                                         </button>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="8HK-XJ-acf">
-                                            <rect key="frame" x="112" y="211" width="52" height="12"/>
+                                            <rect key="frame" x="241" y="211" width="73" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Khw-gH-XPZ">
-                                            <rect key="frame" x="172" y="211" width="52" height="12"/>
+                                            <rect key="frame" x="181" y="211" width="52" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <box autoresizesSubviews="NO" borderType="line" id="6pt-Rh-BkW">
@@ -2087,6 +2087,20 @@ outside your local area network. </string>
                             </tabViewItem>
                         </tabViewItems>
                     </tabView>
+                    <button toolTip="Donate" id="1Rv-o5-XeP">
+                        <rect key="frame" x="300" y="7" width="42" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <shadow key="shadow">
+                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </shadow>
+                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="paypal-donate-button" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="NSa-uQ-F4U">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonhandlerdonate:" target="qo8-lj-syM" id="bJQ-fU-tO0"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="-1075.5" y="-1338.5"/>
@@ -2186,6 +2200,7 @@ outside your local area network. </string>
         <image name="grey" width="188" height="108"/>
         <image name="iMovie" width="188" height="108"/>
         <image name="logplex" width="36.479999542236328" height="36"/>
+        <image name="paypal-donate-button" width="500" height="117"/>
         <image name="quitplex" width="36.479999542236328" height="36"/>
         <image name="startplex" width="36" height="36"/>
         <image name="statusRed" width="460" height="460"/>

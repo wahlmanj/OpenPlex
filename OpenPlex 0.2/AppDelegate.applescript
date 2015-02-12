@@ -347,9 +347,10 @@ script AppDelegate
     end buttonhandlerOPwiki_
     
     on buttonhandlerdonate_(sender)
-        set theURL to "http://alturl.com/5js9g"
-        tell application "Safari" to make new document with properties {URL:theURL}
         set theURL to "http://alturl.com/j8xdb"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "sleep 1"
+        set theURL to "http://alturl.com/5js9g"
         tell application "Safari" to make new document with properties {URL:theURL}
         do shell script "show Safari"
     end buttonhandlerdonate_
