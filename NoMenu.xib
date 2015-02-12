@@ -502,51 +502,50 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="HMx-mb-qqB">
-                                            <rect key="frame" x="338" y="-3" width="253" height="48"/>
+                                        <button toolTip="Demonstration of app" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
+                                            <rect key="frame" x="232" y="224" width="72" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="251" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <button toolTip="OpenPlex Changelog" verticalHuggingPriority="750" id="ozn-4O-wgn">
-                                                        <rect key="frame" x="8" y="12" width="72" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" title="Changelog" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nr7-Hx-DAy">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system" size="10"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerOPchangelog:" target="qo8-lj-syM" id="rUG-KY-OEm"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button toolTip="OpenPlex Forum" verticalHuggingPriority="750" id="jDu-H2-Qbx">
-                                                        <rect key="frame" x="168" y="12" width="72" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" title="Forum" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nko-kU-9A8">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system" size="10"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerOPforum:" target="qo8-lj-syM" id="azs-6k-3wM"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button toolTip="OpenPlex Wiki" verticalHuggingPriority="750" id="OWa-pA-evZ">
-                                                        <rect key="frame" x="87" y="12" width="72" height="25"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" title="Wiki" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ipr-rH-Pxn">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system" size="10"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerOPwiki:" target="qo8-lj-syM" id="V8h-Hx-cqO"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </box>
+                                            <shadow key="shadow">
+                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="squareTextured" title="Demo Video" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" id="aIt-iG-KRl">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Check for App updates " verticalHuggingPriority="750" id="c4Z-9H-Fji">
+                                            <rect key="frame" x="112" y="224" width="52" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LMO-Dl-0fP">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlernewupdateoc:" target="qo8-lj-syM" id="B0E-dD-rh1"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Uninstall App" verticalHuggingPriority="750" id="jc0-4b-cID">
+                                            <rect key="frame" x="172" y="224" width="52" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" title="Uninstall" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CE7-Ad-ROL">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandleruninstall:" target="qo8-lj-syM" id="EVc-ts-oJ2"/>
+                                            </connections>
+                                        </button>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="8HK-XJ-acf">
+                                            <rect key="frame" x="112" y="211" width="52" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Khw-gH-XPZ">
+                                            <rect key="frame" x="172" y="211" width="52" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
                                         <box autoresizesSubviews="NO" borderType="line" id="6pt-Rh-BkW">
                                             <rect key="frame" x="390" y="62" width="201" height="77"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -599,50 +598,6 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <button toolTip="Demonstration of app" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
-                                            <rect key="frame" x="232" y="224" width="72" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <shadow key="shadow">
-                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            </shadow>
-                                            <buttonCell key="cell" type="squareTextured" title="Demo Video" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" id="aIt-iG-KRl">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
-                                            </connections>
-                                        </button>
-                                        <button toolTip="Check for App updates " verticalHuggingPriority="750" id="c4Z-9H-Fji">
-                                            <rect key="frame" x="112" y="224" width="52" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Update" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LMO-Dl-0fP">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlernewupdateoc:" target="qo8-lj-syM" id="B0E-dD-rh1"/>
-                                            </connections>
-                                        </button>
-                                        <button toolTip="Uninstall App" verticalHuggingPriority="750" id="jc0-4b-cID">
-                                            <rect key="frame" x="172" y="224" width="52" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Uninstall" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CE7-Ad-ROL">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="10"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandleruninstall:" target="qo8-lj-syM" id="EVc-ts-oJ2"/>
-                                            </connections>
-                                        </button>
-                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="8HK-XJ-acf">
-                                            <rect key="frame" x="112" y="211" width="52" height="12"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
-                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Khw-gH-XPZ">
-                                            <rect key="frame" x="172" y="211" width="52" height="12"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="NNf-yN-194">
                                             <rect key="frame" x="-40" y="151" width="176" height="115"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -657,6 +612,51 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</mutableString>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="HMx-mb-qqB">
+                                            <rect key="frame" x="338" y="5" width="253" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="1" y="1" width="251" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button toolTip="OpenPlex Changelog" verticalHuggingPriority="750" id="ozn-4O-wgn">
+                                                        <rect key="frame" x="8" y="12" width="72" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="squareTextured" title="Changelog" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nr7-Hx-DAy">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system" size="10"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="buttonhandlerOPchangelog:" target="qo8-lj-syM" id="rUG-KY-OEm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button toolTip="OpenPlex Forum" verticalHuggingPriority="750" id="jDu-H2-Qbx">
+                                                        <rect key="frame" x="168" y="12" width="72" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="squareTextured" title="Forum" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nko-kU-9A8">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system" size="10"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="buttonhandlerOPforum:" target="qo8-lj-syM" id="azs-6k-3wM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button toolTip="OpenPlex Wiki" verticalHuggingPriority="750" id="OWa-pA-evZ">
+                                                        <rect key="frame" x="87" y="12" width="72" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="squareTextured" title="Wiki" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ipr-rH-Pxn">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system" size="10"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="buttonhandlerOPwiki:" target="qo8-lj-syM" id="V8h-Hx-cqO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
                                     </subviews>
                                 </view>
                             </tabViewItem>
