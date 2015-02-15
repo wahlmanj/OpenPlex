@@ -4,7 +4,7 @@
 OpenPlex automatically installs PlexConnect on your Mac, easily generates certificate files, updates, starts and stops PlexConnect without Mac terminal. OpenPlex is a open source app that will automatically install PlexConnect by cloning PlexConnect into /Applications/PlexConnect on your Mac to enable easy updates, generate any desired certificate file (Trailers, WSJ or iMovie), hi-jack desired Apple TV app (Trailers, WSJ or iMovie), and update PlexConnect automatically or on demand. Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.10+ Yosemite.
 
 ========
-[![ScreenShot](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/VideoOpenPlex.png)](https://www.youtube.com/watch?v=BPHX3SXdaOI)
+[![ScreenShot](https://raw.githubusercontent.com/wahlmanj/OpenPlex/master/OpenPlexIcons/VideoOpenPlex.png)](https://www.youtube.com/watch?v=djKFtmeDu8U)
 =========
 [Wiki](https://github.com/wahlmanj/OpenPlex/wiki)
 =========

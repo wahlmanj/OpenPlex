@@ -116,7 +116,7 @@
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-722.5" y="-982.5"/>
+            <point key="canvasLocation" x="-700.5" y="-939.5"/>
         </window>
         <window title="Setup Plex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IPm-4I-Pv8">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" texturedBackground="YES"/>
@@ -152,7 +152,7 @@
                             <string key="title">
 Step 1:   Settings &gt; General &gt; Network &gt; Ethernet
 Step 2:   Configure DNS and set to "Manual"
-Step 3:   Enter you local ip adress as the DNS
+Step 3:   Enter your local ip adress as the DNS
 Step 4:   DONE</string>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -294,7 +294,7 @@ load certs</string>
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1149.5" y="-935"/>
+            <point key="canvasLocation" x="-1112.5" y="-892"/>
         </window>
         <customObject id="yA6-dK-NsI" userLabel="Application Delegate" customClass="ApplicationDelegate"/>
         <customObject id="Y8d-nb-MOE" userLabel="NoMenu" customClass="NoMenu">
@@ -410,7 +410,7 @@ load certs</string>
                                                             <action selector="buttonhandlerrestart:" target="qo8-lj-syM" id="g2e-F6-24p"/>
                                                         </connections>
                                                     </button>
-                                                    <button toolTip="Status OpenPlex" id="uJJ-OU-fph">
+                                                    <button toolTip="Quit OpenPlex" id="uJJ-OU-fph">
                                                         <rect key="frame" x="137" y="14" width="42" height="38"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <shadow key="shadow">
@@ -631,7 +631,7 @@ load certs</string>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <button toolTip="Demonstration of app" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
+                                        <button toolTip="Video demo of App" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="LUi-v7-nrx">
                                             <rect key="frame" x="204" y="161" width="71" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
@@ -671,7 +671,7 @@ OpenPlex is running on up to Mac OS X 10.10 Yosemite.</string>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="ubc-vM-829">
+                                        <button toolTip="Instructions" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="ubc-vM-829">
                                             <rect key="frame" x="281" y="160" width="32" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TEO-Fs-7LW">
@@ -1950,7 +1950,7 @@ Auto loader</string>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="erf-A8-lVw">
-                                            <rect key="frame" x="-10" y="115" width="171" height="154"/>
+                                            <rect key="frame" x="-6" y="115" width="171" height="154"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="WebConnect" id="chn-dq-L1O"/>
                                         </imageView>
@@ -2107,6 +2107,13 @@ outside your local area network. </string>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="noL-Vz-0Eh">
+                                            <rect key="frame" x="239" y="9" width="5" height="260"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -2211,7 +2218,7 @@ outside your local area network. </string>
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1053.5" y="-906.5"/>
+            <point key="canvasLocation" x="-700.5" y="-652.5"/>
         </window>
         <window title="Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="N4T-rg-1tH">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2239,7 +2246,7 @@ Step 5:   Follow Setup aTV PlexConnect and Certs guide.
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1237" y="-967"/>
+            <point key="canvasLocation" x="-1200" y="-607"/>
         </window>
     </objects>
     <resources>

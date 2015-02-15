@@ -257,7 +257,7 @@ script AppDelegate
     end buttonhandlerlog_
     
     on buttonhandlervideotut_(sender)
-        set theURL to "https://www.youtube.com/watch?v=BPHX3SXdaOI"
+        set theURL to "https://www.youtube.com/watch?v=djKFtmeDu8U"
         tell application "Safari" to make new document with properties {URL:theURL}
         do shell script "show Safari"
     end buttonhandlervideotut_
