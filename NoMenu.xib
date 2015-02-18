@@ -554,8 +554,8 @@ load certs</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="64D-wH-8Vu">
                                                 <font key="font" size="11" name="HelveticaNeue"/>
-                                                <mutableString key="title">OpenPlex is a open source app that will automatically install PlexConnect, easily generates certificate files,  updates, starts and stops PlexConnect without Mac terminal.
-Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnect automatically or on demand. OpenPlex is running on all OSX Versions.</mutableString>
+                                                <string key="title">OpenPlex is a open source app that will automatically install PlexConnect, easily generates certificate files,  updates, starts and stops PlexConnect without Mac terminal.
+Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnect automatically or on demand. OpenPlex is running on all OSX Versions.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -2054,7 +2054,7 @@ Auto loader</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="nTP-ey-lLv">
                                                 <font key="font" size="11" name="HelveticaNeue"/>
-                                                <string key="title">WebConnect is a way to managePlexConnect and  OS X using any device, on any Web browser, from  anywhere. Forward port 1234 on your router pointed  at your mac IP only if you need access from
+                                                <string key="title">WebConnect is a way to manage PlexConnect and  OS X using any device, on any Web browser, from  anywhere. Forward port 1234 on your router pointed  at your mac IP only if you need access from
 outside your local area network. </string>
                                                 <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
