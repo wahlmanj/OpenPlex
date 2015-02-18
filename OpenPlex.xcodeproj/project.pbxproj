@@ -56,6 +56,8 @@
 		DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA501972DCA00099EE6E /* WebConnect.png */; };
 		DBAFDA751972DCA00099EE6E /* WSJ.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA511972DCA00099EE6E /* WSJ.png */; };
 		DBD4AF371A06227500480691 /* OP-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBD4AF361A06227500480691 /* OP-Logo.png */; };
+		DBE18B1F1A9489F1006FB774 /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE18B1D1A9489F1006FB774 /* wifi.png */; };
+		DBE18B201A9489F1006FB774 /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE18B1E1A9489F1006FB774 /* world.png */; };
 		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
 		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
 		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
@@ -121,6 +123,8 @@
 		DBAFDA501972DCA00099EE6E /* WebConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnect.png; sourceTree = "<group>"; };
 		DBAFDA511972DCA00099EE6E /* WSJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WSJ.png; sourceTree = "<group>"; };
 		DBD4AF361A06227500480691 /* OP-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OP-Logo.png"; sourceTree = "<group>"; };
+		DBE18B1D1A9489F1006FB774 /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
+		DBE18B1E1A9489F1006FB774 /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
 		DD4F7C0413C30F9F00825C6E /* OpenPlex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenPlex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -211,6 +215,8 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DBE18B1D1A9489F1006FB774 /* wifi.png */,
+				DBE18B1E1A9489F1006FB774 /* world.png */,
 				CEE3B2901A63725F00D31E5D /* backup.png */,
 				CEFD1C621A62397400396D26 /* Web_Connect.png */,
 				CEF5F3631A5317EC00BFE681 /* demo.png */,
@@ -437,6 +443,7 @@
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
+				DBE18B1F1A9489F1006FB774 /* wifi.png in Resources */,
 				DBAFDA591972DCA00099EE6E /* icon_<16x16>.png in Resources */,
 				DBAFDA631972DCA00099EE6E /* OpenPlex.png in Resources */,
 				CE0B59EB19D609A200A5C392 /* black.png in Resources */,
@@ -456,6 +463,7 @@
 				DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */,
 				DBAFDA6E1972DCA00099EE6E /* stopplex.png in Resources */,
 				5D5151991A6F909C007C390C /* updateStatus.scpt in Resources */,
+				DBE18B201A9489F1006FB774 /* world.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
 				DBAFDA6D1972DCA00099EE6E /* startplex.png in Resources */,
 				DB837E981A12732600DED213 /* opicon_<256x256>.png in Resources */,
