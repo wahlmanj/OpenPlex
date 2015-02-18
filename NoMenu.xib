@@ -2112,7 +2112,7 @@ outside your local area network. </string>
                         </connections>
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0Tc-cR-gIk">
-                        <rect key="frame" x="598" y="3" width="25" height="19"/>
+                        <rect key="frame" x="598" y="5" width="25" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="statusRed" id="zTe-7P-OO3"/>
                     </imageView>
