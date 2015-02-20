@@ -633,7 +633,7 @@ Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnec
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EQw-W9-n28">
                                             <rect key="frame" x="163" y="221" width="77" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 0.4.2" id="9TM-x0-WJ2">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 0.5" id="9TM-x0-WJ2">
                                                 <font key="font" size="12" name="HelveticaNeue-Bold"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -889,7 +889,7 @@ Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnec
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="TFh-hb-Nyp">
                                                         <rect key="frame" x="22" y="19" width="66" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wahlman.j :" id="1JC-zw-BM8">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="* Wahlman.j :" id="1JC-zw-BM8">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -998,7 +998,7 @@ installed!</string>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="rm4-oD-1pu">
                                                             <font key="font" size="9" name="HelveticaNeue-Bold"/>
                                                             <string key="title">* Please note :    If PIL \ Pillow is not installed 
-  properly CyberGhost84 theme will 
+  properly the marked theme's will 
   not function.</string>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
