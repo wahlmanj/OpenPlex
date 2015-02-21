@@ -38,4 +38,9 @@ fi
 if [ ! -f "/usr/local/bin/pip" ]; then
       sudo easy_install pip
 fi
+
+# install Pillow if easy_install or easy_install-2.7 fails
+if [ ! -f "/usr/local/bin/pip" ]; then
+sudo /usr/local/bin/pip install pillow
+fi
 sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future pip install Pillow
