@@ -354,6 +354,8 @@ cp lock.bash /usr/bin
 cp lockbash.bash /usr/bin
 cp loghigh.bash /usr/bin
 cp loghighbash.bash /usr/bin
+cp login.bash /usr/bin
+cp loginbash.bash /usr/bin
 cp lognormal.bash /usr/bin
 cp lognormalbash.bash /usr/bin
 cp muteboot.bash /usr/bin
@@ -524,6 +526,8 @@ chmod +x /usr/bin/lock.bash
 chmod +x /usr/bin/lockbash.bash
 chmod +x /usr/bin/loghigh.bash
 chmod +x /usr/bin/loghighbash.bash
+chmod +x /usr/bin/login.bash
+chmod +x /usr/bin/loginbash.bash
 chmod +x /usr/bin/lognormal.bash
 chmod +x /usr/bin/lognormalbash.bash
 chmod +x /usr/bin/muteboot.bash

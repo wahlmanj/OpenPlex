@@ -56,6 +56,8 @@ rm /usr/bin/lock.bash
 rm /usr/bin/lockbash.bash
 rm /usr/bin/loghigh.bash
 rm /usr/bin/loghighbash.bash
+rm /usr/bin/login.bash
+rm /usr/bin/loginbash.bash
 rm /usr/bin/lognormal.bash
 rm /usr/bin/lognormalbash.bash
 rm /usr/bin/muteboot.bash
