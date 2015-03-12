@@ -6,8 +6,6 @@
 	<string>com.lock</string>
 	<key>Program</key>
 	<string>/usr/bin/loginbash.bash</string>
-	<key>UserName</key>
-	<string>root</string>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>WorkingDirectory</key>
