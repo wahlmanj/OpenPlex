@@ -2,8 +2,8 @@
 
 if pgrep "Plex\ Media\ Server" >/dev/null 2>&1
 then
-/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine
+open -a ScreenSaverEngine
 else
-open /Applications/Plex\ Media\ Server.app
-/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine
+/usr/bin/osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Plex Media Server.app", hidden:true}'
+open -a ScreenSaverEngine
 fi
