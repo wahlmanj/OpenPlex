@@ -331,6 +331,8 @@ cp backup.bash /usr/bin
 cp backupbash.bash /usr/bin
 cp backupatvsettings.bash /usr/bin
 cp backupatvsettingsbash.bash /usr/bin
+cp bootlock.bash /usr/bin
+cp bootlockbash.bash /usr/bin
 cp createautobash.bash /usr/bin
 cp createcert.bash /usr/bin
 cp createcertbash.bash /usr/bin
@@ -502,6 +504,8 @@ chmod +x /usr/bin/backupatvsettings.bash
 chmod +x /usr/bin/backupatvsettingsbash.bash
 chmod +x /usr/bin/backup.bash
 chmod +x /usr/bin/backupbash.bash
+chmod +x /usr/bin/bootlock.bash
+chmod +x /usr/bin/bootlockbash.bash
 chmod +x /usr/bin/createauto.bash
 chmod +x /usr/bin/createautobash.bash
 chmod +x /usr/bin/createcert.bash

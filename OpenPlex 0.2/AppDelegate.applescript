@@ -2445,6 +2445,17 @@ script AppDelegate
     
     --Extras Tab
     
+    on buttonhandlerbootlock_(sender)
+        tell application "Finder"
+            if not (exists file "Library:LaunchAgents:com.lock.plist" of the startup disk) then
+                do shell script "bootlockbash.bash"
+                display notification "Automatic app loading & lock screen enabled..." with title "OpenPlex Status"
+                else
+                display notification "Automatic app loading & lock screen already enabled..." with title "OpenPlex Status"
+            end if
+        end tell
+    end buttonhandlerbootlock_
+    
     on buttonhandlercustomicons_(sender)
         try
             do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"

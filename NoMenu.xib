@@ -1682,12 +1682,12 @@ Step 8:   Reboot aTV to load remaining icons</string>
                                         <button verticalHuggingPriority="750" id="TSC-G7-cd0">
                                             <rect key="frame" x="345" y="155" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title="Mute Boot" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a9C-vz-jgn">
+                                            <buttonCell key="cell" type="squareTextured" title="Boot Lock" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a9C-vz-jgn">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlermuteboot:" target="qo8-lj-syM" id="eMu-ec-bMT"/>
+                                                <action selector="buttonhandlerbootlock:" target="qo8-lj-syM" id="L93-pu-WMG"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="30p-iH-Xpi">
@@ -1731,12 +1731,12 @@ Auto updates</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="hvy-Wx-hYc">
-                                            <rect key="frame" x="436" y="154" width="81" height="28"/>
+                                            <rect key="frame" x="436" y="154" width="152" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Lp8-Og-0Gn">
                                                 <font key="font" metaFont="smallSystem"/>
-                                                <string key="title">Disable Boot
-Startup Sound</string>
+                                                <string key="title">Load all apps @ boot &amp; lock
+screen. Auto login required</string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>

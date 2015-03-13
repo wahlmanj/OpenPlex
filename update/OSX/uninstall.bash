@@ -28,6 +28,8 @@ rm /usr/bin/backupatvsettings.bash
 rm /usr/bin/backupatvsettingsbash.bash
 rm /usr/bin/backup.bash
 rm /usr/bin/backupbash.bash
+rm /usr/bin/bootlock.bash
+rm /usr/bin/bootlockbash.bash
 rm /usr/bin/createauto.bash
 rm /usr/bin/createautobash.bash
 rm /usr/bin/createcert.bash
