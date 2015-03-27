@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
@@ -1235,11 +1235,11 @@ installed!</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="FPG-BR-krf">
-                                            <rect key="frame" x="9" y="74" width="314" height="154"/>
+                                            <rect key="frame" x="9" y="60" width="314" height="168"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="HbW-4s-O26">
                                                 <font key="font" metaFont="smallSystem"/>
-                                                <string key="title">Step 1:   Pick an icon that matches your aTV iOS 
+                                                <mutableString key="title">Step 1:   Pick an icon that matches your aTV iOS 
               revision.                                                     
 Step 2:   Unplug internet from your router.      
 Step 3:   Reset all settings on aTV.      
@@ -1248,7 +1248,8 @@ Step 5:   Send trailers.cer to aTV.
 Step 6:   plug internet back into your router.
 Step 7:   Once Plex Icon is "Stuck" on aTV reinstall 
               your theme.
-Step 8:   Reboot aTV to load remaining icons</string>
+Step 8:   Reinstall theme &amp; Reboot aTV to load 
+              remaining icons</mutableString>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -1349,6 +1350,17 @@ Step 8:   Reboot aTV to load remaining icons</string>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button toolTip="Icon Demo" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="AIg-zX-LFP">
+                                            <rect key="frame" x="246" y="240" width="32" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DJM-jk-iue">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlericontut:" target="qo8-lj-syM" id="1vh-Vz-lB6"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>

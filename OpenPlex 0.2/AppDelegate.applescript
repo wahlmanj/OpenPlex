@@ -1962,7 +1962,13 @@ script AppDelegate
         set animated to false
     end buttonhandlerwsj_
     
-    --Hijack Tab
+    --Plex Icon Tab
+    
+    on buttonhandlericontut_(sender)
+        set theURL to "https://www.youtube.com/watch?v=Sq9I16TnjUc"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "show Safari"
+    end buttonhandlericontut_
     
     on buttonhandlerios7greyplexicon_(sender)
         do shell script "stopbash.bash"
