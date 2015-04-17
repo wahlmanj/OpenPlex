@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
             <connections>
                 <outlet property="dark" destination="v0d-JZ-lJQ" id="0gN-cv-1Ix"/>
-                <outlet property="guideIP" destination="jui-yr-icb" id="Hsb-TA-sIJ"/>
-                <outlet property="guideURL" destination="w78-e3-0cw" id="xgW-Wi-rUi"/>
+                <outlet property="guideIP" destination="xBf-vW-dTa" id="TPk-Jy-hbK"/>
+                <outlet property="guideURL" destination="xvz-lX-s5C" id="SH1-kZ-AkM"/>
                 <outlet property="loginButtonOutlet" destination="9Pg-ab-Qr5" id="Ehd-eS-dsv"/>
                 <outlet property="myplexButtonOutlet" destination="SYR-ml-fG0" id="onf-Uc-5aa"/>
                 <outlet property="settingsButtonOutlet" destination="Dwt-ah-Yeq" id="EIN-Vh-1nP"/>
@@ -294,7 +294,7 @@ load certs</string>
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1112.5" y="-892"/>
+            <point key="canvasLocation" x="-1062.5" y="-690"/>
         </window>
         <customObject id="yA6-dK-NsI" userLabel="Application Delegate" customClass="ApplicationDelegate"/>
         <customObject id="Y8d-nb-MOE" userLabel="NoMenu" customClass="NoMenu">
@@ -308,12 +308,12 @@ load certs</string>
                 <outlet property="baaProgressBar" destination="0kk-ZE-YHc" id="2Db-aZ-vJu"/>
                 <outlet property="falcoProgressBar" destination="jUM-5A-WWW" id="dVw-Sz-lah"/>
                 <outlet property="ghostProgressBar" destination="Nw6-V6-WzL" id="lt5-RM-8Mu"/>
-                <outlet property="imovieProgressBar" destination="Eon-Nc-UQ2" id="BKS-mi-1z7"/>
+                <outlet property="imovieProgressBar" destination="jvv-SD-3vp" id="xfh-G0-9cA"/>
                 <outlet property="stoffezProgressBar" destination="4yu-f2-Sqr" id="slK-2o-Zvz"/>
-                <outlet property="trailersProgressBar" destination="7gJ-AY-ILj" id="sth-Sv-K6R"/>
+                <outlet property="trailersProgressBar" destination="vJN-vg-zes" id="PZK-pF-58T"/>
                 <outlet property="uninstallProgressBar" destination="Khw-gH-XPZ" id="bc2-Te-f9k"/>
                 <outlet property="wahlmanjProgressBar" destination="PO0-xs-ZfN" id="u6A-no-Jzr"/>
-                <outlet property="wsjProgressBar" destination="meW-5w-4mC" id="39L-aK-Twp"/>
+                <outlet property="wsjProgressBar" destination="IBh-bs-AqF" id="Jdo-yN-449"/>
             </connections>
         </customObject>
         <window title="Setup" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="att-0O-MIU">
@@ -580,11 +580,11 @@ Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnec
                                             </textFieldCell>
                                         </textField>
                                         <button toolTip="Instructions" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="ubc-vM-829">
-                                            <rect key="frame" x="249" y="3" width="32" height="26"/>
+                                            <rect key="frame" x="247" y="1" width="36" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TEO-Fs-7LW">
+                                            <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TEO-Fs-7LW">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="makeKeyAndOrderFront:" target="N4T-rg-1tH" id="7Wz-uj-Lnp"/>
@@ -1017,122 +1017,202 @@ installed!</string>
                                     <rect key="frame" x="10" y="33" width="597" height="272"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <box autoresizesSubviews="NO" borderType="line" id="f5W-gq-Pvm">
-                                            <rect key="frame" x="125" y="131" width="346" height="99"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="oy1-60-1Wz">
+                                            <rect key="frame" x="289" y="218" width="245" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
-                                                <rect key="frame" x="1" y="1" width="344" height="83"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <button toolTip="Hijack/Create Trailers certs" id="5UB-Bt-hHX">
-                                                        <rect key="frame" x="27" y="24" width="75" height="49"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Trailers" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="ceg-XY-KJY">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlertrailers:" target="qo8-lj-syM" id="QYf-ii-4lc"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button toolTip="Hijack/Create iMovie certs" id="Jd8-l8-qzt">
-                                                        <rect key="frame" x="133" y="24" width="75" height="49"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="iMovie" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="YYw-qp-aXH">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerimovie:" target="qo8-lj-syM" id="Rnv-vq-OjI"/>
-                                                        </connections>
-                                                    </button>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="OwQ-br-pMD">
-                                                        <rect key="frame" x="44" y="7" width="40" height="17"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Trailers" id="D1P-id-JGc">
-                                                            <font key="font" metaFont="system" size="10"/>
-                                                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="pBo-Be-uor">
-                                                        <rect key="frame" x="154" y="7" width="36" height="17"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iMovie" id="zRs-o4-d5E">
-                                                            <font key="font" metaFont="system" size="10"/>
-                                                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="JDj-fP-rPK">
-                                                        <rect key="frame" x="252" y="7" width="49" height="17"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WSJ Live" id="aEC-mt-Hhq">
-                                                            <font key="font" metaFont="system" size="10"/>
-                                                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <button toolTip="Hijack/Create WSJ certs" id="vbC-sc-5LJ">
-                                                        <rect key="frame" x="239" y="24" width="75" height="49"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="WSJ" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="QzW-Rr-LlS">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                        <connections>
-                                                            <action selector="buttonhandlerwsj:" target="qo8-lj-syM" id="PxA-qd-toN"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </box>
-                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="oTp-bM-7xw">
-                                            <rect key="frame" x="128" y="100" width="340" height="5"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Configure your aTV for PlexConnect :" id="sCG-Rf-pGN">
+                                                <font key="font" size="11" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Tng-JT-YOp">
+                                            <rect key="frame" x="286" y="97" width="245" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Install the SSL certificate on your aTV :" id="cu0-DK-H9q">
+                                                <font key="font" size="11" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="xBf-vW-dTa">
+                                            <rect key="frame" x="289" y="131" width="261" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Local IP OUTLET" id="PRN-bW-sd3">
+                                                <font key="font" size="12" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="Uv4-Jn-LXI">
+                                            <rect key="frame" x="288" y="91" width="222" height="5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="hEY-BS-7j7">
-                                            <rect key="frame" x="180" y="232" width="242" height="17"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wmA-ua-h3v">
+                                            <rect key="frame" x="289" y="156" width="254" height="65"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Generate Certs / Choose App on aTV :" id="Btu-20-y9q">
-                                                <font key="font" metaFont="system"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="hg0-Ex-4EM">
+                                                <font key="font" metaFont="system" size="10"/>
+                                                <string key="title">
+Step 1:   Settings &gt; General &gt; Network &gt; Ethernet
+Step 2:   Configure DNS and set to "Manual"
+Step 3:   Enter your local ip adress as the DNS
+Step 4:   DONE</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="gnS-Cm-7hO">
+                                            <rect key="frame" x="288" y="212" width="222" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="8bF-V5-VhD">
+                                            <rect key="frame" x="177" y="243" width="242" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Generate Certs / Choose App on aTV :" id="Sam-Pq-aif">
+                                                <font key="font" size="13" name="HelveticaNeue-Bold"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="7gJ-AY-ILj">
-                                            <rect key="frame" x="152" y="117" width="75" height="12"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="3xx-sb-18D">
+                                            <rect key="frame" x="289" y="13" width="295" height="72"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
-                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="Eon-Nc-UQ2">
-                                            <rect key="frame" x="261" y="117" width="75" height="12"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
-                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="bar" id="meW-5w-4mC">
-                                            <rect key="frame" x="367" y="117" width="77" height="12"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
-                                        <button verticalHuggingPriority="750" id="ojI-Qy-PWY">
-                                            <rect key="frame" x="293" y="49" width="89" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="squareTextured" title=" Setup Guide" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gNM-gw-doR">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="XFP-QH-Erf">
                                                 <font key="font" metaFont="system" size="10"/>
+                                                <string key="title">Step 1:   Settings &gt; General
+Step 2:   Send Data To Apple - set to "No"
+Step 3:   Press the "Play" button on "Send Data To Apple"
+Step 4:   Add cert URL to the aTV to add your profile</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="qXr-EY-4g3">
+                                            <rect key="frame" x="169" y="241" width="257" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="xvz-lX-s5C">
+                                            <rect key="frame" x="286" y="7" width="316" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cert URL OUTLET" id="wKE-xk-wp4">
+                                                <font key="font" size="12" name="HelveticaNeue-Bold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button toolTip="Hijack/Create Trailers certs" id="CnX-M4-Tsl">
+                                            <rect key="frame" x="53" y="165" width="89" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Trailers" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="QB3-hm-yLA">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="makeKeyAndOrderFront:" target="IPm-4I-Pv8" id="YdK-ZE-gt8"/>
+                                                <action selector="buttonhandlertrailers:" target="qo8-lj-syM" id="IlR-df-D4a"/>
                                             </connections>
                                         </button>
-                                        <imageView id="Png-Th-eVE">
-                                            <rect key="frame" x="215" y="22" width="70" height="81"/>
+                                        <button toolTip="Hijack/Create iMovie certs" id="5v6-Ee-gxh">
+                                            <rect key="frame" x="53" y="94" width="89" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="atv" id="4eI-hJ-fWq"/>
-                                        </imageView>
+                                            <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="iMovie" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="uLP-Gz-RS9">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerimovie:" target="qo8-lj-syM" id="lIk-79-vXv"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Zb6-lb-ErZ">
+                                            <rect key="frame" x="155" y="184" width="49" height="13"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Trailers" id="g78-9y-7Zh">
+                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Yyq-tp-q1r">
+                                            <rect key="frame" x="159" y="111" width="45" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iMovie" id="xQG-2j-t4H">
+                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="vJN-vg-zes">
+                                            <rect key="frame" x="27" y="180" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="jvv-SD-3vp">
+                                            <rect key="frame" x="27" y="111" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="r8d-5X-Qdl">
+                                            <rect key="frame" x="155" y="39" width="58" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WSJ Live" id="jJ1-Wc-xZJ">
+                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box autoresizesSubviews="NO" borderType="line" id="Mj0-or-kx1">
+                                            <rect key="frame" x="279" y="121" width="284" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="1" y="1" width="282" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box autoresizesSubviews="NO" borderType="line" id="BFW-Eo-4el">
+                                            <rect key="frame" x="279" y="-3" width="284" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView">
+                                                <rect key="frame" x="1" y="1" width="282" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="IBh-bs-AqF">
+                                            <rect key="frame" x="27" y="39" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="c6K-tW-5XP">
+                                            <rect key="frame" x="537" y="213" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="help" bezelStyle="helpButton" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="TGZ-n3-aJe">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlercertstut:" target="qo8-lj-syM" id="rDX-K8-tOY"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Hijack/Create WSJ certs" id="AQF-UI-E6E">
+                                            <rect key="frame" x="53" y="22" width="89" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="WSJ" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="6as-Lf-PhI">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerwsj:" target="qo8-lj-syM" id="Xh7-oo-ZRX"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -1239,7 +1319,7 @@ installed!</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="HbW-4s-O26">
                                                 <font key="font" metaFont="smallSystem"/>
-                                                <mutableString key="title">Step 1:   Pick an icon that matches your aTV iOS 
+                                                <string key="title">Step 1:   Pick an icon that matches your aTV iOS 
               revision.                                                     
 Step 2:   Unplug internet from your router.      
 Step 3:   Reset all settings on aTV.      
@@ -1249,7 +1329,7 @@ Step 6:   plug internet back into your router.
 Step 7:   Once Plex Icon is "Stuck" on aTV reinstall 
               your theme.
 Step 8:   Reinstall theme &amp; Reboot aTV to load 
-              remaining icons</mutableString>
+              remaining icons</string>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
