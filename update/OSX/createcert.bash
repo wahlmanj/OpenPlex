@@ -34,7 +34,7 @@ while : ; do
     sleep 1
 done
 sed -i '' 's/www.icloud.com/trailers.apple.com/g' Settings.cfg
-sed -i '' 's/secure.marketwatch.com/trailers.apple.com/g' Settings.cfg
+sed -i '' 's/video-api-secure.wsj.com/trailers.apple.com/g' Settings.cfg
 
 restartbash.bash
 

@@ -144,7 +144,7 @@ class MyHandler(BaseHTTPRequestHandler):
                         'watchdisneychannel.go.com': 'DisneyChannel_V2',
                         'watchdisneyxd.go.com': 'DisneyXD_V2',
                         'ssl.weather.com': 'weatherchannel',
-                        'secure.marketwatch.com': 'wsj',
+                        'video-api-secure.wsj.com': 'WSJ_Live-V2',
                         'trailers.apple.com': 'movie-trailers',
                         'secure.showtimeanytime.com': 'com.showtime.appletv',
                         'vimeo.com': 'vimeo',

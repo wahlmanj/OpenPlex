@@ -442,7 +442,7 @@ script AppDelegate
                     end try
                     try
                         set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
+                        set theString to quoted form of "wsj"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -571,7 +571,7 @@ script AppDelegate
                         end try
                         try
                             set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                            set theString to quoted form of "marketwatch"
+                            set theString to quoted form of "wsj"
                             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -675,7 +675,7 @@ script AppDelegate
                     end try
                     try
                         set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
+                        set theString to quoted form of "wsj"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -804,7 +804,7 @@ script AppDelegate
                         end try
                         try
                             set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                            set theString to quoted form of "marketwatch"
+                            set theString to quoted form of "wsj"
                             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -908,7 +908,7 @@ script AppDelegate
                     end try
                     try
                         set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
+                        set theString to quoted form of "wsj"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -1037,7 +1037,7 @@ script AppDelegate
                         end try
                         try
                             set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                            set theString to quoted form of "marketwatch"
+                            set theString to quoted form of "wsj"
                             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -1141,7 +1141,7 @@ script AppDelegate
                     end try
                     try
                         set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
+                        set theString to quoted form of "wsj"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -1270,7 +1270,7 @@ script AppDelegate
                         end try
                         try
                             set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                            set theString to quoted form of "marketwatch"
+                            set theString to quoted form of "wsj"
                             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -1374,7 +1374,7 @@ script AppDelegate
                     end try
                     try
                         set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
+                        set theString to quoted form of "wsj"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -1503,7 +1503,7 @@ script AppDelegate
                         end try
                         try
                             set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                            set theString to quoted form of "marketwatch"
+                            set theString to quoted form of "wsj"
                             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -1607,7 +1607,7 @@ script AppDelegate
                     end try
                     try
                         set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                        set theString to quoted form of "marketwatch"
+                        set theString to quoted form of "wsj"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -1736,7 +1736,7 @@ script AppDelegate
                         end try
                         try
                             set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                            set theString to quoted form of "marketwatch"
+                            set theString to quoted form of "wsj"
                             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
@@ -2195,7 +2195,7 @@ script AppDelegate
                 
                 try
                     set fileAsPOSIX to (POSIX path of "/Applications/PlexConnect/assets/certificates/trailers.cer")
-                    set theString to quoted form of "marketwatch"
+                    set theString to quoted form of "wsj"
                     set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                     if searchResult is "2" then
                         display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"

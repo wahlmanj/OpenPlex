@@ -13,19 +13,19 @@ startbash.bash
 file="${PlexConnectPath}/assets/certificates/trailers.pem"
 if [ -f "$file" ]; then
     echo 'SSL certificate '$file' found. Skipping' 
-    echo 'Settings.cfg changed to hijack secure.marketwatch.com'
-    echo 'Upload profile to ATV using this url http://secure.marketwatch.com/trailers.cer'
+    echo 'Settings.cfg changed to hijack video-api-secure.wsj.com'
+    echo 'Upload profile to ATV using this url http://video-api-secure.wsj.com/trailers.cer'
 else
 
 ## Trailers - hostname is secure.marketwatch.com
 ## certificate good for 10 years
 
-openssl req -new -nodes -newkey rsa:2048 -out ./assets/certificates/trailers.pem -keyout ./assets/certificates/trailers.key -x509 -days 3650 -subj "/C=US/CN=secure.marketwatch.com"
+openssl req -new -nodes -newkey rsa:2048 -out ./assets/certificates/trailers.pem -keyout ./assets/certificates/trailers.key -x509 -days 3650 -subj "/C=US/CN=video-api-secure.wsj.com"
 openssl x509 -in ./assets/certificates/trailers.pem -outform der -out ./assets/certificates/trailers.cer && cat ./assets/certificates/trailers.key >> ./assets/certificates/trailers.pem
 
 echo 'Generating WSJ certs'
-echo 'Settings.cfg changed to hijack secure.marketwatch.com'
-echo 'Upload profile to ATV using this url http://secure.marketwatch.com/trailers.cer'
+echo 'Settings.cfg changed to hijack video-api-secure.wsj.com'
+echo 'Upload profile to ATV using this url http://video-api-secure.wsj.com/trailers.cer'
 
 fi
 
@@ -34,8 +34,8 @@ while : ; do
     echo "Pausing until file exists."
     sleep 1
 done
-sed -i '' 's/trailers.apple.com/secure.marketwatch.com/g' Settings.cfg
-sed -i '' 's/www.icloud.com/secure.marketwatch.com/g' Settings.cfg
+sed -i '' 's/trailers.apple.com/video-api-secure.wsj.com/g' Settings.cfg
+sed -i '' 's/www.icloud.com/video-api-secure.wsj.com/g' Settings.cfg
 
 restartbash.bash
 
