@@ -487,6 +487,10 @@ script AppDelegate
                             do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                         end if
                     end try
+                    try
+                        -- load custom certs if in use
+                        do shell script "restartbash.bash"
+                    end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
@@ -719,6 +723,10 @@ script AppDelegate
                             delay 0
                             do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                         end if
+                    end try
+                    try
+                        -- load custom certs if in use
+                        do shell script "restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
@@ -953,6 +961,10 @@ script AppDelegate
                             do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                         end if
                     end try
+                    try
+                        -- load custom certs if in use
+                        do shell script "restartbash.bash"
+                    end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
@@ -1185,6 +1197,10 @@ script AppDelegate
                             delay 0
                             do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                         end if
+                    end try
+                    try
+                        -- load custom certs if in use
+                        do shell script "restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
@@ -1419,6 +1435,10 @@ script AppDelegate
                             do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                         end if
                     end try
+                    try
+                        -- load custom certs if in use
+                        do shell script "restartbash.bash"
+                    end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
@@ -1651,6 +1671,10 @@ script AppDelegate
                             delay 0
                             do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                         end if
+                    end try
+                    try
+                        -- load custom certs if in use
+                        do shell script "restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
