@@ -7,6 +7,8 @@ while : ; do
     sleep 4
     restart.bash
 done
+stop.bash
+sleep 3
 cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP/ATVSettingsauto.cfg
 cd /Applications/plexconnect_BACKUP
 grep -B2 myplex_auth ATVSettings.cfg | sed '/^--$/d' > myplex.temp
