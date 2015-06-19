@@ -125,7 +125,7 @@ class MyHandler(BaseHTTPRequestHandler):
             if 'User-Agent' in self.headers and \
                'AppleTV' in self.headers['User-Agent']:
                 
-                # serve the plex icon
+                # serve the plex icon Okemo codename for storeFront iOS 7 (8)+
                 if self.headers['Host'] == 'a1.phobos.apple.com' and self.path.endswith(".png"):
                     # possible icon
                     basename = path.basename(self.path)
