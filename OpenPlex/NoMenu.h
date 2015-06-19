@@ -31,5 +31,7 @@
 - (IBAction)myplexButtonAction:(id)sender;
 @property (strong) IBOutlet NSButton *settingsButtonOutlet;
 - (IBAction)settingButtonAction:(id)sender;
+@property (strong) IBOutlet NSButton *interceptButtonOutlet;
+- (IBAction)interceptButtonAction:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
                 <outlet property="dark" destination="v0d-JZ-lJQ" id="0gN-cv-1Ix"/>
                 <outlet property="guideIP" destination="xBf-vW-dTa" id="TPk-Jy-hbK"/>
                 <outlet property="guideURL" destination="xvz-lX-s5C" id="SH1-kZ-AkM"/>
+                <outlet property="interceptButtonOutlet" destination="seo-j1-Pn6" id="hYV-FM-hg8"/>
                 <outlet property="loginButtonOutlet" destination="9Pg-ab-Qr5" id="Ehd-eS-dsv"/>
                 <outlet property="myplexButtonOutlet" destination="SYR-ml-fG0" id="onf-Uc-5aa"/>
                 <outlet property="settingsButtonOutlet" destination="Dwt-ah-Yeq" id="EIN-Vh-1nP"/>
@@ -889,7 +890,7 @@ Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnec
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="TFh-hb-Nyp">
                                                         <rect key="frame" x="22" y="19" width="66" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="* Wahlman.j :" id="1JC-zw-BM8">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wahlman.j :" id="1JC-zw-BM8">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1108,7 +1109,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             </textFieldCell>
                                         </textField>
                                         <button toolTip="Hijack/Create Trailers certs" id="CnX-M4-Tsl">
-                                            <rect key="frame" x="53" y="165" width="89" height="51"/>
+                                            <rect key="frame" x="53" y="184" width="84" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="Trailers" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="QB3-hm-yLA">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1119,7 +1120,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             </connections>
                                         </button>
                                         <button toolTip="Hijack/Create iMovie certs" id="5v6-Ee-gxh">
-                                            <rect key="frame" x="53" y="94" width="89" height="51"/>
+                                            <rect key="frame" x="53" y="129" width="84" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="iMovie" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="uLP-Gz-RS9">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1130,7 +1131,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Zb6-lb-ErZ">
-                                            <rect key="frame" x="155" y="184" width="49" height="13"/>
+                                            <rect key="frame" x="155" y="203" width="49" height="13"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Trailers" id="g78-9y-7Zh">
                                                 <font key="font" metaFont="cellTitle"/>
@@ -1139,7 +1140,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Yyq-tp-q1r">
-                                            <rect key="frame" x="159" y="111" width="45" height="16"/>
+                                            <rect key="frame" x="155" y="146" width="45" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iMovie" id="xQG-2j-t4H">
                                                 <font key="font" metaFont="cellTitle"/>
@@ -1148,15 +1149,15 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             </textFieldCell>
                                         </textField>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="vJN-vg-zes">
-                                            <rect key="frame" x="27" y="180" width="16" height="16"/>
+                                            <rect key="frame" x="27" y="201" width="16" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="jvv-SD-3vp">
-                                            <rect key="frame" x="27" y="111" width="16" height="16"/>
+                                            <rect key="frame" x="26" y="146" width="16" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="r8d-5X-Qdl">
-                                            <rect key="frame" x="155" y="39" width="58" height="16"/>
+                                            <rect key="frame" x="155" y="91" width="58" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WSJ Live" id="jJ1-Wc-xZJ">
                                                 <font key="font" metaFont="cellTitle"/>
@@ -1185,7 +1186,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="IBh-bs-AqF">
-                                            <rect key="frame" x="27" y="39" width="16" height="16"/>
+                                            <rect key="frame" x="27" y="91" width="16" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="c6K-tW-5XP">
@@ -1200,7 +1201,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             </connections>
                                         </button>
                                         <button toolTip="Hijack/Create WSJ certs" id="AQF-UI-E6E">
-                                            <rect key="frame" x="53" y="22" width="89" height="51"/>
+                                            <rect key="frame" x="53" y="74" width="84" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="WSJ" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="6as-Lf-PhI">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1210,6 +1211,26 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                                 <action selector="buttonhandlerwsj:" target="qo8-lj-syM" id="Xh7-oo-ZRX"/>
                                             </connections>
                                         </button>
+                                        <button toolTip="Hijack/Create WSJ certs" id="seo-j1-Pn6">
+                                            <rect key="frame" x="53" y="18" width="84" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="custom" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="hM6-QX-eqV">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="interceptButtonAction:" target="-2" id="V8H-DG-G2h"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Jy-H6-vX6">
+                                            <rect key="frame" x="155" y="35" width="49" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Custom" id="dPN-aD-6FP">
+                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -2346,16 +2367,17 @@ Step 6:   Reboot aTV then try Hijacked app
         <image name="OpenPlex" width="1000" height="1000"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
         <image name="Remote" width="80" height="318"/>
-        <image name="Trailers" width="188" height="108"/>
-        <image name="WSJ" width="188" height="108"/>
+        <image name="Trailers" width="188" height="106"/>
+        <image name="WSJ" width="188" height="106"/>
         <image name="WebConnect" width="512" height="512"/>
         <image name="Web_Connect" width="2048" height="1536"/>
         <image name="atv" width="228" height="147"/>
         <image name="backup" width="256" height="256"/>
         <image name="black" width="188" height="108"/>
+        <image name="custom" width="186" height="108"/>
         <image name="gradient" width="188" height="108"/>
         <image name="grey" width="188" height="108"/>
-        <image name="iMovie" width="188" height="108"/>
+        <image name="iMovie" width="188" height="106"/>
         <image name="logplex" width="36.479999542236328" height="36"/>
         <image name="paypal-donate-button" width="500" height="117"/>
         <image name="quitplex" width="36.479999542236328" height="36"/>

@@ -347,4 +347,11 @@
     [self checkOnOffStates];
     [self setButtonStatus];
 }
+
+- (IBAction)interceptButtonAction:(NSButton *)sender {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"intercept" ofType:@"scpt"];
+    NSURL* url = [NSURL fileURLWithPath:path];NSDictionary* errors = [NSDictionary dictionary];
+    NSAppleScript* appleScript = [[NSAppleScript alloc] initWithContentsOfURL:url error:&errors];
+    [appleScript executeAndReturnError:nil];
+}
 @end
