@@ -4,8 +4,9 @@ sleep 4
 while : ; do
     [[ -f "/Applications/PlexConnect/ATVSettings.cfg" ]] && break
     echo "Pausing until ATVSettings.cfg exists."
-    sleep 1
-    restart.bash
+    stop.bash
+    sleep 2
+    start.bash
 done
 cp /Applications/PlexConnect/ATVSettings.cfg /Applications/plexconnect_BACKUP/ATVSettingsauto.cfg
 cd /Applications/plexconnect_BACKUP
