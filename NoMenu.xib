@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
@@ -569,17 +569,6 @@ load certs</string>
                                                 <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="8Of-nv-ugR">
-                                            <rect key="frame" x="3" y="34" width="310" height="97"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="64D-wH-8Vu">
-                                                <font key="font" size="11" name="HelveticaNeue"/>
-                                                <string key="title">OpenPlex is a open source app that will automatically install PlexConnect, easily generates certificate files,  updates, starts and stops PlexConnect without Mac terminal.
-Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnect automatically or on demand. OpenPlex is running on all OSX Versions.</string>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <button toolTip="Instructions" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="ubc-vM-829">
                                             <rect key="frame" x="247" y="1" width="36" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -693,6 +682,23 @@ Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnec
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="BRG-2k-a4Z">
+                                            <rect key="frame" x="3" y="25" width="385" height="112"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="LRV-A1-Keg">
+                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <string key="title">Step 1:   Install a theme.
+Step 2:   Install CLT then Pillow (only required once).      
+Step 3:   Choose app to hijack on aTV.
+Step 4:   Restore settings or extras or skip this step. 
+Step 5:   Follow aTV Setup &amp; Certs guide.
+Step 6:   Reboot aTV then try Hijacked app
+
+</string>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -1226,7 +1232,7 @@ Step 4:   Add cert URL to the aTV to add your profile</string>
                                             <rect key="frame" x="155" y="35" width="49" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Custom" id="dPN-aD-6FP">
-                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                                 <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -2084,7 +2090,7 @@ Auto loader</string>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerinstallwc10:" target="qo8-lj-syM" id="hTD-fy-nSr"/>
+                                                            <action selector="buttonhandlerinstallwc10beta:" target="qo8-lj-syM" id="RJh-hA-13q"/>
                                                         </connections>
                                                     </button>
                                                     <button verticalHuggingPriority="750" id="ZvE-Ac-Wtc">
@@ -2110,9 +2116,9 @@ Auto loader</string>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Y99-9a-4fX">
-                                                        <rect key="frame" x="27" y="39" width="53" height="13"/>
+                                                        <rect key="frame" x="23" y="39" width="60" height="13"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.10 CLT" id="TOk-Sv-Sdt">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.10+ CLT" id="TOk-Sv-Sdt">
                                                             <font key="font" metaFont="system" size="10"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2128,9 +2134,9 @@ Auto loader</string>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Jsn-PX-ANG">
-                                                        <rect key="frame" x="113" y="39" width="38" height="13"/>
+                                                        <rect key="frame" x="98" y="39" width="68" height="13"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.10+" id="KIz-RJ-0Oq">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.10.5 only*" id="KIz-RJ-0Oq">
                                                             <font key="font" metaFont="system" size="10"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2139,18 +2145,18 @@ Auto loader</string>
                                                     <button verticalHuggingPriority="750" id="5nA-PR-IF5">
                                                         <rect key="frame" x="176" y="12" width="71" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="squareTextured" title="Select" bezelStyle="texturedSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fKT-aZ-7QZ">
+                                                        <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fKT-aZ-7QZ">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="buttonhandlerwcview:" target="qo8-lj-syM" id="Trb-Wf-0gJ"/>
+                                                            <action selector="buttonhandlerinstallwc10:" target="qo8-lj-syM" id="S4h-wr-7eb"/>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Pqd-h6-fFW">
-                                                        <rect key="frame" x="194" y="38" width="35" height="14"/>
+                                                        <rect key="frame" x="174" y="38" width="75" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Views" id="o6V-Ah-AlN">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.10-10.11+" id="o6V-Ah-AlN">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -2202,28 +2208,24 @@ Auto loader</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jBp-dj-ixA">
-                                            <rect key="frame" x="8" y="9" width="264" height="82"/>
+                                            <rect key="frame" x="8" y="18" width="264" height="90"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="nTP-ey-lLv">
                                                 <font key="font" size="11" name="HelveticaNeue"/>
                                                 <string key="title">WebConnect is a way to manage PlexConnect and  OS X using any device, on any Web browser, from  anywhere. Forward port 1234 on your router pointed  at your mac IP only if you need access from
-outside your local area network. </string>
+outside your local area network. Click TV logo for
+views.</string>
                                                 <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="noL-Vz-0Eh">
-                                            <rect key="frame" x="285" y="9" width="5" height="82"/>
+                                            <rect key="frame" x="285" y="9" width="5" height="108"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="erf-A8-lVw">
-                                            <rect key="frame" x="3" y="112" width="160" height="145"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="WebConnect" id="chn-dq-L1O"/>
-                                        </imageView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="UAs-EC-ioT">
                                             <rect key="frame" x="214" y="119" width="45" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2244,6 +2246,20 @@ outside your local area network. </string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="world" id="hsI-lA-6dA"/>
                                         </imageView>
+                                        <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="gr8-6K-DLI">
+                                            <rect key="frame" x="22" y="111" width="135" height="151"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <shadow key="shadow">
+                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </shadow>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="WebConnect" imagePosition="overlaps" alignment="left" imageScaling="proportionallyDown" id="nS5-69-CO3">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerwcview:" target="qo8-lj-syM" id="Xhq-qA-TKC"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -2331,34 +2347,33 @@ outside your local area network. </string>
             </view>
             <point key="canvasLocation" x="-700.5" y="-652.5"/>
         </window>
-        <window title="Instructions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="N4T-rg-1tH">
+        <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="N4T-rg-1tH">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
-            <rect key="contentRect" x="1337" y="575" width="421" height="144"/>
+            <rect key="contentRect" x="1337" y="575" width="421" height="263"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="jne-1C-dtb">
-                <rect key="frame" x="0.0" y="0.0" width="421" height="144"/>
+                <rect key="frame" x="0.0" y="-2" width="421" height="263"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nDV-MH-bpo">
-                        <rect key="frame" x="18" y="12" width="385" height="112"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aZm-Eh-xyI">
+                        <rect key="frame" x="55" y="38" width="310" height="97"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="gf5-tY-y0o">
-                            <font key="font" metaFont="cellTitle"/>
-                            <string key="title">Step 1:   Install a theme.
-Step 2:   Install CLT then Pillow (only required once).      
-Step 3:   Choose app to hijack on aTV.
-Step 4:   Restore settings or extras or skip this step. 
-Step 5:   Follow Setup aTV PlexConnect and Certs guide.
-Step 6:   Reboot aTV then try Hijacked app
-
-</string>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Xp6-AJ-OJD">
+                            <font key="font" size="11" name="HelveticaNeue"/>
+                            <string key="title">OpenPlex is a open source app that will automatically install PlexConnect, easily generates certificate files,  updates, starts and stops PlexConnect without Mac terminal.
+Hijack desired Apple TV app (Trailers, WJS, or iMovie), and  update PlexConnect automatically or on demand. OpenPlex is running on all OSX Versions.</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="C33-gh-Tz5">
+                        <rect key="frame" x="87" y="130" width="246" height="154"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OP-Logo" id="vFu-8G-GLf"/>
+                    </imageView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1149.5" y="-588"/>
+            <point key="canvasLocation" x="-1174.5" y="-318.5"/>
         </window>
     </objects>
     <resources>
