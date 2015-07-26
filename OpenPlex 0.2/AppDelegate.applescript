@@ -337,7 +337,7 @@ script AppDelegate
     end buttonhandlerloginitemOP_
     
     on buttonhandlerOPforum_(sender)
-        set theURL to "https://forums.plex.tv/index.php/topic/108332-openplex-osx-app/"
+        set theURL to "https://forums.plex.tv/discussion/108332/openplex-osx-app"
         tell application "Safari" to make new document with properties {URL:theURL}
     end buttonhandlerOPforum_
     
