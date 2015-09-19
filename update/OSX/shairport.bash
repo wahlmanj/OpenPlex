@@ -23,6 +23,9 @@ fi
 cd /Applications
 export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 git clone https://github.com/abrasive/shairport.git
+## link openssl to allow make to work
+brew link openssl --force
+
 cd /Applications/shairport
 make
 cd /Applications/shairport
