@@ -390,6 +390,8 @@ cp quit /usr/bin
 cp quit.bash /usr/bin
 cp quititunes.bash /usr/bin
 cp quititunesbash.bash /usr/bin
+cp quitpms.bash /usr/bin
+cp quitpmsbash.bash /usr/bin
 cp reboot.bash /usr/bin
 cp rebootbash.bash /usr/bin
 cp removeauto.bash /usr/bin
@@ -564,6 +566,8 @@ chmod +x /usr/bin/quit
 chmod +x /usr/bin/quit.bash
 chmod +x /usr/bin/quititunes.bash
 chmod +x /usr/bin/quititunesbash.bash
+chmod +x /usr/bin/quitpms.bash
+chmod +x /usr/bin/quitpmsbash.bash
 chmod +x /usr/bin/reboot.bash
 chmod +x /usr/bin/rebootbash.bash
 chmod +x /usr/bin/removeauto.bash
@@ -693,6 +697,7 @@ chmod 4755 /usr/bin/tv.bash
 chmod 4755 /usr/bin/utorrent.bash
 chmod 4755 /usr/bin/itunes.bash
 chmod 4755 /usr/bin/quititunes.bash
+chmod 4755 /usr/bin/quitpms.bash
 
 ## OS X
 chmod 4755 /usr/bin/trash.bash
