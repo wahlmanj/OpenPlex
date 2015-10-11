@@ -1,4 +1,5 @@
 start.bash
+sleep 4
 stop.bash
 while : ; do
     [[ -f "/Applications/PlexConnect/ATVSettings.cfg" ]] && break
