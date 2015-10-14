@@ -5,7 +5,7 @@ stop.bash
 sleep 4
 trashbase.bash
 cd /Applications
-git clone https://github.com/Wahlmanj2/PlexConnect.git
+git clone https://github.com/Wahlmanj3/PlexConnect.git
 mkdir -p /Applications/PlexConnect/update/OSX
 cd __HOME__/Library/Application\ Support/OpenPlex
 # fetch changes, git stores them in FETCH_HEAD
