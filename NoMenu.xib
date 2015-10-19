@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="15A278b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A278b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
@@ -98,7 +99,7 @@
                     <box autoresizesSubviews="NO" borderType="line" id="bfz-g2-4Fp">
                         <rect key="frame" x="11" y="16" width="207" height="175"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView">
+                        <view key="contentView" id="3Sh-nJ-DuX">
                             <rect key="frame" x="1" y="1" width="205" height="159"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -223,7 +224,7 @@
                                         <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="140-Sy-WyQ">
                                             <rect key="frame" x="390" y="14" width="201" height="112"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="w1R-bh-7FM">
                                                 <rect key="frame" x="1" y="1" width="199" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -351,7 +352,7 @@
                                         <box autoresizesSubviews="NO" borderType="line" id="6pt-Rh-BkW">
                                             <rect key="frame" x="390" y="187" width="201" height="77"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="f4j-Zq-7sj">
                                                 <rect key="frame" x="1" y="1" width="199" height="61"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -619,7 +620,7 @@ Step 6:   Reboot aTV then try Hijacked app.
                                         <box autoresizesSubviews="NO" transparent="YES" borderType="line" id="0QD-x6-mHL">
                                             <rect key="frame" x="231" y="5" width="339" height="226"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="uCO-wj-9FN">
                                                 <rect key="frame" x="1" y="1" width="337" height="210"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -851,7 +852,7 @@ Step 6:   Reboot aTV then try Hijacked app.
                                         <box autoresizesSubviews="NO" transparent="YES" borderType="line" id="qwI-Dz-G8L">
                                             <rect key="frame" x="16" y="7" width="207" height="226"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="6UO-IS-XqP">
                                                 <rect key="frame" x="1" y="1" width="205" height="210"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -1101,7 +1102,7 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                         <box autoresizesSubviews="NO" borderType="line" id="Mj0-or-kx1">
                                             <rect key="frame" x="279" y="121" width="284" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="x9K-iY-60c">
                                                 <rect key="frame" x="1" y="1" width="282" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <animations/>
@@ -1113,7 +1114,7 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                         <box autoresizesSubviews="NO" borderType="line" id="BFW-Eo-4el">
                                             <rect key="frame" x="279" y="-3" width="284" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="yJr-XL-ODg">
                                                 <rect key="frame" x="1" y="1" width="282" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <animations/>
@@ -1297,6 +1298,10 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="HbW-4s-O26">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <mutableString key="title">Step 1:   Check that PlexConnect is running already.
+Step 2:   Stop PlexConnect and edit Settings.cfg
+               (iMovie for iOS 8 default) change 'icon' in
+               Settings.cfg to match icon URL. View
+               storeFront in Extras tab to locate icon URL.
 Step 2:   Pick an icon that matches your aTV iOS 
                revision.                                                     
 Step 3:   Unplug internet from your router.     
@@ -1310,7 +1315,7 @@ Step 7:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fb8-iL-eTI">
-                                            <rect key="frame" x="9" y="20" width="242" height="54"/>
+                                            <rect key="frame" x="9" y="0.0" width="242" height="54"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="8hA-Mp-cEk">
@@ -2101,7 +2106,7 @@ Auto loader</string>
                                         <box autoresizesSubviews="NO" borderType="line" id="DGe-2T-5ho">
                                             <rect key="frame" x="319" y="5" width="267" height="126"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="6mK-Tx-yGt">
                                                 <rect key="frame" x="1" y="1" width="265" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -2250,10 +2255,10 @@ Auto loader</string>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="nTP-ey-lLv">
                                                 <font key="font" size="11" name="HelveticaNeue"/>
-                                                <mutableString key="title">WebConnect is a way to manage PlexConnect and  OS X using any device, on any Web browser, from  anywhere. Forward port 1234 on your router pointed  at your mac IP ONLY if you need access from
+                                                <string key="title">WebConnect is a way to manage PlexConnect and  OS X using any device, on any Web browser, from  anywhere. Forward port 1234 on your router pointed  at your mac IP ONLY if you need access from
 outside your local area network. Click TV Plex logo
 for views. If your local IP address changes you must
-reinstall WebConnect again.</mutableString>
+reinstall WebConnect again.</string>
                                                 <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -2381,7 +2386,7 @@ reinstall WebConnect again.</mutableString>
                     <box autoresizesSubviews="NO" borderType="line" id="szp-qA-MBL">
                         <rect key="frame" x="11" y="16" width="207" height="175"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView">
+                        <view key="contentView" id="ppU-Wo-fi5">
                             <rect key="frame" x="1" y="1" width="205" height="159"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -2429,9 +2434,9 @@ reinstall WebConnect again.</mutableString>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Xp6-AJ-OJD">
                             <font key="font" size="11" name="HelveticaNeue"/>
-                            <mutableString key="title">OpenPlex is a open source app that will automatically install PlexConnect, easily generates certificate files,  updates, starts and stops PlexConnect without Mac terminal.
+                            <string key="title">OpenPlex is a open source app that will automatically install PlexConnect, easily generates certificate files,  updates, starts and stops PlexConnect without Mac terminal.
 Hijack desired Apple TV app (Trailers, WJS, iMovie, etc),
-and update PlexConnect automatically or on demand. OpenPlex is running on all OSX Versions from (10.6.x+).</mutableString>
+and update PlexConnect automatically or on demand. OpenPlex is running on all OSX Versions from (10.6.x+).</string>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -2445,7 +2450,7 @@ and update PlexConnect automatically or on demand. OpenPlex is running on all 
                     <box autoresizesSubviews="NO" borderType="line" id="3cb-jU-M9Z">
                         <rect key="frame" x="17" y="22" width="333" height="119"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <view key="contentView">
+                        <view key="contentView" id="N1p-bY-9WM">
                             <rect key="frame" x="1" y="1" width="331" height="103"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <animations/>
