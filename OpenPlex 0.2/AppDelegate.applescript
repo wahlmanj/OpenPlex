@@ -1341,7 +1341,7 @@ script AppDelegate
     on buttonhandlerwahlmanjdev_(sender)
         tell wahlmanjProgressBar to startAnimation:me -- another way
         set animated to true
-        display notification "Installing Wahlman.J-Dev Theme..." with title "OpenPlex Status"
+        display notification "Installing Wahlman.J Theme..." with title "OpenPlex Status"
         delay 0
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
@@ -1352,7 +1352,7 @@ script AppDelegate
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
                 end if
                 do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/wahlmanj3/PlexConnect.git"
-                display notification "Wahlman.J's-Dev Theme has been installed..." with title "OpenPlex Status"
+                display notification "Wahlman.J's Theme has been installed..." with title "OpenPlex Status"
                 delay 0
                 do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
@@ -2008,11 +2008,16 @@ script AppDelegate
     
     on buttonhandlerios7greyplexicon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+            do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
@@ -2020,11 +2025,16 @@ script AppDelegate
     
     on buttonhandlerios7blackplexicon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+                do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
@@ -2032,11 +2042,16 @@ script AppDelegate
     
     on buttonhandlerios7gradientplexicon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+                do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
@@ -2044,11 +2059,16 @@ script AppDelegate
     
     on buttonhandlerios7plexconnecticon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+                do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
@@ -2056,11 +2076,16 @@ script AppDelegate
     
     on buttonhandlerios8greyplexicon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+                do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
@@ -2068,11 +2093,16 @@ script AppDelegate
     
     on buttonhandlerios8blackplexicon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+                do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
@@ -2080,11 +2110,16 @@ script AppDelegate
     
     on buttonhandlerios8gradientplexicon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+                do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
@@ -2092,11 +2127,14 @@ script AppDelegate
     
     on buttonhandlerios8plexconnecticon_(sender)
         do shell script "stopbash.bash"
-        do shell script "cp /Applications/PlexConnect/update/OSX/WebServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/DNSServer.py /Applications/PlexConnect"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@1080.png /Applications/PlexConnect/assets/thumbnails"
-        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@720.png /Applications/PlexConnect/assets/thumbnails"
-        delay 8
+        tell application "Finder"
+            if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
+                do shell script "mkdir /Applications/PlexConnect/assets/icons"
+            end if
+        end tell
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@1080.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@720.png /Applications/PlexConnect/assets/icons"
+        delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0

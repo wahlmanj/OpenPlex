@@ -30,7 +30,6 @@
 		CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */; };
 		CEBEDE911A31473100F60D15 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBEDE901A31473100F60D15 /* update.png */; };
 		CEE3B2911A63725F00D31E5D /* backup.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE3B2901A63725F00D31E5D /* backup.png */; };
-		CEF5F3641A5317EC00BFE681 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF5F3631A5317EC00BFE681 /* demo.png */; };
 		CEFD1C631A62397400396D26 /* Web_Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFD1C621A62397400396D26 /* Web_Connect.png */; };
 		DB3778FA19F852C00036C9BB /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = DB3778F919F852C00036C9BB /* status.png */; };
 		DB837E941A12732600DED213 /* opicon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8D1A12732600DED213 /* opicon_<16x16>.png */; };
@@ -99,7 +98,6 @@
 		CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirPlayIcon.png; sourceTree = "<group>"; };
 		CEBEDE901A31473100F60D15 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
 		CEE3B2901A63725F00D31E5D /* backup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backup.png; sourceTree = "<group>"; };
-		CEF5F3631A5317EC00BFE681 /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo.png; sourceTree = "<group>"; };
 		CEFD1C621A62397400396D26 /* Web_Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Web_Connect.png; sourceTree = "<group>"; };
 		DB3778F919F852C00036C9BB /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
 		DB837E8D1A12732600DED213 /* opicon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<16x16>.png"; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				DBE18B1E1A9489F1006FB774 /* world.png */,
 				CEE3B2901A63725F00D31E5D /* backup.png */,
 				CEFD1C621A62397400396D26 /* Web_Connect.png */,
-				CEF5F3631A5317EC00BFE681 /* demo.png */,
 				CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */,
 				CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */,
 				DB837E8D1A12732600DED213 /* opicon_<16x16>.png */,
@@ -444,7 +441,6 @@
 				DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */,
 				DBAFDA6F1972DCA00099EE6E /* Trailers.png in Resources */,
 				DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */,
-				CEF5F3641A5317EC00BFE681 /* demo.png in Resources */,
 				DB3778FA19F852C00036C9BB /* status.png in Resources */,
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
