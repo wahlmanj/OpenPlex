@@ -2017,6 +2017,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/grey/icon@720.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
@@ -2034,6 +2035,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/black/icon@720.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
@@ -2051,6 +2053,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/gradient/icon@720.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
@@ -2068,6 +2071,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios7/plex/icon@720.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
@@ -2085,6 +2089,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/grey/icon@720.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
@@ -2102,6 +2107,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/black/icon@720.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
@@ -2119,6 +2125,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/gradient/icon@720.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
@@ -2134,6 +2141,9 @@ script AppDelegate
         end tell
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@1080.png /Applications/PlexConnect/assets/icons"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/ios8/plex/icon@720.png /Applications/PlexConnect/assets/icons"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/WebServer.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
+        do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
         do shell script "startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
