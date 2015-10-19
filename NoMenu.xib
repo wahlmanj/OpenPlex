@@ -738,7 +738,7 @@ Step 6:   Reboot aTV then try Hijacked app.
                                                         <rect key="frame" x="132" y="103" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <animations/>
-                                                        <buttonCell key="cell" type="squareTextured" title="Preview" bezelStyle="texturedSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="br9-jU-isD">
+                                                        <buttonCell key="cell" type="squareTextured" title="Preview" bezelStyle="texturedSquare" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="br9-jU-isD">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system" size="10"/>
                                                         </buttonCell>
@@ -1764,7 +1764,7 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             <rect key="frame" x="345" y="227" width="80" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Unavailable" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EGb-Mo-D8m">
+                                            <buttonCell key="cell" type="squareTextured" title="UAS" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EGb-Mo-D8m">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="10"/>
                                             </buttonCell>
@@ -2189,7 +2189,7 @@ Auto loader</string>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Pqd-h6-fFW">
-                                                        <rect key="frame" x="174" y="38" width="75" height="14"/>
+                                                        <rect key="frame" x="181" y="38" width="62" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10.10-10.11" id="o6V-Ah-AlN">
