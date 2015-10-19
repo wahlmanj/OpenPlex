@@ -368,7 +368,7 @@
                                                             <action selector="loginButtonAction:" target="-2" id="4TE-tK-WUF"/>
                                                         </connections>
                                                     </button>
-                                                    <button toolTip="OS X Yosemite DarkMode " verticalHuggingPriority="750" id="v0d-JZ-lJQ">
+                                                    <button toolTip="OS X DarkMode " verticalHuggingPriority="750" id="v0d-JZ-lJQ">
                                                         <rect key="frame" x="18" y="12" width="68" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <animations/>
@@ -428,7 +428,7 @@
                                                 <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="5vs-J5-W16"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="Instructions" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="ubc-vM-829">
+                                        <button toolTip="About OpenPlex" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="ubc-vM-829">
                                             <rect key="frame" x="247" y="1" width="36" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
@@ -562,7 +562,7 @@ Step 6:   Reboot aTV then try Hijacked app.
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button toolTip="View OpenPlex version (commit)" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="WlK-Yw-9oh">
+                                        <button toolTip="View current OpenPlex version (commit)" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="WlK-Yw-9oh">
                                             <rect key="frame" x="165" y="214" width="68" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
@@ -820,7 +820,7 @@ Step 6:   Reboot aTV then try Hijacked app.
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <animations/>
                                                     </progressIndicator>
-                                                    <button toolTip="Install Wahlman.j Theme" verticalHuggingPriority="750" id="U5s-tm-ggR">
+                                                    <button toolTip="Wahlman.j Preview" verticalHuggingPriority="750" id="U5s-tm-ggR">
                                                         <rect key="frame" x="132" y="13" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <animations/>
@@ -888,7 +888,7 @@ installed!</string>
                                                             <action selector="buttonhandlerpillowinstaller:" target="qo8-lj-syM" id="QLN-KA-58L"/>
                                                         </connections>
                                                     </button>
-                                                    <button toolTip="Command Line Tools" verticalHuggingPriority="750" id="QDR-nS-DeV">
+                                                    <button toolTip="Install Command Line Tools" verticalHuggingPriority="750" id="QDR-nS-DeV">
                                                         <rect key="frame" x="14" y="95" width="74" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <animations/>
@@ -1133,7 +1133,7 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                         </progressIndicator>
-                                        <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="c6K-tW-5XP">
+                                        <button toolTip="Cert upload demo" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="c6K-tW-5XP">
                                             <rect key="frame" x="537" y="213" width="25" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
@@ -1157,7 +1157,7 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                                 <action selector="buttonhandlerwsj:" target="qo8-lj-syM" id="Xh7-oo-ZRX"/>
                                             </connections>
                                         </button>
-                                        <button toolTip="Hijack/Create WSJ certs" id="seo-j1-Pn6">
+                                        <button toolTip="Hijack/Create Custom certs" id="seo-j1-Pn6">
                                             <rect key="frame" x="53" y="18" width="84" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
@@ -1179,7 +1179,7 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                                 <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yIY-D4-bEW">
+                                        <imageView toolTip="Use original remote only!" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yIY-D4-bEW">
                                             <rect key="frame" x="543" y="74" width="12" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
@@ -1426,7 +1426,7 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button toolTip="Icon Demo" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="AIg-zX-LFP">
+                                        <button toolTip="Icon upload demo" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="AIg-zX-LFP">
                                             <rect key="frame" x="246" y="240" width="32" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
@@ -2300,7 +2300,7 @@ reinstall WebConnect again.</string>
                                             <animations/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="world" id="hsI-lA-6dA"/>
                                         </imageView>
-                                        <button toolTip="Start PlexConnect" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="gr8-6K-DLI">
+                                        <button toolTip="Click for WebConnect views" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="gr8-6K-DLI">
                                             <rect key="frame" x="22" y="111" width="135" height="151"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <shadow key="shadow">
