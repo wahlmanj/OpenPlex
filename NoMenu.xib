@@ -1292,36 +1292,36 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="FPG-BR-krf">
-                                            <rect key="frame" x="9" y="60" width="314" height="168"/>
+                                            <rect key="frame" x="9" y="32" width="314" height="196"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="HbW-4s-O26">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <mutableString key="title">Step 1:   Check that PlexConnect is running already.
-Step 2:   Stop PlexConnect and edit Settings.cfg
-               (iMovie for iOS 8 default) change 'icon' in
-               Settings.cfg to match icon URL. View
-               storeFront in Extras tab to locate icon URL.
-Step 2:   Pick an icon that matches your aTV iOS 
-               revision.                                                     
-Step 3:   Unplug internet from your router.     
-Step 4:   Reset all settings on aTV.      
-Step 5:   Change aTV DNS to your                 PlexConnect Host.
-Step 6:   Plug internet back into your router.
-Step 7:   Once Plex Icon is "Stuck" on aTV reinstall 
+Step 2:   Click an icon that matches your aTV iOS 
+               revision before moving to step 3.   
+Step 3:   Stop PlexConnect and edit Settings.cfg
+               (iMovie iOS 8 is default) change 'icon' string 
+               in Settings.cfg to match desired icon URL. 
+               View storeFront in Extras tab to locate icon 
+               URL that matches iOS. Start PlexConnect.                                                  
+Step 4:   Unplug internet from your router.     
+Step 5:   Reset all settings on aTV.      
+Step 6:   Change aTV DNS to your PlexConnect Host.
+Step 7:   Plug internet back into your router.
+Step 8:   Once Plex Icon is "Stuck" on aTV reinstall 
                your desired theme.</mutableString>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fb8-iL-eTI">
-                                            <rect key="frame" x="9" y="0.0" width="242" height="54"/>
+                                            <rect key="frame" x="9" y="1" width="283" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="8hA-Mp-cEk">
                                                 <font key="font" size="10" name="HelveticaNeue-Bold"/>
-                                                <string key="title">* You can only change iMovie icon on iOS 5-7 
-   not Trailers or WSJ.
+                                                <string key="title">* iMovie can be changed on iOS 5-7 not Trailers or WSJ.
    On iOS 8 you can change all three icons.</string>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
