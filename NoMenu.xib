@@ -484,16 +484,6 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EQw-W9-n28">
-                                            <rect key="frame" x="163" y="221" width="77" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 0.5" id="9TM-x0-WJ2">
-                                                <font key="font" size="12" name="HelveticaNeue-Bold"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <button toolTip="Check for App updates " verticalHuggingPriority="750" id="c4Z-9H-Fji">
                                             <rect key="frame" x="255" y="169" width="73" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -572,6 +562,21 @@ Step 6:   Reboot aTV then try Hijacked app.
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <button toolTip="Video demo of App" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="WlK-Yw-9oh">
+                                            <rect key="frame" x="165" y="214" width="68" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <shadow key="shadow">
+                                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </shadow>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Version 0.5" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" id="17N-T2-M0U">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerversion:" target="qo8-lj-syM" id="zAf-Hp-RUb"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                 </view>
@@ -1297,7 +1302,7 @@ Step 4:   Enter cert URL to the aTV to upload cert</string>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="HbW-4s-O26">
                                                 <font key="font" metaFont="smallSystem"/>
-                                                <mutableString key="title">Step 1:   Check that PlexConnect is running already.
+                                                <string key="title">Step 1:   Check that PlexConnect is running already.
 Step 2:   Click an icon that matches your aTV iOS 
                revision before moving to step 3.   
 Step 3:   Stop PlexConnect and edit Settings.cfg
@@ -1310,7 +1315,7 @@ Step 5:   Reset all settings on aTV.
 Step 6:   Change aTV DNS to your PlexConnect Host.
 Step 7:   Plug internet back into your router.
 Step 8:   Once Plex Icon is "Stuck" on aTV reinstall 
-               your desired theme.</mutableString>
+               your desired theme.</string>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>

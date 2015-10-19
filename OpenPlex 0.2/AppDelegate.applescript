@@ -51,6 +51,11 @@ script AppDelegate
     
     --Settings Tab
     
+    on buttonhandlerversion_(sender)
+    set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git reset --hard"
+    display notification "Current Version " & x
+    end buttonhandlerversion_
+    
     on buttonhandlerupdate_(sender)
         tell application "Finder"
             try
