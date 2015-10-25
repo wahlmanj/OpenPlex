@@ -131,6 +131,12 @@ FOLDER2=`echo "$QUERY_STRING" | sed -n 's/^.*folder2=\([^&]*\).*$/\1/p' | sed "s
           echo "</pre>"
           ;;
 
+          pmpbash)
+          echo "Output of pmpbash :<pre>"
+          /usr/bin/pmpbash.bash
+          echo "</pre>"
+          ;;
+
           pmsbash)
           echo "Output of pmsbash :<pre>"
           /usr/bin/pmsbash.bash
@@ -251,11 +257,23 @@ FOLDER2=`echo "$QUERY_STRING" | sed -n 's/^.*folder2=\([^&]*\).*$/\1/p' | sed "s
           echo "</pre>"
           ;;
 
+          quitpmpbash)
+          echo "Output of quitpmpbash :<pre>"
+          /usr/bin/quitpmpbash.bash
+          echo "</pre>"
+          ;;
+
+          quitphtbash)
+          echo "Output of quitphtbash :<pre>"
+          /usr/bin/quitphtbash.bash
+          echo "</pre>"
+          ;;
+
 	esac
     fi
-     
+
     # print out the form
-     
+
     # page header
     echo "<p>"
     echo "<center>"
@@ -306,7 +324,10 @@ FOLDER2=`echo "$QUERY_STRING" | sed -n 's/^.*folder2=\([^&]*\).*$/\1/p' | sed "s
     echo "<input type=radio name=cmd value=pmsscanbash> Update PMS Library <br>"
     echo "<input type=radio name=cmd value=pmsbash> Start Plex Media Server <br>"
     echo "<input type=radio name=cmd value=quitpmsbash> Quit Plex Media Server<br>"
+    echo "<input type=radio name=cmd value=pmpbash> Start Plex Media Player <br>"
+    echo "<input type=radio name=cmd value=quitpmpbash> Quit Plex Media Player<br>"
     echo "<input type=radio name=cmd value=phtbash> Start Plex Home Theater <br>"
+    echo "<input type=radio name=cmd value=quitphtbash> Quit Plex Home Theater<br>"
     echo "<input type=radio name=cmd value=tvbash> Start TeamViewer <br>"
     echo "<input type=radio name=cmd value=utorrentbash> Start uTorrent <br>"
     echo "<input type=radio name=cmd value=itunesbash> Start iTunes <br>"

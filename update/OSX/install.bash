@@ -377,6 +377,8 @@ cp plexweblist.bash /usr/bin
 cp plexweblistbash.bash /usr/bin
 cp plexweblistwan.bash /usr/bin
 cp plexweblistwanbash.bash /usr/bin
+cp pmp.bash /usr/bin
+cp pmpbash.bash /usr/bin
 cp pms.bash /usr/bin
 cp pmsscan.bash /usr/bin
 cp pmsscanbash.bash /usr/bin
@@ -390,6 +392,10 @@ cp quit /usr/bin
 cp quit.bash /usr/bin
 cp quititunes.bash /usr/bin
 cp quititunesbash.bash /usr/bin
+cp quitpht.bash /usr/bin
+cp quitphtbash.bash /usr/bin
+cp quitpmp.bash /usr/bin
+cp quitpmpbash.bash /usr/bin
 cp quitpms.bash /usr/bin
 cp quitpmsbash.bash /usr/bin
 cp reboot.bash /usr/bin
@@ -552,6 +558,8 @@ chmod +x /usr/bin/plexweblist.bash
 chmod +x /usr/bin/plexweblistbash.bash
 chmod +x /usr/bin/plexweblistwan.bash
 chmod +x /usr/bin/plexweblistwanbash.bash
+chmod +x /usr/bin/pmp.bash
+chmod +x /usr/bin/pmpbash.bash
 chmod +x /usr/bin/pms.bash
 chmod +x /usr/bin/pmsbash.bash
 chmod +x /usr/bin/pmsscan.bash
@@ -566,6 +574,10 @@ chmod +x /usr/bin/quit
 chmod +x /usr/bin/quit.bash
 chmod +x /usr/bin/quititunes.bash
 chmod +x /usr/bin/quititunesbash.bash
+chmod +x /usr/bin/quitpht.bash
+chmod +x /usr/bin/quitphtbash.bash
+chmod +x /usr/bin/quitpmp.bash
+chmod +x /usr/bin/quitpmpbash.bash
 chmod +x /usr/bin/quitpms.bash
 chmod +x /usr/bin/quitpmsbash.bash
 chmod +x /usr/bin/reboot.bash
@@ -692,12 +704,15 @@ chmod 4755 /usr/bin/createwsj.bash
 ## PMS/OS X
 chmod 4755 /usr/bin/pmsscan.bash
 chmod 4755 /usr/bin/pms.bash
+chmod 4755 /usr/bin/quitpms.bash
+chmod 4755 /usr/bin/pmp.bash
+chmod 4755 /usr/bin/quitpmp.bash
 chmod 4755 /usr/bin/pht.bash
+chmod 4755 /usr/bin/quitpht.bash
 chmod 4755 /usr/bin/tv.bash
 chmod 4755 /usr/bin/utorrent.bash
 chmod 4755 /usr/bin/itunes.bash
 chmod 4755 /usr/bin/quititunes.bash
-chmod 4755 /usr/bin/quitpms.bash
 
 ## OS X
 chmod 4755 /usr/bin/trash.bash
