@@ -26,12 +26,14 @@
 		CE3597061A5A1B3700A913D4 /* NoMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3597041A5A1B3700A913D4 /* NoMenu.m */; };
 		CE373FCA1B34CBBE00F5A34C /* intercept.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CE373FC91B34CBBE00F5A34C /* intercept.scpt */; };
 		CE373FCC1B34D5D600F5A34C /* custom.png in Resources */ = {isa = PBXBuildFile; fileRef = CE373FCB1B34D5D600F5A34C /* custom.png */; };
+		CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D04E1BE6B4590085DC97 /* downgrade.png */; settings = {ASSET_TAGS = (); }; };
+		CEA6D0531BE6B8310085DC97 /* Xcode_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */; settings = {ASSET_TAGS = (); }; };
+		CEA6D0571BE6C8BA0085DC97 /* plex_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */; settings = {ASSET_TAGS = (); }; };
 		CEBC1C7E1A4DC4A80037CEA3 /* Remote.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */; };
 		CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */; };
 		CEBEDE911A31473100F60D15 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBEDE901A31473100F60D15 /* update.png */; };
 		CEE3B2911A63725F00D31E5D /* backup.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE3B2901A63725F00D31E5D /* backup.png */; };
 		CEFD1C631A62397400396D26 /* Web_Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFD1C621A62397400396D26 /* Web_Connect.png */; };
-		DB3778FA19F852C00036C9BB /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = DB3778F919F852C00036C9BB /* status.png */; };
 		DB837E941A12732600DED213 /* opicon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8D1A12732600DED213 /* opicon_<16x16>.png */; };
 		DB837E951A12732600DED213 /* opicon_<32x32>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8E1A12732600DED213 /* opicon_<32x32>.png */; };
 		DB837E961A12732600DED213 /* opicon_<64x64>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8F1A12732600DED213 /* opicon_<64x64>.png */; };
@@ -94,12 +96,14 @@
 		CE3597041A5A1B3700A913D4 /* NoMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoMenu.m; path = OpenPlex/NoMenu.m; sourceTree = SOURCE_ROOT; };
 		CE373FC91B34CBBE00F5A34C /* intercept.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = intercept.scpt; sourceTree = "<group>"; };
 		CE373FCB1B34D5D600F5A34C /* custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom.png; sourceTree = "<group>"; };
+		CEA6D04E1BE6B4590085DC97 /* downgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downgrade.png; sourceTree = "<group>"; };
+		CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Xcode_icon.png; sourceTree = "<group>"; };
+		CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plex_logo.png; sourceTree = "<group>"; };
 		CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Remote.png; sourceTree = "<group>"; };
 		CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirPlayIcon.png; sourceTree = "<group>"; };
 		CEBEDE901A31473100F60D15 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
 		CEE3B2901A63725F00D31E5D /* backup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backup.png; sourceTree = "<group>"; };
 		CEFD1C621A62397400396D26 /* Web_Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Web_Connect.png; sourceTree = "<group>"; };
-		DB3778F919F852C00036C9BB /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
 		DB837E8D1A12732600DED213 /* opicon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<16x16>.png"; sourceTree = "<group>"; };
 		DB837E8E1A12732600DED213 /* opicon_<32x32>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<32x32>.png"; sourceTree = "<group>"; };
 		DB837E8F1A12732600DED213 /* opicon_<64x64>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<64x64>.png"; sourceTree = "<group>"; };
@@ -218,6 +222,9 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */,
+				CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */,
+				CEA6D04E1BE6B4590085DC97 /* downgrade.png */,
 				CE373FCB1B34D5D600F5A34C /* custom.png */,
 				DBE18B1D1A9489F1006FB774 /* wifi.png */,
 				DBE18B1E1A9489F1006FB774 /* world.png */,
@@ -233,7 +240,6 @@
 				DB837E921A12732600DED213 /* opicon_<512x512>.png */,
 				DB837E931A12732600DED213 /* opicon_<1024x1024>.png */,
 				DBD4AF361A06227500480691 /* OP-Logo.png */,
-				DB3778F919F852C00036C9BB /* status.png */,
 				CE0B59E819D609A200A5C392 /* black.png */,
 				CE0B59E919D609A200A5C392 /* gradient.png */,
 				CE0B59EA19D609A200A5C392 /* grey.png */,
@@ -332,7 +338,6 @@
 			children = (
 				DD4F7C2913C3124300825C6E /* XIBs */,
 				CEE1E7201A6ECC1100B25DC1 /* Old XIBs */,
-				DD4F7C4813C322D800825C6E /* Graphics */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2DF92B1A6AF16300C4FCB2 /* NoMenu.xib */,
+				DD4F7C4813C322D800825C6E /* Graphics */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -441,14 +447,15 @@
 				DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */,
 				DBAFDA6F1972DCA00099EE6E /* Trailers.png in Resources */,
 				DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */,
-				DB3778FA19F852C00036C9BB /* status.png in Resources */,
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
 				DBE18B1F1A9489F1006FB774 /* wifi.png in Resources */,
+				CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */,
 				DBAFDA591972DCA00099EE6E /* icon_<16x16>.png in Resources */,
 				DBAFDA631972DCA00099EE6E /* OpenPlex.png in Resources */,
 				CE373FCC1B34D5D600F5A34C /* custom.png in Resources */,
+				CEA6D0531BE6B8310085DC97 /* Xcode_icon.png in Resources */,
 				CE0B59EB19D609A200A5C392 /* black.png in Resources */,
 				DBAFDA691972DCA00099EE6E /* quitplex.png in Resources */,
 				DBAFDA531972DCA00099EE6E /* atv.png in Resources */,
@@ -466,6 +473,7 @@
 				DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */,
 				CE373FCA1B34CBBE00F5A34C /* intercept.scpt in Resources */,
 				DBAFDA6E1972DCA00099EE6E /* stopplex.png in Resources */,
+				CEA6D0571BE6C8BA0085DC97 /* plex_logo.png in Resources */,
 				5D5151991A6F909C007C390C /* updateStatus.scpt in Resources */,
 				DBE18B201A9489F1006FB774 /* world.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,

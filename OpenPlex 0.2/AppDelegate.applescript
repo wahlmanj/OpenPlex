@@ -1,6 +1,6 @@
 --
 --  AppDelegate.applescript
---  OpenPlex 0.5
+--  OpenPlex 0.6
 --
 --  Originally Designed by CyberGhost84 on 5/02/14.
 --  Originally Coded by Wahlman.j on 5/02/14.
@@ -388,7 +388,7 @@ script AppDelegate
     end buttonhandlerstoffezpreview_
     
     on buttonhandlerclt_(sender)
-        display notification "Download and install command line tools then install pillow..." with title "OpenPlex Status"
+        display notification "Download and/or install command line tools..." with title "OpenPlex Status"
         delay 0
         set theURL to "https://www.dropbox.com/sh/ipepio1fkvnits0/AAADjjwPDQvyTEhwT7Ez0GwYa?dl=0"
         tell application "Safari" to make new document with properties {URL:theURL}
