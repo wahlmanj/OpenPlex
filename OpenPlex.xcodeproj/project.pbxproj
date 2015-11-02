@@ -26,14 +26,15 @@
 		CE3597061A5A1B3700A913D4 /* NoMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3597041A5A1B3700A913D4 /* NoMenu.m */; };
 		CE373FCA1B34CBBE00F5A34C /* intercept.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CE373FC91B34CBBE00F5A34C /* intercept.scpt */; };
 		CE373FCC1B34D5D600F5A34C /* custom.png in Resources */ = {isa = PBXBuildFile; fileRef = CE373FCB1B34D5D600F5A34C /* custom.png */; };
-		CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D04E1BE6B4590085DC97 /* downgrade.png */; settings = {ASSET_TAGS = (); }; };
-		CEA6D0531BE6B8310085DC97 /* Xcode_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */; settings = {ASSET_TAGS = (); }; };
-		CEA6D0571BE6C8BA0085DC97 /* plex_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */; settings = {ASSET_TAGS = (); }; };
+		CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D04E1BE6B4590085DC97 /* downgrade.png */; };
+		CEA6D0531BE6B8310085DC97 /* Xcode_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */; };
+		CEA6D0571BE6C8BA0085DC97 /* plex_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */; };
 		CEBC1C7E1A4DC4A80037CEA3 /* Remote.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */; };
 		CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */; };
 		CEBEDE911A31473100F60D15 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBEDE901A31473100F60D15 /* update.png */; };
 		CEE3B2911A63725F00D31E5D /* backup.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE3B2901A63725F00D31E5D /* backup.png */; };
 		CEFD1C631A62397400396D26 /* Web_Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFD1C621A62397400396D26 /* Web_Connect.png */; };
+		DB1A610D1BE7AC620086BEF4 /* post-32985-0-82613200-1295642376.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB1A610C1BE7AC620086BEF4 /* post-32985-0-82613200-1295642376.jpg */; };
 		DB837E941A12732600DED213 /* opicon_<16x16>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8D1A12732600DED213 /* opicon_<16x16>.png */; };
 		DB837E951A12732600DED213 /* opicon_<32x32>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8E1A12732600DED213 /* opicon_<32x32>.png */; };
 		DB837E961A12732600DED213 /* opicon_<64x64>.png in Resources */ = {isa = PBXBuildFile; fileRef = DB837E8F1A12732600DED213 /* opicon_<64x64>.png */; };
@@ -104,6 +105,7 @@
 		CEBEDE901A31473100F60D15 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
 		CEE3B2901A63725F00D31E5D /* backup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backup.png; sourceTree = "<group>"; };
 		CEFD1C621A62397400396D26 /* Web_Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Web_Connect.png; sourceTree = "<group>"; };
+		DB1A610C1BE7AC620086BEF4 /* post-32985-0-82613200-1295642376.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "post-32985-0-82613200-1295642376.jpg"; sourceTree = "<group>"; };
 		DB837E8D1A12732600DED213 /* opicon_<16x16>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<16x16>.png"; sourceTree = "<group>"; };
 		DB837E8E1A12732600DED213 /* opicon_<32x32>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<32x32>.png"; sourceTree = "<group>"; };
 		DB837E8F1A12732600DED213 /* opicon_<64x64>.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "opicon_<64x64>.png"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DB1A610C1BE7AC620086BEF4 /* post-32985-0-82613200-1295642376.jpg */,
 				CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */,
 				CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */,
 				CEA6D04E1BE6B4590085DC97 /* downgrade.png */,
@@ -451,6 +454,7 @@
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
 				DBE18B1F1A9489F1006FB774 /* wifi.png in Resources */,
+				DB1A610D1BE7AC620086BEF4 /* post-32985-0-82613200-1295642376.jpg in Resources */,
 				CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */,
 				DBAFDA591972DCA00099EE6E /* icon_<16x16>.png in Resources */,
 				DBAFDA631972DCA00099EE6E /* OpenPlex.png in Resources */,
