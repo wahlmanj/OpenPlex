@@ -344,6 +344,8 @@ cp createwsj.bash /usr/bin
 cp createwsjbash.bash /usr/bin
 cp cyberghostbash.bash /usr/bin
 cp falcobash.bash /usr/bin
+cp firewall.bash /usr/bin
+cp firewallbash.bash /usr/bin
 cp hide /usr/bin
 cp hide.bash /usr/bin
 cp ibaabash.bash /usr/bin
@@ -526,6 +528,8 @@ chmod +x /usr/bin/createwsj.bash
 chmod +x /usr/bin/createwsjbash.bash
 chmod +x /usr/bin/cyberghostbash.bash
 chmod +x /usr/bin/falcobash.bash
+chmod +x /usr/bin/firewall.bash
+chmod +x /usr/bin/firewallbash.bash
 chmod +x /usr/bin/hide
 chmod +x /usr/bin/hide.bash
 chmod +x /usr/bin/ibaabash.bash

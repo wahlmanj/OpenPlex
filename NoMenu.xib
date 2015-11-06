@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15C31f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
@@ -1314,12 +1314,12 @@ address changes you must reinstall WebConnect again.</string>
                                             <rect key="frame" x="38" y="123" width="93" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Git Reset" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3rF-B6-F3w">
+                                            <buttonCell key="cell" type="squareTextured" title="Trash Can" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3rF-B6-F3w">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlergitreset:" target="qo8-lj-syM" id="1VH-PM-jot"/>
+                                                <action selector="buttonhandlertrashcan:" target="qo8-lj-syM" id="Rsb-zb-rvY"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="6Mp-9l-SMl">
@@ -1419,13 +1419,13 @@ Auto loader</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lp0-8z-yfe">
-                                            <rect key="frame" x="158" y="124" width="162" height="41"/>
+                                            <rect key="frame" x="158" y="126" width="124" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="rB3-NL-eiG">
                                                 <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">Rollback to previous
-PlexConnect version(s) </string>
+                                                <string key="title">Remove trash can 
+empty warning </string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -2061,13 +2061,25 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                                                 <action selector="buttonhandlervideotut:" target="qo8-lj-syM" id="eeh-qH-YeN"/>
                                             </connections>
                                         </button>
+                                        <button toolTip="Codesign python to work with OS X firewall" verticalHuggingPriority="750" id="BUl-ER-T0A">
+                                            <rect key="frame" x="234" y="76" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Firewall Fix" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BYR-EV-PB9">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerfirewall:" target="qo8-lj-syM" id="KgX-dn-F6C"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                 </view>
                             </tabViewItem>
                         </tabViewItems>
                     </tabView>
-                    <button id="uSg-ev-UEj">
+                    <button toolTip="Stop PlexConnect" id="uSg-ev-UEj">
                         <rect key="frame" x="305" y="4" width="33" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -2079,7 +2091,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <action selector="buttonhandlerstop:" target="qo8-lj-syM" id="bB8-Gv-ufv"/>
                         </connections>
                     </button>
-                    <button id="1Am-HG-jD0">
+                    <button toolTip="Start PlexConnect" id="1Am-HG-jD0">
                         <rect key="frame" x="257" y="6" width="45" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -2091,7 +2103,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <action selector="buttonhandlerstart:" target="qo8-lj-syM" id="R66-3R-TPR"/>
                         </connections>
                     </button>
-                    <button id="cQT-og-J7i">
+                    <button toolTip="Restart PlexConnect" id="cQT-og-J7i">
                         <rect key="frame" x="342" y="6" width="46" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -2103,7 +2115,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <action selector="buttonhandlerrestart:" target="qo8-lj-syM" id="ghX-Or-zSJ"/>
                         </connections>
                     </button>
-                    <button id="jqF-ZQ-tdH">
+                    <button toolTip="PlexConnect Log" id="jqF-ZQ-tdH">
                         <rect key="frame" x="456" y="6" width="34" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -2115,7 +2127,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <action selector="buttonhandlerlog:" target="qo8-lj-syM" id="Etw-CF-UrG"/>
                         </connections>
                     </button>
-                    <button id="TT2-JB-knA">
+                    <button toolTip="Downgrade PlexConnect" id="TT2-JB-knA">
                         <rect key="frame" x="497" y="6" width="35" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -2127,7 +2139,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <action selector="buttonhandlergitreset:" target="qo8-lj-syM" id="NZo-2T-hyr"/>
                         </connections>
                     </button>
-                    <button id="yU3-n1-jc5">
+                    <button toolTip="Update PlexConnect" id="yU3-n1-jc5">
                         <rect key="frame" x="414" y="6" width="39" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -2149,7 +2161,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button id="M3D-8W-akN">
+                    <button toolTip="Quit PlexConnect" id="M3D-8W-akN">
                         <rect key="frame" x="617" y="6" width="46" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>

@@ -56,6 +56,12 @@ script AppDelegate
     display notification "Current Version " & x
     end buttonhandlerversion_
     
+    on buttonhandlerfirewall_(sender)
+    do shell script "firewallbash.bash"
+    display notification "Python codesigned for OS X Firewall, accept python via firewall again..." with title "OpenPlex Status"
+    delay 0
+    end buttonhandlerfirewall_
+    
     on buttonhandlerupdate_(sender)
         tell application "Finder"
             try
@@ -2540,6 +2546,10 @@ script AppDelegate
     
     --Extras Tab
     
+    on buttonhandlertrashcan_(sender)
+        do shell script "defaults write com.apple.finder WarnOnEmptyTrash -bool false"
+    end buttonhandlertrashcan_
+
     on buttonhandlerbootlock_(sender)
         tell application "Finder"
             if not (exists file "Library:LaunchAgents:com.lock.plist" of the startup disk) then
