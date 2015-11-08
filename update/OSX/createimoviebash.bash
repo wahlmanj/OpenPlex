@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/createimovie.bash
+sudo /usr/local/bin/createimovie.bash

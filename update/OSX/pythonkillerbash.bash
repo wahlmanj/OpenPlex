@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/pythonkiller.bash
+sudo /usr/local/bin/pythonkiller.bash

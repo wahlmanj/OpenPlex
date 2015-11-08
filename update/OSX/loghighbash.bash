@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/loghigh.bash
+sudo /usr/local/bin/loghigh.bash

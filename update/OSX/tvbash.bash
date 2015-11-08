@@ -2,4 +2,4 @@
 
 echo 'Starting TeamViewer...'
 
-sudo /usr/bin/tv.bash
+sudo /usr/local/bin/tv.bash

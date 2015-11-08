@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo /usr/bin/reboot.bash
+sudo /usr/local/bin/reboot.bash
 
 

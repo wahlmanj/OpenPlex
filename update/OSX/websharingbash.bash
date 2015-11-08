@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/websharing.bash
+sudo /usr/local/bin/websharing.bash

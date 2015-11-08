@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/removeauto.bash
+sudo /usr/local/bin/removeauto.bash

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/wcdefault.bash
+sudo /usr/local/bin/wcdefault.bash

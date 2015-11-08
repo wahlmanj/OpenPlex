@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/restoreatvsettings.bash
+sudo /usr/local/bin/restoreatvsettings.bash

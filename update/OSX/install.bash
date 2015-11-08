@@ -318,338 +318,344 @@ chmod +x /Library/WebServer/CGI-Executables/installer.cgi
 chmod +x /Library/WebServer/CGI-Executables/openplex.cgi
 chmod +x /Library/WebServer/CGI-Executables/webconnect.cgi
 
+## check for script dir, if not exists then create it for systemwide access
+if [ -d /usr/local/bin ]; then
+echo exits
+else
+mkdir -p /usr/local/bin
+fi
 
-## copy files to /usr/bin for system wide access
-cp 10.10vb.bash /usr/bin
-cp appupdate.bash /usr/bin
-cp appupdatebash.bash /usr/bin
-cp appwebbash.bash /usr/bin
-cp atvsettingsauto.bash /usr/bin
-cp atvsettingsautobash.bash /usr/bin
-cp auto.bash /usr/bin
-cp backup.bash /usr/bin
-cp backupbash.bash /usr/bin
-cp backupatvsettings.bash /usr/bin
-cp backupatvsettingsbash.bash /usr/bin
-cp bootlock.bash /usr/bin
-cp bootlockbash.bash /usr/bin
-cp createautobash.bash /usr/bin
-cp createcert.bash /usr/bin
-cp createcertbash.bash /usr/bin
-cp createimovie.bash /usr/bin
-cp createimoviebash.bash /usr/bin
-cp createpurge.bash /usr/bin
-cp createpurgebash.bash /usr/bin
-cp createwsj.bash /usr/bin
-cp createwsjbash.bash /usr/bin
-cp cyberghostbash.bash /usr/bin
-cp falcobash.bash /usr/bin
-cp firewall.bash /usr/bin
-cp firewallbash.bash /usr/bin
-cp hide /usr/bin
-cp hide.bash /usr/bin
-cp ibaabash.bash /usr/bin
-cp icon.bash /usr/bin
-cp install.bash /usr/bin
-cp installbash.bash /usr/bin
-cp itunes.bash /usr/bin
-cp itunesbash.bash /usr/bin
-cp lock.bash /usr/bin
-cp lockbash.bash /usr/bin
-cp loghigh.bash /usr/bin
-cp loghighbash.bash /usr/bin
-cp login.bash /usr/bin
-cp loginbash.bash /usr/bin
-cp lognormal.bash /usr/bin
-cp lognormalbash.bash /usr/bin
-cp muteboot.bash /usr/bin
-cp pht.bash /usr/bin
-cp phtbash.bash /usr/bin
-cp pmsbash.bash /usr/bin
-cp pillow.bash /usr/bin
-cp plexweb.bash /usr/bin
-cp plexwebbash.bash /usr/bin
-cp plexwebwan.bash /usr/bin
-cp plexwebwanbash.bash /usr/bin
-cp plexwebios.bash /usr/bin
-cp plexwebiosbash.bash /usr/bin
-cp plexwebioswan.bash /usr/bin
-cp plexwebioswanbash.bash /usr/bin
-cp plexweblist.bash /usr/bin
-cp plexweblistbash.bash /usr/bin
-cp plexweblistwan.bash /usr/bin
-cp plexweblistwanbash.bash /usr/bin
-cp pmp.bash /usr/bin
-cp pmpbash.bash /usr/bin
-cp pms.bash /usr/bin
-cp pmsscan.bash /usr/bin
-cp pmsscanbash.bash /usr/bin
-cp purge.bash /usr/bin
-cp purgebash.bash /usr/bin
-cp purgesettings.bash /usr/bin
-cp purgesettingsbash.bash /usr/bin
-cp pythonkiller.bash /usr/bin
-cp pythonkillerbash.bash /usr/bin
-cp quit /usr/bin
-cp quit.bash /usr/bin
-cp quititunes.bash /usr/bin
-cp quititunesbash.bash /usr/bin
-cp quitpht.bash /usr/bin
-cp quitphtbash.bash /usr/bin
-cp quitpmp.bash /usr/bin
-cp quitpmpbash.bash /usr/bin
-cp quitpms.bash /usr/bin
-cp quitpmsbash.bash /usr/bin
-cp reboot.bash /usr/bin
-cp rebootbash.bash /usr/bin
-cp removeauto.bash /usr/bin
-cp removeautobash.bash /usr/bin
-cp removecerts.bash /usr/bin
-cp removecertsbash.bash /usr/bin
-cp removepurge.bash /usr/bin
-cp removepurgebash.bash /usr/bin
-cp restart.bash /usr/bin
-cp restartbash.bash /usr/bin
-cp restoreatvsettings.bash /usr/bin
-cp restoreatvsettingsbash.bash /usr/bin
-cp restore.bash /usr/bin
-cp restorebash.bash /usr/bin
-cp restorecertsbash.bash /usr/bin
-cp restorecerts.bash /usr/bin
-cp show /usr/bin
-cp show.bash /usr/bin
-cp shutdown.bash /usr/bin
-cp shutdownbash.bash /usr/bin
-cp sleep.bash /usr/bin
-cp sleepbash.bash /usr/bin
-cp start.bash /usr/bin
-cp startbash.bash /usr/bin
-cp status.bash /usr/bin
-cp statusbash.bash /usr/bin
-cp stoffezbash.bash /usr/bin
-cp stop.bash /usr/bin
-cp stopbash.bash /usr/bin
-cp sudoersfix.bash /usr/bin
-cp sudoersfixbash.bash /usr/bin
-cp timemachine.bash /usr/bin
-cp timemachinebash.bash /usr/bin
-cp trashbase.bash /usr/bin
-cp trashbasebash.bash /usr/bin
-cp trash.bash /usr/bin
-cp trashbash.bash /usr/bin
-cp tv.bash /usr/bin
-cp tvbash.bash /usr/bin
-cp uninstallbash.bash /usr/bin
-cp unmuteboot.bash /usr/bin
-cp updatebash.bash /usr/bin
-cp updaterbash.bash /usr/bin
-cp updatewcbash.bash /usr/bin
-cp utorrent.bash /usr/bin
-cp utorrentbash.bash /usr/bin
-cp wahlmanjbash.bash /usr/bin
-cp wake.bash /usr/bin
-cp wakebash.bash /usr/bin
-cp wcdefault.bash /usr/bin
-cp wcdefaultbash.bash /usr/bin
-cp wcinstaller.bash /usr/bin
-cp wcinstallerbash.bash /usr/bin
-cp wcios.bash /usr/bin
-cp wciosbash.bash /usr/bin
-cp wclist.bash /usr/bin
-cp wclistbash.bash /usr/bin
-cp wcopenplex.bash /usr/bin
-cp wcopenplexbash.bash /usr/bin
-cp websharing.bash /usr/bin
-cp websharingbash.bash /usr/bin
-cp who.bash /usr/bin
-cp whobash.bash /usr/bin
-cp wol.bash /usr/bin
-cp xml.bash /usr/bin
+## copy files to /usr/local/bin for system wide access
+cp 10.10vb.bash /usr/local/bin
+cp appupdate.bash /usr/local/bin
+cp appupdatebash.bash /usr/local/bin
+cp appwebbash.bash /usr/local/bin
+cp atvsettingsauto.bash /usr/local/bin
+cp atvsettingsautobash.bash /usr/local/bin
+cp auto.bash /usr/local/bin
+cp backup.bash /usr/local/bin
+cp backupbash.bash /usr/local/bin
+cp backupatvsettings.bash /usr/local/bin
+cp backupatvsettingsbash.bash /usr/local/bin
+cp bootlock.bash /usr/local/bin
+cp bootlockbash.bash /usr/local/bin
+cp createautobash.bash /usr/local/bin
+cp createcert.bash /usr/local/bin
+cp createcertbash.bash /usr/local/bin
+cp createimovie.bash /usr/local/bin
+cp createimoviebash.bash /usr/local/bin
+cp createpurge.bash /usr/local/bin
+cp createpurgebash.bash /usr/local/bin
+cp createwsj.bash /usr/local/bin
+cp createwsjbash.bash /usr/local/bin
+cp cyberghostbash.bash /usr/local/bin
+cp falcobash.bash /usr/local/bin
+cp firewall.bash /usr/local/bin
+cp firewallbash.bash /usr/local/bin
+cp hide /usr/local/bin
+cp hide.bash /usr/local/bin
+cp ibaabash.bash /usr/local/bin
+cp icon.bash /usr/local/bin
+cp install.bash /usr/local/bin
+cp installbash.bash /usr/local/bin
+cp itunes.bash /usr/local/bin
+cp itunesbash.bash /usr/local/bin
+cp lock.bash /usr/local/bin
+cp lockbash.bash /usr/local/bin
+cp loghigh.bash /usr/local/bin
+cp loghighbash.bash /usr/local/bin
+cp login.bash /usr/local/bin
+cp loginbash.bash /usr/local/bin
+cp lognormal.bash /usr/local/bin
+cp lognormalbash.bash /usr/local/bin
+cp muteboot.bash /usr/local/bin
+cp pht.bash /usr/local/bin
+cp phtbash.bash /usr/local/bin
+cp pmsbash.bash /usr/local/bin
+cp pillow.bash /usr/local/bin
+cp plexweb.bash /usr/local/bin
+cp plexwebbash.bash /usr/local/bin
+cp plexwebwan.bash /usr/local/bin
+cp plexwebwanbash.bash /usr/local/bin
+cp plexwebios.bash /usr/local/bin
+cp plexwebiosbash.bash /usr/local/bin
+cp plexwebioswan.bash /usr/local/bin
+cp plexwebioswanbash.bash /usr/local/bin
+cp plexweblist.bash /usr/local/bin
+cp plexweblistbash.bash /usr/local/bin
+cp plexweblistwan.bash /usr/local/bin
+cp plexweblistwanbash.bash /usr/local/bin
+cp pmp.bash /usr/local/bin
+cp pmpbash.bash /usr/local/bin
+cp pms.bash /usr/local/bin
+cp pmsscan.bash /usr/local/bin
+cp pmsscanbash.bash /usr/local/bin
+cp purge.bash /usr/local/bin
+cp purgebash.bash /usr/local/bin
+cp purgesettings.bash /usr/local/bin
+cp purgesettingsbash.bash /usr/local/bin
+cp pythonkiller.bash /usr/local/bin
+cp pythonkillerbash.bash /usr/local/bin
+cp quit /usr/local/bin
+cp quit.bash /usr/local/bin
+cp quititunes.bash /usr/local/bin
+cp quititunesbash.bash /usr/local/bin
+cp quitpht.bash /usr/local/bin
+cp quitphtbash.bash /usr/local/bin
+cp quitpmp.bash /usr/local/bin
+cp quitpmpbash.bash /usr/local/bin
+cp quitpms.bash /usr/local/bin
+cp quitpmsbash.bash /usr/local/bin
+cp reboot.bash /usr/local/bin
+cp rebootbash.bash /usr/local/bin
+cp removeauto.bash /usr/local/bin
+cp removeautobash.bash /usr/local/bin
+cp removecerts.bash /usr/local/bin
+cp removecertsbash.bash /usr/local/bin
+cp removepurge.bash /usr/local/bin
+cp removepurgebash.bash /usr/local/bin
+cp restart.bash /usr/local/bin
+cp restartbash.bash /usr/local/bin
+cp restoreatvsettings.bash /usr/local/bin
+cp restoreatvsettingsbash.bash /usr/local/bin
+cp restore.bash /usr/local/bin
+cp restorebash.bash /usr/local/bin
+cp restorecertsbash.bash /usr/local/bin
+cp restorecerts.bash /usr/local/bin
+cp show /usr/local/bin
+cp show.bash /usr/local/bin
+cp shutdown.bash /usr/local/bin
+cp shutdownbash.bash /usr/local/bin
+cp sleep.bash /usr/local/bin
+cp sleepbash.bash /usr/local/bin
+cp start.bash /usr/local/bin
+cp startbash.bash /usr/local/bin
+cp status.bash /usr/local/bin
+cp statusbash.bash /usr/local/bin
+cp stoffezbash.bash /usr/local/bin
+cp stop.bash /usr/local/bin
+cp stopbash.bash /usr/local/bin
+cp sudoersfix.bash /usr/local/bin
+cp sudoersfixbash.bash /usr/local/bin
+cp timemachine.bash /usr/local/bin
+cp timemachinebash.bash /usr/local/bin
+cp trashbase.bash /usr/local/bin
+cp trashbasebash.bash /usr/local/bin
+cp trash.bash /usr/local/bin
+cp trashbash.bash /usr/local/bin
+cp tv.bash /usr/local/bin
+cp tvbash.bash /usr/local/bin
+cp uninstallbash.bash /usr/local/bin
+cp unmuteboot.bash /usr/local/bin
+cp updatebash.bash /usr/local/bin
+cp updaterbash.bash /usr/local/bin
+cp updatewcbash.bash /usr/local/bin
+cp utorrent.bash /usr/local/bin
+cp utorrentbash.bash /usr/local/bin
+cp wahlmanjbash.bash /usr/local/bin
+cp wake.bash /usr/local/bin
+cp wakebash.bash /usr/local/bin
+cp wcdefault.bash /usr/local/bin
+cp wcdefaultbash.bash /usr/local/bin
+cp wcinstaller.bash /usr/local/bin
+cp wcinstallerbash.bash /usr/local/bin
+cp wcios.bash /usr/local/bin
+cp wciosbash.bash /usr/local/bin
+cp wclist.bash /usr/local/bin
+cp wclistbash.bash /usr/local/bin
+cp wcopenplex.bash /usr/local/bin
+cp wcopenplexbash.bash /usr/local/bin
+cp websharing.bash /usr/local/bin
+cp websharingbash.bash /usr/local/bin
+cp who.bash /usr/local/bin
+cp whobash.bash /usr/local/bin
+cp wol.bash /usr/local/bin
+cp xml.bash /usr/local/bin
 
 ## replace __DEFAULTPATH__ in default createauto.bash
-## save directly to the /usr/bin folder
-sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createauto.bash" > /usr/bin/createauto.bash
+## save directly to the /usr/local/bin folder
+sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createauto.bash" > /usr/local/bin/createauto.bash
 
 ## replace __INSTALLERPATH__ in default createimovie.bash
-## save directly to the /usr/bin folder
-sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createimovie.bash" > /usr/bin/createimovie.bash
+## save directly to the /usr/local/bin folder
+sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createimovie.bash" > /usr/local/bin/createimovie.bash
 
 ## replace __INSTALLERPATH__ in default createwsj.bash
-## save directly to the /usr/bin folder
-sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createwsj.bash" > /usr/bin/createwsj.bash
+## save directly to the /usr/local/bin folder
+sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createwsj.bash" > /usr/local/bin/createwsj.bash
 
 ## replace __INSTALLERPATH__ in default createcert.bash
-## save directly to the /usr/bin folder
-sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createcert.bash" > /usr/bin/createcert.bash
+## save directly to the /usr/local/bin folder
+sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createcert.bash" > /usr/local/bin/createcert.bash
 
 ## replace __DEFAULTPATH__ in default createplist.bash
-## save directly to the /usr/bin folder
-sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createplist.bash" > /usr/bin/createplist.bash
+## save directly to the /usr/local/bin folder
+sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/createplist.bash" > /usr/local/bin/createplist.bash
 
 ## replace __USERNAME__in default fixgit.bash
-## save directly to the /usr/bin folder
-##sed -e "s/__USERNAME__/$whoami/" "${DefaultPath}/fixgit.bash" > /usr/bin/fixgit.bash
+## save directly to the /usr/local/bin folder
+##sed -e "s/__USERNAME__/$whoami/" "${DefaultPath}/fixgit.bash" > /usr/local/bin/fixgit.bash
 
 ## replace __INSTALLERPATH__ in default update.bash
-## save directly to the /usr/bin folder
-sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${DefaultPath}/update.bash" > /usr/bin/update.bash
+## save directly to the /usr/local/bin folder
+sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${DefaultPath}/update.bash" > /usr/local/bin/update.bash
 
 ## replace __INSTALLERPATH__ in default updater.bash
-## save directly to the /usr/bin folder
-sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${DefaultPath}/updater.bash" > /usr/bin/updater.bash
+## save directly to the /usr/local/bin folder
+sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${DefaultPath}/updater.bash" > /usr/local/bin/updater.bash
 
 ## replace __DEFAULTPATH__ in default webconnect.bash
-## save directly to the /usr/bin folder
-##sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/webconnect.bash" > /usr/bin/webconnect.bash
+## save directly to the /usr/local/bin folder
+##sed -e "s/__DEFAULTPATH__/${InstallerPath//\//\\/}/" "${InstallerPath}/webconnect.bash" > /usr/local/bin/webconnect.bash
 
 ## fix permissions
-chmod +x /usr/bin/10.10vb.bash
-chmod +x /usr/bin/appupdate.bash
-chmod +x /usr/bin/appupdatebash.bash
-chmod +x /usr/bin/appwebbash.bash
-chmod +x /usr/bin/atvsettingsauto.bash
-chmod +x /usr/bin/atvsettingsautobash.bash
-chmod +x /usr/bin/auto.bash
-chmod +x /usr/bin/backupatvsettings.bash
-chmod +x /usr/bin/backupatvsettingsbash.bash
-chmod +x /usr/bin/backup.bash
-chmod +x /usr/bin/backupbash.bash
-chmod +x /usr/bin/bootlock.bash
-chmod +x /usr/bin/bootlockbash.bash
-chmod +x /usr/bin/createauto.bash
-chmod +x /usr/bin/createautobash.bash
-chmod +x /usr/bin/createcert.bash
-chmod +x /usr/bin/createcertbash.bash
-chmod +x /usr/bin/createimovie.bash
-chmod +x /usr/bin/createimoviebash.bash
-chmod +x /usr/bin/createpurge.bash
-chmod +x /usr/bin/createpurgebash.bash
-chmod +x /usr/bin/createwsj.bash
-chmod +x /usr/bin/createwsjbash.bash
-chmod +x /usr/bin/cyberghostbash.bash
-chmod +x /usr/bin/falcobash.bash
-chmod +x /usr/bin/firewall.bash
-chmod +x /usr/bin/firewallbash.bash
-chmod +x /usr/bin/hide
-chmod +x /usr/bin/hide.bash
-chmod +x /usr/bin/ibaabash.bash
-chmod +x /usr/bin/icon.bash
-chmod +x /usr/bin/install.bash
-chmod +x /usr/bin/installbash.bash
-chmod +x /usr/bin/itunes.bash
-chmod +x /usr/bin/itunesbash.bash
-chmod +x /usr/bin/lock.bash
-chmod +x /usr/bin/lockbash.bash
-chmod +x /usr/bin/loghigh.bash
-chmod +x /usr/bin/loghighbash.bash
-chmod +x /usr/bin/login.bash
-chmod +x /usr/bin/loginbash.bash
-chmod +x /usr/bin/lognormal.bash
-chmod +x /usr/bin/lognormalbash.bash
-chmod +x /usr/bin/muteboot.bash
-chmod +x /usr/bin/pht.bash
-chmod +x /usr/bin/phtbash.bash
-chmod +x /usr/bin/pillow.bash
-chmod +x /usr/bin/plexweb.bash
-chmod +x /usr/bin/plexwebbash.bash
-chmod +x /usr/bin/plexwebwan.bash
-chmod +x /usr/bin/plexwebwanbash.bash
-chmod +x /usr/bin/plexwebios.bash
-chmod +x /usr/bin/plexwebiosbash.bash
-chmod +x /usr/bin/plexwebioswan.bash
-chmod +x /usr/bin/plexwebioswanbash.bash
-chmod +x /usr/bin/plexweblist.bash
-chmod +x /usr/bin/plexweblistbash.bash
-chmod +x /usr/bin/plexweblistwan.bash
-chmod +x /usr/bin/plexweblistwanbash.bash
-chmod +x /usr/bin/pmp.bash
-chmod +x /usr/bin/pmpbash.bash
-chmod +x /usr/bin/pms.bash
-chmod +x /usr/bin/pmsbash.bash
-chmod +x /usr/bin/pmsscan.bash
-chmod +x /usr/bin/pmsscanbash.bash
-chmod +x /usr/bin/purge.bash
-chmod +x /usr/bin/purgebash.bash
-chmod +x /usr/bin/purgesettings.bash
-chmod +x /usr/bin/purgesettingsbash.bash
-chmod +x /usr/bin/pythonkiller.bash
-chmod +x /usr/bin/pythonkillerbash.bash
-chmod +x /usr/bin/quit
-chmod +x /usr/bin/quit.bash
-chmod +x /usr/bin/quititunes.bash
-chmod +x /usr/bin/quititunesbash.bash
-chmod +x /usr/bin/quitpht.bash
-chmod +x /usr/bin/quitphtbash.bash
-chmod +x /usr/bin/quitpmp.bash
-chmod +x /usr/bin/quitpmpbash.bash
-chmod +x /usr/bin/quitpms.bash
-chmod +x /usr/bin/quitpmsbash.bash
-chmod +x /usr/bin/reboot.bash
-chmod +x /usr/bin/rebootbash.bash
-chmod +x /usr/bin/removeauto.bash
-chmod +x /usr/bin/removeautobash.bash
-chmod +x /usr/bin/removecerts.bash
-chmod +x /usr/bin/removecertsbash.bash
-chmod +x /usr/bin/removepurge.bash
-chmod +x /usr/bin/removepurgebash.bash
-chmod +x /usr/bin/restart.bash
-chmod +x /usr/bin/restartbash.bash
-chmod +x /usr/bin/restore.bash
-chmod +x /usr/bin/restorebash.bash
-chmod +x /usr/bin/restoreatvsettings.bash
-chmod +x /usr/bin/restoreatvsettingsbash.bash
-chmod +x /usr/bin/restorecerts.bash
-chmod +x /usr/bin/restorecertsbash.bash
-chmod +x /usr/bin/show
-chmod +x /usr/bin/show.bash
-chmod +x /usr/bin/shutdown.bash
-chmod +x /usr/bin/shutdownbash.bash
-chmod +x /usr/bin/sleep.bash
-chmod +x /usr/bin/sleepbash.bash
-chmod +x /usr/bin/start.bash
-chmod +x /usr/bin/startbash.bash
-chmod +x /usr/bin/status.bash
-chmod +x /usr/bin/statusbash.bash
-chmod +x /usr/bin/stoffezbash.bash
-chmod +x /usr/bin/stop.bash
-chmod +x /usr/bin/stopbash.bash
-chmod +x /usr/bin/sudoersfix.bash
-chmod +x /usr/bin/sudoersfixbash.bash
-chmod +x /usr/bin/timemachine.bash
-chmod +x /usr/bin/timemachinebash.bash
-chmod +x /usr/bin/trash.bash
-chmod +x /usr/bin/trashbash.bash
-chmod +x /usr/bin/trashbasebash.bash
-chmod +x /usr/bin/tv.bash
-chmod +x /usr/bin/tvbash.bash
-chmod +x /usr/bin/uninstallbash.bash
-chmod +x /usr/bin/unmuteboot.bash
-chmod +x /usr/bin/update.bash
-chmod +x /usr/bin/updatebash.bash
-chmod +x /usr/bin/updatewcbash.bash
-chmod +x /usr/bin/updater.bash
-chmod +x /usr/bin/updaterbash.bash
-chmod +x /usr/bin/utorrent.bash
-chmod +x /usr/bin/utorrentbash.bash
-chmod +x /usr/bin/wahlmanjbash.bash
-chmod +x /usr/bin/wake.bash
-chmod +x /usr/bin/wakebash.bash
-chmod +x /usr/bin/wcdefault.bash
-chmod +x /usr/bin/wcdefaultbash.bash
-chmod +x /usr/bin/wcinstaller.bash
-chmod +x /usr/bin/wcinstallerbash.bash
-chmod +x /usr/bin/wcios.bash
-chmod +x /usr/bin/wciosbash.bash
-chmod +x /usr/bin/wclist.bash
-chmod +x /usr/bin/wclistbash.bash
-chmod +x /usr/bin/wcopenplex.bash
-chmod +x /usr/bin/wcopenplexbash.bash
-chmod +x /usr/bin/websharing.bash
-chmod +x /usr/bin/websharingbash.bash
-chmod +x /usr/bin/who.bash
-chmod +x /usr/bin/whobash.bash
-chmod +x /usr/bin/wol.bash
-chmod +x /usr/bin/xml.bash
+chmod +x /usr/local/bin/10.10vb.bash
+chmod +x /usr/local/bin/appupdate.bash
+chmod +x /usr/local/bin/appupdatebash.bash
+chmod +x /usr/local/bin/appwebbash.bash
+chmod +x /usr/local/bin/atvsettingsauto.bash
+chmod +x /usr/local/bin/atvsettingsautobash.bash
+chmod +x /usr/local/bin/auto.bash
+chmod +x /usr/local/bin/backupatvsettings.bash
+chmod +x /usr/local/bin/backupatvsettingsbash.bash
+chmod +x /usr/local/bin/backup.bash
+chmod +x /usr/local/bin/backupbash.bash
+chmod +x /usr/local/bin/bootlock.bash
+chmod +x /usr/local/bin/bootlockbash.bash
+chmod +x /usr/local/bin/createauto.bash
+chmod +x /usr/local/bin/createautobash.bash
+chmod +x /usr/local/bin/createcert.bash
+chmod +x /usr/local/bin/createcertbash.bash
+chmod +x /usr/local/bin/createimovie.bash
+chmod +x /usr/local/bin/createimoviebash.bash
+chmod +x /usr/local/bin/createpurge.bash
+chmod +x /usr/local/bin/createpurgebash.bash
+chmod +x /usr/local/bin/createwsj.bash
+chmod +x /usr/local/bin/createwsjbash.bash
+chmod +x /usr/local/bin/cyberghostbash.bash
+chmod +x /usr/local/bin/falcobash.bash
+chmod +x /usr/local/bin/firewall.bash
+chmod +x /usr/local/bin/firewallbash.bash
+chmod +x /usr/local/bin/hide
+chmod +x /usr/local/bin/hide.bash
+chmod +x /usr/local/bin/ibaabash.bash
+chmod +x /usr/local/bin/icon.bash
+chmod +x /usr/local/bin/install.bash
+chmod +x /usr/local/bin/installbash.bash
+chmod +x /usr/local/bin/itunes.bash
+chmod +x /usr/local/bin/itunesbash.bash
+chmod +x /usr/local/bin/lock.bash
+chmod +x /usr/local/bin/lockbash.bash
+chmod +x /usr/local/bin/loghigh.bash
+chmod +x /usr/local/bin/loghighbash.bash
+chmod +x /usr/local/bin/login.bash
+chmod +x /usr/local/bin/loginbash.bash
+chmod +x /usr/local/bin/lognormal.bash
+chmod +x /usr/local/bin/lognormalbash.bash
+chmod +x /usr/local/bin/muteboot.bash
+chmod +x /usr/local/bin/pht.bash
+chmod +x /usr/local/bin/phtbash.bash
+chmod +x /usr/local/bin/pillow.bash
+chmod +x /usr/local/bin/plexweb.bash
+chmod +x /usr/local/bin/plexwebbash.bash
+chmod +x /usr/local/bin/plexwebwan.bash
+chmod +x /usr/local/bin/plexwebwanbash.bash
+chmod +x /usr/local/bin/plexwebios.bash
+chmod +x /usr/local/bin/plexwebiosbash.bash
+chmod +x /usr/local/bin/plexwebioswan.bash
+chmod +x /usr/local/bin/plexwebioswanbash.bash
+chmod +x /usr/local/bin/plexweblist.bash
+chmod +x /usr/local/bin/plexweblistbash.bash
+chmod +x /usr/local/bin/plexweblistwan.bash
+chmod +x /usr/local/bin/plexweblistwanbash.bash
+chmod +x /usr/local/bin/pmp.bash
+chmod +x /usr/local/bin/pmpbash.bash
+chmod +x /usr/local/bin/pms.bash
+chmod +x /usr/local/bin/pmsbash.bash
+chmod +x /usr/local/bin/pmsscan.bash
+chmod +x /usr/local/bin/pmsscanbash.bash
+chmod +x /usr/local/bin/purge.bash
+chmod +x /usr/local/bin/purgebash.bash
+chmod +x /usr/local/bin/purgesettings.bash
+chmod +x /usr/local/bin/purgesettingsbash.bash
+chmod +x /usr/local/bin/pythonkiller.bash
+chmod +x /usr/local/bin/pythonkillerbash.bash
+chmod +x /usr/local/bin/quit
+chmod +x /usr/local/bin/quit.bash
+chmod +x /usr/local/bin/quititunes.bash
+chmod +x /usr/local/bin/quititunesbash.bash
+chmod +x /usr/local/bin/quitpht.bash
+chmod +x /usr/local/bin/quitphtbash.bash
+chmod +x /usr/local/bin/quitpmp.bash
+chmod +x /usr/local/bin/quitpmpbash.bash
+chmod +x /usr/local/bin/quitpms.bash
+chmod +x /usr/local/bin/quitpmsbash.bash
+chmod +x /usr/local/bin/reboot.bash
+chmod +x /usr/local/bin/rebootbash.bash
+chmod +x /usr/local/bin/removeauto.bash
+chmod +x /usr/local/bin/removeautobash.bash
+chmod +x /usr/local/bin/removecerts.bash
+chmod +x /usr/local/bin/removecertsbash.bash
+chmod +x /usr/local/bin/removepurge.bash
+chmod +x /usr/local/bin/removepurgebash.bash
+chmod +x /usr/local/bin/restart.bash
+chmod +x /usr/local/bin/restartbash.bash
+chmod +x /usr/local/bin/restore.bash
+chmod +x /usr/local/bin/restorebash.bash
+chmod +x /usr/local/bin/restoreatvsettings.bash
+chmod +x /usr/local/bin/restoreatvsettingsbash.bash
+chmod +x /usr/local/bin/restorecerts.bash
+chmod +x /usr/local/bin/restorecertsbash.bash
+chmod +x /usr/local/bin/show
+chmod +x /usr/local/bin/show.bash
+chmod +x /usr/local/bin/shutdown.bash
+chmod +x /usr/local/bin/shutdownbash.bash
+chmod +x /usr/local/bin/sleep.bash
+chmod +x /usr/local/bin/sleepbash.bash
+chmod +x /usr/local/bin/start.bash
+chmod +x /usr/local/bin/startbash.bash
+chmod +x /usr/local/bin/status.bash
+chmod +x /usr/local/bin/statusbash.bash
+chmod +x /usr/local/bin/stoffezbash.bash
+chmod +x /usr/local/bin/stop.bash
+chmod +x /usr/local/bin/stopbash.bash
+chmod +x /usr/local/bin/sudoersfix.bash
+chmod +x /usr/local/bin/sudoersfixbash.bash
+chmod +x /usr/local/bin/timemachine.bash
+chmod +x /usr/local/bin/timemachinebash.bash
+chmod +x /usr/local/bin/trash.bash
+chmod +x /usr/local/bin/trashbash.bash
+chmod +x /usr/local/bin/trashbasebash.bash
+chmod +x /usr/local/bin/tv.bash
+chmod +x /usr/local/bin/tvbash.bash
+chmod +x /usr/local/bin/uninstallbash.bash
+chmod +x /usr/local/bin/unmuteboot.bash
+chmod +x /usr/local/bin/update.bash
+chmod +x /usr/local/bin/updatebash.bash
+chmod +x /usr/local/bin/updatewcbash.bash
+chmod +x /usr/local/bin/updater.bash
+chmod +x /usr/local/bin/updaterbash.bash
+chmod +x /usr/local/bin/utorrent.bash
+chmod +x /usr/local/bin/utorrentbash.bash
+chmod +x /usr/local/bin/wahlmanjbash.bash
+chmod +x /usr/local/bin/wake.bash
+chmod +x /usr/local/bin/wakebash.bash
+chmod +x /usr/local/bin/wcdefault.bash
+chmod +x /usr/local/bin/wcdefaultbash.bash
+chmod +x /usr/local/bin/wcinstaller.bash
+chmod +x /usr/local/bin/wcinstallerbash.bash
+chmod +x /usr/local/bin/wcios.bash
+chmod +x /usr/local/bin/wciosbash.bash
+chmod +x /usr/local/bin/wclist.bash
+chmod +x /usr/local/bin/wclistbash.bash
+chmod +x /usr/local/bin/wcopenplex.bash
+chmod +x /usr/local/bin/wcopenplexbash.bash
+chmod +x /usr/local/bin/websharing.bash
+chmod +x /usr/local/bin/websharingbash.bash
+chmod +x /usr/local/bin/who.bash
+chmod +x /usr/local/bin/whobash.bash
+chmod +x /usr/local/bin/wol.bash
+chmod +x /usr/local/bin/xml.bash
 
 if [ -s /Applications/PlexConnect/update/OSX/appwebhome.bash ]
 then
@@ -675,9 +681,9 @@ if [ -s /Applications/PlexConnect/update/OSX/PlexConnect.bash ]
 then
 chmod +x /Applications/PlexConnect/update/OSX/PlexConnect.bash
 fi
-if [ -s /usr/bin/uninstall.bash ]
+if [ -s /usr/local/bin/uninstall.bash ]
 then
-chmod +x /usr/bin/uninstall.bash
+chmod +x /usr/local/bin/uninstall.bash
 fi
 
 ## Themes
@@ -685,48 +691,48 @@ fi
 
 ## PlexConnect Commands
 ## appwewebhome.bash fixes appweb.bash
-chmod 4755 /usr/bin/backupatvsettings.bash
-chmod 4755 /usr/bin/restoreatvsettings.bash
-chmod 4755 /usr/bin/backup.bash
-chmod 4755 /usr/bin/restore.bash
-chmod 4755 /usr/bin/loghigh.bash
-chmod 4755 /usr/bin/lognormal.bash
-chmod 4755 /usr/bin/updater.bash
-chmod 4755 /usr/bin/start.bash
-chmod 4755 /usr/bin/stop.bash
-chmod 4755 /usr/bin/restart.bash
-chmod 4755 /usr/bin/status.bash
+chmod 4755 /usr/local/bin/backupatvsettings.bash
+chmod 4755 /usr/local/bin/restoreatvsettings.bash
+chmod 4755 /usr/local/bin/backup.bash
+chmod 4755 /usr/local/bin/restore.bash
+chmod 4755 /usr/local/bin/loghigh.bash
+chmod 4755 /usr/local/bin/lognormal.bash
+chmod 4755 /usr/local/bin/updater.bash
+chmod 4755 /usr/local/bin/start.bash
+chmod 4755 /usr/local/bin/stop.bash
+chmod 4755 /usr/local/bin/restart.bash
+chmod 4755 /usr/local/bin/status.bash
 ## appwewebhome.bash fixes updatewc.bash
 
 ## Hijacks
-chmod 4755 /usr/bin/restorecerts.bash
-chmod 4755 /usr/bin/removecerts.bash
-chmod 4755 /usr/bin/createcert.bash
-chmod 4755 /usr/bin/createimovie.bash
-chmod 4755 /usr/bin/createwsj.bash
+chmod 4755 /usr/local/bin/restorecerts.bash
+chmod 4755 /usr/local/bin/removecerts.bash
+chmod 4755 /usr/local/bin/createcert.bash
+chmod 4755 /usr/local/bin/createimovie.bash
+chmod 4755 /usr/local/bin/createwsj.bash
 
 ## PMS/OS X
-chmod 4755 /usr/bin/pmsscan.bash
-chmod 4755 /usr/bin/pms.bash
-chmod 4755 /usr/bin/quitpms.bash
-chmod 4755 /usr/bin/pmp.bash
-chmod 4755 /usr/bin/quitpmp.bash
-chmod 4755 /usr/bin/pht.bash
-chmod 4755 /usr/bin/quitpht.bash
-chmod 4755 /usr/bin/tv.bash
-chmod 4755 /usr/bin/utorrent.bash
-chmod 4755 /usr/bin/itunes.bash
-chmod 4755 /usr/bin/quititunes.bash
+chmod 4755 /usr/local/bin/pmsscan.bash
+chmod 4755 /usr/local/bin/pms.bash
+chmod 4755 /usr/local/bin/quitpms.bash
+chmod 4755 /usr/local/bin/pmp.bash
+chmod 4755 /usr/local/bin/quitpmp.bash
+chmod 4755 /usr/local/bin/pht.bash
+chmod 4755 /usr/local/bin/quitpht.bash
+chmod 4755 /usr/local/bin/tv.bash
+chmod 4755 /usr/local/bin/utorrent.bash
+chmod 4755 /usr/local/bin/itunes.bash
+chmod 4755 /usr/local/bin/quititunes.bash
 
 ## OS X
-chmod 4755 /usr/bin/trash.bash
-chmod 4755 /usr/bin/who.bash
-chmod 4755 /usr/bin/whobash.bash
-chmod 4755 /usr/bin/shutdown.bash
-chmod 4755 /usr/bin/wake.bash
-chmod 4755 /usr/bin/sleep.bash
-chmod 4755 /usr/bin/lock.bash
-chmod 4755 /usr/bin/reboot.bash
+chmod 4755 /usr/local/bin/trash.bash
+chmod 4755 /usr/local/bin/who.bash
+chmod 4755 /usr/local/bin/whobash.bash
+chmod 4755 /usr/local/bin/shutdown.bash
+chmod 4755 /usr/local/bin/wake.bash
+chmod 4755 /usr/local/bin/sleep.bash
+chmod 4755 /usr/local/bin/lock.bash
+chmod 4755 /usr/local/bin/reboot.bash
 
 
 ## Import LAN and WAN IP's into webconnect cgi files
@@ -742,9 +748,9 @@ wcios.bash
 wcdefault.bash
 wcopenplex.bash
 
-if [ -s /usr/bin/sudoers.bash ]
+if [ -s /usr/local/bin/sudoers.bash ]
 then
-rm /usr/bin/sudoers.bash
+rm /usr/local/bin/sudoers.bash
 fi
 
 if [ -s /wclist.bash ]

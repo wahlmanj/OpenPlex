@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/removecerts.bash
+sudo /usr/local/bin/removecerts.bash

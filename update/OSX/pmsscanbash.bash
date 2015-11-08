@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/pmsscan.bash
+sudo /usr/local/bin/pmsscan.bash

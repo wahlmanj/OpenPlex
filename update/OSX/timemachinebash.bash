@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/timemachine.bash
+sudo /usr/local/bin/timemachine.bash

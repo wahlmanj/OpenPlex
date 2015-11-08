@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/wcios.bash
+sudo /usr/local/bin/wcios.bash

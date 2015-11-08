@@ -2,4 +2,4 @@
 
 echo 'Starting Plex Home Theater...'
 
-sudo /usr/bin/pht.bash
+sudo /usr/local/bin/pht.bash

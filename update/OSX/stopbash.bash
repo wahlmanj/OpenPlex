@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/stop.bash
+sudo /usr/local/bin/stop.bash

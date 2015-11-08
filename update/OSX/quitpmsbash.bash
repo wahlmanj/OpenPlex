@@ -2,4 +2,4 @@
 
 echo 'Plex Media Server quit command sent...'
 
-sudo /usr/bin/quitpms.bash
+sudo /usr/local/bin/quitpms.bash

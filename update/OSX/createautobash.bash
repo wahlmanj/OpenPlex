@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/createauto.bash
+sudo /usr/local/bin/createauto.bash

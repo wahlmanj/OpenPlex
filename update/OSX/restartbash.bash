@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/restart.bash
+sudo /usr/local/bin/restart.bash

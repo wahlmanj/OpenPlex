@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/wcopenplex.bash
+sudo /usr/local/bin/wcopenplex.bash

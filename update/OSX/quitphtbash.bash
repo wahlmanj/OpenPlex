@@ -2,4 +2,4 @@
 
 echo 'Plex Home Theater quit command sent...'
 
-sudo /usr/bin/quitpht.bash
+sudo /usr/local/bin/quitpht.bash

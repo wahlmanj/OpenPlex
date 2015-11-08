@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/lock.bash
+sudo /usr/local/bin/lock.bash

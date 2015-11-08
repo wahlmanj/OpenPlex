@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/lognormal.bash
+sudo /usr/local/bin/lognormal.bash

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/status.bash
+sudo /usr/local/bin/status.bash

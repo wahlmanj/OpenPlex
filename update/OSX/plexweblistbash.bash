@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/plexweblist.bash
+sudo /usr/local/bin/plexweblist.bash

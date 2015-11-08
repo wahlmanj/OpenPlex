@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/appweb.bash
+sudo /usr/local/bin/appweb.bash

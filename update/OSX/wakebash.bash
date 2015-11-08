@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/wake.bash
+sudo /usr/local/bin/wake.bash

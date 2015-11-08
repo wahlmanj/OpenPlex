@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/backup.bash
+sudo /usr/local/bin/backup.bash

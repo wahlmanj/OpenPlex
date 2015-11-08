@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/restore.bash
+sudo /usr/local/bin/restore.bash

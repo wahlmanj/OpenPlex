@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/wahlmanj.bash
+sudo /usr/local/bin/wahlmanj.bash

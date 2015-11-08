@@ -19,253 +19,253 @@ FOLDER2=`echo "$QUERY_STRING" | sed -n 's/^.*folder2=\([^&]*\).*$/\1/p' | sed "s
       case "$CMD" in
           removecertsbash)
           echo "Output of removecertsbash :<pre>"
-          /usr/bin/removecertsbash.bash
+          /usr/local/bin/removecertsbash.bash
           echo "</pre>"
           ;;
 
           restorecertsbash)
           echo "Output of restorecertsbash :<pre>"
-          /usr/bin/restorecertsbash.bash
+          /usr/local/bin/restorecertsbash.bash
           echo "</pre>"
           ;;
 
           createcertbash)
           echo "Output of createcertbash :<pre>"
-          /usr/bin/createcertbash.bash
+          /usr/local/bin/createcertbash.bash
           echo "</pre>"
           ;;
 
           createimoviebash)
           echo "Output of createimoviebash :<pre>"
-          /usr/bin/createimoviebash.bash
+          /usr/local/bin/createimoviebash.bash
           echo "</pre>"
           ;;
 
           createwsjbash)
           echo "Output of createwsjbash :<pre>"
-          /usr/bin/createwsjbash.bash
+          /usr/local/bin/createwsjbash.bash
           echo "</pre>"
           ;;
 
           updaterbash)
           echo "Output of updaterbash :<pre>"
-          /usr/bin/updaterbash.bash
+          /usr/local/bin/updaterbash.bash
           echo "</pre>"
           ;;
 
           startbash)
           echo "Output of startbash :<pre>"
-          /usr/bin/startbash.bash
+          /usr/local/bin/startbash.bash
           echo "</pre>"
           ;;
 
           stopbash)
           echo "Output of stopbash :<pre>"
-          /usr/bin/stopbash.bash
+          /usr/local/bin/stopbash.bash
           echo "</pre>"
           ;;
 
           restartbash)
           echo "Output of restartbash :<pre>"
-          /usr/bin/restartbash.bash
+          /usr/local/bin/restartbash.bash
           echo "</pre>"
           ;;
           
           statusbash)
           echo "Output of statusbash :<pre>"
-          /usr/bin/statusbash.bash
+          /usr/local/bin/statusbash.bash
           echo "</pre>"
           ;;
 
           updatewcbash)
           echo "Output of updatewcbash :<pre>"
-          /usr/bin/updatewcbash.bash
+          /usr/local/bin/updatewcbash.bash
           echo "</pre>"
           ;;
           
           pmsscanbash)
           echo "Output of pmsscanbash :<pre>"
-          /usr/bin/pmsscanbash.bash
+          /usr/local/bin/pmsscanbash.bash
           echo "</pre>"
           ;;
 
           rebootbash)
           echo "Output of rebootbash :<pre>"
-          /usr/bin/rebootbash.bash
+          /usr/local/bin/rebootbash.bash
           echo "</pre>"
           ;;
 
           lockbash)
           echo "Output of lockbash :<pre>"
-          /usr/bin/lockbash.bash
+          /usr/local/bin/lockbash.bash
           echo "</pre>"
           ;;
           
           shutdownbash)
           echo "Output of shutdownbash :<pre>"
-          /usr/bin/shutdownbash.bash
+          /usr/local/bin/shutdownbash.bash
           echo "</pre>"
           ;;
           
           sleepbash)
           echo "Output of sleepbash :<pre>"
-          /usr/bin/sleepbash.bash
+          /usr/local/bin/sleepbash.bash
           echo "</pre>"
           ;;
 
           itunesbash)
           echo "Output of itunesbash :<pre>"
-          /usr/bin/itunesbash.bash
+          /usr/local/bin/itunesbash.bash
           echo "</pre>"
           ;;
 
           utorrentbash)
           echo "Output of utorrentbash :<pre>"
-          /usr/bin/utorrentbash.bash
+          /usr/local/bin/utorrentbash.bash
           echo "</pre>"
           ;;
 
           phtbash)
           echo "Output of phtbash :<pre>"
-          /usr/bin/phtbash.bash
+          /usr/local/bin/phtbash.bash
           echo "</pre>"
           ;;
 
           pmpbash)
           echo "Output of pmpbash :<pre>"
-          /usr/bin/pmpbash.bash
+          /usr/local/bin/pmpbash.bash
           echo "</pre>"
           ;;
 
           pmsbash)
           echo "Output of pmsbash :<pre>"
-          /usr/bin/pmsbash.bash
+          /usr/local/bin/pmsbash.bash
           echo "</pre>"
           ;;
 
           quititunesbash)
           echo "Output of quititunesbash :<pre>"
-          /usr/bin/quititunesbash.bash
+          /usr/local/bin/quititunesbash.bash
           echo "</pre>"
           ;;
           
           whobash)
           echo "Output of whobash :<pre>"
-          /usr/bin/whobash.bash
+          /usr/local/bin/whobash.bash
           echo "</pre>"
           ;;
           
           who)
           echo "Output of who :<pre>"
-          /usr/bin/who.bash
+          /usr/local/bin/who.bash
           echo "</pre>"
           ;;
 
           wakebash)
           echo "Output of wakebash :<pre>"
-          /usr/bin/wakebash.bash
+          /usr/local/bin/wakebash.bash
           echo "</pre>"
           ;;
 
           tvbash)
           echo "Output of tvbash :<pre>"
-          /usr/bin/tvbash.bash
+          /usr/local/bin/tvbash.bash
           echo "</pre>"
           ;;
           
           trashbash)
           echo "Output of trashbash :<pre>"
-          /usr/bin/trashbash.bash
+          /usr/local/bin/trashbash.bash
           echo "</pre>"
           ;;
 
           cyberghostbash)
           echo "Output of cyberghostbash :<pre>"
-          /usr/bin/cyberghostbash.bash
+          /usr/local/bin/cyberghostbash.bash
           echo "</pre>"
           ;;
 
           falcobash)
           echo "Output of falcobash :<pre>"
-          /usr/bin/falcobash.bash
+          /usr/local/bin/falcobash.bash
           echo "</pre>"
           ;;
 
           ibaabash)
           echo "Output of ibaabash :<pre>"
-          /usr/bin/ibaabash.bash
+          /usr/local/bin/ibaabash.bash
           echo "</pre>"
           ;;
 
           stoffezbash)
           echo "Output of stoffezbash :<pre>"
-          /usr/bin/stoffezbash.bash
+          /usr/local/bin/stoffezbash.bash
           echo "</pre>"
           ;;
           
           wahlmanjbash)
           echo "Output of wahlmanjbash :<pre>"
-          /usr/bin/wahlmanjbash.bash
+          /usr/local/bin/wahlmanjbash.bash
           echo "</pre>"
           ;;
           
           backupbash)
           echo "Output of backupbash :<pre>"
-          /usr/bin/backupbash.bash
+          /usr/local/bin/backupbash.bash
           echo "</pre>"
           ;;
           
           restorebash)
           echo "Output of restorebash :<pre>"
-          /usr/bin/restorebash.bash
+          /usr/local/bin/restorebash.bash
           echo "</pre>"
           ;;
           
           lognormalbash)
           echo "Output of lognormalbash :<pre>"
-          /usr/bin/lognormalbash.bash
+          /usr/local/bin/lognormalbash.bash
           echo "</pre>"
           ;;
 
           loghighbash)
           echo "Output of loghighbash :<pre>"
-          /usr/bin/loghighbash.bash
+          /usr/local/bin/loghighbash.bash
           echo "</pre>"
           ;;
           
           appwebbash)
           echo "Output of appwebbash :<pre>"
-          /usr/bin/appwebbash.bash
+          /usr/local/bin/appwebbash.bash
           echo "</pre>"
           ;;
 
           restoreatvsettingsbash)
           echo "Output of restoreatvsettingsbash :<pre>"
-          /usr/bin/restoreatvsettingsbash.bash
+          /usr/local/bin/restoreatvsettingsbash.bash
           echo "</pre>"
           ;;
 
           backupatvsettingsbash)
           echo "Output of backupatvsettingsbash :<pre>"
-          /usr/bin/backupatvsettingsbash.bash
+          /usr/local/bin/backupatvsettingsbash.bash
           echo "</pre>"
           ;;
 
           quitpmsbash)
           echo "Output of quitpmsbash :<pre>"
-          /usr/bin/quitpmsbash.bash
+          /usr/local/bin/quitpmsbash.bash
           echo "</pre>"
           ;;
 
           quitpmpbash)
           echo "Output of quitpmpbash :<pre>"
-          /usr/bin/quitpmpbash.bash
+          /usr/local/bin/quitpmpbash.bash
           echo "</pre>"
           ;;
 
           quitphtbash)
           echo "Output of quitphtbash :<pre>"
-          /usr/bin/quitphtbash.bash
+          /usr/local/bin/quitphtbash.bash
           echo "</pre>"
           ;;
 

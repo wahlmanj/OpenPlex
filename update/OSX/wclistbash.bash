@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/wclist.bash
+sudo /usr/local/bin/wclist.bash

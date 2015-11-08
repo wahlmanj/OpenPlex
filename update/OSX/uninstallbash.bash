@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/uninstall.bash
+sudo /usr/local/bin/uninstall.bash

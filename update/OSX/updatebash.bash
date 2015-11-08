@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/update.bash
+sudo /usr/local/bin/update.bash

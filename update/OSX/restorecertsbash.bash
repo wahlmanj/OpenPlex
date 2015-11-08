@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/restorecerts.bash
+sudo /usr/local/bin/restorecerts.bash

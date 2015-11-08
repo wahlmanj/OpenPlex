@@ -19,109 +19,109 @@ FOLDER2=`echo "$QUERY_STRING" | sed -n 's/^.*folder2=\([^&]*\).*$/\1/p' | sed "s
       case "$CMD" in
         removecertsbash)
           echo "Output of removecertsbash :<pre>"
-          /usr/bin/removecertsbash.bash
+          /usr/local/bin/removecertsbash.bash
           echo "</pre>"
           ;;
 
         createcertbash)
           echo "Output of createcertbash :<pre>"
-          /usr/bin/createcertbash.bash
+          /usr/local/bin/createcertbash.bash
           echo "</pre>"
           ;;
 
           createimoviebash)
           echo "Output of createimoviebash :<pre>"
-          /usr/bin/createimoviebash.bash
+          /usr/local/bin/createimoviebash.bash
           echo "</pre>"
           ;;
 
           createwsjbash)
           echo "Output of createwsjbash :<pre>"
-          /usr/bin/createwsjbash.bash
+          /usr/local/bin/createwsjbash.bash
           echo "</pre>"
           ;;
 
         createplistbash)
           echo "Output of createplistbash :<pre>"
-          /usr/bin/createplistbash.bash
+          /usr/local/bin/createplistbash.bash
           echo "</pre>"
           ;;
 
         updaterbash)
           echo "Output of updaterbash :<pre>"
-          /usr/bin/updaterbash.bash
+          /usr/local/bin/updaterbash.bash
           echo "</pre>"
           ;;
 
         startbash)
           echo "Output of startbash :<pre>"
-          /usr/bin/startbash.bash
+          /usr/local/bin/startbash.bash
           echo "</pre>"
           ;;
 
         stopbash)
           echo "Output of stopbash :<pre>"
-          /usr/bin/stopbash.bash
+          /usr/local/bin/stopbash.bash
           echo "</pre>"
           ;;
 
         restartbash)
           echo "Output of restartbash :<pre>"
-          /usr/bin/restartbash.bash
+          /usr/local/bin/restartbash.bash
           echo "</pre>"
           ;;
           
           statusbash)
           echo "Output of statusbash :<pre>"
-          /usr/bin/statusbash.bash
+          /usr/local/bin/statusbash.bash
           echo "</pre>"
           ;;
 
           rebootbash)
           echo "Output of rebootbash :<pre>"
-          /usr/bin/rebootbash.bash
+          /usr/local/bin/rebootbash.bash
           echo "</pre>"
           ;;
 
           lockbash)
           echo "Output of lockbash :<pre>"
-          /usr/bin/lockbash.bash
+          /usr/local/bin/lockbash.bash
           echo "</pre>"
           ;;
           
           updatewcbash)
           echo "Output of updatewcbash :<pre>"
-          /usr/bin/updatewcbash.bash
+          /usr/local/bin/updatewcbash.bash
           echo "</pre>"
           ;;
           
           pmsscanbash)
           echo "Output of pmsscanbash :<pre>"
-          /usr/bin/pmsscanbash.bash
+          /usr/local/bin/pmsscanbash.bash
           echo "</pre>"
           ;;
 
           shutdownbash)
           echo "Output of shutdownbash :<pre>"
-          /usr/bin/shutdownbash.bash
+          /usr/local/bin/shutdownbash.bash
           echo "</pre>"
           ;;
           
           sleepbash)
           echo "Output of sleepbash :<pre>"
-          /usr/bin/sleepbash.bash
+          /usr/local/bin/sleepbash.bash
           echo "</pre>"
           ;;
           
           itunesbash)
           echo "Output of itunesbash :<pre>"
-          /usr/bin/itunesbash.bash
+          /usr/local/bin/itunesbash.bash
           echo "</pre>"
           ;;
           
           timemachinebash)
           echo "Output of timemachinebash :<pre>"
-          /usr/bin/timemachinebash.bash
+          /usr/local/bin/timemachinebash.bash
           echo "</pre>"
           ;;
 

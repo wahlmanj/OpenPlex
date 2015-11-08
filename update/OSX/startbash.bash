@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/start.bash
+sudo /usr/local/bin/start.bash

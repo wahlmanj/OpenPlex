@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/backupatvsettings.bash
+sudo /usr/local/bin/backupatvsettings.bash

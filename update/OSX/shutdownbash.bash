@@ -2,4 +2,4 @@
 
 echo 'OSX shutdown command sent...'
 
-sudo /usr/bin/shutdown.bash
+sudo /usr/local/bin/shutdown.bash

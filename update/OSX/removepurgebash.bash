@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/removepurge.bash
+sudo /usr/local/bin/removepurge.bash

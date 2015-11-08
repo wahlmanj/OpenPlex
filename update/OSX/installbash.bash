@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/install.bash
+sudo /usr/local/bin/install.bash

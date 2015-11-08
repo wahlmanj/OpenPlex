@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/plexwebioswan.bash
+sudo /usr/local/bin/plexwebioswan.bash

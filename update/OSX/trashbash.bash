@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/trash.bash
+sudo /usr/local/bin/trash.bash

@@ -285,7 +285,7 @@ script AppDelegate
         tell appupdateProgressBar to startAnimation:me -- another way
         set animated to true
         try
-            set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+            set fileAsPOSIX to (POSIX path of "/usr//local/bin/ibaa.bash")
             set theString to quoted form of "HOME"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is "2" then
@@ -489,7 +489,7 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
                         set theString to quoted form of "HOME"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
@@ -726,7 +726,7 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
                         set theString to quoted form of "HOME"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
@@ -963,7 +963,7 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
                         set theString to quoted form of "HOME"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
@@ -1200,7 +1200,7 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
                         set theString to quoted form of "HOME"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
@@ -1437,7 +1437,7 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
                         set theString to quoted form of "HOME"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
@@ -1674,7 +1674,7 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/bin/ibaa.bash")
+                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
                         set theString to quoted form of "HOME"
                         set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
                         if searchResult is "2" then
@@ -2680,8 +2680,8 @@ script AppDelegate
     end buttonhandlerplexweb_
     
     on buttonhandlermuteboot_(sender)
-        do shell script "sudo defaults write com.apple.loginwindow LoginHook /usr/bin/unmuteboot.bash" with administrator privileges
-        do shell script "sudo defaults write com.apple.loginwindow LogoutHook /usr/bin/muteboot.bash" with administrator privileges
+        do shell script "sudo defaults write com.apple.loginwindow LoginHook /usr/local/bin/unmuteboot.bash" with administrator privileges
+        do shell script "sudo defaults write com.apple.loginwindow LogoutHook /usr/local/bin/muteboot.bash" with administrator privileges
         display notification "Boot startup sound muted..." with title "OS X Status"
         delay 0
     end buttonhandlermuteboot_

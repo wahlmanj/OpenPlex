@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/updatewc.bash
+sudo /usr/local/bin/updatewc.bash

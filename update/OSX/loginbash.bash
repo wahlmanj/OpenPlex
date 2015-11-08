@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/login.bash
+sudo /usr/local/bin/login.bash

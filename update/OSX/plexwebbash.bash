@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/plexweb.bash
+sudo /usr/local/bin/plexweb.bash

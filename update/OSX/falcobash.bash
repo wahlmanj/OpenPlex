@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/falco.bash
+sudo /usr/local/bin/falco.bash

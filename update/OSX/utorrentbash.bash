@@ -2,4 +2,4 @@
 
 echo 'Starting uTorrent...'
 
-sudo /usr/bin/utorrent.bash
+sudo /usr/local/bin/utorrent.bash

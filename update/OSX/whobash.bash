@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/who.bash
+sudo /usr/local/bin/who.bash

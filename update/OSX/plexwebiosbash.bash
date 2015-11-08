@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/plexwebios.bash
+sudo /usr/local/bin/plexwebios.bash

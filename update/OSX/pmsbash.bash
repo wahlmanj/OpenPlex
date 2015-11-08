@@ -2,4 +2,4 @@
 
 echo 'Starting Plex Media Server...'
 
-sudo /usr/bin/pms.bash
+sudo /usr/local/bin/pms.bash

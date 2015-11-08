@@ -2,4 +2,4 @@
 
 echo 'Starting Plex Media Player...'
 
-sudo /usr/bin/pmp.bash
+sudo /usr/local/bin/pmp.bash

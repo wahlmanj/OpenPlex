@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/stoffez.bash
+sudo /usr/local/bin/stoffez.bash

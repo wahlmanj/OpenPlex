@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/updategit.bash
+sudo /usr/local/bin/updategit.bash

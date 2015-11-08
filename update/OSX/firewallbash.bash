@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo /usr/bin/firewall.bash
+sudo /usr/local/bin/firewall.bash
 

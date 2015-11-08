@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/bootlock.bash
+sudo /usr/local/bin/bootlock.bash

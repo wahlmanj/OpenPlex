@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/createcert.bash
+sudo /usr/local/bin/createcert.bash

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/updater.bash
+sudo /usr/local/bin/updater.bash

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/createplist.bash
+sudo /usr/local/bin/createplist.bash

@@ -2,4 +2,4 @@
 
 echo 'OSX sleep command sent...'
 
-sudo /usr/bin/sleep.bash
+sudo /usr/local/bin/sleep.bash

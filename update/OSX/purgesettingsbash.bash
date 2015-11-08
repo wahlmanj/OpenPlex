@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo /usr/bin/purgesettings.bash
+sudo /usr/local/bin/purgesettings.bash
