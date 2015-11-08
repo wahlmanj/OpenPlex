@@ -57,7 +57,7 @@ script AppDelegate
     end buttonhandlerversion_
     
     on buttonhandlerfirewall_(sender)
-    do shell script "firewallbash.bash"
+    do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; firewallbash.bash"
     display notification "Python codesigned for OS X Firewall, accept python via firewall again..." with title "OpenPlex Status"
     delay 0
     end buttonhandlerfirewall_
@@ -75,7 +75,7 @@ script AppDelegate
                         display notification "No PlexConnect updates avaliable..." & y with title "OpenPlex Status"
                         delay 0
                         else if x is not equal to "Already up-to-date." then
-                        do shell script "restartbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                         try
                             do shell script "afplay /System/Library/Sounds/Glass.aiff"
                         end try
@@ -91,7 +91,7 @@ script AppDelegate
     end buttonhandlerupdate_
 
     on buttonhandlerrestart_(sender)
-        do shell script "restartbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "No Theme installed..." with title "OpenPlex Status"
@@ -126,7 +126,7 @@ script AppDelegate
     end buttonhandlerrestart_
     
     on buttonhandlerstop_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "No Theme installed..." with title "OpenPlex Status"
@@ -166,7 +166,7 @@ script AppDelegate
     end buttonhandlerstop_
     
     on buttonhandlerstart_(sender)
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "No Theme installed..." with title "OpenPlex Status"
@@ -278,14 +278,14 @@ script AppDelegate
         set animated to true
         display notification "Uninstalling OpenPlex..." with title "OpenPlex Status"
         delay 0
-        do shell script "uninstallbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; uninstallbash.bash"
     end buttonhandleruninstall_
     
     on buttonhandlernewupdateoc_(sender)
         tell appupdateProgressBar to startAnimation:me -- another way
         set animated to true
         try
-            set fileAsPOSIX to (POSIX path of "/usr//local/bin/ibaa.bash")
+            set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
             set theString to quoted form of "HOME"
             set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
             if searchResult is "2" then
@@ -296,7 +296,7 @@ script AppDelegate
         end try
         tell application "Finder"
             tell application "Finder"
-                if not (exists file "usr:bin:appweb.bash" of the startup disk) then
+                if not (exists file "usr:local:bin:appweb.bash" of the startup disk) then
                     do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                     display notification "Enabling WebConnect app updater..." with title "OpenPlex Status"
                     delay 0
@@ -312,7 +312,7 @@ script AppDelegate
         try
                 do shell script "rm -R ~/Library/Application\\ Support/OpenPlex/updater/updater.app"
         end try
-            set x to do shell script "appwebbash.bash"
+            set x to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; appwebbash.bash"
             if x is equal to "no updates available" then
                 try
                     do shell script "afplay /System/Library/Sounds/Ping.aiff"
@@ -409,7 +409,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -419,7 +419,7 @@ script AppDelegate
                 delay 0
                 do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                 if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                     try
                         do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -438,7 +438,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createimoviebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                         end if
                     end try
                     try
@@ -448,7 +448,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createcertbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                         end if
                     end try
                     try
@@ -458,12 +458,12 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createwsjbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
                         try
-                        do shell script "atvsettingsautobash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                         end try
@@ -500,14 +500,14 @@ script AppDelegate
                     end try
                     try
                         -- load custom certs if in use
-                        do shell script "restartbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
                     try
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
                     end try
                 end if
             end if
@@ -517,8 +517,7 @@ script AppDelegate
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
-                            do shell script "stopbash.bash"
-                            do shell script "trashbasebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash; trashbasebash.bash"
                         end try
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -551,7 +550,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
-                do shell script "purgesettingsbash.bash; restart.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
@@ -571,7 +570,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createimoviebash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                             end if
                         end try
                         try
@@ -581,7 +580,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createcertbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                             end if
                         end try
                         try
@@ -591,7 +590,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createwsjbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                             end if
                         end try
                         if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
@@ -646,7 +645,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -656,7 +655,7 @@ script AppDelegate
                 delay 0
                 do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                 if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                     try
                         do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -675,7 +674,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createimoviebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                         end if
                     end try
                     try
@@ -685,7 +684,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createcertbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                         end if
                     end try
                     try
@@ -695,12 +694,12 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createwsjbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
                         try
-                        do shell script "atvsettingsautobash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                         end try
@@ -737,14 +736,14 @@ script AppDelegate
                     end try
                     try
                         -- load custom certs if in use
-                        do shell script "restartbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
                     try
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
                     end try
                 end if
             end if
@@ -754,8 +753,7 @@ script AppDelegate
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
-                            do shell script "stopbash.bash"
-                            do shell script "trashbasebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash; trashbasebash.bash"
                         end try
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -788,7 +786,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
-                do shell script "purgesettingsbash.bash; restart.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
@@ -808,7 +806,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createimoviebash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                             end if
                         end try
                         try
@@ -818,7 +816,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createcertbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                             end if
                         end try
                         try
@@ -828,7 +826,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createwsjbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                             end if
                         end try
                         if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
@@ -883,7 +881,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -893,7 +891,7 @@ script AppDelegate
                 delay 0
                 do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                 if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                     try
                         do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -912,7 +910,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createimoviebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                         end if
                     end try
                     try
@@ -922,7 +920,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createcertbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                         end if
                     end try
                     try
@@ -932,12 +930,12 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createwsjbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
                         try
-                        do shell script "atvsettingsautobash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                         end try
@@ -974,14 +972,14 @@ script AppDelegate
                     end try
                     try
                         -- load custom certs if in use
-                        do shell script "restartbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
                     try
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
                     end try
                 end if
             end if
@@ -991,8 +989,7 @@ script AppDelegate
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
-                            do shell script "stopbash.bash"
-                            do shell script "trashbasebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash; trashbasebash.bash"
                         end try
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1025,7 +1022,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
-                do shell script "purgesettingsbash.bash; restart.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
@@ -1045,7 +1042,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createimoviebash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                             end if
                         end try
                         try
@@ -1055,7 +1052,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createcertbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                             end if
                         end try
                         try
@@ -1065,7 +1062,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createwsjbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                             end if
                         end try
                         if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
@@ -1120,7 +1117,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -1130,7 +1127,7 @@ script AppDelegate
                 delay 0
                 do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                 if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                     try
                         do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -1149,7 +1146,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createimoviebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                         end if
                     end try
                     try
@@ -1159,7 +1156,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createcertbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                         end if
                     end try
                     try
@@ -1169,12 +1166,12 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createwsjbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
                         try
-                        do shell script "atvsettingsautobash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                         end try
@@ -1211,14 +1208,14 @@ script AppDelegate
                     end try
                     try
                         -- load custom certs if in use
-                        do shell script "restartbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
                     try
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
                     end try
                 end if
             end if
@@ -1228,8 +1225,7 @@ script AppDelegate
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
-                            do shell script "stopbash.bash"
-                            do shell script "trashbasebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash; trashbasebash.bash"
                         end try
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1262,7 +1258,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
-                do shell script "purgesettingsbash.bash; restart.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
@@ -1282,7 +1278,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createimoviebash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                             end if
                         end try
                         try
@@ -1292,7 +1288,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createcertbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                             end if
                         end try
                         try
@@ -1302,7 +1298,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createwsjbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                             end if
                         end try
                         if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
@@ -1357,7 +1353,7 @@ script AppDelegate
         tell application "Finder"
             if (exists folder "usr:local:git:OP" of the startup disk) then
                 try
-                    do shell script "rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
+                    do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; rm -R /Applications/PlexConnect; stopbash.bash; trashbasebash.bash; exit"
                 end try
                 if not (exists folder "Applications:plexconnect_BACKUP" of the startup disk) then
                     do shell script "mkdir /Applications/plexconnect_BACKUP"
@@ -1367,7 +1363,7 @@ script AppDelegate
                 delay 0
                 do shell script "cp -R ~/Library/Application\\ Support/OpenPlex/update /Applications/PlexConnect"
                 do shell script "/Applications/PlexConnect/update/OSX/sudoers.bash"
-                do shell script "sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; sudoersfixbash.bash; installbash.bash; purgesettingsbash.bash"
                 if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
                     try
                         do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect"
@@ -1386,7 +1382,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createimoviebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                         end if
                     end try
                     try
@@ -1396,7 +1392,7 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createcertbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                         end if
                     end try
                     try
@@ -1406,12 +1402,12 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "createwsjbash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                         end if
                     end try
                     if (exists file "Applications:plexconnect_BACKUP:myplex.auto" of the startup disk) then
                         try
-                        do shell script "atvsettingsautobash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; atvsettingsautobash.bash"
                         display notification "Myplex loaded..." with title "OpenPlex Status"
                         delay 0
                         end try
@@ -1448,14 +1444,14 @@ script AppDelegate
                     end try
                     try
                         -- load custom certs if in use
-                        do shell script "restartbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
                     else if not (exists file "Applications:plexconnect_BACKUP:trailers.auto" of the startup disk) then
                 end if
                 if (exists file "Applications:plexconnect_BACKUP:icon.auto" of the startup disk) then
                     try
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
-                        do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
                     end try
                 end if
             end if
@@ -1465,8 +1461,7 @@ script AppDelegate
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
-                            do shell script "stopbash.bash"
-                            do shell script "trashbasebash.bash"
+                            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash; trashbasebash.bash"
                         end try
                         else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                         try
@@ -1499,7 +1494,7 @@ script AppDelegate
                 do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
-                do shell script "purgesettingsbash.bash; restart.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
@@ -1519,7 +1514,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createimoviebash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                             end if
                         end try
                         try
@@ -1529,7 +1524,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createcertbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                             end if
                         end try
                         try
@@ -1539,7 +1534,7 @@ script AppDelegate
                             if searchResult is "2" then
                                 display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                                 delay 0
-                                do shell script "createwsjbash.bash"
+                                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                             end if
                         end try
                         if (exists file "Applications:PlexConnect:assets:certificates:trailers.cer" of the startup disk) then
@@ -1860,7 +1855,7 @@ script AppDelegate
             display notification "Creating Trailers certs if needed and setting hijack to Trailers..." with title "OpenPlex Status"
             delay 0
             try
-                do shell script "createcertbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                 on error
                 tell application "Finder"
                     if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -1912,7 +1907,7 @@ script AppDelegate
             display notification "Creating iMovie certs if needed and setting hijack to iMovie..." with title "OpenPlex Status"
             delay 0
             try
-                do shell script "createimoviebash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                 on error
                 tell application "Finder"
                     if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -1964,7 +1959,7 @@ script AppDelegate
             display notification "Creating WSJ certs if needed and setting hijack to WSJ..." with title "OpenPlex Status"
             delay 0
             try
-                do shell script "createwsjbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                 on error
                 tell application "Finder"
                     if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
@@ -2018,7 +2013,7 @@ script AppDelegate
     end buttonhandlericontut_
     
     on buttonhandlerios7greyplexicon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
             do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2030,13 +2025,13 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios7greyplexicon_
     
     on buttonhandlerios7blackplexicon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
                 do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2048,13 +2043,13 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios7blackplexicon_
     
     on buttonhandlerios7gradientplexicon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
                 do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2066,13 +2061,13 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios7gradientplexicon_
     
     on buttonhandlerios7plexconnecticon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
                 do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2084,13 +2079,13 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios7plexconnecticon_
     
     on buttonhandlerios8greyplexicon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
                 do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2102,13 +2097,13 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios8greyplexicon_
     
     on buttonhandlerios8blackplexicon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
                 do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2120,13 +2115,13 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios8blackplexicon_
     
     on buttonhandlerios8gradientplexicon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
                 do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2138,13 +2133,13 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios8gradientplexicon_
     
     on buttonhandlerios8plexconnecticon_(sender)
-        do shell script "stopbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash"
         tell application "Finder"
             if not (exists folder "Applications:PlexConnect:assets:icons" of the startup disk) then
                 do shell script "mkdir /Applications/PlexConnect/assets/icons"
@@ -2156,7 +2151,7 @@ script AppDelegate
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/Settings.py /Applications/PlexConnect"
         do shell script "cp /Applications/PlexConnect/update/OSX/icon/icon/DNSServer.py /Applications/PlexConnect"
         delay 4
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
         display notification "Custom icon ready for upload..." with title "PlexConnect Status"
         delay 0
     end buttonhandlerios8plexconnecticon_
@@ -2211,9 +2206,7 @@ script AppDelegate
             if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "PlexConnect deleted..." with title "OpenPlex Status"
                 delay 0
-                do shell script "trashbasebash.bash"
-                do shell script "stopbash.bash"
-                do shell script "trashbasebash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; trashbasebash.bash; stopbash.bash; trashbasebash.bash"
                 else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                 display notification "Cannot delete, no folder detected..." with title "OpenPlex Status"
                 delay 0
@@ -2261,7 +2254,7 @@ script AppDelegate
                     if searchResult is "2" then
                         display notification "iMovie certs loaded, Hijacking iMovie..." with title "OpenPlex Status"
                         delay 0
-                        do shell script "createimoviebash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createimoviebash.bash"
                     end if
                 end try
                 
@@ -2272,7 +2265,7 @@ script AppDelegate
                     if searchResult is "2" then
                         display notification "Trailers certs loaded, Hijacking Trailers..." with title "OpenPlex Status"
                         delay 0
-                        do shell script "createcertbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createcertbash.bash"
                     end if
                 end try
                 
@@ -2283,7 +2276,7 @@ script AppDelegate
                     if searchResult is "2" then
                         display notification "WSJ certs loaded, Hijacking WSJ..." with title "OpenPlex Status"
                         delay 0
-                        do shell script "createwsjbash.bash"
+                        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createwsjbash.bash"
                     end if
                 end try
                 
@@ -2379,7 +2372,7 @@ script AppDelegate
     end buttonhandlerloadbackupfanart_
     
     on buttonhandlerbackupATVSettings_(sender)
-        do shell script "stopbash.bash; sleep 4"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash; sleep 4"
         tell application "Finder"
             if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
                 display notification "ATVSettings.cfg backed up..." with title "OpenPlex Status"
@@ -2411,7 +2404,7 @@ script AppDelegate
                 delay 0
             end if
         end tell
-        do shell script "startbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; startbash.bash"
     end buttonhandlerbackupATVSettings_
     
     on buttonhandlerloadATVSettings_(sender)
@@ -2419,7 +2412,7 @@ script AppDelegate
             if (exists file "Applications:plexconnect_BACKUP:ATVSettings.cfg" of the startup disk) then
                 display notification "Exit and/or Open aTV hijack to restore PlexConnect Settings..." with title "OpenPlex Status"
                 delay 0
-                do shell script "restoreatvsettingsbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restoreatvsettingsbash.bash"
                 -- allow PlexConnect.log to save and repopulate (sleep 4)
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
@@ -2474,7 +2467,7 @@ script AppDelegate
             if (exists file "Applications:PlexConnect:ATVSettings.cfg" of the startup disk) then
                 display notification "Exit and/or Open aTV hijack to restore default PlexConnect Settings..." with title "OpenPlex Status"
                 delay 0
-                do shell script "stopbash.bash; sleep 5; purgesettingsbash.bash; startbash.bash; sleep 4"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; stopbash.bash; sleep 5; purgesettingsbash.bash; startbash.bash; sleep 4"
                 -- allow PlexConnect.log to save and repopulate (sleep 4)
                 tell application "Finder"
                     if (exists folder "Applications:PlexConnect" of the startup disk) then
@@ -2525,13 +2518,13 @@ script AppDelegate
     end buttonhandlerdeleteATVSettings_
     
     on buttonhandlerbackupall_(sender)
-        do shell script "backupbash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; backupbash.bash"
         display notification "All available settings Backed up..." with title "OpenPlex Status"
         delay 0
     end buttonhandlerbackupall_
     
     on buttonhandlerrestoreall_(sender)
-        do shell script "restorebash.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restorebash.bash"
         display notification "All available settings restored..." with title "OpenPlex Status"
         delay 0
     end buttonhandlerrestoreall_
@@ -2553,7 +2546,7 @@ script AppDelegate
     on buttonhandlerbootlock_(sender)
         tell application "Finder"
             if not (exists file "Library:LaunchAgents:com.lock.plist" of the startup disk) then
-                do shell script "bootlockbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; bootlockbash.bash"
                 display notification "Automatic app loading & lock screen enabled..." with title "OpenPlex Status"
                 else
                 display notification "Automatic app loading & lock screen already enabled..." with title "OpenPlex Status"
@@ -2563,14 +2556,14 @@ script AppDelegate
     
     on buttonhandlercustomicons_(sender)
         try
-            do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
-            do shell script "icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
+            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon/backup.png /Applications/plexconnect_BACKUP"
+            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; icon.bash /Applications/PlexConnect/update/OSX/icon@720.png /Applications/PlexConnect"
             do shell script "cd /Applications/plexconnect_BACKUP; touch icon.auto"
         end try
     end buttonhandlercustomicons_
     
     on buttonhandlerfixplists_(sender)
-        do shell script "auto.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; auto.bash" with administrator privileges
     end buttonhandlerfixplists_
     
     on buttonhandlergitreset_(sender)
@@ -2578,7 +2571,7 @@ script AppDelegate
             set y to do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; cd /Applications/PlexConnect; git reset --soft HEAD^; git reset --hard"
             display notification "PlexConnect downgraded 1 version (commit), Exit hijacked app on aTV..." & y with title "PlexConnect Status"
             delay 0
-            do shell script "restartbash.bash"
+            do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
             on error
             display notification "PlexConnect folder corrupted reinstall theme" with title "OpenPlex Status"
             delay 0
@@ -2622,7 +2615,7 @@ script AppDelegate
                 display notification "Automatic GitHub Updates Disabled..." with title "OpenPlex Status"
                 delay 0
                 else
-                do shell script "createautobash.bash; cd /Applications/plexconnect_BACKUP; touch update.auto"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; createautobash.bash; cd /Applications/plexconnect_BACKUP; touch update.auto"
                 display notification "Automatic GitHub Updates Enabled..." with title "OpenPlex Status"
                 delay 0
             end if
@@ -2708,8 +2701,8 @@ script AppDelegate
     end buttonhandlerpillowinstaller_
     
     on buttonhandlerairplayinstaller_(sender)
-        do shell script "quit Terminal; sleep 2"
-        do shell script "open /Applications/Utilities/Terminal.app"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; quit Terminal; sleep 2"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; open /Applications/Utilities/Terminal.app"
         tell application "Terminal"
             activate
             activate
@@ -2725,7 +2718,7 @@ script AppDelegate
         do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
         do shell script "chmod +x /applications/unsupported/unsupported.bash" with administrator privileges
         do shell script "/applications/unsupported/unsupported.bash" with administrator privileges
-        do shell script "unsupported2.bash"
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; unsupported2.bash"
         do shell script "chmod +x /applications/unsupported/copy.bash" with administrator privileges
         do shell script "/applications/unsupported/copy.bash" with administrator privileges
         display notification "Unsupported AppStore installed..." with title "OpenPlex Status"
@@ -2733,7 +2726,7 @@ script AppDelegate
     end buttonhandleruas_
     
     on buttonhandlerwol_(sender)
-        do shell script "wol.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; wol.bash" with administrator privileges
         display notification "aTV WOL Plists installed..." with title "OpenPlex Status"
         delay 0
     end buttonhandlerwol_
@@ -2789,7 +2782,7 @@ script AppDelegate
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-        do shell script "installbash.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash" with administrator privileges
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/httpd.conf /etc/apache2" with administrator privileges
             on error
@@ -2798,7 +2791,7 @@ script AppDelegate
         end try
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:httpd.conf" of the startup disk) then
-                do shell script "websharingbash.bash"
+                do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; websharingbash.bash"
                 do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 display notification "Install pref pane and turn on WebSharing to enable WebConnect on 10.8.x or 10.9.x..." with title "OpenPlex Status"
                 delay 0
@@ -2815,7 +2808,7 @@ script AppDelegate
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-        do shell script "installbash.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash" with administrator privileges
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/10.10/httpd.conf /etc/apache2" with administrator privileges
             on error
@@ -2844,7 +2837,7 @@ script AppDelegate
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-        do shell script "installbash.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash" with administrator privileges
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/10.10.5/httpd.conf /etc/apache2" with administrator privileges
             on error
