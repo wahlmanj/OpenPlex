@@ -352,6 +352,8 @@ cp cyberghostbash.bash /usr/local/bin
 cp falcobash.bash /usr/local/bin
 cp firewall.bash /usr/local/bin
 cp firewallbash.bash /usr/local/bin
+cp flexget.bash /usr/local/bin
+cp flexgetbash.bash /usr/local/bin
 cp hide /usr/local/bin
 cp hide.bash /usr/local/bin
 cp ibaabash.bash /usr/local/bin
@@ -536,6 +538,8 @@ chmod +x /usr/local/bin/cyberghostbash.bash
 chmod +x /usr/local/bin/falcobash.bash
 chmod +x /usr/local/bin/firewall.bash
 chmod +x /usr/local/bin/firewallbash.bash
+chmod +x /usr/local/bin/flexget.bash
+chmod +x /usr/local/bin/flexgetbash.bash
 chmod +x /usr/local/bin/hide
 chmod +x /usr/local/bin/hide.bash
 chmod +x /usr/local/bin/ibaabash.bash
