@@ -1254,6 +1254,9 @@ address changes you must reinstall WebConnect again.</string>
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlersettingscfg:" target="qo8-lj-syM" id="3oE-sk-cK6"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="IQR-4u-aJH">
                                             <rect key="frame" x="413" y="42" width="93" height="42"/>
