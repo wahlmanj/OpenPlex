@@ -14,7 +14,7 @@
                 <outlet property="interceptButtonOutlet" destination="xoh-QY-d7D" id="TTo-Mn-JuE"/>
                 <outlet property="loginButtonOutlet" destination="rzD-WN-ZfW" id="xKJ-8q-gqI"/>
                 <outlet property="myplexButtonOutlet" destination="U1W-Rr-GlY" id="osb-aM-5Td"/>
-                <outlet property="settingsButtonOutlet" destination="VPo-kb-DRt" id="7dM-uL-gwc"/>
+                <outlet property="settingsButtonOutlet" destination="VPo-kb-DRt" id="BEa-37-Q2e"/>
                 <outlet property="statusImage" destination="mmB-1C-zk3" id="83h-vf-Abg"/>
                 <outlet property="trailersButtonOutlet" destination="KZG-d8-1Kp" id="tjV-c2-pOv"/>
                 <outlet property="updateButton" destination="YOj-n6-8LK" id="Rfx-Sm-ru6"/>
@@ -1209,341 +1209,6 @@ address changes you must reinstall WebConnect again.</string>
                                     <animations/>
                                 </view>
                             </tabViewItem>
-                            <tabViewItem label="Extras" identifier="2" id="oaX-hh-hOm">
-                                <view key="view" id="5jN-NB-8Gf">
-                                    <rect key="frame" x="10" y="33" width="799" height="373"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button verticalHuggingPriority="750" id="RFf-2O-k4C">
-                                            <rect key="frame" x="439" y="308" width="94" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="UAS" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WdJ-jp-UWy">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandleruas:" target="qo8-lj-syM" id="IeK-R3-bMk"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="ooM-Yf-HbC">
-                                            <rect key="frame" x="439" y="263" width="94" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Airplay" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aho-GZ-Ffb">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="makeKeyAndOrderFront:" target="J4W-YM-HbQ" id="80R-Zm-Fd0"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="IQb-zi-zdz">
-                                            <rect key="frame" x="38" y="308" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aht-PQ-1xN">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="updateButtonAction:" target="-2" id="fo2-Mo-mOE"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="DEo-V1-PDX">
-                                            <rect key="frame" x="439" y="216" width="94" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Boot Lock" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pUJ-yr-2BG">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerbootlock:" target="qo8-lj-syM" id="Vhj-SX-2g0"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="zqS-19-gKW">
-                                            <rect key="frame" x="439" y="170" width="94" height="41"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="WOL" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4kq-lH-l8P">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerwol:" target="qo8-lj-syM" id="HF7-92-Mov"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="VPo-kb-DRt">
-                                            <rect key="frame" x="38" y="170" width="93" height="41"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q2J-62-LQ0">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="settingButtonAction:" target="-2" id="2jV-1z-Tr7"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="U1W-Rr-GlY">
-                                            <rect key="frame" x="38" y="216" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FFi-3N-2gc">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="myplexButtonAction:" target="-2" id="uSn-Jw-Zqq"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="KZG-d8-1Kp">
-                                            <rect key="frame" x="38" y="263" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QrN-tw-903">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="trailersButtonAction:" target="-2" id="Bgq-HG-ZDw"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="7kR-dU-bt5">
-                                            <rect key="frame" x="38" y="123" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Trash Can" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3rF-B6-F3w">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlertrashcan:" target="qo8-lj-syM" id="Rsb-zb-rvY"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="6Mp-9l-SMl">
-                                            <rect key="frame" x="439" y="123" width="94" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="storeFront" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zdp-jE-i4G">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerstorefront:" target="qo8-lj-syM" id="S1D-Qv-g6B"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="Rl6-5C-kla">
-                                            <rect key="frame" x="439" y="76" width="94" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="PlexWeb" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4NH-W9-jgb">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerplexweb:" target="qo8-lj-syM" id="J4Q-n1-mwq"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="eXe-lb-Rxg">
-                                            <rect key="frame" x="439" y="29" width="94" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dk3-jG-HbE">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="makeKeyAndOrderFront:" target="RCS-xH-a7x" id="jCw-zm-Lga"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="sXy-bX-6qN">
-                                            <rect key="frame" x="38" y="76" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Log High" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lvY-f7-qXE">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerloghigh:" target="qo8-lj-syM" id="Eb1-Mv-WDO"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="LbP-0U-79Y">
-                                            <rect key="frame" x="38" y="29" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Log Normal" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x4d-jY-Esu">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerlognormal:" target="qo8-lj-syM" id="5SW-MR-F5R"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nyn-7i-aQp">
-                                            <rect key="frame" x="158" y="311" width="134" height="37"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="W7J-de-KxR">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">PlexConnect
-Auto updates</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ND8-xx-o8Y">
-                                            <rect key="frame" x="158" y="219" width="97" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="6km-zK-Afh">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">Myplex 
-Auto loader</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="tMb-xk-216">
-                                            <rect key="frame" x="158" y="266" width="129" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Sih-QE-DAo">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">Cert and Hijack 
-Auto loader</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lp0-8z-yfe">
-                                            <rect key="frame" x="158" y="126" width="124" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="rB3-NL-eiG">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">Remove trash can 
-empty warning </string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="dht-Pc-sCv">
-                                            <rect key="frame" x="158" y="29" width="139" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="VJO-NR-NG6">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">PlexConnect Log 
-Normal output</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aJe-DT-awe">
-                                            <rect key="frame" x="158" y="78" width="145" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="AM3-pc-foL">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">PlexConnect Log 
-High output </string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="9hp-Ua-Y4n">
-                                            <rect key="frame" x="158" y="169" width="121" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="23r-eI-hL5">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">Settings.cfg 
-Auto loader</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="UnP-B4-JqM">
-                                            <rect key="frame" x="562" y="266" width="147" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Turn your mac into  a AirPlay speaker" id="Dcb-uc-Ahz">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4OU-8m-zCG">
-                                            <rect key="frame" x="562" y="182" width="152" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Allow aTV to wake Mac" id="rjh-bg-kgH">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="omL-hM-h3s">
-                                            <rect key="frame" x="562" y="219" width="192" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="amz-EV-w0j">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">Load all apps @ boot &amp; lock
-screen. Auto login required</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jki-8K-yBo">
-                                            <rect key="frame" x="562" y="305" width="135" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Install Unsupported  AppStore on PMS" id="DYc-Li-eZs">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="6mg-a0-MKk">
-                                            <rect key="frame" x="562" y="126" width="140" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="5yC-KK-W9v">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">View current aTV
-homescreen config</string>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7Wn-X8-R7M">
-                                            <rect key="frame" x="562" y="88" width="133" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open local PlexWeb" id="M4Q-c3-Oia">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="edA-BD-cga">
-                                            <rect key="frame" x="562" y="41" width="148" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Custom Folder Icons" id="wbV-Xy-TEN">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                    </subviews>
-                                    <animations/>
-                                </view>
-                            </tabViewItem>
                             <tabViewItem label="Backup" identifier="2" id="7lG-TI-mvm">
                                 <view key="view" id="mbu-md-WE3">
                                     <rect key="frame" x="10" y="33" width="799" height="373"/>
@@ -1875,6 +1540,341 @@ homescreen config</string>
                                     <animations/>
                                 </view>
                             </tabViewItem>
+                            <tabViewItem label="Extras" identifier="2" id="oaX-hh-hOm">
+                                <view key="view" id="5jN-NB-8Gf">
+                                    <rect key="frame" x="10" y="33" width="799" height="373"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" id="RFf-2O-k4C">
+                                            <rect key="frame" x="439" y="308" width="94" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="UAS" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WdJ-jp-UWy">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandleruas:" target="qo8-lj-syM" id="IeK-R3-bMk"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="ooM-Yf-HbC">
+                                            <rect key="frame" x="439" y="263" width="94" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Airplay" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aho-GZ-Ffb">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="makeKeyAndOrderFront:" target="J4W-YM-HbQ" id="80R-Zm-Fd0"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="IQb-zi-zdz">
+                                            <rect key="frame" x="38" y="308" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aht-PQ-1xN">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="updateButtonAction:" target="-2" id="fo2-Mo-mOE"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="DEo-V1-PDX">
+                                            <rect key="frame" x="439" y="216" width="94" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Boot Lock" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pUJ-yr-2BG">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerbootlock:" target="qo8-lj-syM" id="Vhj-SX-2g0"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="zqS-19-gKW">
+                                            <rect key="frame" x="439" y="170" width="94" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="WOL" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4kq-lH-l8P">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerwol:" target="qo8-lj-syM" id="HF7-92-Mov"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="VPo-kb-DRt">
+                                            <rect key="frame" x="38" y="170" width="93" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q2J-62-LQ0">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="settingButtonAction:" target="-2" id="XUg-4H-4NT"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="U1W-Rr-GlY">
+                                            <rect key="frame" x="38" y="216" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FFi-3N-2gc">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="myplexButtonAction:" target="-2" id="uSn-Jw-Zqq"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="KZG-d8-1Kp">
+                                            <rect key="frame" x="38" y="263" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="On/Off" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QrN-tw-903">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="trailersButtonAction:" target="-2" id="Bgq-HG-ZDw"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="7kR-dU-bt5">
+                                            <rect key="frame" x="38" y="123" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Trash Can" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3rF-B6-F3w">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlertrashcan:" target="qo8-lj-syM" id="Rsb-zb-rvY"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="6Mp-9l-SMl">
+                                            <rect key="frame" x="439" y="123" width="94" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="storeFront" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zdp-jE-i4G">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerstorefront:" target="qo8-lj-syM" id="S1D-Qv-g6B"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="Rl6-5C-kla">
+                                            <rect key="frame" x="439" y="76" width="94" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="PlexWeb" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4NH-W9-jgb">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerplexweb:" target="qo8-lj-syM" id="J4Q-n1-mwq"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="eXe-lb-Rxg">
+                                            <rect key="frame" x="439" y="29" width="94" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dk3-jG-HbE">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="makeKeyAndOrderFront:" target="RCS-xH-a7x" id="jCw-zm-Lga"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="sXy-bX-6qN">
+                                            <rect key="frame" x="38" y="76" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Log High" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lvY-f7-qXE">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerloghigh:" target="qo8-lj-syM" id="Eb1-Mv-WDO"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="LbP-0U-79Y">
+                                            <rect key="frame" x="38" y="29" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Log Normal" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x4d-jY-Esu">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerlognormal:" target="qo8-lj-syM" id="5SW-MR-F5R"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="nyn-7i-aQp">
+                                            <rect key="frame" x="158" y="311" width="134" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="W7J-de-KxR">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">PlexConnect
+Auto updates</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ND8-xx-o8Y">
+                                            <rect key="frame" x="158" y="219" width="97" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="6km-zK-Afh">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">Myplex 
+Auto loader</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="tMb-xk-216">
+                                            <rect key="frame" x="158" y="266" width="129" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Sih-QE-DAo">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">Cert and Hijack 
+Auto loader</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lp0-8z-yfe">
+                                            <rect key="frame" x="158" y="126" width="124" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="rB3-NL-eiG">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">Remove trash can 
+empty warning </string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="dht-Pc-sCv">
+                                            <rect key="frame" x="158" y="29" width="139" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="VJO-NR-NG6">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">PlexConnect Log 
+Normal output</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aJe-DT-awe">
+                                            <rect key="frame" x="158" y="78" width="145" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="AM3-pc-foL">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">PlexConnect Log 
+High output </string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="9hp-Ua-Y4n">
+                                            <rect key="frame" x="158" y="169" width="121" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="23r-eI-hL5">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">Settings.cfg 
+Auto loader</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="UnP-B4-JqM">
+                                            <rect key="frame" x="562" y="266" width="147" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Turn your mac into  a AirPlay speaker" id="Dcb-uc-Ahz">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4OU-8m-zCG">
+                                            <rect key="frame" x="562" y="182" width="152" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Allow aTV to wake Mac" id="rjh-bg-kgH">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="omL-hM-h3s">
+                                            <rect key="frame" x="562" y="219" width="192" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="amz-EV-w0j">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">Load all apps @ boot &amp; lock
+screen. Auto login required</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jki-8K-yBo">
+                                            <rect key="frame" x="562" y="305" width="135" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Install Unsupported  AppStore on PMS" id="DYc-Li-eZs">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="6mg-a0-MKk">
+                                            <rect key="frame" x="562" y="126" width="140" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="5yC-KK-W9v">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <string key="title">View current aTV
+homescreen config</string>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7Wn-X8-R7M">
+                                            <rect key="frame" x="562" y="88" width="133" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open local PlexWeb" id="M4Q-c3-Oia">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="edA-BD-cga">
+                                            <rect key="frame" x="562" y="41" width="148" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Custom Folder Icons" id="wbV-Xy-TEN">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                            </tabViewItem>
                             <tabViewItem label="Settings" identifier="" id="VWz-VT-u2O">
                                 <view key="view" id="q4m-ZR-86A">
                                     <rect key="frame" x="10" y="33" width="799" height="373"/>
@@ -2161,7 +2161,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button toolTip="Quit PlexConnect" id="M3D-8W-akN">
+                    <button toolTip="Quit OpenPlex" id="M3D-8W-akN">
                         <rect key="frame" x="617" y="6" width="46" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>

@@ -13,22 +13,22 @@
 		09947B28195BCDB30005EE4A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B25195BCDB30005EE4A /* AppKit.framework */; };
 		09947B29195BCDB30005EE4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B26195BCDB30005EE4A /* CoreData.framework */; };
 		09947B2A195BCDB30005EE4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09947B27195BCDB30005EE4A /* Foundation.framework */; };
-		5D5151911A6F81B3007C390C /* loginStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 5D5151901A6F81B3007C390C /* loginStatus.scpt */; };
-		5D5151961A6F909C007C390C /* myplexStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 5D5151921A6F909C007C390C /* myplexStatus.scpt */; };
-		5D5151971A6F909C007C390C /* settingsStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 5D5151931A6F909C007C390C /* settingsStatus.scpt */; };
-		5D5151981A6F909C007C390C /* trailersStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 5D5151941A6F909C007C390C /* trailersStatus.scpt */; };
-		5D5151991A6F909C007C390C /* updateStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 5D5151951A6F909C007C390C /* updateStatus.scpt */; };
 		CE0B59EB19D609A200A5C392 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E819D609A200A5C392 /* black.png */; };
 		CE0B59EC19D609A200A5C392 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59E919D609A200A5C392 /* gradient.png */; };
 		CE0B59ED19D609A200A5C392 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0B59EA19D609A200A5C392 /* grey.png */; };
+		CE0F1E641BF21E5B008FA1B2 /* updateStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CE0F1E631BF21E5B008FA1B2 /* updateStatus.scpt */; settings = {ASSET_TAGS = (); }; };
 		CE2DF92C1A6AF16300C4FCB2 /* NoMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2DF92B1A6AF16300C4FCB2 /* NoMenu.xib */; };
 		CE3597021A5A154D00A913D4 /* switchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3597011A5A154D00A913D4 /* switchIcon.png */; };
 		CE3597061A5A1B3700A913D4 /* NoMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3597041A5A1B3700A913D4 /* NoMenu.m */; };
-		CE373FCA1B34CBBE00F5A34C /* intercept.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CE373FC91B34CBBE00F5A34C /* intercept.scpt */; };
 		CE373FCC1B34D5D600F5A34C /* custom.png in Resources */ = {isa = PBXBuildFile; fileRef = CE373FCB1B34D5D600F5A34C /* custom.png */; };
 		CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D04E1BE6B4590085DC97 /* downgrade.png */; };
 		CEA6D0531BE6B8310085DC97 /* Xcode_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */; };
 		CEA6D0571BE6C8BA0085DC97 /* plex_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */; };
+		CEA7DDD21BF2153000F7CEF2 /* intercept.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7DDCC1BF2153000F7CEF2 /* intercept.scpt */; settings = {ASSET_TAGS = (); }; };
+		CEA7DDD31BF2153000F7CEF2 /* loginStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7DDCD1BF2153000F7CEF2 /* loginStatus.scpt */; settings = {ASSET_TAGS = (); }; };
+		CEA7DDD41BF2153000F7CEF2 /* myplexStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7DDCE1BF2153000F7CEF2 /* myplexStatus.scpt */; settings = {ASSET_TAGS = (); }; };
+		CEA7DDD51BF2153000F7CEF2 /* settingsStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7DDCF1BF2153000F7CEF2 /* settingsStatus.scpt */; settings = {ASSET_TAGS = (); }; };
+		CEA7DDD61BF2153000F7CEF2 /* trailersStatus.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CEA7DDD01BF2153000F7CEF2 /* trailersStatus.scpt */; settings = {ASSET_TAGS = (); }; };
 		CEBC1C7E1A4DC4A80037CEA3 /* Remote.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */; };
 		CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */; };
 		CEBEDE911A31473100F60D15 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBEDE901A31473100F60D15 /* update.png */; };
@@ -83,23 +83,23 @@
 		09947B25195BCDB30005EE4A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		09947B26195BCDB30005EE4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		09947B27195BCDB30005EE4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5D5151901A6F81B3007C390C /* loginStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginStatus.scpt; sourceTree = "<group>"; };
-		5D5151921A6F909C007C390C /* myplexStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = myplexStatus.scpt; sourceTree = "<group>"; };
-		5D5151931A6F909C007C390C /* settingsStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = settingsStatus.scpt; sourceTree = "<group>"; };
-		5D5151941A6F909C007C390C /* trailersStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = trailersStatus.scpt; sourceTree = "<group>"; };
-		5D5151951A6F909C007C390C /* updateStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = updateStatus.scpt; sourceTree = "<group>"; };
 		CE0B59E819D609A200A5C392 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 		CE0B59E919D609A200A5C392 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 		CE0B59EA19D609A200A5C392 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
+		CE0F1E631BF21E5B008FA1B2 /* updateStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = updateStatus.scpt; sourceTree = "<group>"; };
 		CE2DF92B1A6AF16300C4FCB2 /* NoMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoMenu.xib; sourceTree = "<group>"; };
 		CE3597011A5A154D00A913D4 /* switchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = switchIcon.png; path = popup/switchIcon.png; sourceTree = "<group>"; };
 		CE3597031A5A1B3700A913D4 /* NoMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoMenu.h; path = OpenPlex/NoMenu.h; sourceTree = SOURCE_ROOT; };
 		CE3597041A5A1B3700A913D4 /* NoMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoMenu.m; path = OpenPlex/NoMenu.m; sourceTree = SOURCE_ROOT; };
-		CE373FC91B34CBBE00F5A34C /* intercept.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = intercept.scpt; sourceTree = "<group>"; };
 		CE373FCB1B34D5D600F5A34C /* custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom.png; sourceTree = "<group>"; };
 		CEA6D04E1BE6B4590085DC97 /* downgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downgrade.png; sourceTree = "<group>"; };
 		CEA6D0521BE6B8310085DC97 /* Xcode_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Xcode_icon.png; sourceTree = "<group>"; };
 		CEA6D0561BE6C8BA0085DC97 /* plex_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plex_logo.png; sourceTree = "<group>"; };
+		CEA7DDCC1BF2153000F7CEF2 /* intercept.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = intercept.scpt; sourceTree = "<group>"; };
+		CEA7DDCD1BF2153000F7CEF2 /* loginStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginStatus.scpt; sourceTree = "<group>"; };
+		CEA7DDCE1BF2153000F7CEF2 /* myplexStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = myplexStatus.scpt; sourceTree = "<group>"; };
+		CEA7DDCF1BF2153000F7CEF2 /* settingsStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = settingsStatus.scpt; sourceTree = "<group>"; };
+		CEA7DDD01BF2153000F7CEF2 /* trailersStatus.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = trailersStatus.scpt; sourceTree = "<group>"; };
 		CEBC1C7D1A4DC4A80037CEA3 /* Remote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Remote.png; sourceTree = "<group>"; };
 		CEBC1C7F1A4DC4AC0037CEA3 /* AirPlayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirPlayIcon.png; sourceTree = "<group>"; };
 		CEBEDE901A31473100F60D15 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
@@ -195,12 +195,12 @@
 		5D51518F1A6F81B3007C390C /* scripts */ = {
 			isa = PBXGroup;
 			children = (
-				CE373FC91B34CBBE00F5A34C /* intercept.scpt */,
-				5D5151901A6F81B3007C390C /* loginStatus.scpt */,
-				5D5151921A6F909C007C390C /* myplexStatus.scpt */,
-				5D5151931A6F909C007C390C /* settingsStatus.scpt */,
-				5D5151941A6F909C007C390C /* trailersStatus.scpt */,
-				5D5151951A6F909C007C390C /* updateStatus.scpt */,
+				CEA7DDCC1BF2153000F7CEF2 /* intercept.scpt */,
+				CEA7DDCD1BF2153000F7CEF2 /* loginStatus.scpt */,
+				CEA7DDCE1BF2153000F7CEF2 /* myplexStatus.scpt */,
+				CEA7DDCF1BF2153000F7CEF2 /* settingsStatus.scpt */,
+				CEA7DDD01BF2153000F7CEF2 /* trailersStatus.scpt */,
+				CE0F1E631BF21E5B008FA1B2 /* updateStatus.scpt */,
 			);
 			path = scripts;
 			sourceTree = "<group>";
@@ -432,15 +432,14 @@
 				CEBEDE911A31473100F60D15 /* update.png in Resources */,
 				DB837E9A1A12732600DED213 /* opicon_<1024x1024>.png in Resources */,
 				DBAFDA751972DCA00099EE6E /* WSJ.png in Resources */,
+				CE0F1E641BF21E5B008FA1B2 /* updateStatus.scpt in Resources */,
 				DBAFDA671972DCA00099EE6E /* PlexConnect Icon.png in Resources */,
 				DB837E941A12732600DED213 /* opicon_<16x16>.png in Resources */,
-				5D5151981A6F909C007C390C /* trailersStatus.scpt in Resources */,
 				099068B3195D5ED800442FB5 /* Images.xcassets in Resources */,
 				CE3597021A5A154D00A913D4 /* switchIcon.png in Resources */,
 				DBAFDA5E1972DCA00099EE6E /* MenuIcon.png in Resources */,
 				DB837E961A12732600DED213 /* opicon_<64x64>.png in Resources */,
 				DB837E951A12732600DED213 /* opicon_<32x32>.png in Resources */,
-				5D5151961A6F909C007C390C /* myplexStatus.scpt in Resources */,
 				DB837E991A12732600DED213 /* opicon_<512x512>.png in Resources */,
 				CE0B59EC19D609A200A5C392 /* gradient.png in Resources */,
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
@@ -448,15 +447,18 @@
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
 				DBAFDA521972DCA00099EE6E /* Applelogo.png in Resources */,
 				DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */,
+				CEA7DDD61BF2153000F7CEF2 /* trailersStatus.scpt in Resources */,
 				DBAFDA6F1972DCA00099EE6E /* Trailers.png in Resources */,
 				DBAFDA741972DCA00099EE6E /* WebConnect.png in Resources */,
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
+				CEA7DDD31BF2153000F7CEF2 /* loginStatus.scpt in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
 				DBE18B1F1A9489F1006FB774 /* wifi.png in Resources */,
 				DB1A610D1BE7AC620086BEF4 /* post-32985-0-82613200-1295642376.jpg in Resources */,
 				CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */,
 				DBAFDA591972DCA00099EE6E /* icon_<16x16>.png in Resources */,
+				CEA7DDD21BF2153000F7CEF2 /* intercept.scpt in Resources */,
 				DBAFDA631972DCA00099EE6E /* OpenPlex.png in Resources */,
 				CE373FCC1B34D5D600F5A34C /* custom.png in Resources */,
 				CEA6D0531BE6B8310085DC97 /* Xcode_icon.png in Resources */,
@@ -466,19 +468,17 @@
 				CEBC1C7E1A4DC4A80037CEA3 /* Remote.png in Resources */,
 				CE0B59ED19D609A200A5C392 /* grey.png in Resources */,
 				CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */,
-				5D5151971A6F909C007C390C /* settingsStatus.scpt in Resources */,
+				CEA7DDD51BF2153000F7CEF2 /* settingsStatus.scpt in Resources */,
 				DBAFDA621972DCA00099EE6E /* Openplex copy.png in Resources */,
 				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
 				DBD4AF371A06227500480691 /* OP-Logo.png in Resources */,
 				CEE3B2911A63725F00D31E5D /* backup.png in Resources */,
 				DBAFDA661972DCA00099EE6E /* paypal-donate-button.png in Resources */,
 				CEFD1C631A62397400396D26 /* Web_Connect.png in Resources */,
-				5D5151911A6F81B3007C390C /* loginStatus.scpt in Resources */,
 				DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */,
-				CE373FCA1B34CBBE00F5A34C /* intercept.scpt in Resources */,
+				CEA7DDD41BF2153000F7CEF2 /* myplexStatus.scpt in Resources */,
 				DBAFDA6E1972DCA00099EE6E /* stopplex.png in Resources */,
 				CEA6D0571BE6C8BA0085DC97 /* plex_logo.png in Resources */,
-				5D5151991A6F909C007C390C /* updateStatus.scpt in Resources */,
 				DBE18B201A9489F1006FB774 /* world.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
 				DBAFDA6D1972DCA00099EE6E /* startplex.png in Resources */,

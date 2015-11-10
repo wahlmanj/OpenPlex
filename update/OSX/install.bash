@@ -424,6 +424,8 @@ cp restore.bash /usr/local/bin
 cp restorebash.bash /usr/local/bin
 cp restorecertsbash.bash /usr/local/bin
 cp restorecerts.bash /usr/local/bin
+cp settings.bash /usr/local/bin
+cp settingsbash.bash /usr/local/bin
 cp show /usr/local/bin
 cp show.bash /usr/local/bin
 cp shutdown.bash /usr/local/bin
@@ -610,6 +612,8 @@ chmod +x /usr/local/bin/restoreatvsettings.bash
 chmod +x /usr/local/bin/restoreatvsettingsbash.bash
 chmod +x /usr/local/bin/restorecerts.bash
 chmod +x /usr/local/bin/restorecertsbash.bash
+chmod +x /usr/local/bin/settings.bash
+chmod +x /usr/local/bin/setttingsbash.bash
 chmod +x /usr/local/bin/show
 chmod +x /usr/local/bin/show.bash
 chmod +x /usr/local/bin/shutdown.bash

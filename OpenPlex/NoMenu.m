@@ -284,7 +284,7 @@
     for (NSString *path in directoryEnumerator) {
         //        if ([[path pathExtension] isEqualToString:@"auto"]) {
         NSString *path2 =[NSString stringWithFormat:@"%@",path];
-        //            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP/" withString:@""]];
+        //            [autoFiles addObject:[path2 stringByReplacingOccurrencesOfString:@"file:///Applications/plexconnect_BACKUP" withString:@""]];
         //        }
         //    }
         
