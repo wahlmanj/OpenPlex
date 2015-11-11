@@ -613,7 +613,7 @@ chmod +x /usr/local/bin/restoreatvsettingsbash.bash
 chmod +x /usr/local/bin/restorecerts.bash
 chmod +x /usr/local/bin/restorecertsbash.bash
 chmod +x /usr/local/bin/settings.bash
-chmod +x /usr/local/bin/setttingsbash.bash
+chmod +x /usr/local/bin/settingsbash.bash
 chmod +x /usr/local/bin/show
 chmod +x /usr/local/bin/show.bash
 chmod +x /usr/local/bin/shutdown.bash
