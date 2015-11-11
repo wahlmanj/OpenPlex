@@ -7,7 +7,7 @@ trashbase.bash
 cd /Applications
 git clone https://github.com/falco953/PlexConnect.git
 mkdir -p /Applications/PlexConnect/update/OSX
-cd __HOME__/Library/Application\ Support/OpenPlex
+cd ~/Library/Application\ Support/OpenPlex
 # fetch changes, git stores them in FETCH_HEAD
 git fetch
 # check for remote changes in origin repository
@@ -22,6 +22,6 @@ echo "no updates available"
 fi
 echo 'Falco953 cloned to /Applications/PlexConnect'
 chmod 777 /Applications/PlexConnect/Update/OSX
-cp -R __HOME__/Library/Application\ Support/OpenPlex/update/OSX/* /Applications/PlexConnect/update/OSX
+cp -R ~/Library/Application\ Support/OpenPlex/update/OSX/* /Applications/PlexConnect/update/OSX
 
 

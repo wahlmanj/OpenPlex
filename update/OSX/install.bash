@@ -329,6 +329,7 @@ fi
 cp 10.10vb.bash /usr/local/bin
 cp appupdate.bash /usr/local/bin
 cp appupdatebash.bash /usr/local/bin
+cp appweb.bash /usr/local/bin
 cp appwebbash.bash /usr/local/bin
 cp atvsettingsauto.bash /usr/local/bin
 cp atvsettingsautobash.bash /usr/local/bin
@@ -449,6 +450,7 @@ cp trash.bash /usr/local/bin
 cp trashbash.bash /usr/local/bin
 cp tv.bash /usr/local/bin
 cp tvbash.bash /usr/local/bin
+cp uninstall.bash /usr/local/bin
 cp uninstallbash.bash /usr/local/bin
 cp unmuteboot.bash /usr/local/bin
 cp updatebash.bash /usr/local/bin
@@ -516,6 +518,7 @@ sed -e "s/__INSTALLERPATH__/${InstallerPath//\//\\/}/" "${DefaultPath}/updater.b
 chmod +x /usr/local/bin/10.10vb.bash
 chmod +x /usr/local/bin/appupdate.bash
 chmod +x /usr/local/bin/appupdatebash.bash
+chmod +x /usr/local/bin/appweb.bash
 chmod +x /usr/local/bin/appwebbash.bash
 chmod +x /usr/local/bin/atvsettingsauto.bash
 chmod +x /usr/local/bin/atvsettingsautobash.bash
@@ -636,6 +639,7 @@ chmod +x /usr/local/bin/trashbash.bash
 chmod +x /usr/local/bin/trashbasebash.bash
 chmod +x /usr/local/bin/tv.bash
 chmod +x /usr/local/bin/tvbash.bash
+chmod +x /usr/local/bin/uninstall.bash
 chmod +x /usr/local/bin/uninstallbash.bash
 chmod +x /usr/local/bin/unmuteboot.bash
 chmod +x /usr/local/bin/update.bash
@@ -665,10 +669,6 @@ chmod +x /usr/local/bin/whobash.bash
 chmod +x /usr/local/bin/wol.bash
 chmod +x /usr/local/bin/xml.bash
 
-if [ -s /Applications/PlexConnect/update/OSX/appwebhome.bash ]
-then
-chmod +x /Applications/PlexConnect/update/OSX/appwebhome.bash
-fi
 if [ -s /Applications/PlexConnect/update/OSX/airplay.bash ]
 then
 chmod +x /Applications/PlexConnect/update/OSX/airplay.bash
@@ -695,10 +695,14 @@ chmod +x /usr/local/bin/uninstall.bash
 fi
 
 ## Themes
-## appwewebhome.bash fixes these permissions due to users home dir requirement
+chmod 4755 /usr/local/bin/cyberghost.bash
+chmod 4755 /usr/local/bin/ibaa.bash
+chmod 4755 /usr/local/bin/stoffez.bash
+chmod 4755 /usr/local/bin/falco.bash
+chmod 4755 /usr/local/bin/wahlmanj.bash
 
 ## PlexConnect Commands
-## appwewebhome.bash fixes appweb.bash
+chmod 4755 /usr/local/bin/appweb.bash
 chmod 4755 /usr/local/bin/backupatvsettings.bash
 chmod 4755 /usr/local/bin/restoreatvsettings.bash
 chmod 4755 /usr/local/bin/backup.bash
@@ -710,7 +714,7 @@ chmod 4755 /usr/local/bin/start.bash
 chmod 4755 /usr/local/bin/stop.bash
 chmod 4755 /usr/local/bin/restart.bash
 chmod 4755 /usr/local/bin/status.bash
-## appwewebhome.bash fixes updatewc.bash
+chmod 4755 /usr/local/bin/updatewc.bash
 
 ## Hijacks
 chmod 4755 /usr/local/bin/restorecerts.bash

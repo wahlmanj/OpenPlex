@@ -285,25 +285,6 @@ script AppDelegate
         tell appupdateProgressBar to startAnimation:me -- another way
         set animated to true
         try
-            set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
-            set theString to quoted form of "HOME"
-            set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-            if searchResult is "2" then
-                display notification "Optimizing new app features..." with title "OpenPlex Status"
-                delay 0
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-            end if
-        end try
-        tell application "Finder"
-            tell application "Finder"
-                if not (exists file "usr:local:bin:appweb.bash" of the startup disk) then
-                    do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                    display notification "Enabling WebConnect app updater..." with title "OpenPlex Status"
-                    delay 0
-                end if
-            end tell
-        end tell
-        try
                 do shell script "rm -R ~/Library/Application\\ Support/OpenPlex/10.6/OpenPlex.app"
         end try
         try
@@ -495,16 +476,6 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
-                        set theString to quoted form of "HOME"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Optimizing new app features..." with title "OpenPlex Status"
-                            delay 0
-                            do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                        end if
-                    end try
-                    try
                         -- load custom certs if in use
                         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
@@ -557,7 +528,6 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
@@ -624,7 +594,6 @@ script AppDelegate
                                 end if
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                                        do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                         do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
                                     end if
                                 end if
@@ -731,16 +700,6 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
-                        set theString to quoted form of "HOME"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Optimizing new app features..." with title "OpenPlex Status"
-                            delay 0
-                            do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                        end if
-                    end try
-                    try
                         -- load custom certs if in use
                         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
@@ -793,7 +752,6 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
@@ -860,7 +818,6 @@ script AppDelegate
                                 end if
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                                        do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                         do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
                                     end if
                                 end if
@@ -967,16 +924,6 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
-                        set theString to quoted form of "HOME"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Optimizing new app features..." with title "OpenPlex Status"
-                            delay 0
-                            do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                        end if
-                    end try
-                    try
                         -- load custom certs if in use
                         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
@@ -1029,7 +976,6 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
@@ -1096,7 +1042,6 @@ script AppDelegate
                                 end if
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                                        do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                         do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
                                     end if
                                 end if
@@ -1203,16 +1148,6 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
-                        set theString to quoted form of "HOME"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Optimizing new app features..." with title "OpenPlex Status"
-                            delay 0
-                            do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                        end if
-                    end try
-                    try
                         -- load custom certs if in use
                         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restartbash.bash"
                     end try
@@ -1265,7 +1200,6 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
@@ -1332,7 +1266,6 @@ script AppDelegate
                                 end if
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                                        do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                         do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
                                     end if
                                 end if
@@ -1445,7 +1378,6 @@ script AppDelegate
                         if searchResult is "2" then
                             display notification "Optimizing new app features..." with title "OpenPlex Status"
                             delay 0
-                            do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                         end if
                     end try
                     try
@@ -1501,7 +1433,6 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; purgesettingsbash.bash; restart.bash"
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
@@ -1568,7 +1499,6 @@ script AppDelegate
                                 end if
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                                        do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                         do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
                                     end if
                                 end if
@@ -1675,16 +1605,6 @@ script AppDelegate
                         end if
                     end try
                     try
-                        set fileAsPOSIX to (POSIX path of "/usr/local/bin/ibaa.bash")
-                        set theString to quoted form of "HOME"
-                        set searchResult to do shell script "/usr/bin/grep -ic " & theString & space & quoted form of fileAsPOSIX
-                        if searchResult is "2" then
-                            display notification "Optimizing new app features..." with title "OpenPlex Status"
-                            delay 0
-                            do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
-                        end if
-                    end try
-                    try
                         -- load custom certs if in use
                         do shell script "restartbash.bash"
                     end try
@@ -1738,7 +1658,6 @@ script AppDelegate
                 do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
                 do shell script "/Applications/PlexConnect/update/OSX/createplist.bash" with administrator privileges
                 do shell script "purgesettingsbash.bash; restart.bash"
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 do shell script "mkdir -p /usr/local/git/OP" with administrator privileges
                 tell application "Finder"
                     if (exists file "Applications:plexconnect_BACKUP:settings.auto" of the startup disk) then
@@ -1805,7 +1724,6 @@ script AppDelegate
                                 end if
                                 if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
                                     if not (exists folder "usr:local:git:OpenPlex" of the startup disk) then
-                                        do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                                         do shell script "mkdir -p /usr/local/git/OpenPlex" with administrator privileges
                                     end if
                                 end if
@@ -2748,7 +2666,6 @@ script AppDelegate
         end try
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:httpd:10.6:httpd.conf" of the startup disk) then
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator
         try
             do shell script "sudo apache start" with administrator privileges
         end try
@@ -2768,7 +2685,6 @@ script AppDelegate
         end try
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:httpd:10.7:httpd.conf" of the startup disk) then
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator
                 try
                     do shell script "sudo apache start" with administrator privileges
                 end try
@@ -2798,7 +2714,6 @@ script AppDelegate
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:httpd.conf" of the startup disk) then
                 do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; websharingbash.bash"
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 display notification "Install pref pane and turn on WebSharing to enable WebConnect on 10.8.x or 10.9.x..." with title "OpenPlex Status"
                 delay 0
             end if
@@ -2823,7 +2738,6 @@ script AppDelegate
         end try
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:10.10:httpd.conf" of the startup disk) then
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 try
                     do shell script "sudo apachectl start" with administrator privileges
                 end try
@@ -2852,7 +2766,6 @@ script AppDelegate
         end try
         tell application "Finder"
             if (exists file "Applications:PlexConnect:update:OSX:10.10.5:httpd.conf" of the startup disk) then
-                do shell script "/Applications/PlexConnect/update/OSX/appwebhome.bash" with administrator privileges
                 try
                     do shell script "sudo apachectl start" with administrator privileges
                 end try
