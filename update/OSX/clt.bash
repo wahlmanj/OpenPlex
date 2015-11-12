@@ -12,7 +12,7 @@ unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 installbash.bash
-cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 2; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
+cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 4; killall opener; rm /usr/local/bin/opener.zip
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 7 ]; then
@@ -26,7 +26,7 @@ unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 installbash.bash
-cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 2; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
+cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 4; killall opener; rm /usr/local/bin/opener.zip
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 8 ]; then
@@ -40,7 +40,7 @@ unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 installbash.bash
-cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 2; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
+cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 4; killall opener; rm /usr/local/bin/opener.zip
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 9 ]; then
@@ -54,7 +54,7 @@ unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 installbash.bash
-cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 2; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
+cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 4; killall opener; rm /usr/local/bin/opener.zip
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 10 ]; then
@@ -67,7 +67,7 @@ cp ~/Library/Application\ Support/OpenPlex/10.6/OpenPlex.zip /Applications
 unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
-cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 2; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
+cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 4; killall opener; rm /usr/local/bin/opener.zip
 installbash.bash
 killall updater
 echo $OSX_VERS
@@ -82,7 +82,7 @@ unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 installbash.bash
-cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 2; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
+cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 4; killall opener; rm /usr/local/bin/opener.zip
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 12 ]; then
@@ -96,7 +96,7 @@ unzip OpenPlex.zip
 rm OpenPlex.zip
 open OpenPlex.app
 installbash.bash
-cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 2; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
+cd /usr/local/bin; curl -LOk https://github.com/wahlmanj/opener/raw/master/opener.zip; ditto -xk opener.zip /usr/local/bin; open /usr/local/bin/opener.app; sleep 4; killall opener; rm /usr/local/bin/opener.zip; rm -R /usr/local/bin/opener.app
 killall updater
 echo $OSX_VERS
 fi
