@@ -103,6 +103,8 @@ insert or replace into access values('kTCCServiceAccessibility','com.apple.Termi
 insert or replace into access values('kTCCServiceAccessibility','$(which osascript)',1,1,1,NULL,NULL);
 .quit
 EOF
+# allow OpenPlex to load before opening app
+sleep 4
 osascript <<EOF
 tell app "System Events" to tell process "OpenPlex"
 click menu bar item 1 of menu bar 2
