@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15C40a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
@@ -15,7 +15,6 @@
                 <outlet property="loginButtonOutlet" destination="rzD-WN-ZfW" id="xKJ-8q-gqI"/>
                 <outlet property="myplexButtonOutlet" destination="U1W-Rr-GlY" id="osb-aM-5Td"/>
                 <outlet property="settingsButtonOutlet" destination="VPo-kb-DRt" id="BEa-37-Q2e"/>
-                <outlet property="statusImage" destination="mmB-1C-zk3" id="83h-vf-Abg"/>
                 <outlet property="trailersButtonOutlet" destination="KZG-d8-1Kp" id="tjV-c2-pOv"/>
                 <outlet property="updateButton" destination="YOj-n6-8LK" id="Rfx-Sm-ru6"/>
                 <outlet property="updateButtonOutlet" destination="IQb-zi-zdz" id="I1p-IR-QFR"/>
@@ -46,125 +45,18 @@
         </customObject>
         <window title="OpenPlex - Plex@aTV" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="UPT-Dm-ZyK">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
-            <rect key="contentRect" x="734" y="420" width="845" height="461"/>
+            <rect key="contentRect" x="734" y="420" width="886" height="469"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="X3h-zm-mwh">
-                <rect key="frame" x="0.0" y="0.0" width="845" height="461"/>
+                <rect key="frame" x="0.0" y="0.0" width="886" height="469"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mmB-1C-zk3">
-                        <rect key="frame" x="788" y="9" width="37" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <animations/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="statusRed" id="pDk-zZ-1v3"/>
-                    </imageView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="sik-e3-B7a">
-                        <rect key="frame" x="669" y="15" width="121" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <animations/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PlexConnect Status :" id="ceJ-XH-PM2">
-                            <font key="font" metaFont="smallSystemBold"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <tabView id="NJI-J4-kVI">
-                        <rect key="frame" x="13" y="36" width="819" height="419"/>
+                        <rect key="frame" x="54" y="21" width="819" height="419"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
-                            <tabViewItem label="Welcome" identifier="1" id="e9I-h2-rED">
-                                <view key="view" id="djE-K2-pF4">
-                                    <rect key="frame" x="10" y="33" width="799" height="373"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BGn-G2-Qah">
-                                            <rect key="frame" x="-23" y="-69" width="860" height="599"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="post-32985-0-82613200-1295642376" id="m36-t8-FLw"/>
-                                        </imageView>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EDL-en-Q8r">
-                                            <rect key="frame" x="336" y="171" width="142" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="How it works :" id="s9H-mS-p0i">
-                                                <font key="font" metaFont="systemBold" size="16"/>
-                                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Xsh-KN-BxV">
-                                            <rect key="frame" x="316" y="146" width="152" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 1:   Install a Theme." id="y2R-RG-yvu">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="d5f-WU-Hck">
-                                            <rect key="frame" x="247" y="124" width="320" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 2:   Install CLT then Pillow (only once required)." id="QdA-YN-5u2">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="gBE-M2-JrP">
-                                            <rect key="frame" x="281" y="100" width="237" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 3:   Choose App to Hijack on aTV." id="0K5-ct-95v">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jer-wy-b9S">
-                                            <rect key="frame" x="241" y="75" width="332" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 4:   Restore settings, add extras or skip this step." id="LId-ej-gmc">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Gt5-Aa-IFv">
-                                            <rect key="frame" x="227" y="50" width="344" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 5:   View Hijack Tab to set aTV DNS and load certs." id="w4O-3V-qzc">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="U7D-6M-6Vb">
-                                            <rect key="frame" x="259" y="25" width="267" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 6:   Reboot aTV then try Hijacked App." id="ibg-SE-vxu">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8OE-MX-Bov">
-                                            <rect key="frame" x="44" y="38" width="156" height="115"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OP-Logo" id="QYF-CE-1GZ"/>
-                                        </imageView>
-                                    </subviews>
-                                    <animations/>
-                                </view>
-                            </tabViewItem>
                             <tabViewItem label="PlexConnect Theme" identifier="" id="HLN-96-Xdd">
                                 <view key="view" id="PRJ-vB-f9U">
                                     <rect key="frame" x="10" y="33" width="799" height="373"/>
@@ -878,7 +770,7 @@ Step 4:   DONE</string>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2jj-1B-AUk">
-                                            <rect key="frame" x="9" y="9" width="342" height="38"/>
+                                            <rect key="frame" x="9" y="2" width="342" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="tDO-QX-K9r">
@@ -997,7 +889,7 @@ Step 3:   Stop PlexConnect and edit Settings.cfg
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u28-uv-doe">
-                                            <rect key="frame" x="9" y="85" width="414" height="112"/>
+                                            <rect key="frame" x="9" y="101" width="414" height="96"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="J1Z-ab-WPs">
@@ -1007,14 +899,13 @@ Step 5:   Reset all settings on aTV.
 Step 6:   Change aTV DNS to your PlexConnect Host.
 Step 7:   Plug internet back into your router.
 Step 8:   Once Plex Icon is "Stuck" on aTV reinstall 
-               your desired theme.
-*Currently only Wahlman.j &amp; Cyberghost themes can change the icon.</string>
+               your desired theme.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <button verticalHuggingPriority="750" id="bhq-tu-F0i">
-                                            <rect key="frame" x="181" y="50" width="112" height="33"/>
+                                            <rect key="frame" x="181" y="41" width="112" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <buttonCell key="cell" type="squareTextured" title="Settings.cfg" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OVm-5S-CCS">
@@ -1026,7 +917,7 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="5NU-Bm-qB8">
-                                            <rect key="frame" x="69" y="50" width="104" height="33"/>
+                                            <rect key="frame" x="69" y="41" width="104" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <buttonCell key="cell" type="squareTextured" title="storeFront" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bca-jf-Nsb">
@@ -1037,6 +928,16 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                                 <action selector="buttonhandlerstorefront:" target="qo8-lj-syM" id="QZf-es-Unv"/>
                                             </connections>
                                         </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Nf-9H-7Qj">
+                                            <rect key="frame" x="9" y="80" width="454" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="*Currently only Wahlman.j &amp; Cyberghost themes can change the icon." id="qTr-Gk-TIR">
+                                                <font key="font" metaFont="systemBold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                     <animations/>
                                 </view>
@@ -2084,7 +1985,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </tabViewItems>
                     </tabView>
                     <button toolTip="Stop PlexConnect" id="uSg-ev-UEj">
-                        <rect key="frame" x="305" y="4" width="33" height="36"/>
+                        <rect key="frame" x="16" y="280" width="33" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="stopplex" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="QEH-WD-Wqh">
@@ -2096,7 +1997,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </connections>
                     </button>
                     <button toolTip="Start PlexConnect" id="1Am-HG-jD0">
-                        <rect key="frame" x="257" y="6" width="45" height="32"/>
+                        <rect key="frame" x="10" y="327" width="45" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="startplex" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="B1I-AC-mQI">
@@ -2108,7 +2009,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </connections>
                     </button>
                     <button toolTip="Restart PlexConnect" id="cQT-og-J7i">
-                        <rect key="frame" x="342" y="6" width="46" height="33"/>
+                        <rect key="frame" x="10" y="237" width="46" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="updateplex" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="y0d-ia-1X1">
@@ -2120,7 +2021,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </connections>
                     </button>
                     <button toolTip="PlexConnect Log" id="jqF-ZQ-tdH">
-                        <rect key="frame" x="456" y="6" width="34" height="32"/>
+                        <rect key="frame" x="15" y="153" width="34" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="logplex" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="F0g-fs-sqO">
@@ -2132,7 +2033,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </connections>
                     </button>
                     <button toolTip="Downgrade PlexConnect" id="TT2-JB-knA">
-                        <rect key="frame" x="497" y="6" width="35" height="33"/>
+                        <rect key="frame" x="15" y="110" width="35" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="downgrade" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YZr-VJ-uBu">
@@ -2144,7 +2045,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </connections>
                     </button>
                     <button toolTip="Update PlexConnect" id="yU3-n1-jc5">
-                        <rect key="frame" x="414" y="6" width="39" height="32"/>
+                        <rect key="frame" x="13" y="195" width="39" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="update" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="IUe-cB-9QC">
@@ -2155,18 +2056,8 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <action selector="buttonhandlerupdate:" target="qo8-lj-syM" id="ZTf-3I-LCC"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="74M-5o-AaG">
-                        <rect key="frame" x="18" y="13" width="221" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <animations/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© 2015 Wahlman.J, CyberGhost84 &amp; Flipman6" id="ofH-cF-mY1">
-                            <font key="font" metaFont="miniSystem"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <button toolTip="Quit OpenPlex" id="M3D-8W-akN">
-                        <rect key="frame" x="617" y="6" width="46" height="33"/>
+                        <rect key="frame" x="9" y="67" width="46" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="quitplex" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="W9j-Ao-a9o">
@@ -2177,15 +2068,53 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                             <action selector="terminate:" target="-1" id="oPT-X3-mza"/>
                         </connections>
                     </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="5OV-Px-Yt5">
+                        <rect key="frame" x="352" y="445" width="91" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="How it works:" id="rQX-XW-vKM">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="XOW-rB-E69">
+                        <rect key="frame" x="444" y="435" width="135" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="TUTORIAL" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zcF-BF-7GK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="makeKeyAndOrderFront:" target="V1e-oJ-Pjo" id="22K-86-Icn"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="74M-5o-AaG">
+                        <rect key="frame" x="655" y="9" width="221" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© 2015 Wahlman.J, CyberGhost84 &amp; Flipman6" id="ofH-cF-mY1">
+                            <font key="font" metaFont="miniSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9Kp-WA-pKV">
+                        <rect key="frame" x="14" y="367" width="37" height="60"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="statusRed" id="4mP-0U-bd2"/>
+                    </imageView>
                 </subviews>
                 <animations/>
             </view>
-            <point key="canvasLocation" x="-1330.5" y="-1664.5"/>
+            <point key="canvasLocation" x="-1351" y="-1683.5"/>
         </window>
         <window title="Cutom folder icons" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="RCS-xH-a7x">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <rect key="contentRect" x="1337" y="575" width="229" height="211"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="CTO-xm-9xv">
                 <rect key="frame" x="0.0" y="0.0" width="229" height="211"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -2276,7 +2205,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                 </subviews>
                 <animations/>
             </view>
-            <point key="canvasLocation" x="-1638.5" y="-1262.5"/>
+            <point key="canvasLocation" x="-1638.5" y="-1198.5"/>
         </window>
         <window title="Airplay to your mac!" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="J4W-YM-HbQ">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2385,6 +2314,117 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
             </view>
             <point key="canvasLocation" x="-1022.5" y="-1262.5"/>
         </window>
+        <window title="TUTORIAL" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="V1e-oJ-Pjo">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
+            <rect key="contentRect" x="1337" y="575" width="451" height="305"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="4cE-ih-YXo">
+                <rect key="frame" x="0.0" y="0.0" width="451" height="305"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Xsh-KN-BxV">
+                        <rect key="frame" x="142" y="252" width="162" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 1:   Install a Theme." id="y2R-RG-yvu">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="d5f-WU-Hck">
+                        <rect key="frame" x="53" y="221" width="340" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 2:   Install CLT then Pillow (only once required)." id="QdA-YN-5u2">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="gBE-M2-JrP">
+                        <rect key="frame" x="97" y="188" width="252" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 3:   Choose App to Hijack on aTV." id="0K5-ct-95v">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jer-wy-b9S">
+                        <rect key="frame" x="46" y="159" width="354" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 4:   Restore settings, add extras or skip this step." id="LId-ej-gmc">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Gt5-Aa-IFv">
+                        <rect key="frame" x="41" y="126" width="368" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 5:   View Hijack Tab to set aTV DNS and load certs." id="w4O-3V-qzc">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="U7D-6M-6Vb">
+                        <rect key="frame" x="79" y="92" width="289" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 6:   Reboot aTV then try Hijacked App." id="ibg-SE-vxu">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fdG-4o-vH3">
+                        <rect key="frame" x="225" y="43" width="49" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enjoy :)" id="plQ-eb-2Ou">
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bIy-8o-vTh">
+                        <rect key="frame" x="179" y="27" width="48" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="OP-Logo" id="Sin-Hf-X9i"/>
+                    </imageView>
+                    <box borderType="line" id="tm1-DM-zjh">
+                        <rect key="frame" x="9" y="23" width="431" height="275"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="4Sm-DV-ZDd">
+                            <rect key="frame" x="1" y="1" width="429" height="259"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <animations/>
+                        </view>
+                        <animations/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4be-uk-3vZ">
+                        <rect key="frame" x="18" y="5" width="221" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© 2015 Wahlman.J, CyberGhost84 &amp; Flipman6" id="Ko6-0v-OV6">
+                            <font key="font" metaFont="miniSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <animations/>
+            </view>
+            <point key="canvasLocation" x="-1339.5" y="-1194.5"/>
+        </window>
     </objects>
     <resources>
         <image name="AirPlayIcon" width="343" height="368"/>
@@ -2404,7 +2444,6 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
         <image name="iMovie" width="188" height="106"/>
         <image name="logplex" width="36.479999542236328" height="36"/>
         <image name="paypal-donate-button" width="500" height="117"/>
-        <image name="post-32985-0-82613200-1295642376" width="230.39999389648438" height="129.60000610351562"/>
         <image name="quitplex" width="36.479999542236328" height="36"/>
         <image name="startplex" width="36" height="36"/>
         <image name="statusRed" width="460" height="460"/>
