@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15C31f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15C40a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
@@ -950,7 +950,7 @@ Step 4:   DONE</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Z6K-Ip-JDx">
-                                                <font key="font" metaFont="system" size="14"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                                 <string key="title">Step 1:   Check that PlexConnect is running already.
 Step 2:   Click an icon that matches your aTV iOS 
                revision before moving to step 3.   
@@ -997,17 +997,18 @@ Step 3:   Stop PlexConnect and edit Settings.cfg
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u28-uv-doe">
-                                            <rect key="frame" x="9" y="84" width="414" height="95"/>
+                                            <rect key="frame" x="9" y="85" width="414" height="112"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="J1Z-ab-WPs">
-                                                <font key="font" metaFont="system" size="14"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                                 <string key="title">Step 4:   Unplug internet from your router.     
 Step 5:   Reset all settings on aTV.      
 Step 6:   Change aTV DNS to your PlexConnect Host.
 Step 7:   Plug internet back into your router.
 Step 8:   Once Plex Icon is "Stuck" on aTV reinstall 
-               your desired theme.</string>
+               your desired theme.
+*Currently only Wahlman.j &amp; Cyberghost themes can change the icon.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -1070,20 +1071,20 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="kyQ-Eo-pIj">
-                                            <rect key="frame" x="517" y="259" width="93" height="23"/>
+                                            <rect key="frame" x="517" y="262" width="111" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS 10.10+ CLT" id="W75-bu-oiE">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10+ CLT" id="W75-bu-oiE">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="DT7-Q3-Jdy">
-                                            <rect key="frame" x="517" y="204" width="104" height="26"/>
+                                            <rect key="frame" x="517" y="209" width="122" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS 10.10.5 only*" id="531-aw-i6g">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10.5 only*" id="531-aw-i6g">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1114,10 +1115,10 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aeC-6Q-Kjn">
-                                            <rect key="frame" x="522" y="32" width="51" height="28"/>
+                                            <rect key="frame" x="517" y="43" width="87" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS 10.6" id="M5V-Cm-RoF">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.6" id="M5V-Cm-RoF">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1136,10 +1137,10 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="o32-5O-RXQ">
-                                            <rect key="frame" x="517" y="147" width="88" height="28"/>
+                                            <rect key="frame" x="517" y="152" width="111" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS 10.8-10.9" id="ZDX-6v-jd3">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.8-10.9" id="ZDX-6v-jd3">
                                                 <font key="font" metaFont="system" size="14"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1158,20 +1159,20 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZMB-O4-faB">
-                                            <rect key="frame" x="522" y="98" width="51" height="18"/>
+                                            <rect key="frame" x="517" y="99" width="79" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS 10.7" id="EVu-eV-F6B">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.7" id="EVu-eV-F6B">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="w7Z-1v-Gpi">
-                                            <rect key="frame" x="517" y="310" width="70" height="26"/>
+                                            <rect key="frame" x="517" y="314" width="104" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS 10.10+" id="WX4-db-OqK">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10+" id="WX4-db-OqK">
                                                 <font key="font" metaFont="system" size="14"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
