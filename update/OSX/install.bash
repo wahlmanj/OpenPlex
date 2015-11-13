@@ -340,6 +340,8 @@ cp backupatvsettings.bash /usr/local/bin
 cp backupatvsettingsbash.bash /usr/local/bin
 cp bootlock.bash /usr/local/bin
 cp bootlockbash.bash /usr/local/bin
+cp clt.bash /usr/local/bin
+cp cltbash.bash /usr/local/bin
 cp createautobash.bash /usr/local/bin
 cp createcert.bash /usr/local/bin
 cp createcertbash.bash /usr/local/bin
@@ -529,6 +531,8 @@ chmod +x /usr/local/bin/backup.bash
 chmod +x /usr/local/bin/backupbash.bash
 chmod +x /usr/local/bin/bootlock.bash
 chmod +x /usr/local/bin/bootlockbash.bash
+chmod +x /usr/local/bin/clt.bash
+chmod +x /usr/local/bin/cltbash.bash
 chmod +x /usr/local/bin/createauto.bash
 chmod +x /usr/local/bin/createautobash.bash
 chmod +x /usr/local/bin/createcert.bash
