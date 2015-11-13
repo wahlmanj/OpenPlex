@@ -769,18 +769,6 @@ Step 4:   DONE</string>
                                                 <action selector="buttonhandlerios8gradientplexicon:" target="qo8-lj-syM" id="kIT-95-9Qb"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2jj-1B-AUk">
-                                            <rect key="frame" x="9" y="2" width="342" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="tDO-QX-K9r">
-                                                <font key="font" size="12" name="HelveticaNeue-Bold"/>
-                                                <string key="title">* iMovie can be changed on iOS 5-7 not Trailers or WSJ.
-   Only on iOS 8 you can change all three icons.</string>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="dAB-5G-uu8">
                                             <rect key="frame" x="508" y="338" width="36" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -929,13 +917,25 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Nf-9H-7Qj">
-                                            <rect key="frame" x="9" y="80" width="454" height="17"/>
+                                            <rect key="frame" x="9" y="76" width="454" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="*Currently only Wahlman.j &amp; Cyberghost themes can change the icon." id="qTr-Gk-TIR">
-                                                <font key="font" metaFont="systemBold"/>
+                                                <font key="font" metaFont="systemBold" size="11"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2jj-1B-AUk">
+                                            <rect key="frame" x="9" y="-3" width="342" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="tDO-QX-K9r">
+                                                <font key="font" size="11" name="HelveticaNeue-Bold"/>
+                                                <string key="title">* iMovie can be changed on iOS 5-7 not Trailers or WSJ.
+   Only on iOS 8 you can change all three icons.</string>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                     </subviews>
