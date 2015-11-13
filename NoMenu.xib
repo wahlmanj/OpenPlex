@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15C40a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
@@ -15,6 +15,7 @@
                 <outlet property="loginButtonOutlet" destination="rzD-WN-ZfW" id="xKJ-8q-gqI"/>
                 <outlet property="myplexButtonOutlet" destination="U1W-Rr-GlY" id="osb-aM-5Td"/>
                 <outlet property="settingsButtonOutlet" destination="VPo-kb-DRt" id="BEa-37-Q2e"/>
+                <outlet property="statusImage" destination="9Kp-WA-pKV" id="aAt-x8-SCP"/>
                 <outlet property="trailersButtonOutlet" destination="KZG-d8-1Kp" id="tjV-c2-pOv"/>
                 <outlet property="updateButton" destination="YOj-n6-8LK" id="Rfx-Sm-ru6"/>
                 <outlet property="updateButtonOutlet" destination="IQb-zi-zdz" id="I1p-IR-QFR"/>
@@ -670,443 +671,6 @@ Step 4:   DONE</string>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                         </progressIndicator>
-                                    </subviews>
-                                    <animations/>
-                                </view>
-                            </tabViewItem>
-                            <tabViewItem label="Plex Icon" identifier="2" id="irX-NK-XbQ">
-                                <view key="view" id="knp-pG-w1r">
-                                    <rect key="frame" x="10" y="33" width="799" height="373"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button id="RXN-Ni-sPr">
-                                            <rect key="frame" x="664" y="96" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="grey" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="9Ga-Yw-6uT">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios7greyplexicon:" target="qo8-lj-syM" id="4se-Q9-dVY"/>
-                                            </connections>
-                                        </button>
-                                        <button id="Dd3-P9-ItI">
-                                            <rect key="frame" x="664" y="177" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="gradient" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="vOW-H7-2ci">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios7gradientplexicon:" target="qo8-lj-syM" id="IHj-G6-I7I"/>
-                                            </connections>
-                                        </button>
-                                        <button id="ABQ-lD-e4U">
-                                            <rect key="frame" x="664" y="258" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="black" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="W7f-9Q-lQU">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios7blackplexicon:" target="qo8-lj-syM" id="7c6-w7-HgL"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="H8X-kW-Xce">
-                                            <rect key="frame" x="607" y="291" width="35" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Black" id="Zd8-eA-Y7H">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="vbM-pM-wJg">
-                                            <rect key="frame" x="598" y="210" width="53" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gradient" id="xSO-DW-YzD">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EnR-74-ZjX">
-                                            <rect key="frame" x="608" y="130" width="31" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Grey" id="NzQ-zs-PSY">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button id="fb7-iB-S2u">
-                                            <rect key="frame" x="470" y="96" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="grey" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="d25-0Y-Co1">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios8greyplexicon:" target="qo8-lj-syM" id="YPF-1g-83b"/>
-                                            </connections>
-                                        </button>
-                                        <button id="yKU-Uo-nwy">
-                                            <rect key="frame" x="470" y="177" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="gradient" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Ndt-DK-1go">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios8gradientplexicon:" target="qo8-lj-syM" id="kIT-95-9Qb"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="dAB-5G-uu8">
-                                            <rect key="frame" x="508" y="338" width="36" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS 8" id="78J-3h-JBa">
-                                                <font key="font" metaFont="systemBold" size="12"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aW0-V1-3lC">
-                                            <rect key="frame" x="696" y="338" width="48" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS 5-7" id="O07-V9-WSW">
-                                                <font key="font" metaFont="systemBold" size="12"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button id="Pmu-QE-Et2">
-                                            <rect key="frame" x="470" y="15" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="PlexConnect Icon" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="0b0-24-AEZ">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios8plexconnecticon:" target="qo8-lj-syM" id="RuZ-qC-hX3"/>
-                                            </connections>
-                                        </button>
-                                        <button id="5PF-aw-LSZ">
-                                            <rect key="frame" x="664" y="15" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="PlexConnect Icon" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="waH-pb-68g">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios7plexconnecticon:" target="qo8-lj-syM" id="i98-Xw-MRJ"/>
-                                            </connections>
-                                        </button>
-                                        <button toolTip="Icon upload demo" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="toz-X9-Unw">
-                                            <rect key="frame" x="122" y="322" width="32" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qDX-hS-lHn">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="smallSystem"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlericontut:" target="qo8-lj-syM" id="ON6-eD-ru9"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="iGR-Xd-KP3">
-                                            <rect key="frame" x="9" y="161" width="414" height="162"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Z6K-Ip-JDx">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <string key="title">Step 1:   Check that PlexConnect is running already.
-Step 2:   Click an icon that matches your aTV iOS 
-               revision before moving to step 3.   
-Step 3:   Stop PlexConnect and edit Settings.cfg
-               (iMovie iOS 8 is default) change 'icon' string 
-               in Settings.cfg to match desired icon URL. 
-               View storeFront to locate icon URL that matches iOS. 
-               Start PlexConnect.                                                  
-</string>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="9b1-Nz-vtq">
-                                            <rect key="frame" x="9" y="328" width="109" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="How it works:" id="3m5-ef-mHw">
-                                                <font key="font" metaFont="systemBold" size="16"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button id="TiN-73-Jjc">
-                                            <rect key="frame" x="470" y="258" width="112" height="82"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="black" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Cs9-SN-wsG">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerios8blackplexicon:" target="qo8-lj-syM" id="g3I-rW-EPi"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="n1Q-eU-dll">
-                                            <rect key="frame" x="600" y="48" width="51" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Original" id="8dA-tE-ytq">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u28-uv-doe">
-                                            <rect key="frame" x="9" y="101" width="414" height="96"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="J1Z-ab-WPs">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <string key="title">Step 4:   Unplug internet from your router.     
-Step 5:   Reset all settings on aTV.      
-Step 6:   Change aTV DNS to your PlexConnect Host.
-Step 7:   Plug internet back into your router.
-Step 8:   Once Plex Icon is "Stuck" on aTV reinstall 
-               your desired theme.</string>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" id="bhq-tu-F0i">
-                                            <rect key="frame" x="181" y="41" width="112" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Settings.cfg" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OVm-5S-CCS">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="cellTitle"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlersettingscfg:" target="qo8-lj-syM" id="GHX-Vy-MKq"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="5NU-Bm-qB8">
-                                            <rect key="frame" x="69" y="41" width="104" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="storeFront" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bca-jf-Nsb">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="cellTitle"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerstorefront:" target="qo8-lj-syM" id="QZf-es-Unv"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Nf-9H-7Qj">
-                                            <rect key="frame" x="9" y="76" width="454" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="*Currently only Wahlman.j &amp; Cyberghost themes can change the icon." id="qTr-Gk-TIR">
-                                                <font key="font" metaFont="systemBold" size="11"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2jj-1B-AUk">
-                                            <rect key="frame" x="9" y="-3" width="342" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="tDO-QX-K9r">
-                                                <font key="font" size="11" name="HelveticaNeue-Bold"/>
-                                                <string key="title">* iMovie can be changed on iOS 5-7 not Trailers or WSJ.
-   Only on iOS 8 you can change all three icons.</string>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                    </subviews>
-                                    <animations/>
-                                </view>
-                            </tabViewItem>
-                            <tabViewItem label="WebConnect" identifier="" id="j3E-V1-rgk">
-                                <view key="view" id="TkI-GG-gmE">
-                                    <rect key="frame" x="10" y="33" width="799" height="373"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button verticalHuggingPriority="750" id="JUc-UM-A74">
-                                            <rect key="frame" x="667" y="196" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2s4-D7-rJA">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerinstallwc10beta:" target="qo8-lj-syM" id="6Ct-Tc-vJ7"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="VDc-dC-ZZe">
-                                            <rect key="frame" x="667" y="86" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KuI-lM-9s4">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerinstallwc7:" target="qo8-lj-syM" id="QRk-vH-POq"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="kyQ-Eo-pIj">
-                                            <rect key="frame" x="517" y="262" width="111" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10+ CLT" id="W75-bu-oiE">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="DT7-Q3-Jdy">
-                                            <rect key="frame" x="517" y="209" width="122" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10.5 only*" id="531-aw-i6g">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" id="hym-Y4-eDa">
-                                            <rect key="frame" x="667" y="302" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ahv-QP-tyg">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerinstallwc10:" target="qo8-lj-syM" id="Obd-J2-41u"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" id="Bt4-68-Tl2">
-                                            <rect key="frame" x="667" y="30" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TLp-hK-x57">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerinstallwc6:" target="qo8-lj-syM" id="YmQ-5D-U3B"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aeC-6Q-Kjn">
-                                            <rect key="frame" x="517" y="43" width="87" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.6" id="M5V-Cm-RoF">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" id="8kM-wK-qTR">
-                                            <rect key="frame" x="667" y="140" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XPE-lp-BGO">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerinstallwc8or9:" target="qo8-lj-syM" id="mQG-ae-0dc"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="o32-5O-RXQ">
-                                            <rect key="frame" x="517" y="152" width="111" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.8-10.9" id="ZDX-6v-jd3">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" id="w58-MP-wCQ">
-                                            <rect key="frame" x="667" y="249" width="93" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XKP-9d-jZO">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system" size="14"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerclt:" target="qo8-lj-syM" id="j9f-il-C0K"/>
-                                            </connections>
-                                        </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZMB-O4-faB">
-                                            <rect key="frame" x="517" y="99" width="79" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.7" id="EVu-eV-F6B">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="w7Z-1v-Gpi">
-                                            <rect key="frame" x="517" y="314" width="104" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10+" id="WX4-db-OqK">
-                                                <font key="font" metaFont="system" size="14"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eCp-wW-35z">
-                                            <rect key="frame" x="39" y="17" width="408" height="164"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="c7i-mg-CFw">
-                                                <font key="font" size="14" name="HelveticaNeue"/>
-                                                <string key="title">WebConnect is a way to manage PlexConnect and  OS X using any device, on any Web browser, from anywhere. 
-Forward port 1234 on your router pointed  at your Mac IP ONLY if you need access from outside your local 
-area network. 
-
-Click on the above iOS device for different views. If your local IP 
-address changes you must reinstall WebConnect again.</string>
-                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" id="DBd-vr-bEj">
-                                            <rect key="frame" x="-36" y="4" width="514" height="408"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <animations/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Web_Connect" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="aPF-9a-lUC">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="buttonhandlerwcview:" target="qo8-lj-syM" id="DEV-Q4-XAg"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <animations/>
                                 </view>
@@ -1780,6 +1344,443 @@ homescreen config</string>
                                     <animations/>
                                 </view>
                             </tabViewItem>
+                            <tabViewItem label="Plex Icon" identifier="2" id="irX-NK-XbQ">
+                                <view key="view" id="knp-pG-w1r">
+                                    <rect key="frame" x="10" y="33" width="799" height="373"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button id="RXN-Ni-sPr">
+                                            <rect key="frame" x="664" y="96" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="grey" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="9Ga-Yw-6uT">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios7greyplexicon:" target="qo8-lj-syM" id="4se-Q9-dVY"/>
+                                            </connections>
+                                        </button>
+                                        <button id="Dd3-P9-ItI">
+                                            <rect key="frame" x="664" y="177" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="gradient" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="vOW-H7-2ci">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios7gradientplexicon:" target="qo8-lj-syM" id="IHj-G6-I7I"/>
+                                            </connections>
+                                        </button>
+                                        <button id="ABQ-lD-e4U">
+                                            <rect key="frame" x="664" y="258" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="black" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="W7f-9Q-lQU">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios7blackplexicon:" target="qo8-lj-syM" id="7c6-w7-HgL"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="H8X-kW-Xce">
+                                            <rect key="frame" x="607" y="291" width="35" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Black" id="Zd8-eA-Y7H">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="vbM-pM-wJg">
+                                            <rect key="frame" x="598" y="210" width="53" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gradient" id="xSO-DW-YzD">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EnR-74-ZjX">
+                                            <rect key="frame" x="608" y="130" width="31" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Grey" id="NzQ-zs-PSY">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button id="fb7-iB-S2u">
+                                            <rect key="frame" x="470" y="96" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="grey" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="d25-0Y-Co1">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios8greyplexicon:" target="qo8-lj-syM" id="YPF-1g-83b"/>
+                                            </connections>
+                                        </button>
+                                        <button id="yKU-Uo-nwy">
+                                            <rect key="frame" x="470" y="177" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="gradient" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Ndt-DK-1go">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios8gradientplexicon:" target="qo8-lj-syM" id="kIT-95-9Qb"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="dAB-5G-uu8">
+                                            <rect key="frame" x="508" y="338" width="36" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS 8" id="78J-3h-JBa">
+                                                <font key="font" metaFont="systemBold" size="12"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aW0-V1-3lC">
+                                            <rect key="frame" x="696" y="338" width="48" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS 5-7" id="O07-V9-WSW">
+                                                <font key="font" metaFont="systemBold" size="12"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button id="Pmu-QE-Et2">
+                                            <rect key="frame" x="470" y="15" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="PlexConnect Icon" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="0b0-24-AEZ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios8plexconnecticon:" target="qo8-lj-syM" id="RuZ-qC-hX3"/>
+                                            </connections>
+                                        </button>
+                                        <button id="5PF-aw-LSZ">
+                                            <rect key="frame" x="664" y="15" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="PlexConnect Icon" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="waH-pb-68g">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios7plexconnecticon:" target="qo8-lj-syM" id="i98-Xw-MRJ"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Icon upload demo" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="toz-X9-Unw">
+                                            <rect key="frame" x="122" y="322" width="32" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qDX-hS-lHn">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlericontut:" target="qo8-lj-syM" id="ON6-eD-ru9"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="iGR-Xd-KP3">
+                                            <rect key="frame" x="9" y="161" width="414" height="162"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Z6K-Ip-JDx">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <string key="title">Step 1:   Check that PlexConnect is running already.
+Step 2:   Click an icon that matches your aTV iOS 
+               revision before moving to step 3.   
+Step 3:   Stop PlexConnect and edit Settings.cfg
+               (iMovie iOS 8 is default) change 'icon' string 
+               in Settings.cfg to match desired icon URL. 
+               View storeFront to locate icon URL that matches iOS. 
+               Start PlexConnect.                                                  
+</string>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="9b1-Nz-vtq">
+                                            <rect key="frame" x="9" y="328" width="109" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="How it works:" id="3m5-ef-mHw">
+                                                <font key="font" metaFont="systemBold" size="16"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button id="TiN-73-Jjc">
+                                            <rect key="frame" x="470" y="258" width="112" height="82"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="black" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Cs9-SN-wsG">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerios8blackplexicon:" target="qo8-lj-syM" id="g3I-rW-EPi"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="n1Q-eU-dll">
+                                            <rect key="frame" x="600" y="48" width="51" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Original" id="8dA-tE-ytq">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="u28-uv-doe">
+                                            <rect key="frame" x="9" y="101" width="414" height="96"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="J1Z-ab-WPs">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <string key="title">Step 4:   Unplug internet from your router.     
+Step 5:   Reset all settings on aTV.      
+Step 6:   Change aTV DNS to your PlexConnect Host.
+Step 7:   Plug internet back into your router.
+Step 8:   Once Plex Icon is "Stuck" on aTV reinstall 
+               your desired theme.</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" id="bhq-tu-F0i">
+                                            <rect key="frame" x="181" y="41" width="112" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Settings.cfg" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OVm-5S-CCS">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="cellTitle"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlersettingscfg:" target="qo8-lj-syM" id="GHX-Vy-MKq"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="5NU-Bm-qB8">
+                                            <rect key="frame" x="69" y="41" width="104" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="storeFront" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bca-jf-Nsb">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="cellTitle"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerstorefront:" target="qo8-lj-syM" id="QZf-es-Unv"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="1Nf-9H-7Qj">
+                                            <rect key="frame" x="9" y="76" width="454" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="*Currently only Wahlman.j &amp; Cyberghost themes can change the icon." id="qTr-Gk-TIR">
+                                                <font key="font" metaFont="smallSystemBold"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2jj-1B-AUk">
+                                            <rect key="frame" x="9" y="-3" width="342" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="tDO-QX-K9r">
+                                                <font key="font" size="11" name="HelveticaNeue-Bold"/>
+                                                <string key="title">* iMovie can be changed on iOS 5-7 not Trailers or WSJ.
+   Only on iOS 8 you can change all three icons.</string>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="WebConnect" identifier="" id="j3E-V1-rgk">
+                                <view key="view" id="TkI-GG-gmE">
+                                    <rect key="frame" x="10" y="33" width="799" height="373"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" id="JUc-UM-A74">
+                                            <rect key="frame" x="667" y="196" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2s4-D7-rJA">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerinstallwc10beta:" target="qo8-lj-syM" id="6Ct-Tc-vJ7"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="VDc-dC-ZZe">
+                                            <rect key="frame" x="667" y="86" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KuI-lM-9s4">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerinstallwc7:" target="qo8-lj-syM" id="QRk-vH-POq"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="kyQ-Eo-pIj">
+                                            <rect key="frame" x="517" y="262" width="111" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10+ CLT" id="W75-bu-oiE">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="DT7-Q3-Jdy">
+                                            <rect key="frame" x="517" y="209" width="122" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10.5 only*" id="531-aw-i6g">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" id="hym-Y4-eDa">
+                                            <rect key="frame" x="667" y="302" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ahv-QP-tyg">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerinstallwc10:" target="qo8-lj-syM" id="Obd-J2-41u"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="Bt4-68-Tl2">
+                                            <rect key="frame" x="667" y="30" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TLp-hK-x57">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerinstallwc6:" target="qo8-lj-syM" id="YmQ-5D-U3B"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aeC-6Q-Kjn">
+                                            <rect key="frame" x="517" y="43" width="87" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.6" id="M5V-Cm-RoF">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" id="8kM-wK-qTR">
+                                            <rect key="frame" x="667" y="140" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XPE-lp-BGO">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerinstallwc8or9:" target="qo8-lj-syM" id="mQG-ae-0dc"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="o32-5O-RXQ">
+                                            <rect key="frame" x="517" y="152" width="111" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.8-10.9" id="ZDX-6v-jd3">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" id="w58-MP-wCQ">
+                                            <rect key="frame" x="667" y="249" width="93" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="squareTextured" title="Install" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XKP-9d-jZO">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="14"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerclt:" target="qo8-lj-syM" id="j9f-il-C0K"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZMB-O4-faB">
+                                            <rect key="frame" x="517" y="99" width="79" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.7" id="EVu-eV-F6B">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="w7Z-1v-Gpi">
+                                            <rect key="frame" x="517" y="314" width="104" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OS X 10.10+" id="WX4-db-OqK">
+                                                <font key="font" metaFont="system" size="14"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eCp-wW-35z">
+                                            <rect key="frame" x="39" y="17" width="408" height="164"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="c7i-mg-CFw">
+                                                <font key="font" size="14" name="HelveticaNeue"/>
+                                                <string key="title">WebConnect is a way to manage PlexConnect and  OS X using any device, on any Web browser, from anywhere. 
+Forward port 1234 on your router pointed  at your Mac IP ONLY if you need access from outside your local 
+area network. 
+
+Click on the above iOS device for different views. If your local IP 
+address changes you must reinstall WebConnect again.</string>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" id="DBd-vr-bEj">
+                                            <rect key="frame" x="-36" y="4" width="514" height="408"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Web_Connect" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="aPF-9a-lUC">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerwcview:" target="qo8-lj-syM" id="DEV-Q4-XAg"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                            </tabViewItem>
                             <tabViewItem label="Settings" identifier="" id="VWz-VT-u2O">
                                 <view key="view" id="q4m-ZR-86A">
                                     <rect key="frame" x="10" y="33" width="799" height="373"/>
@@ -2205,7 +2206,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                 </subviews>
                 <animations/>
             </view>
-            <point key="canvasLocation" x="-1638.5" y="-1198.5"/>
+            <point key="canvasLocation" x="-1679.5" y="-1269.5"/>
         </window>
         <window title="Airplay to your mac!" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="J4W-YM-HbQ">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2312,7 +2313,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                 </subviews>
                 <animations/>
             </view>
-            <point key="canvasLocation" x="-1022.5" y="-1262.5"/>
+            <point key="canvasLocation" x="-1679.5" y="-980.5"/>
         </window>
         <window title="TUTORIAL" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="V1e-oJ-Pjo">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -2423,7 +2424,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                 </subviews>
                 <animations/>
             </view>
-            <point key="canvasLocation" x="-1339.5" y="-1194.5"/>
+            <point key="canvasLocation" x="-1133.5" y="-1222.5"/>
         </window>
     </objects>
     <resources>
