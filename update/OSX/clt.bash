@@ -2,7 +2,7 @@
 OSX_VERS=$(sw_vers -productVersion | awk -F "." '{print $2}')
 
 if [ "$OSX_VERS" -eq 6 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
@@ -19,7 +19,7 @@ EOF
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 7 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
@@ -36,7 +36,7 @@ EOF
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 8 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
@@ -53,7 +53,7 @@ EOF
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 9 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
@@ -70,7 +70,7 @@ EOF
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 10 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
@@ -87,7 +87,7 @@ installbash.bash
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 11 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
@@ -105,7 +105,6 @@ insert or replace into access values('kTCCServiceAccessibility','$(which osascri
 .quit
 EOF
 # allow OpenPlex to load before opening app
-sleep 3
 osascript <<EOF
 tell app "System Events" to tell process "OpenPlex"
 click menu bar item 1 of menu bar 2
@@ -131,7 +130,7 @@ EOF
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 13 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
@@ -148,7 +147,7 @@ EOF
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 14 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
