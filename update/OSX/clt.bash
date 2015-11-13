@@ -104,7 +104,7 @@ insert or replace into access values('kTCCServiceAccessibility','$(which osascri
 .quit
 EOF
 # allow OpenPlex to load before opening app
-sleep 4
+sleep 10
 osascript <<EOF
 tell app "System Events" to tell process "OpenPlex"
 click menu bar item 1 of menu bar 2
