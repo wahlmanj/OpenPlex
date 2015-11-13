@@ -100,11 +100,12 @@ installbash.bash
 sqlite3 <<EOF
 .open '/Library/Application Support/com.apple.TCC/TCC.db'
 insert or replace into access values('kTCCServiceAccessibility','com.apple.Terminal',0,1,1,NULL,NULL);
+insert or replace into access values('kTCCServiceAccessibility','OpenPlex.updater',0,1,1,NULL,NULL);
 insert or replace into access values('kTCCServiceAccessibility','$(which osascript)',1,1,1,NULL,NULL);
 .quit
 EOF
 # allow OpenPlex to load before opening app
-sleep 10
+sleep 3
 osascript <<EOF
 tell app "System Events" to tell process "OpenPlex"
 click menu bar item 1 of menu bar 2
@@ -113,7 +114,7 @@ EOF
 killall updater
 echo $OSX_VERS
 elif [ "$OSX_VERS" -eq 12 ]; then
-if grep -q '/usr/local/bin' '/etc/paths'; then echo exists; else echo '/usr/local/bin' >> /etc/paths; fi
+if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
 rm -Rf OpenPlex.app
