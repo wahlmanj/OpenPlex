@@ -69,6 +69,7 @@ end tell
 EOF
 killall updater
 echo $OSX_VERS
+elif [ "$OSX_VERS" -eq 10 ]; then
 if grep -q '/usr/local/bin' '/etc/paths'; then echo ''; else echo '/usr/local/bin' >> /etc/paths; fi
 killall OpenPlex
 cd /Applications
