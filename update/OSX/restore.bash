@@ -33,10 +33,10 @@ echo 'brotuser flow dir not found'
 
 fi
 
-cyberghosticons="${PlexConnectPath}/assets/templates/plex/images/custom/flow"
+cyberghosticons="${PlexConnectPath}/assets/thumbnails/Plex/images/custom"
 if [ -d "$cyberghosticons" ]; then
-cp -R /Applications/plexconnect_BACKUP/flow/* /Applications/PlexConnect/assets/templates/plex/images/custom/flow
-cp -R /Applications/plexconnect_BACKUP/top/* /Applications/PlexConnect/assets/templates/plex/images/custom/top
+cp -R /Applications/plexconnect_BACKUP/flow/* /Applications/PlexConnect/assets/thumbnails/Plex/images/custom/flow
+cp -R /Applications/plexconnect_BACKUP/top/* /Applications/PlexConnect/assets/thumbnails/Plex/images/custom/top
 else
 echo 'Cyberghost flow and top dir not found'
 
