@@ -421,7 +421,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rfU-Em-TUn">
-                                            <rect key="frame" x="106" y="259" width="516" height="17"/>
+                                            <rect key="frame" x="106" y="259" width="557" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="install PIL / PILLOW until Command Line Tools has been completely installed!" id="uFd-U9-wOj">
@@ -1222,13 +1222,13 @@ Auto loader</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="lp0-8z-yfe">
-                                            <rect key="frame" x="158" y="126" width="124" height="36"/>
+                                            <rect key="frame" x="158" y="126" width="151" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="rB3-NL-eiG">
                                                 <font key="font" metaFont="system" size="14"/>
-                                                <string key="title">Remove trash can 
-empty warning </string>
+                                                <string key="title">Remove OS X trash 
+can empty warning </string>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -1280,7 +1280,7 @@ Auto loader</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4OU-8m-zCG">
-                                            <rect key="frame" x="562" y="182" width="152" height="18"/>
+                                            <rect key="frame" x="562" y="182" width="170" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Allow aTV to wake Mac" id="rjh-bg-kgH">
@@ -1324,7 +1324,7 @@ homescreen config</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7Wn-X8-R7M">
-                                            <rect key="frame" x="562" y="88" width="133" height="18"/>
+                                            <rect key="frame" x="562" y="88" width="148" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Open local PlexWeb" id="M4Q-c3-Oia">
@@ -2327,7 +2327,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Xsh-KN-BxV">
-                        <rect key="frame" x="142" y="252" width="162" height="17"/>
+                        <rect key="frame" x="142" y="252" width="221" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 1:   Install a Theme." id="y2R-RG-yvu">
@@ -2337,17 +2337,17 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="d5f-WU-Hck">
-                        <rect key="frame" x="53" y="221" width="340" height="17"/>
+                        <rect key="frame" x="53" y="221" width="374" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 2:   Install CLT then Pillow (only once required)." id="QdA-YN-5u2">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 2:   Install CLT then Pillow (only required once)." id="QdA-YN-5u2">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="gBE-M2-JrP">
-                        <rect key="frame" x="97" y="188" width="252" height="17"/>
+                        <rect key="frame" x="97" y="188" width="271" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 3:   Choose App to Hijack on aTV." id="0K5-ct-95v">
@@ -2357,7 +2357,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="jer-wy-b9S">
-                        <rect key="frame" x="46" y="159" width="354" height="17"/>
+                        <rect key="frame" x="46" y="159" width="368" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 4:   Restore settings, add extras or skip this step." id="LId-ej-gmc">
@@ -2367,7 +2367,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Gt5-Aa-IFv">
-                        <rect key="frame" x="41" y="126" width="368" height="17"/>
+                        <rect key="frame" x="41" y="126" width="392" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 5:   View Hijack Tab to set aTV DNS and load certs." id="w4O-3V-qzc">
@@ -2377,7 +2377,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="U7D-6M-6Vb">
-                        <rect key="frame" x="79" y="92" width="289" height="17"/>
+                        <rect key="frame" x="79" y="92" width="314" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 6:   Reboot aTV then try Hijacked App." id="ibg-SE-vxu">

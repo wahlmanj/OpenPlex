@@ -2246,7 +2246,7 @@ script AppDelegate
     end buttonhandlerloadsettings_
     
     on buttonhandlerbackupicons_(sender)
-        display notification "Backing up section icons..." with title "OpenPlex Status"
+        display notification "Section icons backed up..." with title "OpenPlex Status"
         delay 0
         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; backupiconsbash.bash"
     end buttonhandlerbackupicons_
@@ -2309,7 +2309,7 @@ script AppDelegate
     end buttonhandlerfanartfolder_
     
     on buttonhandlerloadbackupicons_(sender)
-        display notification "Restoring section icons..." with title "OpenPlex Status"
+        display notification "Section icons restored..." with title "OpenPlex Status"
         delay 0
         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restoreiconsbash.bash"
     end buttonhandlerloadbackupicons_
