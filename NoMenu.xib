@@ -2387,7 +2387,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fdG-4o-vH3">
-                        <rect key="frame" x="225" y="43" width="49" height="17"/>
+                        <rect key="frame" x="225" y="43" width="64" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enjoy :)" id="plQ-eb-2Ou">
