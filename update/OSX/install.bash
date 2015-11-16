@@ -338,6 +338,8 @@ cp backup.bash /usr/local/bin
 cp backupbash.bash /usr/local/bin
 cp backupatvsettings.bash /usr/local/bin
 cp backupatvsettingsbash.bash /usr/local/bin
+cp backupicons.bash /usr/local/bin
+cp backupiconsbash.bash /usr/local/bin
 cp bootlock.bash /usr/local/bin
 cp bootlockbash.bash /usr/local/bin
 cp clt.bash /usr/local/bin
@@ -425,8 +427,10 @@ cp restoreatvsettings.bash /usr/local/bin
 cp restoreatvsettingsbash.bash /usr/local/bin
 cp restore.bash /usr/local/bin
 cp restorebash.bash /usr/local/bin
-cp restorecertsbash.bash /usr/local/bin
 cp restorecerts.bash /usr/local/bin
+cp restorecertsbash.bash /usr/local/bin
+cp restoreicons.bash /usr/local/bin
+cp restoreiconsbash.bash /usr/local/bin
 cp settings.bash /usr/local/bin
 cp settingsbash.bash /usr/local/bin
 cp show /usr/local/bin
@@ -529,6 +533,8 @@ chmod +x /usr/local/bin/backupatvsettings.bash
 chmod +x /usr/local/bin/backupatvsettingsbash.bash
 chmod +x /usr/local/bin/backup.bash
 chmod +x /usr/local/bin/backupbash.bash
+chmod +x /usr/local/bin/backupicons.bash
+chmod +x /usr/local/bin/backupiconsbash.bash
 chmod +x /usr/local/bin/bootlock.bash
 chmod +x /usr/local/bin/bootlockbash.bash
 chmod +x /usr/local/bin/clt.bash
@@ -619,6 +625,8 @@ chmod +x /usr/local/bin/restoreatvsettings.bash
 chmod +x /usr/local/bin/restoreatvsettingsbash.bash
 chmod +x /usr/local/bin/restorecerts.bash
 chmod +x /usr/local/bin/restorecertsbash.bash
+chmod +x /usr/local/bin/restoreicons.bash
+chmod +x /usr/local/bin/restoreiconsbash.bash
 chmod +x /usr/local/bin/settings.bash
 chmod +x /usr/local/bin/settingsbash.bash
 chmod +x /usr/local/bin/show

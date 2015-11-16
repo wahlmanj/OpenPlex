@@ -728,12 +728,12 @@ Step 4:   DONE</string>
                                             <rect key="frame" x="413" y="42" width="93" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oJa-gg-ePl">
+                                            <buttonCell key="cell" type="squareTextured" title="Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oJa-gg-ePl">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerfanartfolder:" target="qo8-lj-syM" id="kqF-Wx-DKv"/>
+                                                <action selector="buttonhandlericonsfolder:" target="qo8-lj-syM" id="Kld-zl-Kbp"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="d5N-KM-pFh">
@@ -780,6 +780,9 @@ Step 4:   DONE</string>
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerdeletefanart:" target="qo8-lj-syM" id="WKv-sz-slH"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="guE-mE-MG4">
                                             <rect key="frame" x="529" y="125" width="93" height="42"/>
@@ -833,12 +836,12 @@ Step 4:   DONE</string>
                                             <rect key="frame" x="413" y="209" width="93" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TBz-UL-FhS">
+                                            <buttonCell key="cell" type="squareTextured" title="Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TBz-UL-FhS">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerloadbackupfanart:" target="qo8-lj-syM" id="kjr-c1-sr3"/>
+                                                <action selector="buttonhandlerloadbackupicons:" target="qo8-lj-syM" id="jB6-jc-qde"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="txu-pb-iwp">
@@ -893,12 +896,12 @@ Step 4:   DONE</string>
                                             <rect key="frame" x="413" y="294" width="93" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Fanart" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NBM-uU-w4K">
+                                            <buttonCell key="cell" type="squareTextured" title="Icons" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NBM-uU-w4K">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlerbackupfanart:" target="qo8-lj-syM" id="ASh-on-XaP"/>
+                                                <action selector="buttonhandlerbackupicons:" target="qo8-lj-syM" id="Zv4-ui-VE0"/>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" id="Hoq-g3-L29">
@@ -970,7 +973,7 @@ Step 4:   DONE</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box borderType="line" id="RYE-hy-dIj">
-                                            <rect key="frame" x="17" y="194" width="770" height="85"/>
+                                            <rect key="frame" x="17" y="192" width="770" height="85"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="hsk-y3-9Ao">
                                                 <rect key="frame" x="1" y="1" width="768" height="69"/>
@@ -982,7 +985,7 @@ Step 4:   DONE</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box borderType="line" id="ad9-3L-TMF">
-                                            <rect key="frame" x="17" y="111" width="770" height="85"/>
+                                            <rect key="frame" x="17" y="109" width="770" height="85"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="se1-9v-wCg">
                                                 <rect key="frame" x="1" y="1" width="768" height="69"/>
@@ -994,7 +997,7 @@ Step 4:   DONE</string>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box borderType="line" id="cEm-4E-7QZ">
-                                            <rect key="frame" x="17" y="27" width="770" height="85"/>
+                                            <rect key="frame" x="17" y="25" width="770" height="85"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="pVl-X2-kTP">
                                                 <rect key="frame" x="1" y="1" width="768" height="69"/>

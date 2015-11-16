@@ -42,17 +42,19 @@ echo 'Cyberghost flow and top dir not found'
 
 fi
 
-stoffezicons="${PlexConnectPath}/assets/templates/Stoffez/images/Custom"
+stoffezicons="${PlexConnectPath}/assets/thumbnails"
 if [ -d "$stoffezicons" ]; then
-cp -R /Applications/plexconnect_BACKUP/flow/* /Applications/PlexConnect/assets/templates/Stoffez/images/Custom
+cp -R /Applications/plexconnect_BACKUP/flow/* /Applications/PlexConnect/assets/thumbnails
+cp -R /Applications/plexconnect_BACKUP/top/* /Applications/PlexConnect/assets/thumbnails
 else
 echo 'stoffez flow dir not found'
 
 fi
 
-falcoicons="${PlexConnectPath}/assets/templates/falco953"
+falcoicons="${PlexConnectPath}/assets/thumbnails"
 if [ -d "$falcoicons" ]; then
 cp -R /Applications/plexconnect_BACKUP/flow/* /Applications/PlexConnect/assets/thumbnails
+cp -R /Applications/plexconnect_BACKUP/top/* /Applications/PlexConnect/assets/thumbnails
 else
 echo 'falco953 flow dir not found'
 

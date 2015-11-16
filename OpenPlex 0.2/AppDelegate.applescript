@@ -2245,6 +2245,12 @@ script AppDelegate
         do shell script "cp /Applications/plexconnect_BACKUP/Settings.cfg /Applications/PlexConnect" with administrator privileges
     end buttonhandlerloadsettings_
     
+    on buttonhandlerbackupicons_(sender)
+        display notification "Backing up section icons..." with title "OpenPlex Status"
+        delay 0
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; backupiconsbash.bash"
+    end buttonhandlerbackupicons_
+    
     on buttonhandlerbackupfanart_(sender)
         --may remove button eventually
         tell application "Finder"
@@ -2266,6 +2272,25 @@ script AppDelegate
         end tell
     end buttonhandlerbackupfanart_
     
+    on buttonhandlericonsfolder_(sender)
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                try
+                    do shell script "open /Applications/PlexConnect/assets/thumbnails"
+                end try
+                try
+                    do shell script "open /Applications/PlexConnect/assets/thumbnails"
+                end try
+                try
+                    do shell script "open /Applications/PlexConnect/assets/thumbnails/Plex/images/custom"
+                end try
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Theme Detected..." with title "OpenPlex Status"
+                delay 0
+            end if
+        end tell
+    end buttonhandlericonsfolder_
+    
     on buttonhandlerfanartfolder_(sender)
         --may remove button eventually
         tell application "Finder"
@@ -2282,6 +2307,12 @@ script AppDelegate
             end if
         end tell
     end buttonhandlerfanartfolder_
+    
+    on buttonhandlerloadbackupicons_(sender)
+        display notification "Restoring section icons..." with title "OpenPlex Status"
+        delay 0
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; restoreiconsbash.bash"
+    end buttonhandlerloadbackupicons_
     
     on buttonhandlerloadbackupfanart_(sender)
         --Needs work to remove password only --may remove button eventually
@@ -2440,6 +2471,21 @@ script AppDelegate
             end if
         end tell
     end buttonhandlerdeleteATVSettings_
+    
+    on buttonhandlerdeletefanart_(sender)
+        tell application "Finder"
+            if (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                try
+                    display notification "Fanartcache has been deleted..." with title "OpenPlex Status"
+                    delay 0
+                    do shell script "rm -R /Applications/PlexConnect/assets/fanartcache/*"
+                end try
+                else if not (exists folder "Applications:PlexConnect:update:OSX" of the startup disk) then
+                display notification "No Theme Detected..." with title "OpenPlex Status"
+                delay 0
+            end if
+        end tell
+    end buttonhandlerdeletedfanart_
     
     on buttonhandlerbackupall_(sender)
         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; backupbash.bash"
