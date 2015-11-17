@@ -59,6 +59,14 @@ echo 'falco dir not found'
 
 fi
 
+if [ -d /Applications/plexconnect_BACKUP/assets/thumbnails/MediaBadges ]; then
+rm -R /Applications/plexconnect_BACKUP/flow/MediaBadges
+rm -R /Applications/plexconnect_BACKUP/top/MediaBadges
+else
+echo 'MediaBadges backup dir not found'
+
+fi
+
 startbash.bash
 
 if [ -s /Applications/plexconnect_BACKUP ]

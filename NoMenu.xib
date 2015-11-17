@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15C40a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
@@ -146,7 +146,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9Kp-WA-pKV">
+                    <imageView toolTip="PlexConnect Status" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9Kp-WA-pKV">
                         <rect key="frame" x="14" y="367" width="37" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -441,7 +441,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <box title="Box" borderType="line" titlePosition="noTitle" id="DW2-qI-wyP">
-                                            <rect key="frame" x="95" y="209" width="609" height="59"/>
+                                            <rect key="frame" x="95" y="210" width="609" height="59"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="erk-a2-Ady">
                                                 <rect key="frame" x="1" y="1" width="607" height="57"/>
@@ -465,7 +465,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box title="Box" borderType="line" titlePosition="noTitle" id="qXG-Gh-2iT">
-                                            <rect key="frame" x="95" y="90" width="609" height="59"/>
+                                            <rect key="frame" x="95" y="88" width="609" height="59"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="YSX-Rz-EPX">
                                                 <rect key="frame" x="1" y="1" width="607" height="57"/>
@@ -477,7 +477,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box title="Box" borderType="line" titlePosition="noTitle" id="v4m-gd-gP7">
-                                            <rect key="frame" x="95" y="29" width="609" height="59"/>
+                                            <rect key="frame" x="95" y="27" width="609" height="59"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="4Ea-Fb-Aol">
                                                 <rect key="frame" x="1" y="1" width="607" height="57"/>
@@ -489,7 +489,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box title="Box" borderType="line" titlePosition="noTitle" id="MBL-Oz-RoR">
-                                            <rect key="frame" x="95" y="270" width="609" height="59"/>
+                                            <rect key="frame" x="95" y="271" width="609" height="59"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="LI1-mW-L6V">
                                                 <rect key="frame" x="1" y="1" width="607" height="57"/>
@@ -1959,10 +1959,10 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             </textFieldCell>
                                         </textField>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="DMo-yc-KXD">
-                                            <rect key="frame" x="472" y="248" width="43" height="45"/>
+                                            <rect key="frame" x="472" y="246" width="48" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Mavericks" id="xZ7-fx-WfX"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="yoemite" id="xZ7-fx-WfX"/>
                                         </imageView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xeb-Td-BsR">
                                             <rect key="frame" x="472" y="137" width="48" height="48"/>
@@ -1971,7 +1971,7 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Mountain" id="my4-8g-KBs"/>
                                         </imageView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WA5-85-r50">
-                                            <rect key="frame" x="467" y="301" width="53" height="49"/>
+                                            <rect key="frame" x="472" y="301" width="48" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="yoemite" id="ARG-bo-FpU"/>
@@ -1992,7 +1992,7 @@ Step 8:   Once Plex Icon is "Stuck" on aTV reinstall
                                             <rect key="frame" x="472" y="193" width="48" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Mountain" id="adR-QC-cZv"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="yoemite" id="adR-QC-cZv"/>
                                         </imageView>
                                         <box title="Box" borderType="line" titlePosition="noTitle" id="9JB-ZN-3IG">
                                             <rect key="frame" x="450" y="13" width="333" height="344"/>
@@ -2519,7 +2519,7 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fdG-4o-vH3">
-                        <rect key="frame" x="225" y="43" width="64" height="17"/>
+                        <rect key="frame" x="225" y="36" width="64" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enjoy :)" id="plQ-eb-2Ou">
@@ -2564,7 +2564,6 @@ Furthermore, OpenPlex is running on Mac OS X 10.6 to 10.11+ El Capitan.</string>
     </objects>
     <resources>
         <image name="AirPlayIcon" width="343" height="368"/>
-        <image name="Mavericks" width="128" height="128"/>
         <image name="Mountain" width="128" height="128"/>
         <image name="OP-Logo" width="500" height="500"/>
         <image name="PlexConnect Icon" width="188" height="108"/>
