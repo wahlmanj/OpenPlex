@@ -503,6 +503,8 @@ cp wclist.bash /usr/local/bin
 cp wclistbash.bash /usr/local/bin
 cp wcopenplex.bash /usr/local/bin
 cp wcopenplexbash.bash /usr/local/bin
+cp wcopenplexsafari.bash /usr/local/bin
+cp wcopenplexsafaribash.bash /usr/local/bin
 cp websharing.bash /usr/local/bin
 cp websharingbash.bash /usr/local/bin
 cp who.bash /usr/local/bin
@@ -700,6 +702,8 @@ chmod +x /usr/local/bin/wclist.bash
 chmod +x /usr/local/bin/wclistbash.bash
 chmod +x /usr/local/bin/wcopenplex.bash
 chmod +x /usr/local/bin/wcopenplexbash.bash
+chmod +x /usr/local/bin/wcopenplexsafari.bash
+chmod +x /usr/local/bin/wcopenplexsafaribash.bash
 chmod +x /usr/local/bin/websharing.bash
 chmod +x /usr/local/bin/websharingbash.bash
 chmod +x /usr/local/bin/who.bash
@@ -796,7 +800,7 @@ wclist.bash
 wcinstaller.bash
 wcios.bash
 wcdefault.bash
-wcsafari.bash
+wcopenplexsafari.bash
 wcopenplex.bash
 
 if [ -s /usr/local/bin/sudoers.bash ]
