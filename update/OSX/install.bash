@@ -88,6 +88,30 @@ cd /Library/WebServer/CGI-Executables
 wq
 EOF
 
+## Generate wcopenplexsafari.bash based on OSX IP Address for webconnect.cgi
+ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 > wcopenplexsafari.bash
+ed -s wcopenplexsafari.bash << EOF
+1
+a
+:1234\/cgi-bin\/safari.cgi/g' webconnect.cgi
+.
+1,2j
+wq
+EOF
+ed -s wcopenplexsafari.bash << EOF
+i
+sed -i '' 's/__OPENPLEXSAFARI__/http:\/\/
+.
+1,2j
+wq
+EOF
+ed -s wcopenplexsafari.bash << EOF
+i
+cd /Library/WebServer/CGI-Executables
+.
+wq
+EOF
+
 ## Generate wcdefault.bash based on OSX IP Address for webconnect.cgi
 ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 > wcdefault.bash
 ed -s wcdefault.bash << EOF
@@ -306,16 +330,18 @@ EOF
 
 ## WebConnect Requirements
 cp bash.cgi /Library/WebServer/CGI-Executables/
-cp ios.cgi /Library/WebServer/CGI-Executables/
 cp list.cgi /Library/WebServer/CGI-Executables/
-cp openplex.cgi /Library/WebServer/CGI-Executables/
 cp installer.cgi /Library/WebServer/CGI-Executables/
+cp ios.cgi /Library/WebServer/CGI-Executables/
+cp openplex.cgi /Library/WebServer/CGI-Executables/
+cp safari.cgi /Library/WebServer/CGI-Executables/
 cp webconnect.cgi /Library/WebServer/CGI-Executables/
 chmod +x /Library/WebServer/CGI-Executables/bash.cgi
-chmod +x /Library/WebServer/CGI-Executables/ios.cgi
 chmod +x /Library/WebServer/CGI-Executables/list.cgi
 chmod +x /Library/WebServer/CGI-Executables/installer.cgi
+chmod +x /Library/WebServer/CGI-Executables/ios.cgi
 chmod +x /Library/WebServer/CGI-Executables/openplex.cgi
+chmod +x /Library/WebServer/CGI-Executables/safari.cgi
 chmod +x /Library/WebServer/CGI-Executables/webconnect.cgi
 
 ## check for script dir, if not exists then create it for systemwide access
@@ -770,6 +796,7 @@ wclist.bash
 wcinstaller.bash
 wcios.bash
 wcdefault.bash
+wcsafari.bash
 wcopenplex.bash
 
 if [ -s /usr/local/bin/sudoers.bash ]
