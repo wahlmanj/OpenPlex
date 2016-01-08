@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15C40a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15D13b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
@@ -325,10 +325,13 @@
                                             <rect key="frame" x="285" y="38" width="93" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <animations/>
-                                            <buttonCell key="cell" type="squareTextured" title="Preview" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Eco-Wd-ImD">
+                                            <buttonCell key="cell" type="squareTextured" title="Preview" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Eco-Wd-ImD">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonhandlerwahlmanjpreview:" target="qo8-lj-syM" id="wiS-Re-dt5"/>
+                                            </connections>
                                         </button>
                                         <button toolTip="Install iBaa Theme" verticalHuggingPriority="750" id="XKE-v5-Vjo">
                                             <rect key="frame" x="439" y="279" width="94" height="42"/>
@@ -477,7 +480,7 @@
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <box title="Box" borderType="line" titlePosition="noTitle" id="v4m-gd-gP7">
-                                            <rect key="frame" x="95" y="27" width="609" height="59"/>
+                                            <rect key="frame" x="95" y="28" width="609" height="59"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="4Ea-Fb-Aol">
                                                 <rect key="frame" x="1" y="1" width="607" height="57"/>
