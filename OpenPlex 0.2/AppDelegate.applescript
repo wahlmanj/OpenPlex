@@ -51,6 +51,12 @@ script AppDelegate
     
     --Settings Tab
     
+    on buttonhandlerwebsite_(sender)
+        set theURL to "http://www.plexconnect.info"
+        tell application "Safari" to make new document with properties {URL:theURL}
+        do shell script "show Safari"
+    end buttonhandlerwebsite_
+    
     on buttonhandlerversion_(sender)
     set x to do shell script "cd ~/Library/Application\\ Support/OpenPlex; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git reset --hard"
     display notification "Current Version " & x
