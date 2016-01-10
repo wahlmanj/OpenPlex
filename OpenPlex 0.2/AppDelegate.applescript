@@ -2536,7 +2536,7 @@ script AppDelegate
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash"
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/httpd.conf /etc/apache2" with administrator privileges
             on error
@@ -2561,7 +2561,7 @@ script AppDelegate
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash"
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/10.10/httpd.conf /etc/apache2" with administrator privileges
             on error
@@ -2589,7 +2589,7 @@ script AppDelegate
         do shell script "chmod +x /Applications/PlexConnect/update/OSX/sudoers.bash" with administrator privileges
         do shell script "/Applications/PlexConnect/update/OSX/install.bash" with administrator privileges
         do shell script "cp /Applications/PlexConnect/update/OSX/sudoers2 /etc/sudoers; chmod 440 /etc/sudoers" with administrator privileges
-        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash" with administrator privileges
+        do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; installbash.bash"
         try
             do shell script "cp /Applications/PlexConnect/update/OSX/10.10.5/httpd.conf /etc/apache2" with administrator privileges
             on error
