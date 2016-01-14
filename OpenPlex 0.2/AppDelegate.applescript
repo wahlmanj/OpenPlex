@@ -366,7 +366,7 @@ script AppDelegate
     end buttonhandlerbaapreview_
     
     on buttonhandlerghostpreview_(sender)
-        set theURL to "https://www.youtube.com/watch?v=jbRllNXWtOY"
+        set theURL to "https://www.youtube.com/watch?v=c5YuJErfOow"
         tell application "Safari" to make new document with properties {URL:theURL}
     end buttonhandlerghostpreview_
     
