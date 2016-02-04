@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "StatusRed.png"
+      "filename" : "statusRed.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "StatusRed-1.png"
+      "filename" : "statusRed-1.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "StatusRed-2.png"
+      "filename" : "statusRed-2.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
