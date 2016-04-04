@@ -2471,7 +2471,7 @@ script AppDelegate
     end buttonhandlerairplayinstaller_
     
     on buttonhandleruas_(sender)
-        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/mikedm139/UnSupportedAppstore.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
+        do shell script "cd /Applications; export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; git clone https://github.com/dagalufh/WebTools.bundle.git; git clone https://github.com/wahlmanj/unsupported.git"
         do shell script "chmod +x /applications/unsupported/unsupported.bash" with administrator privileges
         do shell script "/applications/unsupported/unsupported.bash" with administrator privileges
         do shell script "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH; unsupported2.bash"
