@@ -33,12 +33,18 @@
 		DB0CBE9C1C63DD9C00E05506 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0CBE981C63DD9C00E05506 /* folder.png */; };
 		DB0CBE9D1C63DD9C00E05506 /* icon@720.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0CBE991C63DD9C00E05506 /* icon@720.png */; };
 		DB0CBE9E1C63DD9C00E05506 /* icon@1080.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0CBE9A1C63DD9C00E05506 /* icon@1080.png */; };
-		DB0CBE9F1C63DD9C00E05506 /* OpenPlexLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0CBE9B1C63DD9C00E05506 /* OpenPlexLogo.png */; };
 		DB9981001BF9C73400EE0AE4 /* Mavericks.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9980FC1BF9C73400EE0AE4 /* Mavericks.png */; };
 		DB9981011BF9C73400EE0AE4 /* Mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9980FD1BF9C73400EE0AE4 /* Mountain.png */; };
 		DB9981021BF9C73400EE0AE4 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9980FE1BF9C73400EE0AE4 /* snow.png */; };
 		DB9981031BF9C73400EE0AE4 /* yoemite.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9980FF1BF9C73400EE0AE4 /* yoemite.png */; };
 		DB9981051BF9C7DE00EE0AE4 /* lion.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9981041BF9C7DE00EE0AE4 /* lion.png */; };
+		DBACD8D71CE736E60013011F /* OpenPlexLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8D61CE736E60013011F /* OpenPlexLogo.png */; };
+		DBACD8D91CE79FD40013011F /* BackupIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8D81CE79FD40013011F /* BackupIcon.png */; };
+		DBACD8DB1CE7A05B0013011F /* RestoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8DA1CE7A05B0013011F /* RestoreIcon.png */; };
+		DBACD8DE1CE7A0DC0013011F /* QuickLook.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8DC1CE7A0DC0013011F /* QuickLook.png */; };
+		DBACD8DF1CE7A0DC0013011F /* TrashCan.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8DD1CE7A0DC0013011F /* TrashCan.png */; };
+		DBACD8E21CE7B0E30013011F /* MovieFanart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8E01CE7B0E30013011F /* MovieFanart.png */; };
+		DBACD8E31CE7B0E30013011F /* ShowFanart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8E11CE7B0E30013011F /* ShowFanart.png */; };
 		DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA361972DCA00099EE6E /* iMovie.png */; };
 		DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA391972DCA00099EE6E /* logplex.png */; };
 		DBAFDA661972DCA00099EE6E /* paypal-donate-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA421972DCA00099EE6E /* paypal-donate-button.png */; };
@@ -91,12 +97,18 @@
 		DB0CBE981C63DD9C00E05506 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
 		DB0CBE991C63DD9C00E05506 /* icon@720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@720.png"; sourceTree = "<group>"; };
 		DB0CBE9A1C63DD9C00E05506 /* icon@1080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@1080.png"; sourceTree = "<group>"; };
-		DB0CBE9B1C63DD9C00E05506 /* OpenPlexLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenPlexLogo.png; sourceTree = "<group>"; };
 		DB9980FC1BF9C73400EE0AE4 /* Mavericks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mavericks.png; sourceTree = "<group>"; };
 		DB9980FD1BF9C73400EE0AE4 /* Mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mountain.png; sourceTree = "<group>"; };
 		DB9980FE1BF9C73400EE0AE4 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
 		DB9980FF1BF9C73400EE0AE4 /* yoemite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoemite.png; sourceTree = "<group>"; };
 		DB9981041BF9C7DE00EE0AE4 /* lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion.png; sourceTree = "<group>"; };
+		DBACD8D61CE736E60013011F /* OpenPlexLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OpenPlexLogo.png; sourceTree = "<group>"; };
+		DBACD8D81CE79FD40013011F /* BackupIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackupIcon.png; sourceTree = "<group>"; };
+		DBACD8DA1CE7A05B0013011F /* RestoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestoreIcon.png; sourceTree = "<group>"; };
+		DBACD8DC1CE7A0DC0013011F /* QuickLook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuickLook.png; sourceTree = "<group>"; };
+		DBACD8DD1CE7A0DC0013011F /* TrashCan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrashCan.png; sourceTree = "<group>"; };
+		DBACD8E01CE7B0E30013011F /* MovieFanart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieFanart.png; sourceTree = "<group>"; };
+		DBACD8E11CE7B0E30013011F /* ShowFanart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowFanart.png; sourceTree = "<group>"; };
 		DBAFDA361972DCA00099EE6E /* iMovie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMovie.png; sourceTree = "<group>"; };
 		DBAFDA391972DCA00099EE6E /* logplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logplex.png; sourceTree = "<group>"; };
 		DBAFDA421972DCA00099EE6E /* paypal-donate-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal-donate-button.png"; sourceTree = "<group>"; };
@@ -198,10 +210,16 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DBACD8E01CE7B0E30013011F /* MovieFanart.png */,
+				DBACD8E11CE7B0E30013011F /* ShowFanart.png */,
+				DBACD8DC1CE7A0DC0013011F /* QuickLook.png */,
+				DBACD8DD1CE7A0DC0013011F /* TrashCan.png */,
+				DBACD8DA1CE7A05B0013011F /* RestoreIcon.png */,
+				DBACD8D81CE79FD40013011F /* BackupIcon.png */,
+				DBACD8D61CE736E60013011F /* OpenPlexLogo.png */,
 				DB0CBE981C63DD9C00E05506 /* folder.png */,
 				DB0CBE991C63DD9C00E05506 /* icon@720.png */,
 				DB0CBE9A1C63DD9C00E05506 /* icon@1080.png */,
-				DB0CBE9B1C63DD9C00E05506 /* OpenPlexLogo.png */,
 				DB9981041BF9C7DE00EE0AE4 /* lion.png */,
 				DB9980FC1BF9C73400EE0AE4 /* Mavericks.png */,
 				DB9980FD1BF9C73400EE0AE4 /* Mountain.png */,
@@ -395,15 +413,17 @@
 				CE8E26D71BF2215F0067F636 /* updateStatus.scpt in Resources */,
 				DBAFDA671972DCA00099EE6E /* PlexConnect Icon.png in Resources */,
 				DB9981001BF9C73400EE0AE4 /* Mavericks.png in Resources */,
-				DB0CBE9F1C63DD9C00E05506 /* OpenPlexLogo.png in Resources */,
+				DBACD8D71CE736E60013011F /* OpenPlexLogo.png in Resources */,
 				099068B3195D5ED800442FB5 /* Images.xcassets in Resources */,
 				CE3597021A5A154D00A913D4 /* switchIcon.png in Resources */,
 				DB9981011BF9C73400EE0AE4 /* Mountain.png in Resources */,
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
 				DB0CBE9D1C63DD9C00E05506 /* icon@720.png in Resources */,
 				CE2DF92C1A6AF16300C4FCB2 /* NoMenu.xib in Resources */,
+				DBACD8DF1CE7A0DC0013011F /* TrashCan.png in Resources */,
 				DB9981031BF9C73400EE0AE4 /* yoemite.png in Resources */,
 				DB0CBE9C1C63DD9C00E05506 /* folder.png in Resources */,
+				DBACD8DB1CE7A05B0013011F /* RestoreIcon.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
 				DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */,
 				CEA7DDD61BF2153000F7CEF2 /* trailersStatus.scpt in Resources */,
@@ -411,13 +431,16 @@
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
 				CEA7DDD31BF2153000F7CEF2 /* loginStatus.scpt in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
+				DBACD8DE1CE7A0DC0013011F /* QuickLook.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
 				CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */,
 				DB9981021BF9C73400EE0AE4 /* snow.png in Resources */,
 				CEA7DDD21BF2153000F7CEF2 /* intercept.scpt in Resources */,
 				CE373FCC1B34D5D600F5A34C /* custom.png in Resources */,
 				CEA6D0531BE6B8310085DC97 /* Xcode_icon.png in Resources */,
+				DBACD8E31CE7B0E30013011F /* ShowFanart.png in Resources */,
 				DBAFDA691972DCA00099EE6E /* quitplex.png in Resources */,
+				DBACD8E21CE7B0E30013011F /* MovieFanart.png in Resources */,
 				DB9981051BF9C7DE00EE0AE4 /* lion.png in Resources */,
 				CE0B59ED19D609A200A5C392 /* grey.png in Resources */,
 				CEBC1C801A4DC4AC0037CEA3 /* AirPlayIcon.png in Resources */,
@@ -431,6 +454,7 @@
 				DBAFDA6E1972DCA00099EE6E /* stopplex.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
 				DBAFDA6D1972DCA00099EE6E /* startplex.png in Resources */,
+				DBACD8D91CE79FD40013011F /* BackupIcon.png in Resources */,
 				DB0CBE9E1C63DD9C00E05506 /* icon@1080.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
