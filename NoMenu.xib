@@ -8,11 +8,17 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NoMenu">
             <connections>
+                <outlet property="dark" destination="EI1-uL-OQB" id="3Fa-19-AGX"/>
                 <outlet property="guideIP" destination="jN5-CA-HLJ" id="JMp-6g-Cui"/>
                 <outlet property="guideURL" destination="09u-JN-Xhp" id="0Pv-Ad-g8y"/>
                 <outlet property="interceptButtonOutlet" destination="xoh-QY-d7D" id="TTo-Mn-JuE"/>
+                <outlet property="loginButtonOutlet" destination="94Q-1S-oBA" id="oUb-0P-SZM"/>
+                <outlet property="myplexButtonOutlet" destination="8Tg-J9-eYD" id="8j1-EC-25a"/>
+                <outlet property="settingsButtonOutlet" destination="fJA-9l-goe" id="o4l-H9-DX2"/>
                 <outlet property="statusImage" destination="9Kp-WA-pKV" id="aAt-x8-SCP"/>
+                <outlet property="trailersButtonOutlet" destination="vvR-CO-jE8" id="IoE-7G-ZEI"/>
                 <outlet property="updateButton" destination="YOj-n6-8LK" id="Rfx-Sm-ru6"/>
+                <outlet property="updateButtonOutlet" destination="tDw-JC-9Ey" id="00c-Y2-NGZ"/>
                 <outlet property="window" destination="UPT-Dm-ZyK" id="xId-hm-Xw1"/>
             </connections>
         </customObject>
@@ -21,6 +27,7 @@
         <customObject id="yA6-dK-NsI" userLabel="Application Delegate" customClass="ApplicationDelegate"/>
         <customObject id="Y8d-nb-MOE" userLabel="NoMenu" customClass="NoMenu">
             <connections>
+                <outlet property="loginButtonOutlet" destination="94Q-1S-oBA" id="1fv-PI-gPo"/>
                 <outlet property="window" destination="UPT-Dm-ZyK" id="b23-Fg-Mfy"/>
             </connections>
         </customObject>
@@ -1902,7 +1909,7 @@ again.</string>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="buttonhandlernewupdateoc:" target="qo8-lj-syM" id="Y9k-Lc-e3E"/>
+                                                <action selector="buttonhandlernewupdateoc:" target="qo8-lj-syM" id="7dS-Jz-t1U"/>
                                             </connections>
                                         </button>
                                         <button toolTip="Uninstall App" verticalHuggingPriority="750" id="zen-Tz-LBG">
@@ -2008,7 +2015,7 @@ again.</string>
                                                 <font key="font" metaFont="system" size="14"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="loginButtonAction:" target="-2" id="2wK-nJ-xfx"/>
+                                                <action selector="loginButtonAction:" target="-2" id="vHd-EC-QlU"/>
                                             </connections>
                                         </button>
                                         <button toolTip="OS X DarkMode " verticalHuggingPriority="750" id="EI1-uL-OQB">
