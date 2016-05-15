@@ -45,6 +45,10 @@
 		DBACD8DF1CE7A0DC0013011F /* TrashCan.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8DD1CE7A0DC0013011F /* TrashCan.png */; };
 		DBACD8E21CE7B0E30013011F /* MovieFanart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8E01CE7B0E30013011F /* MovieFanart.png */; };
 		DBACD8E31CE7B0E30013011F /* ShowFanart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8E11CE7B0E30013011F /* ShowFanart.png */; };
+		DBACD8E71CE852270013011F /* YouTube-icon-full_color.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8E61CE852270013011F /* YouTube-icon-full_color.png */; };
+		DBACD8ED1CE859040013011F /* DownloadButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8EC1CE859040013011F /* DownloadButton.png */; };
+		DBACD8EF1CE85C0C0013011F /* WebConnectDownload.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8EE1CE85C0C0013011F /* WebConnectDownload.png */; };
+		DBACD8F11CE85E370013011F /* InstallButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8F01CE85E370013011F /* InstallButton.png */; };
 		DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA361972DCA00099EE6E /* iMovie.png */; };
 		DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA391972DCA00099EE6E /* logplex.png */; };
 		DBAFDA661972DCA00099EE6E /* paypal-donate-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA421972DCA00099EE6E /* paypal-donate-button.png */; };
@@ -109,6 +113,10 @@
 		DBACD8DD1CE7A0DC0013011F /* TrashCan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrashCan.png; sourceTree = "<group>"; };
 		DBACD8E01CE7B0E30013011F /* MovieFanart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieFanart.png; sourceTree = "<group>"; };
 		DBACD8E11CE7B0E30013011F /* ShowFanart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowFanart.png; sourceTree = "<group>"; };
+		DBACD8E61CE852270013011F /* YouTube-icon-full_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YouTube-icon-full_color.png"; sourceTree = "<group>"; };
+		DBACD8EC1CE859040013011F /* DownloadButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadButton.png; sourceTree = "<group>"; };
+		DBACD8EE1CE85C0C0013011F /* WebConnectDownload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnectDownload.png; sourceTree = "<group>"; };
+		DBACD8F01CE85E370013011F /* InstallButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstallButton.png; sourceTree = "<group>"; };
 		DBAFDA361972DCA00099EE6E /* iMovie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMovie.png; sourceTree = "<group>"; };
 		DBAFDA391972DCA00099EE6E /* logplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logplex.png; sourceTree = "<group>"; };
 		DBAFDA421972DCA00099EE6E /* paypal-donate-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paypal-donate-button.png"; sourceTree = "<group>"; };
@@ -210,6 +218,10 @@
 		DBAFDA2D1972DCA00099EE6E /* OpenPlexIcons */ = {
 			isa = PBXGroup;
 			children = (
+				DBACD8F01CE85E370013011F /* InstallButton.png */,
+				DBACD8EE1CE85C0C0013011F /* WebConnectDownload.png */,
+				DBACD8EC1CE859040013011F /* DownloadButton.png */,
+				DBACD8E61CE852270013011F /* YouTube-icon-full_color.png */,
 				DBACD8E01CE7B0E30013011F /* MovieFanart.png */,
 				DBACD8E11CE7B0E30013011F /* ShowFanart.png */,
 				DBACD8DC1CE7A0DC0013011F /* QuickLook.png */,
@@ -422,6 +434,7 @@
 				CE2DF92C1A6AF16300C4FCB2 /* NoMenu.xib in Resources */,
 				DBACD8DF1CE7A0DC0013011F /* TrashCan.png in Resources */,
 				DB9981031BF9C73400EE0AE4 /* yoemite.png in Resources */,
+				DBACD8EF1CE85C0C0013011F /* WebConnectDownload.png in Resources */,
 				DB0CBE9C1C63DD9C00E05506 /* folder.png in Resources */,
 				DBACD8DB1CE7A05B0013011F /* RestoreIcon.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
@@ -429,10 +442,12 @@
 				CEA7DDD61BF2153000F7CEF2 /* trailersStatus.scpt in Resources */,
 				DBAFDA6F1972DCA00099EE6E /* Trailers.png in Resources */,
 				DBAFDA5D1972DCA00099EE6E /* logplex.png in Resources */,
+				DBACD8E71CE852270013011F /* YouTube-icon-full_color.png in Resources */,
 				CEA7DDD31BF2153000F7CEF2 /* loginStatus.scpt in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				DBACD8DE1CE7A0DC0013011F /* QuickLook.png in Resources */,
 				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
+				DBACD8F11CE85E370013011F /* InstallButton.png in Resources */,
 				CEA6D04F1BE6B4590085DC97 /* downgrade.png in Resources */,
 				DB9981021BF9C73400EE0AE4 /* snow.png in Resources */,
 				CEA7DDD21BF2153000F7CEF2 /* intercept.scpt in Resources */,
@@ -450,6 +465,7 @@
 				DBAFDA661972DCA00099EE6E /* paypal-donate-button.png in Resources */,
 				CEFD1C631A62397400396D26 /* Web_Connect.png in Resources */,
 				DBAFDA731972DCA00099EE6E /* updateplex.png in Resources */,
+				DBACD8ED1CE859040013011F /* DownloadButton.png in Resources */,
 				CEA7DDD41BF2153000F7CEF2 /* myplexStatus.scpt in Resources */,
 				DBAFDA6E1972DCA00099EE6E /* stopplex.png in Resources */,
 				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
