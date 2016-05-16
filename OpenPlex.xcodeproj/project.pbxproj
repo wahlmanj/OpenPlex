@@ -45,7 +45,6 @@
 		DBACD8DF1CE7A0DC0013011F /* TrashCan.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8DD1CE7A0DC0013011F /* TrashCan.png */; };
 		DBACD8E21CE7B0E30013011F /* MovieFanart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8E01CE7B0E30013011F /* MovieFanart.png */; };
 		DBACD8E31CE7B0E30013011F /* ShowFanart.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8E11CE7B0E30013011F /* ShowFanart.png */; };
-		DBACD8EF1CE85C0C0013011F /* WebConnectDownload.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8EE1CE85C0C0013011F /* WebConnectDownload.png */; };
 		DBACD8F11CE85E370013011F /* InstallButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8F01CE85E370013011F /* InstallButton.png */; };
 		DBACD8F31CE9C3530013011F /* YouTube-icon-full_color.png in Resources */ = {isa = PBXBuildFile; fileRef = DBACD8F21CE9C3530013011F /* YouTube-icon-full_color.png */; };
 		DBAFDA5A1972DCA00099EE6E /* iMovie.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAFDA361972DCA00099EE6E /* iMovie.png */; };
@@ -112,7 +111,6 @@
 		DBACD8DD1CE7A0DC0013011F /* TrashCan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrashCan.png; sourceTree = "<group>"; };
 		DBACD8E01CE7B0E30013011F /* MovieFanart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieFanart.png; sourceTree = "<group>"; };
 		DBACD8E11CE7B0E30013011F /* ShowFanart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowFanart.png; sourceTree = "<group>"; };
-		DBACD8EE1CE85C0C0013011F /* WebConnectDownload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebConnectDownload.png; sourceTree = "<group>"; };
 		DBACD8F01CE85E370013011F /* InstallButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstallButton.png; sourceTree = "<group>"; };
 		DBACD8F21CE9C3530013011F /* YouTube-icon-full_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YouTube-icon-full_color.png"; sourceTree = "<group>"; };
 		DBAFDA361972DCA00099EE6E /* iMovie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMovie.png; sourceTree = "<group>"; };
@@ -217,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				DBACD8F01CE85E370013011F /* InstallButton.png */,
-				DBACD8EE1CE85C0C0013011F /* WebConnectDownload.png */,
 				DBACD8F21CE9C3530013011F /* YouTube-icon-full_color.png */,
 				DBACD8E01CE7B0E30013011F /* MovieFanart.png */,
 				DBACD8E11CE7B0E30013011F /* ShowFanart.png */,
@@ -431,7 +428,6 @@
 				CE2DF92C1A6AF16300C4FCB2 /* NoMenu.xib in Resources */,
 				DBACD8DF1CE7A0DC0013011F /* TrashCan.png in Resources */,
 				DB9981031BF9C73400EE0AE4 /* yoemite.png in Resources */,
-				DBACD8EF1CE85C0C0013011F /* WebConnectDownload.png in Resources */,
 				DB0CBE9C1C63DD9C00E05506 /* folder.png in Resources */,
 				DBACD8DB1CE7A05B0013011F /* RestoreIcon.png in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
