@@ -22,4 +22,6 @@ https://raw.githubusercontent.com/wahlmanj/installer/master/OpenPlex-installer/s
 https://github.com/wahlmanj/installer/raw/master/OpenPlex-installer/scripts/ProgressLabel.scpt
 https://raw.githubusercontent.com/wahlmanj/installer/master/OpenPlex-installer/scripts/Part3.scpt
 
-When the part1 script result is "" move on to progress label script to see installation progress when its result is "Cloning OpenPlex Complete" run part3 script and when the result is "" the installation is complete.
+When the part1 script result is "" move on to progress label script to see installation progress when its result is "Cloning OpenPlex Complete" run part3 script and when the result is "" the installation is complete. OpenPlex icon will be in the menu bar ready for use.
+
+
