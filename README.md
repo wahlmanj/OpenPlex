@@ -16,3 +16,9 @@ OpenPlex automatically installs PlexConnect on your Mac, easily generates certif
 =========
 [Download](https://github.com/wahlmanj/OpenPlex/raw/master/installer/OpenPlex-installer.zip)
 =========
+PLEASE NOTE - The OpenPlex Installer is currently not working, you can still install by simply running these three scripts to install OpenPlex via script editor or automator:
+https://raw.githubusercontent.com/wahlmanj/installer/master/OpenPlex-installer/scripts/Part1.scpt
+https://github.com/wahlmanj/installer/raw/master/OpenPlex-installer/scripts/ProgressLabel.scpt
+https://raw.githubusercontent.com/wahlmanj/installer/master/OpenPlex-installer/scripts/Part3.scpt
+
+When the part1 script result is "" move on to progress label script to see installation progress when its result is "Cloning OpenPlex Complete" run part3 script and when the result is "" the installation is complete.
